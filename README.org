@@ -67,9 +67,9 @@
   Yazılım Gündemi yazılarının *HTML*, *PDF* ve *ORG* formatındaki sürümlerini
   aşağıdaki listeden bulabilirsiniz.
 
-  **Toplam gündem sayısı:** 49
+  *Toplam gündem sayısı:* 49
 
-  **Toplam özel yazı sayısı:** 1
+  *Toplam özel yazı sayısı:* 1
 
 ** 2020
    :PROPERTIES:

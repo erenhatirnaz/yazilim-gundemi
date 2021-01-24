@@ -1,0 +1,48 @@
+[[http://www.computer-history.info/page1.html][Stories of the Development of Large Scale Scientific Computing at Lawrence Li...]]
+
+* Dijital Arkeoloji:
+	- http://www.bbc.com/future/story/20190919-the-maze-puzzle-hidden-within-an-early-video-game
+
+* yazılımınızın karbon ayak izi
+	- [[https://medium.com/@john.m.murray786/your-softwares-carbon-footprint-98d6dc2ff6d6][Your Software’s Carbon Footprint - John Murray - Medium]]
+* w3c drm
+	- [[https://boingboing.net/2020/01/08/rip-open-web-platform.html][Three years after the W3C approved a DRM standard, it's no longer possible to...]]
+		- [[https://blog.samuelmaddock.com/posts/the-end-of-indie-web-browsers/][Samuel Maddock’s Blog | The End of Indie Web Browsers: You Can (Not) Compete]]
+* uk
+	- [[https://technology.blog.gov.uk/2020/02/24/why-the-gov-uk-design-system-team-changed-the-input-type-for-numbers/][Why the GOV.UK Design System team changed the input type for numbers - Techno...]]
+* Avrupa Birliğinin "dijital gelecek" planları yayınlandı
+	- [[https://ec.europa.eu/commission/presscorner/detail/en/ip_20_273][Press corner | European Commission]]
+
+* Linux Foundation ve Harvard Üniversitesi açık kaynak kütüphanelerdeki sorunlara dikkat çeken rapor yayınladılar
+	- [[https://www.zdnet.com/article/the-linux-foundation-identifies-the-most-important-open-source-software-components-and-their-problems/][The Linux Foundation identifies most important open-source software component...]]
+* corejs
+	https://www.theregister.co.uk/2020/03/26/corejs_maintainer_jailed_code_release/
+* cognitive biases in software developments
+	- [[http://smyachenkov.com/posts/cognitive-biases-software-development/][Cognitive Biases In Software Development - Stanislav Myachenkov]]
+* google switft
+	- [[https://tryolabs.com/blog/2020/04/02/swift-googles-bet-on-differentiable-programming/][Swift: Google's bet on differentiable programming | Tryolabs Blog]]
+* python 3.9
+	[[https://martinheinz.dev/blog/21][Martin Heinz - Personal Website & Blog]]
+* cloud green energy
+	- [[https://techcrunch.com/2020/04/25/our-love-of-the-cloud-is-making-a-green-energy-future-impossible/][Our love of the cloud is making a green energy future impossible – TechCrunch]]
+* google ai code
+	- [[https://www.sciencealert.com/coders-mutate-ai-systems-to-make-them-evolve-faster-than-we-can-program-them][Google Engineers 'Mutate' AI to Make It Evolve Systems Faster Than We Can Cod...]]
+* flutter web
+	- [[https://medium.com/flutter/flutter-web-support-updates-8b14bfe6a908][Flutter web support updates - Flutter - Medium]]
+* android r android klasör
+	- [[https://www.reddit.com/r/androidapps/comments/gdwztw/on_android_r_no_app_can_let_you_see_whats_inside/][On Android R, no app can let you see what&#x27;s inside "Android" folder anym...]]
+* go 1.15
+	- [[https://lwn.net/SubscriberLink/820217/47ed80088c03b18d/][What's coming in Go 1.15 {LWN.net}]]
+* programming language brain
+	- [[https://massivesci.com/articles/programming-math-language-python-women-in-science/][Your language brain matters more for learning programming than your math brain]]
+* python android
+	- [[https://www.zdnet.com/article/programming-languages-python-apps-might-soon-be-running-on-android/][Programming languages: Python apps might soon be running on Android | ZDNet]]
+* c cpp security
+	- [[https://alexgaynor.net/2020/may/27/science-on-memory-unsafety-and-security/][What science can tell us about C and C++'s security · Alex Gaynor]]
+* programlama dili beynin konuşma yerine
+	- [[https://medicalxpress.com/news/2020-06-language-brain-scans-reveal-coding.html][Programming 'language': Brain scans reveal coding uses same regions as speech]]
+	- [[https://androidrookies.com/where-does-a-programmers-brain-store-all-the-coding/][Where does a Programmer's brain store all the coding? - AndroidRookies]]
+* linux 80
+	- [[https://www.theregister.com/2020/06/01/linux_5_7/][80-characters-per-line limits should be terminal, says Linux kernel chief Lin...]]
+* fizik
+	- [[https://phys.org/news/2020-06-physics-neural-networks-chaos.html][Teaching physics to neural networks removes 'chaos blindness']]

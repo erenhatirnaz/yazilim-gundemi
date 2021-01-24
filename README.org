@@ -1,0 +1,227 @@
+# -*- org-html-link-org-files-as-html: nil; -*-
+#+TITLE: Yazılım Gündemi
+#+SUBTITLE: Haftalık yazılım gündemi değerlendirmesi
+#+AUTHOR: Eren Hatırnaz
+#+DATE: 24 Ocak 2021
+#+OPTIONS: ^:nil, num:nil, toc:nil
+#+LANGUAGE: tr
+#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=black, filecolor=red, urlcolor=blue}
+#+LATEX_HEADER: \usepackage[turkish]{babel}
+#+HTML_HEAD: <link rel="stylesheet" href="css/org.css" type="text/css" />
+#+LATEX: \shorthandoff{=}
+#+HTML_HEAD_EXTRA: <style type="text/css">
+#+HTML_HEAD_EXTRA: h1::before, h2::before, h3::before, h4::before, h5::before, h6::before { content: none; }
+#+HTML_HEAD_EXTRA: </style>
+
+[[file:img/yazilim-gundemi-logo.png]]
+
+* Nedir?
+  :PROPERTIES:
+  :CUSTOM_ID: nedir
+  :END:
+  Yazılım Gündemi, benim [[https://teknoseyir.com/u/erenhatirnaz/blog][TeknoSeyir Sosyal]] platformunda 2019-2020 yılları
+  arasında her hafta düzenli olarak yazmaya çalıştığım bir yazı serisidir. Bu
+  yazı serisi kapsamında, her hafta, o hafta içerisinde programlamanın çeşitli
+  alanlarıyla ilgili internette karşılaştığım haberleri topluyordum. Topladığım
+  haberlerden ilgim ya da bilgim olanları detaylı değerlendiriyor; (b)ilgim
+  olmayanları ise "Diğer Haberler" başlığı altında listeliyordum. İlk yazılarda
+  olmasa da sonradan bir de "Yaklaşan Etkinlikler" bölümü ekledim. Bu bölümde de
+  bir sonraki hafta için planlanmış alanımızla ilgili bulabildiğim tüm
+  etkinlikleri tablo şeklinde veriyordum. Fakat hem biraz motivasyon kaybı
+  yaşadığım için hem de hayatımda farklı şeylere öncelik vermem gerektiği için
+  yazı serisine ara verdim.
+
+  Şunu da şöylemeliyim ki: Bu gündem yazıları o hafta içerisinde yazılım
+  dünyasında olan her şeyi kapsama garantisi vermiyor. Takip ettiğim
+  kaynaklarda karşıma çıkan güncel haberleri gündem yazıları içerisine
+  alıyordum. Takip ettiğim kaynakları aşağıdaki [[#kaynaklar][Kaynaklar]] bölümünde
+  bulabilirsiniz.
+* Motivasyon
+  :PROPERTIES:
+  :CUSTOM_ID: motivasyon
+  :END:
+  TeknoSeyir'in en çok tükettiğim içerikleri Gündem Değerlendirmeleri
+  (teknoloji, oyun ve bilim). Her ne kadar teknoloji sektörünün içerisinden
+  birisi de olsam teknoloji gündemini o kadar sık takip edemiyorum. Aynı çekilde
+  bilim de ilgi alanım fakat onu da sürekli takip edebilecek bir vaktim yok.
+  TeknoSeyir'da hazırlanan bu içerikler tam olarak benim bu ihtiyaçlarımı
+  karşılıyor.
+
+  Benim sürekli takip ettiğim bir alan var, o da: Yazılım sektörü. Haftalık
+  Gündem Değerlendirmesi'nde her ne kadar yazılım sektörü içerisinden haberlere
+  sık sık yer verilse de, hitap ettiği kitleye doğal olarak uymadığından,
+  programlamanın daha içerisinden haberler pek fazla yer bulmuyordu. Ben de,
+  "madem kendim sürekli bu haberleri takip ediyorum, o halde neden ben böyle bir
+  içerik çıkartmayayım" dedim ve bu yazı serisini oluşturdum.
+
+  TeknoSeyir Sosyal'den birçok arkadaş bu yazı serisini podcast şeklinde sesli
+  bir içerik şeklinde hazırlamamı tavsiye ettiler, hatta şiddetle talep de
+  ettiler fakat ben kendimi yazarak daha iyi ifade edebildiğimi düşündüğüm için
+  girmedim o işlere. Ama günün birinde o yeteneklerimi de geliştirirsem neden
+  olmasın :).
+* Arşiv
+  :PROPERTIES:
+  :CUSTOM_ID: arsiv
+  :END:
+
+  Yazılım Gündemi yazılarının *HTML*, *PDF* ve *ORG* formatındaki sürümlerini
+  aşağıdaki listeden bulabilirsiniz.
+
+  **Toplam gündem sayısı:** 49
+
+  **Toplam özel yazı sayısı:** 1
+
+** 2020
+   :PROPERTIES:
+   :CUSTOM_ID: arsiv-2020
+   :END:
+
+   #+ATTR_HTML: :width 100%
+   |---------------------------+----------------------------+------+-----+-----|
+   | Yazılım Gündemi - 2020/26 | 29 Haziran - 5 Temmuz 2020 | [[file:arsiv/2020/26/yazilim-gundemi-2020-26.html][HTML]] | [[file:arsiv/2020/26/yazilim-gundemi-2020-26.pdf][PDF]] | [[file:arsiv/2020/26/yazilim-gundemi-2020-26.org][ORG]] |
+   | Yazılım Gündemi - 2020/25 | 22-28 Haziran 2020         | [[file:arsiv/2020/25/yazilim-gundemi-2020-25.html][HTML]] | [[file:arsiv/2020/25/yazilim-gundemi-2020-25.pdf][PDF]] | [[file:arsiv/2020/25/yazilim-gundemi-2020-25.org][ORG]] |
+   | Yazılım Gündemi - 2020/24 | 15-21 Haziran 2020         | [[file:arsiv/2020/24/yazilim-gundemi-2020-24.html][HTML]] | [[file:arsiv/2020/24/yazilim-gundemi-2020-24.pdf][PDF]] | [[file:arsiv/2020/24/yazilim-gundemi-2020-24.org][ORG]] |
+   | Yazılım Gündemi - 2020/23 | 8-14 Haziran 2020          | [[file:arsiv/2020/23/yazilim-gundemi-2020-23.html][HTML]] | [[file:arsiv/2020/23/yazilim-gundemi-2020-23.pdf][PDF]] | [[file:arsiv/2020/23/yazilim-gundemi-2020-23.org][ORG]] |
+   | Yazılım Gündemi - 2020/22 | 1-7 Haziran 2020           | [[file:arsiv/2020/22/yazilim-gundemi-2020-22.html][HTML]] | [[file:arsiv/2020/22/yazilim-gundemi-2020-22.pdf][PDF]] | [[file:arsiv/2020/22/yazilim-gundemi-2020-22.org][ORG]] |
+   | Yazılım Gündemi - 2020/21 | 25-31 Mayıs 2020           | [[file:arsiv/2020/21/yazilim-gundemi-2020-21.html][HTML]] | [[file:arsiv/2020/21/yazilim-gundemi-2020-21.pdf][PDF]] | [[file:arsiv/2020/21/yazilim-gundemi-2020-21.org][ORG]] |
+   | Yazılım Gündemi - 2020/20 | 18-24 Mayıs 2020           | [[file:arsiv/2020/20/yazilim-gundemi-2020-20.html][HTML]] | [[file:arsiv/2020/20/yazilim-gundemi-2020-20.pdf][PDF]] | [[file:arsiv/2020/20/yazilim-gundemi-2020-20.org][ORG]] |
+   | Yazılım Gündemi - 2020/19 | 11-17 Mayıs 2020           | [[file:arsiv/2020/19/yazilim-gundemi-2020-19.html][HTML]] | [[file:arsiv/2020/19/yazilim-gundemi-2020-19.pdf][PDF]] | [[file:arsiv/2020/19/yazilim-gundemi-2020-19.org][ORG]] |
+   | Yazılım Gündemi - 2020/18 | 4-10 Mayıs 2020            | [[file:arsiv/2020/18/yazilim-gundemi-2020-18.html][HTML]] | [[file:arsiv/2020/18/yazilim-gundemi-2020-18.pdf][PDF]] | [[file:arsiv/2020/18/yazilim-gundemi-2020-18.org][ORG]] |
+   | Yazılım Gündemi - 2020/17 | 27 Nisan - 3 Mayıs 2020    | [[file:arsiv/2020/17/yazilim-gundemi-2020-17.html][HTML]] | [[file:arsiv/2020/17/yazilim-gundemi-2020-17.pdf][PDF]] | [[file:arsiv/2020/17/yazilim-gundemi-2020-17.org][ORG]] |
+   | Yazılım Gündemi - 2020/16 | 20-26 Nisan 2020           | [[file:arsiv/2020/16/yazilim-gundemi-2020-16.html][HTML]] | [[file:arsiv/2020/16/yazilim-gundemi-2020-16.pdf][PDF]] | [[file:arsiv/2020/16/yazilim-gundemi-2020-16.org][ORG]] |
+   | Yazılım Gündemi - 2020/15 | 13-19 Nisan 2020           | [[file:arsiv/2020/15/yazilim-gundemi-2020-15.html][HTML]] | [[file:arsiv/2020/15/yazilim-gundemi-2020-15.pdf][PDF]] | [[file:arsiv/2020/15/yazilim-gundemi-2020-15.org][ORG]] |
+   | Yazılım Gündemi - 2020/14 | 6-12 Nisan 2020            | [[file:arsiv/2020/14/yazilim-gundemi-2020-14.html][HTML]] | [[file:arsiv/2020/14/yazilim-gundemi-2020-14.pdf][PDF]] | [[file:arsiv/2020/14/yazilim-gundemi-2020-14.org][ORG]] |
+   | Yazılım Gündemi - 2020/13 | 30 Mart - 5 Nisan 2020     | [[file:arsiv/2020/13/yazilim-gundemi-2020-13.html][HTML]] | [[file:arsiv/2020/13/yazilim-gundemi-2020-13.pdf][PDF]] | [[file:arsiv/2020/13/yazilim-gundemi-2020-13.org][ORG]] |
+   | Yazılım Gündemi - 2020/12 | 23-29 Mart 2020            | [[file:arsiv/2020/12/yazilim-gundemi-2020-12.html][HTML]] | [[file:arsiv/2020/12/yazilim-gundemi-2020-12.pdf][PDF]] | [[file:arsiv/2020/12/yazilim-gundemi-2020-12.org][ORG]] |
+   | Yazılım Gündemi - 2020/11 | 16-22 Mart 2020            | [[file:arsiv/2020/11/yazilim-gundemi-2020-11.html][HTML]] | [[file:arsiv/2020/11/yazilim-gundemi-2020-11.pdf][PDF]] | [[file:arsiv/2020/11/yazilim-gundemi-2020-11.org][ORG]] |
+   | Yazılım Gündemi - 2020/10 | 9-15 Mart 2020             | [[file:arsiv/2020/10/yazilim-gundemi-2020-10.html][HTML]] | [[file:arsiv/2020/10/yazilim-gundemi-2020-10.pdf][PDF]] | [[file:arsiv/2020/10/yazilim-gundemi-2020-10.org][ORG]] |
+   | Yazılım Gündemi - 2020/09 | 2-8 Mart 2020              | [[file:arsiv/2020/09/yazilim-gundemi-2020-09.html][HTML]] | [[file:arsiv/2020/09/yazilim-gundemi-2020-09.pdf][PDF]] | [[file:arsiv/2020/09/yazilim-gundemi-2020-09.org][ORG]] |
+   | Yazılım Gündemi - 2020/08 | 17 Şubat - 1 Mart 2020     | [[file:arsiv/2020/08/yazilim-gundemi-2020-08.html][HTML]] | [[file:arsiv/2020/08/yazilim-gundemi-2020-08.pdf][PDF]] | [[file:arsiv/2020/08/yazilim-gundemi-2020-08.org][ORG]] |
+   | Yazılım Gündemi - 2020/07 | 10-16 Şubat 2020           | [[file:arsiv/2020/07/yazilim-gundemi-2020-07.html][HTML]] | [[file:arsiv/2020/07/yazilim-gundemi-2020-07.pdf][PDF]] | [[file:arsiv/2020/07/yazilim-gundemi-2020-07.org][ORG]] |
+   | Yazılım Gündemi - 2020/06 | 3-9 Şubat 2020             | [[file:arsiv/2020/06/yazilim-gundemi-2020-06.html][HTML]] | [[file:arsiv/2020/06/yazilim-gundemi-2020-06.pdf][PDF]] | [[file:arsiv/2020/06/yazilim-gundemi-2020-06.org][ORG]] |
+   | Yazılım Gündemi - 2020/05 | 27 Ocak - 2 Şubat 2020     | [[file:arsiv/2020/05/yazilim-gundemi-2020-05.html][HTML]] | [[file:arsiv/2020/05/yazilim-gundemi-2020-05.pdf][PDF]] | [[file:arsiv/2020/05/yazilim-gundemi-2020-05.org][ORG]] |
+   | Yazılım Gündemi - 2020/04 | 20-26 Ocak 2020            | [[file:arsiv/2020/04/yazilim-gundemi-2020-04.html][HTML]] | [[file:arsiv/2020/04/yazilim-gundemi-2020-04.pdf][PDF]] | [[file:arsiv/2020/04/yazilim-gundemi-2020-04.org][ORG]] |
+   | Yazılım Gündemi - 2020/03 | 13-19 Ocak 2020            | [[file:arsiv/2020/03/yazilim-gundemi-2020-03.html][HTML]] | [[file:arsiv/2020/03/yazilim-gundemi-2020-03.pdf][PDF]] | [[file:arsiv/2020/03/yazilim-gundemi-2020-03.org][ORG]] |
+   | Yazılım Gündemi - 2020/02 | 6-12 Ocak 2020             | [[file:arsiv/2020/02/yazilim-gundemi-2020-02.html][HTML]] | [[file:arsiv/2020/02/yazilim-gundemi-2020-02.pdf][PDF]] | [[file:arsiv/2020/02/yazilim-gundemi-2020-02.org][ORG]] |
+   | Yazılım Gündemi - 2020/01 | 1-5 Ocak 2020              | [[file:arsiv/2020/01/yazilim-gundemi-2020-01.html][HTML]] | [[file:arsiv/2020/01/yazilim-gundemi-2020-01.pdf][PDF]] | [[file:arsiv/2020/01/yazilim-gundemi-2020-01.org][ORG]] |
+   |---------------------------+----------------------------+------+-----+-----|
+** 2019
+   :PROPERTIES:
+   :CUSTOM_ID: arsiv-2019
+   :END:
+   #+ATTR_HTML: :width 100%
+   |----------------------+----------------------------+------+-----+-----|
+   | Yazılım Gündemi - 23 | 23-29 Aralık 2019          | [[file:arsiv/2019/23/yazilim-gundemi-23.html][HTML]] | [[file:arsiv/2019/23/yazilim-gundemi-23.pdf][PDF]] | [[file:arsiv/2019/23/yazilim-gundemi-23.org][ORG]] |
+   | Yazılım Gündemi - 22 | 16-22 Aralık 2019          | [[file:arsiv/2019/22/yazilim-gundemi-22.html][HTML]] | [[file:arsiv/2019/22/yazilim-gundemi-22.pdf][PDF]] | [[file:arsiv/2019/22/yazilim-gundemi-22.org][ORG]] |
+   | Yazılım Gündemi - 21 | 9-15 Aralık 2019           | [[file:arsiv/2019/21/yazilim-gundemi-21.html][HTML]] | [[file:arsiv/2019/21/yazilim-gundemi-21.pdf][PDF]] | [[file:arsiv/2019/21/yazilim-gundemi-21.org][ORG]] |
+   | Yazılım Gündemi - 20 | 2-8 Aralık 2019            | [[file:arsiv/2019/20/yazilim-gundemi-20.html][HTML]] | [[file:arsiv/2019/20/yazilim-gundemi-20.pdf][PDF]] | [[file:arsiv/2019/20/yazilim-gundemi-20.org][ORG]] |
+   | Yazılım Gündemi - 19 | 18 Kasım-1 Aralık 2019     | [[file:arsiv/2019/19/yazilim-gundemi-19.html][HTML]] | [[file:arsiv/2019/19/yazilim-gundemi-19.pdf][PDF]] | [[file:arsiv/2019/19/yazilim-gundemi-19.org][ORG]] |
+   | Yazılım Gündemi - 18 | 11-17 Kasım 2019           | [[file:arsiv/2019/18/yazilim-gundemi-18.html][HTML]] | [[file:arsiv/2019/18/yazilim-gundemi-18.pdf][PDF]] | [[file:arsiv/2019/18/yazilim-gundemi-18.org][ORG]] |
+   | Yazılım Gündemi - 17 | 4-10 Kasım 2019            | [[file:arsiv/2019/17/yazilim-gundemi-17.html][HTML]] | [[file:arsiv/2019/17/yazilim-gundemi-17.pdf][PDF]] | [[file:arsiv/2019/17/yazilim-gundemi-17.org][ORG]] |
+   | Yazılım Gündemi - 16 | 28 Ekim - 3 Kasım 2019     | [[file:arsiv/2019/16/yazilim-gundemi-16.html][HTML]] | [[file:arsiv/2019/16/yazilim-gundemi-16.pdf][PDF]] | [[file:arsiv/2019/16/yazilim-gundemi-16.org][ORG]] |
+   | Yazılım Gündemi - 15 | 21-27 Ekim 2019            | [[file:arsiv/2019/15/yazilim-gundemi-15.html][HTML]] | [[file:arsiv/2019/15/yazilim-gundemi-15.pdf][PDF]] | [[file:arsiv/2019/15/yazilim-gundemi-15.org][ORG]] |
+   | Yazılım Gündemi - 14 | 14-20 Ekim 2019            | [[file:arsiv/2019/14/yazilim-gundemi-14.html][HTML]] | [[file:arsiv/2019/14/yazilim-gundemi-14.pdf][PDF]] | [[file:arsiv/2019/14/yazilim-gundemi-14.org][ORG]] |
+   | Yazılım Gündemi - 13 | 7-13 Ekim 2019             | [[file:arsiv/2019/13/yazilim-gundemi-13.html][HTML]] | [[file:arsiv/2019/13/yazilim-gundemi-13.pdf][PDF]] | [[file:arsiv/2019/13/yazilim-gundemi-13.org][ORG]] |
+   | Yazılım Gündemi - 12 | 30 Eylül - 6 Ekim 2019     | [[file:arsiv/2019/12/yazilim-gundemi-12.html][HTML]] | [[file:arsiv/2019/12/yazilim-gundemi-12.pdf][PDF]] | [[file:arsiv/2019/12/yazilim-gundemi-12.org][ORG]] |
+   | Yazılım Gündemi - 11 | 23-29 Eylül 2019           | [[file:arsiv/2019/11/yazilim-gundemi-11.html][HTML]] | [[file:arsiv/2019/11/yazilim-gundemi-11.pdf][PDF]] | [[file:arsiv/2019/11/yazilim-gundemi-11.org][ORG]] |
+   | Yazılım Gündemi - 10 | 16-22 Eylül 2019           | [[file:arsiv/2019/10/yazilim-gundemi-10.html][HTML]] | [[file:arsiv/2019/10/yazilim-gundemi-10.pdf][PDF]] | [[file:arsiv/2019/10/yazilim-gundemi-10.org][ORG]] |
+   | Yazılım Gündemi - 09 | 9-15 Eylül 2019            | [[file:arsiv/2019/09/yazilim-gundemi-09.html][HTML]] | [[file:arsiv/2019/09/yazilim-gundemi-09.pdf][PDF]] | [[file:arsiv/2019/09/yazilim-gundemi-09.org][ORG]] |
+   | Yazılım Gündemi - 08 | 2-8 Eylül 2019             | [[file:arsiv/2019/08/yazilim-gundemi-08.html][HTML]] | [[file:arsiv/2019/08/yazilim-gundemi-08.pdf][PDF]] | [[file:arsiv/2019/08/yazilim-gundemi-08.org][ORG]] |
+   | Yazılım Gündemi - 07 | 26 Ağustos - 1 Eylül 2019  | [[file:arsiv/2019/07/yazilim-gundemi-07.html][HTML]] | [[file:arsiv/2019/07/yazilim-gundemi-07.pdf][PDF]] | [[file:arsiv/2019/07/yazilim-gundemi-07.org][ORG]] |
+   | Yazılım Gündemi - 06 | 12-25 Ağustos 2019         | [[file:arsiv/2019/06/yazilim-gundemi-06.html][HTML]] | [[file:arsiv/2019/06/yazilim-gundemi-06.pdf][PDF]] | [[file:arsiv/2019/06/yazilim-gundemi-06.org][ORG]] |
+   | Yazılım Gündemi - 05 | 5-11 Ağustos 2019          | [[file:arsiv/2019/05/yazilim-gundemi-05.html][HTML]] | [[file:arsiv/2019/05/yazilim-gundemi-05.pdf][PDF]] | [[file:arsiv/2019/05/yazilim-gundemi-05.org][ORG]] |
+   | Yazılım Gündemi - 04 | 29 Temmuz - 4 Ağustos 2019 | [[file:arsiv/2019/04/yazilim-gundemi-04.html][HTML]] | [[file:arsiv/2019/04/yazilim-gundemi-04.pdf][PDF]] | [[file:arsiv/2019/04/yazilim-gundemi-04.org][ORG]] |
+   | Yazılım Gündemi - 03 | 22-28 Temmuz 2019          | [[file:arsiv/2019/03/yazilim-gundemi-03.html][HTML]] | [[file:arsiv/2019/03/yazilim-gundemi-03.pdf][PDF]] | [[file:arsiv/2019/03/yazilim-gundemi-03.org][ORG]] |
+   | Yazılım Gündemi - 02 | 15-21 Temmuz 2019          | [[file:arsiv/2019/02/yazilim-gundemi-02.html][HTML]] | [[file:arsiv/2019/02/yazilim-gundemi-02.pdf][PDF]] | [[file:arsiv/2019/02/yazilim-gundemi-02.org][ORG]] |
+   | Yazılım Gündemi - 01 | 8-14 Temmuz 2019           | [[file:arsiv/2019/01/yazilim-gundemi-01.html][HTML]] | [[file:arsiv/2019/01/yazilim-gundemi-01.pdf][PDF]] | [[file:arsiv/2019/01/yazilim-gundemi-01.org][ORG]] |
+   |----------------------+----------------------------+------+-----+-----|
+** Özel Yazılar
+   :PROPERTIES:
+   :CUSTOM_ID: ozel-yazilar
+   :END:
+
+   #+ATTR_HTML: :width 100%
+   |---------------------+---------------+------+-----+-----|
+   | .NET 5.0 yayınlandı | 10 Kasım 2020 | [[file:arsiv/ozel-yazilar/dotnet-5-0/dotnet-5-0.html][HTML]] | [[file:arsiv/ozel-yazilar/dotnet-5-0/dotnet-5-0.pdf][PDF]] | [[file:arsiv/ozel-yazilar/dotnet-5-0/dotnet-5-0.org][ORG]] |
+   |---------------------+---------------+------+-----+-----|
+* Kaynaklar
+  :PROPERTIES:
+  :CUSTOM_ID: kaynaklar
+  :END:
+  Yazılım Gündemi yazılarındaki haberleri topladığım kaynaklar:
+  * [[https://news.ycombinator.com/news][HackerNews]]
+  * Reddit
+    - [[https://reddit.com/r/programming][/r/programming]]
+    - Çeşitli programlama dili ve teknolojilerin kanallarını bir araya getirerek
+      oluşturduğum Custom Feed'im: [[https://www.reddit.com/user/erenhatirnaz/m/programming/][programming]].
+  * [[https://techcrunch.com/][TechCrunch]]: Genel teknoloji haberleri
+  * GNU/Linux dünyasıyla ilgili:
+    - [[https://www.phoronix.com][Phoronix]]
+    - [[https://lwn.net/][LWN.net]]
+  * [[https://developer-tech.com/][Developer Tech]]: Programlamayla ilgili genel haberler
+  * Mobil geliştirme:
+    - Android
+      + [[https://www.xda-developers.com/][XDA-Developers]]
+      + [[https://www.androidauthority.com/][Android Authority]]
+    - iOS:
+      + [[https://developer.apple.com/news/][News - Apple Developer]]
+      + [[https://appdevelopermagazine.com/iOS][App Developer Magazine]]
+* Kullandığım Araçlar
+  :PROPERTIES:
+  :CUSTOM_ID: kullandigim-araclar
+  :END:
+  Yazılım Gündemi yazılarını [[https://www.gnu.org/software/emacs/][Emacs]] metin editörü içerisinde [[https://orgmode.org][Org-mode]] dokümanı
+  şeklinde yazıyorum. HTML ve PDF çıktılarını da bu ORG modu dokümanından [[https://orgmode.org/manual/Exporting.html#Exporting][elde
+  ediyorum]]. PDF formatındaki yazılar aslında LaTeX üzerinden derlenip,
+  oluşturuluyor. Org-mode tarafından oluşturulmuş LaTeX dosyaları (.tex
+  uzantılı) dosyalar da ilgili yazılım gündemi yazısının klasöründe mevcut.
+  İsterseniz PDF formatını kendiniz de derleyebilirsiniz.
+
+  Yazıları TeknoSeyir'de blog yazısı şeklinde paylaştığım dönemlerde sadece HTML
+  çıktısı alıp, bunu kopyala-yapıştır ile TeknoSeyir'deki editöre alıyor, orada
+  düzenlemelerini yaptıktan sonra paylaşıyordum.
+
+  Emacs ve Org-mode konusuyla ilgili başlangıç niteliğinde şöyle iki kaynak
+  önerebilirim (bu araçları ben de bu kaynaklar sayesinde keşfettim):
+  * [[https://www.youtube.com/watch?v=FsN3Yp05_aQ][Emacs: Özgür Yazılım Devriminin Editörü - YouTube]]
+  * [[https://www.youtube.com/watch?v=SzA2YODtgK4][Getting Started With Org Mode - YouTube]]
+
+  Emacs ve Org-mode hakkında bilgiliyseniz ve Yazılım Gündemi yazılarını Org
+  dokümanı üzerinden derlemek istiyorsanız, yaptığım bazı özelleştirmelere
+  ihtiyacınız olacak. Bunun için [[file:ayarlar.el][ayarlar.el]] dosyasına göz atabilirsiniz.
+  İleride yazılım gündemi yazılarını tekrar yazmaya başlarsam ya da boş bir
+  zamanımda motivasyon bulabilirsem, yazım süreci ve teknik tarafla ilgili daha
+  çok bilgi içeren bir yazı hazırlarım.
+* Bilinen Sorunlar
+  :PROPERTIES:
+  :CUSTOM_ID: bilinen-sorunlar
+  :END:
+  * Yazıların içerisinde eklediğim GIF (hareketli görseller), yazının PDF
+    formatındaki halinde sadece bağlantı olarak gösteriliyor. [[file:img/pdf-gif-link-sorun.png][Örnek]]
+    - Buna yapabileceğim bir şey yok maalesef. Aslında çeşitli yöntemler ile GIF
+      animasyonlarını da PDF içerisine ekleme yolları var fakat çok zahmetli. Bu
+      durumla karşılaştığınızda GIF dosyasının bağlantısını yeni bir sekmede
+      açarak izleyebilir ya da yazının HTML formatındaki haline bakabilirsiniz.
+  * PDF formatındaki yazılarda =Bu şekilde biçimlendirilmiş= ifadeler bazen
+    paragraf çizgisinden taşabiliyor. [[file:img/paragraf-tasma-sorunu-1.png][Örnek 1]], [[file:img/paragraf-tasma-sorunu-2.png][Örnek 2]], [[file:img/paragraf-tasma-sorunu-3.png][Örnek 3]].
+    - Açıkcası pek fazla sayıda olmadığı için bu sorunu pek araştırmadım.
+      Şimdilik görmezden gelmenizi rica edeceğim.
+  * HTML formatındaki yazılarda bazı kod parçaları sayfadan taşabiliyor.
+    - Bu sorun genelde tek satırdan oluşan, bash ya da powershell komutlarında
+      oluşuyor. HTML formatı için bir çözüm üretebilirim fakat bu sefer de PDF
+      formatındaki halinde istemediğim durumlar oluşuyor. Bu sorunu da şimdilik
+      bırakıyorum.
+* Lisans
+  :PROPERTIES:
+  :CUSTOM_ID: lisans
+  :END:
+
+  #+BEGIN_CENTER
+  #+ATTR_HTML: :height 75
+  #+ATTR_LATEX: :height 1.5cm
+  [[file:img/CC_BY-NC-SA_4.0.png]]
+
+  Bu sayfa ve diğer tüm yazılım gündemi yazıları [[https://erenhatirnaz.github.io][Eren Hatırnaz]] tarafından
+  [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Creative Commons Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı]]
+  (CC BY-NC-SA 4.0) ile lisanslanmıştır.
+  #+END_CENTER

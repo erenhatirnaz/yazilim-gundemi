@@ -1,0 +1,39 @@
+#+TITLE: Yazılım Gündemi - 20XX/XX
+#+SUBTITLE: [BURAYA TARİH ARALIĞI GELECEK]
+#+AUTHOR: Eren Hatırnaz
+#+DATE: [BURAYA YAYIN TARİHİ GELECEK]
+#+OPTIONS: ^:nil
+#+LANGUAGE: tr
+#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=black, filecolor=red, urlcolor=blue}
+#+LATEX_HEADER: \usepackage[turkish]{babel}
+#+HTML_HEAD: <link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+#+LATEX: \shorthandoff{=}
+
+[[file:gorseller/yazilim-gundemi-banner.png]]
+
+#+BEGIN_CENTER
+< Önceki Gündem | *22-28 Haziran 2020* | Sonraki Gündem >
+
+TeknoSeyir'de Oku
+#+END_CENTER
+
+* Yaklaşan Online Etkinlikler
+  #+ATTR_HTML: :width 100%
+  #+ATTR_LATEX: :environment longtable :align |p{9.5cm}|l|
+  |---------------+--------|
+  | Etkinlik İsmi | Tarihi |
+  |---------------+--------|
+  |               |        |
+  |---------------+--------|
+* Diğer Haberler
+  -
+* Lisans
+  #+BEGIN_CENTER
+  #+ATTR_HTML: :height 75
+  #+ATTR_LATEX: :height 1.5cm
+  [[file:../../../img/CC_BY-NC-SA_4.0.png]]
+
+  [[file:yazilim-gundemi-20XX-XX.org][Yazılım Gündemi - 20XX/XX]] yazısı [[https://erenhatirnaz.github.io][Eren Hatırnaz]] tarafından [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Creative Commons
+  Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı]] (CC BY-NC-SA 4.0)
+  ile lisanslanmıştır.
+  #+END_CENTER

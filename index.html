@@ -1,0 +1,924 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 23:42 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="css/org.css" type="text/css" />
+<style type="text/css">
+h1::before, h2::before, h3::before, h4::before, h5::before, h6::before { content: none; }
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi
+<br />
+<span class="subtitle">Haftalık yazılım gündemi değerlendirmesi</span>
+</h1>
+
+<div class="figure">
+<p><img src="img/yazilim-gundemi-logo.png" alt="yazilim-gundemi-logo.png" />
+</p>
+</div>
+
+<div id="outline-container-org5557899" class="outline-2">
+<h2 id="nedir">Nedir?</h2>
+<div class="outline-text-2" id="text-nedir">
+<p>
+Yazılım Gündemi, benim <a href="https://teknoseyir.com/u/erenhatirnaz/blog">TeknoSeyir Sosyal</a> platformunda 2019-2020 yılları
+arasında her hafta düzenli olarak yazmaya çalıştığım bir yazı serisidir. Bu
+yazı serisi kapsamında, her hafta, o hafta içerisinde programlamanın çeşitli
+alanlarıyla ilgili internette karşılaştığım haberleri topluyordum. Topladığım
+haberlerden ilgim ya da bilgim olanları detaylı değerlendiriyor; (b)ilgim
+olmayanları ise "Diğer Haberler" başlığı altında listeliyordum. İlk yazılarda
+olmasa da sonradan bir de "Yaklaşan Etkinlikler" bölümü ekledim. Bu bölümde de
+bir sonraki hafta için planlanmış alanımızla ilgili bulabildiğim tüm
+etkinlikleri tablo şeklinde veriyordum. Fakat hem biraz motivasyon kaybı
+yaşadığım için hem de hayatımda farklı şeylere öncelik vermem gerektiği için
+yazı serisine ara verdim.
+</p>
+
+<p>
+Şunu da şöylemeliyim ki: Bu gündem yazıları o hafta içerisinde yazılım
+dünyasında olan her şeyi kapsama garantisi vermiyor. Takip ettiğim
+kaynaklarda karşıma çıkan güncel haberleri gündem yazıları içerisine
+alıyordum. Takip ettiğim kaynakları aşağıdaki <a href="#kaynaklar">Kaynaklar</a> bölümünde
+bulabilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-orgdecbd55" class="outline-2">
+<h2 id="motivasyon">Motivasyon</h2>
+<div class="outline-text-2" id="text-motivasyon">
+<p>
+TeknoSeyir'in en çok tükettiğim içerikleri Gündem Değerlendirmeleri
+(teknoloji, oyun ve bilim). Her ne kadar teknoloji sektörünün içerisinden
+birisi de olsam teknoloji gündemini o kadar sık takip edemiyorum. Aynı çekilde
+bilim de ilgi alanım fakat onu da sürekli takip edebilecek bir vaktim yok.
+TeknoSeyir'da hazırlanan bu içerikler tam olarak benim bu ihtiyaçlarımı
+karşılıyor.
+</p>
+
+<p>
+Benim sürekli takip ettiğim bir alan var, o da: Yazılım sektörü. Haftalık
+Gündem Değerlendirmesi'nde her ne kadar yazılım sektörü içerisinden haberlere
+sık sık yer verilse de, hitap ettiği kitleye doğal olarak uymadığından,
+programlamanın daha içerisinden haberler pek fazla yer bulmuyordu. Ben de,
+"madem kendim sürekli bu haberleri takip ediyorum, o halde neden ben böyle bir
+içerik çıkartmayayım" dedim ve bu yazı serisini oluşturdum.
+</p>
+
+<p>
+TeknoSeyir Sosyal'den birçok arkadaş bu yazı serisini podcast şeklinde sesli
+bir içerik şeklinde hazırlamamı tavsiye ettiler, hatta şiddetle talep de
+ettiler fakat ben kendimi yazarak daha iyi ifade edebildiğimi düşündüğüm için
+girmedim o işlere. Ama günün birinde o yeteneklerimi de geliştirirsem neden
+olmasın :).
+</p>
+</div>
+</div>
+<div id="outline-container-orgfba21eb" class="outline-2">
+<h2 id="arsiv">Arşiv</h2>
+<div class="outline-text-2" id="text-arsiv">
+<p>
+Yazılım Gündemi yazılarının <b>HTML</b>, <b>PDF</b> ve <b>ORG</b> formatındaki sürümlerini
+aşağıdaki listeden bulabilirsiniz.
+</p>
+
+<p>
+<b><b>Toplam gündem sayısı:</b></b> 49
+</p>
+
+<p>
+<b><b>Toplam özel yazı sayısı:</b></b> 1
+</p>
+</div>
+
+<div id="outline-container-orge166596" class="outline-3">
+<h3 id="arsiv-2020">2020</h3>
+<div class="outline-text-3" id="text-arsiv-2020">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" width="100%">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Yazılım Gündemi - 2020/26</td>
+<td class="org-left">29 Haziran - 5 Temmuz 2020</td>
+<td class="org-left"><a href="arsiv/2020/26/yazilim-gundemi-2020-26.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2020/26/yazilim-gundemi-2020-26.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2020/26/yazilim-gundemi-2020-26.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 2020/25</td>
+<td class="org-left">22-28 Haziran 2020</td>
+<td class="org-left"><a href="arsiv/2020/25/yazilim-gundemi-2020-25.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2020/25/yazilim-gundemi-2020-25.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2020/25/yazilim-gundemi-2020-25.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 2020/24</td>
+<td class="org-left">15-21 Haziran 2020</td>
+<td class="org-left"><a href="arsiv/2020/24/yazilim-gundemi-2020-24.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2020/24/yazilim-gundemi-2020-24.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2020/24/yazilim-gundemi-2020-24.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 2020/23</td>
+<td class="org-left">8-14 Haziran 2020</td>
+<td class="org-left"><a href="arsiv/2020/23/yazilim-gundemi-2020-23.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2020/23/yazilim-gundemi-2020-23.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2020/23/yazilim-gundemi-2020-23.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 2020/22</td>
+<td class="org-left">1-7 Haziran 2020</td>
+<td class="org-left"><a href="arsiv/2020/22/yazilim-gundemi-2020-22.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2020/22/yazilim-gundemi-2020-22.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2020/22/yazilim-gundemi-2020-22.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 2020/21</td>
+<td class="org-left">25-31 Mayıs 2020</td>
+<td class="org-left"><a href="arsiv/2020/21/yazilim-gundemi-2020-21.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2020/21/yazilim-gundemi-2020-21.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2020/21/yazilim-gundemi-2020-21.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 2020/20</td>
+<td class="org-left">18-24 Mayıs 2020</td>
+<td class="org-left"><a href="arsiv/2020/20/yazilim-gundemi-2020-20.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2020/20/yazilim-gundemi-2020-20.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2020/20/yazilim-gundemi-2020-20.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 2020/19</td>
+<td class="org-left">11-17 Mayıs 2020</td>
+<td class="org-left"><a href="arsiv/2020/19/yazilim-gundemi-2020-19.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2020/19/yazilim-gundemi-2020-19.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2020/19/yazilim-gundemi-2020-19.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 2020/18</td>
+<td class="org-left">4-10 Mayıs 2020</td>
+<td class="org-left"><a href="arsiv/2020/18/yazilim-gundemi-2020-18.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2020/18/yazilim-gundemi-2020-18.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2020/18/yazilim-gundemi-2020-18.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 2020/17</td>
+<td class="org-left">27 Nisan - 3 Mayıs 2020</td>
+<td class="org-left"><a href="arsiv/2020/17/yazilim-gundemi-2020-17.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2020/17/yazilim-gundemi-2020-17.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2020/17/yazilim-gundemi-2020-17.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 2020/16</td>
+<td class="org-left">20-26 Nisan 2020</td>
+<td class="org-left"><a href="arsiv/2020/16/yazilim-gundemi-2020-16.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2020/16/yazilim-gundemi-2020-16.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2020/16/yazilim-gundemi-2020-16.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 2020/15</td>
+<td class="org-left">13-19 Nisan 2020</td>
+<td class="org-left"><a href="arsiv/2020/15/yazilim-gundemi-2020-15.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2020/15/yazilim-gundemi-2020-15.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2020/15/yazilim-gundemi-2020-15.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 2020/14</td>
+<td class="org-left">6-12 Nisan 2020</td>
+<td class="org-left"><a href="arsiv/2020/14/yazilim-gundemi-2020-14.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2020/14/yazilim-gundemi-2020-14.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2020/14/yazilim-gundemi-2020-14.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 2020/13</td>
+<td class="org-left">30 Mart - 5 Nisan 2020</td>
+<td class="org-left"><a href="arsiv/2020/13/yazilim-gundemi-2020-13.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2020/13/yazilim-gundemi-2020-13.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2020/13/yazilim-gundemi-2020-13.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 2020/12</td>
+<td class="org-left">23-29 Mart 2020</td>
+<td class="org-left"><a href="arsiv/2020/12/yazilim-gundemi-2020-12.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2020/12/yazilim-gundemi-2020-12.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2020/12/yazilim-gundemi-2020-12.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 2020/11</td>
+<td class="org-left">16-22 Mart 2020</td>
+<td class="org-left"><a href="arsiv/2020/11/yazilim-gundemi-2020-11.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2020/11/yazilim-gundemi-2020-11.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2020/11/yazilim-gundemi-2020-11.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 2020/10</td>
+<td class="org-left">9-15 Mart 2020</td>
+<td class="org-left"><a href="arsiv/2020/10/yazilim-gundemi-2020-10.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2020/10/yazilim-gundemi-2020-10.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2020/10/yazilim-gundemi-2020-10.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 2020/09</td>
+<td class="org-left">2-8 Mart 2020</td>
+<td class="org-left"><a href="arsiv/2020/09/yazilim-gundemi-2020-09.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2020/09/yazilim-gundemi-2020-09.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2020/09/yazilim-gundemi-2020-09.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 2020/08</td>
+<td class="org-left">17 Şubat - 1 Mart 2020</td>
+<td class="org-left"><a href="arsiv/2020/08/yazilim-gundemi-2020-08.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2020/08/yazilim-gundemi-2020-08.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2020/08/yazilim-gundemi-2020-08.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 2020/07</td>
+<td class="org-left">10-16 Şubat 2020</td>
+<td class="org-left"><a href="arsiv/2020/07/yazilim-gundemi-2020-07.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2020/07/yazilim-gundemi-2020-07.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2020/07/yazilim-gundemi-2020-07.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 2020/06</td>
+<td class="org-left">3-9 Şubat 2020</td>
+<td class="org-left"><a href="arsiv/2020/06/yazilim-gundemi-2020-06.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2020/06/yazilim-gundemi-2020-06.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2020/06/yazilim-gundemi-2020-06.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 2020/05</td>
+<td class="org-left">27 Ocak - 2 Şubat 2020</td>
+<td class="org-left"><a href="arsiv/2020/05/yazilim-gundemi-2020-05.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2020/05/yazilim-gundemi-2020-05.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2020/05/yazilim-gundemi-2020-05.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 2020/04</td>
+<td class="org-left">20-26 Ocak 2020</td>
+<td class="org-left"><a href="arsiv/2020/04/yazilim-gundemi-2020-04.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2020/04/yazilim-gundemi-2020-04.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2020/04/yazilim-gundemi-2020-04.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 2020/03</td>
+<td class="org-left">13-19 Ocak 2020</td>
+<td class="org-left"><a href="arsiv/2020/03/yazilim-gundemi-2020-03.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2020/03/yazilim-gundemi-2020-03.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2020/03/yazilim-gundemi-2020-03.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 2020/02</td>
+<td class="org-left">6-12 Ocak 2020</td>
+<td class="org-left"><a href="arsiv/2020/02/yazilim-gundemi-2020-02.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2020/02/yazilim-gundemi-2020-02.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2020/02/yazilim-gundemi-2020-02.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 2020/01</td>
+<td class="org-left">1-5 Ocak 2020</td>
+<td class="org-left"><a href="arsiv/2020/01/yazilim-gundemi-2020-01.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2020/01/yazilim-gundemi-2020-01.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2020/01/yazilim-gundemi-2020-01.org">ORG</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orgc33ae8e" class="outline-3">
+<h3 id="arsiv-2019">2019</h3>
+<div class="outline-text-3" id="text-arsiv-2019">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" width="100%">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Yazılım Gündemi - 23</td>
+<td class="org-left">23-29 Aralık 2019</td>
+<td class="org-left"><a href="arsiv/2019/23/yazilim-gundemi-23.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2019/23/yazilim-gundemi-23.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2019/23/yazilim-gundemi-23.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 22</td>
+<td class="org-left">16-22 Aralık 2019</td>
+<td class="org-left"><a href="arsiv/2019/22/yazilim-gundemi-22.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2019/22/yazilim-gundemi-22.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2019/22/yazilim-gundemi-22.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 21</td>
+<td class="org-left">9-15 Aralık 2019</td>
+<td class="org-left"><a href="arsiv/2019/21/yazilim-gundemi-21.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2019/21/yazilim-gundemi-21.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2019/21/yazilim-gundemi-21.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 20</td>
+<td class="org-left">2-8 Aralık 2019</td>
+<td class="org-left"><a href="arsiv/2019/20/yazilim-gundemi-20.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2019/20/yazilim-gundemi-20.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2019/20/yazilim-gundemi-20.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 19</td>
+<td class="org-left">18 Kasım-1 Aralık 2019</td>
+<td class="org-left"><a href="arsiv/2019/19/yazilim-gundemi-19.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2019/19/yazilim-gundemi-19.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2019/19/yazilim-gundemi-19.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 18</td>
+<td class="org-left">11-17 Kasım 2019</td>
+<td class="org-left"><a href="arsiv/2019/18/yazilim-gundemi-18.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2019/18/yazilim-gundemi-18.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2019/18/yazilim-gundemi-18.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 17</td>
+<td class="org-left">4-10 Kasım 2019</td>
+<td class="org-left"><a href="arsiv/2019/17/yazilim-gundemi-17.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2019/17/yazilim-gundemi-17.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2019/17/yazilim-gundemi-17.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 16</td>
+<td class="org-left">28 Ekim - 3 Kasım 2019</td>
+<td class="org-left"><a href="arsiv/2019/16/yazilim-gundemi-16.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2019/16/yazilim-gundemi-16.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2019/16/yazilim-gundemi-16.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 15</td>
+<td class="org-left">21-27 Ekim 2019</td>
+<td class="org-left"><a href="arsiv/2019/15/yazilim-gundemi-15.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2019/15/yazilim-gundemi-15.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2019/15/yazilim-gundemi-15.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 14</td>
+<td class="org-left">14-20 Ekim 2019</td>
+<td class="org-left"><a href="arsiv/2019/14/yazilim-gundemi-14.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2019/14/yazilim-gundemi-14.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2019/14/yazilim-gundemi-14.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 13</td>
+<td class="org-left">7-13 Ekim 2019</td>
+<td class="org-left"><a href="arsiv/2019/13/yazilim-gundemi-13.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2019/13/yazilim-gundemi-13.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2019/13/yazilim-gundemi-13.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 12</td>
+<td class="org-left">30 Eylül - 6 Ekim 2019</td>
+<td class="org-left"><a href="arsiv/2019/12/yazilim-gundemi-12.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2019/12/yazilim-gundemi-12.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2019/12/yazilim-gundemi-12.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 11</td>
+<td class="org-left">23-29 Eylül 2019</td>
+<td class="org-left"><a href="arsiv/2019/11/yazilim-gundemi-11.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2019/11/yazilim-gundemi-11.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2019/11/yazilim-gundemi-11.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 10</td>
+<td class="org-left">16-22 Eylül 2019</td>
+<td class="org-left"><a href="arsiv/2019/10/yazilim-gundemi-10.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2019/10/yazilim-gundemi-10.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2019/10/yazilim-gundemi-10.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 09</td>
+<td class="org-left">9-15 Eylül 2019</td>
+<td class="org-left"><a href="arsiv/2019/09/yazilim-gundemi-09.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2019/09/yazilim-gundemi-09.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2019/09/yazilim-gundemi-09.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 08</td>
+<td class="org-left">2-8 Eylül 2019</td>
+<td class="org-left"><a href="arsiv/2019/08/yazilim-gundemi-08.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2019/08/yazilim-gundemi-08.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2019/08/yazilim-gundemi-08.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 07</td>
+<td class="org-left">26 Ağustos - 1 Eylül 2019</td>
+<td class="org-left"><a href="arsiv/2019/07/yazilim-gundemi-07.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2019/07/yazilim-gundemi-07.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2019/07/yazilim-gundemi-07.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 06</td>
+<td class="org-left">12-25 Ağustos 2019</td>
+<td class="org-left"><a href="arsiv/2019/06/yazilim-gundemi-06.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2019/06/yazilim-gundemi-06.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2019/06/yazilim-gundemi-06.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 05</td>
+<td class="org-left">5-11 Ağustos 2019</td>
+<td class="org-left"><a href="arsiv/2019/05/yazilim-gundemi-05.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2019/05/yazilim-gundemi-05.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2019/05/yazilim-gundemi-05.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 04</td>
+<td class="org-left">29 Temmuz - 4 Ağustos 2019</td>
+<td class="org-left"><a href="arsiv/2019/04/yazilim-gundemi-04.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2019/04/yazilim-gundemi-04.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2019/04/yazilim-gundemi-04.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 03</td>
+<td class="org-left">22-28 Temmuz 2019</td>
+<td class="org-left"><a href="arsiv/2019/03/yazilim-gundemi-03.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2019/03/yazilim-gundemi-03.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2019/03/yazilim-gundemi-03.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 02</td>
+<td class="org-left">15-21 Temmuz 2019</td>
+<td class="org-left"><a href="arsiv/2019/02/yazilim-gundemi-02.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2019/02/yazilim-gundemi-02.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2019/02/yazilim-gundemi-02.org">ORG</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Yazılım Gündemi - 01</td>
+<td class="org-left">8-14 Temmuz 2019</td>
+<td class="org-left"><a href="arsiv/2019/01/yazilim-gundemi-01.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/2019/01/yazilim-gundemi-01.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/2019/01/yazilim-gundemi-01.org">ORG</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orgd208ff0" class="outline-3">
+<h3 id="ozel-yazilar">Özel Yazılar</h3>
+<div class="outline-text-3" id="text-ozel-yazilar">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" width="100%">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">.NET 5.0 yayınlandı</td>
+<td class="org-left">10 Kasım 2020</td>
+<td class="org-left"><a href="arsiv/ozel-yazilar/dotnet-5-0/dotnet-5-0.html">HTML</a></td>
+<td class="org-left"><a href="arsiv/ozel-yazilar/dotnet-5-0/dotnet-5-0.pdf">PDF</a></td>
+<td class="org-left"><a href="arsiv/ozel-yazilar/dotnet-5-0/dotnet-5-0.org">ORG</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="outline-container-org40a18bb" class="outline-2">
+<h2 id="kaynaklar">Kaynaklar</h2>
+<div class="outline-text-2" id="text-kaynaklar">
+<p>
+Yazılım Gündemi yazılarındaki haberleri topladığım kaynaklar:
+</p>
+<ul class="org-ul">
+<li><a href="https://news.ycombinator.com/news">HackerNews</a></li>
+<li>Reddit
+<ul class="org-ul">
+<li><a href="https://reddit.com/r/programming">/r/programming</a></li>
+<li>Çeşitli programlama dili ve teknolojilerin kanallarını bir araya getirerek
+oluşturduğum Custom Feed'im: <a href="https://www.reddit.com/user/erenhatirnaz/m/programming/">programming</a>.</li>
+</ul></li>
+<li><a href="https://techcrunch.com/">TechCrunch</a>: Genel teknoloji haberleri</li>
+<li>GNU/Linux dünyasıyla ilgili:
+<ul class="org-ul">
+<li><a href="https://www.phoronix.com">Phoronix</a></li>
+<li><a href="https://lwn.net/">LWN.net</a></li>
+</ul></li>
+<li><a href="https://developer-tech.com/">Developer Tech</a>: Programlamayla ilgili genel haberler</li>
+<li>Mobil geliştirme:
+<ul class="org-ul">
+<li>Android
+<ul class="org-ul">
+<li><a href="https://www.xda-developers.com/">XDA-Developers</a></li>
+<li><a href="https://www.androidauthority.com/">Android Authority</a></li>
+</ul></li>
+<li>iOS:
+<ul class="org-ul">
+<li><a href="https://developer.apple.com/news/">News - Apple Developer</a></li>
+<li><a href="https://appdevelopermagazine.com/iOS">App Developer Magazine</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8abf2a3" class="outline-2">
+<h2 id="kullandigim-araclar">Kullandığım Araçlar</h2>
+<div class="outline-text-2" id="text-kullandigim-araclar">
+<p>
+Yazılım Gündemi yazılarını <a href="https://www.gnu.org/software/emacs/">Emacs</a> metin editörü içerisinde <a href="https://orgmode.org">Org-mode</a> dokümanı
+şeklinde yazıyorum. HTML ve PDF çıktılarını da bu ORG modu dokümanından <a href="https://orgmode.org/manual/Exporting.html#Exporting">elde
+ediyorum</a>. PDF formatındaki yazılar aslında LaTeX üzerinden derlenip,
+oluşturuluyor. Org-mode tarafından oluşturulmuş LaTeX dosyaları (.tex
+uzantılı) dosyalar da ilgili yazılım gündemi yazısının klasöründe mevcut.
+İsterseniz PDF formatını kendiniz de derleyebilirsiniz.
+</p>
+
+<p>
+Yazıları TeknoSeyir'de blog yazısı şeklinde paylaştığım dönemlerde sadece HTML
+çıktısı alıp, bunu kopyala-yapıştır ile TeknoSeyir'deki editöre alıyor, orada
+düzenlemelerini yaptıktan sonra paylaşıyordum.
+</p>
+
+<p>
+Emacs ve Org-mode konusuyla ilgili başlangıç niteliğinde şöyle iki kaynak
+önerebilirim (bu araçları ben de bu kaynaklar sayesinde keşfettim):
+</p>
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=FsN3Yp05_aQ">Emacs: Özgür Yazılım Devriminin Editörü - YouTube</a></li>
+<li><a href="https://www.youtube.com/watch?v=SzA2YODtgK4">Getting Started With Org Mode - YouTube</a></li>
+</ul>
+
+<p>
+Emacs ve Org-mode hakkında bilgiliyseniz ve Yazılım Gündemi yazılarını Org
+dokümanı üzerinden derlemek istiyorsanız, yaptığım bazı özelleştirmelere
+ihtiyacınız olacak. Bunun için <a href="ayarlar.el">ayarlar.el</a> dosyasına göz atabilirsiniz.
+İleride yazılım gündemi yazılarını tekrar yazmaya başlarsam ya da boş bir
+zamanımda motivasyon bulabilirsem, yazım süreci ve teknik tarafla ilgili daha
+çok bilgi içeren bir yazı hazırlarım.
+</p>
+</div>
+</div>
+<div id="outline-container-org3e9a625" class="outline-2">
+<h2 id="bilinen-sorunlar">Bilinen Sorunlar</h2>
+<div class="outline-text-2" id="text-bilinen-sorunlar">
+<ul class="org-ul">
+<li>Yazıların içerisinde eklediğim GIF (hareketli görseller), yazının PDF
+formatındaki halinde sadece bağlantı olarak gösteriliyor. <a href="img/pdf-gif-link-sorun.png">Örnek</a>
+<ul class="org-ul">
+<li>Buna yapabileceğim bir şey yok maalesef. Aslında çeşitli yöntemler ile GIF
+animasyonlarını da PDF içerisine ekleme yolları var fakat çok zahmetli. Bu
+durumla karşılaştığınızda GIF dosyasının bağlantısını yeni bir sekmede
+açarak izleyebilir ya da yazının HTML formatındaki haline bakabilirsiniz.</li>
+</ul></li>
+<li>PDF formatındaki yazılarda <code>Bu şekilde biçimlendirilmiş</code> ifadeler bazen
+paragraf çizgisinden taşabiliyor. <a href="img/paragraf-tasma-sorunu-1.png">Örnek 1</a>, <a href="img/paragraf-tasma-sorunu-2.png">Örnek 2</a>, <a href="img/paragraf-tasma-sorunu-3.png">Örnek 3</a>.
+<ul class="org-ul">
+<li>Açıkcası pek fazla sayıda olmadığı için bu sorunu pek araştırmadım.
+Şimdilik görmezden gelmenizi rica edeceğim.</li>
+</ul></li>
+<li>HTML formatındaki yazılarda bazı kod parçaları sayfadan taşabiliyor.
+<ul class="org-ul">
+<li>Bu sorun genelde tek satırdan oluşan, bash ya da powershell komutlarında
+oluşuyor. HTML formatı için bir çözüm üretebilirim fakat bu sefer de PDF
+formatındaki halinde istemediğim durumlar oluşuyor. Bu sorunu da şimdilik
+bırakıyorum.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org118a357" class="outline-2">
+<h2 id="lisans">Lisans</h2>
+<div class="outline-text-2" id="text-lisans">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+Bu sayfa ve diğer tüm yazılım gündemi yazıları <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından
+<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a>
+(CC BY-NC-SA 4.0) ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 24 Ocak 2021</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 23:42</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+#+TITLE: Yazılım Gündemi - 9
+#+SUBTITLE: 9-15 Eylül 2019
+#+Author: Eren Hatırnaz
+#+DATE: 15 Eylül 2019
+#+OPTIONS: ^:nil
+#+LANGUAGE: tr
+#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=black, filecolor=red, urlcolor=blue}
+#+LATEX_HEADER: \usepackage[turkish]{babel}
+#+HTML_HEAD: <link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+#+LATEX: \shorthandoff{=}
+
+[[file:gorseller/yazilim-gundemi-banner.png]]
+
+#+BEGIN_CENTER
+[[file:../08/yazilim-gundemi-08.org][< Önceki Gündem]] | *9-15 Eylül 2019* | [[file:../10/yazilim-gundemi-10.org][Sonraki Gündem >]]
+
+[[https://teknoseyir.com/blog/yazilim-gundemi-9-9-15-eylul-2019][TeknoSeyir'de Oku]]
+#+END_CENTER
+
+* Python 2'nin [[https://www.python.org/doc/sunset-python-2/][3 aylık ömrü kalmış]]
+	Bildiğiniz gibi Python programlama dili uzun bir süredir iki ayrı sürüm
+	üzerinden geliştirilmeye devam ediyor. Fakat Python 2.x numaralı sürümler için
+	yolun sonu gözüktü. Python takımı, 1 Ocak 2020'den itibaren Python 2 sürümünün
+	geliştirilmeye devam edilmediğini duyurdu. Buna güvenlik güncelleştirmeleri de
+	dahil. Yani Python 2 artık tamamen ölüyor.
+
+	Açıkcası pek üzüldüğümü söyleyemem. Yarattığı gereksiz "Python 2 mi, 3 mü?"
+	kafa karışıklığını da düşününce bu kadar uzun süre destek verilmesine bile
+	şaşırıyorum. Neyse, ölünün arkasından kötü konuşulmaz ama Python takımı [[https://pythonclock.org/][şöyle
+	bir web sitesi]] açarak, Python 2 sürümünün ölüm gününe geri sayım başlatmış. Bu
+	biraz ağır olmuş sanki.
+
+	Python 2 ile yazılmış projelerinizi Python 3 sürümüne geçirmek için Python
+	takımı tarafından yayınlanan şu rehberi inceleyebilirsiniz: [[https://docs.python.org/3/howto/pyporting.html][Porting Python 2
+	Code to Python 3]]. Son son helallik almayı da unutmayın Python 2'den.
+* TypeScript 3.7 ile gelecek yenilikler
+	5 Kasım'da [[https://github.com/microsoft/TypeScript/issues/33352][yayınlanması planlanan]] TypeScript programlama dilinin 3.7 sürümü
+	ile gelecek olan birkaç özellik bu şekilde:
+
+** [[https://github.com/microsoft/TypeScript/issues/26578][Null Coalescing]]
+	 Bu özelliğin benzeri aslında JavaScript'in kendisinde mevcut fakat bazı
+	 durumlarda sorun olabiliyor. Örneğin:
+   #+ATTR_LATEX: :options frame=lines, linenos, label=TypeScript, labelposition=topline
+	 #+BEGIN_SRC typescript
+     const final_sonuc = sonuc1 || sonuc2;
+	 #+END_SRC
+	 gibi bir ifadede, =sonuc1= değişkeni eğer boş string ya da sıfır gibi [[https://developer.mozilla.org/en-US/docs/Glossary/Falsy][falsy]]
+	 ifadeler varsa, bunları tanımlı değildir olarak kabul edip =sonuc2=
+	 değişkenini =sonuc_final= 'e aktarabiliyordu.
+
+	 TypeScript 3.7 ile gelecek olan =??= ifadesi ile bu sorunun önüne geçilmiş
+	 oluyor. Şöyle ki:
+   #+ATTR_LATEX: :options frame=lines, linenos, label=TypeScript, labelposition=topline
+	 #+BEGIN_SRC typescript
+     const final_sonuc = sonuc1 ?? sonuc2;
+	 #+END_SRC
+	 şeklinde kullanım sayesinde artık =sonuc1= değişkeni [[https://developer.mozilla.org/en-US/docs/Glossary/Falsy][falsy]] ifadeler içerse
+	 bile tanımlı olarak kabul edilecek, çünkü öyle bir değişken mevcut.
+** [[https://github.com/microsoft/TypeScript/issues/16][Optional Chaining]]
+	 Bu özellik sayesinde artık uzun ve iç içe if sorguları yapmak zorunda
+	 kalmayacağız. Önceden şöyle uzun bir ifade ile yaptığımız şeyi:
+   #+ATTR_LATEX: :options frame=lines, linenos, label=TypeScript, labelposition=topline
+	 #+BEGIN_SRC typescript
+		 let sonuc = veri ? (veri.anahtar1 ? veri.anahtar1.anahtar2 : undefined) : undefined;
+	 #+END_SRC
+	 =veri.anahtar1.anahtar2= değerini getirmek için değişkenin tanımlı olmama
+	 ihtimaline karşı böyle bir kullanım yapıyorduk.
+
+	 Fakat artık bunu şu şekilde sadeleştirebileceğiz:
+   #+ATTR_LATEX: :options frame=lines, linenos, label=TypeScript, labelposition=topline
+	 #+BEGIN_SRC typescript
+		 let sonuc = veri?.anathar1?.anahtar2;
+	 #+END_SRC
+
+  Yeni eklenecek diğer özellikler için [[https://github.com/microsoft/TypeScript/issues/33352][bu sayfaya]] göz atabilirsiniz.
+* Oracle, JDK indirmeleri için [[https://www.oracle.com/java/technologies/jdk8-downloads.html][artık üyelik istiyor]]
+	Oracle elinde tuttuğu Java teknolojisinin suyunu sıkmaya devam ediyor. Şimdi de
+	lisans değişikliğine giderek, artık Java SE Development Kit indirmeleri için
+	üye olmayı zorunlu kıldı ve kişisel (ticari olmayan) projelerde kullanırken de
+	proje hakkında detayları istemeye başlayacakmış. Yani Oracle firması hoşuna
+	gitmeyen projelere JDK vermeyebilir. OpenJDK tarafında bir değişiklik yok, GPL
+	lisansı ile jdk.java.net adresi üzerinden dağıtılmaya devam ediyor.
+
+	Nedir bu Oracle'dan çektiğimiz?!
+* Dünya Programcılar Günümüz kutlu olsun!
+	Her yılın 256'ıncı gününde kutlanan bir günümüz varmış, ben de yeni öğrendim.
+	256.gün olmasının nedeni de, hem 8-bit ile yazılabilecek toplam 256 sayı
+	olmasından (0 dahil), hem de 2'nin 365'den küçük en büyük katı olduğu içinmiş.
+	Bu yıl da 13 Eylül tarihine denk gelmiş. [[https://www.youtube.com/watch?v=QsxbbHG7KT8][O hale günümüz kutlu olsun arkadaşlar]]
+* Diğer Haberler
+	- GitHub, Rails 6.0 [[https://github.blog/2019-09-09-running-github-on-rails-6-0/][sürümüne geçtiğini duyurdu]].
+	- MDN ve CanIUse [[https://hacks.mozilla.org/2019/09/caniuse-and-mdn-compat-data-collaboration/][güçlerini birleştirdi]].
+	- Google, JavaScript ve WebAssembly motoru V8'in [[https://v8.dev/blog/v8-lite][daha hafif bir versiyonu
+    üzerinde çalışıyormuş]]: [[https://docs.google.com/document/d/10qh2-b4C5OtSg-xLwyZpEI5ZihVBPtn1xwKBbQC26yI/edit][V8 Lite]].
+	- Django 3.0 [[https://www.djangoproject.com/weblog/2019/sep/10/django-30-alpha-1-released/][alpha 1 sürümü]] duyuruldu.
+	- C++20 konseptleri Visual Studio 2019 [[https://devblogs.microsoft.com/cppblog/c20-concepts-are-here-in-visual-studio-2019-version-16-3/][16.3 Preview 2 sürümünde kullanılabilir
+    olmuş]].
+	- C++ kütüphane yöneticisi [[https://github.com/microsoft/vcpkg][vcpkg]] aracının [[https://github.com/microsoft/vcpkg/releases/tag/2019.08][2019.08 sürümü yayınlandı]].
+	- Stripe komut satırı aracını (CLI) [[https://twitter.com/stripe/status/1171474829570035712][açık kaynak olarak yayınladı]], [[https://github.com/stripe/stripe-cli][GitHub
+    Deposu]].
+	- PHP mail gruplarında [[https://externals.io/message/106963][hararetli tartışmalar devam ediyor]].
+	- Dart programlama dili [[https://medium.com/dartlang/announcing-dart-2-5-super-charged-development-328822024970][2.5 sürümünü duyurdu]].
+	- Bulut uygulamaları için özelleştirilmiş yeni bir açık kaynak programlama
+    dili duyuruldu: [[https://v1-0.ballerina.io/][Ballerina]], [[https://github.com/ballerina-platform][GitHub Sayfası]].
+	- Yeni bir proje yönetim [[https://techcrunch.com/2019/09/10/clubhouse-announces-new-collaboration-tool-and-free-version-of-its-project-management-platform/][platformu duyuruldu]]: [[https://clubhouse.io/][Clubhouse]].
+	- Eclipse organizasyonu, [[https://jakarta.ee/][Jakarta EE 8]] projesini [[https://www.zdnet.com/article/java-finally-goes-all-in-on-open-source-with-the-release-of-jakarta-ee-8/][açık kaynak olarak kullanıma
+    açtı]].
+	- Dağıtık log sistemi [[https://wecode.wepay.com/posts/waltz-a-distributed-write-ahead-log][Waltz]] açık kaynak olarak duyuruldu. [[https://github.com/wepay/waltz][GitHub Deposu]]
+	- Captcha alternatifi bir girişim: [[https://wehatecaptchas.com/][WeHateCaptchas]].
+	- Netlify, FaunaDB için [[https://www.netlify.com/blog/2019/09/10/announcing-the-faunadb-add-on-for-netlify/][eklentisini duyurdu]].
+	- Yazı sınıflandırma kütüphanesi cherry, [[https://github.com/Windsooon/cherry/releases/tag/v2.0][2.0 sürümünü duyurdu]].
+	- Nestedj [[https://github.com/eXsio/nestedj/releases/tag/4.0.0][4.0.0 sürümü çıktı]].
+* Lisans
+  #+BEGIN_CENTER
+  #+ATTR_HTML: :height 75
+  #+ATTR_LATEX: :height 1.5cm
+  [[file:../../../img/CC_BY-NC-SA_4.0.png]]
+
+  [[file:yazilim-gundemi-09.org][Yazılım Gündemi - 9]] yazısı [[https://erenhatirnaz.github.io][Eren Hatırnaz]] tarafından [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Creative Commons
+  Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı]] (CC BY-NC-SA 4.0)
+  ile lisanslanmıştır.
+  #+END_CENTER

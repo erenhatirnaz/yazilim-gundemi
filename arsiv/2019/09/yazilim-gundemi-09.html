@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 22:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi - 9</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi - 9
+<br />
+<span class="subtitle">9-15 Eylül 2019</span>
+</h1>
+<div id="table-of-contents">
+<h2>İçindekiler</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org23c4fed">1. Python 2'nin 3 aylık ömrü kalmış</a></li>
+<li><a href="#org853a5b1">2. TypeScript 3.7 ile gelecek yenilikler</a>
+<ul>
+<li><a href="#org74a15f5">2.1. Null Coalescing</a></li>
+<li><a href="#org2c693b4">2.2. Optional Chaining</a></li>
+</ul>
+</li>
+<li><a href="#org99da4a4">3. Oracle, JDK indirmeleri için artık üyelik istiyor</a></li>
+<li><a href="#org4a38217">4. Dünya Programcılar Günümüz kutlu olsun!</a></li>
+<li><a href="#orgda61328">5. Diğer Haberler</a></li>
+<li><a href="#org23382b9">6. Lisans</a></li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gundemi-banner.png" alt="yazilim-gundemi-banner.png" />
+</p>
+</div>
+
+<div class="org-center">
+<p>
+<a href="../08/yazilim-gundemi-08.html">&lt; Önceki Gündem</a> | <b>9-15 Eylül 2019</b> | <a href="../10/yazilim-gundemi-10.html">Sonraki Gündem &gt;</a>
+</p>
+
+<p>
+<a href="https://teknoseyir.com/blog/yazilim-gundemi-9-9-15-eylul-2019">TeknoSeyir'de Oku</a>
+</p>
+</div>
+
+<div id="outline-container-org23c4fed" class="outline-2">
+<h2 id="org23c4fed"><span class="section-number-2">1</span> Python 2'nin <a href="https://www.python.org/doc/sunset-python-2/">3 aylık ömrü kalmış</a></h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Bildiğiniz gibi Python programlama dili uzun bir süredir iki ayrı sürüm
+üzerinden geliştirilmeye devam ediyor. Fakat Python 2.x numaralı sürümler için
+yolun sonu gözüktü. Python takımı, 1 Ocak 2020'den itibaren Python 2 sürümünün
+geliştirilmeye devam edilmediğini duyurdu. Buna güvenlik güncelleştirmeleri de
+dahil. Yani Python 2 artık tamamen ölüyor.
+</p>
+
+<p>
+Açıkcası pek üzüldüğümü söyleyemem. Yarattığı gereksiz "Python 2 mi, 3 mü?"
+kafa karışıklığını da düşününce bu kadar uzun süre destek verilmesine bile
+şaşırıyorum. Neyse, ölünün arkasından kötü konuşulmaz ama Python takımı <a href="https://pythonclock.org/">şöyle
+bir web sitesi</a> açarak, Python 2 sürümünün ölüm gününe geri sayım başlatmış. Bu
+biraz ağır olmuş sanki.
+</p>
+
+<p>
+Python 2 ile yazılmış projelerinizi Python 3 sürümüne geçirmek için Python
+takımı tarafından yayınlanan şu rehberi inceleyebilirsiniz: <a href="https://docs.python.org/3/howto/pyporting.html">Porting Python 2
+Code to Python 3</a>. Son son helallik almayı da unutmayın Python 2'den.
+</p>
+</div>
+</div>
+<div id="outline-container-org853a5b1" class="outline-2">
+<h2 id="org853a5b1"><span class="section-number-2">2</span> TypeScript 3.7 ile gelecek yenilikler</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+5 Kasım'da <a href="https://github.com/microsoft/TypeScript/issues/33352">yayınlanması planlanan</a> TypeScript programlama dilinin 3.7 sürümü
+ile gelecek olan birkaç özellik bu şekilde:
+</p>
+</div>
+
+<div id="outline-container-org74a15f5" class="outline-3">
+<h3 id="org74a15f5"><span class="section-number-3">2.1</span> <a href="https://github.com/microsoft/TypeScript/issues/26578">Null Coalescing</a></h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Bu özelliğin benzeri aslında JavaScript'in kendisinde mevcut fakat bazı
+durumlarda sorun olabiliyor. Örneğin:
+</p>
+<div class="org-src-container">
+<pre class="src src-typescript"><span class="org-keyword">const</span> <span class="org-variable-name">final_sonuc</span> = sonuc1 || sonuc2;
+</pre>
+</div>
+<p>
+gibi bir ifadede, <code>sonuc1</code> değişkeni eğer boş string ya da sıfır gibi <a href="https://developer.mozilla.org/en-US/docs/Glossary/Falsy">falsy</a>
+ifadeler varsa, bunları tanımlı değildir olarak kabul edip <code>sonuc2</code>
+değişkenini <code>sonuc_final</code> 'e aktarabiliyordu.
+</p>
+
+<p>
+TypeScript 3.7 ile gelecek olan <code>??</code> ifadesi ile bu sorunun önüne geçilmiş
+oluyor. Şöyle ki:
+</p>
+<div class="org-src-container">
+<pre class="src src-typescript"><span class="org-keyword">const</span> <span class="org-variable-name">final_sonuc</span> = sonuc1 ?? sonuc2;
+</pre>
+</div>
+<p>
+şeklinde kullanım sayesinde artık <code>sonuc1</code> değişkeni <a href="https://developer.mozilla.org/en-US/docs/Glossary/Falsy">falsy</a> ifadeler içerse
+bile tanımlı olarak kabul edilecek, çünkü öyle bir değişken mevcut.
+</p>
+</div>
+</div>
+<div id="outline-container-org2c693b4" class="outline-3">
+<h3 id="org2c693b4"><span class="section-number-3">2.2</span> <a href="https://github.com/microsoft/TypeScript/issues/16">Optional Chaining</a></h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Bu özellik sayesinde artık uzun ve iç içe if sorguları yapmak zorunda
+kalmayacağız. Önceden şöyle uzun bir ifade ile yaptığımız şeyi:
+</p>
+<div class="org-src-container">
+<pre class="src src-typescript"><span class="org-keyword">let</span> <span class="org-variable-name">sonuc</span> = veri ? (veri.anahtar1 ? veri.anahtar1.anahtar2 : <span class="org-constant">undefined</span>) : <span class="org-constant">undefined</span>;
+</pre>
+</div>
+<p>
+<code>veri.anahtar1.anahtar2</code> değerini getirmek için değişkenin tanımlı olmama
+ihtimaline karşı böyle bir kullanım yapıyorduk.
+</p>
+
+<p>
+Fakat artık bunu şu şekilde sadeleştirebileceğiz:
+</p>
+<div class="org-src-container">
+<pre class="src src-typescript"><span class="org-keyword">let</span> <span class="org-variable-name">sonuc</span> = veri?.anathar1?.anahtar2;
+</pre>
+</div>
+
+<p>
+Yeni eklenecek diğer özellikler için <a href="https://github.com/microsoft/TypeScript/issues/33352">bu sayfaya</a> göz atabilirsiniz.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org99da4a4" class="outline-2">
+<h2 id="org99da4a4"><span class="section-number-2">3</span> Oracle, JDK indirmeleri için <a href="https://www.oracle.com/java/technologies/jdk8-downloads.html">artık üyelik istiyor</a></h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Oracle elinde tuttuğu Java teknolojisinin suyunu sıkmaya devam ediyor. Şimdi de
+lisans değişikliğine giderek, artık Java SE Development Kit indirmeleri için
+üye olmayı zorunlu kıldı ve kişisel (ticari olmayan) projelerde kullanırken de
+proje hakkında detayları istemeye başlayacakmış. Yani Oracle firması hoşuna
+gitmeyen projelere JDK vermeyebilir. OpenJDK tarafında bir değişiklik yok, GPL
+lisansı ile jdk.java.net adresi üzerinden dağıtılmaya devam ediyor.
+</p>
+
+<p>
+Nedir bu Oracle'dan çektiğimiz?!
+</p>
+</div>
+</div>
+<div id="outline-container-org4a38217" class="outline-2">
+<h2 id="org4a38217"><span class="section-number-2">4</span> Dünya Programcılar Günümüz kutlu olsun!</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Her yılın 256'ıncı gününde kutlanan bir günümüz varmış, ben de yeni öğrendim.
+256.gün olmasının nedeni de, hem 8-bit ile yazılabilecek toplam 256 sayı
+olmasından (0 dahil), hem de 2'nin 365'den küçük en büyük katı olduğu içinmiş.
+Bu yıl da 13 Eylül tarihine denk gelmiş. <a href="https://www.youtube.com/watch?v=QsxbbHG7KT8">O hale günümüz kutlu olsun arkadaşlar</a>
+</p>
+</div>
+</div>
+<div id="outline-container-orgda61328" class="outline-2">
+<h2 id="orgda61328"><span class="section-number-2">5</span> Diğer Haberler</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>GitHub, Rails 6.0 <a href="https://github.blog/2019-09-09-running-github-on-rails-6-0/">sürümüne geçtiğini duyurdu</a>.</li>
+<li>MDN ve CanIUse <a href="https://hacks.mozilla.org/2019/09/caniuse-and-mdn-compat-data-collaboration/">güçlerini birleştirdi</a>.</li>
+<li>Google, JavaScript ve WebAssembly motoru V8'in <a href="https://v8.dev/blog/v8-lite">daha hafif bir versiyonu
+üzerinde çalışıyormuş</a>: <a href="https://docs.google.com/document/d/10qh2-b4C5OtSg-xLwyZpEI5ZihVBPtn1xwKBbQC26yI/edit">V8 Lite</a>.</li>
+<li>Django 3.0 <a href="https://www.djangoproject.com/weblog/2019/sep/10/django-30-alpha-1-released/">alpha 1 sürümü</a> duyuruldu.</li>
+<li>C++20 konseptleri Visual Studio 2019 <a href="https://devblogs.microsoft.com/cppblog/c20-concepts-are-here-in-visual-studio-2019-version-16-3/">16.3 Preview 2 sürümünde kullanılabilir
+olmuş</a>.</li>
+<li>C++ kütüphane yöneticisi <a href="https://github.com/microsoft/vcpkg">vcpkg</a> aracının <a href="https://github.com/microsoft/vcpkg/releases/tag/2019.08">2019.08 sürümü yayınlandı</a>.</li>
+<li>Stripe komut satırı aracını (CLI) <a href="https://twitter.com/stripe/status/1171474829570035712">açık kaynak olarak yayınladı</a>, <a href="https://github.com/stripe/stripe-cli">GitHub
+Deposu</a>.</li>
+<li>PHP mail gruplarında <a href="https://externals.io/message/106963">hararetli tartışmalar devam ediyor</a>.</li>
+<li>Dart programlama dili <a href="https://medium.com/dartlang/announcing-dart-2-5-super-charged-development-328822024970">2.5 sürümünü duyurdu</a>.</li>
+<li>Bulut uygulamaları için özelleştirilmiş yeni bir açık kaynak programlama
+dili duyuruldu: <a href="https://v1-0.ballerina.io/">Ballerina</a>, <a href="https://github.com/ballerina-platform">GitHub Sayfası</a>.</li>
+<li>Yeni bir proje yönetim <a href="https://techcrunch.com/2019/09/10/clubhouse-announces-new-collaboration-tool-and-free-version-of-its-project-management-platform/">platformu duyuruldu</a>: <a href="https://clubhouse.io/">Clubhouse</a>.</li>
+<li>Eclipse organizasyonu, <a href="https://jakarta.ee/">Jakarta EE 8</a> projesini <a href="https://www.zdnet.com/article/java-finally-goes-all-in-on-open-source-with-the-release-of-jakarta-ee-8/">açık kaynak olarak kullanıma
+açtı</a>.</li>
+<li>Dağıtık log sistemi <a href="https://wecode.wepay.com/posts/waltz-a-distributed-write-ahead-log">Waltz</a> açık kaynak olarak duyuruldu. <a href="https://github.com/wepay/waltz">GitHub Deposu</a></li>
+<li>Captcha alternatifi bir girişim: <a href="https://wehatecaptchas.com/">WeHateCaptchas</a>.</li>
+<li>Netlify, FaunaDB için <a href="https://www.netlify.com/blog/2019/09/10/announcing-the-faunadb-add-on-for-netlify/">eklentisini duyurdu</a>.</li>
+<li>Yazı sınıflandırma kütüphanesi cherry, <a href="https://github.com/Windsooon/cherry/releases/tag/v2.0">2.0 sürümünü duyurdu</a>.</li>
+<li>Nestedj <a href="https://github.com/eXsio/nestedj/releases/tag/4.0.0">4.0.0 sürümü çıktı</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org23382b9" class="outline-2">
+<h2 id="org23382b9"><span class="section-number-2">6</span> Lisans</h2>
+<div class="outline-text-2" id="text-6">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="../../../img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+<a href="yazilim-gundemi-09.html">Yazılım Gündemi - 9</a> yazısı <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a> (CC BY-NC-SA 4.0)
+ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 15 Eylül 2019</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 22:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

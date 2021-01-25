@@ -1,0 +1,274 @@
+#+TITLE: Yazılım Gündemi - 3
+#+SUBTITLE: 22-28 Temmuz 2019
+#+Author: Eren Hatırnaz
+#+DATE: 28 Temmuz 2019
+#+OPTIONS: ^:nil
+#+LANGUAGE: tr
+#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=black, filecolor=red, urlcolor=blue}
+#+LATEX_HEADER: \usepackage[turkish]{babel}
+#+HTML_HEAD: <link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+#+LATEX: \shorthandoff{=}
+
+[[file:gorseller/yazilim-gundemi-banner.png]]
+
+#+BEGIN_CENTER
+[[file:../02/yazilim-gundemi-02.org][< Önceki Gündem]] | *22-28 Temmuz 2019* | [[file:../04/yazilim-gundemi-04.org][Sonraki Gündem >]]
+
+[[https://teknoseyir.com/blog/yazilim-gundemi-3-22-28-temmuz-2019][TeknoSeyir'de Oku]]
+#+END_CENTER
+
+* GitHub, Amerika yaptırımlarını [[https://help.github.com/en/articles/github-and-trade-controls][uygulamaya başladı]]
+	#+CAPTION: Kısıtlanan kullanıcıların ekranlarında çıkan uyarı metini
+	[[file:gorseller/github-amerika-yaptirimlari-1.png]]
+
+	GitHub bu kararları yeni mi uygulamaya başladı, yoksa daha önceden de
+	uygulanıyordu fakat bu kadar sert mi değildi, bilemiyorum fakat bu hafta
+	birkaç olaya karıştığı için gündem oldu. Bu olaylar şu şekilde:
+
+   - *Kırımlı bir geliştiricinin [[https://github.com/tkashkin/GameHub/issues/289][GitHub hesabının kısıtlanması]]*
+	 - *Iranlı bir geliştiricinin [[https://medium.com/hamed/github-blocked-my-account-and-they-think-im-developing-nuclear-weapons-e7e1fe62cb74][GitHub hesabının kısıtlanması]]*
+
+	Kısıtlamaların tam listesi olmamakla birlikte geliştiricilerin şu an maruz
+	kaldıkları kısıtlamalar bu şekilde:
+
+   - GitHub Pages üzerinde barındırdıkları web siteleri ulaşılamaz oldu (GitHub
+     404 sayfası gönderiyor).
+	 - Yeni özel depo oluşturamıyorlar.
+	 - Var olan özel depolarına erişemiyorlar. =git clone= komutu da 403 kodu
+     dönüyormuş.
+
+	Kısıtlamalar nereye kadar gidecek bilinmiyor. Geliştiriciler projelerine devam
+	edip, edemeyecekleri konusunda endişeliler. GitHub'ın ilgili sayfasında bu
+	ülkelerdeki kişiler ücretsiz hizmetlerden faydalanabilecekler deniyor fakat
+	özel depolar ücretsiz olmasına rağmen, bu kullanıcıların özel depoları
+	kısıtlanmış ve erişilemez durumda. Geliştiriciler kodlarına, hata takip
+	sistemine ve dokümanlarına erişimi kaybettiler. GitHub'a mail atıp, kapatılmış
+	depoların yedeklerini istemelerine rağmen geri dönüş olumsuz olmuş. Resmen
+	kodlarına el koymuşlar yani.
+
+	Bu ülkelerde yaşayan geliştiriciler de [[https://github.com/1995parham/github-do-not-ban-us][GitHub'a açık mektup yazarak]], bir nevi
+	imza kampanyası başlatmışlar. Geliştirici camiasından insanlar konuyu
+	[[https://news.ycombinator.com/item?id=20531039][HackerNews]] ve [[https://www.reddit.com/r/programming/comments/chwq3b/my_github_account_has_been_restricted_due_to_us/][Reddit]] gibi platformlardan tartışmaya devam ediyor.
+
+	Her ne kadar Amerika merkezli bir şirket olarak yasaları uygulamak zorunda
+	olsalar da, GitHub'ın tavırları beni rahatsız etti. Özellikle bu kullanıcılara
+	hiç haber vermeden, önceden uyarı yapmadan ve verilerini alma imkanı sunmadan
+	bir gecede bu işleri yapmaları bende biraz art niyet duygusu uyandırdı ve
+	GitHub üyeliğimi sorgulamaya başladım. Üstelikte Türkiye'ye de yaptırımlar
+	konusu gündemdeyken endişem daha da arttı ve GitHub'daki tüm depolarımı
+	bilgisayarıma indirdim fakat Türkiye'nin de bu listeye girmesi durumunda
+	Türkiye bilişim sektöründe yaşanacakları düşünemiyorum bile!
+
+	#+CAPTION: Üstelik bu ülkelere gitmiş ve oradan GitHub'a bağlanmışsanız, bu
+	#+CAPTION: kısıtlamalar sizin hesabınıza da gelebilir ve tekrar hesabınızı
+	#+CAPTION: açtırmak için o ülkelerden birinde yaşamadığınızı kanıtlamanız
+	#+CAPTION: için [[https://airtable.com/shrGBcceazKIoz6pY][form doldurmanız]]
+	#+CAPTION: isteniyor. Formda istenen bilgilere baksanıza!
+	[[file:gorseller/github-amerika-yaptirimlari-2.jpg]]
+
+	Levent Abi bir kez daha haklı çıktı, söylemi tekrar hatırlayalım: "Bulut
+	dediğin başkasının bilgisayarıdır. Bir gün gelir de, 'Sana hizmet vermiyorum
+	kardeşim' derse, öylece kalırsın ortada". Bir kere daha bulut sistemlere
+	güvenmememiz gerektiğini -umarım- öğrenmiş olduk. Güya internette gerçek
+	hayattaki gibi ülke sınırları yoktu, güya internetteyken fiziksel olarak
+	nerede olduğumuzun bir önemi yoktu...
+* PHP 7.4.0 [[https://www.php.net/archive/2019.php#2019-07-25-1][Beta 1 yayınlandı]]
+	22 Temmuz'da yeni özellik eklenmesi dondurulan (feature freeze) PHP 7.4'ün Beta
+	1 etiketine sahip ilk sürümü ise 25 Temmuz'da duyuruldu. PHP Wiki sayfasındaki
+	[[https://wiki.php.net/todo/php74][takvime göre]] PHP 7.4.0 sürümün yayın sürecinin bu şekilde olması bekleniyor:
+
+	| Tarih           | Sürüm  |
+	|-----------------+--------|
+	| 08 Ağustos 2019 | Beta 2 |
+	| 22 Ağustos 2019 | Beta 3 |
+	| 05 Eylül 2019   | RC 1   |
+	| 19 Eylül 2019   | RC 2   |
+	| 03 Ekim 2019    | RC 3   |
+	| 17 Ekim 2019    | RC 4   |
+	| 31 Ekim 2019    | RC 5   |
+	| 14 Kasım 2019   | RC 6   |
+	| 28 Kasım 2019   | Final  |
+
+	PHP 7.4.0 ile gelecek bazı özellikler bu şekilde:
+** Tipli sınıf özellikleri ([[https://wiki.php.net/rfc/typed_properties_v2][Typed Properties]])
+	 PHP'de sınıf kodlarken artık sınıfın özelliklerini bu şekilde tipli
+	 tanımlayabileceğiz:
+
+   #+ATTR_LATEX: :options frame=lines, linenos, label=PHP, labelposition=topline, startinline=true
+   #+BEGIN_SRC php
+		class Kullanici {
+				public int $id;
+				public string $isim;
+
+				public function __construct(int $id, string $isim) {
+						$this->id = $id;
+						$this->isim = $isim;
+				}
+		}
+   #+END_SRC
+** [[https://wiki.php.net/rfc/arrow_functions_v2][Arrow Functions]]
+   Önceden bu şekilde olan kullanımı:
+
+   #+ATTR_LATEX: :options frame=lines, linenos, label=PHP, labelposition=topline, startinline=true
+   #+BEGIN_SRC php
+     $sayilar = [1, 2, 3, 4, 5, 6];
+     $kareleri = array_map(function($sayi) { return $sayi * $sayi; }, $sayilar);
+     // 1, 4, 9, 16, 25, 36
+	 #+END_SRC
+
+	 Artık bu formatta kullanabileceğiz:
+   #+ATTR_LATEX: :options frame=lines, linenos, label=PHP, labelposition=topline, startinline=true
+	 #+BEGIN_SRC php
+     <?php
+
+     $sayilar = [1, 2, 3, 4, 5, 6];
+     $kareleri = array_map(fn($sayi) => $sayi * $sayi, $sayilar);
+     // 1, 4, 9, 16, 25, 36
+	 #+END_SRC
+** [[https://wiki.php.net/rfc/null_coalesce_equal_operator][Null Coalescing Assignment Operator]]
+	 Çevirisini yapamadım fakat bu operatör Türkiye'den birisi tarafından eklenen
+	 bir özellik. Kendisini GitHub'da [[https://github.com/midorikocak][midorikocak]] kullanıcı adıyla
+	 bulabilirsiniz. Gelelim yeni operatörümüze, bu operatör sayesinde önceden bu
+	 şekilde yazdığımız kod parçasını:
+
+   #+ATTR_LATEX: :options frame=lines, linenos, label=PHP, labelposition=topline, startinline=true
+	 #+BEGIN_SRC php
+		 if (!isset($dizi['anahtar'])) {
+				 $dizi['anahtar'] = varsayilaniHesapla();
+		 }
+	 #+END_SRC
+
+	 Artık aşağıdaki gibi tek satırda yazabileceğiz:
+   #+ATTR_LATEX: :options frame=lines, linenos, label=PHP, labelposition=topline, startinline=true
+	 #+BEGIN_SRC php
+		 $dizi['anahtar'] ??= varsayilaniHesapla();
+	 #+END_SRC
+
+	 Bu katkısı için kendisine teşekkür ediyoruz.
+
+	Yazının fazla uzamaması için bu konuyu burada bırakıyorum ama eğer
+	ilgiliyseniz yeni özelliklerin tamamına [[https://github.com/php/php-src/blob/php-7.4.0beta1/UPGRADING][buradan erişebilirsiniz]].
+* JDK 13 ile gelecek özellikler [[https://www.javaworld.com/article/3341388/jdk-13-the-new-features-coming-to-java-13.html][belli oldu]]
+	[[file:../02/yazilim-gundemi-02.org][Geçen haftaki gündemde]] JDK 13 sürümünün "Rampdown" ikinci aşamaya geçtiğini
+	duyurmuştum. Bu hafta da yeni eklenecek bir özelliğe bakalım. Diğer özelliklere
+	de baktım fakat uzun zamandır Java yazmadığım için tam anlayamadım. Ben de
+	anladığım özelliği yazayım dedim :) Diğer özellik ve değişiklikler için konu
+	başlığına eklediğim bağlantıya tıklayabilirsiniz ya da QCon isimli konferansta
+	Oracle çalışanı Java Dil Mimarı Brian Goetz tarafından yapılan bu sunumu
+	izleyebilirsiniz: [[https://www.infoq.com/presentations/java-futures-2019/][Java Futures, 2019 Edition]].
+
+** Çok satırlı String ifadeler
+	 Önceden Java'da bir string değişken içerisine uzun bir ifade yazacağımız
+	 zaman, bu şekilde bir yöntem izliyorduk:
+
+   #+ATTR_LATEX: :options frame=lines, linenos, label=Java, labelposition=topline
+	 #+BEGIN_SRC java
+		 String html = "<html>" +
+				 "<body>" +
+				 "deneme" +
+				 "</body>" +
+				 "</html>";
+	 #+END_SRC
+	 Bu şekilde bir kullanımda string parçaları birleştirildiği için biraz da olsa
+	 performansı etkiliyordu fakat artık Python'da görmeye alıştığımız 3 tırnak
+	 işaretli şu yapı Java'ya da geldi:
+
+   #+ATTR_LATEX: :options frame=lines, linenos, label=Java, labelposition=topline
+	 #+BEGIN_SRC java
+		 String html = """
+									 <html>
+										 <body>
+											 deneme
+										 </body>
+									 </html>
+									 """;
+	 #+END_SRC
+* Apache NetBeans 11.1 [[https://netbeans.apache.org/download/nb111/index.html][duyuruldu]]
+	- Java EE 8 desteği,
+	- [[https://www.payara.fish/][Payara]] entegrasyonu,
+	- GlassFish 5.0.1 desteği,
+	- Tek dosya kaynak kodu programlarını çalıştırma ([[https://openjdk.java.net/jeps/330][PEP330: Launch Single-File
+    Source-Code Programs]])
+	- Fonksiyonun parametre isimlerini [[https://github.com/apache/netbeans/pull/1247][ipucu olarak gösterme]].
+	- =switch= içerisindeki çoklu =case= kullanımı için [[https://github.com/apache/netbeans/pull/1175][kod tamamlama özelliği]]
+
+	Eklenen diğer özelliklerin tam listesi ve detaylar için konu başlığındaki
+	bağlantıya tıklayabilirsiniz.
+* Intellij IDEA 2019.2 [[https://www.jetbrains.com/idea/whatsnew/#v2019-2][yayınlandı]]
+	#+CAPTION: Tekrarlanan Kod Bloğu Dedektörü
+	[[file:gorseller/intellij-idea-java-tekrarlayan-kod-dedektoru.gif]]
+
+	NetBeans'e güncelleme gelir de, Intellij IDEA hiç geri kalır mı ?! Yapıştırmış
+	güncellemeyi:
+	  - Java 13 desteği,
+		- Otomatik tamamlama penceresi yanlış yazmalara karşı iyileştirilmiş,
+		- Çalışan Docker konteynerindeki dosya sistemine erişme,
+		- Açılış sürelerini kısaltan performans iyileştirmeleri,
+		- Her klasörün kendine özel kod stili olabilecek,
+		- 20'nin üzerinde dil için söz dizimi (syntax) renklendirme,
+
+	Eklenen diğer özelliklerin tam listesi ve detaylar için konu başlığındaki
+	bağlantıya tıklayabilirsiniz.
+* Visual Studio 2019 [[https://devblogs.microsoft.com/visualstudio/visual-studio-2019-version-16-2-generally-available-and-16-3-preview-1/][16.2 ve 16.3 Preview 1 duyuruldu]]
+	- Test Expolorer aracında iyileştirmeler,
+	- Microsoft Edge Insider ile JavaScript hata ayıklama desteği,
+	- C++ tarafında MSBuild projeleri için [[https://devblogs.microsoft.com/cppblog/clang-llvm-support-for-msbuild-projects/][Clang/LLVM desteği]],
+	- Daha fazla ekran alanını için tüm araç çubuklarını gizleyebilme
+
+	#+CAPTION: Yenilenmiş Test Explorer
+	[[file:gorseller/visualstudio-yeni-test-explorer.png]]
+
+	Eklenen diğer özelliklerin tam listesi ve detaylar için konu başlığındaki
+	bağlantıya tıklayabilirsiniz.
+* .NET Ekosistemi için güvenlik raporu [[https://snyk.io/blog/net-open-source-security-insights/][yayınlandı]]
+	[[file:gorseller/dotnet-guvenlik-raporu-tldr.png]]
+* Diğer Haberler
+  - FTP sunucusu ProFTPD'de güvenlik açığı tespit edildi: [[https://tbspace.de/cve201912815proftpd.html][CVE-2019-12815]].
+    [[https://nvd.nist.gov/vuln/detail/CVE-2019-12815][Alternatif]]
+  - Lyft, otonom araçlarının ham sensör verilerini [[https://creativecommons.org/licenses/by-nc-sa/4.0/][CC-BY-NC-SA-4.0]] lisansı
+    altında paylaştı: [[https://level5.lyft.com/dataset/][Lyft Level 5 AV dataset]].
+  - GitLab 12.1 sürümü [[https://about.gitlab.com/2019/07/22/gitlab-12-1-released/][yayınlandı]]
+  - .NET Core 3.0 Preview 7 [[https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7][duyuruldu]].
+  - Microsoft, metin analiz ve görselleştirme aracını açık kaynak olarak
+    yayınlandı: [[https://github.com/microsoft/browsecloud][browsecloud]]
+  - Microsoft, OpenAI organizasyonuna 1 milyar dolar [[https://openai.com/blog/microsoft/][yatırım yaptı]].
+  - Microsoft Security Response Centre, Rust ile ilgili ilk blog yazısını
+    yayınladı: [[https://msrc-blog.microsoft.com/2019/07/22/why-rust-for-safe-systems-programming/][Why Rust for safe systems programming]]
+  - SQL Server 2019 CTP 3.2 sürümü [[https://cloudblogs.microsoft.com/sqlserver/2019/07/24/sql-server-2019-community-technology-preview-3-2-is-now-available/][duyuruldu]].
+  - Julia programlama dili [[https://julialang.org/blog/2019/07/multithreading]['composable multi-thread parallelism' özelliği]] kazandı.
+  - Rust derleyicisi [[https://blog.mozilla.org/nnethercote/2019/07/25/the-rust-compiler-is-still-getting-faster/][hızlanmaya devam ediyormuş]].
+  - Paralel programlama sistemi [[https://legion.stanford.edu/overview/][Legion]], [[https://github.com/StanfordLegion/legion/releases/tag/legion-19.06.0][19.06.0 sürümünü duyurdu]].
+  - Geliştiricisi [[https://inductive.no/jai/][Jai programlama dili]] için [[https://www.youtube.com/watch?v=4_ODvZ01CjU][durum raporu videosu]] hazırlamış. Bu
+    programlama dili Twitch platformunda canlı yayınlarda geliştiriliyor.
+    Geliştiricinin twitch kanalı: https://www.twitch.tv/naysayer88
+  - Amazon'un sesden yazı elde etme hizmeti Amazon Transcribe, artık [[https://aws.amazon.com/blogs/aws/amazon-transcribe-streaming-now-supports-websockets/][WebSockets
+    destekliyor]].
+  - Mozilla IoT takımı, WebThings projesi altında geliştirdikleri WebThings
+    Gateways aracının 0.9 sürümünü [[https://venturebeat.com/2019/07/25/mozilla-debuts-webthings-gateway-open-source-router-firmware-for-turris-omnia/][duyurdu]]. [[https://github.com/mozilla-iot/gateway][GitHub Deposu]]
+  - Google Chrome tarayıcısının [[https://medium.com/kulak/changes-in-web-midi-api-in-chrome-in-2019-4e410ec76af][Web MIDI API sisteminde değişiklik var]].
+  - OpenJDK takımı, Project Valhalla LW2 Prototipini [[https://www.infoq.com/news/2019/07/valhalla-openjdk-lw2-released/][duyurdu]].
+  - Git istemcisi Fork [[https://fork.dev/releasenotes][1.0.82 sürümünü duyurdu]].
+  - Python için video işleme kütüphanesi olan VidGear, [[https://github.com/abhiTronix/vidgear/releases/tag/vidgear-0.1.5][v0.1.5 sürümünü duyurdu]].
+  - Go yorumlayıcı projesi açık kaynak olarak yayınlandı: [[https://blog.containo.us/announcing-yaegi-263a1e2d070a][yaegi]]. [[https://github.com/containous/yaegi][GitHub Deposu]]
+  - Tek Sayfalık Uygulamalar (Single Page Applications) için geliştirilmiş
+    framework mithil.js [[https://github.com/MithrilJS/mithril.js/releases/tag/v2.0.1][v2.0.1 sürümünü yayınladı]].
+  - Bellek üzerinde hassas verileri depolamaya yarayan Go kütüphanesi MemGuard,
+    v0.18.1 sürümünü [[https://github.com/awnumar/memguard/releases/tag/v0.18.1][duyurdu]].
+  - Rust ile platformlar-arası grafiksel kullanıcı arayüzleri geliştirmeye
+    olanak sağlayan kütüphane açık kaynak olarak yayınlandı: [[https://github.com/ivanceras/sauron-native][Sauron-native]]
+  - C/C++ için platformlar arası (cross-platform) paket yöneticisi Hunter,
+    v0.23.205 [[https://github.com/ruslo/hunter/releases/tag/v0.23.205][sürümünü duyurdu]].
+  - Tüm projeler ve sistemler için evrensel proje yöneticisi olma iddiası
+    taşıyan GuPM isimli araç 1.2.0 [[https://github.com/azukaar/GuPM/releases/tag/1.2.0][sürümünü duyurdu]].
+  - Sinuous UI kütüphanesinin v0.12.5 [[https://github.com/luwes/sinuous/releases/tag/v0.12.5][sürümü çıktı]].
+  - SQL raporlama aracı Poli v0.9.0 [[https://github.com/shzlw/poli/releases/tag/v0.9.0][sürümü yayınlandı]].
+* Lisans
+  #+BEGIN_CENTER
+  #+ATTR_HTML: :height 75
+  #+ATTR_LATEX: :height 1.5cm
+  [[file:../../../img/CC_BY-NC-SA_4.0.png]]
+
+  [[file:yazilim-gundemi-03.org][Yazılım Gündemi - 3]] yazısı [[https://erenhatirnaz.github.io][Eren Hatırnaz]] tarafından [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Creative Commons
+  Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı]] (CC BY-NC-SA 4.0)
+  ile lisanslanmıştır.
+  #+END_CENTER

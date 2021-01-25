@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 22:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi - 3</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi - 3
+<br />
+<span class="subtitle">22-28 Temmuz 2019</span>
+</h1>
+<div id="table-of-contents">
+<h2>İçindekiler</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org85f328b">1. GitHub, Amerika yaptırımlarını uygulamaya başladı</a></li>
+<li><a href="#org9f6f812">2. PHP 7.4.0 Beta 1 yayınlandı</a>
+<ul>
+<li><a href="#orgb6f9b70">2.1. Tipli sınıf özellikleri (Typed Properties)</a></li>
+<li><a href="#org9268253">2.2. Arrow Functions</a></li>
+<li><a href="#org2c31644">2.3. Null Coalescing Assignment Operator</a></li>
+</ul>
+</li>
+<li><a href="#org9850a30">3. JDK 13 ile gelecek özellikler belli oldu</a>
+<ul>
+<li><a href="#org8f0c99c">3.1. Çok satırlı String ifadeler</a></li>
+</ul>
+</li>
+<li><a href="#orgb2dcb43">4. Apache NetBeans 11.1 duyuruldu</a></li>
+<li><a href="#orgbffe251">5. Intellij IDEA 2019.2 yayınlandı</a></li>
+<li><a href="#org84d7257">6. Visual Studio 2019 16.2 ve 16.3 Preview 1 duyuruldu</a></li>
+<li><a href="#org45c17ac">7. .NET Ekosistemi için güvenlik raporu yayınlandı</a></li>
+<li><a href="#orgd7dea6e">8. Diğer Haberler</a></li>
+<li><a href="#orgef50c00">9. Lisans</a></li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gundemi-banner.png" alt="yazilim-gundemi-banner.png" />
+</p>
+</div>
+
+<div class="org-center">
+<p>
+<a href="../02/yazilim-gundemi-02.html">&lt; Önceki Gündem</a> | <b>22-28 Temmuz 2019</b> | <a href="../04/yazilim-gundemi-04.html">Sonraki Gündem &gt;</a>
+</p>
+
+<p>
+<a href="https://teknoseyir.com/blog/yazilim-gundemi-3-22-28-temmuz-2019">TeknoSeyir'de Oku</a>
+</p>
+</div>
+
+<div id="outline-container-org85f328b" class="outline-2">
+<h2 id="org85f328b"><span class="section-number-2">1</span> GitHub, Amerika yaptırımlarını <a href="https://help.github.com/en/articles/github-and-trade-controls">uygulamaya başladı</a></h2>
+<div class="outline-text-2" id="text-1">
+
+<div class="figure">
+<p><img src="gorseller/github-amerika-yaptirimlari-1.png" alt="github-amerika-yaptirimlari-1.png" />
+</p>
+<p><span class="figure-number">Şekil 2: </span>Kısıtlanan kullanıcıların ekranlarında çıkan uyarı metini</p>
+</div>
+
+<p>
+GitHub bu kararları yeni mi uygulamaya başladı, yoksa daha önceden de
+uygulanıyordu fakat bu kadar sert mi değildi, bilemiyorum fakat bu hafta
+birkaç olaya karıştığı için gündem oldu. Bu olaylar şu şekilde:
+</p>
+
+<ul class="org-ul">
+<li><b>Kırımlı bir geliştiricinin <a href="https://github.com/tkashkin/GameHub/issues/289">GitHub hesabının kısıtlanması</a></b></li>
+<li><b>Iranlı bir geliştiricinin <a href="https://medium.com/hamed/github-blocked-my-account-and-they-think-im-developing-nuclear-weapons-e7e1fe62cb74">GitHub hesabının kısıtlanması</a></b></li>
+</ul>
+
+<p>
+Kısıtlamaların tam listesi olmamakla birlikte geliştiricilerin şu an maruz
+kaldıkları kısıtlamalar bu şekilde:
+</p>
+
+<ul class="org-ul">
+<li>GitHub Pages üzerinde barındırdıkları web siteleri ulaşılamaz oldu (GitHub
+404 sayfası gönderiyor).</li>
+<li>Yeni özel depo oluşturamıyorlar.</li>
+<li>Var olan özel depolarına erişemiyorlar. <code>git clone</code> komutu da 403 kodu
+dönüyormuş.</li>
+</ul>
+
+<p>
+Kısıtlamalar nereye kadar gidecek bilinmiyor. Geliştiriciler projelerine devam
+edip, edemeyecekleri konusunda endişeliler. GitHub'ın ilgili sayfasında bu
+ülkelerdeki kişiler ücretsiz hizmetlerden faydalanabilecekler deniyor fakat
+özel depolar ücretsiz olmasına rağmen, bu kullanıcıların özel depoları
+kısıtlanmış ve erişilemez durumda. Geliştiriciler kodlarına, hata takip
+sistemine ve dokümanlarına erişimi kaybettiler. GitHub'a mail atıp, kapatılmış
+depoların yedeklerini istemelerine rağmen geri dönüş olumsuz olmuş. Resmen
+kodlarına el koymuşlar yani.
+</p>
+
+<p>
+Bu ülkelerde yaşayan geliştiriciler de <a href="https://github.com/1995parham/github-do-not-ban-us">GitHub'a açık mektup yazarak</a>, bir nevi
+imza kampanyası başlatmışlar. Geliştirici camiasından insanlar konuyu
+<a href="https://news.ycombinator.com/item?id=20531039">HackerNews</a> ve <a href="https://www.reddit.com/r/programming/comments/chwq3b/my_github_account_has_been_restricted_due_to_us/">Reddit</a> gibi platformlardan tartışmaya devam ediyor.
+</p>
+
+<p>
+Her ne kadar Amerika merkezli bir şirket olarak yasaları uygulamak zorunda
+olsalar da, GitHub'ın tavırları beni rahatsız etti. Özellikle bu kullanıcılara
+hiç haber vermeden, önceden uyarı yapmadan ve verilerini alma imkanı sunmadan
+bir gecede bu işleri yapmaları bende biraz art niyet duygusu uyandırdı ve
+GitHub üyeliğimi sorgulamaya başladım. Üstelikte Türkiye'ye de yaptırımlar
+konusu gündemdeyken endişem daha da arttı ve GitHub'daki tüm depolarımı
+bilgisayarıma indirdim fakat Türkiye'nin de bu listeye girmesi durumunda
+Türkiye bilişim sektöründe yaşanacakları düşünemiyorum bile!
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/github-amerika-yaptirimlari-2.jpg" alt="github-amerika-yaptirimlari-2.jpg" />
+</p>
+<p><span class="figure-number">Şekil 3: </span>Üstelik bu ülkelere gitmiş ve oradan GitHub'a bağlanmışsanız, bu kısıtlamalar sizin hesabınıza da gelebilir ve tekrar hesabınızı açtırmak için o ülkelerden birinde yaşamadığınızı kanıtlamanız için <a href="https://airtable.com/shrGBcceazKIoz6pY">form doldurmanız</a> isteniyor. Formda istenen bilgilere baksanıza!</p>
+</div>
+
+<p>
+Levent Abi bir kez daha haklı çıktı, söylemi tekrar hatırlayalım: "Bulut
+dediğin başkasının bilgisayarıdır. Bir gün gelir de, 'Sana hizmet vermiyorum
+kardeşim' derse, öylece kalırsın ortada". Bir kere daha bulut sistemlere
+güvenmememiz gerektiğini -umarım- öğrenmiş olduk. Güya internette gerçek
+hayattaki gibi ülke sınırları yoktu, güya internetteyken fiziksel olarak
+nerede olduğumuzun bir önemi yoktu&#x2026;
+</p>
+</div>
+</div>
+<div id="outline-container-org9f6f812" class="outline-2">
+<h2 id="org9f6f812"><span class="section-number-2">2</span> PHP 7.4.0 <a href="https://www.php.net/archive/2019.php#2019-07-25-1">Beta 1 yayınlandı</a></h2>
+<div class="outline-text-2" id="text-2">
+<p>
+22 Temmuz'da yeni özellik eklenmesi dondurulan (feature freeze) PHP 7.4'ün Beta
+1 etiketine sahip ilk sürümü ise 25 Temmuz'da duyuruldu. PHP Wiki sayfasındaki
+<a href="https://wiki.php.net/todo/php74">takvime göre</a> PHP 7.4.0 sürümün yayın sürecinin bu şekilde olması bekleniyor:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Tarih</th>
+<th scope="col" class="org-left">Sürüm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">08 Ağustos 2019</td>
+<td class="org-left">Beta 2</td>
+</tr>
+
+<tr>
+<td class="org-left">22 Ağustos 2019</td>
+<td class="org-left">Beta 3</td>
+</tr>
+
+<tr>
+<td class="org-left">05 Eylül 2019</td>
+<td class="org-left">RC 1</td>
+</tr>
+
+<tr>
+<td class="org-left">19 Eylül 2019</td>
+<td class="org-left">RC 2</td>
+</tr>
+
+<tr>
+<td class="org-left">03 Ekim 2019</td>
+<td class="org-left">RC 3</td>
+</tr>
+
+<tr>
+<td class="org-left">17 Ekim 2019</td>
+<td class="org-left">RC 4</td>
+</tr>
+
+<tr>
+<td class="org-left">31 Ekim 2019</td>
+<td class="org-left">RC 5</td>
+</tr>
+
+<tr>
+<td class="org-left">14 Kasım 2019</td>
+<td class="org-left">RC 6</td>
+</tr>
+
+<tr>
+<td class="org-left">28 Kasım 2019</td>
+<td class="org-left">Final</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+PHP 7.4.0 ile gelecek bazı özellikler bu şekilde:
+</p>
+</div>
+<div id="outline-container-orgb6f9b70" class="outline-3">
+<h3 id="orgb6f9b70"><span class="section-number-3">2.1</span> Tipli sınıf özellikleri (<a href="https://wiki.php.net/rfc/typed_properties_v2">Typed Properties</a>)</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+PHP'de sınıf kodlarken artık sınıfın özelliklerini bu şekilde tipli
+tanımlayabileceğiz:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-php"><span class="org-php-class-declaration">class</span> <span class="org-type">Kullanici</span> {
+    <span class="org-php-keyword">public</span> <span class="org-php-class">int</span> <span class="org-php-variable-sigil">$</span><span class="org-php-variable-name">id</span>;
+    <span class="org-php-keyword">public</span> <span class="org-php-class">string</span> <span class="org-php-variable-sigil">$</span><span class="org-php-variable-name">isim</span>;
+
+    <span class="org-php-keyword">public</span> <span class="org-php-keyword">function</span> <span class="org-php-function-name">__construct</span>(<span class="org-type">int</span> <span class="org-php-variable-sigil">$</span><span class="org-php-variable-name">id</span>, <span class="org-type">string</span> <span class="org-php-variable-sigil">$</span><span class="org-php-variable-name">isim</span>) {
+        <span class="org-php-Xthis-sigil">$</span><span class="org-php-Xthis">this</span><span class="org-php-object-op">-&gt;</span><span class="org-php-property-name">id</span> <span class="org-php-assignment-op">=</span> <span class="org-php-variable-sigil">$</span><span class="org-php-variable-name">id</span>;
+        <span class="org-php-Xthis-sigil">$</span><span class="org-php-Xthis">this</span><span class="org-php-object-op">-&gt;</span><span class="org-php-property-name">isim</span> <span class="org-php-assignment-op">=</span> <span class="org-php-variable-sigil">$</span><span class="org-php-variable-name">isim</span>;
+    }
+}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org9268253" class="outline-3">
+<h3 id="org9268253"><span class="section-number-3">2.2</span> <a href="https://wiki.php.net/rfc/arrow_functions_v2">Arrow Functions</a></h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Önceden bu şekilde olan kullanımı:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-php"><span class="org-php-variable-sigil">$</span><span class="org-php-variable-name">sayilar</span> <span class="org-php-assignment-op">=</span> [1, 2, 3, 4, 5, 6];
+<span class="org-php-variable-sigil">$</span><span class="org-php-variable-name">kareleri</span> <span class="org-php-assignment-op">=</span> <span class="org-php-function-call">array_map</span>(<span class="org-php-keyword">function</span>(<span class="org-php-variable-sigil">$</span><span class="org-php-variable-name">sayi</span>) { <span class="org-php-keyword">return</span> <span class="org-php-variable-sigil">$</span><span class="org-php-variable-name">sayi</span> <span class="org-php-arithmetic-op">*</span> <span class="org-php-variable-sigil">$</span><span class="org-php-variable-name">sayi</span>; }, <span class="org-php-variable-sigil">$</span><span class="org-php-variable-name">sayilar</span>);
+<span class="org-comment-delimiter">// </span><span class="org-comment">1, 4, 9, 16, 25, 36</span>
+</pre>
+</div>
+
+<p>
+Artık bu formatta kullanabileceğiz:
+</p>
+<div class="org-src-container">
+<pre class="src src-php"><span class="org-php-php-tag">&lt;?php</span>
+
+<span class="org-php-variable-sigil">$</span><span class="org-php-variable-name">sayilar</span> <span class="org-php-assignment-op">=</span> [1, 2, 3, 4, 5, 6];
+<span class="org-php-variable-sigil">$</span><span class="org-php-variable-name">kareleri</span> <span class="org-php-assignment-op">=</span> <span class="org-php-function-call">array_map</span>(<span class="org-php-keyword">fn</span>(<span class="org-php-variable-sigil">$</span><span class="org-php-variable-name">sayi</span>) <span class="org-php-assignment-op">=</span><span class="org-php-comparison-op">&gt;</span> <span class="org-php-variable-sigil">$</span><span class="org-php-variable-name">sayi</span> <span class="org-php-arithmetic-op">*</span> <span class="org-php-variable-sigil">$</span><span class="org-php-variable-name">sayi</span>, <span class="org-php-variable-sigil">$</span><span class="org-php-variable-name">sayilar</span>);
+<span class="org-comment-delimiter">// </span><span class="org-comment">1, 4, 9, 16, 25, 36</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org2c31644" class="outline-3">
+<h3 id="org2c31644"><span class="section-number-3">2.3</span> <a href="https://wiki.php.net/rfc/null_coalesce_equal_operator">Null Coalescing Assignment Operator</a></h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+Çevirisini yapamadım fakat bu operatör Türkiye'den birisi tarafından eklenen
+bir özellik. Kendisini GitHub'da <a href="https://github.com/midorikocak">midorikocak</a> kullanıcı adıyla
+bulabilirsiniz. Gelelim yeni operatörümüze, bu operatör sayesinde önceden bu
+şekilde yazdığımız kod parçasını:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-php"><span class="org-php-keyword">if</span> (<span class="org-php-logical-op">!</span><span class="org-php-keyword">isset</span>(<span class="org-php-variable-sigil">$</span><span class="org-php-variable-name">dizi</span>[<span class="org-php-string">'anahtar'</span>])) {
+    <span class="org-php-variable-sigil">$</span><span class="org-php-variable-name">dizi</span>[<span class="org-php-string">'anahtar'</span>] <span class="org-php-assignment-op">=</span> <span class="org-php-function-call">varsayilaniHesapla</span>();
+}
+</pre>
+</div>
+
+<p>
+Artık aşağıdaki gibi tek satırda yazabileceğiz:
+</p>
+<div class="org-src-container">
+<pre class="src src-php"><span class="org-php-variable-sigil">$</span><span class="org-php-variable-name">dizi</span>[<span class="org-php-string">'anahtar'</span>] ??<span class="org-php-assignment-op">=</span> <span class="org-php-function-call">varsayilaniHesapla</span>();
+</pre>
+</div>
+
+<p>
+Bu katkısı için kendisine teşekkür ediyoruz.
+</p>
+
+<p>
+Yazının fazla uzamaması için bu konuyu burada bırakıyorum ama eğer
+ilgiliyseniz yeni özelliklerin tamamına <a href="https://github.com/php/php-src/blob/php-7.4.0beta1/UPGRADING">buradan erişebilirsiniz</a>.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org9850a30" class="outline-2">
+<h2 id="org9850a30"><span class="section-number-2">3</span> JDK 13 ile gelecek özellikler <a href="https://www.javaworld.com/article/3341388/jdk-13-the-new-features-coming-to-java-13.html">belli oldu</a></h2>
+<div class="outline-text-2" id="text-3">
+<p>
+<a href="../02/yazilim-gundemi-02.html">Geçen haftaki gündemde</a> JDK 13 sürümünün "Rampdown" ikinci aşamaya geçtiğini
+duyurmuştum. Bu hafta da yeni eklenecek bir özelliğe bakalım. Diğer özelliklere
+de baktım fakat uzun zamandır Java yazmadığım için tam anlayamadım. Ben de
+anladığım özelliği yazayım dedim :) Diğer özellik ve değişiklikler için konu
+başlığına eklediğim bağlantıya tıklayabilirsiniz ya da QCon isimli konferansta
+Oracle çalışanı Java Dil Mimarı Brian Goetz tarafından yapılan bu sunumu
+izleyebilirsiniz: <a href="https://www.infoq.com/presentations/java-futures-2019/">Java Futures, 2019 Edition</a>.
+</p>
+</div>
+
+<div id="outline-container-org8f0c99c" class="outline-3">
+<h3 id="org8f0c99c"><span class="section-number-3">3.1</span> Çok satırlı String ifadeler</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Önceden Java'da bir string değişken içerisine uzun bir ifade yazacağımız
+zaman, bu şekilde bir yöntem izliyorduk:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-type">String</span> <span class="org-variable-name">html</span> = <span class="org-string">"&lt;html&gt;"</span> +
+    <span class="org-string">"&lt;body&gt;"</span> +
+    <span class="org-string">"deneme"</span> +
+    <span class="org-string">"&lt;/body&gt;"</span> +
+    <span class="org-string">"&lt;/html&gt;"</span>;
+</pre>
+</div>
+<p>
+Bu şekilde bir kullanımda string parçaları birleştirildiği için biraz da olsa
+performansı etkiliyordu fakat artık Python'da görmeye alıştığımız 3 tırnak
+işaretli şu yapı Java'ya da geldi:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-type">String</span> <span class="org-variable-name">html</span> = <span class="org-string">""</span><span class="org-warning">"</span>
+              &lt;<span class="org-type">html</span>&gt;
+                &lt;<span class="org-type">body</span>&gt;
+                  deneme
+                &lt;/body&gt;
+              &lt;/html&gt;
+              <span class="org-string">""</span><span class="org-warning">"</span><span class="org-string">;</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb2dcb43" class="outline-2">
+<h2 id="orgb2dcb43"><span class="section-number-2">4</span> Apache NetBeans 11.1 <a href="https://netbeans.apache.org/download/nb111/index.html">duyuruldu</a></h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>Java EE 8 desteği,</li>
+<li><a href="https://www.payara.fish/">Payara</a> entegrasyonu,</li>
+<li>GlassFish 5.0.1 desteği,</li>
+<li>Tek dosya kaynak kodu programlarını çalıştırma (<a href="https://openjdk.java.net/jeps/330">PEP330: Launch Single-File
+Source-Code Programs</a>)</li>
+<li>Fonksiyonun parametre isimlerini <a href="https://github.com/apache/netbeans/pull/1247">ipucu olarak gösterme</a>.</li>
+<li><code>switch</code> içerisindeki çoklu <code>case</code> kullanımı için <a href="https://github.com/apache/netbeans/pull/1175">kod tamamlama özelliği</a></li>
+</ul>
+
+<p>
+Eklenen diğer özelliklerin tam listesi ve detaylar için konu başlığındaki
+bağlantıya tıklayabilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-orgbffe251" class="outline-2">
+<h2 id="orgbffe251"><span class="section-number-2">5</span> Intellij IDEA 2019.2 <a href="https://www.jetbrains.com/idea/whatsnew/#v2019-2">yayınlandı</a></h2>
+<div class="outline-text-2" id="text-5">
+
+<div class="figure">
+<p><img src="gorseller/intellij-idea-java-tekrarlayan-kod-dedektoru.gif" alt="intellij-idea-java-tekrarlayan-kod-dedektoru.gif" />
+</p>
+<p><span class="figure-number">Şekil 4: </span>Tekrarlanan Kod Bloğu Dedektörü</p>
+</div>
+
+<p>
+NetBeans'e güncelleme gelir de, Intellij IDEA hiç geri kalır mı ?! Yapıştırmış
+güncellemeyi:
+</p>
+<ul class="org-ul">
+<li>Java 13 desteği,</li>
+<li>Otomatik tamamlama penceresi yanlış yazmalara karşı iyileştirilmiş,</li>
+<li>Çalışan Docker konteynerindeki dosya sistemine erişme,</li>
+<li>Açılış sürelerini kısaltan performans iyileştirmeleri,</li>
+<li>Her klasörün kendine özel kod stili olabilecek,</li>
+<li>20'nin üzerinde dil için söz dizimi (syntax) renklendirme,</li>
+</ul>
+
+<p>
+Eklenen diğer özelliklerin tam listesi ve detaylar için konu başlığındaki
+bağlantıya tıklayabilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-org84d7257" class="outline-2">
+<h2 id="org84d7257"><span class="section-number-2">6</span> Visual Studio 2019 <a href="https://devblogs.microsoft.com/visualstudio/visual-studio-2019-version-16-2-generally-available-and-16-3-preview-1/">16.2 ve 16.3 Preview 1 duyuruldu</a></h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>Test Expolorer aracında iyileştirmeler,</li>
+<li>Microsoft Edge Insider ile JavaScript hata ayıklama desteği,</li>
+<li>C++ tarafında MSBuild projeleri için <a href="https://devblogs.microsoft.com/cppblog/clang-llvm-support-for-msbuild-projects/">Clang/LLVM desteği</a>,</li>
+<li>Daha fazla ekran alanını için tüm araç çubuklarını gizleyebilme</li>
+</ul>
+
+
+<div class="figure">
+<p><img src="gorseller/visualstudio-yeni-test-explorer.png" alt="visualstudio-yeni-test-explorer.png" />
+</p>
+<p><span class="figure-number">Şekil 5: </span>Yenilenmiş Test Explorer</p>
+</div>
+
+<p>
+Eklenen diğer özelliklerin tam listesi ve detaylar için konu başlığındaki
+bağlantıya tıklayabilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-org45c17ac" class="outline-2">
+<h2 id="org45c17ac"><span class="section-number-2">7</span> .NET Ekosistemi için güvenlik raporu <a href="https://snyk.io/blog/net-open-source-security-insights/">yayınlandı</a></h2>
+<div class="outline-text-2" id="text-7">
+
+<div class="figure">
+<p><img src="gorseller/dotnet-guvenlik-raporu-tldr.png" alt="dotnet-guvenlik-raporu-tldr.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd7dea6e" class="outline-2">
+<h2 id="orgd7dea6e"><span class="section-number-2">8</span> Diğer Haberler</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li>FTP sunucusu ProFTPD'de güvenlik açığı tespit edildi: <a href="https://tbspace.de/cve201912815proftpd.html">CVE-2019-12815</a>.
+<a href="https://nvd.nist.gov/vuln/detail/CVE-2019-12815">Alternatif</a></li>
+<li>Lyft, otonom araçlarının ham sensör verilerini <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY-NC-SA-4.0</a> lisansı
+altında paylaştı: <a href="https://level5.lyft.com/dataset/">Lyft Level 5 AV dataset</a>.</li>
+<li>GitLab 12.1 sürümü <a href="https://about.gitlab.com/2019/07/22/gitlab-12-1-released/">yayınlandı</a></li>
+<li>.NET Core 3.0 Preview 7 <a href="https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-7">duyuruldu</a>.</li>
+<li>Microsoft, metin analiz ve görselleştirme aracını açık kaynak olarak
+yayınlandı: <a href="https://github.com/microsoft/browsecloud">browsecloud</a></li>
+<li>Microsoft, OpenAI organizasyonuna 1 milyar dolar <a href="https://openai.com/blog/microsoft/">yatırım yaptı</a>.</li>
+<li>Microsoft Security Response Centre, Rust ile ilgili ilk blog yazısını
+yayınladı: <a href="https://msrc-blog.microsoft.com/2019/07/22/why-rust-for-safe-systems-programming/">Why Rust for safe systems programming</a></li>
+<li>SQL Server 2019 CTP 3.2 sürümü <a href="https://cloudblogs.microsoft.com/sqlserver/2019/07/24/sql-server-2019-community-technology-preview-3-2-is-now-available/">duyuruldu</a>.</li>
+<li>Julia programlama dili <a href="https://julialang.org/blog/2019/07/multithreading">'composable multi-thread parallelism' özelliği</a> kazandı.</li>
+<li>Rust derleyicisi <a href="https://blog.mozilla.org/nnethercote/2019/07/25/the-rust-compiler-is-still-getting-faster/">hızlanmaya devam ediyormuş</a>.</li>
+<li>Paralel programlama sistemi <a href="https://legion.stanford.edu/overview/">Legion</a>, <a href="https://github.com/StanfordLegion/legion/releases/tag/legion-19.06.0">19.06.0 sürümünü duyurdu</a>.</li>
+<li>Geliştiricisi <a href="https://inductive.no/jai/">Jai programlama dili</a> için <a href="https://www.youtube.com/watch?v=4_ODvZ01CjU">durum raporu videosu</a> hazırlamış. Bu
+programlama dili Twitch platformunda canlı yayınlarda geliştiriliyor.
+Geliştiricinin twitch kanalı: <a href="https://www.twitch.tv/naysayer88">https://www.twitch.tv/naysayer88</a></li>
+<li>Amazon'un sesden yazı elde etme hizmeti Amazon Transcribe, artık <a href="https://aws.amazon.com/blogs/aws/amazon-transcribe-streaming-now-supports-websockets/">WebSockets
+destekliyor</a>.</li>
+<li>Mozilla IoT takımı, WebThings projesi altında geliştirdikleri WebThings
+Gateways aracının 0.9 sürümünü <a href="https://venturebeat.com/2019/07/25/mozilla-debuts-webthings-gateway-open-source-router-firmware-for-turris-omnia/">duyurdu</a>. <a href="https://github.com/mozilla-iot/gateway">GitHub Deposu</a></li>
+<li>Google Chrome tarayıcısının <a href="https://medium.com/kulak/changes-in-web-midi-api-in-chrome-in-2019-4e410ec76af">Web MIDI API sisteminde değişiklik var</a>.</li>
+<li>OpenJDK takımı, Project Valhalla LW2 Prototipini <a href="https://www.infoq.com/news/2019/07/valhalla-openjdk-lw2-released/">duyurdu</a>.</li>
+<li>Git istemcisi Fork <a href="https://fork.dev/releasenotes">1.0.82 sürümünü duyurdu</a>.</li>
+<li>Python için video işleme kütüphanesi olan VidGear, <a href="https://github.com/abhiTronix/vidgear/releases/tag/vidgear-0.1.5">v0.1.5 sürümünü duyurdu</a>.</li>
+<li>Go yorumlayıcı projesi açık kaynak olarak yayınlandı: <a href="https://blog.containo.us/announcing-yaegi-263a1e2d070a">yaegi</a>. <a href="https://github.com/containous/yaegi">GitHub Deposu</a></li>
+<li>Tek Sayfalık Uygulamalar (Single Page Applications) için geliştirilmiş
+framework mithil.js <a href="https://github.com/MithrilJS/mithril.js/releases/tag/v2.0.1">v2.0.1 sürümünü yayınladı</a>.</li>
+<li>Bellek üzerinde hassas verileri depolamaya yarayan Go kütüphanesi MemGuard,
+v0.18.1 sürümünü <a href="https://github.com/awnumar/memguard/releases/tag/v0.18.1">duyurdu</a>.</li>
+<li>Rust ile platformlar-arası grafiksel kullanıcı arayüzleri geliştirmeye
+olanak sağlayan kütüphane açık kaynak olarak yayınlandı: <a href="https://github.com/ivanceras/sauron-native">Sauron-native</a></li>
+<li>C/C++ için platformlar arası (cross-platform) paket yöneticisi Hunter,
+v0.23.205 <a href="https://github.com/ruslo/hunter/releases/tag/v0.23.205">sürümünü duyurdu</a>.</li>
+<li>Tüm projeler ve sistemler için evrensel proje yöneticisi olma iddiası
+taşıyan GuPM isimli araç 1.2.0 <a href="https://github.com/azukaar/GuPM/releases/tag/1.2.0">sürümünü duyurdu</a>.</li>
+<li>Sinuous UI kütüphanesinin v0.12.5 <a href="https://github.com/luwes/sinuous/releases/tag/v0.12.5">sürümü çıktı</a>.</li>
+<li>SQL raporlama aracı Poli v0.9.0 <a href="https://github.com/shzlw/poli/releases/tag/v0.9.0">sürümü yayınlandı</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgef50c00" class="outline-2">
+<h2 id="orgef50c00"><span class="section-number-2">9</span> Lisans</h2>
+<div class="outline-text-2" id="text-9">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="../../../img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+<a href="yazilim-gundemi-03.html">Yazılım Gündemi - 3</a> yazısı <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a> (CC BY-NC-SA 4.0)
+ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 28 Temmuz 2019</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 22:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

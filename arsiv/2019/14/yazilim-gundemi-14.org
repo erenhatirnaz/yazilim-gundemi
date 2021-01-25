@@ -109,7 +109,7 @@
 	 Değişkenleri ise bu şekilde değiştirilemez yapabileceğiz:
    #+ATTR_LATEX: :options frame=lines, linenos, label=Python, labelposition=topline
 	 #+BEGIN_SRC python
-		 ID: Final = 15
+     ID: Final = 15
 	 #+END_SRC
 
 	Daha detaylı bilgi ve diğer değişiklikler ve yeniliklerle ilgili şeyler için

@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 22:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi - 18</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi - 18
+<br />
+<span class="subtitle">11-17 Kasım 2019</span>
+</h1>
+<div id="table-of-contents">
+<h2>İçindekiler</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org61f9426">1. GitHub Universe 2019 etkinliği gerçekleşti</a>
+<ul>
+<li><a href="#orgd5b1e1c">1.1. GitHub iOS uygulamasının Beta programı duyuruldu</a></li>
+<li><a href="#org831155e">1.2. GitHub Arşiv Programı duyuruldu</a></li>
+</ul>
+</li>
+<li><a href="#orgb00d5ce">2. Mozilla, Bytecode Birliğini tanıttı</a></li>
+<li><a href="#org46f5fcc">3. OpenJDK kod tabanını GitHub'a taşımayı tartışıyor</a></li>
+<li><a href="#orgd2295fa">4. Sourcehut, 2019 yılı özetini yayınladı</a></li>
+<li><a href="#orga779c60">5. Yaklaşan Etkinlikler</a></li>
+<li><a href="#org91ac8d0">6. Diğer Haberler</a></li>
+<li><a href="#org4cc2637">7. Lisans</a></li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gundemi-banner.png" alt="yazilim-gundemi-banner.png" />
+</p>
+</div>
+
+<div class="org-center">
+<p>
+<a href="../17/yazilim-gundemi-17.html">&lt; Önceki Gündem</a> | <b>11-17 Kasım 2019</b> | <a href="../19/yazilim-gundemi-19.html">Sonraki Gündem &gt;</a>
+</p>
+
+<p>
+<a href="https://teknoseyir.com/blog/yazilim-gundemi-18-11-17-kasim-2019">TeknoSeyir'de Oku</a>
+</p>
+</div>
+
+<div id="outline-container-org61f9426" class="outline-2">
+<h2 id="org61f9426"><span class="section-number-2">1</span> <a href="https://githubuniverse.com/">GitHub Universe 2019</a> etkinliği <a href="https://github.blog/2019-11-13-universe-day-one/">gerçekleşti</a></h2>
+<div class="outline-text-2" id="text-1">
+<p>
+GitHub'ın her yıl geleneksel olarak düzenlediği Universe etkinliği bu sene de,
+bu hafta içerisinde gerçekleşti. Etkinlik ABD'deki Kaliforniya eyaletinde
+gerçekleşti fakat aynı zamanda canlı yayın ile de tüm dünyaya yayınlandı. Ben
+etkinliği izleyemedim ama etkinlikle duyurdukları her şeyi toparladıkları blog
+yazısını inceledim ve sizlere birkaç tane geliştmeyi aktarmaya çalışacağım.
+Öyleyse başlayalım:
+</p>
+</div>
+
+<div id="outline-container-orgd5b1e1c" class="outline-3">
+<h3 id="orgd5b1e1c"><span class="section-number-3">1.1</span> GitHub iOS uygulamasının Beta programı duyuruldu</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Mobilden GitHub'a erişebilmek bazen benim de ihtiyaç duyduğum bir şeydi. Şu an
+zaten mobil tarayıcıdan GitHub'a girdiğinizde ona göre bir arayüz geliyor
+fakat yine pek kullanışlı değil. iOS uygulama mağazasında bazı üçüncü parti
+uygulamalar olsa da ben pek güvenemedim. Sonuçta tüm depolarımıza erişim izni
+veriyoruz. GitHub da bu alanda bir eksiklik hissetmiş olacak ki bu etkinlikle
+iOS uygulamasının beta sürecinin başladığını <a href="https://twitter.com/github/status/1194675248047616000">duyurdu</a>. Android için ise yakında
+başlayacağını belirttiler. Duyar duymaz ben de hemen Beta için kayıt yaptım ve
+3-4 gündür kullanıyorum. Siz de iOS uygulamanın beta programına kaydolmak için
+<a href="https://github.com/mobile/beta?platforms=ios">buraya</a>; Android uygulamanın bekleme listesine kaydolmak için <a href="https://github.com/mobile/beta?platforms=android">buraya</a>
+tıklayabilirsiniz.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/github-mobile-ios.png" alt="github-mobile-ios.png" />
+</p>
+</div>
+
+<p>
+Kullandığım kadarıyla gayet güzel bir uygulama olmuş fakat şu an için
+eksikleri ve hataları mevcut. Örneğin hangi branch'da olduğumu göremiyorum ya
+da branch'lar arasında geçiş yapamıyorum (bence olması gereken bir özellik).
+README.md dosyalarındaki görsellerde de gözükmeme sorunu mevcut. Ayrıca gece
+moduna teması da mevcut. İşin ilginci GitHub web'de henüz gece modu teması
+yok. Umarım web sürümüne de gelir. Geceleri GitHub'ı açtığımda far görmüş
+tavşan gibi kalmak istemiyorum. Gerekli geri bildirimleri mail olarak
+gönderdim. Gerekli geliştirmeler devam edecektir.
+</p>
+</div>
+</div>
+<div id="outline-container-org831155e" class="outline-3">
+<h3 id="org831155e"><span class="section-number-3">1.2</span> GitHub Arşiv Programı duyuruldu</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+GitHub herkese açık depolarımızı 1000 yıl boyunca saklamak için hazırlanıyor.
+Birkaç ülkenin meyve ve sebze tohumları için yaptığı çalışmanın aynısını
+GitHub da kodlarımız için yapmak için kollarını sıvadı. Bu etkinlikte
+duyurulan bu programın amacı ise gelecek nesillere şimdiki zamanın programlama
+kültürü ile ilgili materyaller bırakmak. Bu sayede geleceğin tarihçileri ya da
+"dijital arkeolojist"leri bu depoları inceleyerek programlama kültürümüz ya da
+topluluklarımız ile ilgili bilgiler edinebilecekler ya da bambaşka amaçlar
+için kullanabilirler -kim bilir.
+</p>
+
+<p>
+Elbette GitHub bu işi tek başına yapmıyor. Partnerlerin hepsini tek tek yazmak
+yerine programdaki rollerini açıklayarak ilerleyelim.
+</p>
+
+<ul class="org-ul">
+<li>GitHub: Zaten tüm verileri sağlayan şirketin kendisi. GitHub neredeyse
+anlık olarak tüm depolara ait verileri API sistemi üzerinden erişilebilir
+şekilde diğer partnerler ile paylaşacak.</li>
+<li>GHTorrent: GitHub'ın tüm herkese açık verilerini takip edecek ve bunları
+günlük ya da aylık formatlarda erişilebilecek şekilde saklayacak.</li>
+<li>GH Archive: GHTorrent'e ek olarak bu hizmet aynı zamanda BigQuery
+kullanarak sorgulama özelliği de sunacak. Bu hizmetten de saatlik, günlük
+ya da aylık şekilde indirmeler yapabileceğiz.</li>
+<li>Internet Archive: Zaten birçok farklı web sitenin eski hallerini saklayan
+bu hizmet aynı şeyi GitHub depolarının sayfaları için de yapacak ve
+bunlara git veya https üzerinden erişilebilecek.</li>
+<li>Software Heritage Foundation: Aylık olarak GitHub'ı tarayacak ve herkese
+açık verileri kendi arşivine alacak.</li>
+<li>Bodleian Kütüphanesi: Oxford Üniversite'ne bağlı bu kütüphane GitHub'daki
+en çok yıldız alan ve en çok proje tarafından kullanılan projeleri kendi
+depolarında (repo değil, fiziksel depo) film makaralarında saklayacak.</li>
+<li>Arctic World Archive: 2 Şubat 2020 tarihinde alınacak tüm aktif herkese
+açık depoların görüntüleri (snapshot) yine film makaralarında, kuzey
+kutbuna çok yakın bir yerde uzun ömürlü olacak şekilde depolanacak.</li>
+<li>Microsoft Project Silica: Her beş yılda bir olacak şekilde Microsoft
+Resarch takımı aktif ve herkese açık tüm depoları 10.000 yıl
+saklayabilecek quartz cam plakalara femtosecond lazer kullarak yazacak.</li>
+</ul>
+
+<p>
+Gördüğünüz gibi bayağı büyük bir organizasyon şeklinde işleyecek bu program.
+Diğer detaylı ayrıntılar için GitHub'ın hazırladığı <a href="https://archiveprogram.github.com/">bu web sayfasını</a> ziyaret
+edebilirsiniz. Açıkcası her ne kadar gelecekler kodlarımızın ne amaçla
+kullanılacağını bilmesek de program benim hoşuma gitti. Hatta güzel birkaç
+bilim-kurgu senaryosu da aklıma geldi konuyla ilgili.
+</p>
+
+<p>
+Bu konuyla ilgili siz ne düşünüyorsunuz? Sizce gelecekte kodlarımız hangi
+amaçlar için kullanılabilir? Yorumlar bölümünde beyin fırtınası yapalım.
+</p>
+
+<p>
+Etkinlikle duyurulan diğer birkaç gelişme ise şu şekilde:
+</p>
+<ul class="org-ul">
+<li><a href="https://github.blog/2019-11-13-universe-day-one/#github-actions">GitHub Actions</a> ve <a href="https://github.blog/2019-11-13-universe-day-one/#github-packages">GitHub Packages</a> beta programından çıktılar,</li>
+<li>Bildirimlerde <a href="https://github.blog/2019-11-13-universe-day-one/#notifications">iyileştirmeler</a>,</li>
+<li>Bir fonksiyonun nerede tanımlandığını ya da nerelerde kullanıldığını
+<a href="https://github.blog/2019-11-13-universe-day-one/#navigation">gösterme</a>,</li>
+<li>Kodlar içerisinde özel <a href="https://github.blog/2019-11-13-universe-day-one/#search">aramalar yapabilme</a>,</li>
+<li>GitHub Güvenlik Labaratuvarı <a href="https://github.blog/2019-11-14-announcing-github-security-lab-securing-the-worlds-code-together/">tanıtıldı</a>,</li>
+<li>GitHub Enterprise Server 2.19 sürümü <a href="https://github.blog/2019-11-13-universe-day-one/#server">duyuruldu</a>,</li>
+</ul>
+<p>
+Ayrıca bu hafta içerisinde GitHub'ın Kullanım Sözleşmesi ve Gizlilik Anlaşması
+da <a href="https://github.blog/2019-11-15-updates-to-our-terms-of-service-and-privacy-statement/">güncellendi</a>.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb00d5ce" class="outline-2">
+<h2 id="orgb00d5ce"><span class="section-number-2">2</span> Mozilla, Bytecode Birliğini <a href="https://hacks.mozilla.org/2019/11/announcing-the-bytecode-alliance/">tanıttı</a></h2>
+<div class="outline-text-2" id="text-2">
+
+<div class="figure">
+<p><img src="gorseller/mozilla-bytecode-alliance.png" alt="mozilla-bytecode-alliance.png" height="200" />
+</p>
+</div>
+
+<p>
+Tek amacı olmasa da en büyük amaçlarından biri olan JavaScript'e alternatif
+olması için geliştirilen WebAssembly programlama diline en çok katkı
+yapanlardan birisi olan Mozilla, topluluk için çalışmaya devam ediyor. Elbette
+birliği tek başına kurmadı. Şu an için birliğin içerisinde Fastly, Intel ve Red
+Hat firmaları var fakat daha çok firmanın da katılmasını bekliyorlar.
+</p>
+
+<p>
+Günümüzde yazılım geliştirmenin evrildiği hal itibariyle üçüncü parti
+kütüphaneler olmadan bir yazılım çözümü üretmek neredeyse imkansız hale geldi.
+Elbette üçüncü parti kütüphaneler ya da araçlar kullanmanın kötü bir yanı yok,
+aksine açık kaynak topluluğu için çok faydalı da oluyor fakat bu sürecin
+sağlıklı olmayan bazı parçaları mevcut. Şöyle ki, kullanıcı bir uygulamayı
+sistemine kurduğunda ya da tarayıcısı üzerinden çalıştırdığında beraberinde o
+uygulamanın bağımlı olduğu tüm kütüphaneleri de sistemine indiriyor ve
+çalıştırıyor. Fakat uygulamayı çalıştırarak ona güvendiğini belirten bu
+kullanıcının, uygulamanın beraberinde getirdiği kütüphanelere ya da araçlara
+güvenmesi için bir neden yok (aslında geliştirici olarak bizim de güvenmemiz
+için bir neden yok). Bunun somut örneklerini önceki yazılım gündemi yazılarında
+çokça aktarmıştım (zararlı kod içeren 3.parti kütüphaneden, kötü amaçlı
+kişilerin ellerine geçmiş kütüphanelere kadar örnekler mevcut). İşte bu
+birliğin amacı da WebAssembly ekosistemi için tam olarak bu güven ortamını
+yaratmak.
+</p>
+
+<p>
+Konu hakkında siz ne düşünüyorsunuz? Sizce de artık üçüncü parti kütüphane ve
+araçlara bakış açımızı değiştirme zamanı geldi mi? Sizin üçüncü parti kütüphane
+seçerken dikkat ettiğiniz şeyler neler? Yorumlar kısmında konuşalım.
+</p>
+</div>
+</div>
+<div id="outline-container-org46f5fcc" class="outline-2">
+<h2 id="org46f5fcc"><span class="section-number-2">3</span> OpenJDK kod tabanını GitHub'a <a href="https://www.infoworld.com/article/3453397/openjdk-repo-migration-to-github-gains-steam.html">taşımayı tartışıyor</a></h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Java'nın açık kaynak sürümü olan OpenJDK, bu sıralar çeşitli önerileri
+tartışmakla meşgul. Bunlardan bu sıralar gündemde olanları ise şu şekilde:
+</p>
+<ul class="org-ul">
+<li><a href="https://openjdk.java.net/jeps/296">JEP 296: Consolidate The JDK Forest into a Single Repository</a></li>
+<li><a href="https://openjdk.java.net/jeps/357">JEP 357: Migrate from  Mercurial to Git</a></li>
+<li><a href="https://openjdk.java.net/jeps/369">JEP 369: Migrate to GitHub</a></li>
+</ul>
+<p>
+Bunlardan ilki şu sıralar birçok firmanın da uygulamaya başladığı yeni bir moda
+olan mono-repo sistemine geçmeyi öneriyor. Yani tüm kod tabanının büyük tek bir
+depoda tutulduğu yapı. İkincisi ise Git'den daha önce de var olan bir versiyon
+kontrol sistemi olan Mercurial'den Git'e geçmeyi öneriyor ve sonuncusu ise
+bugün konuşacağımız tüm kod tabanının GitHub'a taşınmasını öneriyor. Fakat
+burada belirtmekte fayda var sadece kodların GitHub'a taşınması düşünülüyor;
+issue tracker, wiki vb. yapılar yine olduğu yerde kalacaklar.
+</p>
+
+<p>
+Öneri metini bayağı ayrıntılı bir şekilde hazırlanmış. Aynı metinde yer alan
+"Hedefler" başlığındaki birkaç taşınma nedeni ise şu şekilde:
+</p>
+<ul class="org-ul">
+<li>Geliştiriciler katkı yapmak için OpenJDK'ya özel bazı araçları kurmak
+zorunda kalmayacaklar,</li>
+<li>Commit öncesi kontroller çalıştırabilme,</li>
+<li>Mevcut e-posta tabanlı iş akışlarının benzerlerini desteklemesi,</li>
+<li>GitHub'ın erişilebilirlik özelliklerinden faydalanabilme</li>
+</ul>
+<p>
+gibi özellikler OpenJDK takımını cezbeliyor. İlgili önerilerin metinlerini
+içeren sayfaları yukarıda maddeler hallinde bağlantı olarak ekledim. Daha
+detaylı bilgi için oraları kontrol edebilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd2295fa" class="outline-2">
+<h2 id="orgd2295fa"><span class="section-number-2">4</span> Sourcehut, <a href="https://sourcehut.org/blog/2019-11-15-sourcehut-1-year-alpha/#expectations-for-2020">2019 yılı özetini yayınladı</a></h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Günümüzde artık bir versiyon kontrol sistemi olmadan geliştirme yapmak imkansız
+olmasa bile çok zor. Çoğumuz da artık versiyon kontrol sistemi olarak Git'i
+varsayılan olarak kullanmaya başladık. Hatta proje klasörünü oluşturduktan
+sonraki ilk işimiz <code>git init</code> komutunu çalıştırmak oluyor. Bu lokal Git
+depolarından ziyade çoğumuz artık kodlarımızı bir uzak Git sunucusunda da
+tutmak istiyoruz. Bunların en popülerleri ise GitHub ve GitLab gibi büyük
+oyuncular. Fakat ben bugün size pek gündemde olmayan, ilk yazılım gündemi
+yazısını okumadıysanız muhtemelen ilk kez duyacağınız farklı bir uzak kod
+sunucusundan, Sourcehut'dan bahsetmek istiyorum. Çünkü bu hafta 15 Kasım
+tarihinde Alpha sürecine girmesinin birinci yılı şerefine bir blog yazısı
+yayınlandı.
+</p>
+
+<p>
+Sourcehut aslında sadece bir uzak kod sunucusu değil; günümüz uygulama
+geliştirme süreçlerinde sürekli ihtiyaç duyduğumuz şu hizmetleri de olan komple
+bir proje yönetim sistemi diyebiliriz:
+</p>
+<ul class="org-ul">
+<li>Kodlarınızı depolayabileceğiniz: <a href="https://git.sr.ht/">git.sr.ht</a>,</li>
+<li>Çeşitli testleri belirli aralıklarla çalıştırabileceğiniz Continuous
+Integration sistemi: <a href="https://builds.sr.ht/">builds.sr.ht</a>,</li>
+<li>Yapılacaklar listesi ve hata bildirimi gibi şeyler için: <a href="https://todo.sr.ht/">todo.sr.ht</a>,</li>
+<li>Mail listesi için: <a href="https://lists.sr.ht/">lists.sr.ht</a>,</li>
+<li>Rehber ve Wiki sayfaları hazırlamak için: <a href="https://man.sr.ht/">man.sr.ht</a></li>
+</ul>
+<p>
+ve tüm bu çözümleri arayüzü gibi sade olarak sunmaya çalışan bir site. Elbette
+tüm bu sistemler özgür yazılım lisanslarıyla geliştiriliyor.
+</p>
+
+<p>
+Bir yıl içerisinde Sourcehut'daki gelişmelerin bir kısmı ise şu şekilde:
+</p>
+<ul class="org-ul">
+<li>Code Annotations özelliği (bkz: <a href="../01/yazilim-gundemi-01.html">Yazılım Gündemi - 1</a>),</li>
+<li>builds.sr.ht'de çalışan testlerin olduğu sanal makineye debug yapmak için
+ssh ile bağlanabilme,</li>
+<li>todo.sr.ht üzerindeki ticket sistemi olgunlaştırılmış,</li>
+<li>ilk çalışan işe alınmış</li>
+</ul>
+
+<p>
+Diğer gelişmeler ve 2020 yılından beklentiler için mutlaka konu başlığına
+eklediğim blog yazısını inceleyin. Ben şahsen bu projeyi çok önemsiyorum ve
+ileride imkanım olduğunda maddi olarak da destek olmaya çalışacağım.
+</p>
+</div>
+</div>
+<div id="outline-container-orga779c60" class="outline-2">
+<h2 id="orga779c60"><span class="section-number-2">5</span> Yaklaşan Etkinlikler</h2>
+<div class="outline-text-2" id="text-5">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" width="100%">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Etkinlik İsmi</th>
+<th scope="col" class="org-left">Yeri</th>
+<th scope="col" class="org-left">Tarihi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/open-source-yazlm-gelistirme-akaunting-kurucu-ortag-denis-dulici-tickets-79951076823">Open Source Yazılım Geliştirme</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">20 Kasım 18:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/software-craftsmanship-turkey/events/tum-interneti-nasil-cacheleriz-olasiliksal-veri-yapilarina-yolculuk">Tüm İnterneti Nasıl Cache'leriz? Olasılıksal Veri Yapılarına Yolculuk</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">20 Kasım 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/atolye15/events/how-to-get-better-at-writing-css">How to Get Better at Writing CSS</a></td>
+<td class="org-left">İzmir</td>
+<td class="org-left">20 Kasım 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/kworks-inovatif-endustriyel-iot-uygulamalar-paneli-tickets-80823638679">KWORKS İnovatif Endüstriyel IoT Uygulamaları Paneli</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">21 Kasım 18:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/web-uygulama-guvenligi-ve-bug-bounty-hacknightsorg-tickets-78021938719">Web Uygulama Güvenliği ve Bug Bounty</a></td>
+<td class="org-left">Ankara</td>
+<td class="org-left">21 Kasım 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/sap-community-turkey/events/sap-inside-track-istanbul-2019-part-ii">SAP Inside Track Istanbul 2019 Part II</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">23 Kasım 09:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/gdg-devfest-izmir-19-tickets-75047965485">GDG DevFest İzmir '19</a></td>
+<td class="org-left">İzmir</td>
+<td class="org-left">23 Kasım 09:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/istanbulphp/events/kubernetes-native-uygulama-gelistirme">"Kubernetes Native" Uygulama Geliştirme</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">23 Kasım 13:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://devfest.istanbul/">GDG DevFest İstanbul '19</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">24 Kasım 09:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/gelisen-teknoloji-gunleri19-tickets-82196167951">Gelişen Teknoloji Günleri'19</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">26 Kasım 09:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/digitalzone-meetups-aylik-seo-kafe-toplantilari/events/digitalzone-meetups-26-kasim-bulusmasi">Digitalzone Meetups: 26 Kasım Buluşması</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">26 Kasım 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/sosyal-muhendislik-saldrlar-ve-korunma-yontemleri-hacknightsorg-tickets-77644170805">Sosyal Mühendislik Saldırıları ve Korunma Yöntemleri</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">27 Kasım 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/yapay-zekada-bias-calstay-registration-79316901989">Yapay Zekada Bias Çalıştayı</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">30 Kasım 09:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.acikhack.com/">Açık Hack</a></td>
+<td class="org-left">Gebze/Kocaeli</td>
+<td class="org-left">30 Kasım 12:00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org91ac8d0" class="outline-2">
+<h2 id="org91ac8d0"><span class="section-number-2">6</span> Diğer Haberler</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>Go programlama dilinin artık paket arama vb. işler için <a href="https://blog.golang.org/go.dev">yeni bir sitesi var</a>:
+<a href="https://go.dev/">go.dev</a></li>
+<li>Mirantis firması, Docker'ın Enterprise kısmını <a href="https://techcrunch.com/2019/11/13/mirantis-acquires-docker-enterprise/">satın aldı</a>.</li>
+<li>AWS yeni hizmetini <a href="https://aws.amazon.com/tr/blogs/aws/aws-data-exchange-find-subscribe-to-and-use-data-products/">duyurdu</a>: <a href="https://aws.amazon.com/data-exchange/">AWS Data Exchange</a>.</li>
+<li>PHP 7.4.0 RC6 sürümü <a href="https://news-web.php.net/php.internals/107792">yayınlandı</a>.</li>
+<li>GitHub'ın Göçmenlik ve Gümrük Muhafaza kurumu ile yaptığı iş anlaşmasının
+<a href="https://techcrunch.com/2019/11/13/github-faces-more-resignations-in-light-of-ice-contract/">etkileri devam ediyor</a>.</li>
+<li><a href="https://www.redhat.com/en/technologies/cloud-computing/quay">RedHat Quay</a> isimli projenin açık kaynak hali <a href="https://www.projectquay.io/">Project Quay</a> ismiyle <a href="https://www.redhat.com/en/blog/red-hat-introduces-open-source-project-quay-container-registry">duyuruldu</a>.</li>
+<li>"Redux Starter Kit" artık hayatına "<a href="https://redux-toolkit.js.org/">Redux Toolkit</a>" olarak <a href="https://github.com/reduxjs/redux-toolkit/releases/tag/v1.0.4">devam edecek</a>.</li>
+<li>Android geliştirme ile ilgili sürüm güncelleştirmeleri:
+<ul class="org-ul">
+<li><a href="https://androidstudio.googleblog.com/2019/11/emulator-2929-and-amd-hypervisor-12-to.html">Android Emulator 20.2.9 ve AMD Hypervisor 1.2 Canary</a></li>
+<li><a href="https://androidstudio.googleblog.com/2019/11/android-studio-36-beta-4-available.html">Android Studio 3.6 Beta 4</a></li>
+<li><a href="https://androidstudio.googleblog.com/2019/11/android-studio-40-canary-3-available.html">Android Studio 4.0 Canary 3</a></li>
+</ul></li>
+<li>Ionic, kendi React çözümünü <a href="https://ionicframework.com/blog/announcing-ionic-react/">duyurdu</a>: <a href="https://ionicframework.com/docs/react/overview">Ionic React</a>.</li>
+<li>Gatsby Cloud hizmeti <a href="https://www.gatsbyjs.org/blog/2019-11-14-announcing-gatsby-cloud/">duyuruldu</a>.</li>
+<li>Ververica, Development ve Startup License <a href="https://www.ververica.com/blog/introducing-the-ververica-developer-and-startup-license-programs">programlarını duyurdu</a>.</li>
+<li>HashiCopr Vault 1.3 sürümü <a href="https://www.hashicorp.com/blog/vault-1-3/">duyuruldu</a>.</li>
+<li>Kore4 ile gelecek <a href="https://blog.kore.io/posts/kore4-and-python">özellikler açıklandı</a>.</li>
+<li>GCC 7.5 sürümü <a href="https://gcc.gnu.org/ml/gcc/2019-11/msg00099.html">yayınlandı</a>.</li>
+<li>CockroachDB 19.2 sürümü <a href="https://www.cockroachlabs.com/blog/cockroachdb-19dot2-release/#">duyuruldu</a>.</li>
+<li>PostgreSQL'den birden fazla sürüm <a href="https://www.postgresql.org/about/news/1994/">güncellemeleri çıktı</a>.</li>
+<li>Gitea 1.10.0 sürümü <a href="https://blog.gitea.io/2019/11/gitea-1.10.0-is-released/">duyuruldu</a>.</li>
+<li>Winw 4.20 sürümü <a href="https://www.winehq.org/news/2019111501">yayınlandı</a>.</li>
+<li><a href="https://crates.io/crates/glsl/3.0.0">GLSL</a> kütüphanesinin 3.0.0 sürümü <a href="https://github.com/phaazon/glsl/blob/master/glsl/CHANGELOG.md#30">duyuruldu</a>.</li>
+<li>OpenAPIGenerator v4.2.1. sürümü <a href="https://github.com/OpenAPITools/openapi-generator/releases/tag/v4.2.1">yayınlandı</a>.</li>
+<li><a href="https://gitlab.com/RobertZenz/jLuaScript">jLuaScript</a> ilk sürümü 1.0'ı <a href="https://gitlab.com/RobertZenz/jLuaScript/-/tags/v1.0">duyurdu</a>. <a href="https://www.reddit.com/r/java/comments/dxdav7/jluascript_10_ive_finally_finished_the_first/f7p3al5/">Reddit duyurusu</a></li>
+<li>JIN PHP kütüphanesinin 3.5.o sürümü <a href="https://github.com/dotink/jin/releases/tag/3.5.0">çıktı</a>.</li>
+<li>DataKernel 3.1 sürümü <a href="https://datakernel.io/docs/blog/datakernel-v31-release.html">çıktı</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4cc2637" class="outline-2">
+<h2 id="org4cc2637"><span class="section-number-2">7</span> Lisans</h2>
+<div class="outline-text-2" id="text-7">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="../../../img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+<a href="yazilim-gundemi-18.html">Yazılım Gündemi - 18</a> yazısı <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a> (CC BY-NC-SA 4.0)
+ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 17 Kasım 2019</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 22:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

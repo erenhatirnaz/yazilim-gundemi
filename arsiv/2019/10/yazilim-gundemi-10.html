@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 22:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi - 10</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi - 10
+<br />
+<span class="subtitle">16-22 Eylül 2019</span>
+</h1>
+<div id="table-of-contents">
+<h2>İçindekiler</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgbb3b2fd">1. Richard Stallman, Özgür Yazılım Vakfı başkanlığından ve MIT'deki görevinden istifa etti</a></li>
+<li><a href="#org9d2c80b">2. Bir geliştirici ABD Göçmenlik ve Gümrük Muhafaza kurumunu protesto etti</a></li>
+<li><a href="#org77fc3c5">3. GitHub, Semmle isimli şirketi satın aldı</a></li>
+<li><a href="#org45be9e9">4. Chrome 78 Beta ile gelen API yenilikleri</a>
+<ul>
+<li><a href="#org4c88f09">4.1. Özel CSS özellikleri ve değişkenler</a></li>
+<li><a href="#org94ff51e">4.2. Dosya sistemine erişim</a></li>
+</ul>
+</li>
+<li><a href="#orgb663512">5. Safari 13 ile gelen API yenilikleri</a></li>
+<li><a href="#org91d31ee">6. Microsoft programcılar için yeni yazı stilini duyurdu: Cascadia Code</a></li>
+<li><a href="#orgf20dd29">7. Etkinlik duyurusu: Ultimate Graphical Performance on STM32 microcontrollers with Qt for MCUs</a></li>
+<li><a href="#org7aa89a3">8. Diğer Haberler</a></li>
+<li><a href="#org81fd10b">9. Lisans</a></li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gundemi-banner.png" alt="yazilim-gundemi-banner.png" />
+</p>
+</div>
+
+<div class="org-center">
+<p>
+<a href="../09/yazilim-gundemi-09.html">&lt; Önceki Gündem</a> | <b>16-22 Eylül 2019</b> | <a href="../11/yazilim-gundemi-11.html">Sonraki Gündem &gt;</a>
+</p>
+
+<p>
+<a href="https://teknoseyir.com/blog/yazilim-gundemi-10-16-22-eylul-2019">TeknoSeyir'de Oku</a>
+</p>
+</div>
+
+<div id="outline-container-orgbb3b2fd" class="outline-2">
+<h2 id="orgbb3b2fd"><span class="section-number-2">1</span> Richard Stallman, Özgür Yazılım Vakfı başkanlığından ve MIT'deki <a href="https://www.engadget.com/2019/09/17/rms-fsf-mit-epstein/">görevinden istifa etti</a></h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Daha doğrusu istifa etmek zorunda kaldı demek daha doğru olur. Çünkü kendisini
+hiç sokmaması gereken bir duruma soktu ve artık sonuçlarına katlanmak zorunda.
+Olaylar 12 Eylül tarihinde Medium sitesinde yayınlanan <a href="https://medium.com/@selamie/remove-richard-stallman-fec6ec210794">şu blog yazısı</a> ile
+başlıyor. Bu yazıda, Richard Stallman'ın MIT'deki yapay zeka laboratuvarı mail
+listesindeki çocuk istismarını savunmaya kadar giden mailleri ifşa edilmiş.
+Mailleri aynı zamanda <a href="https://assets.documentcloud.org/documents/6405929/09132019142056-0001.pdf">buradan da</a> okuyabilirsiniz. Bunlar ortaya çıkınca doğal
+olarak herkes Stallman'ın üzerine gitmeye başladı ve sonuç <a href="https://www.fsf.org/news/richard-m-stallman-resigns">bu şekilde</a> oldu.
+</p>
+
+<p>
+Olaylar hakkında fazla detaya girmeyeceğim zaten internet üzerinde hem
+İngilizce hem de Türkçe olarak birçok kaynakta yer aldı(*). Bu haftaki gündem
+değerlendirmesinde <a href="https://youtu.be/aRo4U0scAI4?t=1546">Murat Abi de değindi</a>. Detayları oralardan okuyabilir ya da
+dinleyebilirsiniz.
+</p>
+
+<p>
+Ben de özgür yazılım destekçisi birisiyim fakat Stallman'ın politik görüşlerini
+pek takip etmiyorum. Web sitesindeki <a href="https://stallman.org/archives/2019-jul-oct.html">şu sayfaya</a> baktığımda buna benzer
+düşünceleri daha önce de dile getirdiğini gördüm. Bu tarz uçlarda dolaşmayı
+seven birisi olduğu açık fakat bu olayın savunulacak hiçbir yanı yok -sonradan
+yaptığının yanlış olduğunun farkına varmış olsa bile.
+</p>
+
+<p>
+Ayrıca Richard Stallman'ın Özgür Yazılım Hareketi adına <a href="https://sfconservancy.org/news/2019/sep/16/rms-does-not-speak-for-us/">konuşma yapması da
+yasaklandı</a>. Açıkcası her ne kadar hareketin kurucusu olsa bile Richard
+Stallman'ın ilahlaştırılmayıp, savunulmaya çalışılmaması beni sevindirdi. Bu
+demek oluyor ki, Özgür Yazılım Hareketi Richard Stallman olmadan da devam
+edebilir.
+</p>
+
+<p>
+<b>Kaynaklar</b>:
+</p>
+<ul class="org-ul">
+<li><a href="https://www.bilimma.com/richard-stallman-cocuk-istismarini-savundu/">Richard Stallman çocuk istismarını savundu – Bilimma Bilim Haberleri</a></li>
+<li><a href="https://www.vice.com/en_us/article/mbm74x/computer-scientist-richard-stallman-resigns-from-mit-over-epstein-comments">Computer Scientist Richard Stallman Resigns From MIT Over Epstein Comments - &#x2026;</a></li>
+<li>Reddit tartışmaları:
+<ul class="org-ul">
+<li><a href="https://www.reddit.com/r/programming/comments/d59r46/richard_stallman_resigns_from_mit_over_epstein/">Richard Stallman Resigns From MIT Over Epstein Comments : programming</a></li>
+<li><a href="https://www.reddit.com/r/programming/comments/d5art6/richard_m_stallman_resigns_free_software/">Richard M. Stallman resigns — Free Software Foundation : programming</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9d2c80b" class="outline-2">
+<h2 id="org9d2c80b"><span class="section-number-2">2</span> Bir geliştirici ABD Göçmenlik ve Gümrük Muhafaza kurumunu <a href="https://www.zdnet.com/article/developer-takes-down-ruby-library-after-he-finds-out-ice-was-using-it/">protesto etti</a></h2>
+<div class="outline-text-2" id="text-2">
+<p>
+<a href="https://github.com/sethvargo">Seth Vargo</a> isimli geliştirici, kişisel projelerinin birinin, dolaylı bir yoldan
+ABD Göçmenlik ve Gümrük Muhafaza kurumuyla yapılan bir iş anlaşmasına dahil
+olması nedeniyle ilgili projesini her yerden kaldırdı.
+</p>
+
+<p>
+Şu an Google'da mühendis olarak çalışan bu arkadaş, eskiden <a href="https://www.chef.io/">Chef</a> isimli bir
+şirkette çalışıyormuş ve o zamanlarda <a href="https://github.com/sethvargo/chef-sugar">Chef Sugar</a> isimli kişisel bir proje
+geliştirip, GitHub hesabında ve RubyGems sitesinde paylaşmış. Daha sonra da
+ilgili kütüphane, Chef'in bağımlılıkları (dependency) arasına girmiş.
+</p>
+
+<p>
+Bu haftanın başlarında <a href="https://twitter.com/shanley/status/1173692656192385024">Twitter'da bir kullanıcı</a>nın Chef şirketi ile ABD
+Göçmenlik ve Gümrük Muhafaza kurumunun yaptığı 95.500$'lık anlaşmayı ortaya
+çıkarınca, kütüphanenin geliştiricisi de kurumu protesto etmek için ilgili
+kütüphanenin kodlarını GitHub'dan ve RubyGems sitesinden sildi. Bu durumdan
+etkilenen projeler de olmuş haliyle. Protesto nedeni olarak da "insanlık dışı
+muamele, temel insan haklarının reddi" vb. gibi konuları göstermiş. İlgili
+kurum hakkında pek bilgim yok ama söz konusu Amerika olunca geliştiriciye hak
+veresim geliyor.
+</p>
+
+<p>
+Geliştirici bunu protesto amacıyla yapmış fakat kodları açık kaynak bir lisans
+ile paylaştığı için haliyle Chef şirketi de eski kodları bulup, tekrar kendi
+hesaplarına yüklemişler. Yine de ilginç bir protesto yöntemi olarak tarihe not
+düşmüş oldu.
+</p>
+</div>
+</div>
+<div id="outline-container-org77fc3c5" class="outline-2">
+<h2 id="org77fc3c5"><span class="section-number-2">3</span> GitHub, Semmle isimli <a href="https://github.blog/2019-09-18-github-welcomes-semmle/">şirketi satın aldı</a></h2>
+<div class="outline-text-2" id="text-3">
+<p>
+<a href="https://semmle.com/">Semmle</a>, bir semantik kod analizi motoru. Yani kodlarınızı analiz edip, olası
+güvenlik zafiyetlerini ya da daha önce keşfedilmiş güvenlik açıklarını CVE
+numaraları ile birlikte sunan bir hizmet. Daha çok firmalardaki güvenlik
+takımındaki geliştiriciler tarafından kullanılan bir servis.
+</p>
+
+<p>
+GitHub da bu şirketi satın alarak bünyesine kattı ve artık GitHub ile daha
+entegre olacağı hatta direkt GitHub'ın içerisinde bir servis olarak
+kullanılabileceği <a href="https://venturebeat.com/2019/09/18/github-acquires-semmle-to-help-developers-spot-code-exploits/">yönünde görüşler var</a>. Bakalım önümüzdeki aylarda mutlaka bir
+kullanım senaryosu olarak karşımıza çıkarır bunu GitHub.
+</p>
+</div>
+</div>
+<div id="outline-container-org45be9e9" class="outline-2">
+<h2 id="org45be9e9"><span class="section-number-2">4</span> Chrome 78 Beta ile <a href="https://blog.chromium.org/2019/09/chrome-78-beta-new-houdini-api-native.html?m=1">gelen API yenilikleri</a></h2>
+<div class="outline-text-2" id="text-4">
+<p>
+19 Eylül günü yayınlanan bu chrome sürümü ile API sistemine bazı yenilikler
+gelmiş. Şöyle ki:
+</p>
+</div>
+
+<div id="outline-container-org4c88f09" class="outline-3">
+<h3 id="org4c88f09"><span class="section-number-3">4.1</span> Özel CSS özellikleri ve değişkenler</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+W3C organizasyonunun <a href="https://drafts.css-houdini.org/">CSS-TAG Houdini</a> ekibi tarafından oluşturulmuş bu
+özellik sayesinde artık CSS tarafında kendimize özel css özellikleri
+oluşturabileceğiz. Yani bu şekilde:
+</p>
+<div class="org-src-container">
+<pre class="src src-javascript">window.CSS.registerProperty({
+  name: <span class="org-string">'--my-color'</span>,
+  syntax: <span class="org-string">'&lt;color&gt;'</span>,
+  inherits: <span class="org-constant">false</span>,
+  initialValue: <span class="org-string">'black'</span>,
+});
+</pre>
+</div>
+<p>
+JavaScript tarafında özelliği tanımladıktan sonra, CSS tarafında böyle
+kullanabileceğiz:
+</p>
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">.thing </span>{
+    <span class="org-variable-name">--my-color</span>: <span class="custom">red</span>;
+}
+</pre>
+</div>
+<p>
+Front-End tarafına pek yakın birisi olmadığım için kullanım senaryosunu
+çözemedim ama <a href="https://web.dev/css-props-and-vals/">buradaki sayfadan</a> daha detaylı bilgiler alabilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-org94ff51e" class="outline-3">
+<h3 id="org94ff51e"><span class="section-number-3">4.2</span> Dosya sistemine erişim</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+Bu özelliğin geleceğini daha önceki yazılım gündemi yazısında (bkz: <a href="../07/yazilim-gundemi-07.html">Yazılım
+Gündemi - 7</a>) söylemiştim. Bu sürümde, Chrome'a eklenen Origin Trials
+özelliği üzerinden aktifleştirilebilir olmuş. Yani artık buna göre kodlanan
+siteler sizin seçtiğiniz bir dosyaya doğrudan erişip üzerinde, okuma-yazma
+işlemleri yapabilecek. İlgili yazıda bu özelliğin kullanım alanı için
+Google, çevrim içi uygulamalar (resim&amp;video düzenleme, metin editörü vb.) bu
+özellik sayesinde daha kolay kullanılabilecek demiş. Önceden de bu tarz
+siteleri kullanabiliyorduk fakat orada site sadece dosyayı okuyabiliyordu.
+Mesela bir resimde değişiklik yaptığınızda o tarayıcıda kalıyordu, kaydet
+dediğinizde farklı bir dosya olarak indiriliyordu, artık siteler doğrudan
+dosyayı değiştirebilecekler. Bana kötüye kullanımı çok mümkün bir özellik
+gibi geliyor, ben şahsen o şekilde bir izini hiçbir siteye vermem. Siz ne
+düşünüyorsunuz bu özellik hakkında? Yorumlar kısmında konuşalım.
+</p>
+
+<p>
+API sistemindeki diğer değişiklikler için konu bağlığına eklediğim bağlantıya
+tıklayabilirsiniz.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb663512" class="outline-2">
+<h2 id="orgb663512"><span class="section-number-2">5</span> Safari 13 ile <a href="https://developer.apple.com/documentation/safari_release_notes/safari_13_release_notes">gelen API yenilikleri</a></h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Bu hafta iOS 13 ile birlikte yayınlanan Safari 13'de yeni API özellikleri
+mevcut. Bunlardan bazıları şu şekilde:
+</p>
+<ul class="org-ul">
+<li>Web siteler artık telefonun karanlık moda geçtiğini anlayıp kendilerini de
+karanlık temaya geçirebilecekler.</li>
+<li>"Apple ile Giriş Yap" özelliği web sitelere eklenebilecek</li>
+<li>Sayfada yer alan <code>iframe</code> ler artık sayfayı değiştiremeyecek.</li>
+<li>Koni şeklinde CSS renk geçişleri (gradient) için destek.</li>
+<li>JavaScript artık daha az bellik kullanıyor.</li>
+<li><code>__Secure-</code> ve <code>__Host-</code> çerez ön-ekleri için destek.</li>
+<li>Apple Pay için destek</li>
+</ul>
+
+<p>
+API sistemindeki diğer değişiklikler için konu bağlığına eklediğim
+bağlantıya tıklayabilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-org91d31ee" class="outline-2">
+<h2 id="org91d31ee"><span class="section-number-2">6</span> Microsoft programcılar için yeni <a href="https://devblogs.microsoft.com/commandline/cascadia-code/">yazı stilini duyurdu</a>: <a href="https://github.com/microsoft/cascadia-code">Cascadia Code</a></h2>
+<div class="outline-text-2" id="text-6">
+
+<div class="figure">
+<p><img src="gorseller/cascadia-code-characters.png" alt="cascadia-code-characters.png" />
+</p>
+</div>
+
+<p>
+Microsoft, terminal ve programlama araçlarında kullanılmak üzere bu yeni yazı
+stilini <a href="https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;id=OFL">SIL Open Font License</a> isimli lisans ile açık kaynak şekilde duyurdu.
+Ben şu an geliştirilmekte olan Windows Terminal uygulamasının da varsayılan
+olarak bu yazı stilini kullanacağını tahmin ediyorum. Ben uzun zamandır <a href="https://input.fontbureau.com/">Input
+Mono</a> kullanıyorum ama belki bir ara bunu da deneyebilirim.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/programming-ligatures.gif" alt="programming-ligatures.gif" />
+</p>
+<p><span class="figure-number">Şekil 3: </span>Yazı stilinin Programming Ligarates desteği de var.</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf20dd29" class="outline-2">
+<h2 id="orgf20dd29"><span class="section-number-2">7</span> Etkinlik duyurusu: <a href="https://www.qt.io/events/ultimate-graphical-performance-on-stm32-microcontrollers-with-qt-for-mcus-1568631867">Ultimate Graphical Performance on STM32 microcontrollers with Qt for MCUs</a></h2>
+<div class="outline-text-2" id="text-7">
+<p>
+Geçtiğimiz haftalarda tanıtılan Mikroişlemciler için Qt kütüphanesinin tanıtım
+etkinlikleri devam ediyor. 25 Eylül tarihinde de bir Webiner (sanal seminer)
+düzenlenecekmiş. İlgili arkadaşlar konu başlığına eklediğim bağlantıya
+tıklayarak kayıt olabilirler.
+</p>
+
+<p>
+<a href="https://www.qt.io/events/ultimate-graphical-performance-on-stm32-microcontrollers-with-qt-for-mcus-1568631867">Etkinlik sayfası</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org7aa89a3" class="outline-2">
+<h2 id="org7aa89a3"><span class="section-number-2">8</span> Diğer Haberler</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li>Microsoft, kendi C++ Standart Kütüphanesini <a href="https://devblogs.microsoft.com/cppblog/open-sourcing-msvcs-stl/">açık kaynak yaptı</a>: <a href="https://github.com/microsoft/STL">STL</a>.</li>
+<li>Modern C kitabının ikinci baskısı Creative-Common lisansı ile <a href="https://gustedt.wordpress.com/2019/09/18/modern-c-second-edition/">çevrim içi
+olarak yayınlandı</a>.</li>
+<li>KDAB Group, içerisinde çeşitli C++ araçlarının olduğu <a href="https://www.kdab.com/introducing-kdtoolbox/">depoyu açık kaynak
+yaptı</a>: <a href="https://github.com/KDAB/KDToolBox">KDToolbox</a>.</li>
+<li>C programlama dilinde asenkron süreçler yönetmeye yarayan <a href="https://higherlogics.blogspot.com/2019/09/asynch-asynchronous-stackless.html">kütüphane açık
+kaynak olarak yayınlandı</a>: <a href="https://github.com/naasking/async.h">async.h</a></li>
+<li>Go için önbellek kütüphanesi <a href="https://blog.dgraph.io/post/introducing-ristretto-high-perf-go-cache/">açık kaynak olarak yayınlandı</a>: <a href="https://github.com/dgraph-io/ristretto">ristretto</a>.</li>
+<li>Neo4j, yeni bir sorgu dili duyurdu: <a href="https://neo4j.com/press-releases/query-language-graph-databases-international-standard/">GQL (Graph Query Language)</a></li>
+<li>Eclipse <a href="https://www.eclipse.org/eclipseide/2019-09/noteworthy/">2019-09 sürümü yayınlandı</a>.
+<ul class="org-ul">
+<li>Eclipse IDE 2019-09'a Java 13 desteği kazandıran araç <a href="https://marketplace.eclipse.org/content/java-13-support-eclipse-2019-09-413">Eclipse
+Marketplace'de yerini aldı</a>.</li>
+</ul></li>
+<li>Kubernetes <a href="https://kubernetes.io/blog/2019/09/18/kubernetes-1-16-release-announcement/">1.16 sürümü duyuruldu</a>.</li>
+<li>LLVM <a href="http://lists.llvm.org/pipermail/llvm-dev/2019-September/135304.html">9.0.0 sürümü yayınlandı</a>.</li>
+<li>Memcached <a href="https://github.com/memcached/memcached/wiki/ReleaseNotes1518">1.5.18 sürümü duyuruldu</a>.</li>
+<li>OpenJDK <a href="https://openjdk.java.net/projects/jdk/13/">13 sürümü yayınlandı</a>.</li>
+<li>HgLab <a href="https://hglabhq.com/blog/2019/9/19/hglab-1-14-released">1.14 sürümü yayınlandı</a>.</li>
+<li>YugaByteDB <a href="https://blog.yugabyte.com/announcing-yugabyte-db-2-0-ga-jepsen-tested-high-performance-distributed-sql/">2.0 GA sürümü yayınlandı</a>.</li>
+<li>NeoVIM <a href="https://github.com/neovim/neovim/releases/tag/v0.4.0">0.4.0 sürümü yayınlandı</a>, <a href="https://github.com/neovim/neovim/commit/e2cc5fe09d98ce1ccaaa666a835c896805ccc196">Değişiklik Notları</a>.</li>
+<li>TextMate <a href="https://github.com/textmate/textmate/releases/tag/v2.0">v2.0 sürümü yayınlandı</a>.</li>
+<li>Akademik Çalışmalar:
+<ul class="org-ul">
+<li><a href="https://arxiv.org/abs/1909.07528">Emergent Tool Use From Multi-Agent Autocurricula</a>, <a href="https://openai.com/blog/emergent-tool-use/">Alternatif Kaynak</a>.</li>
+<li><a href="https://arxiv.org/abs/1909.08723">Espresso: A Fast End-to-end Neural Speech Recognition Toolkit</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org81fd10b" class="outline-2">
+<h2 id="org81fd10b"><span class="section-number-2">9</span> Lisans</h2>
+<div class="outline-text-2" id="text-9">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="../../../img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+<a href="yazilim-gundemi-10.html">Yazılım Gündemi - 10</a> yazısı <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a> (CC BY-NC-SA 4.0)
+ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 22 Eylül 2019</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 22:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

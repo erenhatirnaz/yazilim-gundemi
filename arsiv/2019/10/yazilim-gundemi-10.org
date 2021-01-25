@@ -1,0 +1,194 @@
+#+TITLE: Yazılım Gündemi - 10
+#+SUBTITLE: 16-22 Eylül 2019
+#+Author: Eren Hatırnaz
+#+DATE: 22 Eylül 2019
+#+OPTIONS: ^:nil
+#+LANGUAGE: tr
+#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=black, filecolor=red, urlcolor=blue}
+#+LATEX_HEADER: \usepackage[turkish]{babel}
+#+HTML_HEAD: <link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+#+LATEX: \shorthandoff{=}
+
+[[file:gorseller/yazilim-gundemi-banner.png]]
+
+#+BEGIN_CENTER
+[[file:../09/yazilim-gundemi-09.org][< Önceki Gündem]] | *16-22 Eylül 2019* | [[file:../11/yazilim-gundemi-11.org][Sonraki Gündem >]]
+
+[[https://teknoseyir.com/blog/yazilim-gundemi-10-16-22-eylul-2019][TeknoSeyir'de Oku]]
+#+END_CENTER
+
+* Richard Stallman, Özgür Yazılım Vakfı başkanlığından ve MIT'deki [[https://www.engadget.com/2019/09/17/rms-fsf-mit-epstein/][görevinden istifa etti]]
+	Daha doğrusu istifa etmek zorunda kaldı demek daha doğru olur. Çünkü kendisini
+	hiç sokmaması gereken bir duruma soktu ve artık sonuçlarına katlanmak zorunda.
+	Olaylar 12 Eylül tarihinde Medium sitesinde yayınlanan [[https://medium.com/@selamie/remove-richard-stallman-fec6ec210794][şu blog yazısı]] ile
+	başlıyor. Bu yazıda, Richard Stallman'ın MIT'deki yapay zeka laboratuvarı mail
+	listesindeki çocuk istismarını savunmaya kadar giden mailleri ifşa edilmiş.
+	Mailleri aynı zamanda [[https://assets.documentcloud.org/documents/6405929/09132019142056-0001.pdf][buradan da]] okuyabilirsiniz. Bunlar ortaya çıkınca doğal
+	olarak herkes Stallman'ın üzerine gitmeye başladı ve sonuç [[https://www.fsf.org/news/richard-m-stallman-resigns][bu şekilde]] oldu.
+
+	Olaylar hakkında fazla detaya girmeyeceğim zaten internet üzerinde hem
+	İngilizce hem de Türkçe olarak birçok kaynakta yer aldı(*). Bu haftaki gündem
+	değerlendirmesinde [[https://youtu.be/aRo4U0scAI4?t=1546][Murat Abi de değindi]]. Detayları oralardan okuyabilir ya da
+	dinleyebilirsiniz.
+
+	Ben de özgür yazılım destekçisi birisiyim fakat Stallman'ın politik görüşlerini
+	pek takip etmiyorum. Web sitesindeki [[https://stallman.org/archives/2019-jul-oct.html][şu sayfaya]] baktığımda buna benzer
+	düşünceleri daha önce de dile getirdiğini gördüm. Bu tarz uçlarda dolaşmayı
+	seven birisi olduğu açık fakat bu olayın savunulacak hiçbir yanı yok -sonradan
+	yaptığının yanlış olduğunun farkına varmış olsa bile.
+
+	Ayrıca Richard Stallman'ın Özgür Yazılım Hareketi adına [[https://sfconservancy.org/news/2019/sep/16/rms-does-not-speak-for-us/][konuşma yapması da
+	yasaklandı]]. Açıkcası her ne kadar hareketin kurucusu olsa bile Richard
+	Stallman'ın ilahlaştırılmayıp, savunulmaya çalışılmaması beni sevindirdi. Bu
+	demek oluyor ki, Özgür Yazılım Hareketi Richard Stallman olmadan da devam
+	edebilir.
+
+	*Kaynaklar*:
+	  - [[https://www.bilimma.com/richard-stallman-cocuk-istismarini-savundu/][Richard Stallman çocuk istismarını savundu – Bilimma Bilim Haberleri]]
+    - [[https://www.vice.com/en_us/article/mbm74x/computer-scientist-richard-stallman-resigns-from-mit-over-epstein-comments][Computer Scientist Richard Stallman Resigns From MIT Over Epstein Comments - ...]]
+		- Reddit tartışmaları:
+			- [[https://www.reddit.com/r/programming/comments/d59r46/richard_stallman_resigns_from_mit_over_epstein/][Richard Stallman Resigns From MIT Over Epstein Comments : programming]]
+			- [[https://www.reddit.com/r/programming/comments/d5art6/richard_m_stallman_resigns_free_software/][Richard M. Stallman resigns — Free Software Foundation : programming]]
+* Bir geliştirici ABD Göçmenlik ve Gümrük Muhafaza kurumunu [[https://www.zdnet.com/article/developer-takes-down-ruby-library-after-he-finds-out-ice-was-using-it/][protesto etti]]
+	[[https://github.com/sethvargo][Seth Vargo]] isimli geliştirici, kişisel projelerinin birinin, dolaylı bir yoldan
+	ABD Göçmenlik ve Gümrük Muhafaza kurumuyla yapılan bir iş anlaşmasına dahil
+	olması nedeniyle ilgili projesini her yerden kaldırdı.
+
+	Şu an Google'da mühendis olarak çalışan bu arkadaş, eskiden [[https://www.chef.io/][Chef]] isimli bir
+	şirkette çalışıyormuş ve o zamanlarda [[https://github.com/sethvargo/chef-sugar][Chef Sugar]] isimli kişisel bir proje
+	geliştirip, GitHub hesabında ve RubyGems sitesinde paylaşmış. Daha sonra da
+	ilgili kütüphane, Chef'in bağımlılıkları (dependency) arasına girmiş.
+
+	Bu haftanın başlarında [[https://twitter.com/shanley/status/1173692656192385024][Twitter'da bir kullanıcı]]nın Chef şirketi ile ABD
+	Göçmenlik ve Gümrük Muhafaza kurumunun yaptığı 95.500$'lık anlaşmayı ortaya
+	çıkarınca, kütüphanenin geliştiricisi de kurumu protesto etmek için ilgili
+	kütüphanenin kodlarını GitHub'dan ve RubyGems sitesinden sildi. Bu durumdan
+	etkilenen projeler de olmuş haliyle. Protesto nedeni olarak da "insanlık dışı
+	muamele, temel insan haklarının reddi" vb. gibi konuları göstermiş. İlgili
+	kurum hakkında pek bilgim yok ama söz konusu Amerika olunca geliştiriciye hak
+	veresim geliyor.
+
+	Geliştirici bunu protesto amacıyla yapmış fakat kodları açık kaynak bir lisans
+	ile paylaştığı için haliyle Chef şirketi de eski kodları bulup, tekrar kendi
+	hesaplarına yüklemişler. Yine de ilginç bir protesto yöntemi olarak tarihe not
+	düşmüş oldu.
+* GitHub, Semmle isimli [[https://github.blog/2019-09-18-github-welcomes-semmle/][şirketi satın aldı]]
+	[[https://semmle.com/][Semmle]], bir semantik kod analizi motoru. Yani kodlarınızı analiz edip, olası
+	güvenlik zafiyetlerini ya da daha önce keşfedilmiş güvenlik açıklarını CVE
+	numaraları ile birlikte sunan bir hizmet. Daha çok firmalardaki güvenlik
+	takımındaki geliştiriciler tarafından kullanılan bir servis.
+
+	GitHub da bu şirketi satın alarak bünyesine kattı ve artık GitHub ile daha
+	entegre olacağı hatta direkt GitHub'ın içerisinde bir servis olarak
+	kullanılabileceği [[https://venturebeat.com/2019/09/18/github-acquires-semmle-to-help-developers-spot-code-exploits/][yönünde görüşler var]]. Bakalım önümüzdeki aylarda mutlaka bir
+	kullanım senaryosu olarak karşımıza çıkarır bunu GitHub.
+* Chrome 78 Beta ile [[https://blog.chromium.org/2019/09/chrome-78-beta-new-houdini-api-native.html?m=1][gelen API yenilikleri]]
+	19 Eylül günü yayınlanan bu chrome sürümü ile API sistemine bazı yenilikler
+	gelmiş. Şöyle ki:
+
+** Özel CSS özellikleri ve değişkenler
+		W3C organizasyonunun [[https://drafts.css-houdini.org/][CSS-TAG Houdini]] ekibi tarafından oluşturulmuş bu
+		özellik sayesinde artık CSS tarafında kendimize özel css özellikleri
+		oluşturabileceğiz. Yani bu şekilde:
+    #+ATTR_LATEX: :options frame=lines, linenos, label=JavaScript, labelposition=topline
+		#+BEGIN_SRC javascript
+			window.CSS.registerProperty({
+				name: '--my-color',
+				syntax: '<color>',
+				inherits: false,
+				initialValue: 'black',
+			});
+		#+END_SRC
+		JavaScript tarafında özelliği tanımladıktan sonra, CSS tarafında böyle
+		kullanabileceğiz:
+    #+ATTR_LATEX: :options frame=lines, linenos, label=CSS, labelposition=topline
+		#+BEGIN_SRC css
+			.thing {
+					--my-color: red;
+			}
+		#+END_SRC
+		Front-End tarafına pek yakın birisi olmadığım için kullanım senaryosunu
+		çözemedim ama [[https://web.dev/css-props-and-vals/][buradaki sayfadan]] daha detaylı bilgiler alabilirsiniz.
+** Dosya sistemine erişim
+		Bu özelliğin geleceğini daha önceki yazılım gündemi yazısında (bkz: [[file:../07/yazilim-gundemi-07.org][Yazılım
+		Gündemi - 7]]) söylemiştim. Bu sürümde, Chrome'a eklenen Origin Trials
+		özelliği üzerinden aktifleştirilebilir olmuş. Yani artık buna göre kodlanan
+		siteler sizin seçtiğiniz bir dosyaya doğrudan erişip üzerinde, okuma-yazma
+		işlemleri yapabilecek. İlgili yazıda bu özelliğin kullanım alanı için
+		Google, çevrim içi uygulamalar (resim&video düzenleme, metin editörü vb.) bu
+		özellik sayesinde daha kolay kullanılabilecek demiş. Önceden de bu tarz
+		siteleri kullanabiliyorduk fakat orada site sadece dosyayı okuyabiliyordu.
+		Mesela bir resimde değişiklik yaptığınızda o tarayıcıda kalıyordu, kaydet
+		dediğinizde farklı bir dosya olarak indiriliyordu, artık siteler doğrudan
+		dosyayı değiştirebilecekler. Bana kötüye kullanımı çok mümkün bir özellik
+		gibi geliyor, ben şahsen o şekilde bir izini hiçbir siteye vermem. Siz ne
+		düşünüyorsunuz bu özellik hakkında? Yorumlar kısmında konuşalım.
+
+	API sistemindeki diğer değişiklikler için konu bağlığına eklediğim bağlantıya
+	tıklayabilirsiniz.
+* Safari 13 ile [[https://developer.apple.com/documentation/safari_release_notes/safari_13_release_notes][gelen API yenilikleri]]
+	Bu hafta iOS 13 ile birlikte yayınlanan Safari 13'de yeni API özellikleri
+	mevcut. Bunlardan bazıları şu şekilde:
+	  - Web siteler artık telefonun karanlık moda geçtiğini anlayıp kendilerini de
+      karanlık temaya geçirebilecekler.
+		- "Apple ile Giriş Yap" özelliği web sitelere eklenebilecek
+		- Sayfada yer alan =iframe= ler artık sayfayı değiştiremeyecek.
+		- Koni şeklinde CSS renk geçişleri (gradient) için destek.
+		- JavaScript artık daha az bellik kullanıyor.
+		- =__Secure-= ve =__Host-= çerez ön-ekleri için destek.
+		- Apple Pay için destek
+
+	API sistemindeki diğer değişiklikler için konu bağlığına eklediğim
+	bağlantıya tıklayabilirsiniz.
+* Microsoft programcılar için yeni [[https://devblogs.microsoft.com/commandline/cascadia-code/][yazı stilini duyurdu]]: [[https://github.com/microsoft/cascadia-code][Cascadia Code]]
+	[[file:gorseller/cascadia-code-characters.png]]
+
+	Microsoft, terminal ve programlama araçlarında kullanılmak üzere bu yeni yazı
+	stilini [[https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL][SIL Open Font License]] isimli lisans ile açık kaynak şekilde duyurdu.
+	Ben şu an geliştirilmekte olan Windows Terminal uygulamasının da varsayılan
+	olarak bu yazı stilini kullanacağını tahmin ediyorum. Ben uzun zamandır [[https://input.fontbureau.com/][Input
+	Mono]] kullanıyorum ama belki bir ara bunu da deneyebilirim.
+
+  #+CAPTION: Yazı stilinin Programming Ligarates desteği de var.
+	[[file:gorseller/programming-ligatures.gif]]
+* Etkinlik duyurusu: [[https://www.qt.io/events/ultimate-graphical-performance-on-stm32-microcontrollers-with-qt-for-mcus-1568631867][Ultimate Graphical Performance on STM32 microcontrollers with Qt for MCUs]]
+	Geçtiğimiz haftalarda tanıtılan Mikroişlemciler için Qt kütüphanesinin tanıtım
+	etkinlikleri devam ediyor. 25 Eylül tarihinde de bir Webiner (sanal seminer)
+	düzenlenecekmiş. İlgili arkadaşlar konu başlığına eklediğim bağlantıya
+	tıklayarak kayıt olabilirler.
+
+ [[https://www.qt.io/events/ultimate-graphical-performance-on-stm32-microcontrollers-with-qt-for-mcus-1568631867][Etkinlik sayfası]]
+* Diğer Haberler
+	- Microsoft, kendi C++ Standart Kütüphanesini [[https://devblogs.microsoft.com/cppblog/open-sourcing-msvcs-stl/][açık kaynak yaptı]]: [[https://github.com/microsoft/STL][STL]].
+	- Modern C kitabının ikinci baskısı Creative-Common lisansı ile [[https://gustedt.wordpress.com/2019/09/18/modern-c-second-edition/][çevrim içi
+    olarak yayınlandı]].
+	- KDAB Group, içerisinde çeşitli C++ araçlarının olduğu [[https://www.kdab.com/introducing-kdtoolbox/][depoyu açık kaynak
+    yaptı]]: [[https://github.com/KDAB/KDToolBox][KDToolbox]].
+	- C programlama dilinde asenkron süreçler yönetmeye yarayan [[https://higherlogics.blogspot.com/2019/09/asynch-asynchronous-stackless.html][kütüphane açık
+    kaynak olarak yayınlandı]]: [[https://github.com/naasking/async.h][async.h]]
+	- Go için önbellek kütüphanesi [[https://blog.dgraph.io/post/introducing-ristretto-high-perf-go-cache/][açık kaynak olarak yayınlandı]]: [[https://github.com/dgraph-io/ristretto][ristretto]].
+	- Neo4j, yeni bir sorgu dili duyurdu: [[https://neo4j.com/press-releases/query-language-graph-databases-international-standard/][GQL (Graph Query Language)]]
+	- Eclipse [[https://www.eclipse.org/eclipseide/2019-09/noteworthy/][2019-09 sürümü yayınlandı]].
+		- Eclipse IDE 2019-09'a Java 13 desteği kazandıran araç [[https://marketplace.eclipse.org/content/java-13-support-eclipse-2019-09-413][Eclipse
+      Marketplace'de yerini aldı]].
+	- Kubernetes [[https://kubernetes.io/blog/2019/09/18/kubernetes-1-16-release-announcement/][1.16 sürümü duyuruldu]].
+	- LLVM [[http://lists.llvm.org/pipermail/llvm-dev/2019-September/135304.html][9.0.0 sürümü yayınlandı]].
+	- Memcached [[https://github.com/memcached/memcached/wiki/ReleaseNotes1518][1.5.18 sürümü duyuruldu]].
+	- OpenJDK [[https://openjdk.java.net/projects/jdk/13/][13 sürümü yayınlandı]].
+	- HgLab [[https://hglabhq.com/blog/2019/9/19/hglab-1-14-released][1.14 sürümü yayınlandı]].
+	- YugaByteDB [[https://blog.yugabyte.com/announcing-yugabyte-db-2-0-ga-jepsen-tested-high-performance-distributed-sql/][2.0 GA sürümü yayınlandı]].
+	- NeoVIM [[https://github.com/neovim/neovim/releases/tag/v0.4.0][0.4.0 sürümü yayınlandı]], [[https://github.com/neovim/neovim/commit/e2cc5fe09d98ce1ccaaa666a835c896805ccc196][Değişiklik Notları]].
+	- TextMate [[https://github.com/textmate/textmate/releases/tag/v2.0][v2.0 sürümü yayınlandı]].
+	- Akademik Çalışmalar:
+		- [[https://arxiv.org/abs/1909.07528][Emergent Tool Use From Multi-Agent Autocurricula]], [[https://openai.com/blog/emergent-tool-use/][Alternatif Kaynak]].
+		- [[https://arxiv.org/abs/1909.08723][Espresso: A Fast End-to-end Neural Speech Recognition Toolkit]]
+* Lisans
+  #+BEGIN_CENTER
+  #+ATTR_HTML: :height 75
+  #+ATTR_LATEX: :height 1.5cm
+  [[file:../../../img/CC_BY-NC-SA_4.0.png]]
+
+  [[file:yazilim-gundemi-10.org][Yazılım Gündemi - 10]] yazısı [[https://erenhatirnaz.github.io][Eren Hatırnaz]] tarafından [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Creative Commons
+  Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı]] (CC BY-NC-SA 4.0)
+  ile lisanslanmıştır.
+  #+END_CENTER

@@ -91,22 +91,22 @@
 	 yaşını yazdırmak istiyorsunuz. Eskiden bu şekilde yapıyorduk:
    #+ATTR_LATEX: :options frame=lines, linenos, label=Ruby, labelposition=topline
 	 #+BEGIN_SRC ruby
-		 kisi=JSON.parse(json, symbolize_names: true)
-		 if kisi[:isim] == "Ahmet"
-			 cocuklar = kisi[:cocuklar]
-			 if cocuklar.length == 1 && cocuklar[0][:name] == "Mehmet"
-				 puts cocuklar[0][:yas] # => 5
-			 end
-		 end
+     kisi=JSON.parse(json, symbolize_names: true)
+     if kisi[:isim] == "Ahmet"
+       cocuklar = kisi[:cocuklar]
+       if cocuklar.length == 1 && cocuklar[0][:name] == "Mehmet"
+         puts cocuklar[0][:yas] # => 5
+       end
+     end
 	 #+END_SRC
 	 Daha karmaşık JSON verilerinde bu kod parçasının alacağı hali varın siz
 	 düşünün... ya da yok düşünmenize gerek yok Ruby 2.7 var:
    #+ATTR_LATEX: :options frame=lines, linenos, label=Ruby, labelposition=topline
 	 #+BEGIN_SRC ruby
-		 case JSON.parse(json, symbolize_names: true)
-		 in {isim: "Ahmet", cocuklar: [{isim: "Mehmet", yas: cocuk_yas}]}
-				 puts cocuk_yas # => 5
-		 end
+     case JSON.parse(json, symbolize_names: true)
+     in {isim: "Ahmet", cocuklar: [{isim: "Mehmet", yas: cocuk_yas}]}
+         puts cocuk_yas # => 5
+     end
 	 #+END_SRC
 	 Bu kadar kolay!
 

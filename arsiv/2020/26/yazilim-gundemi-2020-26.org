@@ -14,10 +14,10 @@
 [[file:../25/yazilim-gundemi-2020-25.org][< Önceki Gündem]] | *29 Haziran - 5 Temmuz 2020* |
 #+END_CENTER
 
-**Bu sayfa 2020 yılında yazmakta olduğum son Yazılım Gündemi yazısının taslak
-halidir.** **Bu gündemde değerlendirilecek olan haberler aşağıdaki listedeki
-bağlantılardır.** **Yazılım Gündemlerine ara vermeye karar verdiğim için bu şekilde
-kaldı ama yine de bakmak isteyenler olabilir diye paylaşmak istedim.**
+*Bu sayfa 2020 yılında yazmakta olduğum son Yazılım Gündemi yazısının taslak
+halidir.* *Bu gündemde değerlendirilecek olan haberler aşağıdaki listedeki
+bağlantılardır.* *Yazılım Gündemlerine ara vermeye karar verdiğim için bu
+şekilde kaldı ama yine de bakmak isteyenler olabilir diye paylaşmak istedim.*
 
 * Haberler
 	- [[https://about.gitlab.com/blog/2020/06/29/welcome-kde/][Why the KDE community is #MovingToGitlab | GitLab]]

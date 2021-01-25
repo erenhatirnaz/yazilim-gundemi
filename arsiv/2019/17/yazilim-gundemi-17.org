@@ -259,19 +259,19 @@
 	 Direkt bir örnekle açıklamak gerekirse:
    #+ATTR_LATEX: :options frame=lines, linenos, label=Java, labelposition=topline
 	 #+BEGIN_SRC java
-		 class A {}
+     class A {}
 
-		 class B {
-				 static void foo() {
-						 A a1 = new A();
-				 }
-		 }
+     class B {
+         static void foo() {
+             A a1 = new A();
+         }
+     }
 
-		 class C {
-				 void bar() {
-						 B.foo();
-				 }
-		 }
+     class C {
+         void bar() {
+             B.foo();
+         }
+     }
 	 #+END_SRC
 	 Buradaki her sınıfı ayrı bir dosya olarak düşünün. Gradle'ın önceki
 	 sürümlerinde *A* sınıfında bir değişiklik olduğunda tüm diğer dosyalar da

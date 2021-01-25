@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 22:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi - 15</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi - 15
+<br />
+<span class="subtitle">21-27 Ekim 2019</span>
+</h1>
+<div id="table-of-contents">
+<h2>İçindekiler</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org6c72954">1. Yeni bir önbellek zehirleme açığı ortaya çıktı: CPDoS</a></li>
+<li><a href="#org843902a">2. PHP-FPM'deki hata saldırganların uzaktan kod çalıştırmasına olanak sağlıyor</a></li>
+<li><a href="#org10d5cc1">3. GitLab, hizmetlerine telemetri servisi eklemek istedi fakat vazgeçti</a></li>
+<li><a href="#org4711ca0">4. TypeScript 3.7 RC sürümü duyuruldu</a></li>
+<li><a href="#org5f32821">5. Turkcell'in, Firefox Preview lisansını ihlal ettiği ortaya çıktı</a></li>
+<li><a href="#org33b04ad">6. Firefox 70 ile gelen yeni özellikler</a>
+<ul>
+<li><a href="#orgd476b6b">6.1. [CSS] Altı çizgili yazılar için yeni seçenekler</a></li>
+<li><a href="#org6c589bf">6.2. [JS] Numeric Separators</a></li>
+</ul>
+</li>
+<li><a href="#orga0297df">7. Chrome 80 sürümünde <code>SameSite=None; Secure</code> özelliği gelecek</a></li>
+<li><a href="#org43d735c">8. Yeni bir Qt aracı duyuruldu: Qt Design Viewer</a></li>
+<li><a href="#orgfa9bc2f">9. Yaklaşan Etkinlikler</a></li>
+<li><a href="#org61ef896">10. Diğer Haberler</a></li>
+<li><a href="#orgf26fb05">11. Lisans</a></li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gundemi-banner.png" alt="yazilim-gundemi-banner.png" />
+</p>
+</div>
+
+<div class="org-center">
+<p>
+<a href="../14/yazilim-gundemi-14.html">&lt; Önceki Gündem</a> | <b>21-27 Ekim 2019</b> | <a href="../16/yazilim-gundemi-16.html">Sonraki Gündem &gt;</a>
+</p>
+
+<p>
+<a href="https://teknoseyir.com/blog/yazilim-gundemi-15-21-27-ekim-2019">TeknoSeyir'de Oku</a>
+</p>
+</div>
+
+<div id="outline-container-org6c72954" class="outline-2">
+<h2 id="org6c72954"><span class="section-number-2">1</span> Yeni bir önbellek zehirleme açığı ortaya çıktı: <a href="https://cpdos.org/">CPDoS</a></h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Gün geçmiyor ki yeni bir güvenlik açığı daha ortaya çıkmasın. Alman siber
+güvenlik araştırmacıları, bu hafta yayınladıkları "<a href="https://cpdos.org/paper/Your_Cache_Has_Fallen__Cache_Poisoned_Denial_of_Service_Attack__Preprint_.pdf">Your Cache Has Fallen:
+Cache-Poisoned Denial-of-Service Attack</a>" başlıklı makaleleriyle yeni bir açığı
+ortaya çıkardı. Üstelik bu açıktan sektörde sıkça kullanılan Amazon CloudFront,
+Cloudflare, Akamai gibi CDN (Content Delivery Network) hizmetlerini de
+etkiliyor.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/CPDoS.png" alt="CPDoS.png" />
+</p>
+<p><span class="figure-number">Şekil 2: </span>CPDoS Açığı</p>
+</div>
+
+<p>
+Görselden yola çıkarak açığı açıklamak gerekirse:
+</p>
+<ol class="org-ol">
+<li>Saldırgan sitenin kabul etmediği bir HTTP Header bilgisiyle GET isteği
+yapıyor. (Örn: <code>X-Zararli-Baslik: Deneme</code>)</li>
+<li>Önbellek sunucusu böyle bir isteği daha önce hafızasında tutmadığı için
+isteği gerçek sunucuya gönderiyor.</li>
+<li>Gerçek sunucu da böyle bir HTTP Header bilgisini kabul etmediği için
+önbellek sunucusuna hata mesajı gönderiyor.</li>
+<li>Önbellek sunucusu, gerçek sunucudan aldığı sayfayı aynen saldırgana
+gönderiyor.</li>
+<li>Normal kullanıcı siteye normal bir GET isteği gönderiyor.</li>
+<li>Önbellek sunucusu kullanıcıya yine hafızasındaki hata sayfasını
+gönderiyor.</li>
+</ol>
+
+<p>
+Aslında bu açığın 3 tane de alt türü mevcut. Bunlar da şu şekilde:
+</p>
+<ul class="org-ul">
+<li><b>HTTP Header Oversize (HHO):</b> HTTP isteğinin boyutunu aşırı yükselterek
+siteyi hata vermeye zorlama.</li>
+<li><b>HTTP Meta Character (HMC):</b> HTTP isteğine zararlı karakter (<code>\n</code>,
+<code>\r</code>, <code>\a</code> gibi) ekleyerek siteyi hata vermeye zorlama.</li>
+<li><b>HTTP Method Override (HMO):</b> Sitenin kabul etmediği HTTP methodları
+(DELETE gibi) göndererek siteyi hata vermeye zorlama.</li>
+</ul>
+
+<p>
+Açığın nasıl kullanıldığını gösteren bir videoyu <a href="https://www.youtube.com/watch?v=c4-1UaEEwI8">bu adresten</a> izleyebilirsiniz.
+Açıktan etkilenen web sunucu ve CDN hizmetlerinin listesi ise bu şekilde:
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/cpdos-etkileri.png" alt="cpdos-etkileri.png" />
+</p>
+<p><span class="figure-number">Şekil 3: </span>Yukarıdaki açık türlerinin kısaltmaları bu tablodaki bir hücrede varsa o sistemde açık var demektir</p>
+</div>
+
+<p>
+Yalnız tabii ki de etik kurallar gereği bulunan açık önce etkilenebilecek
+firmalarla paylaşıldığı için çoğu web sunucusu ve CDN hizmeti sağlayan firmalar
+açıkları gidermiş durumda. Yani korkacak bir şey yok gibi gözüküyor.
+</p>
+
+<p>
+Daha detaylı bilgi için konu başlığına eklediğim bağlantıdaki sayfayı ziyaret
+edebilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-org843902a" class="outline-2">
+<h2 id="org843902a"><span class="section-number-2">2</span> PHP-FPM'deki hata saldırganların uzaktan <a href="https://thehackernews.com/2019/10/nginx-php-fpm-hacking.html">kod çalıştırmasına olanak sağlıyor</a></h2>
+<div class="outline-text-2" id="text-2">
+<p>
+<a href="https://php-fpm.org/">PHP-FPM (FastCGI Process Manager)</a>, normal PHP'deki FastCGI implementasyonuna
+alternatif daha gelişmiş ve yüksel verimlilik sunan bir işleyici. Fakat bu
+projedeki bir bellek hatası, diğer birkaç sorunla daha birleşince
+saldırganların sunucuda zararlı kod çalıştırabileceği bir güvenlik zafiyeti
+haline geliyor. Her ne kadar bu açığı meydana getiren koşulların bir araya
+gelmesi zor gözükse de güvenlik açığı sonuçta, ihmal etmeye gelmez.
+</p>
+
+<p>
+Wallarm isimli şirkette güvenlik araştırmacısı olarak çalışan Andrew Danau
+tarafından <a href="https://lab.wallarm.com/php-remote-code-execution-0-day-discovered-in-real-world-ctf-exercise/">ortaya çıkarılan</a> bu açığı exploit edenler ise Omar Ganiev ve Emil
+Lerner.
+</p>
+
+<p>
+Güvenlik zafiyetinin oluşabilmesi için gerekli koşullar ise şu şekilde:
+</p>
+<ul class="org-ul">
+<li>NGINX web sunucusunun PHP-FPM ile çalışması için ayarlanmış olması,</li>
+<li><code>fastcgi_split_path_info</code> direktifinde <b>^</b> ile başlayan ve <b>$</b> ile biten
+bir regex ifadesinin tanımlı olması</li>
+<li><code>PATH_INFO</code> değişkeninin <code>fastcgi_param</code> direktifi ile tanımlanması,</li>
+<li>ve istenen dosyanın olup olmadığını kontrol eden herhangi bir ayarın
+olmaması,</li>
+</ul>
+<p>
+NGINX'de şöyle ayarlar varsa:
+</p>
+<div class="org-src-container">
+<pre class="src src-nginx"><span class="org-keyword">location</span> ~ <span class="org-function-name">[^/]\.php(/|$)</span> {
+  <span class="org-comment-delimiter"># </span><span class="org-comment">...</span>
+  <span class="org-keyword">fastcgi_split_path_info</span> ^(.+?\.php)(/.*)$;
+  <span class="org-keyword">fastcgi_param</span> PATH_INFO       <span class="org-variable-name">$fastcgi_path_info</span>;
+  <span class="org-keyword">fastcgi_pass</span>   php:9000;
+  <span class="org-comment-delimiter"># </span><span class="org-comment">...</span>
+}
+</pre>
+</div>
+<p>
+güvenlik zafiyeti de oluşmuş oluyor. Saldırgan da regex ifadesini bir şekilde
+maniple ederek bu bellek hatasını tetikliyor ve URL üzerinden istediği
+komutları çalıştırabilir hale geliyor.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/php-fpm-acik.png" alt="php-fpm-acik.png" />
+</p>
+<p><span class="figure-number">Şekil 4: </span>Görselde kullanılan exploit <a href="https://github.com/neex/phuip-fpizdam">bu adreste</a> yayınlanmış</p>
+</div>
+
+<p>
+PHP 7.3.11 ve PHP 7.2.24 sürümlerinde bu açıklar giderilmiş. Siz de
+sunucularınızdaki NGINX ayarlarınızı kontrol edin ve ilgili PHP
+güncellemelerini yapmayı ihmal etmeyin.
+</p>
+</div>
+</div>
+<div id="outline-container-org10d5cc1" class="outline-2">
+<h2 id="org10d5cc1"><span class="section-number-2">3</span> GitLab, hizmetlerine telemetri servisi eklemek istedi fakat vazgeçti</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+GitLab geçtiğimiz haftalarda yayınladığı bir <a href="https://about.gitlab.com/blog/2019/10/10/update-free-software-and-telemetry/">blog yazısıyla</a> kullanıcılara daha
+iyi hizmet verebilmek için GitLab.com ve ilgili servislerine telemetri (sayfayı
+ziyaret eden kullanıcıların davranışlarıyla ilgili raporlar hazırlayan
+servislere verilen isim) ekleyeceğini duyurmuştu. GitLab'ın bu girişimi, her ne
+kadar, "Eğer tarayıcınızın Do Not Track (DNT- Beni takip etme) ayarını
+kullanıyorsanız buna saygı göstereceğiz" ve "GitLab Community Edition'da böyle
+bir şey olmayacak" deseler bile geliştirici toplulukları tarafından hiç hoş
+karşılanmadı ve <a href="https://news.ycombinator.com/item?id=21343761">HackerNews</a> ve <a href="https://www.reddit.com/r/programming/comments/dm72oa/gitlab_mandating_thirdparty_telemetry_locks_out">Reddit</a> gibi platformlarda tartışmalara yol açtı.
+Bunun üzerine GitLab'da ilgili blog yazısına bir güncelleme notu ekleyerek, bu
+değişikliklerden vazgeçtiklerini ve üzerine <a href="https://gitlab.com/gitlab-com/www-gitlab-com/issues/5672">biraz daha çalışacaklarını</a>
+duyurdular.
+</p>
+
+<p>
+Bu konu hakkında siz ne düşünüyorsunuz? Hem bir geliştirici olarak hem de bir
+kullanıcı olarak telemetri servisleriyle ilgili genel görüşünüz nedir? Yorumlar
+kısmında konuşalım.
+</p>
+</div>
+</div>
+<div id="outline-container-org4711ca0" class="outline-2">
+<h2 id="org4711ca0"><span class="section-number-2">4</span> TypeScript <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-3-7-rc/">3.7 RC sürümü duyuruldu</a></h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Microsoft tarafından geliştirilen tip destekli JavaScript yazmayı sağlayan
+TypeScript dilinin bu hafta 3.7 RC sürümü duyuruldu. Daha <a href="https://github.com/microsoft/TypeScript/issues/33352">önce yayınlanan
+planda dokümanı</a>nda da belirtilen tarihten 2 gün sonra gerçekleşmiş olsa da her
+şey yolunda gözüküyor. TypeScript 3.7 ile gelecek iki özelliğe daha önceki
+gündem yazılarında değinmiştik (bkz: <a href="../09/yazilim-gundemi-09.html">Yazılım Gündemi - 9</a>). O yazıdaki
+özellikler haricinde yeni eklenen bir özelliğe daha göz atalım demek isterdim
+fakat ilgili blog yazısındaki "<i>Assertion Functions</i>" bölümünü okumama rağmen
+tam olarak anlayamadım, sanırım bunda uzun zamandır JavaScript yazmıyor
+olmamın da payı var.
+</p>
+
+<p>
+Daha detaylı bilgi ve eklenen özelliklerle ilgili konu başlığına eklediğim
+bağlantıya tıklayabilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-org5f32821" class="outline-2">
+<h2 id="org5f32821"><span class="section-number-2">5</span> Turkcell'in, Firefox Preview lisansını <a href="https://twitter.com/FirefoxPreview/status/1187461728709173254?s=20">ihlal ettiği ortaya çıktı</a></h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Turkcell'in geliştirdiği "yerli arama motoru" Yaani'nin, mobil cihazlar için
+geliştirdiği tarayıcısı, Firefox Preview'den forklanarak oluşturulmuş bir
+tarayıcı. Bunda bir sıkıntı yok. Firefox zaten açık kaynak kodlu ve özgür
+lisanslı bir uygulama, nitekim Tor Browser da Firefox'dan forklanmış. Fakat
+sorun Turkcell, Firefox Preview'in lisansı olan <a href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public License 2.0</a>'ı
+ihlal etmesi. Yaani tarayıcısı açılırken bir kullanım sözleşmesi gösteriyor ve
+burada da MPL 2.0 lisansı listelenmiş fakat bu lisansın bir şartı olan kodların
+aynı lisans ile paylaşılması maddesi ihlal edilmiş (Madde 3.2). Turkcell, Yaani
+mobil uygulamasının kodlarını henüz hiçbir yerde paylaşmış değil. Konu Türkiye
+basınında hiç yer almadı, dolayısıyla Turkcell konuyla ilgili bir cevap da
+yayınlamış değil.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/turkcell-mpl-ihlal.png" alt="turkcell-mpl-ihlal.png" height="400" />
+</p>
+<p><span class="figure-number">Şekil 5: </span>Turkcell Yaani uygulamasının kullanım sözleşmesinde MPL 2.0 lisansı listelenmiş.</p>
+</div>
+
+<p>
+Konuyla ilgili siz ne düşünüyorsunuz diyeceğim ama pek şaşırdığınızı
+düşünmüyorum bu habere. Ben de şaşırmadım. Daha açık kaynak kullandığımız
+kodların lisanslarına bile saygı duymuyorken, Türkiye'den bir Google çıkmasını
+beklemek saçma olur diye düşünüyorum.
+</p>
+</div>
+</div>
+<div id="outline-container-org33b04ad" class="outline-2">
+<h2 id="org33b04ad"><span class="section-number-2">6</span> Firefox 70 ile gelen <a href="https://hacks.mozilla.org/2019/10/firefox-70-a-bountiful-release-for-all/">yeni özellikler</a></h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Bu hafta Firefox tarayıcısının 70 numaralı sürümü yayınlandı. Normal
+kullanıcıları ilgilendiren özelliklerin bir kısmını <a href="https://teknoseyir.com/durum/1162388">şuradaki paylaşımım</a>da
+özetlemiştim. Şimdi de biz geliştiricileri ilgilendiren birkaç değişikliğe
+bakalım:
+</p>
+</div>
+
+<div id="outline-container-orgd476b6b" class="outline-3">
+<h3 id="orgd476b6b"><span class="section-number-3">6.1</span> [CSS] Altı çizgili yazılar için yeni seçenekler</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+Artık altı çizgili yazılarımızı daha da özelleştirebileceğiz. Şöyle ki:
+</p>
+<ul class="org-ul">
+<li><b><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-thickness">text-decoration-thickness</a></b> ile alt çizginin boyutunu değiştirebiliyoruz,</li>
+<li><b><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-underline-offset">text-underline-offset</a></b> ile alt çizginin konumunu değiştirebiliyoruz,</li>
+<li><b><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-skip-ink">text-decoration-skip-ink</a></b> ile de alt çizginin, harflerin kuyruklarından
+geçerken çizilmemesini sağlayabilirsiniz. Bu özellik artık varsayılan
+olarak <code>auto</code> olacak.</li>
+</ul>
+<p>
+Böyle kuru kuru olmadı gelin bir örnek yapalım:
+</p>
+<div class="org-src-container">
+<pre class="src src-html">&lt;<span class="org-function-name">style</span>&gt;
+  h1 {
+  text-decoration: underline red;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+  }
+&lt;/<span class="org-function-name">style</span>&gt;
+
+&lt;<span class="org-function-name">h1</span>&gt;selam teknoseyir &lt;<span class="org-function-name">br</span>/&gt; bu firefox'un yeni css &#246;zelli&#287;i&lt;/<span class="org-function-name">h1</span>&gt;
+</pre>
+</div>
+
+<p>
+ve işte sonuç:
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/firefox-yeni-css.png" alt="firefox-yeni-css.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org6c589bf" class="outline-3">
+<h3 id="org6c589bf"><span class="section-number-3">6.2</span> [JS] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Numeric_separators">Numeric Separators</a></h3>
+<div class="outline-text-3" id="text-6-2">
+<p>
+Türkçe'ye sanırım numara ayırıcılar olarak çevirebiliriz bu özelliği. Bu yeni
+özellik sayesinde artık JavaScript'de sayı değişkeni tanımlarken daha kolay
+okuyabilmek için bu şekilde sayıların basamaklarını ayırabileceğiz:
+</p>
+<div class="org-src-container">
+<pre class="src src-javascript"><span class="org-keyword">let</span> <span class="org-variable-name">sayi1</span>=1_000_000;
+console.log(sayi1); <span class="org-comment-delimiter">// </span><span class="org-comment">&#231;&#305;kt&#305;: 1000000</span>
+</pre>
+</div>
+<p>
+Öyle çok olmazsa olmaz bir özellik değil ama yine de faydalı.
+</p>
+
+<p>
+İncelediğim iki özelliğin de diğer tarayıcılardaki desteklenme durumlarını
+kontrol etmek için eklediğim bağlantılardaki "<i>Browser compatibility</i>"
+bölümüne göz atabilirsiniz. Ayrıca diğer eklenen özellikler için de konu
+başlığına eklediğim bağlantıya tıklayabilirsiniz.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orga0297df" class="outline-2">
+<h2 id="orga0297df"><span class="section-number-2">7</span> Chrome 80 sürümünde <code>SameSite=None; Secure</code> <a href="https://blog.chromium.org/2019/10/developers-get-ready-for-new.html?m=1">özelliği gelecek</a></h2>
+<div class="outline-text-2" id="text-7">
+<p>
+Çerezler (cookies) hem güvenliklerinin sağlanması açısından hem de
+yönetimlerinin zor olması açısından geliştiricileri uğraştırmalarıyla ünlü
+yapılardır. Özellikle de <a href="https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html">Cross-Site Request Forgery (CSRF)</a> olarak bilinen
+güvenlik zafiyeti, bir dönem her geliştiricinin korkulu rüyasıydı. Neyse ki
+tarayıcılardaki cookie özelliklerinin gelişmesiyle ve geliştiricilerin de
+bilinçlenmesiyle o günler geride kaldı.
+</p>
+
+<p>
+Chromium takımı bu hafta yayınladıkları blog yazısı ile biz geliştiricileri
+<code>SameSite=None; Secure</code> özelliğine hazır olmaya çağırıyor fakat bu özelliğin
+neleri değiştirdiğinizi anlamak için önce Cross-Site ve Same-Site kavramlarına
+bakmamız gerek.
+</p>
+
+<p>
+Her cookie bir domain ile ilişkilendirilmiştir. Eğer bu domain ile tarayıcının
+adres çubuğundaki domain farklı ise bu Cross-Site Cookie; aynı ise Same-Site
+Cookie ismini alıyor. Cross-Site Cookie'ler ziyaret ettiğimiz bir çok web
+sitesinin üçüncü parti olarak sitesine eklediği hizmetlerden (reklam,
+istatistik vb.) gelebilir. Same-Site cookie'ler ise genellikle kullanıcıları
+siteye giriş yapılmış tutmak (beni hatırla seçeneği) için kullanılır. Doğal
+olarak bu Same-Site cookie'lere dışarıdan erişilmesini istemiyoruz. Bu noktada
+kullanabileceğimiz iki ayar (<code>SameSite=Lax</code> ve <code>SameSite=Strict</code>) hali hazırda
+zaten mevcut fakat artık Chrome aksi belirtilmediği sürece tüm cookie'leri
+dışarıdan erişilmesi istenmeyen, yani Same-Site olarak değerlendirecek. Aksini
+belirtmek için, yani cookie'yi Cross-Site yapmak için de <code>SameSite=None;
+	Secure</code> özelliğini kullanmamız gerekecek ve Cross-Site cookie kullanacak
+sitelerin de artık HTTPS olmaları zorunlu olacak. Bu elbette cross-site
+güvenlik tehditlerini tamamen ortadan kaldırmayacak ama ağ üzerinden yapılacak
+manipülasyonların büyük oranda önüne geçmiş olacak.
+</p>
+
+<p>
+2020 Şubat ayında yayınlanması planan Chrome 80 sürümüyle hayatımıza girecek
+olan bu değişikliğe hazır olmak için yapılması gerekenleri şu şekilde sıralamış
+Google:
+</p>
+<ul class="org-ul">
+<li>Bazı dillerde ya da kütüphaneler henüz <code>None</code> değerini desteklemiyor
+olabilir. Böyle bir durumda cookie header bilgisine kendiniz eklemeniz
+gerekecek. Bazı dil ve kütüphanelerde bunun nasıl yapılacağını anlatan
+şöyle bir depo hazırlamış Google:
+<a href="https://github.com/GoogleChromeLabs/samesite-examples">https://github.com/GoogleChromeLabs/samesite-examples</a></li>
+<li>Bazı tarayıcılar ya da tarayıcıların eski versiyonları <code>None</code> değerini
+desteklemiyor olabilir. Uyumsuz istemciler listesine buradan
+bakabilirsiniz:
+<a href="https://www.chromium.org/updates/same-site/incompatible-clients">https://www.chromium.org/updates/same-site/incompatible-clients</a></li>
+<li>Diğerleri için konu başlığına eklediğim bağlantıdaki blog yazısının "<i>How
+to Prepare; Known Complexities</i>" bölümüne bakabilirsiniz.</li>
+</ul>
+
+<p>
+Ayrıca bu davranışı test etmek için Chrome 76 ve yukarısındaki sürümler için
+<i>chrome://flags</i> adresinden "<i>SameSite by default cookies</i>" ve "<i>Cookies
+without SameSite must be secure</i>" ayarlarını açabilirsiniz.
+</p>
+
+<p>
+Same-Site Cookie'lerle ilgili daha detaylı bilgi için <a href="https://web.dev/samesite-cookies-explained/">bu adresi</a> ziyaret
+edebilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-org43d735c" class="outline-2">
+<h2 id="org43d735c"><span class="section-number-2">8</span> Yeni bir Qt aracı duyuruldu: <a href="https://www.qt.io/blog/web-based-qt-design-viewer">Qt Design Viewer</a></h2>
+<div class="outline-text-2" id="text-8">
+<p>
+<a href="https://doc.qt.io/qt-5/wasm.html">Qt for WebAssembly</a> üzerinde geliştirilen bu araç sayesinde artık QML
+uygulamaları tarayıcı üzerinde çalıştırılabilecek. Eğer tarayıcınızda
+WebAssembly desteği varsa <a href="http://qt-webassembly.io/designviewer/">buraya</a> tıklayarak ilgili aracı kullanabilirsiniz.
+Benim gibi Qt sistemine uzak birisiyseniz de Examples kısmındaki hazır
+dosyalardan birisi seçerek aracı inceleyebilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-orgfa9bc2f" class="outline-2">
+<h2 id="orgfa9bc2f"><span class="section-number-2">9</span> Yaklaşan Etkinlikler</h2>
+<div class="outline-text-2" id="text-9">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" width="100%">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Etkinlik İsmi</th>
+<th scope="col" class="org-left">Yeri</th>
+<th scope="col" class="org-left">Tarihi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><a href="https://kommunity.com/jsantalya/events/hacktoberfest-jsantalya">Hacktoberfest - JSAntalya</a></td>
+<td class="org-left">Antalya</td>
+<td class="org-left">28 Ekim 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/devopsu-kesfedelim-tickets-77855011435">DevOps'u Keşfedelim</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">31 Ekim 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/frontend-istanbul/events/secure-front-end-development">Secure Front-end Development</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">31 Ekim 19:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/fsankara/events/hello-world-cyberpark">Hello World (Full Stack Ankara)</a></td>
+<td class="org-left">Ankara</td>
+<td class="org-left">1 Kasım 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/ruby-turkiye/events/ruby-turkiye-bulusmasi-6">Ruby Türkiye Buluşması - 6</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">2 Kasım 13:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/manavgat-developers-group-mdg/events/developers-meeting-coffeetalk">Developers Meeting Coffee&amp;Talk</a></td>
+<td class="org-left">Antalya</td>
+<td class="org-left">2 Kasım 15:00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org61ef896" class="outline-2">
+<h2 id="org61ef896"><span class="section-number-2">10</span> Diğer Haberler</h2>
+<div class="outline-text-2" id="text-10">
+<ul class="org-ul">
+<li>Windows Terminal <a href="https://devblogs.microsoft.com/commandline/windows-terminal-preview-1910-release/">Preview 1910 duyuruldu</a>.</li>
+<li>Microsoft, PowerShell 7 <a href="https://devblogs.microsoft.com/powershell/powershell-7-preview-5/">Preview 5 sürümü duyurudu</a>.</li>
+<li>Netflix'den açık kaynaklı Jupyter Notebook alternatifi: <a href="https://medium.com/netflix-techblog/open-sourcing-polynote-an-ide-inspired-polyglot-notebook-7f929d3f447">Polynote</a>. <a href="https://github.com/polynote/polynote">GitHub
+Deposu</a>.</li>
+<li>Netflix, <a href="https://netflix.github.io/mantis/">Mantis</a> isimli gerçek-zamanlı akış işleme uygulamaları
+için geliştirdiği platformu <a href="https://medium.com/netflix-techblog/open-sourcing-mantis-a-platform-for-building-cost-effective-realtime-operations-focused-5b8ff387813a">açık kaynak yaptı</a>. <a href="https://github.com/netflix/mantis/">GitHub Deposu</a>.</li>
+<li><a href="https://education.github.com/classroom-report/2019">GitHub Education Classroom Raporu</a> yayınlandı.</li>
+<li>Google'dan, araştırmalar için Haskell ailesine yeni bir dil: <a href="https://github.com/google-research/dex-lang">Dex</a>.</li>
+<li>Unity, mimarlar için yeni bir açık kaynak <a href="https://archpaper.com/2019/10/unity-reflect-open-source-tool/">araç geliştiriyormuş</a>.</li>
+<li>Electron <a href="https://electronjs.org/blog/electron-7-0">7.0.0 duyuruldu</a>.</li>
+<li>NodeJS <a href="https://github.com/nodejs/node/releases/tag/v13.0.0">13.0.0</a> ve <a href="https://github.com/nodejs/node/releases/tag/v13.0.1">13.0.1</a> yayınlandı.</li>
+<li>Ruby programlama dilinin <a href="https://www.ruby-lang.org/en/news/2019/10/22/ruby-2-7-0-preview2-released/">2.7.0-preview2 sürümü yayınlandı</a>.</li>
+<li>Elm programlama dilinin <a href="https://elm-lang.org/news/the-syntax-cliff">0.19.1 sürümü yayınlandı</a>, <a href="https://github.com/elm/compiler/blob/master/docs/upgrade-instructions/0.19.1.md">yükseltme rehberi</a>.</li>
+<li>Firefox Preview sürümüne <a href="https://blog.mozilla.org/addons/2019/10/23/fx-preview-geckoview-add-ons-support/">GeckoView desteği eklendi</a>.</li>
+<li>Emscripten, güncel LLVM sürümüne geçtiğini <a href="https://groups.google.com/forum/#!msg/emscripten-discuss/NpxVAOirSl4/cNDszSPkAAAJ">duyurdu</a>. <a href="https://github.com/emscripten-core/emsdk/pull/373">Pull Request</a></li>
+<li>Material Components Android kütüphanesinin <a href="https://github.com/material-components/material-components-android/releases/tag/1.2.0-alpha01">1.2.0-alpha01 sürümü yayınlandı</a>.</li>
+<li>Qt 3D kütüphanesinin <a href="https://www.kdab.com/qt-3d-synchronisation-revisited/">5.14 sürümü yayınlandı</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf26fb05" class="outline-2">
+<h2 id="orgf26fb05"><span class="section-number-2">11</span> Lisans</h2>
+<div class="outline-text-2" id="text-11">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="../../../img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+<a href="yazilim-gundemi-15.html">Yazılım Gündemi - 15</a> yazısı <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a> (CC BY-NC-SA 4.0)
+ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 27 Ekim 2019</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 22:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

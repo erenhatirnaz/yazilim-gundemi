@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 22:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi - 22</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi - 22
+<br />
+<span class="subtitle">16-22 Aralık 2019</span>
+</h1>
+<div id="table-of-contents">
+<h2>İçindekiler</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgd12f0eb">1. .NET 5 için yol haritası açıklandı</a></li>
+<li><a href="#orgfaf7aac">2. Ruby 3.0 ile argüman işleme sistemi değişecek</a></li>
+<li><a href="#org2e228e6">3. Eclipse 2019-12 duyuruldu</a></li>
+<li><a href="#org1d46e43">4. Jetbrains, IntelliJ Platformu için 2020 yol haritasını açıkladı</a></li>
+<li><a href="#org7ee15ec">5. Scala 3 için yol haritası açıklandı</a></li>
+<li><a href="#org21faeeb">6. Yaklaşan Etkinlikler</a></li>
+<li><a href="#org1072d17">7. Diğer Haberler</a></li>
+<li><a href="#orga9fbed6">8. Lisans</a></li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gundemi-banner.png" alt="yazilim-gundemi-banner.png" />
+</p>
+</div>
+
+<div class="org-center">
+<p>
+<a href="../21/yazilim-gundemi-21.html">&lt; Önceki Gündem</a> | <b>16-22 Aralık 2019</b> | <a href="../23/yazilim-gundemi-23.html">Sonraki Gündem &gt;</a>
+</p>
+
+<p>
+<a href="https://teknoseyir.com/blog/yazilim-gundemi-22-16-22-aralik-2019">TeknoSeyir'de Oku</a>
+</p>
+</div>
+
+<div id="outline-container-orgd12f0eb" class="outline-2">
+<h2 id="orgd12f0eb"><span class="section-number-2">1</span> <a href="https://visualstudiomagazine.com/articles/2019/12/17/net-5-next.aspx">.NET 5 için yol haritası</a> açıklandı</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+.NET Framework çoğumuzun da bildiği gibi Microsoft'un çok uzun zamandır
+geliştirmekte olduğu, tüm ekosistemini üzerine kurduğu bir uygulama çatısıydı.
+.NET Core ise son 3-4 yıldır geliştirilmekte olan açık kaynak,
+platformlar-arası (cross-platform) çalışabilen ve modern bir yapıya sahip
+uygulama çatısı. Yazılım dünyasında değişen trendlerle birlikte ortama ayak
+uyduran Microsoft, özellikle CEO olarak Satya Nadella'nın gelmesinden sonra
+açık kaynak camiasına ve kendisinden pek beklenmeyecek hamleler de yaptı. İşte
+.NET Core'da bu yeni anlayışın bir ürünü. Visual Studio Magazine dergisinin
+internet sitesinde bu hafta yayınlanan bir yazıyla birlikte daha önce <a href="https://news.microsoft.com/build2019/">Build
+2019</a> etkinliğinde duyurulan .NET 5 yol haritası da özetlenmiş oldu. O etkinlik
+yazılım gündemi yazıları yazmaya başlamadan önceki bir tarihe denk geldiği için
+bu yazıyı fırsat bilerek gündeme almak istedim.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/dotnet5_platform.png" alt="dotnet5_platform.png" />
+</p>
+</div>
+
+<p>
+Bildiğiniz tüm .NET'leri unutun! Bundan sonra tek bir .NET olacak, o da: .NET 5
+(Biraz reklam metini gibi oldu ama :)). Microsoft'un tüm uygulama geliştirme
+çözümleri (.NET Framework, .NET Core ve Xamarin/Mono) tek bir isim altında
+birleşiyor ama bu sefer ne "Framework" ne de "Core" gibi ek kelimeler olacak;
+sadece ".NET 5". 2020'nin ilk yarısı Preview sürümünün yayınlanması bekleniyor.
+</p>
+
+<p>
+Önceki yazılım gündemlerinden birinde (bkz: <a href="../14/yazilim-gundemi-14.html">Yazılım Gündemi - 14</a>),
+Microsoft'un, .NET Framework API'lerinin .NET Core projesine aktarılmasının
+tamamlandığını duyurmuştu. O haberden Microsoft'un yöneliminin .NET Core
+üzerinden devam etmek üzerine olduğunu anlamıştık zaten ve işte bugün de
+kendimizi doğrulamış oluyoruz. .NET, eski kapalı-kaynak, sahipli, sadece
+Windows'da çalışan kabuğundan sıyrılıyor ve yeni açık kaynak modern kimliğine
+kavuşuyor.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/dotnet_schedule.png" alt="dotnet_schedule.png" />
+</p>
+</div>
+
+<p>
+.NET 5 sürümünün herkes tarafından erişilebilir (General Available) ilk sürümü
+Kasım 2020 tarihinde duyurulması planlanıyor. Planlanan takvime göre uzun-dönem
+desteklenecek (LTS - Long-term support) sürümler sadece tek sayılı yılların
+Kasım ayında yayınlanacak ve 3 yıl boyunca desteklenmeye devam edecek. .NET 5
+sürümünün geliştirilmesini takip etmek isterseniz <a href="https://github.com/dotnet/corefx/milestone/44">bu GitHub sayfasını</a> ziyaret
+edebilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-orgfaf7aac" class="outline-2">
+<h2 id="orgfaf7aac"><span class="section-number-2">2</span> Ruby 3.0 ile argüman işleme sistemi <a href="https://www.ruby-lang.org/en/news/2019/12/12/separation-of-positional-and-keyword-arguments-in-ruby-3-0/">değişecek</a></h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Bu haber aslında geçtiğimiz haftanın konusu ama geçtiğimiz hafta gündemi biraz
+geç yayınlamak durumunda olduğum için bu haberi bu haftaya ertelemiştim. Bir
+programlama dili ile ilgili önemli sayılabilecek bir değişiklik olduğu için
+haberi atlamak da istemedim. Ruby programlama dilinin 3.0 numaralı sürümünde
+bizi geriye uyumluluğu olmayan bir takım temel değişiklikler bekliyor.
+</p>
+
+<p>
+Başka birkaç programlama dilinde de olduğu gibi Ruby dilinde de pozisyonel
+(positional) ve anahtar kelime (keyword) argümanları mevcut. Örnek üzerinden
+anlatmak gerekirse:
+</p>
+<div class="org-src-container">
+<pre class="src src-ruby"><span class="org-keyword">def</span> <span class="org-function-name">foo</span>(<span class="org-constant">k:</span> 14)
+  <span class="org-builtin">puts</span> k
+<span class="org-keyword">end</span>
+
+h = { <span class="org-constant">k:</span> 24 }
+
+foo(h)
+</pre>
+</div>
+<p>
+Bu kod parçasındaki <code>foo</code> fonksiyonunda argüman keyword şeklinde tanımlanmış.
+Yani argümanın bir ismi var ve o argümana bir değer verilmediği zaman
+alabileceği bir varsayılan değeri var. Sonrasında ise <code>h</code> isimli <i>Hash</i>
+tipinde bir değişken tanımladık ve onu <code>foo</code> fonksiyonuna positional argüman
+olarak gönderdik. Bu durumda Ruby 2.7, positional olarak gönderilen argümanı
+alıp keywork şeklinde gönderiyor fonksiyona yani sorunsuz çalışıyor ama artık
+Ruby 2.7 bu kod parçası için <b>Warning</b> göstermeye başlayacak çünkü bu otomatik
+dönüştürme işlemi artık deprecate oldu ve Ruby 3.0'da bu kod parçası
+çalışmayacak, <b>ArgumentError</b> hatası verecek.
+</p>
+<div class="org-src-container">
+<pre class="src src-ruby"><span class="org-keyword">def</span> <span class="org-function-name">bar</span>(h, **kwargs)
+  <span class="org-builtin">puts</span> h
+<span class="org-keyword">end</span>
+
+bar(<span class="org-constant">k:</span> 42)
+</pre>
+</div>
+<p>
+Bu kod parçasındaki <code>bar</code> fonksiyonu ise argümanlar bir positional ve bir
+keyword şeklinde tanımlanmış. Sonrasında ise <code>bar</code> fonksiyonuna keyword
+şeklinde bir argüman göndermişiz. Bu kod parçası da Ruby 2.7'de, keyword'den
+<i>Hash</i> positional'a dönüştürülerek çalışıyor, tabii ki yine <b>Warning</b>
+göstererek. Aynı şekilde bu kod parçası da Ruby 3.0'da çalışmayacak ve
+<b>ArgumentError</b> hatası verecek.
+</p>
+
+<p>
+"Peki bu tarz bir kullanım senaryosuna ihtiyaç duyduğumuzda ne yapacağız?"
+dediğinizi duyar gibiyim. Ruby geliştiricileri bu durumlarda kullanmak için şu
+özellikleri eklediler:
+</p>
+<div class="org-src-container">
+<pre class="src src-ruby">foo(**h)
+
+bar({ <span class="org-constant">k:</span> 42 })
+</pre>
+</div>
+<p>
+Bu şekilde kullandığınızda yine eskisi gibi kodlarınız çalışmaya devam edecek.
+Dediğim gibi her ne kadar birden bire desteği kesilmeyecek olsa bile bu
+değişikliğe uygun olarak kodlarınızı düzenlemeniz gerekecektir. Aklınızda
+bulunsun. Bu değişikliğin sebebi olarak ise keyword ve positional formattaki
+argümanların, birbirlerine çevrildikleri için karışıklık yaratması. Ruby
+3.0'da çevrilmeyecekler ve fonksiyonlar hangi formatta argüman alması için
+kodlanmışsa o şekilde çalışacak.
+</p>
+
+<p>
+Ayrıca bu hafta içerisinde Ruby'nin 2.7.0 Release Candidate 2 <a href="https://www.ruby-lang.org/en/news/2019/12/21/2-7-0-rc2-released/">sürümü de
+duyuruldu</a>. Final sürümünün ise 25 Aralık günü yayınlanması planlanıyor.
+Sanırım bir sonraki Yazılım Gündeminde "Ruby 2.7 ile gelen özellikler"i
+konuşacağız.
+</p>
+</div>
+</div>
+<div id="outline-container-org2e228e6" class="outline-2">
+<h2 id="org2e228e6"><span class="section-number-2">3</span> Eclipse 2019-12 <a href="https://www.eclipse.org/eclipseide/2019-12/noteworthy/">duyuruldu</a></h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Her ne kadar genelde Java teknolojileri için kullanılsa da diğer birçok dil
+için de desteği olan geliştirme ortamı Eclipse, bu yılın son büyük numaralı
+sürümünü duyurdu. Yeni eklenen veya değişen çok fazla özellik var, hepsine
+burada değinemem elbette ama birkaç tanesini aktarmak gerekirse:
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/eclipse1912-actions.png" alt="eclipse1912-actions.png" />
+</p>
+</div>
+
+<p>
+Diğer birkaç IDE ve metin editöründe de görmeye alıştığımız, tüm arama
+işlemlerinin tek bir pencere ya da popup panel üzerinden halledildiği arama
+özelliği sonunda Eclipse'ye de gelmiş. Artık aynı popup panel üzerinde hem
+Eclipse komutlarını ("Build", "Build&amp;Run" vb. gibi menülerdeki her şey) hem de
+proje içerisindeki dosya isimlerini ve dosyaların içeriklerinde arama
+yapabileceğiz. Benim şahsen diğer IDE'lerde çok kullandığım bir özellik ve
+Eclipse'ye gelmiş olmasına sevindim. Bu özelliği kullanmak için menü çubuğunun
+hemen altındaki toolbarın en sağındaki kısımda bir büyüteç ikonu göreceksiniz
+ona tıklarsanız bahsettiğim popup panel açılır ya da <b>CTRL + 3</b> kombinasyonlu
+kısayolu tercih edebilirsiniz.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/eclipse1912-git-group.png" alt="eclipse1912-git-group.png" />
+</p>
+</div>
+
+<p>
+Eclipse içerisinde aynı zamanda Git versiyon kontrol sistemi için entegre
+araçlar takımları da mevcut. Bu sürümde ise Git Repositories kısmına
+"Repository Group" özelliği geldi. İsminden de anlaşıldığı üzere birden çok git
+deposunu tek bir grup altında göstermeye yarayan bir özellik.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/eclipse1912-coklu-satir-string.png" alt="eclipse1912-coklu-satir-string.png" />
+</p>
+</div>
+
+<p>
+Bunların dışında java yetenekleri olarak da Java 13 ile birlikte gelen birçok
+özelliğe destek veriyor. Java 13 (JDK 13) ile gelen bir özellikten <a href="../03/yazilim-gundemi-03.html">Yazılım
+Gündemi - 3</a> yazısında bahsetmiştim. O yazıda bahsettiğim çok satırlı String
+ifadeler özelliği artık Eclipse 2019-12'de destekleniyor. Yalnız bu özelliği
+öncelikle aktifleştirmek gerekiyor. Bunun için yukarıdaki ekran görüntüsündeki
+gibi bir kod yazıp, Quick Fix menüsünden ilgili özelliği aktifleştirebilir ya
+da menülerden Project &gt; Properties &gt; Java Compiler altındaki "Enable preview
+features for Java 13" yazısının yanındaki kutucuğu işaretleyerek aynı şekilde
+özelliği açabilirsiniz.
+</p>
+
+<p>
+Eclipse 2019-12 sürümüyle birlikte gelen diğer özellik ve değişiklikler için
+konu başlığına eklediğim bağlantıya tıklayabilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-org1d46e43" class="outline-2">
+<h2 id="org1d46e43"><span class="section-number-2">4</span> Jetbrains, <a href="https://blog.jetbrains.com/idea/2019/12/intellij-platform-roadmap-for-2020/">IntelliJ Platformu için 2020 yol haritası</a>nı açıkladı</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+JetBrains, yazılım sektörü için çok iyi araçlar ve diller üreten bir firma.
+Zaten yazılım sektörünün içinde olup ya da bu konulara ilgi duyup da JetBrains
+araçlarının en az birini kullanmamış olan yoktur diye tahmin ediyorum. Bu hafta
+içersinde de Java teknolojileri için geliştirdikleri IDE çözümü IntelliJ IDEA
+ve IntelliJ Platform tabanlı diğer IDE'ler için 2020 yılı yol haritasını
+açıkladılar. Yani bu yol haritası, Android Studio'yu da etkiliyor.
+</p>
+
+<p>
+Yol haritasında öncelikli konu olarak "Performans" belirlenmiş. Geçtiğimiz yıl
+boyunca IDE'nin açılma hızıyla ilgili <a href="https://blog.jetbrains.com/idea/2019/10/preview-the-performance-improvements-in-intellij-idea-2019-3/">birkaç iyileştirme yapmışlardı</a>.
+Önümüzdeki yıl ise indexing işleminin performansıyla ilgili iyileştirmeler
+üzerine çalışacaklarmış. IDE çalışırken gerek otomatik tamamlama özelliği için
+gerekse de diğer ihtiyaçlardan dolayı indexing işlemi yapıyor. Bir projeyi
+açarken en çok vakit alan kısım da zaten çoğunlukla bu oluyor. Bundan dolayı,
+indexing verilerinin takımlardaki kişiler arasında paylaşılabilmesini sağlamaya
+çalışacaklar. Yani bir proje sizin bilgisayarınızda indexlenmişse bunu başka
+bir bilgisayardaki IntelliJ ile açtığınızda tekrar indexing'e gerek kalmayacak.
+Bir de buna ek olarak bu indexing işlemi sırasında IDE'nin donmamasını
+sağlayacak iyileştirmeler yapılacakmış. Yani projeyi açıp, indexing işleminin
+bitmesini beklemek yerine kod yazmaya başlayabileceğiz ve indexing de
+arkaplanda olmaya devam edecek. Projeyi açtıktan sonra IDE'nin kendine
+gelmesini beklemek benim de pek sevmediğim bir durum o yüzden bu konudaki
+iyileştirmelere şahsen muhtacım.
+</p>
+
+<p>
+Yol haritasındaki bir diğer konu ise özellikle 2019 yılında popülerliği oldukça
+artan "ortak düzenleme" (Collaborative Editing) konusu. Yani bir bilgisayarda
+çalışan IDE'ye başka bir bilgisayar üzerinden bağlanılması ve ortak bir çalışma
+ortamında kod yazılmasından bahsediyorum. Bu yönde çalışmaların devam ettiğini
+belirtmişler ve özelliğin öncelikle Rider isimli IDE'ye geleceğini daha sonra
+diğer IDE'lere de ekleneceğini belirtmişler ama bu özellik uzun soluklu bir
+efor gerektirdiği için öyle 2020'nin hemen ilk aylarında beklemeyin diyorlar.
+</p>
+
+<p>
+Açıklanan yol haritasında çok daha fazla konu mevcut fakat hepsinden burada
+bahsedemem malumunuz eğer tüm yol haritası hakkında bilgi edinmek isterseniz
+konu başlığına eklediğim bağlantıya tıklayabilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-org7ee15ec" class="outline-2">
+<h2 id="org7ee15ec"><span class="section-number-2">5</span> <a href="https://www.scala-lang.org/2019/12/18/road-to-scala-3.html">Scala 3 için yol haritası</a> açıklandı</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+JVM platformu üzerinde geliştirilen Scala programlama dilinin 3. sürümü için
+geliştirici takımı bir yol haritası yayınladı. Her ne kadar hiç deneyimim
+olmadığı bir programlama dili olsa da gündeme çeşitlilik katması açısından bunu
+da değerlendirmek istedim.
+</p>
+
+<p>
+Öncelikle Scala 2.14 için çalışmayı bıraktıklarını ve o sürüm için planlanan
+her şeyin Scala 3'e aktarıldığını belirtmişler. Aslında Scala 2.13'ü bir ara
+geçiş sürümü olarak düşünmüşler ama sonrasında yaptıkları konuşmalardan sonra
+buna gerek olmadığına karar vermişler ve doğrudan 3 numaralı sürüme yükselmeye
+karar vermişler. İlk Release Candidate sürümünün 2020 yılı sonunda yayınlanması
+planlanıyor. Yani daha bir yıl var diyebiliriz.
+</p>
+
+<p>
+Yol haritası yazısı boyunca en çok vurgu yapılan konu ise geriye ve ileriye
+uyumluluk mevzusu. Geriye uyumluluk (backwards compatibility) çok sık
+duyduğumuz bir kavram fakat ileriye uyumluluğu (forwards compatibility) ben de
+ilk kez duydum. Anladığım kadarıyla Scala 2.13 ve Scala 3 sürümleri hemen hemen
+aynı kodları çalıştırabilecekler. Bu uyumluluğun sağlanabilmesi için de
+standard library ismini verdiğimiz ana kütüphanede ekleme ve çıkarma
+yapmayacaklarmış, sadece olan sınıflar üzerinde geliştirmeler yapılacakmış.
+Fakat bu olay Scala 3.2 sürümüne kadar devam edecek, bu sürümden sonra ise
+kendine ait bir standard library ile yola devam edilecek. Anladığım kadarıyla
+Scala 3 bir geçiş sürümü olacak. Ayrıca Scala 2.13 sürümünde desteklenen macro
+özelliği Scala 3'te farklı bir hal alıyor, yani bu özelliği kullanan bir
+projeniz varsa o kısımları yeniden yazmak durumunda kalacaksınız.
+</p>
+
+<p>
+Yol haritasındaki diğer detaylar için konu başlığına eklediğim bağlantıya
+tıklayabilirsiniz. Yanlış değerlendirdiğim bir durum varsa lütfen yorumlar
+bölümünde beni uyarın.
+</p>
+</div>
+</div>
+<div id="outline-container-org21faeeb" class="outline-2">
+<h2 id="org21faeeb"><span class="section-number-2">6</span> Yaklaşan Etkinlikler</h2>
+<div class="outline-text-2" id="text-6">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" width="100%">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Etkinlik İsmi</th>
+<th scope="col" class="org-left">Yeri</th>
+<th scope="col" class="org-left">Tarihi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><a href="https://kommunity.com/bilge-adam-teknoloji/events/postgresqlde-ileri-seviyede-performans-yonetimi">PostgreSQL'de İleri Seviyede Performans Yönetimi</a></td>
+<td class="org-left">Ankara</td>
+<td class="org-left">24 Aralık 18:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/nsistanbul/events/nsistanbul-aralik-2019-bulusmasi">NSIstanbul Aralık 2019 Buluşması</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">24 Aralık 19:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/artrlms-gerceklik-platformlar-tickets-86102672411">Artırılmış Gerçeklik Platformları</a></td>
+<td class="org-left">Ankara</td>
+<td class="org-left">25 Aralık 18:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/codeyapkredi-vol-3-efsaneler-ve-gerceklerle-yapay-zeka-tickets-86411628507">Code.YapıKredi Vol 3: Efsaneler ve Gerçeklerle Yapay Zeka</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">25 Aralık 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/sovos-foriba-rd/events/octopus-deploy-ile-cicd-surecleri">Octopus Deploy ile CI/CD Süreçleri</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">26 Aralık 18:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/kodluyoruz/events/geldi-gelecek-teknoloji-sohbetleri-sertac-doganay-aykut-ibrisim">Geldi Gelecek // Teknoloji Sohbetleri</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">26 Aralık 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/devnot-yazilimci-bulusmalari/events/machine-learning-day">Machine Learning Day</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">28 Aralık 10:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/tr-TR/Hukuk-ve-Teknoliji-Meetup-Grubu/events/267223619/">KVKK ve GDPR Kapsamında Veri Güvenliği</a></td>
+<td class="org-left">Ankara</td>
+<td class="org-left">3 Ocak 18:30</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org1072d17" class="outline-2">
+<h2 id="org1072d17"><span class="section-number-2">7</span> Diğer Haberler</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>Finlandiya, online yapay zeka derslerini <a href="https://www.elementsofai.com/">ücretsiz olarak herkese açtı</a>.
+Dersler burada: <a href="https://www.elementsofai.com/">Elements of AI</a>.</li>
+<li>BMW, ürünlerinde kullandığı yapay zeka algoritmalarını <a href="https://www.bmwblog.com/2019/12/13/bmw-shares-ai-algorithms-used-in-production-available-on-github/">açık kaynak olarak
+paylaştı</a>. <a href="https://github.com/BMW-InnovationLab">GitHub Deposu</a></li>
+<li>Standford Üniversitesi, <a href="https://hai.stanford.edu/news/introducing-ai-index-2019-report">Yapay Zeka İndeksi 2019 Raporu</a>nu yayınlandı.</li>
+<li>GitHub, Actions özelliğinin Runner kısmını <a href="https://github.blog/changelog/2019-12-19-github-actions-the-runner-is-now-open-sourced/">açık kaynak hale getirdi</a>.</li>
+<li>Ubisoft, C++ kullanıcı arayüzü kütüphanesi Dear ImGui'ye <a href="https://montreal.ubisoft.com/en/ubisoft-sponsors-user-interface-library-for-c-dear-imgui/">sponsor oldu</a>.
+<a href="https://github.com/ocornut/imgui">GitHub Deposu</a></li>
+<li>IBM, Swift programlama diline <a href="https://forums.swift.org/t/december-12th-2019/31735">katkı yapmayı bırakıyor</a>.</li>
+<li>Statik kod analizi aracı PVS-Studio, <a href="https://www.viva64.com/en/b/0699/">2019 yılında en çok karşılaşılan 10
+Java hatası</a>nı tespit etti.</li>
+<li>8 yıllık bir Python 3 hatası bu hafta <a href="https://bugs.python.org/issue13153">giderildi</a>.</li>
+<li>Visual Studio 2019 v16.4.2 <a href="https://docs.microsoft.com/en-us/visualstudio/releases/2019/release-notes#16.4.2">sürümü yayınlandı</a>.</li>
+<li>Google'ın açık kaynak olarak geliştirdiği JavaScript ve WebAssembly motoru
+V8'in 8.0 <a href="https://v8.dev/blog/v8-release-80">sürümü duyuruldu</a>.</li>
+<li>Redis'in v6.0 Release Candidate 1 <a href="http://antirez.com/news/131">sürümü yayınlandı</a>.</li>
+<li>Rust programlama dilinin 1.40.0 <a href="https://blog.rust-lang.org/2019/12/19/Rust-1.40.0.html">sürümü duyuruldu</a>.</li>
+<li>Crystal programlama dilinin 0.32.1 <a href="https://crystal-lang.org/2019/12/18/crystal-0.32.1-released.html">sürümü yayınlandı</a>.</li>
+<li>EmberJS kütüphanesinin 3.15 "Octane" kod isimli <a href="https://blog.emberjs.com/2019/12/20/ember-3-15-released.html">sürümü yayınlandı</a>.</li>
+<li>Google, memory-safe programlama dili <a href="https://github.com/google/wuffs">wuffs</a>'un 0.2.0 <a href="https://groups.google.com/forum/m/#!topic/wuffs/Ui9d3usmZNc">sürümünü yayınladı</a>.</li>
+<li>RethinkDB 2.4.0 sürümü <a href="https://rethinkdb.com/blog/2.4.0-release">duyuruldu</a>. <a href="https://github.com/rethinkdb/rethinkdb/blob/v2.4.x/NOTES.md#release-240-night-of-the-living-dead">Sürüm Notları</a></li>
+<li>CMake 3.16.2 <a href="https://blog.kitware.com/cmake-3-16-2-available-for-download/">sürümü yayınlandı</a>.</li>
+<li><a href="https://ionutbalosin.com/2019/12/jvm-garbage-collectors-benchmarks-report-19-12/">JVM Garbace Collectors Benchmarks Raporu 19.12</a> yayınlandı.</li>
+<li>C ile yazılmış PHP Framework sistemi Phalcon 4.0.0 <a href="https://blog.phalcon.io/post/phalcon-4-0-0-released">sürümünü duyurdu</a>.</li>
+<li>PHP versiyonunuzdaki açıkları ve onları gideren patch'leri öğrenmenizi
+sağlayan araç php-version-audio, 1.3.2 sürümünü <a href="https://github.com/lightswitch05/php-version-audit/releases/tag/1.3.2">duyurdu</a>.</li>
+<li>Rust için http kütüphanesi Thruster, v0.8.0 <a href="https://www.reddit.com/r/rust/comments/edss48/announcing_thruster_080_stable_asyncawait_updated/">sürümünü yayınladı</a>. <a href="https://github.com/trezm/Thruster">GitHub Deposu</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga9fbed6" class="outline-2">
+<h2 id="orga9fbed6"><span class="section-number-2">8</span> Lisans</h2>
+<div class="outline-text-2" id="text-8">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="../../../img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+<a href="yazilim-gundemi-22.html">Yazılım Gündemi - 22</a> yazısı <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a> (CC BY-NC-SA 4.0)
+ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 16 Aralık 2019</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 22:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 22:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi - 7</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi - 7
+<br />
+<span class="subtitle">26 Ağustos - 1 Eylül 2019</span>
+</h1>
+<div id="table-of-contents">
+<h2>İçindekiler</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org3e53b99">1. PHP Central Europe konferansı cinsiyetçilik suçlamaları yüzünden iptal edildi</a></li>
+<li><a href="#org5fb649c">2. NPM paket yönetim sistemi, terminal çıktısında reklam göstermeyi yasakladı</a></li>
+<li><a href="#orgb1c32b8">3. Windows Terminal Preview v0.4 yayınlandı</a></li>
+<li><a href="#orgde37fab">4. Google, Chrome tarayıcısına, web sitelerinin dosya sistemimize erişmesini sağlayacak API sistemi ekliyor</a></li>
+<li><a href="#org5df65cf">5. Yeni bir platform girişimi: Türkiye Açık Kaynak Platformu</a></li>
+<li><a href="#orgffdcac6">6. Diğer Haberler</a></li>
+<li><a href="#org24ad5a4">7. Lisans</a></li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gundemi-banner.png" alt="yazilim-gundemi-banner.png" />
+</p>
+</div>
+
+<div class="org-center">
+<p>
+<a href="../06/yazilim-gundemi-06.html">&lt; Önceki Gündem</a> | <b>26 Ağustos - 1 Eylül 2019</b> | <a href="../08/yazilim-gundemi-08.html">Sonraki Gündem &gt;</a>
+</p>
+
+<p>
+<a href="https://teknoseyir.com/blog/yazilim-gundemi-7-26-agustos-1-eylul-2019">TeknoSeyir'de Oku</a>
+</p>
+</div>
+
+<div id="outline-container-org3e53b99" class="outline-2">
+<h2 id="org3e53b99"><span class="section-number-2">1</span> PHP Central Europe konferansı <a href="https://www.theregister.co.uk/2019/08/27/php_europe_cancelled/">cinsiyetçilik suçlamaları yüzünden iptal edildi</a></h2>
+<div class="outline-text-2" id="text-1">
+<p>
+PHP topluluğundaki büyük organizasyonlardan biri olan PHP CE, bu yıl Almanya'da
+gerçekleşmesi planlanan etkinliğin <a href="http://2019.phpce.eu/en/">web sitesinin ana sayfası</a>nda kısa bir mesaj
+yayınlayarak, konferansın iptal edildiğini ve devam etmeyeceğini duyurdu.
+Konferansın iptal edilme sebebi olarak da dipnot olarak şu üç tweet
+paylaşımının bağlantısını vermişler:
+</p>
+
+<ul class="org-ul">
+<li><a href="https://twitter.com/KarlLHughes/status/1151525811616387073">Tweet 1</a></li>
+<li><a href="https://twitter.com/Crell/status/1152368497823031296">Tweet 2</a></li>
+<li><a href="https://twitter.com/Mark_Baker/status/1154113051056099329">Tweet 3</a></li>
+</ul>
+
+<p>
+Olayları özetlemek gerekirse: Organizatörler normal işleyişe uygun olarak
+geçtiğimiz aylarda Konuşmacı Çağrısı (Call for Proposals) yapmışlar. Çağrı
+süresi bitince de, gelen başvurular içerisinden konferans içeriğine uygun
+olanları seçmişler ve geçtiğimiz haftalarda da konuşmacı listesi yayınlanmış.
+</p>
+
+<p>
+Olaylar da burdan sonra başlıyor zaten. Yukarıdaki ilk tweet'de başlangıç
+ateşini sağlamış. Konferansın "tamamen beyaz erkek konuşmacılar"dan oluştuğunu
+söylemiş ve utanç duyduğunu belirtmiş. Tweet altında bir sürü tartışma mevcut.
+</p>
+
+<p>
+Diğer tweet iki tweet blog yazılarının duyurusundan ibaret. Larry Garfield
+tarafından yazıyı kısaca özetlemek gerekirse: Bu yılın başlarında PHP CE
+organizatörleri kendisine konferansta konuşmacı olmayı teklif etmişler ve kabul
+etmiş. Konuşmacı listesi açıklandıktan sonra hiç kadın konuşmacı olmamasından
+dolayı bir rahatsızlık duymuş ve konuyu organizatörler ile konuşarak, gerekirse
+konuşmacı bulma ve masrafları karşılama konusunda yardımcı olabileceğini
+söylemiş. Organizatörler, "böyle bir düzenlemeye açık olmadıklarını"
+belirtmişler ve gelen başvurulardan sadece bir tanesinin kadın olduğunu, onun
+da daha önce lokal bir etkinlikle yapılan sunumun tekrarı olduğu için
+reddedildiğini söylemişler. Anladığım kadarıyla bu kişi organizatörler ile
+konuşmacı başvurusu süreci dolduktan sonra konuşmuş. Zaten yazıda da
+organizatörlerin "konuşmacı çağrısı süreci doldu ve yeniden açamayız"
+dediklerini aktarıyor. Bunun üzerine blog yazısını yazan kişi de etkinlikte
+konuşmacı olmaktan vazgeçtiğini söylüyor.
+</p>
+
+<p>
+Diğer blog yazısında da Mark Baker isimli kişi etkinlikte konuşmacı olmaktan
+aynı nedenlerle vazgeçtiğini söylüyor.
+</p>
+
+<p>
+Konu <a href="https://www.reddit.com/r/programming/comments/cvtx3w/php_central_europe_conference_cancelled_because/">Reddit</a> ve <a href="https://news.ycombinator.com/item?id=20795709">HackerNews</a> gibi platformlarda da bir gün boyunca üst sıralarda
+yer aldı ve tartışıldı. Oralarda yazılanların da bazılarını okudum. Benim şahsi
+görüşüm pek cinsiyetçi bir tutum olmadığı yönünde. Konuşmacı başvuruları
+sürecinin herkes için eşit olması gerektiğini düşünüyorum fakat Larry Garfield
+isimli kişiye konuşmacı olmasını teklif etmeleri biraz soru işareti yarattı
+bende. Neyse konu hakkında düşünmeye devam edeceğim ben, henüz net bir görüşe
+sahip değilim. Siz ne düşünüyorsunuz konu hakkında? Yorumlar kısmında
+konuşalım.
+</p>
+
+<p>
+Bu arada konuyla ilgili sadece benim yazdıklarımla kalmayıp, ilgili
+bağlantılardaki yazıları kendinizin de okumasını tavsiye ederim. Belki benim
+yanlış anladığım ya da iyi çeviremediğim kısımları olmuş olabilir, insanları
+yanlış yönlendirmek istemem kesinlikle. Lütfen fikir sahibi olmadan önce diğer
+yazılanları da okuyun.
+</p>
+
+<p>
+Konuyla ilgili, yazılım sektöründe çalışan bir kız arkadaşıma fikirlerini
+sordum. Müsait olduğunda yazıları okuyup geri dönüş yapacak. O geri dönüş
+yaptığında, onun da görüşlerini buraya ekleyeceğim.
+</p>
+</div>
+</div>
+<div id="outline-container-org5fb649c" class="outline-2">
+<h2 id="org5fb649c"><span class="section-number-2">2</span> NPM paket yönetim sistemi, terminal çıktısında <a href="https://www.zdnet.com/article/npm-bans-terminal-ads/">reklam göstermeyi yasakladı</a></h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Geçtiğimiz haftanın Yazılım Gündemi yazısında (bkz: <a href="../06/yazilim-gundemi-06.html">Yazılım Gündemi - 6</a>)
+bahsetiğim olayın üzerine NPM şirketi <a href="https://www.npmjs.com/policies/open-source-terms#commercial-content">sözleşmelere</a> yeni maddeler ekleyerek söz
+konusu davranışı da içerisinde barındıran birkaç durumu yasakladı. Bunlar şu
+şekilde:
+</p>
+
+<ul class="org-ul">
+<li>Yazılım geliştirme döngüsünün herhangi bir parçasında (çalışma zamanı,
+yüklenme vb.) npm betiklerini kullanarak reklam gösteren paketler
+yasaklandı.</li>
+<li>Reklam göstermek için kod parçaları içeren paketlerde sorun yok (büyük
+ihtimal siteye reklam eklemeye yarayan yardımcı araçlar kast edilmiş)
+fakat doğrudan reklam gösteren paketler yasaklandı.</li>
+<li>Esas olarak reklam gösteren fakat önemsiz kod, veri ya da diğer teknik
+içerikler içeren paketler yasaklandı.</li>
+</ul>
+
+
+<div class="figure">
+<p><img src="gorseller/reklam-yasak.png" alt="reklam-yasak.png" />
+</p>
+</div>
+
+<p>
+Bunun üzerine konunun gündeme gelmesini sağlayan kişide detaylıca bir blog
+yazısı yazarak olayın nereden başladığını, sürecin nasıl geliştiğini vb. tüm
+detaylarını anlattı. İlgili blog yazısına <a href="https://feross.org/funding-experiment-recap/">buradan</a> ulaşabilirsiniz. Şahsen benim
+okuma fırsatım olmadı fakat konuyla ilgilenenlerin mutlaka okuması gereken bir
+yazı.
+</p>
+
+<p>
+NPM şirketi de kendi blog sitelerinde "<a href="https://blog.npmjs.org/post/187382017885/supporting-open-source-maintainers">Supporting Open Source Maintainers</a>"
+konulu bir yazı yayınlayarak, açık kaynak geliştiricilere destek olmakla ilgili
+çalışmalarından bahsetmiş.
+</p>
+</div>
+</div>
+<div id="outline-container-orgb1c32b8" class="outline-2">
+<h2 id="orgb1c32b8"><span class="section-number-2">3</span> Windows Terminal <a href="https://devblogs.microsoft.com/commandline/windows-terminal-preview-v0-4-release/">Preview v0.4 yayınlandı</a></h2>
+<div class="outline-text-2" id="text-3">
+
+<div class="figure">
+<p><img src="gorseller/windows-terminal-v0_4.png" alt="windows-terminal-v0_4.png" />
+</p>
+</div>
+
+<p>
+Önceki bir yazılım gündemi yazısında da (bkz: <a href="../04/yazilim-gundemi-04.html">Yazılım Gündemi - 4</a>) söylediğim
+gibi Microsoft, uzun zamandır kendinden uzaklaşan geliştirici camiasını tekrar
+kazanmak için hamleler yapıyor. Bunlardan birisi de Windows Terminal. Bu hafta
+bir blog yazısı yayınlayarak preview v0.4 sürümünü duyurdu. Yapılan bazı
+değişiklikler şu şekilde:
+</p>
+
+<ul class="org-ul">
+<li>Sekme başlığında artık varsayılan olarak dosya yolu yerine profil ismi
+gözükecekmiş fakat isteyenler "tabTitle" özelliğini kendilerine göre
+özelleştirebilecek.</li>
+<li>Terminal uygulamasının ayar dosyasında yanlış bir yer varsa hata gösterecek.</li>
+<li>Seçileni otomatik kopyalama özelliğiyle ilgili global bir ayar eklenmiş.</li>
+</ul>
+
+<p>
+Diğer değişiklikler için konu başlığına eklediğim blog yazısına göz
+atabilirsiniz.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgde37fab" class="outline-2">
+<h2 id="orgde37fab"><span class="section-number-2">4</span> Google, Chrome tarayıcısına, web sitelerinin <a href="https://www.techrepublic.com/article/google-moves-closer-to-letting-chrome-web-apps-edit-your-files-despite-warning-it-could-be-abused-in-terrible-ways/">dosya sistemimize erişmesini sağlayacak API sistemi ekliyor</a></h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Evet, yanlış okumadınız. İlk gördüğüm de ben de "nasıl ya?" dedim fakat Chrome
+ekibi çoktan çalışmalara başlamış ve Chrome 78 sürümünde <a href="https://developers.google.com/web/updates/2019/08/native-file-system">bu özelliği duyurmayı
+planlamışlar</a>. API sisteminin detaylarını pek fazla inceleyemedim ama sadece
+https uzantılı sitelerde çalışacağı haberde söylenmiş. Ayrıca <code>chrome://flags</code>
+kısmından açıp kapatma opsiyonu da var gözüküyor. Her ne kadar kullanıcı izini
+gerektiriyor olsa da bence çok tehlikeli bir sistem. Deneyimli olmayan
+kullanıcıların kandırılması ve sistemin suistimal edilmesi çok olası bir durum.
+</p>
+</div>
+</div>
+<div id="outline-container-org5df65cf" class="outline-2">
+<h2 id="org5df65cf"><span class="section-number-2">5</span> Yeni bir platform girişimi: <a href="https://acikkaynakplatformu.github.io/">Türkiye Açık Kaynak Platformu</a></h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Sektörden sosyal medya vasıtasıyla tanıdığım birçok isim bir araya gelmişler.
+Platform için uzun zamandır toplantılar devam ediyormuş. Bakalım ortaya ne
+çıkacak, ben de meraklıyım.
+</p>
+
+<ul class="org-ul">
+<li><a href="https://twitter.com/fkadev/status/1167076567366942720">Konuyla ilgili tweet</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgffdcac6" class="outline-2">
+<h2 id="orgffdcac6"><span class="section-number-2">6</span> Diğer Haberler</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>React takımı, ırkçılık suçlamaları nedeniyle <a href="https://www.businessinsider.com/reactgate-react-facebook-code-of-conduct-twitter-2019-8">yeni davranış kuralları
+getirmeye hazırlanıyor</a>.</li>
+<li>Google, bir geliştiricinin 10 yıllık uygulamasını marketten silmiş fakat
+sonra geri adım atmış. Tüm süreç <a href="https://medium.com/mmathieum/google-just-deleted-my-nearly-10-year-old-free-open-source-android-app-7fbc52edc50a">geliştiricinin blog yazısı</a>nda anlatılmış.</li>
+<li>Google, veri doğrulama dili <a href="https://cuelang.org">CUE ve araç setini duyurdu</a>.</li>
+<li>WMware, Kubernetes sistemiyle ilgili ücretsiz materyal ve derslerin
+bulunduğu <a href="https://blogs.vmware.com/cloudnative/2019/08/27/introducing-kubernetes-academy-free-cloud-native-education-platform/">yeni bir platform açtı</a>: <a href="https://kubernetes.academy/">Kubernetes Acedemy</a>.</li>
+<li>Go modülleri için <a href="https://blog.golang.org/module-mirror-launch">index ve checksum veritabanı duyuruldu</a>.</li>
+<li>PowerShell içerisine zincir operatörleri <a href="https://github.com/PowerShell/PowerShell/pull/9849">eklenmesi konuşuluyor</a>.</li>
+<li>Firefox 70 sürümünde daha hızlı bir <a href="https://hacks.mozilla.org/2019/08/the-baseline-interpreter-a-faster-js-interpreter-in-firefox-70/">JavaScript interpreter gelecekmiş</a>.</li>
+<li>TypeScript <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-3-6/#stricter-generators">3.6 sürümü duyuruldu</a>.</li>
+<li>Bir güvenlik açığını kapatan 3 yeni Ruby sürümü yayınlandı:
+<ul class="org-ul">
+<li><a href="https://www.ruby-lang.org/en/news/2019/08/28/ruby-2-6-4-released/">2.6.4</a></li>
+<li><a href="https://www.ruby-lang.org/en/news/2019/08/28/ruby-2-5-6-released/">2.5.6</a></li>
+<li><a href="https://www.ruby-lang.org/en/news/2019/08/28/ruby-2-4-7-released/">2.4.7</a></li>
+</ul></li>
+<li>Perl topluluğu, <a href="https://github.com/perl6/problem-solving/issues/81">"Perl 6" ismi hakkında tartışıyor</a>.</li>
+<li>Julia programlama dili geliştirilmesi ile ilgili durum raporu yayınlandı:
+<a href="https://julialang.org/blog/2019/08/release-process">Julia's Release Process</a>.</li>
+<li>HHVM 4.20.0 ve 4.20.1 <a href="https://hhvm.com/blog/2019/08/27/hhvm-4.20.0.html">sürümleri duyuruldu</a>.</li>
+<li>Dağıtık şekilde SQLite veritabanları barındırmaya yarayan <a href="https://dqlite.io/">Dqlite</a> aracının
+<a href="https://github.com/canonical/dqlite/releases/tag/v1.0.0">ilk stabil sürümü duyuruldu</a>.</li>
+<li>Postgres üzerinde WebAssembly çalıştırmaya yarayan eklenti <a href="https://medium.com/wasmer/announcing-the-first-postgres-extension-to-run-webassembly-561af2cfcb1">açık kaynak
+olarak yayınlandı</a>: <a href="https://github.com/wasmerio/postgres-ext-wasm">postgres-ext-wasm</a>.</li>
+<li>Emacs <a href="https://lists.gnu.org/archive/html/emacs-devel/2019-08/msg00577.html">26.3 yayınlandı</a>.</li>
+<li>Emacs org-mode için sorgu dili kütüphanesi org-ql, <a href="https://github.com/alphapapa/org-ql#02">v0.2 sürümünü duyurdu</a>.</li>
+<li>Bilgisayara bağlı cihazlar ile iletişim kurmayı sağlayan <a href="https://github.com/MelbourneDeveloper/Device.Net">Device.Net</a>
+kütüphanesi <a href="https://christianfindlay.com/2019/08/26/device-net-3-0/">3.0 sürümünü duyurdu</a>. <a href="https://github.com/MelbourneDeveloper/Device.Net/projects/8">Değişiklik Notları</a>.</li>
+<li><a href="https://timothycrosley.github.io/portray/">Portray</a> isimli Python projelerinizin dokümantasyonu için web sitesi
+oluşturma aracı <a href="https://timothycrosley.github.io/portray/CHANGELOG/">ilk stabil versiyonunu yayınlandı</a>.</li>
+<li>Test ve prototipleme için kullanılmak üzere sahte bilgiler döndüren GraphQL
+API sistemi açık kaynak olarak yayınlandı: <a href="https://graphqlzero.almansi.me/">GraphQLZero</a>, <a href="https://github.com/ealmansi/gqlz">GitHub Deposu</a>.</li>
+<li>Dağıtık PGP anahtar sunucusu projesi <a href="https://github.com/tdjsnelling/dat-keyserver">dat-keyserver</a>, <a href="https://github.com/tdjsnelling/dat-keyserver/releases/tag/v1.5.0">v1.5.0 sürümünü</a> çıkardı.</li>
+<li>Oyun programlama için kullanılan C++ kütüphanesi EnTT, <a href="https://github.com/skypjack/entt/releases/tag/v3.1.0">v3.1.0 sürümünü duyurdu</a>.</li>
+<li>Güvenli gömülü sistemler inşa etmek için ADA dili ile geliştirilen
+microkernel <a href="https://wookey-project.github.io/ewok/index.html">EwoK</a>, <a href="https://github.com/wookey-project/ewok-kernel/releases/tag/v0.9.9">v0.9.9 sürümünü çıkardı</a>.</li>
+<li>Firebase için ORM aracı olan firebase-firestorm, <a href="https://github.com/lmcq/firebase-firestorm/releases/tag/v1.1.0">v1.1.0 sürümünü çıkardı</a>.</li>
+<li>Log kayıtlarını çeşitli servislere göndermeye yarayan PHP kütüphanesi
+monolog, <a href="https://github.com/Seldaek/monolog/releases/tag/2.0.0">v2.0.0 sürümü duyurdu</a>.</li>
+<li>Google Summer of Code projesi <a href="https://lists.freedesktop.org/archives/wayland-devel/2019-August/040819.html">Waypipe tamamlandı</a>, <a href="https://gitlab.freedesktop.org/mstoeckl/waypipe/">GitLab Deposu</a>.</li>
+<li>JOOQ, <a href="https://blog.jooq.org/2019/08/29/jooq-3-12-released-with-a-new-procedural-language-api/">3.12 sürümünü duyurdu</a>.</li>
+<li>etcd, <a href="https://kubernetes.io/blog/2019/08/30/announcing-etcd-3-4/">3.4 sürümü duyuruldu</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org24ad5a4" class="outline-2">
+<h2 id="org24ad5a4"><span class="section-number-2">7</span> Lisans</h2>
+<div class="outline-text-2" id="text-7">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="../../../img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+<a href="yazilim-gundemi-07.html">Yazılım Gündemi - 7</a> yazısı <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a> (CC BY-NC-SA 4.0)
+ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 1 Eylül 2019</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 22:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

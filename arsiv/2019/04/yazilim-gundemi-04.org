@@ -1,0 +1,171 @@
+#+TITLE: Yazılım Gündemi - 4
+#+SUBTITLE: 29 Temmuz - 4 Ağustos 2019
+#+Author: Eren Hatırnaz
+#+DATE: 4 Ağustos 2019
+#+OPTIONS: ^:nil
+#+LANGUAGE: tr
+#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=black, filecolor=red, urlcolor=blue}
+#+LATEX_HEADER: \usepackage[turkish]{babel}
+#+HTML_HEAD: <link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+#+LATEX: \shorthandoff{=}
+
+[[file:gorseller/yazilim-gundemi-banner.png]]
+#+BEGIN_CENTER
+[[file:../03/yazilim-gundemi-03.org][< Önceki Gündem]] | *29 Temmuz - 4 Ağustos 2019* | [[file:../05/yazilim-gundemi-05.org][Sonraki Gündem >]]
+
+[[https://teknoseyir.com/blog/yazilim-gundemi-4-29-temmuz-4-agustos-2019][TeknoSeyir'de Oku]]
+#+END_CENTER
+
+* Go dili topluluğu, dile generic programlama özellikleri eklemeyi [[https://github.com/golang/go/issues/15292][tartışıyor]]
+	C# yazdığım zamanlardan hatırladığım kadarıyla generic programlama terimi,
+	tipi belli olmayan fonksiyon parametreleri tanımlamak için kullanılıyordu.
+	Örnek vererek daha iyi anlatırım:
+
+	C++'da generic programlama ile şu şekilde bir yapı kurabiliyoruz.
+
+  #+ATTR_LATEX: :options frame=lines, linenos, label=C++, labelposition=topline
+	#+BEGIN_SRC cpp
+    template <typename T>
+    class Liste {
+      // sınıf içeriği
+    };
+
+    class Hayvan { };
+    class Araba { };
+
+    int main() {
+      auto hayvan_listesi = new Liste<Hayvan>();
+      auto araba_listesi = new Liste<Araba>();
+    }
+	#+END_SRC
+
+	Bu yapının avantajı hem bizi kod tekrarından kurtarıyor, hem de işimizi
+	kolaylaştırıyor. Bu yapı sayesinde, atıyorum bu listelerin içeriklerini
+	yazdırmak istersek, parametre olarak =T= alan bir fonksiyon kodladığımızda, o
+	fonksiyona bu listelerin ikisini de gönderebiliyoruz.
+
+	Go dili topluluğu da, bu özelliği Go diline Contracts ile eklemeyi konuşuyor.
+	[[https://go.googlesource.com/proposal/+/master/design/go2draft-contracts.md][İlgili tavsiye sayfası]]nda detaylıca anlatılmış.
+* Ruby on Rails [[https://weblog.rubyonrails.org/2019/7/30/Rails-6-0-rc2-released/][6.0.0 RC2 yayınlandı]]
+	Bu yılın başlarında [[https://weblog.rubyonrails.org/2019/1/18/Rails-6-0-Action-Mailbox-Action-Text-Multiple-DBs-Parallel-Testing/][6.0.0 beta1 sürümü duyurulan]] popüler Ruby framework
+	sistemi Ruby on Rails, bu hafta içerisinde [[https://weblog.rubyonrails.org/2019/7/30/Rails-6-0-rc2-released/][6.0.0 rc2 sürümünü duyurdu]].
+
+	6.0.0 sürümü ile gelecek özelliklerden bazıları şunlar:
+	  - Action Mailbox
+		- Action Text
+		- Çoklu veritabanı desteği
+		- Paralel test çalıştırma desteği
+
+	Diğer özellikler için [[https://weblog.rubyonrails.org/2019/1/18/Rails-6-0-Action-Mailbox-Action-Text-Multiple-DBs-Parallel-Testing/][bu sayfayı]] ziyaret edebilirsiniz.
+* Windows Terminal [[https://devblogs.microsoft.com/commandline/windows-terminal-preview-v0-3-release/?WT.mc_id=social-reddit-marouill][ön izleme sürümü v0.3 duyuruldu]]
+	Uzun bir süredir geliştiriciler tarafından pek tercih edilmeyen Windows, artık
+	bazı şeyleri değiştirerek geliştiricileri kendine çekmeyi planlıyor gibi.
+	Bunlardan biri de o eski hantal, kullanışsız ve özelleştirme desteği çok az
+	olan terminal uygulaması. Bir süredir Microsoft'un bu uygulama üzerinde
+	çalıştığını biliyoruz. Zaten duyurdukları ilk ön izleme sürümü de bu değil.
+	Bu ön izleme sürümü ile gelen bazı yeni özellikler şu şekilde:
+
+** Taşınabilir başlık çubuğu
+	 Bu özelliği anlamadım önceden pencere taşınamıyor muydu yani, yeni mi geldi?
+	 İlginç.
+
+	 [[file:gorseller/draggable.gif]]
+** Sekmeler kısmındaki açılır menünün yeri değişmiş
+	 Eski sürümde böyleyken:
+	 [[file:gorseller/title-bar-v02-1.png]]
+
+	 Artık bu hale gelmiş:
+	 [[file:gorseller/title-bar-v03.png]]
+
+	Diğer özellikler için konu başlığındaki bağlantıya tıklayabilirsiniz. Açıkcası
+	bir terminal sever olarak Windows'a yeni modern bir terminal arayüzü gelmesine
+	sevindim fakat bu saatten sonra GNU/Linux tarafından tekrar Windows'a geri
+	dönmem çok zor. Yine de Windows üzerinde çalışan arkadaşlar adına sevindim.
+* Firefox 68 ile gelen [[https://hacks.mozilla.org/2019/07/new-css-features-in-firefox-68/][yeni CSS özellikleri]]
+	Firefox tarayıcısının bu ay başında duyurulan 68 numaralı sürümü ile bazı yeni
+	CSS özellikleri de kullanıma açılmış. Bunlardan birisi şu şekilde:
+
+** =::marker= ile listelerin maddelerini özelleştirme
+	 Bildiğimiz gibi HTML'de iki çeşit liste tipi var. Birisi =ul=, yani Unordered
+	 List (Sırasız Liste); diğeri ise =ol=, yani Ordered List (Sıralı Liste).
+	 Artık bu çeşit listenin de madde işaretlerini CSS ile özelleştirebileceğiz.
+	 Şöyle ki:
+
+   #+ATTR_LATEX: :options frame=lines, linenos, label=CSS, labelposition=topline
+	 #+BEGIN_SRC css
+		 ul ::marker {
+				 color: hotpink;
+		 }
+		 ol ::marker {
+				 color: blue;
+				 font-size: 200%;
+		 }
+	 #+END_SRC
+
+	 Sonuç işe şu şekilde oluyor:
+	 [[file:gorseller/css-market.png]]
+
+	Diğer CSS özellikleri için [[https://hacks.mozilla.org/2019/07/new-css-features-in-firefox-68/][bu sayfayı]] ziyaret edebilirsiniz.
+* Bootstrap 3 desteği [[https://blog.getbootstrap.com/2019/07/24/lts-plan/][sonlandırıldı]]
+	Aslında bu geçen haftanın haberi fakat gözden kaçmış ama yine de değinmeden
+	geçmek istemedim. Tasarım cahili bir back-end developer olarak çok işime
+	yaramış, kendisiyle nice siteler hazırlamıştım fakat artık Bootstrap 3 sürümü
+	emekliye ayrılıyor. Artık güvenlik güncelleştirmeleri de gelmeyecek.
+
+	Bootstrap ekibi yeni uzun dönem desteklerini (LTS) Bootstrap 4 sürümü ile
+	devam ettireceklerini duyurdu.
+
+	Elveda Bootstrap 3...
+* Diğer Haberler
+	- Yazılım ile ilgili yeni bir Türkçe podcast serisi başladı: [[https://www.youtube.com/watch?v=Pi4YaFXgYRE][Pantalks]].
+	- Çankırı Sağlık İl Müdürlüğü Bilgi Sistemleri, Windows Aktif Dizin Yapısıyla
+    entegre çalışan [[https://github.com/Cankirism/ADManager][AD Yönetim uygulaması]]nın ilk sürümünü [[https://twitter.com/csmbilsis/status/1157205580672622592][açık kaynak olarak
+    yayınladı]].
+	- Laravel Türkiye forumları [[https://laravel.gen.tr/d/3383-laravel-turkiye-forumlari-yenilendi][yenilendi]].
+	- Android Studio [[https://androidstudio.googleblog.com/2019/08/android-studio-35-release-candidate-2.html][3.5 RC2 sürümü duyuruldu]].
+	- [[https://gitea.io/][Gitea]] [[https://blog.gitea.io/2019/07/gitea-1.9.0-is-released/][1.9.0 sürümünü yayınladı]].
+	- JavaScript ile platformlar-arası (cross-platform) masaüstü uygulamalar
+    geliştirmeye yarayan [[https://electronjs.org/][Electron]] kütüphanesinin [[https://electronjs.org/blog/electron-6-0][6.0.0 sürümü duyuruldu]].
+	- [[https://crystal-lang.org/][Crystal]] programlama dilinin [[https://crystal-lang.org/2019/08/01/crystal-0.30.0-released.html][0.30.0 sürümü duyuruldu]].
+	- Amazon, tüm veritabanı sistemleri için tek bir sorgu dili olma iddiasını
+    taşıyan [[https://aws.amazon.com/tr/blogs/opensource/announcing-partiql-one-query-language-for-all-your-data/][yeni aracını duyurdu]]: [[https://partiql.org/][PartiQL]], [[https://github.com/partiql/partiql-lang-kotlin][GitHub Deposu]].
+	- MSDN Magazine [[https://msdn.microsoft.com/en-us/magazine/mt833502.aspx?f=255&MSPPError=-2147217396][yayın hayatına son verdi]].
+	- Microsoft, proje örneklerinin listenebileceği [[https://docs.microsoft.com/en-us/teamblog/code-samples][yeni bir sayfa yayınladı]]:
+    https://docs.microsoft.com/samples.
+	- ASP.NET takımı, RESTful HTTP hizmetleri ile etkileşime geçmeyi sağlayan yeni
+    komut satırı aracını duyurdu: [[https://devblogs.microsoft.com/aspnet/httprepl-a-command-line-tool-for-interacting-with-restful-http-services/][HttpRepl]], [[https://github.com/aspnet/HttpRepl][GitHub Deposu]].
+	- EmacsConf sanal konferansı için [[https://emacsconf.org/2019/cfp][konuşmacı çağrısı yayınladı]].
+	- GNU C (glibc) kütüphanesinin [[https://lwn.net/Articles/795127/][2.30 sürümü yayınlandı]].
+	- OpenJDK takımı, [[https://openjdk.java.net/projects/loom/][Loom projesi]]nin [[https://mail.openjdk.java.net/pipermail/loom-dev/2019-July/000633.html][erken erişim sürümlerini duyurdu]].
+	- Sunucuyu test etmek için yük oluşturmak amacıyla kullanılan [[https://github.com/Gymmasssorla/anevicon][anevicon]] isimli
+    aracın [[https://github.com/Gymmasssorla/anevicon/releases/tag/v7.0.0][v7.0.0 sürümü duyurdu]].
+	- Ruby kütüphanesi ROM (Ruby Object Mapper), [[https://rom-rb.org/blog/rom-5-1-released/][5.1 sürümü yayınlandı]].
+	- Go ile yazılmış paralel görüntü işleme algoritmalarının toplandığı [[https://github.com/anthonynsimon/bild][bild]]
+    isimli proje [[https://github.com/anthonynsimon/bild/releases/tag/0.11.0][v0.11.0 sürümünü yayınladı]].
+	- Go ile yazılmış, shell komutları için görselleştirme imkanı sunan [[https://github.com/sqshq/sampler][Sampler]]
+    isimli proje, [[https://github.com/sqshq/sampler/releases/tag/v1.0.0][ilk stabil sürümünü duyurdu]].
+	- Git depolarınızı takip eden ve duruma göre =pull= veya =push= yapan araç
+    açık kaynak olarak yayınlandı: [[https://github.com/muesli/gitomatic][git-o-matic]].
+	- Tamamen merkezsizleştirilmiş (decentralized) anahtar-değer (key-value) depo
+    aracı LF, [[https://github.com/zerotier/lf/releases/tag/0.9.20.0][0.9.20.0 sürümünü duyurdu]].
+	- Makine öğrenmesi modellerini JSON API olarak kullanmaya olanak sağlayan araç
+    [[https://cortex.dev/][Cortex]], [[https://github.com/cortexlabs/cortex/releases/tag/v0.7.0][v0.7.0 sürümü yayınlandı]].
+	- Yapay sinir ağları temelli elastic search aracı [[https://github.com/gnes-ai/gnes][GNES]], [[https://github.com/gnes-ai/gnes/releases/tag/v0.0.26][v0.0.26 sürümünü
+    yayınladı]].
+	- Java ile PDF oluşturma ve düzenleme kütüphanesi [[https://github.com/LibrePDF/OpenPDF][OpenPDF]] [[https://github.com/LibrePDF/OpenPDF/releases/tag/1.3.0][1.3.0 sürümünü
+    duyurdu]].
+	- [[https://github.com/cettia/asity][Asity]] [[https://cettia.io/blog/asity-3-0-0-released/][3.0.0 sürümü duyuruldu]].
+	- [[https://github.com/blobcity/db/][BlobCityDB]] veritabanının [[https://github.com/blobcity/db/releases][1.7.9 sürümü duyuruldu]].
+	- Sadece 512 byte ile BASIC dilini çalıştırabilen interpreter projesi
+    [[https://github.com/nanochess/bootBASIC][bootBASIC]] yayınlandı.
+	- Yeni bir etiketleme dili ortaya çıktı: [[https://github.com/jeml-lang/jeml][JEML]]
+* Lisans
+  #+BEGIN_CENTER
+  #+ATTR_HTML: :height 75
+  #+ATTR_LATEX: :height 1.5cm
+  [[file:../../../img/CC_BY-NC-SA_4.0.png]]
+
+  [[file:yazilim-gundemi-04.org][Yazılım Gündemi - 4]] yazısı [[https://erenhatirnaz.github.io][Eren Hatırnaz]] tarafından [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Creative Commons
+  Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı]] (CC BY-NC-SA 4.0)
+  ile lisanslanmıştır.
+  #+END_CENTER

@@ -114,16 +114,16 @@
 	 gerekmiyor. Örnek verecek olursak:
    #+ATTR_LATEX: :options frame=lines, linenos, label=Dart, labelposition=topline
 	 #+BEGIN_SRC dart
-		 extension ParseNumbers on String {
-			 int parseInt() {
-				 return int.parse(this);
-			 }
-		 }
+     extension ParseNumbers on String {
+       int parseInt() {
+         return int.parse(this);
+       }
+     }
 
-		 main() {
-			 int i = '55'.parseInt();
-			 print(i);
-		 }
+     main() {
+       int i = '55'.parseInt();
+       print(i);
+     }
 	 #+END_SRC
 	 Yukarıda String veri tipine =parseInt= isminde bir fonksiyon ekledik ve String
 	 içerisine yazılan bir sayının =int= veri tipine çevrilmesini sağladık.
@@ -132,17 +132,17 @@
 	 inceleyelim:
    #+ATTR_LATEX: :options frame=lines, linenos, label=Dart, labelposition=topline
 	 #+BEGIN_SRC dart
-		 class Kisi {
-			 String ad;
-			 DateTime dogumTarihi;
-			 Kisi(this.ad, this.dogumTarihi);
+     class Kisi {
+       String ad;
+       DateTime dogumTarihi;
+       Kisi(this.ad, this.dogumTarihi);
 
-			 void tanit() {
-				 print(ad);
-				 int dogumYili = dogumTarihi?.year;
-				 print("${DateTime.now().year - dogumYili} yıl önce doğmuştur");
-			 }
-		 }
+       void tanit() {
+         print(ad);
+         int dogumYili = dogumTarihi?.year;
+         print("${DateTime.now().year - dogumYili} yıl önce doğmuştur");
+       }
+     }
 	 #+END_SRC
 	 Örnekte dikkat etmeniz gereken *?* karakterinin kullanımı. *?* karakteri ile
 	 yapılan aslında şuydu: =dogumTarihi= property'sinde değer tanımlıysa year

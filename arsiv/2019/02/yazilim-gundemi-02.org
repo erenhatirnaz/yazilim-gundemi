@@ -1,0 +1,202 @@
+#+TITLE: Yazılım Gündemi - 2
+#+SUBTITLE: 15-21 Temmuz 2019
+#+Author: Eren Hatırnaz
+#+DATE: 21 Temmuz 2019
+#+OPTIONS: ^:nil
+#+LANGUAGE: tr
+#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=black, filecolor=red, urlcolor=blue}
+#+LATEX_HEADER: \usepackage[turkish]{babel}
+#+HTML_HEAD: <link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+#+LATEX: \shorthandoff{=}
+
+[[file:gorseller/yazilim-gundemi-banner.png]]
+
+#+BEGIN_CENTER
+[[file:../01/yazilim-gundemi-01.org][< Önceki Gündem]] | *15-21 Temmuz 2019* | [[file:../03/yazilim-gundemi-03.org][Sonraki Gündem >]]
+
+[[https://teknoseyir.com/blog/yazilim-gundemi-2-15-21-temmuz-2019][TeknoSeyir'de Oku]]
+#+END_CENTER
+
+* GNU/Linux sunucuları hedef alan 3 zararlı Python kütüphanesi [[https://www.zdnet.com/article/malicious-python-libraries-targeting-linux-servers-removed-from-pypi/][PyPI üzerinden silindi]]
+	ReversingLabs isimli güvenlik firması, PyPI (Python Package Index) üzerinde
+	neredeyse 20 aydır (Kasım 2017'den beri) bulunan ve sadece GNU/Linux sistemlere
+	kurulduğunda aktif olan zararlı kod parçaları içeren 3 kütüphaneyi tespit etti.
+	*ruri12* kullanıcı adı altında yayınlanmış bu üç kütüphanenin isimleri şunlar:
+	*libpeshnx*, *libpesh* ve *libari*. Üzerinde çalıştığınız ya da bağımlılık
+	olarak projenize eklediğiniz kütüphanelerde bu paket isimleri var mı diye
+	bakmanız iyi olacaktır.
+
+	#+CAPTION: Zararlı kütüphanenin aylara göre indirilme sayıları
+	[[file:gorseller/zararli-kutuphane-pypi.png]]
+
+	Kullanıcı tarafından çalıştırılınca sisteme uzaktan komut göndermeye olanak
+	sağlayan bu arka kapı sadece =libpeshnx= isimli kütüphanede olsa da, diğer 2
+	kütüphanenin de zararlı kod parçaları içerdiği tespit edilmiş.
+
+	Güvenlik firmasının uyarısı üzerine bu 3 pakette PyPI sistemi üzerinden
+	silinmişler. İncelemek için kaynak kodlarını bulmaya çalıştım fakat bulamadım.
+	Geçtiğimiz hafta da buna benzer "kütüphanede arka kapı bulundu" haberi vardı,
+	görünen o ki bu tarz haberler çıkmaya devam edecek ve artık umarım geliştirici
+	camiası olarak bazı şeyleri sorgulamaya başlamamıza vesile olacak.
+* Python 3.8 ile gelecek olan [[https://www.python.org/dev/peps/pep-0569/#features-for-3-8][yeni özellikler belli oldu]]
+	Python 3.8.0 Beta 1 sürümü 4 Haziran'da [[https://www.python.org/downloads/release/python-380b1/][yayınlanmıştı]]. Beta 2 sürümü de 4
+	Temmuz'da [[https://www.python.org/downloads/release/python-380b2/][yayınlandı]]. [[https://www.python.org/dev/peps/pep-0569/#release-schedule][Plan dokümanı]]nda belirttiklerine göre Beta 1'den sonra
+	yeni özellik (feature) eklenmeyecek, hata gidermeleri ve iyileştirmelere
+	odaklanılacak. Önümüzdeki aylarda da Beta süreci devam edecek ve ardından ilk
+	Release Candidate sürümünün 30 Eylül'de, final sürümünün ise 21 Ekim'de
+	duyurulması bekleniyor. İlgimi çeken özellikleri inceledim, diğerlerini de siz
+	inceleyebilirsiniz.
+** ':=' Walrus Operatörü ([[https://www.python.org/dev/peps/pep-0572/][PEP572 - Assignment Expressions]])
+	 #+CAPTION: Python 3.8 ile birlikte gelecek olan walrus operatorü
+	 [[file:gorseller/python38-walrus-fixed.png]]
+
+	 Yukarıdaki örnekte de görüldüğü gibi, bu yeni operator sayesinde, önceden
+	 =if= sorgusunda kullanacağımız değişkeni tanımlamamız gerekirken artık direkt
+	 =if= sorgusu içerisinde tanımlayıp, if'in içerisinde kullanabileceğiz. Benim
+	 de zaman zaman eksikliğini hissettiğim bir özellikti, gelmesine sevindim.
+** Sadece pozisyonel parametreler ([[https://www.python.org/dev/peps/pep-0570/][PEP 570 - Positional-Only Parameters]])
+	 Python'da bir fonksiyona parametre gönderirken ille de sırayla göndermek
+	 zorunda değiliz. Mesela =def merhaba(isim, mesaj)= diye bir fonksiyon varsa
+	 bu şekilde de parametre gönderebiliyoruz: =merhaba(mesaj=deneme, isim=eren)=.
+	 Fakat artık eğer istenirse sadece pozisyonel parametreler de
+	 tanımlanabilecek. Çok sık Python yazmadığım için tam olarak hangi sorunu
+	 çözüyor bilemiyorum ama eklendiğine göre ihtiyaç vardı demekki. Detaylı bilgi
+	 için mutlaka PEP sayfasına bakın. Özellikle "How To Teach This" başlığı
+	 altındaki kısıma bakmanızı tavsiye ederim. Sadece özelliği geliştirip
+	 bırakmamışlar, aynı zamanda bunun insanlara nasıl öğretileceğini de
+	 açıklamışlar.
+
+	Diğer yenilikler için [[https://www.python.org/dev/peps/pep-0569/#features-for-3-8][bu PEP sayfasını ziyaret]] edebilirsiniz.
+* C++20 için komite taslağı [[https://www.reddit.com/r/cpp/comments/cfk9de/201907_cologne_iso_c_committee_trip_report_the/][hazırlanmış]]
+	Bildiğiniz gibi C++ programlama dilinin her 3 yılda bir yeni sürümü çıkıyor.
+	Önümüzdeki yıl çıkacak olan C++20 için de ISO C++ Komitesi toplanmış ve yeni
+	eklenecek olan özelliklere karar vermişler. C++ diline hiç hakim olmadığım için
+	yeni eklenecek özellileri de pek inceleyemedim fakat bağlantısını verdiğin
+	reddit gönderisinde liste halinde yeni özellikleri ve diğer bilgileri
+	bulabilirsiniz. C++20'nin 2020 ilkbaharında yayınlanması bekleniyor.
+** [[http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p0645r9.html][std::format]] ile metin biçimlendirme
+	 Diğer birçok programlama dilinde de karşılaştığımız string içerisinde değişken
+	 kullanmaya olanak sağlayan özellik C++20'de geliyor. Örnek vermek gerekirse:
+
+	 Eskiden bu şekilde yazdığımız satır:
+
+   #+ATTR_LATEX: :options frame=lines, linenos, label=C++, labelposition=topline
+   #+BEGIN_SRC cpp
+     cout << "Merhaba, " << kullanici_adi << ".\n";
+     cout << "Toplam " << okunmamis_mesaj_sayisi << " adet okunmamış mesajınız var!\n";
+  #+END_SRC
+
+	 Artık bu şekilde sadeleşecek:
+   #+ATTR_LATEX: :options frame=lines, linenos, label=C++, labelposition=topline
+	 #+BEGIN_SRC cpp
+     std::format("Merhaba, {}.\n", kullanici_adi);
+     std::format("Toplam {} adet okunmamış mesajınız var!\n", okunmamis_mesaj_sayisi);
+	 #+END_SRC
+* Go geliştiricileri, dilin içerisine hata kontrol fonksiyonu ekleme isteğini reddetti
+	5 Haziran'dan beri Github üzerinde tartışılan bu konu, 17 Temmuz'da issue
+	sayfasını açan takım üyesinin [[https://github.com/golang/go/issues/32437#issuecomment-512035919][yazdığı yorum]] ile reddedildiği duyuruldu. Diğer
+	programlama dillerinde =try {} catch () {}= gibi söz dizimleri ile sıkça
+	gördüğümüz özellik Go dilinde henüz mevcut değil. Şu an şöyle bir yapı
+	kullanılıyor:
+
+  #+ATTR_LATEX: :options frame=lines, linenos, label=Go, labelposition=topline
+	#+BEGIN_SRC go
+    f, err := os.Open(filename)
+
+    if err != nil {
+      return …, err
+    }
+	#+END_SRC
+
+	Bu kullanımdaki sorun 2018'de Russ Cox tarafından [[https://go.googlesource.com/proposal/+/master/design/go2draft-error-handling-overview.md][detaylıca raporlanmıştı]].
+	Özetlemek gerekirse, yukarıdaki kullanım kod karmaşıklığını arttırdığı gibi
+	kodun temiz görünmesinin de önüne geçiyor, iddiası var. Raporda taslak olarak
+	bir çözüm önerilmiş fakat sonuç olarak 2019 Haziran'da =try= fonksiyonu [[https://github.com/golang/proposal/blob/master/design/32437-try-builtin.md][tasarı
+	olarak yazılmış]] ve bugün konuşulan bu halini almış:
+
+  #+ATTR_LATEX: :options frame=lines, linenos, label=Go, labelposition=topline
+	#+BEGIN_SRC go
+    f := try(os.Open(filename))
+	#+END_SRC
+
+	Görüldüğü gibi yukarıdaki yapıdan daha sade ve temiz bir hata yakalama olanağı
+	sunuyor. Burada şunu belirtmekte fayda var: Dile yeni bir anahtar kelime
+	(keyword) eklenmeyecek, yeni bir fonksiyon olarak eklenecek bu özellik.
+	Github'daki tartışma çok uzun, yüzlerce yorum yazılmış hepsini okuyamadım fakat
+	issue yazarının hazırladığı tartışma özetlerini(1 2) okudum, tüm tartışmayı
+	okuyamadığım ve dile de pek hakim olmadığım için yorum yapamayacağım fakat
+	sonuç olarak bu istek reddedilmiş. Anladığım kadarıyla pek sağlıklı bir
+	tartışma ortamı da kurulamamış gözüküyor.
+* MSRC organizasyonu güvenli programlama dillerini [[https://www.zdnet.com/article/microsoft-to-explore-using-rust/][keşfetmeye Rust ile başladı]]
+	Microsoft Security Response Centre organizasyonu, bloglarında bu hafta
+	yayınladıkları [[https://msrc-blog.microsoft.com/2019/07/16/a-proactive-approach-to-more-secure-code/][blog yazısı]] ile birlikte yeni bir yazı serisine başladıklarını
+	duyurdu. Bu yazı serisinin amacı güvenli programlama dillerini keşfetmek ve
+	incelemek olacakmış. Mozilla tarafından geliştirilen, son zamanlarda özellikle
+	bellek-korumalı (memory-safe) yapısı nedeniyle popülaritesi artan [[https://www.rust-lang.org/][Rust]]
+	programlama dilini de bu yazı serisi için başlangıç olarak seçmişler.
+	Çalışmalarını takip etmeye çalışacağım.
+* ABD Finansal Hizmetler Komitesi'nde [[https://www.c-span.org/video/?c4808083/rust-language-chosen][Rust konuşuldu]]
+	Komitenin toplanma nedenini tam olarak bilmiyorum fakat Facebook'un
+	geliştirdiği kripto para Libra hakkında olduğu açıkça belli. Komite üyesi,
+	Facebook'dan yetkili olduğunu düşündüğüm kişiye "[[https://github.com/libra/libra][GitHub deponuza]] baktım
+	projenin büyük bir bölümü Rust dilini kullanıyor. Rust neden seçildi? Rust
+	dilinin güvenlik sorunları için yeterli olduğuna inanıyor musunuz?" şeklinde
+	bir soru sordu. Facebook yetkilisinin verdiği cevaptan sonra komite üyesi, bu
+	sefer de "Libra, Rust dilinin Nightly Build (stabil olmayan) sürümünü
+	kullanıyor. Nightly Build sürümde tam olarak hangi özelliklere ihtiyacınız var
+	ve neden stabil sürümleri kullanmıyorsunuz?" şeklinde bir soru soruyor. Bir
+	bürokratın bu konulara bu kadar hakim olması beni şaşırttı. Bizdeki "[[https://www.youtube.com/watch?v=Sn7pNTsY5iY][bulut
+	bilişim]]" vakası akıllara gelince insan imreniyor tabi...
+* JDK 13 sürümü "Rampdown" [[https://mail.openjdk.java.net/pipermail/jdk-dev/2019-July/003170.html][ikinci aşamaya geçti]]
+	OpenJDK takımı 13 sürümü için yeni özellik (feature) seti kabul etmeyi
+	durdurdu. Bu aşamadan sonra yeni özellik eklemek yerine [[https://bugs.openjdk.java.net/browse/JDK-8226964?filter=33405][raporlanan hataları]]
+	gidermeye odaklanacaklarmış. [[http://openjdk.java.net/projects/jdk/13/#Schedule][Planladıkları takvimine göre]] ilk RC (Release
+	Candidate) sürümü 8 Ağustos, final RC sürümü ise 22 Ağustos tarihinde
+	yayınlanacak gibi gözüküyor. Sürümün genel kullanılabilirlik durumuna gelmesi
+	de 17 Eylül tarihini bulacak.
+  #+LATEX: \newpage
+* Google, açık bulanlara verilen [[https://security.googleblog.com/2019/07/bigger-rewards-for-security-bugs.html][ödül miktarlarını arttırdı]]
+	Yeni ödül tablosu bu şekilde:
+
+  #+CAPTION: Tablo kaynağı: https://www.google.com/about/appsecurity/chrome-rewards/index.html#rewards
+	[[file:gorseller/google-odulleri-arttirdi.png]]
+
+	Hadi bakalım klavyeler çalışsın! :)
+* Diğer Haberler
+  - Yazılım üzerine yeni bir türkçe podcast serisi başladı: [[https://kodpod.live/][kodpod]].
+  - NIST, Amerika'da Yapay Zeka Standartları belirlemeye çalışıyor. [[https://www.nist.gov/sites/default/files/documents/2019/07/02/plan_for_ai_standards_publicreview_2july2019.pdf][Taslak Metin]]
+  - TypeScript 3.6 Beta [[https://devblogs.microsoft.com/typescript/announcing-typescript-3-6-beta/][duyuruldu]]
+  - Nim programlama dilinin 0.20.2 sürümü [[https://nim-lang.org/blog/2019/07/17/version-0202-released.html][yayınlandı]].
+  - Google, Chrome içersinden XSS Auditor aracını [[https://nakedsecurity.sophos.com/2019/07/18/google-chrome-is-ditching-its-xss-detection-tool/][kaldırıyor]].
+  - Küçük boyutuyla öne çıkan Go derleyicisinin 0.7.0 sürümü [[https://github.com/tinygo-org/tinygo/releases/tag/v0.7.0][duyuruldu]].
+  - Volta JavaScript Launcher v0.5.7 sürümü [[https://github.com/volta-cli/volta/releases/tag/v0.5.7][duyuruldu]].
+  - JavaScript ve TypeScript'de GraphQL için otomatik tamamlama özelliği sunan
+    araç açık kaynak olarak yayınlandı: [[https://github.com/graphql-editor/graphql-zeus][graphql-zeus]].
+  - Birden fazla veritabanını tek bir SQL sorgusunda kullanmaya olanak sağlayan
+    araç açık kaynak olarak yayınlandı: [[https://github.com/cube2222/octosql][octosql]]
+  - YugaByte DB ürünü [[https://blog.yugabyte.com/why-we-changed-yugabyte-db-licensing-to-100-open-source/][açık kaynak oldu]]. [[https://github.com/YugaByte/yugabyte-db][GitHub Deposu]]
+  - Zstandard 1.4.1 sürümü [[https://github.com/facebook/zstd/releases/tag/v1.4.1][duyuruldu]].
+  - Dağıtık işlemsel anahtar-değer (key-value) veritabanı TiKV 3.0 sürümü
+    [[https://tikv.org/blog/tikv-3.0ga/][duyuruldu]]. [[https://github.com/tikv/tikv][GitHub Deposu]]
+  - Dağıtık yapay zeka projeleri için TensorFlow kütüphanesi yayınlandı: [[https://github.com/zurutech/ashpy][ashpy]].
+  - Microservisler için komut satırı aracı monday 0.0.9 sürümü [[https://github.com/eko/monday/releases/tag/0.0.9][duyuruldu]].
+  - Rust uygulamaları için güvenlik odaklı uygulama framework sisteminin v0.2.0
+    sürümü yayınlandı: [[https://iqlusion.blog/introducing-abscissa-rust-application-framework][abscissa]]. [[https://github.com/iqlusioninc/abscissa][GitHub Deposu]]
+  - Veritabanı yönetim aracı ElectroCRUD 2.2.0 beta sürümü [[https://github.com/garrylachman/ElectroCRUD/releases/tag/2.2.0-beta][duyuruldu]].
+  - Akademik yayınlar:
+    - [[https://arxiv.org/abs/1907.07804][OmniNet: A unified architecture for multi-modal multi-task learning]] Github
+      deposu: https://github.com/subho406/OmniNet
+    - [[https://arxiv.org/abs/1907.07587][A Differentiable Programming System to Bridge Machine Learning and
+      Scientific Computing]]
+    - [[https://arxiv.org/abs/1907.03890][Manticore: A User-Friendly Symbolic Execution Framework for Binaries and
+      Smart Contracts]]
+* Lisans
+  #+BEGIN_CENTER
+  #+ATTR_HTML: :height 75
+  #+ATTR_LATEX: :height 1.5cm
+  [[file:../../../img/CC_BY-NC-SA_4.0.png]]
+
+  [[file:yazilim-gundemi-02.org][Yazılım Gündemi - 2]] yazısı [[https://erenhatirnaz.github.io][Eren Hatırnaz]] tarafından [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Creative Commons
+  Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı]] (CC BY-NC-SA 4.0)
+  ile lisanslanmıştır.
+  #+END_CENTER

@@ -39,9 +39,9 @@
 	 özelliği kullanmak için:
 
 	 #+BEGIN_EXAMPLE
-		 $ git clone --filter=blob:none --no-checkout /sizin/deponuz/ depo
-		 $ cd depo
-		 $ git sparse-checkout init
+     $ git clone --filter=blob:none --no-checkout /sizin/deponuz/ depo
+     $ cd depo
+     $ git sparse-checkout init
 	 #+END_EXAMPLE
 	 komutlarını çalıştırmanız yeterli. Sırasıyla çalıştırdığımız komutları
 	 incelemek gerekirse:
@@ -59,7 +59,7 @@
 	 =enable=, =disable= gibi alt komutları da mevcut.
 
 	 #+BEGIN_EXAMPLE
-		 $ git sparse-checkout set /dosya/yolu
+     $ git sparse-checkout set /dosya/yolu
 	 #+END_EXAMPLE
 	 gibi bir komut çalıştırarak indirmek istediğiniz dosya yollarını
 	 belirtebilirsiniz. Böylece tüm depoyu indirmek yerine sadece çalışmak

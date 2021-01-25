@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 22:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi - 19</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi - 19
+<br />
+<span class="subtitle">18 Kasım-1 Aralık 2019</span>
+</h1>
+<div id="table-of-contents">
+<h2>İçindekiler</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgfadc7e8">1. Özgür Yazılım Derneği kuruldu</a></li>
+<li><a href="#org7ec8587">2. PHP 7.4.0 stabil sürümü yayınlandı</a>
+<ul>
+<li><a href="#org5713649">2.1. Unpacking inside arrays (Dizi içerisinde dizi açmak)</a></li>
+<li><a href="#orgff3d4db">2.2. Numeric literal separator</a></li>
+</ul>
+</li>
+<li><a href="#orge0aeaf7">3. Facebook ve Microsoft'dan uzaktan geliştirme işbirliği</a></li>
+<li><a href="#orge9a615e">4. Tüm JetBrains IDE'leri 2019.3 sürümüne güncellendi</a>
+<ul>
+<li><a href="#orgac134ed">4.1. PHPStorm 2019.3</a></li>
+</ul>
+</li>
+<li><a href="#orgf68e5d9">5. Windows Terminal Preview v0.7 yayınlandı</a></li>
+<li><a href="#orgc278ea1">6. Yaklaşan Etkinlikler</a></li>
+<li><a href="#org649235e">7. Diğer Haberler</a></li>
+<li><a href="#orgb793fb2">8. Lisans</a></li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gundemi-banner.png" alt="yazilim-gundemi-banner.png" />
+</p>
+</div>
+
+<div class="org-center">
+<p>
+<a href="../18/yazilim-gundemi-18.html">&lt; Önceki Gündem</a> | <b>18 Kasım-1 Aralık 2019</b> | <a href="../20/yazilim-gundemi-20.html">Sonraki Gündem &gt;</a>
+</p>
+
+<p>
+<a href="https://teknoseyir.com/blog/yazilim-gundemi-19-18-kasim-1-aralik-2019">TeknoSeyir'de Oku</a>
+</p>
+</div>
+
+<div id="outline-container-orgfadc7e8" class="outline-2">
+<h2 id="orgfadc7e8"><span class="section-number-2">1</span> <a href="https://www.oyd.org.tr/">Özgür Yazılım Derneği</a> kuruldu</h2>
+<div class="outline-text-2" id="text-1">
+
+<div class="figure">
+<p><img src="gorseller/ozgur-yazilim-dernegi.jpg" alt="ozgur-yazilim-dernegi.jpg" height="250" />
+</p>
+</div>
+
+<p>
+Özgür Yazılım, Richard Stallman tarafından ortaya atılmış ve topluluk
+tarafından geliştirilmiş bir felsefedir. Her ne kadar Richard Stallman'ın
+karıştığı son olaylar (<a href="../10/yazilim-gundemi-10.html">Yazılım Gündemi - 10</a>) hoş olmasa da böyle bir felsefeyi
+ve akımı başlatması açısından bence önemli bir kişiliktir. Bu felsefe dünya
+genelinde Free Software Foundation oluşumu üzerinden tanıtılmaya ve yayılmaya
+çalışıyor fakat Türkiye'de de bu konuyu önemseyen kişiler tarafından bir
+girişim yapılmış ve Özgür Yazılım Derneği, İstanbul'da kurulmuş. Derneğin web
+sitesinden anladığım kadarıyla sanırım dernek yeni kurulmadı, bir süredir var
+fakat benim de bu hafta <a href="https://teknoseyir.com/haftalik-gundem-degerlendirmesi-2019-48">Haftalık Gündem Değerlendirmesi 2019/48</a>'de duyarak
+haberdar olduğum bir oluşum oldu.
+</p>
+
+<p>
+Derneğin web sitesini incelediğimde 3 üyelik tipinin bulunduğunu öğrendim.
+Bunlar şu şekilde:
+</p>
+
+<blockquote>
+<ul class="org-ul">
+<li>Destekçi Üye: Derneğin faaliyetlerine destek olmak amacıyla maddi veya ayni
+yardımda bulunan üyelerdir.</li>
+<li>Üye: Dernek tüzüğünün 5⁄1 fıkrası uyarınca hukuken derneğin üyesi olan,
+Genel Kurulu oluşturan, dernek organlarını seçme ve organlarda görev alma
+hakkı bulunan üyelerdir.</li>
+<li>Onur Üyeliği: Derneğin amaçları için çalışmış, toplumda bu konuda saygı
+gören ve eserleri ile dernek amaçlarına katkısı bulunmuş kişiler arasından
+Genel Kurul kararı ile üyeliğe alınan üyelerdir. Onur üyelerinin aidat
+yükümlülüğü ve oy hakları yoktur.</li>
+</ul>
+</blockquote>
+
+<p>
+Desteki Üye olmak kategorisinden derneğe katılmak bir SMS uzaklığınızda. OYD
+yazıp 8071'e gönderdiğiniz takdirde Özgür Yazılım Derneğine aylık 20TL bağışta
+bulunabilir (10 TL için OYD10 yazabilirsiniz) ve sayfada sizden istenen birkaç
+bilgiyi sağlayarak Destekçi Üye kaydınızı tamamlayabilirsiniz. Diğer bağış
+yöntemleri için <a href="https://bagis.oyd.org.tr/">bu sayfayı</a> inceleyebilirsiniz.
+</p>
+
+<p>
+Derneğin kurulmasında emeği geçen tüm arkadaşları tebrik ederim. Şu an
+sektörden biraz uzak olsam da ileride benim de içinde bulunmak istediğim bir
+oluşum.
+</p>
+</div>
+</div>
+<div id="outline-container-org7ec8587" class="outline-2">
+<h2 id="org7ec8587"><span class="section-number-2">2</span> PHP 7.4.0 stabil sürümü <a href="https://www.php.net/archive/2019.php#2019-11-28-1">yayınlandı</a></h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Uzun bir süredir geliştirilmekte olan PHP programlama dilinin 7.4.0 numaralı ve
+stabil olan sürümü bu hafta içerisinde yayınlandı. Daha önceki bir yazılım
+gündemi yazısında da (bkz: <a href="../03/yazilim-gundemi-03.html">Yazılım Gündemi - 3</a>) paylaştığım üzere PHP 7.4'ün
+yayınlanma süreci büyük oranda planladıkları takvime uygun olarak ilerledi ve
+tamamlandı. Yine aynı yazılım gündemi yazısında beta süresince olan bazı yeni
+özellikleri tanıtmıştım bu yazıda da birkaç farklı özelliğe bakalım:
+</p>
+</div>
+<div id="outline-container-org5713649" class="outline-3">
+<h3 id="org5713649"><span class="section-number-3">2.1</span> Unpacking inside arrays (Dizi içerisinde dizi açmak)</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+JavaScript ve diğer dillerde spreads ismiyle gördüğümüz bu özellik artık
+PHP'de de var. Yani artık bir dizinin elemanlarını başka bir dizinin içerisine
+çıkartabileceğiz.
+</p>
+<div class="org-src-container">
+<pre class="src src-php"><span class="org-php-variable-sigil">$</span><span class="org-php-variable-name">parca</span> <span class="org-php-assignment-op">=</span> [<span class="org-php-string">'elma'</span>, <span class="org-php-string">'armut'</span>];
+<span class="org-php-variable-sigil">$</span><span class="org-php-variable-name">meyveler</span> <span class="org-php-assignment-op">=</span> [<span class="org-php-string">'muz'</span>, <span class="org-php-string">'portakal'</span>, ...<span class="org-php-variable-sigil">$</span><span class="org-php-variable-name">parca</span>, <span class="org-php-string">'karpuz'</span>];
+<span class="org-comment-delimiter">// </span><span class="org-comment">dizinin son hali: ['muz', 'portakal', 'elma', 'armut', 'karpuz'];</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgff3d4db" class="outline-3">
+<h3 id="orgff3d4db"><span class="section-number-3">2.2</span> Numeric literal separator</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Daha kolay okunabilmesi için artık sayıları bu şekilde basamaklara
+ayırabileceğiz:
+</p>
+<div class="org-src-container">
+<pre class="src src-php">6.674_083e<span class="org-php-arithmetic-op">-</span>11; <span class="org-comment-delimiter">// </span><span class="org-comment">float</span>
+299_792_458;   <span class="org-comment-delimiter">// </span><span class="org-comment">decimal</span>
+0xCAFE_F00D;   <span class="org-comment-delimiter">// </span><span class="org-comment">hexadecimal</span>
+0b0101_1111;   <span class="org-comment-delimiter">// </span><span class="org-comment">binary</span>
+</pre>
+</div>
+
+<p>
+Elbette eklenen özellikler olduğu gibi değişen ve kullanımdan
+kaldırılmaya hazırlanan (deprecate) bazı özellikler de mevcut. Bunlar için <a href="https://www.php.net/manual/en/migration74.deprecated.php">şu
+sayayı</a> ziyaret edebilirsiniz. PHP ile yüklü gelen eklentilerden de şu 3
+eklenti artık PHP ile birlikte dağıtılmayacak:
+</p>
+<ul class="org-ul">
+<li><a href="https://www.php.net/manual/en/book.ibase.php">Firebird/Interbase</a></li>
+<li><a href="https://www.php.net/manual/en/book.recode.php">Recode</a></li>
+<li><a href="https://www.php.net/manual/en/book.wddx.php">WDDX</a></li>
+</ul>
+
+<p>
+Yeni stabil sürümü indirmek isterseniz <a href="https://www.php.net/downloads.php">bu sayfayı</a> ziyaret edebilirsiniz.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orge0aeaf7" class="outline-2">
+<h2 id="orge0aeaf7"><span class="section-number-2">3</span> Facebook ve Microsoft'dan uzaktan geliştirme <a href="https://developers.facebook.com/blog/post/2019/11/19/facebook-microsoft-partnering-remote-development/">işbirliği</a></h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Malumunuz devir tüm ihtiyaçların bulut bilişim çözümleriyle giderilmeye
+çalışıldığı günümüzde konu bize de geldi. Özellikle de son birkaç ayda
+duyurulan araçlar ve hizmetlerle de (bkz: <a href="../17/yazilim-gundemi-17.html">Yazılım Gündemi - 17</a>) daha popüler
+olan uzaktan geliştirme (Remote Development) konusundan bahsediyorum.
+Geçtiğimiz hafta yayınlanan blog yazısı ile birlikte de Microsoft ve Facebook,
+Visual Studio Code aracının uzaktan geliştirme özelliklerini iyileştirmek için
+birlikte çalışacağı ilan edildi.
+</p>
+
+<p>
+Facebook da elbette isteyen kendi rahat ettiği programlama aracını kullanıyor
+fakat çoğunluk bir kısım da Facebook'un, Atom editörünü özelleştirerek
+çıkardığı Nuclide editörünü kullanıyormuş. Fakat geçtiğimiz yıl bu editörün
+açık kaynak sürümünü <a href="https://nuclide.io/">emekliye ayırmışlar</a>. Microsoft'un Visual Studio Code'a
+remote development özelliği eklemeye ve iyileştirmeye başladığından beri bu
+özellik Facebook içerisinde çok fazla kullanılıyormuş. Geliştiricilere
+getirdiği kolaylıklar ise:
+</p>
+<ul class="org-ul">
+<li>Projenin boyutu fark etmeksizin bilgisayarın özelliklerine bağlı kalmadan
+istediğin projede zorlanmadan geliştirme yapabilmek,</li>
+<li>Birbirinden tamamen bağımsız geliştirme ortamları yaratarak projelerin
+bağımlılıkları ile ilgili çakışmaları önleyebilmek,</li>
+<li>Projeler arasında hızlı bir şekilde geçiş yapabilmek ve çalıştırabilmek.</li>
+</ul>
+<p>
+Facebook geliştirme ekibi da bu olanaklardan fazlasıyla faydalandıkları için
+Microsoft'a bu özelliği iyileştirmek için yardım edecekmiş. Planlanan
+iyileştirmelerden yazıda bahsedilmemiş, bakalım ne gibi çalışmalar yapacaklar.
+</p>
+
+<p>
+Açıkcası her ne kadar uzaktan geliştirme konusuna pek sıcak bakmasam da
+sağladığı kolaylıklar hiç öyle yabana atılır cinsten değil. Özellikle günümüzde
+taşınabilir geliştirme ortamları önem kazanmaya başladı. Ben de ileride
+aklımdaki sistemi kurabilirsem kendi evimde bu tarz bir uzaktan geliştirme
+ortamı yaratmak istiyorum bakalım. Daha önceki bir yazıda sormuştum fakat yeri
+gelmişken tekrar sorayım, belki farklı konulara da kapı açabiliriz: Siz uzaktan
+geliştirme konusunda ne düşünüyorsunuz? Tercih eder miydiniz? Yorumlar kısmında
+konuşalım.
+</p>
+</div>
+</div>
+<div id="outline-container-orge9a615e" class="outline-2">
+<h2 id="orge9a615e"><span class="section-number-2">4</span> Tüm JetBrains IDE'leri 2019.3 sürümüne güncellendi</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+JetBrains, Kotlin programlama dilini üreten firma olmasından ziyade aynı
+zamanda çok başarılı ve güçlü programlama araçlarıyla da ünlü bir şirket. Ben
+de zamanında çok fazla ürününü kullanmış ve ara ara hala kullanan biri olarak
+söyleyebilirim ki gerçekten geliştirici camiasının ihtiyaçlarını çok iyi analiz
+eden ve buna göre çözümler üreten bir firmadır. Her neyse konumuza gelelim: Bu
+hafta tüm JetBrains IDE'lerine güncellemeler geldi. Benim ilgili olduğum bir
+IDE'ye gelen özelliklere birlikte göz atalım:
+</p>
+</div>
+<div id="outline-container-orgac134ed" class="outline-3">
+<h3 id="orgac134ed"><span class="section-number-3">4.1</span> <a href="https://blog.jetbrains.com/phpstorm/2019/11/phpstorm-2019-3-release/">PHPStorm 2019.3</a></h3>
+<div class="outline-text-3" id="text-4-1">
+
+<div class="figure">
+<p><img src="gorseller/phpstorm-2019.3.png" alt="phpstorm-2019.3.png" height="250" />
+</p>
+</div>
+
+<ul class="org-ul">
+<li>PHP 7.4 ile gelen bütün özelliklere destek (üstelik deprecate olacakları da
+gösteriyor),</li>
+<li><a href="https://www.php-fig.org/psr/psr-12/">PSR-12 Standardı</a> desteği,</li>
+<li>WSL (Windows Subsystem for Linux) desteği,</li>
+<li>PHPDoc iyileştirmeleri,</li>
+<li>Diğer özellikler için alt konu başlığına eklediğim bağlantıya
+tıklayabilir ya da <a href="https://www.youtube.com/watch?v=h9KGsD87t_M">şuradaki videou izleyebilirsiniz</a>.</li>
+</ul>
+
+<p>
+Diğer IDE güncellemeleri ise şu şekilde:
+</p>
+<ul class="org-ul">
+<li><a href="https://blog.jetbrains.com/idea/2019/11/intellij-idea-2019-3-better-performance-and-quality/">Intellij Idea 2019.3</a>,</li>
+<li><a href="https://blog.jetbrains.com/webstorm/2019/11/webstorm-2019-3/">WebStorm 2019.3</a>,</li>
+<li><a href="https://blog.jetbrains.com/pycharm/2019/11/pycharm-2019-3-release-candidate/">PyCharm 2019.3</a>,</li>
+<li><a href="https://blog.jetbrains.com/go/2019/11/29/goland-2019-3/">GoLand 2019.3</a>,</li>
+<li><a href="https://blog.jetbrains.com/clion/2019/11/clion-2019-3-release/">CLion 2019.3</a>,</li>
+<li><a href="https://blog.jetbrains.com/objc/2019/11/appcode-2019-3-rc/">AppCode 2013.3 Release Candidate</a>,</li>
+<li><a href="https://blog.jetbrains.com/datagrip/2019/11/15/datagrip-2019-3-eap-4/">DataGrid 2019.3 Erken Erişim 4</a>,</li>
+<li><a href="https://blog.jetbrains.com/ruby/2019/11/rubymine-2019-3-released/">RubyMine 2019.3</a>,</li>
+<li><a href="https://blog.jetbrains.com/dotnet/2019/11/18/new-way-commit-introducing-commit-repository-tool-windows-rider-2019-3-eap/">Rider 2019.3 Erken Erişim</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf68e5d9" class="outline-2">
+<h2 id="orgf68e5d9"><span class="section-number-2">5</span> Windows Terminal Preview v0.7 <a href="https://devblogs.microsoft.com/commandline/windows-terminal-preview-v0-7-release/">yayınlandı</a></h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Microsoft'un açık kaynak camiasına açılmasından sonra yaptığı birkaç işi
+gerçekten severek takip ediyorum. Bunlardan birisi Visual Studio Code, diğeri
+ise Windows Terminal. Her ne kadar geliştirme yapmak için kullandığım dizüstü
+bilgisayarımda Windows kullanmasam da oyun bilgisayarı olarak kullandığım
+masaüstü sistemimde Windows var ve bazen orada da programlama testleri
+yapıyorum. Yeni Windows Terminal'i de WSL (Windows Subsystem for Linux) ile
+birlikte kullanıyorum. Bu hafta yeni bir önizleme sürümü olan 0.7 sürümünü
+tanıttılar.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/winterminal-bolme.gif" alt="winterminal-bolme.gif" />
+</p>
+<p><span class="figure-number">Şekil 4: </span>Benim de uzun zamandır ihtiyaç duyduğum bir terminal sekmesini birden çok parçaya bölme özelliği sonunda geldi, buna sevindim. Şimdiye kadar niye	olmadığını hiç anlamadığım bir başka özellik de sekmelerin sırasını	değiştirmekti ve o da bu sürümde geldi.</p>
+</div>
+
+<p>
+Bunların yanında sekmelerin isimlerini özelleştirme ve bazı görsel
+iyileştirmeler de katılmış durumda. Ne kadar ön izleme sürümü olsa da, Windows
+üzerinde programlama yapan arkadaşlara şiddetle tavsiye ederim.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc278ea1" class="outline-2">
+<h2 id="orgc278ea1"><span class="section-number-2">6</span> Yaklaşan Etkinlikler</h2>
+<div class="outline-text-2" id="text-6">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" width="100%">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Etkinlik İsmi</th>
+<th scope="col" class="org-left">Yeri</th>
+<th scope="col" class="org-left">Tarihi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/bulut-mimarisindeki-yapay-zeka-servisleri-registration-83943492245">Bulut Mimarisindeki Yapay Zeka Servisleri</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">3 Aralık 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/devops-turkiye/events/blutv-kubernetes-microservices">BluTV Kubernetes &amp; Microservices</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">4 Aralık 18:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/software-craftsmanship-turkey/events/yazilim-sektorunde-korku-kaygi-ve-ozguven">Yazılım Sektöründe Korku, Kaygı ve Özgüven</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">4 Aralık 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/sovos-foriba-rd/events/microprofile-payara-micro-openshift">Microprofile &amp; Payara Micro &amp; OpenShift</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">5 Aralık 17:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://btz.org.tr/">İTÜ İMK 12. Bilişim Teknolojileri Zirvesi</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">6 Aralık 10:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/python-for-hackers-hacknightsorg-tickets-78151145179">Python For Hackers</a></td>
+<td class="org-left">Ankara</td>
+<td class="org-left">6 Aralık 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://www.akdenizbilisimzirvesi.com/">5.Akdeniz Bilişim Zirvesi 2019</a></td>
+<td class="org-left">Antalya</td>
+<td class="org-left">7 Aralık 08:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/tr-TR/gdgeskisehir/events/265590646/">GDG DevFest'19 Eskişehir</a></td>
+<td class="org-left">Eskişehir</td>
+<td class="org-left">7 Aralık 09:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/tr-TR/GDGSivas/events/265339155/">GDG DevFest'19 Sivas</a></td>
+<td class="org-left">Sivas</td>
+<td class="org-left">7 Aralık 10:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/ruby-turkiye/events/ruby-turkiye-bulusmasi-7">Ruby Türkiye Buluşması 7</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">7 Aralık 13:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/tr-TR/GDGBursa/events/265736999/">GDG DevFest'19 Bursa</a></td>
+<td class="org-left">Bursa</td>
+<td class="org-left">8 Aralık 09:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/tr-TR/GDG-Hatay/events/265309353/">GDG DevFest'19 Hatay</a></td>
+<td class="org-left">Hatay</td>
+<td class="org-left">9 Aralık 09:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://gdgkayseri.com/tanitim-dosyasi.pdf">GDG DevFest'19 Kayseri</a> [PDF Tanıtım Dosyası]</td>
+<td class="org-left">Kayseri</td>
+<td class="org-left">9 Aralık</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/tr-TR/GDG-Duzce-Meetup/events/263335030/">GDG DevFest'19 Düzce</a></td>
+<td class="org-left">Düzce</td>
+<td class="org-left">11 Aralık 12:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/dsc-istinye/events/flutter-interact">Flutter Interact</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">11 Aralık 15:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/tr-TR/GDGTrabzon/events/265973568/">GDG DevFest'19 Trabzon</a></td>
+<td class="org-left">Trabzon</td>
+<td class="org-left">13 Aralık 09:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/sharepoint/events/sharepoint-saturday-istanbul-2019">SharePoint Saturday Istanbul 2019</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">14 Aralık 10:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/tr-TR/GDGBolu/events/265427159/">GDG DevFest'19 Bolu</a></td>
+<td class="org-left">Bolu</td>
+<td class="org-left">14 Aralık 10:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://devfest.gdgkocaeli.com/">GDG DevFest'19 Kocaeli</a></td>
+<td class="org-left">Kocaeli</td>
+<td class="org-left">15 Aralık 09:30</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org649235e" class="outline-2">
+<h2 id="org649235e"><span class="section-number-2">7</span> Diğer Haberler</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>Cloudflare, yeni ağ güvenliği <a href="https://blog.cloudflare.com/introducing-flan-scan/">aracını açık kaynak olarak duyurdu</a>: <a href="https://github.com/cloudflare/flan">Flan Scan</a>.</li>
+<li>Slack, yeni ağ aracını <a href="https://slack.engineering/introducing-nebula-the-open-source-global-overlay-network-from-slack-884110a5579">açık kaynak olarak tanıttı</a>: <a href="https://github.com/slackhq/nebula">Nebula</a>.</li>
+<li>GitLab 12.5 sürümü <a href="https://about.gitlab.com/blog/2019/11/22/gitlab-12-5-released/">duyuruldu</a>.</li>
+<li>YesLogic, yazı tipi şekillendirme motorunu <a href="https://yeslogic.com/blog/allsorts-rust-font-shaping-engine.html">açık kaynak yaptı</a>: <a href="https://github.com/yeslogic/allsorts">Allsorts</a>.</li>
+<li>Kotlin programlama dilinin 1.3.60 sürümü <a href="https://blog.jetbrains.com/kotlin/2019/11/kotlin-1-3-60-released/">yayınlandı</a>.</li>
+<li>Julia programlama dilinin 1.3.0 sürümü <a href="https://github.com/JuliaLang/julia/releases/tag/v1.3.0">yayınlandı</a>.</li>
+<li>Haskell programlama dili 2019 topluluk <a href="https://taylor.fausak.me/2019/11/16/haskell-survey-results/">anketi sonuçları açıklandı</a>.</li>
+<li>Kaynak koddan programın akışını görselleştirmeye yarayan araç <a href="https://www.sourcetrail.com/blog/open_source/">artık açık
+kaynak ve özgür yazılım</a>: <a href="https://github.com/CoatiSoftware/Sourcetrail">Sourcetrail</a>.</li>
+<li>Fonksiyonun birden çok değer döndürmesine olanak sağlayan WebAssembly
+eklentisi prototipi <a href="https://hacks.mozilla.org/2019/11/multi-value-all-the-wasm/">yayınlandı</a>: <a href="https://github.com/WebAssembly/multi-value">multi-value</a>.</li>
+<li>GraalVM 19.3, JDK 11 desteğiyle birlikte <a href="https://medium.com/graalvm/graalvm-19-3-0-dfdb6f4ec8ed">duyuruldu</a>.</li>
+<li>MinGW Distro v17.0 <a href="https://github.com/StephanTLavavej/mingw-distro/releases/tag/v17.0">çıktı</a>. <a href="https://nuwen.net/mingw.html">İndirme Adresi</a></li>
+<li>JavaFuzz 1.22 sürümü <a href="https://github.com/fuzzitdev/javafuzz/releases/tag/javafuzz-1.22">çıktı</a>.</li>
+<li>Coreboot 4.11 sürümü <a href="https://blogs.coreboot.org/blog/2019/11/19/announcing-coreboot-4-11/">çıktı</a>.</li>
+<li>SBCL 1.5.9 sürümü <a href="http://www.sbcl.org/all-news.html#1.5.9">çıktı</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb793fb2" class="outline-2">
+<h2 id="orgb793fb2"><span class="section-number-2">8</span> Lisans</h2>
+<div class="outline-text-2" id="text-8">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="../../../img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+<a href="yazilim-gundemi-19.html">Yazılım Gündemi - 19</a> yazısı <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a> (CC BY-NC-SA 4.0)
+ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 1 Aralık 2019</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 22:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

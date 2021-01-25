@@ -1,4 +1,4 @@
-% Created 2021-01-24 Sun 22:50
+% Created 2021-01-25 Mon 10:29
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -44,7 +44,7 @@
 \end{center}
 
 \section{GitHub, Amerika yaptırımlarını \href{https://help.github.com/en/articles/github-and-trade-controls}{uygulamaya başladı}}
-\label{sec:orge20967e}
+\label{sec:orgd8c945b}
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{gorseller/github-amerika-yaptirimlari-1.png}
@@ -106,7 +106,7 @@ güvenmememiz gerektiğini -umarım- öğrenmiş olduk. Güya internette gerçek
 hayattaki gibi ülke sınırları yoktu, güya internetteyken fiziksel olarak
 nerede olduğumuzun bir önemi yoktu\ldots{}
 \section{PHP 7.4.0 \href{https://www.php.net/archive/2019.php\#2019-07-25-1}{Beta 1 yayınlandı}}
-\label{sec:org6d74481}
+\label{sec:org6fca5c6}
 22 Temmuz'da yeni özellik eklenmesi dondurulan (feature freeze) PHP 7.4'ün Beta
 1 etiketine sahip ilk sürümü ise 25 Temmuz'da duyuruldu. PHP Wiki sayfasındaki
 \href{https://wiki.php.net/todo/php74}{takvime göre} PHP 7.4.0 sürümün yayın sürecinin bu şekilde olması bekleniyor:
@@ -129,7 +129,7 @@ Tarih & Sürüm\\
 
 PHP 7.4.0 ile gelecek bazı özellikler bu şekilde:
 \subsection{Tipli sınıf özellikleri (\href{https://wiki.php.net/rfc/typed\_properties\_v2}{Typed Properties})}
-\label{sec:org4769101}
+\label{sec:org0d07af7}
 PHP'de sınıf kodlarken artık sınıfın özelliklerini bu şekilde tipli
 tanımlayabileceğiz:
 
@@ -145,7 +145,7 @@ class Kullanici {
 }
 \end{minted}
 \subsection{\href{https://wiki.php.net/rfc/arrow\_functions\_v2}{Arrow Functions}}
-\label{sec:orgaeb1ac7}
+\label{sec:org6789617}
 Önceden bu şekilde olan kullanımı:
 
 \begin{minted}[breaklines=true,breakanywhere=true,frame=lines, linenos, label=PHP, labelposition=topline, startinline=true]{php}
@@ -156,14 +156,12 @@ $kareleri = array_map(function($sayi) { return $sayi * $sayi; }, $sayilar);
 
 Artık bu formatta kullanabileceğiz:
 \begin{minted}[breaklines=true,breakanywhere=true,frame=lines, linenos, label=PHP, labelposition=topline, startinline=true]{php}
-<?php
-
 $sayilar = [1, 2, 3, 4, 5, 6];
 $kareleri = array_map(fn($sayi) => $sayi * $sayi, $sayilar);
 // 1, 4, 9, 16, 25, 36
 \end{minted}
 \subsection{\href{https://wiki.php.net/rfc/null\_coalesce\_equal\_operator}{Null Coalescing Assignment Operator}}
-\label{sec:org7509424}
+\label{sec:org2a8d0b4}
 Çevirisini yapamadım fakat bu operatör Türkiye'den birisi tarafından eklenen
 bir özellik. Kendisini GitHub'da \href{https://github.com/midorikocak}{midorikocak} kullanıcı adıyla
 bulabilirsiniz. Gelelim yeni operatörümüze, bu operatör sayesinde önceden bu
@@ -185,7 +183,7 @@ Bu katkısı için kendisine teşekkür ediyoruz.
 Yazının fazla uzamaması için bu konuyu burada bırakıyorum ama eğer
 ilgiliyseniz yeni özelliklerin tamamına \href{https://github.com/php/php-src/blob/php-7.4.0beta1/UPGRADING}{buradan erişebilirsiniz}.
 \section{JDK 13 ile gelecek özellikler \href{https://www.javaworld.com/article/3341388/jdk-13-the-new-features-coming-to-java-13.html}{belli oldu}}
-\label{sec:orgcd3c406}
+\label{sec:orgda286ab}
 \href{../02/yazilim-gundemi-02.pdf}{Geçen haftaki gündemde} JDK 13 sürümünün "Rampdown" ikinci aşamaya geçtiğini
 duyurmuştum. Bu hafta da yeni eklenecek bir özelliğe bakalım. Diğer özelliklere
 de baktım fakat uzun zamandır Java yazmadığım için tam anlayamadım. Ben de
@@ -195,7 +193,7 @@ Oracle çalışanı Java Dil Mimarı Brian Goetz tarafından yapılan bu sunumu
 izleyebilirsiniz: \href{https://www.infoq.com/presentations/java-futures-2019/}{Java Futures, 2019 Edition}.
 
 \subsection{Çok satırlı String ifadeler}
-\label{sec:org0875200}
+\label{sec:org5a73d0d}
 Önceden Java'da bir string değişken içerisine uzun bir ifade yazacağımız
 zaman, bu şekilde bir yöntem izliyorduk:
 
@@ -220,7 +218,7 @@ String html = """
               """;
 \end{minted}
 \section{Apache NetBeans 11.1 \href{https://netbeans.apache.org/download/nb111/index.html}{duyuruldu}}
-\label{sec:org06e9016}
+\label{sec:org20a40f4}
 \begin{itemize}
 \item Java EE 8 desteği,
 \item \href{https://www.payara.fish/}{Payara} entegrasyonu,
@@ -234,7 +232,7 @@ Source-Code Programs})
 Eklenen diğer özelliklerin tam listesi ve detaylar için konu başlığındaki
 bağlantıya tıklayabilirsiniz.
 \section{Intellij IDEA 2019.2 \href{https://www.jetbrains.com/idea/whatsnew/\#v2019-2}{yayınlandı}}
-\label{sec:org545fca5}
+\label{sec:orgbe52eaf}
 \url{gorseller/intellij-idea-java-tekrarlayan-kod-dedektoru.gif}
 
 NetBeans'e güncelleme gelir de, Intellij IDEA hiç geri kalır mı ?! Yapıştırmış
@@ -251,7 +249,7 @@ güncellemeyi:
 Eklenen diğer özelliklerin tam listesi ve detaylar için konu başlığındaki
 bağlantıya tıklayabilirsiniz.
 \section{Visual Studio 2019 \href{https://devblogs.microsoft.com/visualstudio/visual-studio-2019-version-16-2-generally-available-and-16-3-preview-1/}{16.2 ve 16.3 Preview 1 duyuruldu}}
-\label{sec:org6cb153e}
+\label{sec:orgcef2e30}
 \begin{itemize}
 \item Test Expolorer aracında iyileştirmeler,
 \item Microsoft Edge Insider ile JavaScript hata ayıklama desteği,
@@ -268,12 +266,12 @@ bağlantıya tıklayabilirsiniz.
 Eklenen diğer özelliklerin tam listesi ve detaylar için konu başlığındaki
 bağlantıya tıklayabilirsiniz.
 \section{.NET Ekosistemi için güvenlik raporu \href{https://snyk.io/blog/net-open-source-security-insights/}{yayınlandı}}
-\label{sec:org9955f52}
+\label{sec:orgc4bf8cf}
 \begin{center}
 \includegraphics[width=.9\linewidth]{gorseller/dotnet-guvenlik-raporu-tldr.png}
 \end{center}
 \section{Diğer Haberler}
-\label{sec:org76eb7d1}
+\label{sec:orgcf70396}
 \begin{itemize}
 \item FTP sunucusu ProFTPD'de güvenlik açığı tespit edildi: \href{https://tbspace.de/cve201912815proftpd.html}{CVE-2019-12815}.
 \href{https://nvd.nist.gov/vuln/detail/CVE-2019-12815}{Alternatif}
@@ -316,7 +314,7 @@ taşıyan GuPM isimli araç 1.2.0 \href{https://github.com/azukaar/GuPM/releases
 \item SQL raporlama aracı Poli v0.9.0 \href{https://github.com/shzlw/poli/releases/tag/v0.9.0}{sürümü yayınlandı}.
 \end{itemize}
 \section{Lisans}
-\label{sec:orga82cfe9}
+\label{sec:org7c59a0f}
 \begin{center}
 \begin{center}
 \includegraphics[height=1.5cm]{../../../img/CC_BY-NC-SA_4.0.png}

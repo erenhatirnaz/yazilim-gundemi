@@ -96,15 +96,15 @@
 
    #+ATTR_LATEX: :options frame=lines, linenos, label=PHP, labelposition=topline, startinline=true
    #+BEGIN_SRC php
-		class Kullanici {
-				public int $id;
-				public string $isim;
+     class Kullanici {
+         public int $id;
+         public string $isim;
 
-				public function __construct(int $id, string $isim) {
-						$this->id = $id;
-						$this->isim = $isim;
-				}
-		}
+         public function __construct(int $id, string $isim) {
+             $this->id = $id;
+             $this->isim = $isim;
+         }
+     }
    #+END_SRC
 ** [[https://wiki.php.net/rfc/arrow_functions_v2][Arrow Functions]]
    Önceden bu şekilde olan kullanımı:
@@ -119,8 +119,6 @@
 	 Artık bu formatta kullanabileceğiz:
    #+ATTR_LATEX: :options frame=lines, linenos, label=PHP, labelposition=topline, startinline=true
 	 #+BEGIN_SRC php
-     <?php
-
      $sayilar = [1, 2, 3, 4, 5, 6];
      $kareleri = array_map(fn($sayi) => $sayi * $sayi, $sayilar);
      // 1, 4, 9, 16, 25, 36
@@ -133,15 +131,15 @@
 
    #+ATTR_LATEX: :options frame=lines, linenos, label=PHP, labelposition=topline, startinline=true
 	 #+BEGIN_SRC php
-		 if (!isset($dizi['anahtar'])) {
-				 $dizi['anahtar'] = varsayilaniHesapla();
-		 }
+     if (!isset($dizi['anahtar'])) {
+         $dizi['anahtar'] = varsayilaniHesapla();
+     }
 	 #+END_SRC
 
 	 Artık aşağıdaki gibi tek satırda yazabileceğiz:
    #+ATTR_LATEX: :options frame=lines, linenos, label=PHP, labelposition=topline, startinline=true
 	 #+BEGIN_SRC php
-		 $dizi['anahtar'] ??= varsayilaniHesapla();
+     $dizi['anahtar'] ??= varsayilaniHesapla();
 	 #+END_SRC
 
 	 Bu katkısı için kendisine teşekkür ediyoruz.
@@ -163,11 +161,11 @@
 
    #+ATTR_LATEX: :options frame=lines, linenos, label=Java, labelposition=topline
 	 #+BEGIN_SRC java
-		 String html = "<html>" +
-				 "<body>" +
-				 "deneme" +
-				 "</body>" +
-				 "</html>";
+     String html = "<html>" +
+         "<body>" +
+         "deneme" +
+         "</body>" +
+         "</html>";
 	 #+END_SRC
 	 Bu şekilde bir kullanımda string parçaları birleştirildiği için biraz da olsa
 	 performansı etkiliyordu fakat artık Python'da görmeye alıştığımız 3 tırnak
@@ -175,13 +173,13 @@
 
    #+ATTR_LATEX: :options frame=lines, linenos, label=Java, labelposition=topline
 	 #+BEGIN_SRC java
-		 String html = """
-									 <html>
-										 <body>
-											 deneme
-										 </body>
-									 </html>
-									 """;
+     String html = """
+                   <html>
+                     <body>
+                       deneme
+                     </body>
+                   </html>
+                   """;
 	 #+END_SRC
 * Apache NetBeans 11.1 [[https://netbeans.apache.org/download/nb111/index.html][duyuruldu]]
 	- Java EE 8 desteği,

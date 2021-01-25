@@ -1,0 +1,246 @@
+#+TITLE: Yazılım Gündemi - 21
+#+SUBTITLE: 9-15 Aralık 2019
+#+Author: Eren Hatırnaz
+#+DATE: 16 Aralık 2019
+#+OPTIONS: ^:nil
+#+LANGUAGE: tr
+#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=black, filecolor=red, urlcolor=blue}
+#+LATEX_HEADER: \usepackage[turkish]{babel}
+#+HTML_HEAD: <link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+#+LATEX: \shorthandoff{=}
+
+[[file:gorseller/yazilim-gundemi-banner.png]]
+
+#+BEGIN_CENTER
+[[file:../20/yazilim-gundemi-20.org][< Önceki Gündem]] | *9-15 Aralık 2019* | [[file:../22/yazilim-gundemi-22.org][Sonraki Gündem >]]
+
+[[https://teknoseyir.com/blog/yazilim-gundemi-21-9-15-aralik-2019][TeknoSeyir'de Oku]]
+#+END_CENTER
+
+* Windows sistemleri etkileyen kritik Git [[https://github.blog/2019-12-10-multiple-git-vulnerabilities-in-2-24-and-older/][güvenlik açıkları kapatıldı]]
+	Aslında güvenlik açıkları sadece Windows sistemleri etkilemiyor, aynı zamanda
+	sisteminizde NTFS olarak formatlanmış bir disk bölümünüz varsa bu açıklarsan
+	sizde etkilenebilirsiniz. Git geliştiricileri, mümkün olan en kısa sürede Git
+	sürümlerinizi güncellemenizi öneriyor. Güvenlik açıklarının teknik detayları
+	başka güvenlik sorunlarına neden olabileceği için henüz yayınlanmamış fakat yol
+	açtıkları sorunlar hakkında kısa bilgilendirmelere ulaştım. Şöyle ki:
+
+  - [[https://github.com/git/git/security/advisories/GHSA-2pw3-gwg9-8pqr][CVE-2019-1348]]: =git fast-import= komutunun =--export-marks= argümanından
+    kaynaklanan dosya yollarının üzerine yazmayla ilgili bir güvenlik açığı.
+	- [[https://github.com/git/git/security/advisories/GHSA-4qvh-qvv7-frc7][CVE-2019-1349]]: =git clone= komutu ile resurcive olarak submodule indirirken
+    uzaktan kod çalıştırmaya yarayan güvenlik açığı.
+	- [[https://github.com/git/git/security/advisories/GHSA-44fr-r2hj-3f4x][CVE-2019-1350]]: Unutulan bir tırnak işaretiyle =git clone
+    --recurse-submodules= komutunun farklı komutlar çalıştırmasına yol açan bir
+    güvenlik açığı.
+	- [[https://github.com/git/git/security/advisories/GHSA-39hj-fvvf-mq4f][CVE-2019-1351]]: =git clone= komutunun, Windows'daki alfabetik olmayan (C,D
+    yerine 1 ya da Unicode karakter içeriyorsa) mantıksal disk bölümlerinin
+    üzerine yazmasına neden olan güvenlik güvenlik açığı.
+	- [[https://github.com/git/git/security/advisories/GHSA-5wph-8frv-58vj][CVE-2019-1352]]: =git clone= işlemi sırasında NTFS Alternate Date Streams ile
+    ilişkili bir sorun yüzünden =.git= klasörü içerisindeki dosyaların üzerine
+    yazmaya neden olan bir güvenlik açığı.
+	- [[https://github.com/git/git/security/advisories/GHSA-589j-mmg9-733v][CVE-2019-1353]]: WSL üzerinde Git kullanırken NTFS'in Shortnames özelliğinden
+    kaynaklanan bir sorun yüzünden =git clone= sırasında uzaktan kod çalıştırmaya
+    imkan sağlayan bir güvenlik açığı.
+	- [[https://github.com/git/git/security/advisories/GHSA-xjx4-8694-q2fq][CVE-2019-1354]]: Windows'daki klasör isimlerinde \ işaretinin farklı amaç için
+    kullanılmasından doğan dosyaların üzerine yazabilmeyi sağlayan bir güvenlik
+    açığı.
+	- [[https://github.com/git/git/security/advisories/GHSA-4wfr-gwrh-8mj2][CVE-2019-1387]]: Submodule isimlerinin doğrulaması sırasında oluşan hatadan
+    doğan güvenlik açığı.
+	- [[https://github.com/git/git/security/advisories/GHSA-cj5c-9839-g2ch][CVE-2019-19604]]: =.gitmodules= dosyasında bir scripti ya da çalıştırılabilir
+    dosyayı işaret eden komut barındırmaya yarayan bir güvenlik açığı.
+
+	Görüldüğü gibi güvenlik açıklarının sayısı epey bir fazla, bu yüzden mutlaka
+	mümkün olan en kısa zamanda Git sürümlerinizi güncelleyin. Eğer yakın bir
+	zamanda güncelleyemeyecek durumdaysanız şunları yapmaktan kaçının:
+	  - =git clone --recurse-submodule= ve =git submodule update= komutlarını çalıştırmak,
+		- Güvenmediğiniz depolar için =git fast-import= komutunu çalıştırmak,
+		- Güvenmediğiniz depoları NTFS formatlı bir disk barındıran sistem üzerinde
+      clone etmek.
+
+	Bu güvenlik açıklarını kapatan Git sürümleri ise şu şekilde: v2.24.1, v2.23.1,
+  v2.22.2, v2.21.1, v2.20.2, v2.19.3, v2.18.2, v2.17.3, v2.16.6, v2.15.4 ve
+  v2.14.6.
+* NPM, dosyalara erişim sağlamaya yol açan bir [[https://blog.npmjs.org/post/189618601100/binary-planting-with-the-npm-cli][güvenlik açığını kapattı]]
+	Güvenlik açığı hakkında yeterince teknik bilgi sağlanmasa da NPM
+	geliştiricileri, package.json dosyasının işlenmesi sırasında doğan bir güvenlik
+	açığı kullanıcının bilgisayarındaki herhangi bir dosyaya erişim ve değiştirme
+	yetkisi verilmesine neden oluyor. Anladığım kadarıyla bu işlemi yapabilmesi
+	için paket yayınlayıcısının package.json dosyasına bir takım binary kodlar
+	eklemesi gerekiyor. Sorun package.json dosyasının işlenmesinden doğduğu için
+	aynı güvenlik açığı yarn paket yöneticisinde de mevcut. NPM takımı, npm
+	sistemindeki kayıtlı tüm package.json dosyalarında bu tarz bir açıktan
+	faydalanan paketleri bulmaya çalışmış fakat bir şey çıkmamış. Tabii ki yine de
+	gerekli güncellemelerin en kısa zamanda yapılmasını şiddetle tavsiye ediyorlar.
+* NGINX Rusya ofisi polis tarafından [[https://www.zdnet.com/google-amp/article/russian-police-raid-nginx-moscow-office/][basıldı]] ve 2 kişi tutuklandı
+  #+ATTR_HTML: :height 250
+  #+ATTR_LATEX: :height 3cm
+	[[file:gorseller/nginx-polis-baskını.png]]
+
+	NGINX'i hepimiz, şu anda en çok kullanılan web sunucu araçlarından birisi
+	olarak tanıyoruz, geliştiricisi Igor Sysoev, NGINX'i 2004 yılında açık kaynak
+	olarak lisanslı şekilde duyurmuştu fakat o zamanlarda henüz NGINX kendisinin
+	tam zamanlı işi değildi ve Rusya'nın popüler arama motorlarından biri olan
+	Rambler için çalışıyormuş. Bu haftanın gündemine oturmasının sebebi de bundan
+	kaynaklı. Geliştirici başka bir firma için çalışırken o firmanın sağladığı
+	imkanlar ile bu yazılımı geliştirdiği için bir telif hakkı sorunu ortaya çıkmış
+	ve polis baskını ile kaynak kodlar ve çeşitli belgelere el konulmuş. Aslında bu
+	durumun yeni ortaya çıkması çok ilginç çünkü geliştirici 2012 yılında verdiği
+	[[https://habr.com/ru/company/xakep/blog/136354/][bir röportajda]] (rusça) kendisi de söylemişti "o zamanlar Rambler için
+	çalışıyordum" diye fakat ilgili firmanın yeni aklına düşmüş herhalde ya da
+	başka bir takım olaylar var. Ayrıca kodlara el koymaları da ilginç olmuş NGINX
+	zaten açık kaynak, el koymak için baskın yapmanıza gerek yoktu. Zaten böyle bir
+	telif hakkı sorunu için polis baskını yapmak ayrı bir saçmalık gibi geliyor
+	bana. Baskında polisler şöyle mi seslendiler acaba: "Şimdi sakin ol ve elindeki
+	klavyeyi yavaşça bana doğru uzat evlat!" :)
+
+	Tutuklanan kişilerin de NGINX'in yaratıcı Igor Sysoev ve şirketin ortaklarından
+	biri olduğu yönünde haberler var. Konu [[https://news.ycombinator.com/item?id=21771144][HackerNews]] ve [[https://www.reddit.com/r/linux/comments/e9oub4/sorry_cannot_find_good_related_subreddits_to/][Reddit]] gibi platformlarda
+	yaklaşık bir gün boyunca üst sıralarda kaldı ve geliştiricilerin gündemine
+	oturdu.
+* Dart programlama dilinin 2.7 sürümü [[https://medium.com/dartlang/dart-2-7-a3710ec54e97][duyuruldu]]
+	[[file:gorseller/dart-2-7.png]]
+
+	Google tarafından geliştirilen, [[https://github.com/flutter/flutter][Flutter]] isimli hibrit mobil uygulamalar
+	geliştirmeye yarayan uygulama çatısıyla popülerlik kazanan yine Google
+	tarafından geliştirilen programlama dili Dart programlama dilinin bu hafta
+	içerisinde 2.7 numaralı sürümü duyuruldu. Aynı zamanda Dart, bu yıl yayınlanan
+	GitHub Octoverse raporunda (bkz: [[file:../17/yazilim-gundemi-17.org][Yazılım Gündemi - 17]]) en hızlı büyüyen birinci
+	programlama dili seçilmişti. Dille ilgili hiçbir deneyimim yok ama eklenen
+	özellikleri anlayabildim. O halde 2 özelliğe birlikte bakalım:
+
+** Eklenti metodları
+	 Bu özellik sayesinde artık herhangi bir tip için özel bir fonksiyon
+	 ekleyebileceksiniz. Tip'in sizin tarafınızdan yaratılmış olması da
+	 gerekmiyor. Örnek verecek olursak:
+   #+ATTR_LATEX: :options frame=lines, linenos, label=Dart, labelposition=topline
+	 #+BEGIN_SRC dart
+		 extension ParseNumbers on String {
+			 int parseInt() {
+				 return int.parse(this);
+			 }
+		 }
+
+		 main() {
+			 int i = '55'.parseInt();
+			 print(i);
+		 }
+	 #+END_SRC
+	 Yukarıda String veri tipine =parseInt= isminde bir fonksiyon ekledik ve String
+	 içerisine yazılan bir sayının =int= veri tipine çevrilmesini sağladık.
+** Null Safety
+	 Henüz preview aşamasında olsa da faydalı bir özellik. Örnek üzerinden
+	 inceleyelim:
+   #+ATTR_LATEX: :options frame=lines, linenos, label=Dart, labelposition=topline
+	 #+BEGIN_SRC dart
+		 class Kisi {
+			 String ad;
+			 DateTime dogumTarihi;
+			 Kisi(this.ad, this.dogumTarihi);
+
+			 void tanit() {
+				 print(ad);
+				 int dogumYili = dogumTarihi?.year;
+				 print("${DateTime.now().year - dogumYili} yıl önce doğmuştur");
+			 }
+		 }
+	 #+END_SRC
+	 Örnekte dikkat etmeniz gereken *?* karakterinin kullanımı. *?* karakteri ile
+	 yapılan aslında şuydu: =dogumTarihi= property'sinde değer tanımlıysa year
+	 property'sini getir. Yani doğum tarihinin girilmediği durumlarda /year metodu
+	 bulunamadı/ gibi bir takım hatalardan kaçınılmış oldu.
+
+
+	Dart programlama dilinin yeni sürümü ile gelen diğer özellik ve değişiklikler
+	için konu başlığına eklediğim blog yazını okuyabilirsiniz.
+* Flutter 1.12 [[https://medium.com/flutter/announcing-flutter-1-12-what-a-year-22c256ba525d][duyuruldu]]
+	Google tarafından Dart programlama dili ile geliştirilen hibrit uygulama
+	geliştirme çatısının bu hafta 1.12 sürümü duyuruldu. Duyurulan bazı şeyler bu
+	şekilde:
+
+	- MacOS desteği eklendi. Windows ve Linux desteği de eklenecek.
+	- Web desteği beta olarak duyuruldu.
+	- Geliştirici ve tasarımcıların birlikte çalışmasını kolaylaştırmak için
+    Google ve Adobe XD partnerliği duyuruldu.
+	- iOS 13'de eklenen Dark mode özelliğine erişebilme desteği,
+	- AndroidX desteği,
+	- Google Fonts desteği,
+
+	[[file:gorseller/flutter112-macos.gif]]
+
+	Bu hafta [[https://teknoseyir.com/durum/1186783][benim de katıldığım]] [[https://www.meetup.com/tr-TR/GDGTrabzon/events/265973568/][GDG DevFest '19 Trabzon]] etkinliğinde Flutter
+	1.12'de eklenen MacOS ve Web desteğinin de demosu yapıldı. Açıkcası her ne
+	kadar Google teknolojileri ilgimi çekmese de mobil uygulamanın aynısın hem
+	mobilde hem de masaüstü ve web ortamlarında aynı şekilde çalıştığını kanlı
+	canlı görmek beni şaşırtmadı değil. Sunumu yapan kişinin Flutter 1.12 ile gelen
+	özellikler hakkında [[https://medium.com/@sercanyusuf/flutter-interact-all-you-need-to-know-207f5ffccfb9][yayınlandığı yazıyı da]] okumanızı tavsiye ederim.
+* Android Açık Kaynak Projesine code search [[https://android-developers.googleblog.com/2019/12/code-search-with-cross-references-for-aosp.html][web arayüzü eklendi]]
+	Biliyorsunuz ki Android ilk 1.0 sürümünden beri açık kaynak bir mobil işletim
+	sistemi. Şu anda Google'ın dağıttığı daha özel bir hali olsa da orijinal
+	Android kaynak kodları da yine Google tarafından sunulmaktaydı. Fakat bu kaynak
+	kodlar içerisinde gezinmek o kadar kolay değildi. Şimdi ise yepyeni ve modern
+	bir arayüze sahip bir proje haline geldi. Üstelik fonksiyonun tanımlandığı ve
+	kullanıldığı yerleri de göstermek gibi özellikleri de mevcut. İlgili arkadaşlar
+	mutlaka incelesinler: https://cs.android.com/
+* Mikro-kontrolcüler için Qt kütüphanesinin 1.0 [[https://www.qt.io/blog/qt-for-mcus-1.0][sürümü yayınlandı]]
+	Geçtiğimiz yazılım gündemi yazılarında (bkz: [[file:../06/yazilim-gundemi-06.org][Yazılım Gündemi - 6]]) bahsettiğim
+	mikro-kontrolcüler üzerinde Qt kütüphanesi ile kullanışlı ve güzel arayüzler
+	tasarlamaya yarayan kütüphanenin 1.0 sürümü bu hafta yayınlandı. Maalesef C++
+	deneyimim pek olmadığı için detaylar hakkında fazla bilgiye sahip değilim.
+	Bilgi olan arkadaşların yorumlar bölümünde katkılarını bekliyorum. Detaylar ve
+	rehberler için konu başlığına eklediğim bağlantıya tıklayabilirsiniz.
+* Visual Studio Code Kasım 2019 (v1.41) [[https://code.visualstudio.com/updates/v1_41][sürümü yayınlandı]]
+	[[file:gorseller/vscode-1-41.png]]
+* Yaklaşan Etkinlikler
+  #+ATTR_HTML: :width 100%
+  #+ATTR_LATEX: :environment longtable :align |p{8cm}|l|l|
+  |------------------------------------------------------------+----------+-----------------|
+  | Etkinlik İsmi                                              | Yeri     | Tarihi          |
+  |------------------------------------------------------------+----------+-----------------|
+  | [[https://www.ariteknokent.com.tr/tr/ekosistem/beetech][Beetech]]                                                    | İstanbul | 17 Aralık 10:00 |
+  | [[https://www.eventbrite.com/e/postgresql-de-sharding-fdw-ve-partitioning-tickets-85763158917][PostgreSQL' de sharding & FDW ve Partitioning]]              | Ankara   | 17 Aralık 18:00 |
+  | [[https://www.meetup.com/Teknolot/events/267080760/][Global AI Bootcamp 2019 Türkiye]]                            | İstanbul | 17 Aralık 19:00 |
+  | [[https://kommunity.com/software-craftsmanship-turkey/events/panel-yazilimcinin-yolu][Panel: Yazılımcının Yolu]]                                   | İstanbul | 18 Aralık 19:00 |
+  | [[https://www.eventbrite.com/e/oyun-gelistirme-gunleri-2-tickets-84091625315][Oyun Geliştirme Günleri 2]]                                  | İstanbul | 19 Aralık 12:30 |
+  | [[https://www.meetup.com/Ankara-Tech-Talks/events/267184427/][Ankara Tech Talks & JetBrains - S02E3 - Kotlin Night]]       | Ankara   | 19 Aralık 18:30 |
+  | [[https://www.meetup.com/Sahibinden-D2D-Events/events/267159689/][Agile’dan DevSecOps’a giden yol]]                            | İstanbul | 19 Aralık 19:00 |
+  | [[https://www.meetup.com/Istanbul-Java-User-Group/events/267106749/][Alternatif JVM'ler ve Java'nın geleceği]]                    | Online   | 19 Aralık 19:00 |
+  | [[https://www.eventbrite.com/e/siber-guvenlikte-kariyer-tickets-85975261321?aff=ebdssbdestsearch][Siber Güvenlikte Kariyer]]                                   | İstanbul | 20 Aralık 18:30 |
+  | [[https://www.eventbrite.com/e/snort-ile-savunma-keyfi-hacknightsorg-tickets-78022805311][Snort ile Savunma Keyfi]]                                    | Ankara   | 20 Aralık 19:00 |
+  | [[https://www.meetup.com/rladies-ankara/events/267184624/][Temel R Eğitimi 2]]                                          | Ankara   | 21 Aralık 12:00 |
+  | [[https://www.meetup.com/IzmirGophers/events/267057206/][Go 101 Workshop ve Yazılım Tasarımında Paradigmalar]]        | İzmir    | 21 Aralık 15:00 |
+  | [[https://www.meetup.com/IBMCloudTR/events/266704608/][Deploy Java Microservices to OpenShift on IBM Cloud]]        | İstanbul | 24 Aralık 19:00 |
+  | [[https://www.meetup.com/ING-%25C4%25B0novasyon-Merkezi/events/266639841/][Bir Yazılım Geliştirici İçin Çeviklik Neden Önemli?]]        | İstanbul | 27 Aralık 18:30 |
+  | [[https://www.meetup.com/Facebook-Developer-Circle-Ankara/events/267134880/][Facebook Developer Circle: Ankara, Advanced React Concepts]] | Ankara   | 28 Aralık 10:00 |
+  | [[https://www.meetup.com/rladies-istanbul/events/267184117/][R ile Zaman Serileri]]                                       | İstanbul | 28 Aralık 12:30 |
+  | [[https://www.meetup.com/Facebook-Developer-Circle-Istanbul/events/267037979/][PyTorch ile Deep Learning'e Giriş]]                          | İstanbul | 28 Aralık 15:00 |
+  |------------------------------------------------------------+----------+-----------------|
+* Diğer Haberler
+	- İlk ticari bilgisayar için programlama dili yazan Tony Brooker, 94
+    yaşında [[https://www.nytimes.com/2019/12/13/technology/tony-brooker-dead.html][hayata veda etti]].
+	- Google Compute Engine için yeni bir sanal makine ailesi [[https://cloud.google.com/blog/products/compute/google-compute-engine-gets-new-e2-vm-machine-types][duyurdu:
+    E2]].
+	- Lincoln Labs: "Uzay araçlarının yazılımları için [[https://www.reddit.com/r/rust/comments/earm80/lincoln_labs_endorses_rust_for_spacecraft/][Rust kullanılabilir]]"
+	- Visual Studio 2019 16.4 sürümü [[https://docs.microsoft.com/en-us/visualstudio/releases/2019/release-notes][duyuruldu]].
+	- Vim 8.2 sürümü [[https://www.vim.org/vim-8.2-released.php][yayınlandı]].
+	- JDK 14 Erken Erişim sürümü [[https://jdk.java.net/14/][yayınlandı]].
+	- Crystal programlama dilinin 0.32.0 sürümü [[https://crystal-lang.org/2019/12/11/crystal-0.32.0-released.html][yayınlandı]].
+	- Python için geliştirilmiş bağımlılık yönetimi aracı Poetry 1.0.0
+    sürümünü [[https://python-poetry.org/blog/announcing-poetry-1-0-0.html][duyurdu]]. [[https://github.com/python-poetry/poetry][GitHub Deposu]]
+	- Qt 5.14 sürümü [[https://www.qt.io/blog/qt-5.14-has-released][yayınlandı]].
+	- Açık kaynak takım için sohbet aracı Zulip, 2.1 sürümünü [[https://blog.zulip.org/2019/12/13/zulip-2-1-released/][duyurdu]].
+	- Komut satırından JSON görüntülemeye yarayan araç fx, 16.0.0
+    sürümünü [[https://github.com/antonmedv/fx/releases/tag/16.0.0][yayınladı]].
+	- Rust ile yazılmış 3D renger kütüphanesi [[https://leod.github.io/rust/gamedev/rendology/2019/12/13/introduction-to-rendology.html][duyuruldu]]: [[https://github.com/leod/rendology][Rendology]].
+	- MathSharp, 2.0.0-pre sürümü [[https://www.nuget.org/packages/MathSharp/][çıktı]].
+	- Barman, 2.10 sürümü [[https://www.pgbarman.org/barman-2-10-released/][çıktı]].
+	- LibICal 0.1.0 sürümü [[https://imag-pim.org/blog/2019/12/13/libical-v0.1.0/][duyuruldu]]. [[https://github.com/matthiasbeyer/libical/][GitHub Deposu]]
+* Lisans
+  #+BEGIN_CENTER
+  #+ATTR_HTML: :height 75
+  #+ATTR_LATEX: :height 1.5cm
+  [[file:../../../img/CC_BY-NC-SA_4.0.png]]
+
+  [[file:yazilim-gundemi-21.org][Yazılım Gündemi - 21]] yazısı [[https://erenhatirnaz.github.io][Eren Hatırnaz]] tarafından [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Creative Commons
+  Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı]] (CC BY-NC-SA 4.0)
+  ile lisanslanmıştır.
+  #+END_CENTER

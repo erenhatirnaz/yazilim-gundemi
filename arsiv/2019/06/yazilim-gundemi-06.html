@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 22:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi - 6</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi - 6
+<br />
+<span class="subtitle">12-25 Ağustos 2019</span>
+</h1>
+<div id="table-of-contents">
+<h2>İçindekiler</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgfe1689b">1. RestClient ve diğer 10 Ruby kütüphanesinin arka kapı içerdiği ortaya çıktı</a></li>
+<li><a href="#orgc41d091">2. <code>standard</code> isimli JavaScript aracı terminal çıktısında reklam göstermeyi planlıyor</a></li>
+<li><a href="#org6401de9">3. Git versiyon kontrol sisteminin 2.23 sürümü duyuruldu</a>
+<ul>
+<li><a href="#orgf628599">3.1. <code>git checkout</code> için yeni deneysel alternatif komutlar</a></li>
+</ul>
+</li>
+<li><a href="#org595f9aa">4. Bitbucket, Mercurial desteğini sonlandırmaya hazırlanıyor</a></li>
+<li><a href="#org63145cb">5. Mikrokontrolcüler için Qt kütüphanesi tanıtıldı</a></li>
+<li><a href="#org9a9beb1">6. Etkinlik Duyurusu: Typed Properties ve dahası ile PHP 7.4</a></li>
+<li><a href="#orgf9fd310">7. Diğer Haberler</a></li>
+<li><a href="#orge8b7045">8. Lisans</a></li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gundemi-banner.png" alt="yazilim-gundemi-banner.png" />
+</p>
+</div>
+<div class="org-center">
+<p>
+<a href="../05/yazilim-gundemi-05.html">&lt; Önceki Gündem</a> | <b>12-25 Ağustos 2019</b> | <a href="../07/yazilim-gundemi-07.html">Sonraki Gündem &gt;</a>
+</p>
+
+<p>
+<a href="https://teknoseyir.com/blog/yazilim-gundemi-6-12-25-agustos-2019">TeknoSeyir'de Oku</a>
+</p>
+</div>
+
+<div id="outline-container-orgfe1689b" class="outline-2">
+<h2 id="orgfe1689b"><span class="section-number-2">1</span> RestClient ve diğer 10 Ruby kütüphanesinin <a href="https://www.zdnet.com/article/backdoor-code-found-in-11-ruby-libraries/">arka kapı içerdiği ortaya çıktı</a></h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Ruby kütüphanelerinin barındırıldığı <a href="https://rubygems.org">RubyGems.org</a> sitesindeki bilgileri çalınan
+geliştiricilerin projelerine, kurulduğu sunucuda arka kapı açan kod parçaları
+eklenmiş. Aynı olay strong-password isimli kütüphanenin de başına gelmişti
+(bkz: <a href="../01/yazilim-gundemi-01.html">Yazılım Gündemi - 1</a>). Yöntem aynı: RubyGems.org sitesindeki kullanıcı
+bilgilerini ele geçen hacker(lar), projeye zararlı kod parçaları eklemişler ve
+yeni versiyon çıkarak, kütüphaneyi kullananların zararlı kod parçalarını
+güncelleme ile edinmeleri sağlanmış.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/ruby-zararli-kod.png" alt="ruby-zararli-kod.png" />
+</p>
+<p><span class="figure-number">Şekil 2: </span>CVE Numarası: <a href="https://nvd.nist.gov/vuln/detail/CVE-2019-15224">CVE-2019-15224</a></p>
+</div>
+
+<p>
+Zararlı kod parçalarından bazıları kullanıcıların cookie bilgilerini çalmaya
+yönelikken, bazıları da sistemi kripto para madenciliği için kullanıyormuş.
+Daha teknik bilgiler için RestClient kütüphanesinin <a href="https://github.com/rest-client/rest-client/issues/713">şu github sayfası</a>na
+bakabilirsiniz. Saldırıdan etkilenen Ruby kütüphaneleri ve versiyonları ise şu
+şekilde:
+</p>
+
+<ul class="org-ul">
+<li><b>rest-client</b>: <i>1.6.10</i>, <i>1.6.11</i>, <i>1.6.12</i>, <i>1.6.13</i></li>
+<li><b>cron_parser</b>: <i>0.1.4</i>, <i>1.0.12</i>, <i>1.0.13</i></li>
+<li><b>coin_base</b>: <i>4.2.1</i>, <i>4.2.2</i></li>
+<li><b>blockchain_wallet</b>: <i>0.0.6</i>, <i>0.0.7</i></li>
+<li><b>bitcoin_vanity</b>: <i>4.3.3</i></li>
+<li><b>lita_coin</b>: <i>0.0.3</i></li>
+<li><b>coming-soon</b>: <i>0.2.8</i></li>
+<li><b>omniauth_amazon</b>: <i>1.0.1</i></li>
+<li><b>awesome-bot</b>: <i>1.18.0</i></li>
+<li><b>doge-coin</b>: <i>1.0.2</i></li>
+<li><b>capistrano-colors</b>: <i>0.5.5</i></li>
+</ul>
+
+<p>
+Zararlı kod içerdikleri anlaşılan bu versiyonlar RubyGems.org ekibi tarafından
+geri çekilmiş fakat olay anlaşına kadar bu kütüphaneler toplam 3.584 kez
+indirilmiş. Siz de mutlaka projelerinizde yukarıdaki kütüphanelerin ve
+versiyonların olup olmadığını kontrol edin ve tabii ki projenize bağımlılık
+eklerken daha dikkatli olun.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc41d091" class="outline-2">
+<h2 id="orgc41d091"><span class="section-number-2">2</span> <code>standard</code> isimli JavaScript aracı terminal çıktısında <a href="https://github.com/standard/standard/issues/1381">reklam göstermeyi planlıyor</a></h2>
+<div class="outline-text-2" id="text-2">
+<p>
+GitHub'da 21K yıldıza sahip, başka bir çok proje tarafından da kullanılan bu
+araç, fonlama konusunda yaşadığı sıkıntılardan ötürü terminal çıktısına açık
+kaynağı destekleyen bir firmadan reklam almayı planlıyor. Yani projenize
+<code>standard</code> aracını eklemek için <code>npm install standard</code> yazdığınızda aracın
+kurulumu sonrasında terminalde ve muhtemelen log dosyasında bir reklam
+göreceğiz. Açıkcası ben de şaşırdım fakat projenin github sayfasındaki issue
+altında yazılanları görünce biraz da olsa hak verdim.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/terminal-reklam.png" alt="terminal-reklam.png" />
+</p>
+</div>
+
+<p>
+Hepimiz açık kaynağın nimetlerinden fazlasıyla faydalanıyoruz fakat açık
+kaynak camiasına katkı sağlama konusunda ciddi eksikliklerimiz var. Girdiğimiz
+açık kaynak projelerin sitelerindeki "Bağış Yap" butonlarını görmezden
+geliyor, hatta sitedeki reklamları bile engelliyoruz. Üstüne bir de
+karşılaştığımız sorunları ya da hataları çözmek için az da olsa uğraşmak
+yerine direkt issue açıp ya da mail gönderip, 3-4 gün içerisinde sorumuzun
+çözülmesini bekliyoruz. Lafa gelince hepimiz ortamlarda açık kaynağın
+faydalarından, nimetlerinden, ne kadar süper bir şey olduğundan bahsettik;
+fakat, konu maddi ve/veya manevi destek olmaya gelince ne elimizi cebimize
+attık, ne de klavyemize dokunduk.
+</p>
+
+<p>
+Terminal çıktısına reklam almak belki de doğru bir yöntem değil, fakat, şu çok
+açık ortada ki: Geliştirici camiası olarak açık kaynak ile ilgili algılarımızı
+değiştirme zamanımız geldi. Açık kaynak camiasından aldığımızın ne kadarını
+geri verdiğimizin/verebildiğimizin sorusunu kendimize sormamız gerekiyor. Açık
+kaynak araçları/kütüphaneleri kullanarak projeler yapıp bir güzel paramızı
+kazanıyoruz ama hiç birimiz, "kardeşim ben senin projeni kullanarak para
+kazandım, al bu da benden sana bu aracı geliştirmeye devam edebilmen için xx
+$/€" ya da "#504 numaralı issue sayfasındaki sorunu çözdüm, inceleyip,
+kodlarımı kabul edebilir misin?" demiyoruz. Ohh, ne rahat!&#x2026;
+</p>
+
+<p>
+Bu konuda siz ne düşünüyorsunuz? Kullandığınız bir araç/kütüphane bu şekilde
+reklam alsa -ki şu an almayı planlıyor- tepkiniz ne olurdu? Yorum kısmında
+konuşalım.
+</p>
+</div>
+</div>
+<div id="outline-container-org6401de9" class="outline-2">
+<h2 id="org6401de9"><span class="section-number-2">3</span> Git versiyon kontrol sisteminin <a href="https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.23.0.txt">2.23 sürümü duyuruldu</a></h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Hepimizin her gün kullandığı popüler versiyon kontrol sistemi git 2.23 sürümü
+ile yenilikler ve hata gidermelerini sunuyor. Öne çıkan bazı özellikler bu
+şekilde:
+</p>
+</div>
+
+<div id="outline-container-orgf628599" class="outline-3">
+<h3 id="orgf628599"><span class="section-number-3">3.1</span> <code>git checkout</code> için yeni deneysel alternatif komutlar</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Bildiğimiz gibi <code>git checkout</code> komutu hem dallar arasında geçiş yapmak için
+hem de dosyaları son commit'deki hallerine resetlemek için kullanılabiliyor.
+Üstelik <code>git checkout --branch olmayan-dal</code> gibi bir kullanımla da olmayan
+bir dalı yaratıp, ona geçiş yapma özelliği de var. İki farklı işlevin bir
+komuta toplanmasından dolayı benim de zaman zaman garipsediğim bir komut. Bu
+sürümde bu işlevleri ayıran deneysel iki komut eklenmiş.
+</p>
+
+<ul class="org-ul">
+<li><p>
+<b><code>git switch</code></b>: Dallar arasında geçiş yapmak, yeni dal oluşturup ona geçmek
+için kullanılacak. <a href="https://git-scm.com/docs/git-switch/2.23.0">Dokümantasyon</a>. Örnek:
+</p>
+<pre class="example">
+$ git switch yeni-ozellik
+
+Switched to branch 'yeni-ozellik'
+Your branch is up to date with 'origin/yeni-ozellik'
+</pre></li>
+<li><p>
+<b><code>git restore</code></b>: Verilen dosyası son commit'deki haline geri döndürmek için
+kullanılacak. <a href="https://git-scm.com/docs/git-restore/2.23.0">Dokümantasyon</a>. Örnek:
+</p>
+<pre class="example">
+$ git restore program.c
+</pre></li>
+</ul>
+
+<p>
+Diğer özellikler ve değişiklikler için konu başlığındaki bağlantıya
+tıklayabilir ya da GitHub Blog'da yayınlanan <a href="https://github.blog/2019-08-16-highlights-from-git-2-23/">bu yazıyı</a> okuyabilirsiniz.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org595f9aa" class="outline-2">
+<h2 id="org595f9aa"><span class="section-number-2">4</span> Bitbucket, <a href="https://bitbucket.org/blog/sunsetting-mercurial-support-in-bitbucket">Mercurial desteğini sonlandırmaya</a> hazırlanıyor</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Bitbucket, GitHub gibi bir uzak depo sunucu hizmeti veren bir site. GitHub'dan
+farklı olarak sadece git ile değil, alternatif bir versiyon kontrol sistemi
+olan mercurial ile de çalışmayı destekliyordu. Fakat artık Bitbucket'da bu
+desteğini sonlandırmaya karar vermiş ve planlar yapılmış. <i>1 Şubat 2020</i>
+itibariyle kullanıcılar <b>yeni Mercurial deposu</b> oluşturulamayacak; <i>1 Haziran
+2020</i> itibariyle de Bitbucket'de <b>Mercurial desteği tamamen kalkacak ve
+Mercurial depoları da sunucudan silinecek</b>. Desteğin kalkmasının nedenini
+söylemeye gerek yok sanırım. Artık hepimiz her yeni projede varsayılan olarak
+git kullanmaya başladık. Açıkcası ben Mercurial hiç kullanmadım, hatta öyle
+bir depo da hiç görmedim, bu yüzden nasıl bir sistem olduğu konusunda pek
+fikrim yok.
+</p>
+
+<p>
+Bu haberi duyan, %100 açık kaynak ve özgür yazılım olarak geliştirilen
+Sourcehut da bir blog yazısı yayınlayarak, Bitbucket'dan Mercurial
+kullanıcılarını <a href="https://sourcehut.org/blog/2019-08-21-sourcehut-welcomes-bitbucket-refugees/">kendi sitesine davet etti</a>.
+</p>
+</div>
+</div>
+<div id="outline-container-org63145cb" class="outline-2">
+<h2 id="org63145cb"><span class="section-number-2">5</span> <a href="https://blog.qt.io/blog/2019/08/21/announcing-qt-mcus/">Mikrokontrolcüler için Qt</a> kütüphanesi tanıtıldı</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+<a href="https://www.youtube.com/watch?v=p9_Qy3kw1wc">YouTube videosu</a> |	<a href="https://www.qt.io/qt-for-mcu">Ürün tanıtım sayfası</a>
+</p>
+
+<p>
+C++ deneyimim konsola "Merhaba dünya" yazdırmaktan öteye gitmediği halde bu
+gelişme beni bile heyecanlandırdı. Özellikle videodaki gibi düşük sistem
+gereksinimleri ile çalışan cihazlarda akıcı ve güzel tasarımlı ekranlar
+hazırlayabileceksek, mutlaka bir ara Qt kütüphanesini incelemem gerekecek.
+</p>
+
+<p>
+Teknik detayları henüz açık değil fakat konuyla ilgili Qt takımı, 4 Eylül
+tarihinde internet üzerinden soru&amp;cevap kısmının da olacağı bir webiner
+düzenleyecek. Sanırım webiner boyunca çok daha teknik kavramları
+anlatacaklardır. <a href="https://www.qt.io/qt-for-mcu#MCUWebinar">Buradan</a> kendinize uygun saatteki webinere kayıt
+olabilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-org9a9beb1" class="outline-2">
+<h2 id="org9a9beb1"><span class="section-number-2">6</span> Etkinlik Duyurusu: <a href="https://kommunity.com/istanbulphp/events/typed-properties-ve-dahasi-ile-php-74">Typed Properties ve dahası ile PHP 7.4</a></h2>
+<div class="outline-text-2" id="text-6">
+
+<div class="figure">
+<p><img src="gorseller/php-etkinligi.png" alt="php-etkinligi.png" />
+</p>
+</div>
+
+<p>
+<a href="https://twitter.com/istanbulphp">İstanbul PHP grubu</a>nun organize ettiği bu etkinlikte PHP 7.4 ile birlikte
+gelecek özellikler anlatılacak. Birkaç özelliği <a href="../03/yazilim-gundemi-03.html">Yazılım Gündemi - 3</a> yazısında
+ben de anlatmıştım fakat PHP geliştirmeyle ilgilenen ve İstanbul'da olan
+arkadaşların mutlaka bu etkinliğe katılmasını tavsiye ederim, daha faydalı
+olacaktır.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf9fd310" class="outline-2">
+<h2 id="orgf9fd310"><span class="section-number-2">7</span> Diğer Haberler</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>Netflix güvenlik takımı, <a href="https://github.com/Netflix/security-bulletins/blob/master/advisories/third-party/2019-002.md">HTTP/2 protokolünün de DoS saldırına karşı açık
+olduğu</a>nu ortaya çıkardı.</li>
+<li><a href="https://webkit.org/tracking-prevention-policy/">WebKit Takip Önleme Yönergesi</a> yayınlandı.</li>
+<li>Google Cloud, 1 Ocak 2020'den itibaren harici IP adreslerinden <a href="https://cloud.google.com/compute/all-pricing#ipaddress">ücret almaya
+başlayacak</a>.</li>
+<li>GitLab, <a href="https://about.gitlab.com/2019/08/22/gitlab-12-2-released/">12.2 sürümü yayınlandı</a>.</li>
+<li>.NET Core takımı, tek <a href="https://github.com/dotnet/coreclr/issues/26175">depo (mono repo) yapısına geçmeyi planlıyor</a></li>
+<li>GitHub, artık <a href="https://github.blog/2019-08-21-github-supports-webauthn-for-security-keys/">Web Authentication destekliyor</a>.</li>
+<li>GitHub Package Registry hizmeti <a href="https://help.github.com/en/articles/about-github-package-registry">kısıtlı açık beta sürecine girdi</a>.</li>
+<li>React için tarayıcı üzerinde çalışan yeni geliştirici aracı duyuruldu: <a href="https://reactjs.org/blog/2019/08/15/new-react-devtools.html">React
+Developer Tools</a>.</li>
+<li>Go programlama dilinin <a href="https://tip.golang.org/doc/go1.13">1.13 RC1 sürümü yayınlandı</a>.</li>
+<li>Rust programlama dilinin <a href="https://blog.rust-lang.org/2019/08/15/Rust-1.37.0.html">1.37.0 stabil sürümü yayınlandı</a>.</li>
+<li>Crystal programlama dilinin <a href="https://crystal-lang.org/2019/08/12/crystal-0.30.1-released.html">0.31.1 sürümü duyuruldu</a>.</li>
+<li>Futhark programlama dilinin <a href="https://futhark-lang.org/blog/2019-08-21-futhark-0.12.1-released.html">0.12.1 sürümü duyuruldu</a>.</li>
+<li>.NET Framework 4.8 <a href="https://devblogs.microsoft.com/dotnet/net-framework-4-8-is-available-on-windows-update-wsus-and-mu-catalog/">herkes için erişilebilir oldu</a>.</li>
+<li>Rails, <a href="https://weblog.rubyonrails.org/2019/8/15/Rails-6-0-final-release/">6.0 stabil sürümü yayınlandı</a>.</li>
+<li>Slim PHP uygulama çatısı (framework) <a href="http://www.slimframework.com/2019/08/20/slim-4.2.0-release.html">4.2.0 sürümünü duyurdu.</a></li>
+<li>Apache Flink <a href="https://flink.apache.org/news/2019/08/22/release-1.9.0.html">1.9.0 sürümü çıktı</a>.</li>
+<li>Eclipse organizasyonu, Jakarta EE 8 ile ilgili "<a href="https://www.eclipse.org/community/eclipse_newsletter/2019/august/jakartaee8.php">dünü, bugünü ve yarını</a>"
+konulu yazı yayınlandı.</li>
+<li>Boost isimli taşınabilir C++ kütüphaneleri içeren proje <a href="https://www.boost.org/users/history/version_1_71_0.html">1.71.0 sürümünü
+duyurdu</a>.</li>
+<li>Yeni bir platformlar-arası JavaScript ile masaüstü uygulama geliştirme aracı
+<a href="https://blog.atulr.com/nodegui-intro/">yayınlandı</a>: <a href="https://nodegui.github.io/nodegui/">NodeGUI</a>, <a href="https://github.com/nodegui/nodegui">GitHub Deposu</a>.</li>
+<li>Web elemanlarına sürükleyip-bırakma, yeniden boyutlandırma vb. özellikler
+kazandıran <a href="https://daybrush.com/moveable">moveable</a> isimli JavaScript kütüphanesi <a href="https://github.com/daybrush/moveable/releases/tag/0.7.5">0.7.4 sürümünü duyurdu</a>.</li>
+<li>Quark isimli platformlar-arası masaüstü uygulaması geliştirmeye yarayan
+JavaScript kütüphanesi <a href="https://github.com/Nishkalkashyap/Quark-electron/releases/tag/v0.5.8">v0.5.8 sürümünü duyurdu</a>.</li>
+<li>Rust ekosistemi grafiksel kullanıcı arayüzleri (GUI) bakımından incelendi:
+<a href="https://gitlab.com/z0mbie42/rust_gui_ecosystem_overview">Rust GUI ecosistem overview</a>.</li>
+<li>Rust ile yazılmış yeni bir shell <a href="https://www.jonathanturner.org/2019/08/introducing-nushell.html">duyuruldu</a>: <a href="https://github.com/nushell/nushell">nushell</a>.</li>
+<li>Kriptopara cüzdanları oluşturmak için kullanılan Rust kütüphanesi <a href="https://github.com/ArgusHQ/wagyu/">wagyu</a>,
+<a href="https://github.com/ArgusHQ/wagyu/releases/tag/v0.6.0">0.6.0 sürümünü duyurdu</a>.</li>
+<li><a href="https://github.com/mras0/sasm">SASM</a>, ilk sürümü <a href="https://github.com/mras0/sasm/releases/tag/v1.0">v1.0 duyuruldu</a>.</li>
+<li><a href="https://github.com/SanderMertens/flecs">Flecs</a>, ilk sürümü <a href="https://github.com/SanderMertens/flecs/releases/tag/v1.0">v1.0 duyuruldu</a>.</li>
+<li>Linux kernel geliştirmeleri için DevOps yapısı sunan <a href="https://github.com/mcgrof/kdevops/">kdevops</a> isimli proje
+<a href="https://github.com/mcgrof/kdevops/releases/tag/v1.7.1">v1.7.1 sürümünü duyurdu</a>.</li>
+<li>2 boyutlu platform oyunu <a href="https://store.steampowered.com/app/770200/Squally/">Squally</a>, <a href="https://medium.com/squallygame/we-open-sourced-our-steam-game-and-why-it-was-a-good-idea-2d5ac72c9802">açık kaynak hale geldi</a>. <a href="https://github.com/Squalr/Squally">GitHub Deposu</a>.</li>
+<li>Akademik Çalışmalar:
+<ul class="org-ul">
+<li>StackOverflow'da arama yapmanın yeni yolu: <a href="https://stackoverflow.blog/2019/08/14/crokage-a-new-way-to-search-stack-overflow/">CROKAGE – the Crowd Knowledge
+Answer Generator</a>.</li>
+<li>Açık kaynak resim karşılaştırma kütüphanesi: <a href="https://arxiv.org/abs/1908.04014">Douglas-Quaid</a>, <a href="https://github.com/CIRCL/douglas-quaid">GitHub Deposu</a>.</li>
+<li>Facebook Yapay Zeka Takımı, Doğal Dil İşleme için <a href="https://ai.facebook.com/blog/new-advances-in-natural-language-processing-to-better-connect-people/">yeni bir yaklaşım</a>
+geliştirdi.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge8b7045" class="outline-2">
+<h2 id="orge8b7045"><span class="section-number-2">8</span> Lisans</h2>
+<div class="outline-text-2" id="text-8">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="../../../img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+<a href="yazilim-gundemi-06.html">Yazılım Gündemi - 6</a> yazısı <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a> (CC BY-NC-SA 4.0)
+ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 25 Ağustos 2019</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 22:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

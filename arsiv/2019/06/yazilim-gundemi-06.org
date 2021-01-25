@@ -1,0 +1,211 @@
+#+TITLE: Yazılım Gündemi - 6
+#+SUBTITLE: 12-25 Ağustos 2019
+#+Author: Eren Hatırnaz
+#+DATE: 25 Ağustos 2019
+#+OPTIONS: ^:nil
+#+LANGUAGE: tr
+#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=black, filecolor=red, urlcolor=blue}
+#+LATEX_HEADER: \usepackage[turkish]{babel}
+#+HTML_HEAD: <link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+#+LATEX: \shorthandoff{=}
+
+[[file:gorseller/yazilim-gundemi-banner.png]]
+#+BEGIN_CENTER
+[[file:../05/yazilim-gundemi-05.org][< Önceki Gündem]] | *12-25 Ağustos 2019* | [[file:../07/yazilim-gundemi-07.org][Sonraki Gündem >]]
+
+[[https://teknoseyir.com/blog/yazilim-gundemi-6-12-25-agustos-2019][TeknoSeyir'de Oku]]
+#+END_CENTER
+
+* RestClient ve diğer 10 Ruby kütüphanesinin [[https://www.zdnet.com/article/backdoor-code-found-in-11-ruby-libraries/][arka kapı içerdiği ortaya çıktı]]
+	Ruby kütüphanelerinin barındırıldığı [[https://rubygems.org][RubyGems.org]] sitesindeki bilgileri çalınan
+	geliştiricilerin projelerine, kurulduğu sunucuda arka kapı açan kod parçaları
+	eklenmiş. Aynı olay strong-password isimli kütüphanenin de başına gelmişti
+	(bkz: [[file:../01/yazilim-gundemi-01.org][Yazılım Gündemi - 1]]). Yöntem aynı: RubyGems.org sitesindeki kullanıcı
+	bilgilerini ele geçen hacker(lar), projeye zararlı kod parçaları eklemişler ve
+	yeni versiyon çıkarak, kütüphaneyi kullananların zararlı kod parçalarını
+	güncelleme ile edinmeleri sağlanmış.
+
+  #+CAPTION: CVE Numarası: [[https://nvd.nist.gov/vuln/detail/CVE-2019-15224][CVE-2019-15224]]
+	[[file:gorseller/ruby-zararli-kod.png]]
+
+	Zararlı kod parçalarından bazıları kullanıcıların cookie bilgilerini çalmaya
+	yönelikken, bazıları da sistemi kripto para madenciliği için kullanıyormuş.
+	Daha teknik bilgiler için RestClient kütüphanesinin [[https://github.com/rest-client/rest-client/issues/713][şu github sayfası]]na
+	bakabilirsiniz. Saldırıdan etkilenen Ruby kütüphaneleri ve versiyonları ise şu
+	şekilde:
+
+	  - *rest-client*: /1.6.10/, /1.6.11/, /1.6.12/, /1.6.13/
+		- *cron_parser*: /0.1.4/, /1.0.12/, /1.0.13/
+		- *coin_base*: /4.2.1/, /4.2.2/
+		- *blockchain_wallet*: /0.0.6/, /0.0.7/
+		- *bitcoin_vanity*: /4.3.3/
+		- *lita_coin*: /0.0.3/
+		- *coming-soon*: /0.2.8/
+		- *omniauth_amazon*: /1.0.1/
+		- *awesome-bot*: /1.18.0/
+		- *doge-coin*: /1.0.2/
+		- *capistrano-colors*: /0.5.5/
+
+	Zararlı kod içerdikleri anlaşılan bu versiyonlar RubyGems.org ekibi tarafından
+	geri çekilmiş fakat olay anlaşına kadar bu kütüphaneler toplam 3.584 kez
+	indirilmiş. Siz de mutlaka projelerinizde yukarıdaki kütüphanelerin ve
+	versiyonların olup olmadığını kontrol edin ve tabii ki projenize bağımlılık
+	eklerken daha dikkatli olun.
+
+* =standard= isimli JavaScript aracı terminal çıktısında [[https://github.com/standard/standard/issues/1381][reklam göstermeyi planlıyor]]
+	GitHub'da 21K yıldıza sahip, başka bir çok proje tarafından da kullanılan bu
+	araç, fonlama konusunda yaşadığı sıkıntılardan ötürü terminal çıktısına açık
+	kaynağı destekleyen bir firmadan reklam almayı planlıyor. Yani projenize
+	=standard= aracını eklemek için =npm install standard= yazdığınızda aracın
+	kurulumu sonrasında terminalde ve muhtemelen log dosyasında bir reklam
+	göreceğiz. Açıkcası ben de şaşırdım fakat projenin github sayfasındaki issue
+	altında yazılanları görünce biraz da olsa hak verdim.
+
+	[[file:gorseller/terminal-reklam.png]]
+
+	Hepimiz açık kaynağın nimetlerinden fazlasıyla faydalanıyoruz fakat açık
+	kaynak camiasına katkı sağlama konusunda ciddi eksikliklerimiz var. Girdiğimiz
+	açık kaynak projelerin sitelerindeki "Bağış Yap" butonlarını görmezden
+	geliyor, hatta sitedeki reklamları bile engelliyoruz. Üstüne bir de
+	karşılaştığımız sorunları ya da hataları çözmek için az da olsa uğraşmak
+	yerine direkt issue açıp ya da mail gönderip, 3-4 gün içerisinde sorumuzun
+	çözülmesini bekliyoruz. Lafa gelince hepimiz ortamlarda açık kaynağın
+	faydalarından, nimetlerinden, ne kadar süper bir şey olduğundan bahsettik;
+	fakat, konu maddi ve/veya manevi destek olmaya gelince ne elimizi cebimize
+	attık, ne de klavyemize dokunduk.
+
+	Terminal çıktısına reklam almak belki de doğru bir yöntem değil, fakat, şu çok
+	açık ortada ki: Geliştirici camiası olarak açık kaynak ile ilgili algılarımızı
+	değiştirme zamanımız geldi. Açık kaynak camiasından aldığımızın ne kadarını
+	geri verdiğimizin/verebildiğimizin sorusunu kendimize sormamız gerekiyor. Açık
+	kaynak araçları/kütüphaneleri kullanarak projeler yapıp bir güzel paramızı
+	kazanıyoruz ama hiç birimiz, "kardeşim ben senin projeni kullanarak para
+	kazandım, al bu da benden sana bu aracı geliştirmeye devam edebilmen için xx
+	$/€" ya da "#504 numaralı issue sayfasındaki sorunu çözdüm, inceleyip,
+	kodlarımı kabul edebilir misin?" demiyoruz. Ohh, ne rahat!...
+
+	Bu konuda siz ne düşünüyorsunuz? Kullandığınız bir araç/kütüphane bu şekilde
+	reklam alsa -ki şu an almayı planlıyor- tepkiniz ne olurdu? Yorum kısmında
+	konuşalım.
+* Git versiyon kontrol sisteminin [[https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.23.0.txt][2.23 sürümü duyuruldu]]
+	Hepimizin her gün kullandığı popüler versiyon kontrol sistemi git 2.23 sürümü
+	ile yenilikler ve hata gidermelerini sunuyor. Öne çıkan bazı özellikler bu
+	şekilde:
+
+** =git checkout= için yeni deneysel alternatif komutlar
+	 Bildiğimiz gibi =git checkout= komutu hem dallar arasında geçiş yapmak için
+	 hem de dosyaları son commit'deki hallerine resetlemek için kullanılabiliyor.
+	 Üstelik =git checkout --branch olmayan-dal= gibi bir kullanımla da olmayan
+	 bir dalı yaratıp, ona geçiş yapma özelliği de var. İki farklı işlevin bir
+	 komuta toplanmasından dolayı benim de zaman zaman garipsediğim bir komut. Bu
+	 sürümde bu işlevleri ayıran deneysel iki komut eklenmiş.
+
+	 - *=git switch=*: Dallar arasında geçiş yapmak, yeni dal oluşturup ona geçmek
+     için kullanılacak. [[https://git-scm.com/docs/git-switch/2.23.0][Dokümantasyon]]. Örnek:
+		 #+BEGIN_EXAMPLE
+       $ git switch yeni-ozellik
+
+       Switched to branch 'yeni-ozellik'
+       Your branch is up to date with 'origin/yeni-ozellik'
+		 #+END_EXAMPLE
+	 - *=git restore=*: Verilen dosyası son commit'deki haline geri döndürmek için
+     kullanılacak. [[https://git-scm.com/docs/git-restore/2.23.0][Dokümantasyon]]. Örnek:
+		 #+BEGIN_EXAMPLE
+       $ git restore program.c
+		 #+END_EXAMPLE
+
+  Diğer özellikler ve değişiklikler için konu başlığındaki bağlantıya
+  tıklayabilir ya da GitHub Blog'da yayınlanan [[https://github.blog/2019-08-16-highlights-from-git-2-23/][bu yazıyı]] okuyabilirsiniz.
+* Bitbucket, [[https://bitbucket.org/blog/sunsetting-mercurial-support-in-bitbucket][Mercurial desteğini sonlandırmaya]] hazırlanıyor
+	Bitbucket, GitHub gibi bir uzak depo sunucu hizmeti veren bir site. GitHub'dan
+	farklı olarak sadece git ile değil, alternatif bir versiyon kontrol sistemi
+	olan mercurial ile de çalışmayı destekliyordu. Fakat artık Bitbucket'da bu
+	desteğini sonlandırmaya karar vermiş ve planlar yapılmış. /1 Şubat 2020/
+	itibariyle kullanıcılar *yeni Mercurial deposu* oluşturulamayacak; /1 Haziran
+	2020/ itibariyle de Bitbucket'de *Mercurial desteği tamamen kalkacak ve
+	Mercurial depoları da sunucudan silinecek*. Desteğin kalkmasının nedenini
+	söylemeye gerek yok sanırım. Artık hepimiz her yeni projede varsayılan olarak
+	git kullanmaya başladık. Açıkcası ben Mercurial hiç kullanmadım, hatta öyle
+	bir depo da hiç görmedim, bu yüzden nasıl bir sistem olduğu konusunda pek
+	fikrim yok.
+
+	Bu haberi duyan, %100 açık kaynak ve özgür yazılım olarak geliştirilen
+	Sourcehut da bir blog yazısı yayınlayarak, Bitbucket'dan Mercurial
+	kullanıcılarını [[https://sourcehut.org/blog/2019-08-21-sourcehut-welcomes-bitbucket-refugees/][kendi sitesine davet etti]].
+* [[https://blog.qt.io/blog/2019/08/21/announcing-qt-mcus/][Mikrokontrolcüler için Qt]] kütüphanesi tanıtıldı
+  [[https://www.youtube.com/watch?v=p9_Qy3kw1wc][YouTube videosu]] |	[[https://www.qt.io/qt-for-mcu][Ürün tanıtım sayfası]]
+
+	C++ deneyimim konsola "Merhaba dünya" yazdırmaktan öteye gitmediği halde bu
+	gelişme beni bile heyecanlandırdı. Özellikle videodaki gibi düşük sistem
+	gereksinimleri ile çalışan cihazlarda akıcı ve güzel tasarımlı ekranlar
+	hazırlayabileceksek, mutlaka bir ara Qt kütüphanesini incelemem gerekecek.
+
+	Teknik detayları henüz açık değil fakat konuyla ilgili Qt takımı, 4 Eylül
+	tarihinde internet üzerinden soru&cevap kısmının da olacağı bir webiner
+	düzenleyecek. Sanırım webiner boyunca çok daha teknik kavramları
+	anlatacaklardır. [[https://www.qt.io/qt-for-mcu#MCUWebinar][Buradan]] kendinize uygun saatteki webinere kayıt
+	olabilirsiniz.
+* Etkinlik Duyurusu: [[https://kommunity.com/istanbulphp/events/typed-properties-ve-dahasi-ile-php-74][Typed Properties ve dahası ile PHP 7.4]]
+	[[file:gorseller/php-etkinligi.png]]
+
+	[[https://twitter.com/istanbulphp][İstanbul PHP grubu]]nun organize ettiği bu etkinlikte PHP 7.4 ile birlikte
+	gelecek özellikler anlatılacak. Birkaç özelliği [[file:../03/yazilim-gundemi-03.org][Yazılım Gündemi - 3]] yazısında
+	ben de anlatmıştım fakat PHP geliştirmeyle ilgilenen ve İstanbul'da olan
+	arkadaşların mutlaka bu etkinliğe katılmasını tavsiye ederim, daha faydalı
+	olacaktır.
+* Diğer Haberler
+	- Netflix güvenlik takımı, [[https://github.com/Netflix/security-bulletins/blob/master/advisories/third-party/2019-002.md][HTTP/2 protokolünün de DoS saldırına karşı açık
+    olduğu]]nu ortaya çıkardı.
+	- [[https://webkit.org/tracking-prevention-policy/][WebKit Takip Önleme Yönergesi]] yayınlandı.
+	- Google Cloud, 1 Ocak 2020'den itibaren harici IP adreslerinden [[https://cloud.google.com/compute/all-pricing#ipaddress][ücret almaya
+    başlayacak]].
+	- GitLab, [[https://about.gitlab.com/2019/08/22/gitlab-12-2-released/][12.2 sürümü yayınlandı]].
+	- .NET Core takımı, tek [[https://github.com/dotnet/coreclr/issues/26175][depo (mono repo) yapısına geçmeyi planlıyor]]
+	- GitHub, artık [[https://github.blog/2019-08-21-github-supports-webauthn-for-security-keys/][Web Authentication destekliyor]].
+	- GitHub Package Registry hizmeti [[https://help.github.com/en/articles/about-github-package-registry][kısıtlı açık beta sürecine girdi]].
+	- React için tarayıcı üzerinde çalışan yeni geliştirici aracı duyuruldu: [[https://reactjs.org/blog/2019/08/15/new-react-devtools.html][React
+    Developer Tools]].
+	- Go programlama dilinin [[https://tip.golang.org/doc/go1.13][1.13 RC1 sürümü yayınlandı]].
+	- Rust programlama dilinin [[https://blog.rust-lang.org/2019/08/15/Rust-1.37.0.html][1.37.0 stabil sürümü yayınlandı]].
+	- Crystal programlama dilinin [[https://crystal-lang.org/2019/08/12/crystal-0.30.1-released.html][0.31.1 sürümü duyuruldu]].
+	- Futhark programlama dilinin [[https://futhark-lang.org/blog/2019-08-21-futhark-0.12.1-released.html][0.12.1 sürümü duyuruldu]].
+	- .NET Framework 4.8 [[https://devblogs.microsoft.com/dotnet/net-framework-4-8-is-available-on-windows-update-wsus-and-mu-catalog/][herkes için erişilebilir oldu]].
+	- Rails, [[https://weblog.rubyonrails.org/2019/8/15/Rails-6-0-final-release/][6.0 stabil sürümü yayınlandı]].
+	- Slim PHP uygulama çatısı (framework) [[http://www.slimframework.com/2019/08/20/slim-4.2.0-release.html][4.2.0 sürümünü duyurdu.]]
+	- Apache Flink [[https://flink.apache.org/news/2019/08/22/release-1.9.0.html][1.9.0 sürümü çıktı]].
+	- Eclipse organizasyonu, Jakarta EE 8 ile ilgili "[[https://www.eclipse.org/community/eclipse_newsletter/2019/august/jakartaee8.php][dünü, bugünü ve yarını]]"
+    konulu yazı yayınlandı.
+	- Boost isimli taşınabilir C++ kütüphaneleri içeren proje [[https://www.boost.org/users/history/version_1_71_0.html][1.71.0 sürümünü
+    duyurdu]].
+	- Yeni bir platformlar-arası JavaScript ile masaüstü uygulama geliştirme aracı
+    [[https://blog.atulr.com/nodegui-intro/][yayınlandı]]: [[https://nodegui.github.io/nodegui/][NodeGUI]], [[https://github.com/nodegui/nodegui][GitHub Deposu]].
+	- Web elemanlarına sürükleyip-bırakma, yeniden boyutlandırma vb. özellikler
+    kazandıran [[https://daybrush.com/moveable][moveable]] isimli JavaScript kütüphanesi [[https://github.com/daybrush/moveable/releases/tag/0.7.5][0.7.4 sürümünü duyurdu]].
+	- Quark isimli platformlar-arası masaüstü uygulaması geliştirmeye yarayan
+    JavaScript kütüphanesi [[https://github.com/Nishkalkashyap/Quark-electron/releases/tag/v0.5.8][v0.5.8 sürümünü duyurdu]].
+	- Rust ekosistemi grafiksel kullanıcı arayüzleri (GUI) bakımından incelendi:
+		[[https://gitlab.com/z0mbie42/rust_gui_ecosystem_overview][Rust GUI ecosistem overview]].
+	- Rust ile yazılmış yeni bir shell [[https://www.jonathanturner.org/2019/08/introducing-nushell.html][duyuruldu]]: [[https://github.com/nushell/nushell][nushell]].
+	- Kriptopara cüzdanları oluşturmak için kullanılan Rust kütüphanesi [[https://github.com/ArgusHQ/wagyu/][wagyu]],
+    [[https://github.com/ArgusHQ/wagyu/releases/tag/v0.6.0][0.6.0 sürümünü duyurdu]].
+	- [[https://github.com/mras0/sasm][SASM]], ilk sürümü [[https://github.com/mras0/sasm/releases/tag/v1.0][v1.0 duyuruldu]].
+	- [[https://github.com/SanderMertens/flecs][Flecs]], ilk sürümü [[https://github.com/SanderMertens/flecs/releases/tag/v1.0][v1.0 duyuruldu]].
+	- Linux kernel geliştirmeleri için DevOps yapısı sunan [[https://github.com/mcgrof/kdevops/][kdevops]] isimli proje
+    [[https://github.com/mcgrof/kdevops/releases/tag/v1.7.1][v1.7.1 sürümünü duyurdu]].
+	- 2 boyutlu platform oyunu [[https://store.steampowered.com/app/770200/Squally/][Squally]], [[https://medium.com/squallygame/we-open-sourced-our-steam-game-and-why-it-was-a-good-idea-2d5ac72c9802][açık kaynak hale geldi]]. [[https://github.com/Squalr/Squally][GitHub Deposu]].
+	- Akademik Çalışmalar:
+		- StackOverflow'da arama yapmanın yeni yolu: [[https://stackoverflow.blog/2019/08/14/crokage-a-new-way-to-search-stack-overflow/][CROKAGE – the Crowd Knowledge
+      Answer Generator]].
+		- Açık kaynak resim karşılaştırma kütüphanesi: [[https://arxiv.org/abs/1908.04014][Douglas-Quaid]], [[https://github.com/CIRCL/douglas-quaid][GitHub Deposu]].
+		- Facebook Yapay Zeka Takımı, Doğal Dil İşleme için [[https://ai.facebook.com/blog/new-advances-in-natural-language-processing-to-better-connect-people/][yeni bir yaklaşım]]
+      geliştirdi.
+* Lisans
+  #+BEGIN_CENTER
+  #+ATTR_HTML: :height 75
+  #+ATTR_LATEX: :height 1.5cm
+  [[file:../../../img/CC_BY-NC-SA_4.0.png]]
+
+  [[file:yazilim-gundemi-06.org][Yazılım Gündemi - 6]] yazısı [[https://erenhatirnaz.github.io][Eren Hatırnaz]] tarafından [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Creative Commons
+  Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı]] (CC BY-NC-SA 4.0)
+  ile lisanslanmıştır.
+  #+END_CENTER

@@ -1,0 +1,129 @@
+#+TITLE: Yazılım Gündemi - 8
+#+SUBTITLE: 2-8 Eylül 2019
+#+Author: Eren Hatırnaz
+#+DATE: 8 Eylül 2019
+#+OPTIONS: ^:nil
+#+LANGUAGE: tr
+#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=black, filecolor=red, urlcolor=blue}
+#+LATEX_HEADER: \usepackage[turkish]{babel}
+#+HTML_HEAD: <link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+#+LATEX: \shorthandoff{=}
+
+[[file:gorseller/yazilim-gundemi-banner.png]]
+
+#+BEGIN_CENTER
+[[file:../07/yazilim-gundemi-07.org][< Önceki Gündem]] | *2-8 Eylül 2019* | [[file:../09/yazilim-gundemi-09.org][Sonraki Gündem >]]
+
+[[https://teknoseyir.com/blog/yazilim-gundemi-8-2-8-eylul-2019][TeknoSeyir'de Oku]]
+#+END_CENTER
+
+* IEEE Spectrum, [[https://spectrum.ieee.org/computing/software/the-top-programming-languages-2019][popüler ilk 10 programlama dili listesi]]ni yayınlandı
+	Amerika'da yer alan Institute of Electrical and Electronics Engineers
+	(Elektrik ve Elektronik Mühendisleri Enstitüsü) tarafından her yıl yayınlanan
+	"en popüler 10 programlama dili" listesinin 2019 sürümü bu hafta yayınlandı.
+	Liste sıralaması bu şekilde:
+
+  #+ATTR_HTML: :height 450
+  #+ATTR_LATEX: :height 6cm
+	[[file:gorseller/populer-10-programlama-dili.png]]
+
+	Listenin filtrelenebilir hali ve devamı için [[https://spectrum.ieee.org/static/interactive-the-top-programming-languages-2019][bu sayfaya]] göz atabilirsiniz.
+* COBOL programlama dili [[https://www.zdnet.com/article/cobol-turns-60-why-it-will-outlive-us-all/][60 yaşında]]
+	İlk olarak 1959 duyurulan COBOL programlama dili bu hafta itibariyle 60.yaşını
+	doldurdu. Ben dahil yazıyı okuyan herkesten daha büyük olduğu için hakkında pek
+	bilgiye sahip değilim fakat konu başlığına eklediğim bağlantıdaki habere göre
+	basit söz dizimi (syntax) sayesinde diğer programlama dillerinden öne
+	çıkabilmiş. Haberde benim ilginçime giden programlama dilinin yaratıcılarının
+	destek ve potansiyel müşteri bulabilmeleri için 41 bilgisayar üreticisi ile
+	Pentagon'da [[https://ieeexplore.ieee.org/document/4640600?reload=true][Committee of the Conference on Data Systems Languages (CODASYL)]]
+	isimli konferansta toplantı yapması ve programlama dilinin isminin de orada
+	konulması. Yoksa COBOL bir Pentagon projesi mi?! :) Neyse şaka bir yana,
+	programlama tarihiyle ilgili arkadaşların konu başlığındaki yazıyı okumalarını
+	tavsiye ederim. İleri bir okuma için de, COBOL'un 60 yaşına gelebilmesini
+	sağlayan 6 neden başlıklı [[https://www.eweek.com/development/six-reasons-cobol-has-survived-to-age-60][şu yazı]] okunabilir.
+* Laravel [[https://laravel-news.com/laravel-6][6 sürümü yayınlandı]]
+	Popüler PHP web framework sistemi olan Laravel, 6 numaralı LTS (Long-Term
+	Support - Uzun dönemli destek) sürümünü bu hafta içerisinde duyurdu. Ayrıca bir
+	önceki LTS sürümü olan 5.5 sürümünün de 30 Ağustos 2019 itibariyle hata çözme
+	güncellemesini almayacağını fakat güvenlik güncelleştirmeleri almaya 30 Ağustos
+	2020'ye kadar devam edeceği bilgisi de duyuru yazısında yer aldı. Laravel 6 ile
+	gelen bazı özellikler ise şu şekilde:
+
+	  - Yetkilendirme cevapları geliştirilmiş: Önceden son kullanıcıya özel hata
+      mesajları göstermek zormuş fakat bu sürümde =Gate::inspect= fonksiyonu
+      eklenerek bu çözülmüş. Örnek kullanım için konu başlığındaki bağlantıya
+      tıklayabilirsiniz.
+		- Laravel 5.x numaralı sürümlerle birlikte gelen UI özellikleri artık
+      [[https://github.com/laravel/ui][laravel/ui]] isimli ayrı bir proje haline geldi. Kullanmak için özel olarak
+      eklemeniz gerekiyor.
+		- [[https://laravel-news.com/job-middleware-is-coming-to-laravel-6][Job Middleware]]
+		- [[https://laravel.com/docs/6.0/collections#lazy-collections][Lazy Collections]]
+
+	Diğer değişiklikler ve yenilikler için konu başlığına eklediğim bağlantıya
+	tıklayabilir ya da bu bağlantıları inceleyebilirsiniz:
+	  - [[https://laravel.com/docs/6.0/releases][Laravel 6 Sürüm Notları]]
+		- [[https://laravel.com/docs/6.0/upgrade][Laravel 6 Yükseltme Rehberi]]
+		- [[https://laravel-news.com/laravel-6][Laravel 6 Katkı Sağlama Rehberi]]
+* Mikrokontrolcüler için Qt kütüphanesi webineri düzenlendi
+	[[file:../06/yazilim-gundemi-06.org][Yazılım Gündemi - 6]] yazısında haberini yaptığım kütüphanenin bu hafta
+	içerisinde webineri (sanal seminer) düzenlendi ve bazı detaylara yer verildi.
+	Webinere kayıt olup izlemek istemiştim fakat kurumsal bir e-posta adresi ve
+	şirket ismi gerekiyordu. Şu an bir şirkette çalışmadığım için kayıt olamadım
+	fakat [[https://teknoseyir.com/u/cemkoc][Cem Koç]] arkadaşımız kayıt olmuş ve şu şekilde bazı notlar almış:
+
+	  - Cortex-m için rtems üzerine Qt Lite kullanılıyor.
+		- Cortex-a için Linux tabanı sistemler üzerine inşaa edilecek. Ama burada Qt
+      Lite yerine Qt kullanılıyor.
+		- Qt for MCUs sadece ticari lisanslanacak. Açık kaynak versiyonu yok. Üzdü
+      açıkçası.
+		- Webinar'da bir uygulama derlendi. Çok basitçe yaptılar gerçekten.
+      Uygulamayı masaüstü programı olarak test edip direkt binary oluşturacak
+      gibi sadece hedefi değiştirerek derlenebiliyor. Klasik Qt.
+
+	Yine [[https://teknoseyir.com/u/cemkoc][Cem Koç]] hocanın Webiner'den aldığı bazı ekran görüntüleri:
+
+  [[file:gorseller/qt1.png]]
+  [[file:gorseller/qt2.png]]
+  [[file:gorseller/qt3.png]]
+  [[file:gorseller/qt4.png]]
+  [[file:gorseller/qt5.png]]
+  [[file:gorseller/qt6.png]]
+  [[file:gorseller/qt7.png]]
+  [[file:gorseller/qt8.png]]
+
+	Webiner kaydı daha sonra [[https://www.youtube.com/watch?v=60cAwGQ_E7o][bu adreste]] yayınlanmış. Benim izleyecek vaktim olmadı
+	fakat ilgili arkadaşları mutlaka bakmalarını tavsiye ederim.
+* Visual Studio Code [[https://code.visualstudio.com/updates/v1_38][1.38 (Ağustos 2019) sürümü yayınlandı]]
+	[[file:gorseller/vscode1-38.png]]
+* Diğer Haberler
+	- Apple'ın AppStore'daki bazı uygulamaların [[https://www.washingtonpost.com/technology/2019/09/05/how-apple-uses-its-app-store-copy-best-ideas/?noredirect=on][fikirlerini kopyaladığı dair
+    iddialar var]].
+	- Google, [[https://google.github.io/eng-practices/review/][kod review süreçleriyle ilgili]] rehber hazırladı.
+	- Google, akademik araştırmalar için yeni bir veri gizliliği teknolojisi
+    duyurdu: [[https://developers.googleblog.com/2019/09/enabling-developers-and-organizations.html][Differential Privacy]]. [[https://developers.googleblog.com/2019/09/enabling-developers-and-organizations.html][GitHub Deposu]]
+	- WinUI [[https://twitter.com/dotMorten/status/1168218666619375616][API sisteminde değişiklikler]] var.
+	- Securitum takımı, yeni HTML elementi [[https://web.dev/hands-on-portals][portal]] hakkında [[https://research.securitum.com/security-analysis-of-portal-element/][güvenlik analizi yazısı
+    yayınlandı]].
+	- PHP topluluğu, =Union Types= özelliğini [[https://github.com/php/php-rfcs/pull/1][tartışıyor]].
+	- PHP programlama dilinin [[https://www.php.net/archive/2019.php#2019-09-05-1][7.4.0 RC1 sürümü yayınlandı]].
+	- Go programlama dilinin [[https://golang.org/doc/go1.13][1.13 sürümü duyuruldu]].
+	- D programlama dilinin [[https://dlang.org/blog/2019/09/06/dmd-2-088-0-released/][2.088.0 sürümü yayınlandı]].
+	- Mozilla, Manifest V3 hakkında [[https://blog.mozilla.org/addons/2019/09/03/mozillas-manifest-v3-faq/][sıkça sorulan sorular yazısı]] yayınlandı.
+	- Frontend geliştiriciler için açık kaynak backend sunucusu aracı [[https://medium.com/eldadfux/introducing-appwrite-an-open-source-backend-server-for-mobile-web-developers-4be70731575d][açık kaynak
+    olarak yayınlandı]]: [[https://appwrite.io/][AppWrite]], [[https://github.com/appwrite/appwrite][GitHub Deposu]].
+	- AITO firması, yapay zeka destekli yeni bir veritabanı türü tanıttı:
+    [[https://aito.ai/blog/introducing-a-new-database-category-the-predictive-database/][Predictive Database]].
+	- Python ile terminal bazlı kullanıcı arayüzleri geliştirmeye yarayan toot
+    kütüphanesi [[https://github.com/ihabunek/toot/releases/tag/0.23.0][0.23.0 sürümünü duyurdu]]. [[https://github.com/ihabunek/toot/blob/master/CHANGELOG.md][Değişiklik Notları]], [[https://asciinema.org/a/fTq6pzFOIrPzaIt1ralRM86wE][Demo]].
+	- YugaByte DB [[https://jepsen.io/analyses/yugabyte-db-1.3.1][1.3.1 sürümü duyuruldu]].
+	- Quasar Framework [[https://forum.quasar-framework.org/topic/4234/quasar-1-1-0-released-new-component-qvirtualscroll-many-other-new-things-a-lot-of-improvements-and-fixes/2][1.1.0 sürümü yayınlandı]], [[https://github.com/quasarframework/quasar][GitHub Deposu]].
+* Lisans
+  #+BEGIN_CENTER
+  #+ATTR_HTML: :height 75
+  #+ATTR_LATEX: :height 1.5cm
+  [[file:../../../img/CC_BY-NC-SA_4.0.png]]
+
+  [[file:yazilim-gundemi-08.org][Yazılım Gündemi - 8]] yazısı [[https://erenhatirnaz.github.io][Eren Hatırnaz]] tarafından [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Creative Commons
+  Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı]] (CC BY-NC-SA 4.0)
+  ile lisanslanmıştır.
+  #+END_CENTER

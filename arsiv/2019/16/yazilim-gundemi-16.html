@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 22:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi - 16</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi - 16
+<br />
+<span class="subtitle">28 Ekim - 3 Kasım 2019</span>
+</h1>
+<div id="table-of-contents">
+<h2>İçindekiler</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org731af00">1. Notepad++ 7.8.1 sürümünü "Free Uyghur" ismiyle çıkardı</a></li>
+<li><a href="#orgfdd6164">2. İspanya'nın isteği üzerine GitHub protestocuların kullandığı uygulamanın deposunu kaldırdı</a></li>
+<li><a href="#orge41c16e">3. Android 11 sürümünde kablosuz bağlantı üzerinden ADB desteği gelebilir</a></li>
+<li><a href="#orgcf057d9">4. Python, 3.9 sürümünden sonra yıllık sürüm döngüsüne adapte olacak</a></li>
+<li><a href="#org7ad82d5">5. Cloudflare Rust ile yazılmış NTS implementasyonunu duyurdu: cfnts</a></li>
+<li><a href="#orgb9eed50">6. Mozilla, klasörden eklenti yükleme seçeneğini kaldırmaya hazırlanıyor</a></li>
+<li><a href="#orgb7817f5">7. Yaklaşan Etkinlikler</a></li>
+<li><a href="#org69e0e7a">8. Diğer Haberler</a></li>
+<li><a href="#org74e7e84">9. Lisans</a></li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gundemi-banner.png" alt="yazilim-gundemi-banner.png" />
+</p>
+</div>
+
+<div class="org-center">
+<p>
+<a href="../15/yazilim-gundemi-15.html">&lt; Önceki Gündem</a> | <b>28 Ekim - 3 Kasım 2019</b> | <a href="../17/yazilim-gundemi-17.html">Sonraki Gündem &gt;</a>
+</p>
+
+<p>
+<a href="https://teknoseyir.com/blog/yazilim-gundemi-16-28-ekim-3-kasim-2019">TeknoSeyir'de Oku</a>
+</p>
+</div>
+
+<div id="outline-container-org731af00" class="outline-2">
+<h2 id="org731af00"><span class="section-number-2">1</span> Notepad++ 7.8.1 sürümünü <a href="https://notepad-plus-plus.org/news/v781-free-uyghur-edition/">"Free Uyghur" ismiyle çıkardı</a></h2>
+<div class="outline-text-2" id="text-1">
+
+<div class="figure">
+<p><img src="gorseller/notepadpp-free-uyghur.png" alt="notepadpp-free-uyghur.png" height="150" />
+</p>
+</div>
+
+<p>
+Notepad++ her ne kadar doğrudan bir programlama aracı olmasa da hızlı
+çalışmasından dolayı Windows ortamında tercih edilebilen bir metin editörü.
+Geliştiricisi Don Ho, bu hafta duyurduğu 7.8.1 sürümünün ismini, Çin'de Uygur
+Türk'lerine uygulanan 'yeniden eğitim kampları'na dikkat çekmek için "Free
+Uyghur" ("Uygurlara özgürlük") koydu.
+</p>
+
+<p>
+29 Ekim tarihinde yayınladığı blog yazısında Çin devletinin yaptığı insan
+haklarına aykırı şeylerden bahsetmekle kalmamış, oradaki insanlara nasıl yardım
+edilebileceği ilgili de bilgi vermiş. Fakat benim özellikle dikkat çekmek
+istediğim kısım yazısının son paragrafı, Türkçe'ye çevirecek olursak:
+</p>
+
+<blockquote>
+<p>
+İnsanlar bana tekrardan "programlamayı ya da işi siyaset ile karıştırma"
+diyecekler. Bunu yapmak kesinlikle Notepad++'ın popülaritesini etkiler: Siyaset
+hakkında konuşmak, yazılım ve ticari şirketlerin genellikle kaçınmaya çalıştığı
+şeydir. Problem şudur ki: <span class="underline">Eğer biz siyaset ile uğraşmazsak, siyaset bizimle
+uğraşır</span>. İnsanlar ezildiğinde hareket etmemeyi seçebilirsiniz, ama ezilme
+sıramız geldiğinde, çok geç olacak ve bizim için kimse olmayacak. <span class="underline">Harekete
+geçmeniz için Uygur ya da Müslüman olmanız gerekmiyor</span>,
+<span class="underline">sadece insan olmak ve bazı insanlarla empati kurabilmek yeterli</span>.
+</p>
+</blockquote>
+
+<p>
+Çok iyi çevirememiş olabilirim (yanlış çevirdiğimi düşündüğünüz yerleri
+yorumlar bölümünde belirtebilirsiniz) fakat vermek istediği mesajı anlamak için
+yeterli olduğunu düşünüyorum. "Biz siyasetle uğraşmazsak, siyaset bizimle
+uğraşır" sözünü ben en iyi 2016 yılında anlamıştım. Berat Albayrak'ın maili
+hackleyen RedHack grubu, mailleri GitHub'a yükleyince <a href="https://teknoseyir.com/durum/1155906">GitHub 1 gün boyun
+boyunca yasaklı kaldı</a>. Görüyorsunuz, siz ne kadar siyaset ile ilgilenmemeye
+çalışsanız da bir şekilde geliyor buluyor sizi. İster programlama, ister bilim
+yapıyor olun. İşte bu yüzden "açık kaynak" yerine "özgür yazılım" hareketini
+destekliyorum. Don Ho'nun blog yazısındaki bu son paragrafı gerçekten çok
+önemli. Bunları hiç çekinmeden dile getirmesinden dolayı geliştirici arkadaşı
+kutlamak gerek. Böyle insanların var olduğunu bilmek dünyaya dair umutlarımı
+bir nebze olsun yeşertiyor. Bu konu hakkında siz ne düşünüyorsunuz? Sizce
+yazılım ve siyaset birbirinden tamamen ayrı konular mı yoksa sürekli olmasa da
+birbirlerini etkileyen şeyler mi? Yazılımcılar olarak ne kadar ilgilenmeliyiz
+bu konularla? Yorumlar kısmında konuşalım.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/notepadpp-issues-spam.png" alt="notepadpp-issues-spam.png" height="600" />
+</p>
+</div>
+
+<p>
+Bir nebze olsun umut yeşerten insanlardan ziyade maalesef aynı dünyada
+olduğumuzdan dolayı utanç duyacağımız insanlar da var. Bu blog yazısının
+yayınladığı saatten sonra Notepad++ projesinin <a href="https://github.com/notepad-plus-plus/notepad-plus-plus/issues">GitHub sayfasının Issues bölümü</a>
+birçok Çinli vatandaş tarafından <a href="https://www.zdnet.com/article/chinese-users-attack-notepad-app-after-free-uyghur-release/">spam yağmuruna tutuldu</a>. "Çin'de öyle şeyler
+yapılmıyor" diyenden tut da, bayağı küfürlü mesajlar yazanlara kadar yüzlerce
+hatta binlerce spam issue sayfası açıldı. Ne söylenebilir ki bu insanlar
+için&#x2026; (aslında söylenebilecek bazı şeyler var da burası yeri değil)
+</p>
+</div>
+</div>
+<div id="outline-container-orgfdd6164" class="outline-2">
+<h2 id="orgfdd6164"><span class="section-number-2">2</span> İspanya'nın isteği üzerine GitHub protestocuların kullandığı <a href="https://www.vice.com/en_ca/article/9kevn7/spain-and-github-are-blocking-an-app-that-helped-protesters-organize">uygulamanın deposunu kaldırdı</a></h2>
+<div class="outline-text-2" id="text-2">
+<p>
+İspanya'nın Barcelona kentinde yaklaşık bir aydır devam eden protestolar var.
+Bu protestoların sebebi ayrıkçı Katalan liderlerinin ve Katalonya'nın
+bağımsızlığını destekleyenlerin tutuklanması. Bu haberin yazılım gündemine
+girmesinin sebebi ise, kendilerine Tsunami Democrátic diyen aktivist bir grubun
+protestocuların kullanması için geliştirdiği bir mobil uygulamanın GitHub'dan,
+hükumet istediği doğrultusunda silinmesi. Bunu da GitHub'ın, hükumetlerden
+kendisine gelen kapatma isteklerini paylaştığı <a href="https://github.com/github/gov-takedowns">deposundan öğreniyoruz</a>.
+Görüyoruz ki, Rusya ve Çin ülkelerinin arasına bir de İspanya eklenmiş.
+</p>
+
+<p>
+Tsunami Democrátic grubunun github üzerinde <a href="https://tsunamidemocratic.github.io/">barındırdığı web sitesi</a> yayında
+kalmaya devam ediyor (İspanya'da engellenmiş, biz görebiliyoruz) fakat
+uygulamanın APK dosyasının olduğu depo, GitHub tarafından silinmiş. İlgili
+aktivist grup da bu sefer kendilerine başka bir yol bulmuşlar: bir <a href="https://t.me/apptsunamidemocratic">telegram
+kanalı</a> hazırlamışlar ve APK dosyasını oradan dağıtıyorlar.
+</p>
+</div>
+</div>
+<div id="outline-container-orge41c16e" class="outline-2">
+<h2 id="orge41c16e"><span class="section-number-2">3</span> Android 11 sürümünde kablosuz bağlantı üzerinden <a href="https://www.xda-developers.com/android-11-native-wireless-adb/">ADB desteği gelebilir</a></h2>
+<div class="outline-text-2" id="text-3">
+<p>
+<a href="https://www.xda-developers.com/install-adb-windows-macos-linux/">Android Debug Bridge (ADB)</a> isminden de anlaşılacağı üzere, Android uygulama
+geliştirirken hata ayıklama ve diğer birçok farklı işlem için
+kullanabileceğiniz Android geliştiricinin takım çantasında mutlaka olması
+gereken bir araç. Android geliştirme ile çok az deneyimim olsa da <a href="https://www.xda-developers.com/install-adb-windows-macos-linux/">Android Debug
+Bridge (ADB)</a> aracının Android geliştiriciler için ne kadar önemli olduğunu
+biliyorum. Bu özellik henüz sadece USB bağlantı üzerinden kullanılabilir fakat
+bazı geliştiriciler hem kablo ile uğraşmamak için hem de birden fazla cihazda
+geliştirme yaparken kablosuz olarak da bu özelliği kullanmak istiyor. ADB aracı
+buna izin veriyor fakat yine ilk bağlantı için USB'yi bağlayıp sonra kablosuz
+olarak devam etmek ve birden fazla cihazla çalışıyorsanız da her cihaza sabit
+bir IP adresi vermek gerekiyor-ki router kapatıp açılınca lokal IP adresler de
+değişmesin. Üstelik bu yöntem hiç de güvenli değil, çünkü bağlantı TCP/IP
+protokolü üzerinden şifresiz bir şekilde düz metin olarak kuruluyor.
+Dolayısıyla güvenmediğiniz ağlarda kullanamıyorsunuz.
+</p>
+
+<p>
+Bu hafta xda-developers sitesindeki bir üyenin fark etmesiyle anlaşıldı ki bir
+google çalışanının bu özellikle ilgili commit'ler yapmış. İlgili commit'ler şu
+şekilde:
+</p>
+<ul class="org-ul">
+<li><a href="https://android-review.googlesource.com/c/platform/system/core/+/1148015">1148015: Add wifi service for adb.</a></li>
+<li><a href="https://android-review.googlesource.com/c/platform/system/core/+/1148676">1148676: WIP implement secure pairing for ADB Wireless</a></li>
+</ul>
+<p>
+Commit mesajlarından ve içeriklerinden anlayabileceğiniz üzere Google'da bu
+yönde bir çalışma var. Androd'in Geliştirici Ayarları kısmına "Wireless
+debugging" anahtarı eklenmiş ve üstelik güvenli olabilmesi için de kablosuz
+bağlantı kurulurken QR kod ya da 6 haneli bir kod ile eşleşme gerekli olacak
+gibi gözüküyor. Fakat Android geliştirici arkadaşların hemen heyecanlanmasını
+tavsiye etmiyorum. Çünkü değişiklikler henüz merge edilmemiş gözüküyor.
+xda-developers sitesindeki geliştiricilerin de Android 11'de bu özelliğin
+kullanıma sunulmasını umuyorlar fakat bekleyip görmek gerek. Umarım Android
+geliştirici arkadaşların işlerini kolaylaştıracak bu özellik yakın zamanda
+gelir.
+</p>
+</div>
+</div>
+<div id="outline-container-orgcf057d9" class="outline-2">
+<h2 id="orgcf057d9"><span class="section-number-2">4</span> Python, 3.9 sürümünden sonra <a href="https://lwn.net/Articles/803679/">yıllık sürüm döngüsüne adapte olacak</a></h2>
+<div class="outline-text-2" id="text-4">
+<p>
+30 Ekim tarihinde yönetim kurulu üyesi Brett Cannon'un Python geliştiricileri
+e-posta grubuna gönderdiği maile göre daha önce Łukasz Langa tarafından
+önerilen <a href="https://www.python.org/dev/peps/pep-0602/">PEP 602 - Annual Release Cycle for Python</a> önerisi kabul edildi. İlgili
+önerinin sayfasında durumu henüz "Draft" (Taslak) olarak gözükse de gönderilen
+mailde kısa süre içinde sayfanın güncelleneceğini belirtilmiş. Daha önce de 18
+aylık sürüm döngüsündeydiler.
+</p>
+
+<p>
+Bu yeni döngüye göre artık herhangi bir Python 3.X.0 sürümü bu şekilde
+hazırlanacak:
+</p>
+<ol class="org-ol">
+<li>Python 3.X.0'ın geliştirilmesine, Python 3.(X-1).0 Beta 1 sürümü
+yayınlandığında başlanacak ve 5 ay boyunca bu süreç versiyonlama olmadan
+Pre-Alpha adı altında devam edecek.</li>
+<li>Sonrasında 7 aylık yeni özelliklerin Alpha sürümler olarak duyurulacağı
+periyot başlayacak. Her ay bir Alpha sürümü olacak şekilde toplamda 7
+Alpha sürümü çıkacak.</li>
+<li>Sonrasında 4 aylık herhangi bir yeni özellik içermeyen Beta süreci
+başlayacak ve bu süreç boyunca kullanıcılardan gelen hata raporları
+incelenip onlar giderilecek.</li>
+<li>Sonrasında 1 aylık Release Candidate süreci başlayacak ve ayın bitiminde
+Python 3.X.0 final sürümü duyurulmuş olacak.</li>
+</ol>
+<p>
+Yani herhangi bir Python 3.X.0 sürümü 17 ay içerisinde geliştirilecek ve
+sürümler halinde önümüze sunulacak. Yalnız gönderilen mailde Beta ve RC
+süreçleri ile ilgili birkaç değişiklik olabilir deniyor. Final sürümünden
+sonraki destek süreci de bu şekilde olacak:
+</p>
+<ol class="org-ol">
+<li>Final sürümden sonraki 18 ay (1.5 yıl) boyunca sürüm tam destek alacak.</li>
+<li>Sonraki 42 ay (3.5 yıl) boyunca ise sadece güvenlik güncelleştirmeleri
+alacak.</li>
+</ol>
+
+
+<div class="figure">
+<p><img src="gorseller/python-omur.png" alt="python-omur.png" />
+</p>
+<p><span class="figure-number">Şekil 4: </span>Herhangi bir Python 3.X.0 sürümünün yaşam döngüsü böyle olacak.</p>
+</div>
+
+<p>
+Bu takvim güncellemesinin nedenlerinin bir kaçı ise şu şekilde:
+</p>
+<ul class="org-ul">
+<li>Sürümleri daha küçük yapmak.</li>
+<li>Yeni özellikleri ve hata gidermelerini daha kısa sürede kullanıcıyla
+buluşturmak.</li>
+<li>Kullanıcılara daha iyi bir sürüm güncelleştirme yolu sunmak.</li>
+<li>Daha tahmin edilebilir bir güncelleme takvimi sunmak.</li>
+<li>Diğer nedenler için ilgili PEP sayfasındaki <a href="https://www.python.org/dev/peps/pep-0602/#id12">Rationale and Goals</a> başlığına
+bakabilirsiniz.</li>
+</ul>
+
+<p>
+Projelerinde sıkça Python kullanan biriyseniz ya da Python üzerinden ürünler ya
+da hizmetler veren bir şirkette çalışıyorsanız gözünüz mutlaka bu PEP
+sayfasında olsun. İlgili değişikliklerden sonra bu PEP onaylanacak.
+</p>
+
+<p>
+Ayrıca Python'ın yaratıcısı Guido van Rossum da en son çalıştığı Dropbox
+şirketinden ayrılmış ve <a href="https://www.zdnet.com/article/python-programming-language-creator-retires-saying-its-been-an-amazing-ride/">emekliliğe ayrıldığını duyurmuş</a>. Kendisine bundan
+sonraki yaşamında huzur ve mutluluklar dileriz.
+</p>
+</div>
+</div>
+<div id="outline-container-org7ad82d5" class="outline-2">
+<h2 id="org7ad82d5"><span class="section-number-2">5</span> Cloudflare Rust ile yazılmış <a href="https://blog.cloudflare.com/announcing-cfnts/">NTS implementasyonunu duyurdu</a>: <a href="https://github.com/cloudflare/cfnts">cfnts</a></h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Geçtiğimiz aylarda Cloudflare'in, insanların pek fazla ilgilenmediği bir konu
+olan <a href="https://blog.cloudflare.com/secure-time/">tarih/saat sunucularının güvenliği</a> hakkında yeni bir servis açtığını
+<a href="https://teknoseyir.com/durum/1105646">paylaşmıştım sosyalde</a>. Aynı gönderide Network Time Security (NTS) isimli yeni
+bir protokolün de ilerleyen aylarda duyurulacağından bahsetmiştim. İşte bu
+hafta o protokolün Rust ile implemente edilmiş hali duyuruldu. Ben de bunu
+fırsat bilerek biraz bu protokolün ayrıntılarından bahsetmek istiyorum.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/cloudflare-nts.png" alt="cloudflare-nts.png" height="600" />
+</p>
+</div>
+
+<p>
+NTS aslında yukarıda gözüktüğü gibi iki alt-protokolden oluşuyor. İlk
+Cloudflare'in geliştirdiği güvenlik katmanı olan Network Time Security Key
+Exchange (görselde "NTS-KE server" olarak geçiyor); ikincisi ise her
+bilgisayarın kullandığı bildiğimiz Network Time Protocol (NTP) servisinin son
+sürümü. Güvenli tarih/saat işlemleri yapmak için artık ilk NTS-KE ile konuşup
+bazı anahtarları alıp sonra NTP sunucusu ile konuşarak güncel tarih ve zaman
+bilgisini edineceğiz. Şöyle ki:
+</p>
+<ol class="org-ol">
+<li>İlk aşamada NTS-KE ile şu işlemler yapılır:
+<ol class="org-ol">
+<li>Öncelikle NTS-KE sunucu ile TLS üzerinden güvenli bir iletişim kuruluyor.
+(Burası bildiğimiz HTTPS)</li>
+<li>İkinci aşamada kullanılacak AEAD algoritmasına karar verilir.</li>
+<li>İkinci protokole karar verilir. Şu an sadece NTPv4 ile nasıl alışacağı
+tanımlanmış.</li>
+<li>Tarih/saat bilgilerinin alınacağı NTP sunucusunun IP adresi ve portu
+belirlenir.</li>
+<li>İkinci aşamada kullanmak için çerezler oluşturulur.</li>
+<li>TLS oturumunda iki simetrik anahtar (C2S ve S2C) oluşturulur.</li>
+</ol></li>
+<li>İkinci aşamada ise NTP sunucusu ile:
+<ol class="org-ol">
+<li>İstemci, NTS-KE tarafından verilen anahtarı (C2S) ve çerezleri
+kullanarak NTP sunucusuna tarih/saat bilgisi isteği gönderir.</li>
+<li>NTP sunucusu da yine bir anahtar ile (S2C) kullanıcıya güncel
+tarih/saat bilgilerini ve saklaması gereken yeni çerezleri güvenli bir
+şekilde ulaştırır.</li>
+</ol></li>
+</ol>
+<p>
+Birinci aşama tamamlandıktan sonra artık ikinci aşama sürekli yeni güvenlik
+çerezlerini ileterek tekrarlanabilir. Tarih/saat sunucuları özellikle para
+transferi gibi kritik işlerde çok büyük öneme sahip, bu yüzden de bu katmanın
+güvenliği çok önemli. Bahsetmeden geçmek istemedim.
+</p>
+</div>
+</div>
+<div id="outline-container-orgb9eed50" class="outline-2">
+<h2 id="orgb9eed50"><span class="section-number-2">6</span> Mozilla, klasörden eklenti yükleme <a href="https://www.zdnet.com/article/mozilla-to-stop-supporting-sideloaded-extensions-in-firefox/">seçeneğini kaldırmaya hazırlanıyor</a></h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Firefox ve birçok modern tarayıcıda eklenti desteği artık olmazsa olmazlardan.
+Bu eklentiler tarayıcıların kendi market sistemleri dışında eklentinin
+sıkıştırılmış halini indirip onu tarayıcının kurulu olduğu dizindeki bir
+klasöre atarak da kurulabiliyor fakat Mozilla, Firefox tarayıcısından bu
+özelliği kaldırmayı planlıyor. Bu hafta yayınladıkları <a href="https://blog.mozilla.org/addons/2019/10/31/firefox-to-discontinue-sideloaded-extensions/">blog yazısında</a> sürecin
+nasıl işleyeceğini açıklamış.
+</p>
+
+<p>
+11 Şubat 2020 ayında yayınlanması planan Firefox 73 sürümünde de ilgili
+klasördeki eklentiler okunacak fakat bunlar kopyalanarak kullanıcıya
+gösterilerek normal eklenti gibi kurulacak. 10 Mart 2020 tarihinde
+yayınlanması planan Firefox 74 sürümünde ise bu destek tamamen kaldırılacak.
+Bu desteğin kaldırılmasının sebebi olarak ise güvenlik gösterilmiş, ilgili
+klasöre gönderilen zararlı bir eklenti de firefox'a kurulabildiği için
+tehlikeli bir durum oluşuyordu. Elbette sadece zararlı eklentiler gönderilmek
+için kullanılmıyordu, bazı tarayıcı entegrasyonu gerektiren uygulamalar da bu
+şekilde kuruyordu kendini firefox'a ama maalesef kurunun yanında yaş da
+yanıyor.
+</p>
+
+<p>
+Bu haberin biz geliştiricileri ilgili kısmı ise şöyle, biliyorsunuz bizler
+eklenti geliştirirken kendi bilgisayarımızdaki sürekli deneyerek ilerliyoruz
+dolayısıyla markette yayınlamadan eklentiyi kendi bilgisayarımızdaki Firefox'a
+yükleyebilmemiz gerekiyor. Bu durumda elimizdeki bir seçenek gitti fakat
+burada yanlış anlaşılma oluşmasın biz hala daha bilgisayarımızdaki bir XPI
+dosyasını seçerek onu eklenti olarak kurabileceğiz, kaldırılan özelliği iyi
+anlamak gerek.
+</p>
+</div>
+</div>
+<div id="outline-container-orgb7817f5" class="outline-2">
+<h2 id="orgb7817f5"><span class="section-number-2">7</span> Yaklaşan Etkinlikler</h2>
+<div class="outline-text-2" id="text-7">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" width="100%">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Etkinlik İsmi</th>
+<th scope="col" class="org-left">Yeri</th>
+<th scope="col" class="org-left">Tarihi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/arduino-ile-robotik-programlama-tickets-79692176445">Arduino ile Robotik Programlama: Atölye ve Uygulama</a></td>
+<td class="org-left">Antalya</td>
+<td class="org-left">5 Kasım 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/siber-farkndalk-ve-kullanc-guvenligi-tickets-78765488697">Siber Farkındalık ve Kullanıcı Güvenliği</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">6 Kasım 14:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/software-craftsmanship-turkey/events/sosyal-ve-teknik-yonleri-ile-acik-kaynaga-nasil-katki-yapabiliriz">Sosyal ve Teknik Yönleri ile: Açık Kaynağa Nasıl Katkı Yapabiliriz?</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">6 Kasım 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/devops-tickets-78249134267">DevOps</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">7 Kasım 19:00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org69e0e7a" class="outline-2">
+<h2 id="org69e0e7a"><span class="section-number-2">8</span> Diğer Haberler</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li>ProtonMail, iOS uygulamasını <a href="https://protonmail.com/blog/ios-open-source/">açık kaynak yaptı</a>. <a href="https://github.com/ProtonMail/ios-mail">GitHub Deposu</a></li>
+<li>TimescaleDB, yeni <a href="https://blog.timescale.com/blog/building-columnar-compression-in-a-row-oriented-database/">sıkıştırma kabiliyetlerini duyurdu</a>.</li>
+<li>Microsoft, OpenJDK projesine <a href="https://mail.openjdk.java.net/pipermail/discuss/2019-October/005173.html">katkı yapmaya hazırız dedi</a>.</li>
+<li>Repl.it, kendi sistemleri için geliştirdiği paket yöneticisini <a href="https://repl.it/site/blog/upm">açık kaynak
+yaptı</a>: <a href="https://github.com/replit/upm">upm (Universal Package Manager)</a></li>
+<li>Rust ana geliştirici takımından geliştiricilere çağrı: <a href="https://blog.rust-lang.org/2019/10/29/A-call-for-blogs-2020.html">2020 yılında Rust'dan
+beklentileriniz neler?</a></li>
+<li>Python, <a href="https://docs.python.org/3.5/whatsnew/changelog.html#python-3-5-8">3.5.8 sürümü duyuruldu</a>.</li>
+<li>JDK 14 için <a href="https://mail.openjdk.java.net/pipermail/jdk-dev/2019-October/003517.html">çalışmalar başladı</a>.</li>
+<li>Android Studio <a href="https://androidstudio.googleblog.com/2019/10/android-studio-36-beta-2-available.html?m=1">3.6 Beta 2 sürümü duyuruldu</a>.</li>
+<li>Swift takımı, <a href="https://swift.org/server/">Swift Server Çalışma Grubu</a> ile ilgili <a href="https://swift.org/blog/sswg-update/">yıllık rapor yayınladı</a>.</li>
+<li>Go programlama dilinin 1.13.4 ve 1.12.13 <a href="https://groups.google.com/forum/m/#!topic/golang-nuts/rkSaxR1oz0c">sürümleri duyuruldu</a>. <a href="https://golang.org/doc/devel/release.html#go1.13.minor">Değişiklik
+Notları</a></li>
+<li>Babylon takımı, Health uygulamalarında kullandıkları Kotlin için yazılmış
+<a href="https://medium.com/babylon-engineering/introducing-orbit-mvi-for-kotlin-and-android-62491f4e3234">kütüphaneyi açık kaynak yaptı</a>: <a href="https://github.com/babylonhealth/orbit-mvi">Orbit MVI</a>.</li>
+<li>OpenAPI Generator, <a href="https://github.com/OpenAPITools/openapi-generator/releases/tag/v4.2.0">v4.2.0 sürümünü duyurdu</a>.</li>
+<li>Microsoft, platformlar-arası dağıtık uygulama geliştirme kütüphanesi
+<a href="https://github.com/dotnet/orleans">Orleans</a>'in <a href="https://devblogs.microsoft.com/dotnet/orleans-3-0/">3.0 sürümünü duyurdu</a>.</li>
+<li>Ruby kod kalitesi raporlama aracı RubyCritic, <a href="https://www.fastruby.io/blog/code-quality/code-coverage/rubycritic-4-2-0-simplecov-support.html">v4.2.0 sürümünü yayınlandı</a>.</li>
+<li>Rust ile yazılmış yazı arama ve indeksleme sunucusu <a href="https://github.com/mosuka/bayard">Bayard</a>, ilk sürümü
+<a href="https://github.com/mosuka/bayard/releases/tag/v0.1.0">0.1.0'ı duyurdu</a>.</li>
+<li>Alternatif Rust derleyicisi mrustrc, <a href="https://github.com/thepowersgang/mrustc/releases/tag/v0.9">v0.9 sürümü çıkardı</a>.</li>
+<li>Tide, Rust web sunucusu <a href="https://github.com/http-rs/tide/releases/tag/0.3.0">0.3.0 sürümünü duyurdu</a>.</li>
+<li>Lazarus <a href="https://forum.lazarus.freepascal.org/index.php/topic,47269.0.html">2.0.6 çıktı</a>.</li>
+<li>Immer <a href="https://github.com/immerjs/immer">v5.0.0 çıktı</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org74e7e84" class="outline-2">
+<h2 id="org74e7e84"><span class="section-number-2">9</span> Lisans</h2>
+<div class="outline-text-2" id="text-9">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="../../../img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+<a href="yazilim-gundemi-16.html">Yazılım Gündemi - 16</a> yazısı <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a> (CC BY-NC-SA 4.0)
+ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 3 Kasım 2019</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 22:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

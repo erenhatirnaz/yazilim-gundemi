@@ -1,0 +1,135 @@
+#+TITLE: Yazılım Gündemi - 13
+#+SUBTITLE: 7-13 Ekim 2019
+#+Author: Eren Hatırnaz
+#+DATE: 13 Ekim 2019
+#+OPTIONS: ^:nil
+#+LANGUAGE: tr
+#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=black, filecolor=red, urlcolor=blue}
+#+LATEX_HEADER: \usepackage[turkish]{babel}
+#+HTML_HEAD: <link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+#+LATEX: \shorthandoff{=}
+
+[[file:gorseller/yazilim-gundemi-banner.png]]
+
+#+BEGIN_CENTER
+[[file:../12/yazilim-gundemi-12.org][< Önceki Gündem]] | *7-13 Ekim 2019* | [[file:../14/yazilim-gundemi-14.org][Sonraki Gündem >]]
+
+[[https://teknoseyir.com/blog/yazilim-gundemi-13-07-13-ekim-2019][TeknoSeyir'de Oku]]
+#+END_CENTER
+
+* Github ile ABD Göçmenlik ve Gümrük Muhafaza kurumu arasındaki iş anlaşması [[https://github.blog/2019-10-09-github-and-us-government-developers/][tartışmalara yol açtı]]
+	Github ve ABD Göçmenlik ve Gümrük Muhafaza Kurumu arasındaki yaklaşık
+	200.000$'lık bir iş anlamasının yenilenme zamanı gelince ortalık biraz karıştı.
+	Birkaç hafta önce de bir geliştiricinin aynı kurumu protesto etmek için yaptığı
+	bir eylemden bahsetmiştim (bkz: [[file:../10/yazilim-gundemi-10.org][Yazılım Gündemi - 10]]). Amerika'da yaşamadığım
+	için doğal olarak bu kurum ve politikalarıyla ilgili bir bilgim yok fakat
+	insanların bu kadar fazla olay etmesine bakılırsa pek iyi bir kuruma
+	benzemiyor.
+
+	GitHub durumu açıklamak için tüm çalışanlarına gönderdiği e-postanın aynısını
+	bloglarında yayınladı. Olayın geçmişinden ve kendilerinin izledikleri rollerden
+	bahsetmişler. Kısaca özetlemek gerekirse: ilk iş anlaşması 2016 yılında
+	yapılıyor ve ilgili kurum GitHub Enterprise Server lisansı alıyor. Sanırım o
+	zamanlarda bu kurumun olay yaratan politikaları gündemde değilmiş. GitHub ve
+	Microsoft, ilgili kurumun olay yaratan politikalarına her ne kadar karşı
+	olsalar da "iş başka arkadaşlık başka" hesabıyla anlaşmaya devam ettiklerini
+	belirttiler. "Kurumun ilgili politikalarını her yerde protesto ettik ve etmeye
+	devam edeceğiz" deyip ekliyorlar: "Protesto amaçlı organizasyonlara
+	500.000$'lık bağış yapacağız".
+
+	Twitter'daki [[https://mobile.twitter.com/evan_greer/status/1181745056698572802][şu gönderi altında]] bayağı bir tartışma dönmüş durumda. Bazı GitHub
+	ve Microsoft çalışanlarının da olayları [[https://www.geekwire.com/2019/microsoft-github-workers-protest-ice-contracts-latest-demonstration-employee-activism/][protesto ettiğine yönelik haberler var]].
+	Bakalım olaylar nereye varacak.
+* GNU projesi geliştiricileri Richard M. Stallman'ın devam eden liderliğine [[https://www.zdnet.com/article/gnu-project-developers-object-to-richard-m-stallmans-continued-leadership/][itiraz ediyor]]
+	Geçtiğimiz haftalarda Richard M. Stallman'ın bazı söylemleri yüzünden Özgür
+	Yazılım Vakfı'ndaki (Free Software Foundation) ve MIT'deki görevinden
+	ayrıldığını konuşmuştuk (bkz: [[file:../10/yazilim-gundemi-10.org][Yazılım Gündemi - 10]]). Sonraki haftalarda
+	Stallman, "FSF ve MIT'den istifa ettim fakat GNU projesine liderlik etmeye
+	devam ediyorum" şeklinde bir açıklama yaptı.
+
+	6 Ekim'de FSF [[https://www.fsf.org/news/fsf-and-gnu][şöyle bir yazı yayınladı]] ve özgür yazılım topluluğundan durumla
+	ilgili görüşler toplamaya başladı. Bunun üzerine bazı GNU projesi
+	geliştiricileri de fikirleri açık şekilde bir yazı ile belirtmek için 7 Ekim'de
+	[[https://guix.gnu.org/blog/2019/joint-statement-on-the-gnu-project/][şu yazıyı yayınladılar]]. Yazıca kısaca Richard Stallman'ın özgür yazılım
+	hareketinin ve GNU projesini ilk ortaya koyan ve büyük emekler veren kişi
+	olduğunu kabul ettiklerini fakat yıllar içerisinde Stallman'ın davranışlarının
+	değişmesinden dolayı artık GNU projesini temsil etmediğini düşündüklerini
+	belirtmişler.
+
+	10 Ekim tarihli bir güncelleme notu düşülen bu sayfada toplanan tüm görüşlerin
+	hem FSF hem de GNU liderliğiyle özel olarak paylaşıldığı belirtilmiş. Bakalım
+	süreç nasıl devam edecek. Sizin konu hakkındaki görüşleriniz nedir? Richard
+	Stallman tamamen yazılım camiasından dışlanmalı mıdır yoksa politik görüşleri
+	ayrı, programcı (hacker) kişiliği ayrı mı değerlendirilmelidir? Yorumlar
+	kısmında konuşalım.
+* Chrome, geliştiricinin =autocomplete=off= [[https://bugs.chromium.org/p/chromium/issues/detail?id=914451#c73][seçimine rağmen =autofill= özelliğini kapatmıyor]]
+	=Autocomplete= (otomatik tamamlama), kullanıcıların bir metin kutusuna
+	birşeyler yazarken daha önce yazdıklarını önermeye yarayan bir tarayıcı
+	özelliği. =autofill= (otomatik doldurma) ise sayfadaki bir formu, elemanların
+	=autocomplete= özelliğindeki değerlerden yararlanarak otomatik olarak
+	tarayıcıda kayıtlı değerlerle doldurmaya yarayan bir özellik. Örneğin bir
+	kullanıcı girişi formunda kullanıcı adınızı yazdıktan sonra şifre kutusunun da
+	otomatik olarak doldurulması. Çoğu durumda faydalı olabilirken bazen de
+	geliştirici için biraz sorunlu olabiliyor. Böyle durumların üstesinden gelmek
+	için de bu özelliği =input= bazında kapatmaya yarayan bir tercih
+	geliştiricilere sunulmuş fakat chrome'un buna tercihe saygı duymadığı,
+	=autocomplete=off= seçili olduğu halde otomatik doldurma özelliğini kapatmadığı
+	ortaya çıktı. Aslında bu yeni bir olay değil konu başlığına eklediğim
+	bağlantıdan da görebileceğiniz gibi ilgili issue 12 aralık 2018 tarihinde
+	açılmış fakat hala daha çözülmediği için tekrar gündeme geldi ve geliştiriciler
+	[[https://www.reddit.com/r/programming/comments/dhd3av/issue_914451_autofill_does_not_respect/][sitemlerini belirtmeye devam ediyor]]. Açıkcası Google'dan giderek daha da
+	soğuyan bir kişi olarak, bu durumdan da hiç haz etmedim. Resmen kodladığımız
+	siteye ve ona belirttiğimiz tercihlere aykırı hareket ediyor ve uzun zamandır
+	da hiçbir eylem alınmış değil. Google'a artık birilerinin dur demesi gerekiyor
+	ama kim ne zaman diyecek bilemiyoruz. Bakalım ne olacak. Siz bu konuda ne
+	düşünüyorsunuz?
+
+	*Düzeltme (14.10.2019 11:40)*: =autocomplete= ve =autofill= özelliklerinin
+	karıştırılmasından doğan yanlış anlaşılma sorunu giderildi.
+* Visual Studio Code [[https://code.visualstudio.com/updates/v1_39][Eylül 2019 (1.39) sürümü yayınlandı]]
+	[[file:gorseller/vscode1-39.png]]
+
+	Ayrıca Python eklentisinin bu ay duyurulan yeni sürümü ile VS Code'da artık
+	native olarak [[https://devblogs.microsoft.com/python/announcing-support-for-native-editing-of-jupyter-notebooks-in-vs-code/][Jupyter Notebook düzenleme özelliği de geldi]].
+  #+LATEX: \newpage
+* Yaklaşan Etkinlikler
+  #+ATTR_HTML: :width 100%
+  #+ATTR_LATEX: :environment longtable :align |p{8cm}|l|l|
+  |---------------------------------------------+----------+---------------|
+  | Etkinlik İsmi                               | Yer      | Tarihi        |
+  |---------------------------------------------+----------+---------------|
+  | [[https://kommunity.com/nsankara/events/ns-ankara-ekim-ayi-2-bulusma][Managing Different Environments]]             | Ankara   | 15 Ekim 18:30 |
+  | [[https://www.eventbrite.com/e/zebra-emea-android-developer-seminars-istanbul-2019-tickets-73787116251][Zebra Emea Android Developer Seminars]]       | İstanbul | 16 Ekim 09:00 |
+  | [[https://www.eventbrite.com/e/trai-meet-up-27-yapay-zeka-altyaplar-tickets-73255123045][TRAI Meet-Up #27 Yapay Zekâ Altyapıları]]     | İstanbul | 16 Ekim 18:00 |
+  | [[https://www.eventbrite.com/e/yazlmda-kariyer19-tickets-75927901397][Yazılımda Kariyer'19]]                        | İstanbul | 16 Ekim 18:30 |
+  | [[https://kommunity.com/software-craftsmanship-turkey/events/kubernetes-operators-101][Kubernetes Operators 101]]                    | İstanbul | 16 Ekim 19:00 |
+  | [[https://www.eventbrite.com/e/kuantum-makine-ogrenmesi-tickets-76530519845][Kuantum Makine Öğrenmesi]]                    | İstanbul | 17 Ekim 18:30 |
+  | [[https://kommunity.com/devnot-yazilimci-bulusmalari/events/big-datadan-nasil-anlam-cikarabiliriz][Big Data'dan Nasıl Anlam Çıkarılır?]]         | İstanbul | 18 Ekim 19:00 |
+  | [[https://kommunity.com/voistanbul/events/workshop-sesli-arayuzlerde-gorsel-cevaplar][Workshop: Sesli Arayüzlerde Görsel Cevaplar]] | İstanbul | 19 Ekim 11:00 |
+  |---------------------------------------------+----------+---------------|
+* Diğer Haberler
+	- Mozilla güvenlik takımı, [[https://blog.mozilla.org/security/2019/10/09/iterm2-critical-issue-moss-audit/][iTerm2'de kritik bir güvenlik açığı]] buldu.
+	- Yeni bir build ve test aracı: [[https://bazel.build/][Bazel]], [[https://github.com/bazelbuild/bazel][GitHub Deposu]].
+	- Amazon Elastic Kubernetes Service içerisindeki [[https://aws.amazon.com/tr/blogs/aws/amazon-eks-windows-container-support-now-generally-available/][Windows Container desteği
+    artık herkese açık hale geldi]].
+	- IoT için görsel programlama ortamı sunan [[https://nodered.org/][Node-RED]] ilk [[https://www.infoq.com/news/2019/10/nodered-1-0-released/][stabil sürümü 1.0'ı
+    duyurdu]].
+	- Mycroft isimli firma sesli asistan yazılımını AGPL lisansı ile [[https://mycroft.ai/blog/open-sourcing-the-mycroft-backend/][açık kaynak
+    hale getirdiler]]. [[https://github.com/MycroftAI][Firmanın GitHub Sayfası]]
+	- Yeni bir LISP lehçesi duyuruldu: [[https://sep.yimg.com/ty/cdn/paulgraham/bellanguage.txt?t=1570888282][Bel]].
+	- PyTorch [[https://ai.facebook.com/blog/pytorch-13-adds-mobile-privacy-quantization-and-named-tensors/][1.3 duyuruldu]].
+	- OpenSSH [[http://www.openssh.com/txt/release-8.1][8.1 duyuruldu]].
+	- JDK 14 sürümünde [[https://openjdk.java.net/jeps/349][JFR Event Streaming]] özelliği [[https://mail.openjdk.java.net/pipermail/jdk-dev/2019-October/003377.html][gelecek]].
+	- Next.js [[https://github.com/zeit/next.js/releases/tag/v9.1.1][9.1.1 sürümü yayınlandı]].
+	- AndroidX WorkManager API [[https://developer.android.com/jetpack/androidx/releases/work#2.3.0-alpha02][2.3.0-alpha02 sürümü çıktı]].
+	- C kütüphanesi tbox, [[https://tboox.org/2019/10/11/update-v1.6.4/][1.6.4 sürümünü duyurdu]].
+* Lisans
+  #+BEGIN_CENTER
+  #+ATTR_HTML: :height 75
+  #+ATTR_LATEX: :height 1.5cm
+  [[file:../../../img/CC_BY-NC-SA_4.0.png]]
+
+  [[file:yazilim-gundemi-13.org][Yazılım Gündemi - 13]] yazısı [[https://erenhatirnaz.github.io][Eren Hatırnaz]] tarafından [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Creative Commons
+  Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı]] (CC BY-NC-SA 4.0)
+  ile lisanslanmıştır.
+  #+END_CENTER

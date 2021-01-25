@@ -72,7 +72,7 @@
 	 çalıştırarak uygulayabilirsiniz:
 
 	 #+BEGIN_SRC shell
-		 git config --global protocol.version 2
+     git config --global protocol.version 2
 	 #+END_SRC
 
 	 Bu protokol versiyonu hakkında daha detaylı bilgi almak için [[https://opensource.googleblog.com/2018/05/introducing-git-protocol-version-2.html][bu sayfayı
@@ -85,14 +85,14 @@
 	 istediğimiz klasörleri indirebileceğiz. Örnek kullanım için:
 
 	 #+BEGIN_EXAMPLE
-		 $ git clone --filter=blob:none --sparse git@github.com:git/git.git
-		 $ cd git
-		 $ git sparse-checkout init --cone
-		 $ git sparse-checkout add t
-		 $ git sparse-checkout add Documentation
-		 $ git sparse-checkout list
-		 Documentation
-		 t
+     $ git clone --filter=blob:none --sparse git@github.com:git/git.git
+     $ cd git
+     $ git sparse-checkout init --cone
+     $ git sparse-checkout add t
+     $ git sparse-checkout add Documentation
+     $ git sparse-checkout list
+     Documentation
+     t
 	 #+END_EXAMPLE
 	 Yukarıda sırasıyla şu işlemleri yaptık:
 	  1. github.com/git/git deposunu sparse-checkout özelliğini kullanarak clone
@@ -119,7 +119,7 @@
 	tavsiye edilmez ama yine de ayrı olarak bir deneme yapmak isterseniz şu komutu
 	çalıştırarak TypeScript 3.9 Beta'yı projenize ekleyebilirsiniz:
 	#+BEGIN_SRC shell
-		npm install typescript@beta
+    npm install typescript@beta
 	#+END_SRC
 * Google Play üzerindeki Multiplayer API [[https://support.google.com/googleplay/android-developer/answer/9469745?hl=en][desteği sonlanıyor]]
 	Gün geçmiyor ki bir başka Google hizmeti ya da ürünü [[https://killedbygoogle.com/][Google Mezarlığı]]nda

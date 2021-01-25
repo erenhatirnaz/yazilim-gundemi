@@ -191,8 +191,8 @@
 	 okuyabilmek için bu şekilde sayıların basamaklarını ayırabileceğiz:
    #+ATTR_LATEX: :options frame=lines, linenos, label=JavaScript, labelposition=topline
 	 #+BEGIN_SRC javascript
-		 let sayi1=1_000_000;
-		 console.log(sayi1); // çıktı: 1000000
+     let sayi1=1_000_000;
+     console.log(sayi1); // çıktı: 1000000
 	 #+END_SRC
 	 Öyle çok olmazsa olmaz bir özellik değil ama yine de faydalı.
 

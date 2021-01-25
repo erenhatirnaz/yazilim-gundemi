@@ -92,20 +92,20 @@
 		oluşturabileceğiz. Yani bu şekilde:
     #+ATTR_LATEX: :options frame=lines, linenos, label=JavaScript, labelposition=topline
 		#+BEGIN_SRC javascript
-			window.CSS.registerProperty({
-				name: '--my-color',
-				syntax: '<color>',
-				inherits: false,
-				initialValue: 'black',
-			});
+      window.CSS.registerProperty({
+        name: '--my-color',
+        syntax: '<color>',
+        inherits: false,
+        initialValue: 'black',
+      });
 		#+END_SRC
 		JavaScript tarafında özelliği tanımladıktan sonra, CSS tarafında böyle
 		kullanabileceğiz:
     #+ATTR_LATEX: :options frame=lines, linenos, label=CSS, labelposition=topline
 		#+BEGIN_SRC css
-			.thing {
-					--my-color: red;
-			}
+      .thing {
+          --my-color: red;
+      }
 		#+END_SRC
 		Front-End tarafına pek yakın birisi olmadığım için kullanım senaryosunu
 		çözemedim ama [[https://web.dev/css-props-and-vals/][buradaki sayfadan]] daha detaylı bilgiler alabilirsiniz.

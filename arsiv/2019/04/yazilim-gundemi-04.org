@@ -93,13 +93,13 @@
 
    #+ATTR_LATEX: :options frame=lines, linenos, label=CSS, labelposition=topline
 	 #+BEGIN_SRC css
-		 ul ::marker {
-				 color: hotpink;
-		 }
-		 ol ::marker {
-				 color: blue;
-				 font-size: 200%;
-		 }
+     ul ::marker {
+         color: hotpink;
+     }
+     ol ::marker {
+         color: blue;
+         font-size: 200%;
+     }
 	 #+END_SRC
 
 	 Sonuç işe şu şekilde oluyor:

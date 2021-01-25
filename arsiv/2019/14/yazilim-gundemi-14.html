@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 22:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi - 14</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi - 14
+<br />
+<span class="subtitle">14-20 Ekim 2019</span>
+</h1>
+<div id="table-of-contents">
+<h2>İçindekiler</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org12cb200">1. GitLab ofiste siyaset konuşmayı yasakladı ve geri aldı</a></li>
+<li><a href="#orgc7088d4">2. Python 3.8 stabil sürümü yayınlandı</a>
+<ul>
+<li><a href="#org3e8449e">2.1. PEP 589 - TypedDict</a></li>
+<li><a href="#orgefdbcd9">2.2. <code>final</code> niteleyicisi (PEP 586 - Literal Types)</a></li>
+</ul>
+</li>
+<li><a href="#orgfce0f5e">3. Microsoft, .NET Framework API'lerinin .NET Core'a aktarılmasının tamamlandığını duyurdu</a></li>
+<li><a href="#org03f484d">4. Firefox geliştirici araçlarına yeni özellik eklendi: WebSocket Inspector</a></li>
+<li><a href="#orgca54ba2">5. Android 10 sürümünde kaldırılan bir fonksiyonellik bir uygulamanın hayatına son verdi</a></li>
+<li><a href="#org915395a">6. WireGuard uygulaması içerdiği bağış bağlantısı yüzünden Play Store'dan silindi</a></li>
+<li><a href="#org5a6a1c3">7. Bir programlama hatası 150'den fazla bilimsel çalışmayı etkiledi</a></li>
+<li><a href="#orgab663d0">8. Yaklaşan Etkinlikler</a></li>
+<li><a href="#orgbe5fb9c">9. Diğer Haberler</a></li>
+<li><a href="#orgd9029cd">10. Lisans</a></li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gundemi-banner.png" alt="yazilim-gundemi-banner.png" />
+</p>
+</div>
+
+<div class="org-center">
+<p>
+<a href="../13/yazilim-gundemi-13.html">&lt; Önceki Gündem</a> | <b>14-20 Ekim 2019</b> | <a href="../15/yazilim-gundemi-15.html">Sonraki Gündem &gt;</a>
+</p>
+
+<p>
+<a href="https://teknoseyir.com/blog/yazilim-gundemi-14-14-20-ekim-2019">TeknoSeyir'de Oku</a>
+</p>
+</div>
+
+<div id="outline-container-org12cb200" class="outline-2">
+<h2 id="org12cb200"><span class="section-number-2">1</span> GitLab ofiste siyaset konuşmayı <a href="https://www.theregister.co.uk/2019/10/16/gitlab_employees_gagged/">yasakladı</a> ve <a href="https://www.theregister.co.uk/2019/10/17/gitlab_reverse_ferret/">geri aldı</a></h2>
+<div class="outline-text-2" id="text-1">
+
+<div class="figure">
+<p><img src="gorseller/gitlab-yasak.png" alt="gitlab-yasak.png" />
+</p>
+</div>
+
+<p>
+Geçtiğimiz haftalarda bir yazılımcının ABD Göçmenlik ve Gümrük Muhafaza
+kurumunu protesto etmesinden (bkz: <a href="../10/yazilim-gundemi-10.html">Yazılım Gündemi - 10</a>) ve aynı kurum ile iş
+anlaşması yapmış GitHub'daki geliştiricilerin tepkilerinden (bkz: <a href="../13/yazilim-gundemi-13.html">Yazılım
+Gündemi - 13</a>) bahsetmiştim. Tam da o zamanlara denk gelecek şekilde GitLab'de
+"bu olaylar bizi de etkileyebilir" demiş olacak ki, CEO Sid Sijbrandij
+tarafından şirketin el kitabına apar topar <a href="https://gitlab.com/gitlab-com/www-gitlab-com/commit/b5a35716deb4f63299a23a40510475f5503c11c4">bu ekleme</a> yapılmış. Kısaca yapılan
+ekleme şu şekilde: "müşterilerimizin değerleri ile bizim değerlerimiz
+uyuşmayabilir", "biz iş yerinde siyaset konuşmayız, verimlilik bizim bir
+numaralı değerimizdir".
+</p>
+
+<p>
+Tabii ki bu eklemeyi yaparak olası protestoların önüne geçmeyi amaçlayan şirket
+yönetimi amacına ulaşamadığı gibi tam tersi bir etki de yaratıp insanların bu
+konu hakkında konuşmaya başlamasına yol açtı. Her ne kadar şirketin el
+kitabındaki bu değişiklik 2 hafta önce CEO tarafından <a href="https://gitlab.com/gitlab-com/www-gitlab-com/merge_requests/30656">pull request olarak</a> açık
+şekilde yapılmış olsa da, olay bu hafta ortaya çıktı ve tartışmalar da bu hafta
+başladı. Hem şirketin kendi çalışanları hem de geliştirici camiasındaki birçok
+insan reddit ve <a href="https://news.ycombinator.com/item?id=21274511">HackerNews</a> gibi platformlarda tepkilerini gösterdiler.
+</p>
+
+<p>
+Şirketin bu yanlıştan dönmesi <a href="https://www.theregister.co.uk/2019/10/17/gitlab_reverse_ferret/">uzun sürmedi</a>. Büyüyen tartışmalar üzerine ertesi
+gün şirketten yetkili başka isimler tarafından <a href="https://gitlab.com/gitlab-com/www-gitlab-com/merge_requests/32628/diffs">sorunlu cümleler değiştirildi</a> ve
+çalışanların iş yerinde siyaset konuşmasına yönelik yasak da kalkmış oldu.
+GitLab yönetiminin bu tavırları her ne kadar doğru olmasa da şirketteki tamamen
+herkese açık yapı takdir edilmesi gereken bir şey. Şirketin birçok dokümanı
+herkese açık şekilde depolarında duruyor, çalışanlar de bunların
+değiştirilmesinde ve geliştirilmesinde katkı verebiliyorlar. GitLab'ın bu
+şekilde açık bir organizasyon yapısına olması sahip olmasını hep takdir
+etmişimdir.
+</p>
+
+<p>
+Bu konuda siz ne düşünüyorsunuz. Sizce GitLab yönetiminin bu şekilde
+protestoların önüne geçmeye çalışması doğru mu? Yoksa çeşitli devlet
+kurumlarıyla iş anlaşması yapan şirketleri protesto edenler sorunu yanlış yerde
+mi arıyorlar? Yorumlar kısmında konuşalım.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc7088d4" class="outline-2">
+<h2 id="orgc7088d4"><span class="section-number-2">2</span> Python 3.8 stabil sürümü yayınlandı</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Python takımı, <a href="https://www.python.org/dev/peps/pep-0569/#release-schedule">plan dokümanı</a>nda belirttikleri şekilde (hatta daha erken bir
+tarihte) Python 3.8.0 final sürümünün stabil halini yayınladılar. <a href="../02/yazilim-gundemi-02.html">Yazılım
+Gündemi - 2</a> yazısında Python 3.8 ile gelecek özelliklerden bazılarını
+anlatmıştım. Bu yazıda onlara değinmeyeceğim fakat başka iki özelliğe birlikte
+göz atalım:
+</p>
+</div>
+
+<div id="outline-container-org3e8449e" class="outline-3">
+<h3 id="org3e8449e"><span class="section-number-3">2.1</span> <a href="https://www.python.org/dev/peps/pep-0589/">PEP 589 - TypedDict</a></h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Diğer programlama dillerinde key-value object olarak bildiğimiz yapının
+Python'daki karşılığı Dictionary. Fakat Python'daki bu yapı tiplendirilmiş
+şekilde kullanılamıyordu. Örnek vererek daha iyi açıklayabilirim sanırım.
+</p>
+
+<p>
+Önceden bu şekilde kullanıyorduk:
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span class="org-variable-name">kisi</span> = {<span class="org-string">'isim'</span>: <span class="org-string">'Eren'</span>,
+        <span class="org-string">'soyisim'</span>: <span class="org-string">'Hat&#305;rnaz'</span>,
+        <span class="org-string">'yas'</span>: 24}
+</pre>
+</div>
+
+<p>
+Artık bu şekilde kendi sınıfımızı oluşturup onu da Dictionary nesnesi gibi
+kullanabileceğiz:
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span class="org-keyword">from</span> typing <span class="org-keyword">import</span> TypedDict
+
+<span class="org-keyword">class</span> <span class="org-type">Kisi</span>(TypedDict):
+    isim: <span class="org-builtin">str</span>
+    soyisim: <span class="org-builtin">str</span>
+    yas: <span class="org-builtin">int</span>
+
+kisi1: <span class="org-variable-name">Kisi</span> = {<span class="org-string">'isim'</span>: <span class="org-string">'Eren'</span>,
+               <span class="org-string">'soyisim'</span>: <span class="org-string">'Hat&#305;rnaz'</span>,
+               <span class="org-string">'yas'</span>: 24}
+</pre>
+</div>
+<p>
+Yani artık tip kontrollü şekilde dictionary nesneleri kullanabileceğiz. Pek
+sık Python yazmasam da ara ara benim de ihtiyacım olan bir özellikti,
+gelmesine sevindim. Daha detaylı bilgi için alt başlığa eklediğim bağlantıdaki
+dokümana göz atabilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-orgefdbcd9" class="outline-3">
+<h3 id="orgefdbcd9"><span class="section-number-3">2.2</span> <code>final</code> niteleyicisi (<a href="https://www.python.org/dev/peps/pep-0586/">PEP 586 - Literal Types</a>)</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Daha önce Java'da görmeye alıştığımız <code>final</code> niteleyicisi artık Python'a da
+geliyor. Bilmeyenler için <code>final</code> niteleyicisi, tanımladığınız bir sınıfın,
+fonksiyonun ya da değişkenin değiştirilmesi istemediğimiz durumlarda
+kullandığımız bir ifade. Python da ise şu şekilde kullanabileceğiz:
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span class="org-keyword">from</span> typing <span class="org-keyword">import</span> final
+
+<span class="org-type">@final</span>
+<span class="org-keyword">class</span> <span class="org-type">Kisi</span>:
+    <span class="org-type">@final</span>
+    <span class="org-keyword">def</span> <span class="org-function-name">merhaba</span>(<span class="org-keyword">self</span>):
+        <span class="org-comment-delimiter"># </span><span class="org-comment">..</span>
+</pre>
+</div>
+<p>
+Değişkenleri ise bu şekilde değiştirilemez yapabileceğiz:
+</p>
+<div class="org-src-container">
+<pre class="src src-python">ID: <span class="org-variable-name">Final</span> = 15
+</pre>
+</div>
+
+<p>
+Daha detaylı bilgi ve diğer değişiklikler ve yeniliklerle ilgili şeyler için
+konu başlığına eklediğim bağlantıya tıklayabilirsiniz.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfce0f5e" class="outline-2">
+<h2 id="orgfce0f5e"><span class="section-number-2">3</span> Microsoft, .NET Framework API'lerinin .NET Core'a aktarılmasının <a href="https://github.com/dotnet/announcements/issues/130">tamamlandığını duyurdu</a></h2>
+<div class="outline-text-2" id="text-3">
+<p>
+.NET Framework, Microsoft'un çok uzun zamandır geliştirmeye devam ettiği ve tüm
+ekosistemini altında topladığı bir uygulama çatısıydı. Windows
+uygulamalarından, mobil uygulamalara, oradan web uygulama ve servislerine kadar
+her şey bu framework sisteminin içerisinde fakat artık Microsoft bu emektar
+sistemi tozlu raflara kaldırmaya hazırlanıyor gibi. Çünkü artık .NET Framework
+yalnız değil. Geçtiğimiz yıllarda gelen CEO Satya Nadella ile açık kaynak
+dünyasına giriş yapan Microsoft, artık daha dışarıya açık bir yapıya sahip. Bu
+değişimin ürünlerinden biri olan .NET Core projesi de .NET Framework sisteminin
+yerini almaya hazırlanıyor. .NET Framework içerisindeki API'lerin de .NET Core
+projesine yavaşça aktarıldığını biliyoruz. Hatta geçtiğimiz haftalarda .NET
+Core 3.0 duyurulmuştu ve bu sürümle artık Windows Forms ve WPF desteğinin de
+geldiğini söylemiştik (bkz: <a href="../11/yazilim-gundemi-11.html">Yazılım Gündemi - 11</a>).
+</p>
+
+<p>
+Bu hafta da öğreniyoruz ki .NET Framework API'lerinin .NET Core projesine
+aktarılması tamamlanmış. Yani artık .NET Framework'den hiçbir API, Core
+projesine aktarılmayacak. .NET Core projesinin, %80 civarında .NET Framework
+API'si içerdiğini söylüyor Microsoft. Dolayısıyla artık .NET Framework'de
+kullandığınız bazı API'ler .NET Core'da yoksa, <a href="https://www.theregister.co.uk/2019/10/15/net_framework_port_end/">hiç olmayacak demektir</a>.
+</p>
+
+<p>
+Microsoft zaten .NET'in geleceğinin Core projesi olduğunu <a href="https://devblogs.microsoft.com/dotnet/net-core-is-the-future-of-net/">bu blog yazısında</a>
+açıklamıştı. Dolayısıyla çok da sürpriz olmadı bu gelişme. Aramızdan ayrılan
+teknolojiler arasında Web Forms, WCF Server ve Windows Workflow var.
+Kendilerini tozlu raflardaki yerlerine alabiliriz. .NET Framework'e destek
+hemen kesilmeyecek tabii ki de fakat benim tavsiyem uygulamalarınızı artık .NET
+Core altyapısına geçirmeye başlayın.
+</p>
+</div>
+</div>
+<div id="outline-container-org03f484d" class="outline-2">
+<h2 id="org03f484d"><span class="section-number-2">4</span> Firefox geliştirici araçlarına yeni özellik eklendi: <a href="https://hacks.mozilla.org/2019/10/firefoxs-new-websocket-inspector/">WebSocket Inspector</a></h2>
+<div class="outline-text-2" id="text-4">
+<p>
+WebSocket, sunucu ve istemci arasında kalıcı bir bağlantı kurmaya yarayan bir
+teknoloji. Daha çok tarayıcı üzerinde çalışan anlık mesajlaşma uygulamalarında
+kullanıyoruz. Firefox takımı da, gelen istekler üzerine yeni bir geliştirici
+aracı hazırlamış ve Firefox 71 sürümünde bu aracın yer alacağını açıklamış.
+Ayrıca şu an Firefox Developer Edition sürümünde bu özellik kullanılabilir
+durumda. Kullanmak için F12'ye basıp DevTools penceresini açtıktan sonra,
+Network sekmesine tıklayıp ve oradan da Messages sekmesine tıklamak gerekiyor.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/websocket-inspector.png" alt="websocket-inspector.png" height="450" />
+</p>
+</div>
+
+<p>
+Bu WebSocket Inspector aracı ile artık sunucu ile istemci arasındaki bu veri
+trafiğini izleyebilir, filtreleyebilir ve arama yapabilir hale geleceğiz. Bu
+sayede de WebSocket kullanan bir uygulama geliştirirken yaşadığımız araç
+sıkıntısını da çözmüş oluyor İlerleyen sürümlerde bu yeni araca yeni özellikler
+de eklenecekmiş. Mozilla ve Firefox takımı yine bizim için çalışmaya devam
+ediyor. &lt;3 Mozilla &lt;3 Firefox.
+</p>
+</div>
+</div>
+<div id="outline-container-orgca54ba2" class="outline-2">
+<h2 id="orgca54ba2"><span class="section-number-2">5</span> Android 10 sürümünde kaldırılan bir fonksiyonellik bir <a href="https://bitbucket.org/esminis/server/wiki/Home">uygulamanın hayatına son verdi</a></h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Google, Android 10 sürümünde <code>exec()</code> isimli fonksiyonun uygulamaların
+bulunduğu dizinde <a href="https://issuetracker.google.com/issues/128554619">çalışması engellendiği</a> için Servers for Android isimli
+uygulamanın da geliştirilmesine son verilmiş. Uygulamanın BitBucket'daki
+sayfası yayından kalmış fakat tahminime göre Android üzerinde web sunucu
+çalıştırmaya yarayan bir uygulamaya benziyor. <code>exec()</code> fonksiyonu da büyük
+ihtimal bir binary dosyasını çalıştırmaya yarayan bir komut (Android
+geliştirici arkadaşlar yanlış biliyorsam düzeltsin beni). Bu uygulama da bu
+yöntemle web sunucu için gerekli çeşitli araçları çalıştırıyormuş sanırım.
+Yazıda bahsettiğine göre PHP bunlardan birisi mesela. Bu fonksiyonellik Android
+10 sürümünde tamamen engellenmiş değil, eğer ilgili binary dosyaları APK
+dosyasının içine paketlenmişse çalıştırılabiliyor fakat bu uygulama için bir
+çözüm değil çünkü birden çok aracı ve farklı sürümlerini içermesi gerektiği
+için uygulamanın boyutu 2GB'ı aşıyor ve haliyle mantıklı olmaktan da çıkıyor.
+Maalesef geliştirici arkadaş uygulamayı geliştirmeyi durdurmuş ve Play
+Store'dan da silmiş ama keşke BitBucket'daki kaynak kodlar dursaydı.
+</p>
+
+<p>
+Maalesef geliştiricilik hayatımız boyunca böyle bir çok projemiz üzerinde
+çalıştığımız platformun desteği kesmesi üzerine son bulacak. Burada Google'ın
+haklılık payı var. <code>exec()</code> fonksiyonunu güvenlik sorunlarına yol açabileceği
+kaygısıyla kaldırmaya hazırlanıyorlarmış.
+</p>
+</div>
+</div>
+<div id="outline-container-org915395a" class="outline-2">
+<h2 id="org915395a"><span class="section-number-2">6</span> WireGuard uygulaması içerdiği <a href="https://lists.zx2c4.com/pipermail/wireguard/2019-October/004596.html">bağış bağlantısı yüzünden Play Store'dan silindi</a></h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Bir VPN protokolü olan WireGuard'ın Android uygulaması bu hafta bir süreliğine
+Play Store'dan silindi <a href="https://lists.zx2c4.com/pipermail/wireguard/2019-October/004597.html">ve geri geldi</a>. Uygulamalarına kullanıcıların destek
+olabilmeleri için bağış bağlantısı eklemişler ve uygulamayı Google'a inceleme
+için göndermişler fakat onay beklerlerken tam tersi red edilmişler hatta
+uygulama Play Store üzerinden silinmiş. Meğerse böyle bir ekleme Google'ın
+"Ödeme Yönergesi"ne uygun değilmiş. Neyse ki geliştirici hızlı davranmış ve
+ilgili değişikliği geri alıp tekrar incelemeye göndermiş ve uygulama kısa süre
+içerisinde tekrar <a href="https://play.google.com/store/apps/details?id=com.wireguard.android">Play Store'daki yerini almış</a>.
+</p>
+
+<p>
+Bu haber, Android geliştirici arkadaşların kulağına küpe olsun. Google'ın
+sistemi dışında kullanıcılarınızdan destek almak istersiniz falan aman ha! Kapı
+dışarı ederler adamı valla!
+</p>
+</div>
+</div>
+<div id="outline-container-org5a6a1c3" class="outline-2">
+<h2 id="org5a6a1c3"><span class="section-number-2">7</span> Bir programlama hatası 150'den fazla <a href="https://arstechnica.com/information-technology/2019/10/chemists-discover-cross-platform-python-scripts-not-so-cross-platform/">bilimsel çalışmayı etkiledi</a></h2>
+<div class="outline-text-2" id="text-7">
+<p>
+Kimyasal analizde sıkça kullanılan "<a href="https://www.nature.com/articles/nprot.2014.042">Willoughby-Hoye</a>" isimli bir Python
+betiğinin farklı işletim sistemlerinde farklı sonuçlar vermesi yüzünden 150'den
+fazla bilimsel çalışma <a href="https://pubs.acs.org/doi/full/10.1021/acs.orglett.9b03216">yanlış sonuç üretmiş olabilir</a>.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/programlama-hatasi-bilimi-etkiledi.png" alt="programlama-hatasi-bilimi-etkiledi.png" />
+</p>
+<p><span class="figure-number">Şekil 4: </span>Betik Ubuntu 16 ve MacOS Majove sistemlerinde yanlış sonuç veriyor.</p>
+</div>
+
+<p>
+Hataya neden olan Python'daki <code>glob</code> isimli modül. Bu modül, belirli
+bir şablona uygun dosya isimlerini getiren bir araç fakat bu modülün
+çalışması işletim sisteminin dosyaları sıralama sistemine
+bağımlıymış. Yani belirli bir şablona uygun dosya isimleri,
+Ubuntu'da farklı sırayla, Windows'da farklı sırayla geliyor. Bu
+habere konu olan Python betiğinde ise, <code>glob</code> fonksiyonundan gelen
+dosyalar sırasıyla işleniyormuş fakat farklı sistemlerde dosyaların
+da sırası değiştiği için betiğin ürettiği sonuçta buna göre
+değişiyormuş. Böyle küçük bir detayı bile bulup, ortaya çıkarabilen
+bilime hayranlığım sonsuz.
+</p>
+</div>
+</div>
+<div id="outline-container-orgab663d0" class="outline-2">
+<h2 id="orgab663d0"><span class="section-number-2">8</span> Yaklaşan Etkinlikler</h2>
+<div class="outline-text-2" id="text-8">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" width="100%">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Etkinlik İsmi</th>
+<th scope="col" class="org-left">Yer</th>
+<th scope="col" class="org-left">Tarihi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/android-workshop-tickets-77583066039">Android Workshop</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">22 Ekim 18:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/codefiction/events/codefiction-bulusuyor">Codefiction Buluşuyor</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">22 Ekim 18:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/atolye15/events/writing-modular-scalable-and-maintainable-css">Writing Modular, Scalable and Maintainable CSS</a></td>
+<td class="org-left">İzmir</td>
+<td class="org-left">23 Ekim 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/yapay-zekaya-giris-semineri-tickets-75830441893">Yapay Zekaya Giriş Semineri</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">24 Ekim 13:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/sovos-foriba-rd/events/aws-api-gateway">AWS API Gateway</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">24 Ekim 17:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/modern-antivirus-atlatma-teknikleri-workshop-hacknightsorg-tickets-77325327135">Modern Antivirus Atlatma Teknikleri Workshop</a></td>
+<td class="org-left">Ankara</td>
+<td class="org-left">24 Ekim 19:00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orgbe5fb9c" class="outline-2">
+<h2 id="orgbe5fb9c"><span class="section-number-2">9</span> Diğer Haberler</h2>
+<div class="outline-text-2" id="text-9">
+<ul class="org-ul">
+<li><code>go-yaml</code> projesinde DoS açığı <a href="https://raesene.github.io/blog/2019/10/15/From-stackoverflow-to-CVE/">bulundu ve giderildi</a>.</li>
+<li>.NET Core 3.1 <a href="https://devblogs.microsoft.com/dotnet/announcing-net-core-3-1-preview-1/?WT.mc_id=dotnetcore-reddit-bramin">Preview 1 sürümü duyuruldu</a>.</li>
+<li>Visual Studio 2019 v16.4 <a href="https://devblogs.microsoft.com/visualstudio/fall-sports-pumpkin-spice-and-visual-studio-2019-v16-4-preview-2/">Preview 2 yayınlandı</a>.</li>
+<li>Amazon Web Services, Rust projesine <a href="https://aws.amazon.com/tr/blogs/opensource/aws-sponsorship-of-the-rust-project/">sponsor oldu</a>.</li>
+<li>Amazon, kendi hizmetlerindeki Oracle veritabanlarını <a href="https://aws.amazon.com/tr/blogs/aws/migration-complete-amazons-consumer-business-just-turned-off-its-final-oracle-database/">kendi çözümleri ile
+değiştirdi</a>.</li>
+<li>Microsoft'un, dağıtık uygulamalar için runtime projesi <a href="https://dapr.io/">Dapr</a> <a href="https://github.com/dapr/dapr/releases/tag/v0.1.0">ilk sürümü
+0.1.0'ı duyurdu</a>.</li>
+<li>Microsoft, veri görselleştirme aracı SandDance'ı <a href="https://cloudblogs.microsoft.com/opensource/2019/10/10/microsoft-open-sources-sanddance-visual-data-exploration-tool/">açık kaynak yaptı</a>, <a href="https://github.com/Microsoft/SandDance">GitHub
+Deposu</a>.</li>
+<li>Google Açık Kaynak Takımı, Bazel isimli build sistemlerinin ilk stabil
+sürümü 1.0'ı <a href="https://opensource.googleblog.com/2019/10/bazel-reaches-10-milestone.html">genel erişilebilirlik duruma getirdi</a>.</li>
+<li>GitHub, <a href="https://itch.io/jam/game-off-2019">Game Off</a> isimli oyun yarışması <a href="https://github.blog/2019-10-18-get-ready-for-game-off/">düzenliyor</a>.</li>
+<li>Android Emulator <a href="https://androidstudio.googleblog.com/2019/10/emulator-2925-canary.html">29.2.5 Canary sürümü yayınlandı</a>.</li>
+<li>CloudFlare deneysel olarak <a href="https://blog.cloudflare.com/experiment-with-http-3-using-nginx-and-quiche/">HTTP/3 desteği veriyor</a>.</li>
+<li>RedHat, OpenShift 4.2 için <a href="https://developers.redhat.com/blog/2019/10/16/developer-tools-openshift/">yeni geliştirici araçlarını yayınladı</a>.</li>
+<li>Slack, libslack isimli C++ kütüphanesini <a href="https://slack.engineering/client-consistency-at-slack-beyond-libslack-c9cfbe778fb7">geliştirmeyi durdurduğunu açıkladı</a>.</li>
+<li>EmacsConf içeriği <a href="https://emacsconf.org/2019/schedule">belli oldu</a>.</li>
+<li>Go programlama dilinin 1.13.3 ve 1.12.12 <a href="https://groups.google.com/forum/#!topic/golang-announce/R3XK-Wf-Mtk">sürümleri yayınlandı</a>.</li>
+<li>D programlama dilinin geleceği hakkında <a href="https://dlang.org/blog/2019/10/15/my-vision-of-ds-future/">bir blog yazısı yayınlandı</a>.</li>
+<li>Swift programlama dilinin yeni diagnostic mimarisi <a href="https://swift.org/blog/new-diagnostic-arch-overview/">ile ilgili yazı
+yayınlandı</a>.</li>
+<li>Vue-cli, <a href="https://app.releasly.co/releases/vuejs/vue-cli/4_0_0">v4.0.0 sürümü yayınlandı</a>.</li>
+<li>RustUp, <a href="https://blog.rust-lang.org/2019/10/15/Rustup-1.20.0.html">1.20.0 sürümü duyuruldu</a>.</li>
+<li>Go ile yazılmış client-driven REST-API sunucusu <a href="https://github.com/dunglas/vulcain">vulcain</a>, ilk sürümü <a href="https://github.com/dunglas/vulcain/releases/tag/v0.1.0">0.1.0'ı
+yayınladı</a>.</li>
+<li>TinyGo <a href="https://github.com/tinygo-org/tinygo/releases/tag/v0.9.0">0.9.0 sürümü çıktı</a>.</li>
+<li>Birden çok geliştirici aracını bir arada barındıran <a href="https://github.com/reugn/dev-tools">reugn/dev-tools</a>
+uygulamasını <a href="https://github.com/reugn/dev-tools/releases/tag/v0.2.0">0.2.0 sürümü çıktı</a>.</li>
+<li>uvw (C++ için <a href="https://github.com/libuv/libuv">libuv</a>) <a href="https://github.com/skypjack/uvw/releases/tag/v2.2.0_libuv-v1.33">2.2.0 sürümü çıktı</a>.</li>
+<li>watt <a href="https://github.com/dtolnay/watt/releases/tag/0.1.0">0.1.0 sürümü çıktı</a>.</li>
+<li>fancy-regex kütüphanesinin <a href="https://github.com/fancy-regex/fancy-regex/releases/tag/0.2.0">0.2.0 sürümü çıktı</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd9029cd" class="outline-2">
+<h2 id="orgd9029cd"><span class="section-number-2">10</span> Lisans</h2>
+<div class="outline-text-2" id="text-10">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="../../../img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+<a href="yazilim-gundemi-14.html">Yazılım Gündemi - 14</a> yazısı <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a> (CC BY-NC-SA 4.0)
+ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 20 Ekim 2019</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 22:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

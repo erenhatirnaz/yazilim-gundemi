@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 22:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi - 23</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi - 23
+<br />
+<span class="subtitle">23-29 Aralık 2019</span>
+</h1>
+<div id="table-of-contents">
+<h2>İçindekiler</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org8d6b965">1. 2020 dönemi için Python yönetim konseyi üyeleri seçildi</a></li>
+<li><a href="#org74e1b71">2. Ruby 2.7 sürümü yayınlandı</a>
+<ul>
+<li><a href="#orgaccf691">2.1. Pattern Matching [Deneysel]</a></li>
+<li><a href="#org01f2ff3">2.2. REPL iyileştirmeleri</a></li>
+</ul>
+</li>
+<li><a href="#org772909b">3. JavaScript'in Durumu 2019 anketi sonuçları yayınlandı</a>
+<ul>
+<li><a href="#org3cae145">3.1. JavaScript'e dönüştürülebilen diller</a></li>
+<li><a href="#orgdb1f275">3.2. Front-End kütüphaneleri</a></li>
+</ul>
+</li>
+<li><a href="#orgcf86bba">4. Java 14 Feature-freeze sürecine girdi</a></li>
+<li><a href="#org0275934">5. Yaklaşan Etkinlikler</a></li>
+<li><a href="#org2fdab26">6. Diğer Haberler</a></li>
+<li><a href="#org8db965a">7. Credits</a></li>
+<li><a href="#org76ebf1b">8. Lisans</a></li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gundemi-banner.png" alt="yazilim-gundemi-banner.png" />
+</p>
+</div>
+
+<div class="org-center">
+<p>
+<a href="../22/yazilim-gundemi-22.html">&lt; Önceki Gündem</a> | <b>23-29 Aralık 2019</b> | <a href="../../2020/01/yazilim-gundemi-2020-01.html">Sonraki Gündem &gt;</a>
+</p>
+
+<p>
+<a href="https://teknoseyir.com/blog/yazilim-gundemi-23-23-31-aralik-2019">TeknoSeyir'de Oku</a>
+</p>
+</div>
+
+<div id="outline-container-org8d6b965" class="outline-2">
+<h2 id="org8d6b965"><span class="section-number-2">1</span> 2020 dönemi için Python yönetim konseyi <a href="https://www.python.org/dev/peps/pep-8101/">üyeleri seçildi</a></h2>
+<div class="outline-text-2" id="text-1">
+
+<div class="figure">
+<p><img src="gorseller/python-yonetim-konseyi.png" alt="python-yonetim-konseyi.png" height="100" />
+</p>
+</div>
+
+<p>
+Python uzun zamandır geliştirilen bir programlama dili olduğu için haliyle
+yönetimi için de bazı kararlar alınması gerekiyordu. Kısaca tarihçesinden
+bahsetmek gerekirse: Guido van Rossum (Python dilinin yaratıcısı), 2018'in
+temmuz ayında Python mail grubuna bazı kararları verirken yorulduğunu ve artık
+karar verici konumunda olmak istemediğini belirten <a href="https://mail.python.org/pipermail/python-committers/2018-July/005664.html">bir mail yazıyor</a> ve
+topluluğa "kendi yönetim şeklinizi kendiniz belirleyin" diyor. Bunun üzerine
+python ana geliştirici takımı da çeşitli yönetim modelleri <a href="https://www.python.org/dev/peps/pep-8000/">üzerine tartışmalar
+yaptılar</a> ve "<a href="https://www.python.org/dev/peps/pep-8016/">PEP 8016 - The Steering Council Model</a>" sistemi üzerinde karar
+kıldılar. Daha sonra bu model üzerinde biraz değişiklikler yaparak bugün
+geçerli olan haline getirdiler: <a href="https://www.python.org/dev/peps/pep-0013/">PEP 13 - Python Language Governance</a>. Guio van
+Rossum yine yönetim kurulunun bir üyesi olarak seçilmişti.
+</p>
+
+<p>
+Yönetim konseyi modelinden de kısaca bahsedeyim havada kalmasın. Bu modele göre
+yönetim konseyi 5 kişiden oluşabilir. Seçilen bu 5 kişi ise Python dilinin
+kalitesini ve stabilitesini sürdürmekte yükümlü olmasının yanı sıra, Python ana
+geliştirici takımı ve Python Software Foundation arasındaki ilişkiyi kurma,
+gerektiğinde kod yazarak katkı sağlama, uygun karar verme süreçlerini kurmak
+gibi görevlerle birlikte PEP'leri kabul etmek ya da reddetmek, davranış
+kurallarını güncelleyebilmek gibi güçleri de mevcut. Bu yönetim şekliyle ilgili
+diğer detaylar için <a href="https://www.python.org/dev/peps/pep-0013/#history">PEP 13 sayfası</a>nı ziyaret edebilirsiniz.
+</p>
+
+<p>
+Kasım ayında gerçekleşen aday belirleme süreçlerinden sonra bu ayın başlarında
+oylama işlemi gerçekleştirildi ve yeni yönetim konseyi üyeleri belli oldu:
+</p>
+<ul class="org-ul">
+<li>Barry Warsaw (50 oy),</li>
+<li>Brett Cannon (54 oy),</li>
+<li>Carol Willing (54 oy),</li>
+<li>Thomas Wouters (40 oy),</li>
+<li>Victor Stinner (38 oy).</li>
+</ul>
+
+<p>
+Adayları sadece Python ana geliştirici takımı üyeleri önerebiliyor, eğer kişi
+Python ana geliştirici takımı üyesi ise kendini de önerebiliyor. Bu bağlamda
+Guido van Rossum da yönetim kurulu üyesi için önerilmişti fakat <a href="https://discuss.python.org/t/steering-council-nomination-guido-van-rossum-2020-term/2657/11">yazdığı forum
+mesajı ile adaylıktan çekildi</a> ama "yine de ben buralardayım katkı sunmaya, soru
+yanıtlamaya devam edeceğim" dedi.
+</p>
+
+<p>
+Yeni yönetim kurulu üyelerine başarılar dilerim. :)
+</p>
+
+<p>
+Yeni yıla girerken daha önceki yazılım gündeminde de duyurduğum gibi Python
+2'nin 1 Ocak 2020'den itibaren desteklenmeyeceği tekrar hatırlatmış olayım.
+Python 2'nin <a href="https://pythonclock.org/">ölümü için geri sayım</a> da burada gerçekleşiyor. Elveda Python
+2.7&#x2026;
+</p>
+</div>
+</div>
+<div id="outline-container-org74e1b71" class="outline-2">
+<h2 id="org74e1b71"><span class="section-number-2">2</span> Ruby 2.7 <a href="https://www.ruby-lang.org/en/news/2019/12/25/ruby-2-7-0-released/">sürümü yayınlandı</a></h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Akıcı syntax'ından dolayı çok beğendiğim fakat uzun zamandır yazmaya fırsatım
+olmayan Ruby programlama dilinin 2.7.0 sürümü bu hafta yayınlandı. Zaten
+geçtiğimiz haftaki gündem yazısında da belirtmiştim bu hafta yayınlanacağını.
+Ruby 3 ile değişecek olan argüman işleme sisteminden ve Ruby 2.7'deki
+etkilerinden zaten geçen hafta <a href="../22/yazilim-gundemi-22.html">Yazılım Gündemi - 22</a> yazısında bahsetmiştim.
+Onun dışındaki yeniliklere bakalım:
+</p>
+</div>
+
+<div id="outline-container-orgaccf691" class="outline-3">
+<h3 id="orgaccf691"><span class="section-number-3">2.1</span> Pattern Matching [Deneysel]</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Henüz deneysel olarak eklenmiş bu özellik ile birlikte artık objelerin
+içerisindeki istediğiniz yapılara göre eşleme yapabileceksiniz. Örnek verirsem
+daha iyi anlaşılacak. Şöyle ki, elinizde bir JSON verisi var diyelim:
+</p>
+<div class="org-src-container">
+<pre class="src src-json">{
+  <span class="org-keyword">"isim"</span>: <span class="org-string">"Ahmet"</span>,
+  <span class="org-keyword">"yas"</span>: <span class="org-string">"45"</span>,
+  <span class="org-keyword">"cocuklar"</span>: [{
+    <span class="org-keyword">"isim"</span>: <span class="org-string">"Mehmet"</span>,
+    <span class="org-keyword">"yas"</span>: <span class="org-constant">5</span>
+  }]
+}
+</pre>
+</div>
+<p>
+ve kendi ismi Ahmet, çocuğunun ismi Mehmet olan birinin verisini çekip çocuğun
+yaşını yazdırmak istiyorsunuz. Eskiden bu şekilde yapıyorduk:
+</p>
+<div class="org-src-container">
+<pre class="src src-ruby">kisi=<span class="org-type">JSON</span>.parse(json, <span class="org-constant">symbolize_names:</span> <span class="org-constant">true</span>)
+<span class="org-keyword">if</span> kisi[<span class="org-constant">:isim</span>] == <span class="org-string">"Ahmet"</span>
+  cocuklar = kisi[<span class="org-constant">:cocuklar</span>]
+  <span class="org-keyword">if</span> cocuklar.length == 1 &amp;&amp; cocuklar[0][<span class="org-constant">:name</span>] == <span class="org-string">"Mehmet"</span>
+    <span class="org-builtin">puts</span> cocuklar[0][<span class="org-constant">:yas</span>] <span class="org-comment-delimiter"># </span><span class="org-comment">=&gt; 5</span>
+  <span class="org-keyword">end</span>
+<span class="org-keyword">end</span>
+</pre>
+</div>
+<p>
+Daha karmaşık JSON verilerinde bu kod parçasının alacağı hali varın siz
+düşünün&#x2026; ya da yok düşünmenize gerek yok Ruby 2.7 var:
+</p>
+<div class="org-src-container">
+<pre class="src src-ruby"><span class="org-keyword">case</span> <span class="org-type">JSON</span>.parse(json, <span class="org-constant">symbolize_names:</span> <span class="org-constant">true</span>)
+<span class="org-keyword">in</span> {<span class="org-constant">isim:</span> <span class="org-string">"Ahmet"</span>, <span class="org-constant">cocuklar:</span> [{<span class="org-constant">isim:</span> <span class="org-string">"Mehmet"</span>, <span class="org-constant">yas:</span> cocuk_yas}]}
+    <span class="org-builtin">puts</span> cocuk_yas <span class="org-comment-delimiter"># </span><span class="org-comment">=&gt; 5</span>
+<span class="org-keyword">end</span>
+</pre>
+</div>
+<p>
+Bu kadar kolay!
+</p>
+
+<p>
+Bu özellik hakkında daha fazla bilgi için <a href="https://speakerdeck.com/k_tsj/pattern-matching-new-feature-in-ruby-2-dot-7">bu adresdeki sunum dosyası</a>nı
+inceleyebilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-org01f2ff3" class="outline-3">
+<h3 id="org01f2ff3"><span class="section-number-3">2.2</span> REPL iyileştirmeleri</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+REPL sistemi birçok popüler scripting dilinde artık olmazsa olmazlardan biri
+haline geldi. Açılımı Read-Eval-Print-Loop olan bu özellik sayesinde
+terminalinizinden ilgili programlama dilini interaktif bir şekilde
+kullanabiliyorsunuz. Ruby dilinde de bu internaktif deneyim için <code>irb</code> aracını
+kullanıyorduk. Ruby 2.7 ile bu araca yeni özellikler gelmiş.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/ruby-27-irb.gif" alt="ruby-27-irb.gif" />
+</p>
+</div>
+
+<p>
+irb aracına çok satırlı düzenleme özelliği gelmiş. Bununla birlikte kod
+renklendirme de eklenmiş. <code>rdoc</code> entegrasyonu da sağlanmış.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org772909b" class="outline-2">
+<h2 id="org772909b"><span class="section-number-2">3</span> <a href="https://2019.stateofjs.com/">JavaScript'in Durumu 2019</a> anketi sonuçları yayınlandı</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+JavaScript her geçen gün popülerliği daha da artan ve kullanılan bir dil. Her
+ne kadar bazı alanlara zorla sokulması hoşuma gitmese de şu an için -en azından
+sektör içerisindeki kullanıma göre- alternatifi yok gibi bir şey
+(WebAssembly'den yana umudum var). Her yıl düzenlenen JavaScript'in Durumu
+(State of JavaScript) anketi bu sene de düzenlendi ve sonuçları çok güzel
+grafiklerle birlikte duyuruldu. Bu aslında geçen haftanın haberiydi fakat yazı
+daha fazla uzamasın diye bu haftaya ertelemiştim. Öyleyse birkaç grafiği
+birlikte inceleyelim.
+</p>
+</div>
+
+<div id="outline-container-org3cae145" class="outline-3">
+<h3 id="org3cae145"><span class="section-number-3">3.1</span> JavaScript'e dönüştürülebilen diller</h3>
+<div class="outline-text-3" id="text-3-1">
+
+<div class="figure">
+<p><img src="gorseller/sojs-javascript-flavors.png" alt="sojs-javascript-flavors.png" />
+</p>
+</div>
+
+<p>
+Bu grafikteki her noktanın arkasındaki akış 2016 yılından bugüne aldığı yolu
+gösteriyor. Buna göre bakacak olursak: <a href="https://www.typescriptlang.org/">TypeScript</a>'in liderliği çok açık
+ortada zaten diğer dillerin kullanımı da çok düşük. Ben bir zamanlar
+<a href="https://coffeescript.org/">CoffeeScript</a> dilini bir süre kullandım, hatta bu dille yazılmış bir açık
+kaynak Chrome eklentisine bayağı bir katkı sağladım fakat artık grafikte yeri
+bile yok. Açıkcası yazmaktan hoşlandığım bir dildi fakat şu an olsa yazar
+mıyım bilemiyorum.
+</p>
+</div>
+</div>
+<div id="outline-container-orgdb1f275" class="outline-3">
+<h3 id="orgdb1f275"><span class="section-number-3">3.2</span> Front-End kütüphaneleri</h3>
+<div class="outline-text-3" id="text-3-2">
+
+<div class="figure">
+<p><img src="gorseller/sojs-front-end.png" alt="sojs-front-end.png" />
+</p>
+</div>
+
+<p>
+Açıkcası <a href="https://reactjs.org/">React</a>'in yükselişi için pek sürpriz oldu diyemem ama bu sene ortaya
+çıkan <a href="https://svelte.dev/">Svelte</a>'ye bu kadar pozitif bakılması beni şaşırttı. Bunların dışında
+<a href="https://angular.io/">Angular</a>'ın kullanımı zaman içinde artmış fakat negatif tarafa düşmüş. Bir ara
+denemiştim ben de fakat fazla karışık gelmişti. Diğer kütüphanelerle ilgili
+pek bir bilgim yok.
+</p>
+
+<p>
+İnsanların en çok memnun oldukları front-end kütüphaneleri sıralaması ise bu
+şekilde:
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/sojs-front-end-memnuniyet.png" alt="sojs-front-end-memnuniyet.png" />
+</p>
+</div>
+
+<p>
+Diğer kategorilerdeki istatistikleri de paylaşmak isterdim fakat yazısı çok
+uzatmış olurum. O yüzden daha fazla istatistik ve bilgi için konu başlığına
+eklediğim bağlantıya tıklayabilirsiniz.
+</p>
+
+<p>
+Alternatif olarak da <a href="https://levelup.gitconnected.com/a-recap-of-frontend-development-in-2019-1e7d07966d6c">şu blog yazısı</a>ndaki istatistiklere göz atabilirsiniz.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcf86bba" class="outline-2">
+<h2 id="orgcf86bba"><span class="section-number-2">4</span> Java 14 Feature-freeze <a href="https://www.infoq.com/news/2019/12/java14-feature-freeze/">sürecine girdi</a></h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Java programlama dilinin 14 numaralı sürümü için feature-freeze sürecine
+girildi. Yani artık programlama diline yeni özellik eklenmeyecek ve sürümün
+yayınlanması için çalışmalar yapılacak. JDK 14 "Rampdown Phase One" ismini
+verdikleri <a href="https://openjdk.java.net/projects/jdk/14/">sürece girmiş</a>. Release Candidate 1 sürümünün 6 şubat 2020, Release
+Candidate Final sürümünün ise 20 Şubat 2020 tarihinde yayınlanması
+planlanırken, genel erişilebilirlik için de 17 mart 2020 tarihi verilmiş. Kabul
+edilen JEP'ler (Java Enhancement Proposals) ise bu şekilde:
+</p>
+
+<ul class="org-ul">
+<li>JEP 345: <a href="https://openjdk.java.net/jeps/345">NUMA-Aware Memory Allocation for G1</a></li>
+<li>JEP 349: <a href="https://openjdk.java.net/jeps/349">JFR Event Streaming</a></li>
+<li>JEP 352: <a href="https://openjdk.java.net/jeps/352">Non-Volatile Mapped Byte Buffers</a></li>
+<li>JEP 358: <a href="https://openjdk.java.net/jeps/358">Helpful NullPointerExceptions</a></li>
+<li>JEP 361: <a href="https://openjdk.java.net/jeps/361">Switch Expressions (Standard)</a></li>
+<li>JEP 364: <a href="https://openjdk.java.net/jeps/364">ZGC on macOS</a></li>
+<li>JEP 365: <a href="https://openjdk.java.net/jeps/365">ZGC on Windows</a></li>
+</ul>
+
+<p>
+JDK 14'de Preview olarak eklenecek özellikler ise bu şekilde:
+</p>
+<ul class="org-ul">
+<li>JEP 305: <a href="https://openjdk.java.net/jeps/305">Pattern Matching for instanceof (Preview)</a></li>
+<li>JEP 343: <a href="https://openjdk.java.net/jeps/343">Packaging Tool (Incubator)</a></li>
+<li>JEP 368: <a href="https://openjdk.java.net/jeps/368">Text Blocks (Second Preview)</a></li>
+<li>JEP 370: <a href="https://openjdk.java.net/jeps/370">Foreign-Memory Access API (Incubator)</a></li>
+<li>JEP 359: <a href="https://openjdk.java.net/jeps/359">Records (Preview)</a></li>
+</ul>
+
+<p>
+Dilden kaldırılan ya da deprecate olan özellikler:
+</p>
+<ul class="org-ul">
+<li>JEP 362: <a href="https://openjdk.java.net/jeps/362">Deprecate the Solaris and SPARC Ports</a></li>
+<li>JEP 366: <a href="https://openjdk.java.net/jeps/366">Deprecate the ParallelScavenge + SerialOld GC Combination</a></li>
+<li>JEP 363: <a href="https://openjdk.java.net/jeps/363">Remove the Concurrent Mark Sweep (CMS) Garbage Collector</a></li>
+<li>JEP 367: <a href="https://openjdk.java.net/jeps/367">Remove the Pack200 Tools and API</a></li>
+</ul>
+
+<p>
+Detaylıca incelemelerini önümüzdeki yazılım gündemi yazılarına bırakıyorum.
+</p>
+</div>
+</div>
+<div id="outline-container-org0275934" class="outline-2">
+<h2 id="org0275934"><span class="section-number-2">5</span> Yaklaşan Etkinlikler</h2>
+<div class="outline-text-2" id="text-5">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" width="100%">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Etkinlik İsmi</th>
+<th scope="col" class="org-left">Yeri</th>
+<th scope="col" class="org-left">Tarihi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/Hukuk-ve-Teknoliji-Meetup-Grubu/events/267223619/">KVKK ve GDPR Kapsamında Veri Güvenliği</a></td>
+<td class="org-left">Ankara</td>
+<td class="org-left">3 Ocak 18:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/Yaz%25C4%25B1l%25C4%25B1m-Geli%25C5%259Ftiricileri-Geli%25C5%259Ftirme/events/266380738/">Asp.net MVC Framework Workshop</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">3 Ocak 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/Coffee-And-React-Native-%25C4%25B0stanbul/events/vzxzkrybccbgb/">Coffee and React Native</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">4 Ocak 11:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/CodeHAP-Habbit-Art-Passion/events/267414497/">Reactive Programming</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">8 Ocak 19:20</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/Gorsellestirme-Teknolojileri/events/266312464/">Sanal Gerçeklik ve Render ile Görselleştirme Teknolojileri</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">9 Ocak 19:00</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<b><a href="https://kamp.linux.org.tr/2020/kis/">Mustafa Akgül Özgür Yazılım Kış Kampı</a> katılımcı başvuruları 1 ocak tarihinde
+başlayacak.</b>
+</p>
+</div>
+</div>
+<div id="outline-container-org2fdab26" class="outline-2">
+<h2 id="org2fdab26"><span class="section-number-2">6</span> Diğer Haberler</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li><a href="https://blog.scottlogic.com/2019/12/24/webassembly-2019.html">WebAssembly için 2019 yılı özeti</a> yayınlandı.</li>
+<li>JetBrains, MPS 2019.3 <a href="https://blog.jetbrains.com/mps/2019/12/mps-2019-3-is-released/">sürümünü duyurudu</a>.</li>
+<li>PyPy 7.3.0 <a href="https://morepypy.blogspot.com/2019/12/pypy-730-released.html">sürümü yayınlandı</a>.</li>
+<li>Common Lisp derleyicisi SBCL, 2.0.0 <a href="http://www.sbcl.org/all-news.html?2.0.0#2.0.0">sürümünü yayınladı</a>.</li>
+<li>IntelliJ tabanlı IDE olan IntelliJ Rust, yeni bir <a href="https://intellij-rust.github.io/2019/12/30/changelog-113.html">changelog yayınladı</a>.</li>
+<li>Rust ile yazılmış 2D grafik kütüphanesi lyon, 0.15.0 <a href="https://nical.github.io/posts/new-tessellator.html">sürümünü duyurdu</a>.</li>
+<li>Rust için SQL kütüphanesi SQLx 0.1.1 <a href="https://github.com/launchbadge/sqlx?utm_name=iossmf">sürümüyle ortaya çıktı</a>.</li>
+<li>Go ile yazılmış JSON sorgu aracı JQL <a href="https://github.com/cube2222/jql">yayınlandı</a>.</li>
+<li>API test aracı vREST NG, 1.1.0 <a href="https://ng.vrest.io/change-log">sürümünü duyurdu</a>.</li>
+<li>Platformlar-arası uygulama geliştirmeye yarayan framework NeutralinoJS,
+1.3.0 <a href="https://github.com/neutralinojs/neutralinojs/releases/tag/v1.3.0?utm_name=iossmf">sürümünü yayınladı</a>.</li>
+<li>C++ terminal uygulamalarında metin tabanlı tablolar oluşturmaya yarayan
+kütüphane yayınlandı: <a href="https://github.com/p-ranav/tabulate">Tabulate</a>.</li>
+<li>Scheme dili için geliştirilmiş web framework sistemi <a href="https://web-artanis.com/">GNU Artanis</a>, 0.4.1
+<a href="https://lists.gnu.org/archive/html/artanis/2019-12/msg00000.html">sürümünü yayınladı</a>. <a href="https://nalaginrut.com/archives/2019/12/25/what%2527s%2520new%2520in%2520gnu%2520artanis%25200.4.1">Yeniliklerle ilgili blog yazısı</a></li>
+<li>Rust için HTTP istemcisi reqwest, v0.10 <a href="https://seanmonstar.com/post/189960517042/reqwest-v010">sürümünü duyurdu</a>.</li>
+<li>KDE Fremawork 6 için <a href="https://ervin.ipsquad.net/blog/2019/12/28/kf6-progress-report-december-solstice-edition/">durum raporu yayınlandı</a>.</li>
+<li>Bottender 1.1.0 <a href="https://bottender.js.org/blog/2019/12/27/bottender-1_1">sürümü çıktı</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8db965a" class="outline-2">
+<h2 id="org8db965a"><span class="section-number-2">7</span> Credits</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>Banner görselinde kullandığım <a href="https://www.flaticon.com/free-icon/hat_744546">noel baba şapkası</a> <a href="https://www.flaticon.com/">FlatIcons</a> sitesinden,
+<a href="https://www.flaticon.com/authors/vectors-market">Vectors Market</a> tarafından tasarlanmıştır.</li>
+<li>Python yönetim konseyi haberinin başlık görselindeki <a href="https://www.flaticon.com/free-icon/elections_1582013">oy sandığı ikonu</a>
+<a href="https://flaticon.com">FlatIcons</a> sitesinden, <a href="https://www.flaticon.com/authors/freepik">Freepik</a> tarafından tasarlanmıştır.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org76ebf1b" class="outline-2">
+<h2 id="org76ebf1b"><span class="section-number-2">8</span> Lisans</h2>
+<div class="outline-text-2" id="text-8">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="../../../img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+<a href="yazilim-gundemi-23.html">Yazılım Gündemi - 23</a> yazısı <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a> (CC BY-NC-SA 4.0)
+ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 31 Aralık 2019</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 22:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

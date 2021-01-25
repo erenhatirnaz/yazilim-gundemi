@@ -1,0 +1,244 @@
+#+TITLE: Yazılım Gündemi - 23
+#+SUBTITLE: 23-29 Aralık 2019
+#+Author: Eren Hatırnaz
+#+DATE: 31 Aralık 2019
+#+OPTIONS: ^:nil
+#+LANGUAGE: tr
+#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=black, filecolor=red, urlcolor=blue}
+#+LATEX_HEADER: \usepackage[turkish]{babel}
+#+HTML_HEAD: <link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+#+LATEX: \shorthandoff{=}
+
+[[file:gorseller/yazilim-gundemi-banner.png]]
+
+#+BEGIN_CENTER
+[[file:../22/yazilim-gundemi-22.org][< Önceki Gündem]] | *23-29 Aralık 2019* | [[file:../../2020/01/yazilim-gundemi-2020-01.org][Sonraki Gündem >]]
+
+[[https://teknoseyir.com/blog/yazilim-gundemi-23-23-31-aralik-2019][TeknoSeyir'de Oku]]
+#+END_CENTER
+
+* 2020 dönemi için Python yönetim konseyi [[https://www.python.org/dev/peps/pep-8101/][üyeleri seçildi]]
+  #+ATTR_HTML: :height 100
+  #+ATTR_LATEX: :height 2cm
+	[[file:gorseller/python-yonetim-konseyi.png]]
+
+	Python uzun zamandır geliştirilen bir programlama dili olduğu için haliyle
+	yönetimi için de bazı kararlar alınması gerekiyordu. Kısaca tarihçesinden
+	bahsetmek gerekirse: Guido van Rossum (Python dilinin yaratıcısı), 2018'in
+	temmuz ayında Python mail grubuna bazı kararları verirken yorulduğunu ve artık
+	karar verici konumunda olmak istemediğini belirten [[https://mail.python.org/pipermail/python-committers/2018-July/005664.html][bir mail yazıyor]] ve
+	topluluğa "kendi yönetim şeklinizi kendiniz belirleyin" diyor. Bunun üzerine
+	python ana geliştirici takımı da çeşitli yönetim modelleri [[https://www.python.org/dev/peps/pep-8000/][üzerine tartışmalar
+	yaptılar]] ve "[[https://www.python.org/dev/peps/pep-8016/][PEP 8016 - The Steering Council Model]]" sistemi üzerinde karar
+	kıldılar. Daha sonra bu model üzerinde biraz değişiklikler yaparak bugün
+	geçerli olan haline getirdiler: [[https://www.python.org/dev/peps/pep-0013/][PEP 13 - Python Language Governance]]. Guio van
+	Rossum yine yönetim kurulunun bir üyesi olarak seçilmişti.
+
+	Yönetim konseyi modelinden de kısaca bahsedeyim havada kalmasın. Bu modele göre
+	yönetim konseyi 5 kişiden oluşabilir. Seçilen bu 5 kişi ise Python dilinin
+	kalitesini ve stabilitesini sürdürmekte yükümlü olmasının yanı sıra, Python ana
+	geliştirici takımı ve Python Software Foundation arasındaki ilişkiyi kurma,
+	gerektiğinde kod yazarak katkı sağlama, uygun karar verme süreçlerini kurmak
+	gibi görevlerle birlikte PEP'leri kabul etmek ya da reddetmek, davranış
+	kurallarını güncelleyebilmek gibi güçleri de mevcut. Bu yönetim şekliyle ilgili
+	diğer detaylar için [[https://www.python.org/dev/peps/pep-0013/#history][PEP 13 sayfası]]nı ziyaret edebilirsiniz.
+
+	Kasım ayında gerçekleşen aday belirleme süreçlerinden sonra bu ayın başlarında
+	oylama işlemi gerçekleştirildi ve yeni yönetim konseyi üyeleri belli oldu:
+	  * Barry Warsaw (50 oy),
+		* Brett Cannon (54 oy),
+		* Carol Willing (54 oy),
+		* Thomas Wouters (40 oy),
+		* Victor Stinner (38 oy).
+
+	Adayları sadece Python ana geliştirici takımı üyeleri önerebiliyor, eğer kişi
+	Python ana geliştirici takımı üyesi ise kendini de önerebiliyor. Bu bağlamda
+	Guido van Rossum da yönetim kurulu üyesi için önerilmişti fakat [[https://discuss.python.org/t/steering-council-nomination-guido-van-rossum-2020-term/2657/11][yazdığı forum
+	mesajı ile adaylıktan çekildi]] ama "yine de ben buralardayım katkı sunmaya, soru
+	yanıtlamaya devam edeceğim" dedi.
+
+	Yeni yönetim kurulu üyelerine başarılar dilerim. :)
+
+	Yeni yıla girerken daha önceki yazılım gündeminde de duyurduğum gibi Python
+	2'nin 1 Ocak 2020'den itibaren desteklenmeyeceği tekrar hatırlatmış olayım.
+	Python 2'nin [[https://pythonclock.org/][ölümü için geri sayım]] da burada gerçekleşiyor. Elveda Python
+	2.7...
+* Ruby 2.7 [[https://www.ruby-lang.org/en/news/2019/12/25/ruby-2-7-0-released/][sürümü yayınlandı]]
+	Akıcı syntax'ından dolayı çok beğendiğim fakat uzun zamandır yazmaya fırsatım
+	olmayan Ruby programlama dilinin 2.7.0 sürümü bu hafta yayınlandı. Zaten
+	geçtiğimiz haftaki gündem yazısında da belirtmiştim bu hafta yayınlanacağını.
+	Ruby 3 ile değişecek olan argüman işleme sisteminden ve Ruby 2.7'deki
+	etkilerinden zaten geçen hafta [[file:../22/yazilim-gundemi-22.org][Yazılım Gündemi - 22]] yazısında bahsetmiştim.
+	Onun dışındaki yeniliklere bakalım:
+
+** Pattern Matching [Deneysel]
+	 Henüz deneysel olarak eklenmiş bu özellik ile birlikte artık objelerin
+	 içerisindeki istediğiniz yapılara göre eşleme yapabileceksiniz. Örnek verirsem
+	 daha iyi anlaşılacak. Şöyle ki, elinizde bir JSON verisi var diyelim:
+   #+LATEX: \newpage
+   #+ATTR_LATEX: :options frame=lines, linenos, label=JSON, labelposition=topline
+	 #+BEGIN_SRC json
+     {
+       "isim": "Ahmet",
+       "yas": "45",
+       "cocuklar": [{
+         "isim": "Mehmet",
+         "yas": 5
+       }]
+     }
+	 #+END_SRC
+	 ve kendi ismi Ahmet, çocuğunun ismi Mehmet olan birinin verisini çekip çocuğun
+	 yaşını yazdırmak istiyorsunuz. Eskiden bu şekilde yapıyorduk:
+   #+ATTR_LATEX: :options frame=lines, linenos, label=Ruby, labelposition=topline
+	 #+BEGIN_SRC ruby
+		 kisi=JSON.parse(json, symbolize_names: true)
+		 if kisi[:isim] == "Ahmet"
+			 cocuklar = kisi[:cocuklar]
+			 if cocuklar.length == 1 && cocuklar[0][:name] == "Mehmet"
+				 puts cocuklar[0][:yas] # => 5
+			 end
+		 end
+	 #+END_SRC
+	 Daha karmaşık JSON verilerinde bu kod parçasının alacağı hali varın siz
+	 düşünün... ya da yok düşünmenize gerek yok Ruby 2.7 var:
+   #+ATTR_LATEX: :options frame=lines, linenos, label=Ruby, labelposition=topline
+	 #+BEGIN_SRC ruby
+		 case JSON.parse(json, symbolize_names: true)
+		 in {isim: "Ahmet", cocuklar: [{isim: "Mehmet", yas: cocuk_yas}]}
+				 puts cocuk_yas # => 5
+		 end
+	 #+END_SRC
+	 Bu kadar kolay!
+
+	 Bu özellik hakkında daha fazla bilgi için [[https://speakerdeck.com/k_tsj/pattern-matching-new-feature-in-ruby-2-dot-7][bu adresdeki sunum dosyası]]nı
+	 inceleyebilirsiniz.
+** REPL iyileştirmeleri
+	 REPL sistemi birçok popüler scripting dilinde artık olmazsa olmazlardan biri
+	 haline geldi. Açılımı Read-Eval-Print-Loop olan bu özellik sayesinde
+	 terminalinizinden ilgili programlama dilini interaktif bir şekilde
+	 kullanabiliyorsunuz. Ruby dilinde de bu internaktif deneyim için =irb= aracını
+	 kullanıyorduk. Ruby 2.7 ile bu araca yeni özellikler gelmiş.
+
+	 [[file:gorseller/ruby-27-irb.gif]]
+
+	 irb aracına çok satırlı düzenleme özelliği gelmiş. Bununla birlikte kod
+	 renklendirme de eklenmiş. =rdoc= entegrasyonu da sağlanmış.
+* [[https://2019.stateofjs.com/][JavaScript'in Durumu 2019]] anketi sonuçları yayınlandı
+	JavaScript her geçen gün popülerliği daha da artan ve kullanılan bir dil. Her
+	ne kadar bazı alanlara zorla sokulması hoşuma gitmese de şu an için -en azından
+	sektör içerisindeki kullanıma göre- alternatifi yok gibi bir şey
+	(WebAssembly'den yana umudum var). Her yıl düzenlenen JavaScript'in Durumu
+	(State of JavaScript) anketi bu sene de düzenlendi ve sonuçları çok güzel
+	grafiklerle birlikte duyuruldu. Bu aslında geçen haftanın haberiydi fakat yazı
+	daha fazla uzamasın diye bu haftaya ertelemiştim. Öyleyse birkaç grafiği
+	birlikte inceleyelim.
+
+** JavaScript'e dönüştürülebilen diller
+	 [[file:gorseller/sojs-javascript-flavors.png]]
+
+	 Bu grafikteki her noktanın arkasındaki akış 2016 yılından bugüne aldığı yolu
+	 gösteriyor. Buna göre bakacak olursak: [[https://www.typescriptlang.org/][TypeScript]]'in liderliği çok açık
+	 ortada zaten diğer dillerin kullanımı da çok düşük. Ben bir zamanlar
+	 [[https://coffeescript.org/][CoffeeScript]] dilini bir süre kullandım, hatta bu dille yazılmış bir açık
+	 kaynak Chrome eklentisine bayağı bir katkı sağladım fakat artık grafikte yeri
+	 bile yok. Açıkcası yazmaktan hoşlandığım bir dildi fakat şu an olsa yazar
+	 mıyım bilemiyorum.
+** Front-End kütüphaneleri
+	 [[file:gorseller/sojs-front-end.png]]
+
+	 Açıkcası [[https://reactjs.org/][React]]'in yükselişi için pek sürpriz oldu diyemem ama bu sene ortaya
+	 çıkan [[https://svelte.dev/][Svelte]]'ye bu kadar pozitif bakılması beni şaşırttı. Bunların dışında
+	 [[https://angular.io/][Angular]]'ın kullanımı zaman içinde artmış fakat negatif tarafa düşmüş. Bir ara
+	 denemiştim ben de fakat fazla karışık gelmişti. Diğer kütüphanelerle ilgili
+	 pek bir bilgim yok.
+
+	 İnsanların en çok memnun oldukları front-end kütüphaneleri sıralaması ise bu
+	 şekilde:
+
+	 [[file:gorseller/sojs-front-end-memnuniyet.png]]
+
+	 Diğer kategorilerdeki istatistikleri de paylaşmak isterdim fakat yazısı çok
+	 uzatmış olurum. O yüzden daha fazla istatistik ve bilgi için konu başlığına
+	 eklediğim bağlantıya tıklayabilirsiniz.
+
+	 Alternatif olarak da [[https://levelup.gitconnected.com/a-recap-of-frontend-development-in-2019-1e7d07966d6c][şu blog yazısı]]ndaki istatistiklere göz atabilirsiniz.
+* Java 14 Feature-freeze [[https://www.infoq.com/news/2019/12/java14-feature-freeze/][sürecine girdi]]
+	Java programlama dilinin 14 numaralı sürümü için feature-freeze sürecine
+	girildi. Yani artık programlama diline yeni özellik eklenmeyecek ve sürümün
+	yayınlanması için çalışmalar yapılacak. JDK 14 "Rampdown Phase One" ismini
+	verdikleri [[https://openjdk.java.net/projects/jdk/14/][sürece girmiş]]. Release Candidate 1 sürümünün 6 şubat 2020, Release
+	Candidate Final sürümünün ise 20 Şubat 2020 tarihinde yayınlanması
+	planlanırken, genel erişilebilirlik için de 17 mart 2020 tarihi verilmiş. Kabul
+	edilen JEP'ler (Java Enhancement Proposals) ise bu şekilde:
+
+  - JEP 345: [[https://openjdk.java.net/jeps/345][NUMA-Aware Memory Allocation for G1]]
+  - JEP 349: [[https://openjdk.java.net/jeps/349][JFR Event Streaming]]
+  - JEP 352: [[https://openjdk.java.net/jeps/352][Non-Volatile Mapped Byte Buffers]]
+  - JEP 358: [[https://openjdk.java.net/jeps/358][Helpful NullPointerExceptions]]
+  - JEP 361: [[https://openjdk.java.net/jeps/361][Switch Expressions (Standard)]]
+  - JEP 364: [[https://openjdk.java.net/jeps/364][ZGC on macOS]]
+  - JEP 365: [[https://openjdk.java.net/jeps/365][ZGC on Windows]]
+
+	JDK 14'de Preview olarak eklenecek özellikler ise bu şekilde:
+  - JEP 305: [[https://openjdk.java.net/jeps/305][Pattern Matching for instanceof (Preview)]]
+  - JEP 343: [[https://openjdk.java.net/jeps/343][Packaging Tool (Incubator)]]
+  - JEP 368: [[https://openjdk.java.net/jeps/368][Text Blocks (Second Preview)]]
+  - JEP 370: [[https://openjdk.java.net/jeps/370][Foreign-Memory Access API (Incubator)]]
+  - JEP 359: [[https://openjdk.java.net/jeps/359][Records (Preview)]]
+
+	Dilden kaldırılan ya da deprecate olan özellikler:
+  - JEP 362: [[https://openjdk.java.net/jeps/362][Deprecate the Solaris and SPARC Ports]]
+  - JEP 366: [[https://openjdk.java.net/jeps/366][Deprecate the ParallelScavenge + SerialOld GC Combination]]
+  - JEP 363: [[https://openjdk.java.net/jeps/363][Remove the Concurrent Mark Sweep (CMS) Garbage Collector]]
+  - JEP 367: [[https://openjdk.java.net/jeps/367][Remove the Pack200 Tools and API]]
+
+	Detaylıca incelemelerini önümüzdeki yazılım gündemi yazılarına bırakıyorum.
+* Yaklaşan Etkinlikler
+  #+ATTR_HTML: :width 100%
+  #+ATTR_LATEX: :environment longtable :align |p{8cm}|l|l|
+  |------------------------------------------------------------+----------+--------------|
+  | Etkinlik İsmi                                              | Yeri     | Tarihi       |
+  |------------------------------------------------------------+----------+--------------|
+  | [[https://www.meetup.com/Hukuk-ve-Teknoliji-Meetup-Grubu/events/267223619/][KVKK ve GDPR Kapsamında Veri Güvenliği]]                     | Ankara   | 3 Ocak 18:30 |
+  | [[https://www.meetup.com/Yaz%25C4%25B1l%25C4%25B1m-Geli%25C5%259Ftiricileri-Geli%25C5%259Ftirme/events/266380738/][Asp.net MVC Framework Workshop]]                             | İstanbul | 3 Ocak 19:00 |
+  | [[https://www.meetup.com/Coffee-And-React-Native-%25C4%25B0stanbul/events/vzxzkrybccbgb/][Coffee and React Native]]                                    | İstanbul | 4 Ocak 11:00 |
+  | [[https://www.meetup.com/CodeHAP-Habbit-Art-Passion/events/267414497/][Reactive Programming]]                                       | İstanbul | 8 Ocak 19:20 |
+  | [[https://www.meetup.com/Gorsellestirme-Teknolojileri/events/266312464/][Sanal Gerçeklik ve Render ile Görselleştirme Teknolojileri]] | İstanbul | 9 Ocak 19:00 |
+  |------------------------------------------------------------+----------+--------------|
+
+	*[[https://kamp.linux.org.tr/2020/kis/][Mustafa Akgül Özgür Yazılım Kış Kampı]] katılımcı başvuruları 1 ocak tarihinde
+	başlayacak.*
+* Diğer Haberler
+	- [[https://blog.scottlogic.com/2019/12/24/webassembly-2019.html][WebAssembly için 2019 yılı özeti]] yayınlandı.
+	- JetBrains, MPS 2019.3 [[https://blog.jetbrains.com/mps/2019/12/mps-2019-3-is-released/][sürümünü duyurudu]].
+	- PyPy 7.3.0 [[https://morepypy.blogspot.com/2019/12/pypy-730-released.html][sürümü yayınlandı]].
+	- Common Lisp derleyicisi SBCL, 2.0.0 [[http://www.sbcl.org/all-news.html?2.0.0#2.0.0][sürümünü yayınladı]].
+	- IntelliJ tabanlı IDE olan IntelliJ Rust, yeni bir [[https://intellij-rust.github.io/2019/12/30/changelog-113.html][changelog yayınladı]].
+	- Rust ile yazılmış 2D grafik kütüphanesi lyon, 0.15.0 [[https://nical.github.io/posts/new-tessellator.html][sürümünü duyurdu]].
+	- Rust için SQL kütüphanesi SQLx 0.1.1 [[https://github.com/launchbadge/sqlx?utm_name=iossmf][sürümüyle ortaya çıktı]].
+	- Go ile yazılmış JSON sorgu aracı JQL [[https://github.com/cube2222/jql][yayınlandı]].
+	- API test aracı vREST NG, 1.1.0 [[https://ng.vrest.io/change-log][sürümünü duyurdu]].
+	- Platformlar-arası uygulama geliştirmeye yarayan framework NeutralinoJS,
+    1.3.0 [[https://github.com/neutralinojs/neutralinojs/releases/tag/v1.3.0?utm_name=iossmf][sürümünü yayınladı]].
+	- C++ terminal uygulamalarında metin tabanlı tablolar oluşturmaya yarayan
+    kütüphane yayınlandı: [[https://github.com/p-ranav/tabulate][Tabulate]].
+	- Scheme dili için geliştirilmiş web framework sistemi [[https://web-artanis.com/][GNU Artanis]], 0.4.1
+    [[https://lists.gnu.org/archive/html/artanis/2019-12/msg00000.html][sürümünü yayınladı]]. [[https://nalaginrut.com/archives/2019/12/25/what%2527s%2520new%2520in%2520gnu%2520artanis%25200.4.1][Yeniliklerle ilgili blog yazısı]]
+	- Rust için HTTP istemcisi reqwest, v0.10 [[https://seanmonstar.com/post/189960517042/reqwest-v010][sürümünü duyurdu]].
+	- KDE Fremawork 6 için [[https://ervin.ipsquad.net/blog/2019/12/28/kf6-progress-report-december-solstice-edition/][durum raporu yayınlandı]].
+	- Bottender 1.1.0 [[https://bottender.js.org/blog/2019/12/27/bottender-1_1][sürümü çıktı]].
+* Credits
+	- Banner görselinde kullandığım [[https://www.flaticon.com/free-icon/hat_744546][noel baba şapkası]] [[https://www.flaticon.com/][FlatIcons]] sitesinden,
+    [[https://www.flaticon.com/authors/vectors-market][Vectors Market]] tarafından tasarlanmıştır.
+	- Python yönetim konseyi haberinin başlık görselindeki [[https://www.flaticon.com/free-icon/elections_1582013][oy sandığı ikonu]]
+    [[https://flaticon.com][FlatIcons]] sitesinden, [[https://www.flaticon.com/authors/freepik][Freepik]] tarafından tasarlanmıştır.
+* Lisans
+  #+BEGIN_CENTER
+  #+ATTR_HTML: :height 75
+  #+ATTR_LATEX: :height 1.5cm
+  [[file:../../../img/CC_BY-NC-SA_4.0.png]]
+
+  [[file:yazilim-gundemi-23.org][Yazılım Gündemi - 23]] yazısı [[https://erenhatirnaz.github.io][Eren Hatırnaz]] tarafından [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Creative Commons
+  Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı]] (CC BY-NC-SA 4.0)
+  ile lisanslanmıştır.
+  #+END_CENTER

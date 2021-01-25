@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 22:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi - 12</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi - 12
+<br />
+<span class="subtitle">30 Eylül - 6 Ekim 2019</span>
+</h1>
+<div id="table-of-contents">
+<h2>İçindekiler</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org18a74d3">1. Yaklaşık 10 milyon proje analiz edildi</a></li>
+<li><a href="#orgfdbadf3">2. .NET Core 3.1 sürümünde C++ desteği gelecek</a></li>
+<li><a href="#orgd576396">3. İngiltere RESTful API standardı için OpenAPI 3 öneriyor</a></li>
+<li><a href="#org9147a9d">4. WhiteSource firması, uygulama güvenliği anketi sonuçlarını yayınladı</a>
+<ul>
+<li><a href="#org6ea1d29">4.1. Şirketinizde uygulama güvenliğinden kim(ler) sorumlu?</a></li>
+<li><a href="#orgbd9f04a">4.2. Şirket büyüklerine göre güvenlikten kim(ler) sorumlu</a></li>
+</ul>
+</li>
+<li><a href="#orge964104">5. Etkinlik Duyurusu: Lifecycle of a Product with Scrum</a></li>
+<li><a href="#org4752a1e">6. Diğer Haberler</a></li>
+<li><a href="#orgd4afc7a">7. Lisans</a></li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gundemi-banner.png" alt="yazilim-gundemi-banner.png" />
+</p>
+</div>
+
+<div class="org-center">
+<p>
+<a href="../11/yazilim-gundemi-11.html">&lt; Önceki Gündem</a> | <b>30 Eylül - 06 Ekim 2019</b> | <a href="../13/yazilim-gundemi-13.html">Sonraki Gündem &gt;</a>
+</p>
+
+<p>
+<a href="https://teknoseyir.com/blog/yazilim-gundemi-12-30-eylul-6-ekim-2019">TeknoSeyir'de Oku</a>
+</p>
+</div>
+
+<div id="outline-container-org18a74d3" class="outline-2">
+<h2 id="org18a74d3"><span class="section-number-2">1</span> Yaklaşık 10 milyon proje <a href="https://boyter.org/posts/an-informal-survey-of-10-million-github-bitbucket-gitlab-projects/">analiz edildi</a></h2>
+<div class="outline-text-2" id="text-1">
+<p>
+<a href="https://github.com/boyter/scc/">scc</a> isimli kod satırı sayma ve karmaşıklık hesaplama aracının geliştiricisi Ben
+E.C. Boyter, sunucu yardımıyla yaklaşık 40TB büyüklüğündeki toplamda 10 milyon
+projeyi analiz etmiş ve detaylı bir blog yazısı hazırlamış. Go programlama
+dilini kullanarak $100 maliyetle (sanırım sunucu maliyeti) tüm bu işlemleri
+yapabilmiş. Projeleri indirmesi toplam 5 hafta sürmüş. Bazı sonuçlar ise bu
+şekilde:
+</p>
+
+<ul class="org-ul">
+<li>9.985.051 toplam depo (repository),</li>
+<li>9.100.083 en az bir dosya bulunan depo,</li>
+<li>884.068 boş depo,</li>
+<li>3.500.000.000 tüm depoların toplam dosya sayısı,</li>
+<li>40.736.530.379.778 Byte (40TB) toplam işlenen veri,</li>
+<li>1.086.723.618.560 toplam satırı,</li>
+<li>816.822.273.469 toplam kod satırı,</li>
+<li>124.382.152.510 toplam boş satır,</li>
+<li>145.519.192.581 toplam yorum satırı.</li>
+</ul>
+
+<p>
+Daha fazla istatistik ve ilginç veriler için mutlaka konu başlığına eklediğim
+bağlantıya tıklayın.
+</p>
+</div>
+</div>
+<div id="outline-container-orgfdbadf3" class="outline-2">
+<h2 id="orgfdbadf3"><span class="section-number-2">2</span> .NET Core 3.1 sürümünde <a href="https://www.infoq.com/news/2019/10/CPP-CLI-NetCore/">C++ desteği gelecek</a></h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Aslında bu haber geçen haftanın konusu fakat .NET 3.0 duyulunca sanırım bu
+haber arkaplanda kalmış olacak ki konu başlığına eklediğim site de bunu 3 ekim
+tarihinde haber yapmış. Biliyorsunuz Microsoft çok uzun zamandır .NET Framework
+sistemi üzerinde duruyordu fakat yeni CEO Satya Nadella ile açık kaynak
+dünyasına girmeye yönelik birçok adım attı Microsoft ve Visual Studio Code ve
+.NET Core gibi projelere imza attı. .NET Core, .NET Framework olarak birliğimiz
+uygulama çatısının açık kaynak ve platformlar arası (cross-platform) hale
+gelmiş sürümü diyebiliriz. Bu sayede .NET ekosistemi hem açık kaynak camiasında
+bir topluluk oluşturdu hem de GNU/Linux dağıtımları ve Mac sistemlerde .NET
+uygulaması geliştirme imkanı doğdu. Bu sefer de Microsoft <a href="https://devblogs.microsoft.com/cppblog/the-future-of-cpp-cli-and-dotnet-core-3/">bloglarında
+yayınladıkları bir yazı</a> ile .NET Core 3.1 sürümünde C++ ile Windows uygulaması
+geliştirme desteğinin geleceğini duyurdu. Windows uygulaması olduğu için
+haliyle GNU/Linux ve Mac sistemlerde bu özellikten faydalanılamayacak olsa da
+ileride tüm uygulamalar için de C++ desteği gelebilir. Bakalım süreç nasıl
+ilerleyecek.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd576396" class="outline-2">
+<h2 id="orgd576396"><span class="section-number-2">3</span> İngiltere RESTful API standardı için <a href="https://technology.blog.gov.uk/2019/10/02/improve-csvs-and-api-descriptions-with-these-open-standards-board-recommendations/">OpenAPI 3 öneriyor</a></h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Açık kaynak artık öyle bir noktaya geldi ki, artık devletler bile bu ekosisteme
+katkı vermeye başladı. İngiltere'de birkaç yıldır bu akıma ayak uyduran
+ülkelerden birisi, hatta yanlış hatırlamıyorsam bu akımı başlatan ülke bile
+olabilir. İngiltere'nin ilgili kurumunun içerisindeki Açık Standartlar
+Kurulu'da (Open Standards Boards), devlet içerisindeki geliştirmelerde
+kullanılacak standartları belirlemeye çalışıyor. Kurulun GitHub üzerindeki
+deposuna <a href="https://github.com/alphagov/open-standards/issues/31">gönderilen</a> "API tanımlamaları için OpenAPI kullanalım" konulu öneri de
+kurul tarafından tartışılmış ve kabul edilmiş. OpenAPI ise, RESTful API
+geliştirmelerinde sistemin yapısını kurarken baz alınabilecek çeşitli
+tanımlamaları ve kuralları olan bir standart. Artık İngiltere'de devlet
+tarafından önerilen bir standart oldu.
+</p>
+
+<p>
+Böyle şeyler gördükçe insan imreniyor tabii.
+</p>
+</div>
+</div>
+<div id="outline-container-org9147a9d" class="outline-2">
+<h2 id="org9147a9d"><span class="section-number-2">4</span> WhiteSource firması, <a href="https://www.whitesourcesoftware.com/developers-security-report/">uygulama güvenliği anketi sonuçları</a>nı yayınladı</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+WhiteSource isimli güvenlik firmasının yaklaşık 600 geliştirici ile yaptığı
+uygulama güvenliği anketinin sonuçlardan bir kısım şu şekilde:
+</p>
+</div>
+<div id="outline-container-org6ea1d29" class="outline-3">
+<h3 id="org6ea1d29"><span class="section-number-3">4.1</span> Şirketinizde uygulama güvenliğinden kim(ler) sorumlu?</h3>
+<div class="outline-text-3" id="text-4-1">
+
+<div class="figure">
+<p><img src="gorseller/anket-1.png" alt="anket-1.png" height="400" />
+</p>
+</div>
+
+<p>
+Pastadaki en büyük pay %29 ile güvenlik takımları almış. Açıkcası bir
+geliştirici olarak güvenlik konuları için artık özel takımlar oluşturulması
+beni mutlu etti. Elbette geliştiriciler olarak yazdığımız kodlardaki güvenlik
+açıklarından sorumluyuz fakat bunların tespiti için ayrı bir takım gerekli
+bence. Öbür türlü üzerimizde çok fazla yük bindiriliyormuş gibi hissediyorum.
+</p>
+</div>
+</div>
+<div id="outline-container-orgbd9f04a" class="outline-3">
+<h3 id="orgbd9f04a"><span class="section-number-3">4.2</span> Şirket büyüklerine göre güvenlikten kim(ler) sorumlu</h3>
+<div class="outline-text-3" id="text-4-2">
+
+<div class="figure">
+<p><img src="gorseller/anket-2.png" alt="anket-2.png" />
+</p>
+</div>
+
+<p>
+Anketin diğer sonuçları için mutlaka konu başlığına eklediğim bağlantıya
+tıklayın. Uygulama ve dolayısıyla verilerin güvenliği günümüzde önemi hızla
+artan konulardan birisi.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orge964104" class="outline-2">
+<h2 id="orge964104"><span class="section-number-2">5</span> Etkinlik Duyurusu: <a href="https://kommunity.com/atolye15/events/lifecycle-of-a-product-with-scrum">Lifecycle of a Product with Scrum</a></h2>
+<div class="outline-text-2" id="text-5">
+
+<div class="figure">
+<p><img src="gorseller/ecem-meetup.png" alt="ecem-meetup.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org4752a1e" class="outline-2">
+<h2 id="org4752a1e"><span class="section-number-2">6</span> Diğer Haberler</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>TypeScript <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-3-7-beta/">3.7 Beta sürecine girdi</a>.</li>
+<li>Xilinx firması, gömülü sistem programcıları için yeni bir <a href="https://www.xilinx.com/news/press/2019/xilinx-announces-vitis--a-unified-software-platform-unlocking-a-new-design-experience-for-all-developers.html">uygulama platformu
+duyurdu</a>: <a href="https://www.xilinx.com/products/design-tools/vitis.html">Vitis</a>. <a href="https://www.eejournal.com/article/xilinx-vitis-and-vitis-ai-software-development-platforms/">Alternatif</a></li>
+<li>Google Cloud Platform takımı yeni bir Kubernetes <a href="https://www.ververica.com/blog/google-cloud-platforms-flink-operator-for-kubernetes">aracı duyurdu</a>:
+<a href="https://github.com/GoogleCloudPlatform/flink-on-k8s-operator">flink-on-k8n-operator</a>.</li>
+<li>Google, Linux çekirdeğine katkı olarak üzerinde çalıştığı sanitizer
+projesini <a href="https://www.phoronix.com/scan.php?page=news_item&amp;px=Google-KCSAN-Sanitizer">açık kaynak yaptı</a>: <a href="https://github.com/google/ktsan">Kernel Concurrency Sanitizer (KCSAN)</a></li>
+<li>Linux'deki yeni bellek kontrolcüsü <a href="https://thenewstack.io/a-new-linux-memory-controller-promises-to-save-lots-of-ram/">RAM tasarrufu sağlıyormuş</a>.</li>
+<li>Go ile yazılmış web sunucusu <a href="https://github.com/caddyserver/caddy">caddy</a> tüm projelerini <a href="https://github.com/caddyserver/caddy/issues/2786">açık kaynak lisanslara
+geçirmeyi planlıyor</a>.</li>
+<li>Derin öğrenme yöntemleri sayesinde hayvanların davranışlarını inceleyen yeni
+<a href="https://www.nature.com/articles/d41586-019-02942-5">açık kaynak araçlar geliştiriliyormuş</a>.</li>
+<li>Makine öğrenmesi ve veri bilimiyle uğraşanlar için <a href="https://towardsdatascience.com/coding-ml-tools-like-you-code-ml-models-ddba3357eace">yeni bir uygulama çatısı
+(freamework) duyuruldu</a>: <a href="https://streamlit.io/">Streamlit</a>. <a href="https://github.com/streamlit/streamlit">GitHub Deposu</a>.</li>
+<li>Makine öğrenmesi uygulamalarında sıkça kullanılan Python kütüphanesi
+Tensorflow <a href="https://github.com/tensorflow/tensorflow/releases/tag/v2.0.0">2.0.0 sürümü duyuruldu</a>.</li>
+<li>3.parti GitHub mobil uygulaması GitTouch <a href="https://github.com/pd4d10/git-touch/releases/tag/v1.1.0">1.1.0 sürümünü çıkardı</a>. <a href="https://itunes.apple.com/us/app/gittouch/id1452042346">Apple
+Market</a>, <a href="https://play.google.com/store/apps/details?id=io.github.pd4d10.gittouch">Google Play</a>.</li>
+<li>PostgreSQL <a href="https://www.postgresql.org/about/news/1976/">12 sürümü yayınlandı</a>.</li>
+<li>SQLite veritabanının <a href="https://www.sqlite.org/changes.html">3.30.0 sürümünü duyuruldu</a>.</li>
+<li>Zig programlama dilinin <a href="https://ziglang.org/download/0.5.0/release-notes.html">0.5.0 sürümü duyuruldu</a>.</li>
+<li>Lua programlama dilinin <a href="http://lua-users.org/lists/lua-l/2019-10/msg00003.html">5.4.0 sürümü duyuruldu</a>.</li>
+<li>Inko programlama dilinin <a href="https://inko-lang.org/news/inko-progress-report-september-2019/">Eylül ayı durum raporu yayınlandı</a>.</li>
+<li>NextJS, <a href="https://nextjs.org/blog/next-9-0-7">9.0.7 sürümü çıktı</a>.</li>
+<li>API Platform <a href="https://dunglas.fr/2019/09/api-platform-2-5-revamped-admin-new-api-testing-tool-next-js-and-quasar-app-generators-patch-and-json-schema-support-improved-openapi-and-graphql-support">2.5 sürümü çıktı</a>.</li>
+<li>Rust kütüphanesi <code>static-assertions</code> ilk <a href="https://nikolaivazquez.com/posts/programming/rust-static-assertions-1_0/">stabil sürümü 1.0.0'ı duyurdu</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd4afc7a" class="outline-2">
+<h2 id="orgd4afc7a"><span class="section-number-2">7</span> Lisans</h2>
+<div class="outline-text-2" id="text-7">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="../../../img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+<a href="yazilim-gundemi-12.html">Yazılım Gündemi - 12</a> yazısı <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a> (CC BY-NC-SA 4.0)
+ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 6 Ekim 2019</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 22:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

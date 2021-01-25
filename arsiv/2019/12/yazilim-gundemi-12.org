@@ -1,0 +1,127 @@
+#+TITLE: Yazılım Gündemi - 12
+#+SUBTITLE: 30 Eylül - 6 Ekim 2019
+#+Author: Eren Hatırnaz
+#+DATE: 6 Ekim 2019
+#+OPTIONS: ^:nil
+#+LANGUAGE: tr
+#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=black, filecolor=red, urlcolor=blue}
+#+LATEX_HEADER: \usepackage[turkish]{babel}
+#+HTML_HEAD: <link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+#+LATEX: \shorthandoff{=}
+
+[[file:gorseller/yazilim-gundemi-banner.png]]
+
+#+BEGIN_CENTER
+[[file:../11/yazilim-gundemi-11.org][< Önceki Gündem]] | *30 Eylül - 06 Ekim 2019* | [[file:../13/yazilim-gundemi-13.org][Sonraki Gündem >]]
+
+[[https://teknoseyir.com/blog/yazilim-gundemi-12-30-eylul-6-ekim-2019][TeknoSeyir'de Oku]]
+#+END_CENTER
+
+* Yaklaşık 10 milyon proje [[https://boyter.org/posts/an-informal-survey-of-10-million-github-bitbucket-gitlab-projects/][analiz edildi]]
+	[[https://github.com/boyter/scc/][scc]] isimli kod satırı sayma ve karmaşıklık hesaplama aracının geliştiricisi Ben
+	E.C. Boyter, sunucu yardımıyla yaklaşık 40TB büyüklüğündeki toplamda 10 milyon
+	projeyi analiz etmiş ve detaylı bir blog yazısı hazırlamış. Go programlama
+	dilini kullanarak $100 maliyetle (sanırım sunucu maliyeti) tüm bu işlemleri
+	yapabilmiş. Projeleri indirmesi toplam 5 hafta sürmüş. Bazı sonuçlar ise bu
+	şekilde:
+
+	  - 9.985.051 toplam depo (repository),
+		- 9.100.083 en az bir dosya bulunan depo,
+		- 884.068 boş depo,
+		- 3.500.000.000 tüm depoların toplam dosya sayısı,
+		- 40.736.530.379.778 Byte (40TB) toplam işlenen veri,
+		- 1.086.723.618.560 toplam satırı,
+		- 816.822.273.469 toplam kod satırı,
+		- 124.382.152.510 toplam boş satır,
+		- 145.519.192.581 toplam yorum satırı.
+
+	Daha fazla istatistik ve ilginç veriler için mutlaka konu başlığına eklediğim
+	bağlantıya tıklayın.
+* .NET Core 3.1 sürümünde [[https://www.infoq.com/news/2019/10/CPP-CLI-NetCore/][C++ desteği gelecek]]
+	Aslında bu haber geçen haftanın konusu fakat .NET 3.0 duyulunca sanırım bu
+	haber arkaplanda kalmış olacak ki konu başlığına eklediğim site de bunu 3 ekim
+	tarihinde haber yapmış. Biliyorsunuz Microsoft çok uzun zamandır .NET Framework
+	sistemi üzerinde duruyordu fakat yeni CEO Satya Nadella ile açık kaynak
+	dünyasına girmeye yönelik birçok adım attı Microsoft ve Visual Studio Code ve
+	.NET Core gibi projelere imza attı. .NET Core, .NET Framework olarak birliğimiz
+	uygulama çatısının açık kaynak ve platformlar arası (cross-platform) hale
+	gelmiş sürümü diyebiliriz. Bu sayede .NET ekosistemi hem açık kaynak camiasında
+	bir topluluk oluşturdu hem de GNU/Linux dağıtımları ve Mac sistemlerde .NET
+	uygulaması geliştirme imkanı doğdu. Bu sefer de Microsoft [[https://devblogs.microsoft.com/cppblog/the-future-of-cpp-cli-and-dotnet-core-3/][bloglarında
+	yayınladıkları bir yazı]] ile .NET Core 3.1 sürümünde C++ ile Windows uygulaması
+	geliştirme desteğinin geleceğini duyurdu. Windows uygulaması olduğu için
+	haliyle GNU/Linux ve Mac sistemlerde bu özellikten faydalanılamayacak olsa da
+	ileride tüm uygulamalar için de C++ desteği gelebilir. Bakalım süreç nasıl
+	ilerleyecek.
+* İngiltere RESTful API standardı için [[https://technology.blog.gov.uk/2019/10/02/improve-csvs-and-api-descriptions-with-these-open-standards-board-recommendations/][OpenAPI 3 öneriyor]]
+	Açık kaynak artık öyle bir noktaya geldi ki, artık devletler bile bu ekosisteme
+	katkı vermeye başladı. İngiltere'de birkaç yıldır bu akıma ayak uyduran
+	ülkelerden birisi, hatta yanlış hatırlamıyorsam bu akımı başlatan ülke bile
+	olabilir. İngiltere'nin ilgili kurumunun içerisindeki Açık Standartlar
+	Kurulu'da (Open Standards Boards), devlet içerisindeki geliştirmelerde
+	kullanılacak standartları belirlemeye çalışıyor. Kurulun GitHub üzerindeki
+	deposuna [[https://github.com/alphagov/open-standards/issues/31][gönderilen]] "API tanımlamaları için OpenAPI kullanalım" konulu öneri de
+	kurul tarafından tartışılmış ve kabul edilmiş. OpenAPI ise, RESTful API
+	geliştirmelerinde sistemin yapısını kurarken baz alınabilecek çeşitli
+	tanımlamaları ve kuralları olan bir standart. Artık İngiltere'de devlet
+	tarafından önerilen bir standart oldu.
+
+	Böyle şeyler gördükçe insan imreniyor tabii.
+* WhiteSource firması, [[https://www.whitesourcesoftware.com/developers-security-report/][uygulama güvenliği anketi sonuçları]]nı yayınladı
+	WhiteSource isimli güvenlik firmasının yaklaşık 600 geliştirici ile yaptığı
+	uygulama güvenliği anketinin sonuçlardan bir kısım şu şekilde:
+** Şirketinizde uygulama güvenliğinden kim(ler) sorumlu?
+   #+ATTR_HTML: :height 400
+   #+ATTR_LATEX: :height 6cm
+	 [[file:gorseller/anket-1.png]]
+
+	 Pastadaki en büyük pay %29 ile güvenlik takımları almış. Açıkcası bir
+	 geliştirici olarak güvenlik konuları için artık özel takımlar oluşturulması
+	 beni mutlu etti. Elbette geliştiriciler olarak yazdığımız kodlardaki güvenlik
+	 açıklarından sorumluyuz fakat bunların tespiti için ayrı bir takım gerekli
+	 bence. Öbür türlü üzerimizde çok fazla yük bindiriliyormuş gibi hissediyorum.
+** Şirket büyüklerine göre güvenlikten kim(ler) sorumlu
+	 [[file:gorseller/anket-2.png]]
+
+  Anketin diğer sonuçları için mutlaka konu başlığına eklediğim bağlantıya
+  tıklayın. Uygulama ve dolayısıyla verilerin güvenliği günümüzde önemi hızla
+  artan konulardan birisi.
+* Etkinlik Duyurusu: [[https://kommunity.com/atolye15/events/lifecycle-of-a-product-with-scrum][Lifecycle of a Product with Scrum]]
+  [[file:gorseller/ecem-meetup.png]]
+* Diğer Haberler
+	- TypeScript [[https://devblogs.microsoft.com/typescript/announcing-typescript-3-7-beta/][3.7 Beta sürecine girdi]].
+	- Xilinx firması, gömülü sistem programcıları için yeni bir [[https://www.xilinx.com/news/press/2019/xilinx-announces-vitis--a-unified-software-platform-unlocking-a-new-design-experience-for-all-developers.html][uygulama platformu
+    duyurdu]]: [[https://www.xilinx.com/products/design-tools/vitis.html][Vitis]]. [[https://www.eejournal.com/article/xilinx-vitis-and-vitis-ai-software-development-platforms/][Alternatif]]
+	- Google Cloud Platform takımı yeni bir Kubernetes [[https://www.ververica.com/blog/google-cloud-platforms-flink-operator-for-kubernetes][aracı duyurdu]]:
+    [[https://github.com/GoogleCloudPlatform/flink-on-k8s-operator][flink-on-k8n-operator]].
+	- Google, Linux çekirdeğine katkı olarak üzerinde çalıştığı sanitizer
+    projesini [[https://www.phoronix.com/scan.php?page=news_item&px=Google-KCSAN-Sanitizer][açık kaynak yaptı]]: [[https://github.com/google/ktsan][Kernel Concurrency Sanitizer (KCSAN)]]
+	- Linux'deki yeni bellek kontrolcüsü [[https://thenewstack.io/a-new-linux-memory-controller-promises-to-save-lots-of-ram/][RAM tasarrufu sağlıyormuş]].
+	- Go ile yazılmış web sunucusu [[https://github.com/caddyserver/caddy][caddy]] tüm projelerini [[https://github.com/caddyserver/caddy/issues/2786][açık kaynak lisanslara
+    geçirmeyi planlıyor]].
+	- Derin öğrenme yöntemleri sayesinde hayvanların davranışlarını inceleyen yeni
+    [[https://www.nature.com/articles/d41586-019-02942-5][açık kaynak araçlar geliştiriliyormuş]].
+	- Makine öğrenmesi ve veri bilimiyle uğraşanlar için [[https://towardsdatascience.com/coding-ml-tools-like-you-code-ml-models-ddba3357eace][yeni bir uygulama çatısı
+    (freamework) duyuruldu]]: [[https://streamlit.io/][Streamlit]]. [[https://github.com/streamlit/streamlit][GitHub Deposu]].
+	- Makine öğrenmesi uygulamalarında sıkça kullanılan Python kütüphanesi
+    Tensorflow [[https://github.com/tensorflow/tensorflow/releases/tag/v2.0.0][2.0.0 sürümü duyuruldu]].
+	- 3.parti GitHub mobil uygulaması GitTouch [[https://github.com/pd4d10/git-touch/releases/tag/v1.1.0][1.1.0 sürümünü çıkardı]]. [[https://itunes.apple.com/us/app/gittouch/id1452042346][Apple
+    Market]], [[https://play.google.com/store/apps/details?id=io.github.pd4d10.gittouch][Google Play]].
+	- PostgreSQL [[https://www.postgresql.org/about/news/1976/][12 sürümü yayınlandı]].
+	- SQLite veritabanının [[https://www.sqlite.org/changes.html][3.30.0 sürümünü duyuruldu]].
+	- Zig programlama dilinin [[https://ziglang.org/download/0.5.0/release-notes.html][0.5.0 sürümü duyuruldu]].
+	- Lua programlama dilinin [[http://lua-users.org/lists/lua-l/2019-10/msg00003.html][5.4.0 sürümü duyuruldu]].
+	- Inko programlama dilinin [[https://inko-lang.org/news/inko-progress-report-september-2019/][Eylül ayı durum raporu yayınlandı]].
+	- NextJS, [[https://nextjs.org/blog/next-9-0-7][9.0.7 sürümü çıktı]].
+	- API Platform [[https://dunglas.fr/2019/09/api-platform-2-5-revamped-admin-new-api-testing-tool-next-js-and-quasar-app-generators-patch-and-json-schema-support-improved-openapi-and-graphql-support][2.5 sürümü çıktı]].
+	- Rust kütüphanesi =static-assertions= ilk [[https://nikolaivazquez.com/posts/programming/rust-static-assertions-1_0/][stabil sürümü 1.0.0'ı duyurdu]].
+* Lisans
+  #+BEGIN_CENTER
+  #+ATTR_HTML: :height 75
+  #+ATTR_LATEX: :height 1.5cm
+  [[file:../../../img/CC_BY-NC-SA_4.0.png]]
+
+  [[file:yazilim-gundemi-12.org][Yazılım Gündemi - 12]] yazısı [[https://erenhatirnaz.github.io][Eren Hatırnaz]] tarafından [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Creative Commons
+  Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı]] (CC BY-NC-SA 4.0)
+  ile lisanslanmıştır.
+  #+END_CENTER

@@ -1,0 +1,118 @@
+#+TITLE: Yazılım Gündemi - 5
+#+SUBTITLE: 5-11 Ağustos 2019
+#+Author: Eren Hatırnaz
+#+DATE: 11 Ağustos 2019
+#+OPTIONS: ^:nil
+#+LANGUAGE: tr
+#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=black, filecolor=red, urlcolor=blue}
+#+LATEX_HEADER: \usepackage[turkish]{babel}
+#+HTML_HEAD: <link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+#+LATEX: \shorthandoff{=}
+
+[[file:gorseller/yazilim-gundemi-banner.png]]
+
+#+BEGIN_CENTER
+[[file:../04/yazilim-gundemi-04.org][< Önceki Gündem]] | *5-11 Ağustos 2019* | [[file:../06/yazilim-gundemi-06.org][Sonraki Gündem >]]
+
+[[https://teknoseyir.com/blog/yazilim-gundemi-5-05-11-agustos-2019][TeknoSeyir'de Oku]]
+#+END_CENTER
+
+* GitHub Actions artık [[https://github.blog/2019-08-08-github-actions-now-supports-ci-cd/][CI/CD süreçlerini destekliyor]]
+	GitHub 8 Ağustos tarihinde kendi ofislerinde bir etkinlik gerçekleştirdi.
+	Etkinlik aynı zamanda canlı olarak [[https://www.youtube.com/watch?v=E1OunoCyuhY][YouTube üzerinden de yayınlandı]]. Etkinliğin
+	asıl amacı yeni bir ürün/hizmet duyurmaktı fakat öncesinde GitHub'ın bu yıl
+	boyunca yaptığı şeylerin bir özetini geçtiler. Yayın başında hemen duyursalar
+	etkinlikler biterdi çünkü :). GitHub için 2019 yılı böyle geçiyormuş:
+	  - Özel depoların (private repository) ücretsiz yapılması,
+		- [[https://github.com/features/package-registry][Package Registry]] hizmetinin duyurulması,
+		- [[https://github.com/dependabot][Dependabot]] projesi,
+		- [[https://github.com/sponsors][Sponsors]] özelliğinin duyurulması,
+		- [[https://github.blog/2019-06-17-github-acquires-pull-panda/][Pull Panda'nın satın alınması]],
+		- [[https://github.blog/2019-06-17-github-acquires-pull-panda/][GitHub Desktop 2.0]] sürümünün duyurulması,
+		- 100'ün üzerinde üründe iyileştirmeler,
+		- Bu hafta 40.000.000 geliştirici sayısına ulaşmışlar.
+
+	Etkinlikte söylememişler doğal olarak ama bir de Amerika'nın ambargo uyguladığı
+	ülkelerde yaşayan geliştiricilerin kodlarına el koyulması olayı var. [[file:../03/yazilim-gundemi-03.org][Yazılım
+	Gündemi - 3]] yazısında detaylıca anlatmıştım.
+
+	Gelelim etkinlikte tanıtılan yeni özelliğe: GitHub Actions servisi artık
+	Continuous Integration ve Continuous Deployment süreçlerini destekliyor. Yani
+	artık bu süreçleri işletebilmek için travis-ci vb. gibi servisler yerine direkt
+	GitHub içindeki Actions servisi ile yapabilecekmişiz. Bazı özellikleri şu
+	şekilde:
+	  - Matrix builds ile projenizin birden çok sürümünü aynı anda test etme,
+		- Canlı log kayıtları,
+		- Kod yazar gibi Action yazabilme
+
+	[[file:gorseller/canli-loglar.gif]]
+
+	Diğer özellikler için konu başlığına eklediğim bağlantıya tıklayabilirsiniz.
+	GitHub Actions henüz beta olduğu için bu özellikleri kullanabilmeniz için
+	Beta'ya kayıt yapmanız gerekiyor: https://github.com/features/actions.
+* PHP topluluğundaki gruplar ve [[https://wiki.php.net/pplusplus/faq][P++ meselesi]]
+	Bu hafta PHP Wiki'sinde yayınlanan sayfaya göre PHP topluluğunda iki grup
+	varmış. İlk grup, PHP'nin geçmişten gelen bazı özellikleri ve bakış açılarını
+	terk etmesi gerektiğini, daha kesin tiplendirilmiş bir dil olması gerektiğini;
+	diğer grup ise PHP'nin geçmişten gelen felsefesini ve özelliklerini korumak
+	gerektiğini savunuyor. Elbette böyle bir tartışmada "doğru" ya da "yanlış"
+	taraf yok. Herkesin kendine göre haklı nedenleri var.
+
+	P++'da tam olarak bu nedenden dolayı yapılmak istenen bir PHP lehçesi. Aklımıza
+	ilk geldiği gibi bir PHP 'fork'lanması, takımların ve projelerin ayrılması
+	durumu henüz söz konusu değil yani. P++ henüz bir kod ismi, kesin olarak bu
+	isim belirlenmedi ama bence bir kere bu şekilde duyurulduysa böyle devam
+	edecektir. P++, bildiğimiz PHP'ye göre çok daha sıkı kuralları olan ve farklı
+	özelliklere sahip bir lehçe olacak gibi duruyor. P++ dosyalarını işaretlemek
+	için şöyle bir yöntem önerilmiş:
+
+  #+ATTR_LATEX: :options frame=lines, linenos, label=PHP, labelposition=topline
+	#+BEGIN_SRC php
+		<?p++?>
+		<?php echo "Merhaba TeknoSeyir!" ?>
+	#+END_SRC
+
+	PHP mail grubunda ve [[https://www.reddit.com/r/programming/comments/cohb0r/p/][Reddit]] gibi platformlarda tartışmalar devam ediyor.
+	Bakalım ne olacak...
+* Visual Studio Code [[https://code.visualstudio.com/updates/v1_37][Temmuz 2019 güncellemesi yayınlandı]]
+	[[file:gorseller/vscode-temmuz2019.png]]
+* Diğer Haberler
+	- PHP 7.4.0 [[https://www.php.net/archive/2019.php#2019-08-08-1][Beta 2 yayınlandı]], [[https://github.com/php/php-src/blob/php-7.4.0beta2/NEWS][değişiklik notları]], [[https://downloads.php.net/~derick/][indirme bağlantıları]].
+	- PHP-FIG (Framework Interop Group) topluluğu [[https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-12-extended-coding-style-guide.md][PSR-12 (Genişletilmiş Kod Stili
+    Rehberi) standardını kabul etti]].
+	- Alman Havacılık Merkezi (German Aerospace Center - DLR), CosmoScoutVR isimli
+    modüler sanal evren projesini [[https://github.com/cosmoscout/cosmoscout-vr][açık kaynak olarak yayınladı]].
+	- Microsoft, Azure Security Lab hizmetini [[https://venturebeat.com/2019/08/05/microsoft-launches-azure-security-lab-doubles-top-bug-bounty-to-40000/][duyurdu ve açık bulanlara verilen
+    ödülü arttırdı]].
+	- ASP.NET Community Standup yeni bölümü yayınlandı: [[https://www.youtube.com/watch?v=t5sBSOydYxI][ASP.NET Core A to Z eBook
+    with Shahed Chowdhuri]].
+	- NVIDIA açık kaynak sürücülere destek için [[https://www.phoronix.com/scan.php?page=news_item&px=NVIDIA-Open-GPU-Docs][donanımsal dökümanlar paylaşmaya
+    başladı]].
+	- Gleam programlama dilinin [[https://lpil.uk/blog/gleam-v0.3-released/][v0.3 sürümü yayınlandı]], [[https://github.com/lpil/gleam][GitHub Deposu]].
+	- Git deponuzun tarihçesini düzenleme olanacağı sunan araç [[https://mystor.github.io/git-revise.html][açık kaynak olarak
+    yayınlandı]]: [[https://github.com/mystor/git-revise][Git-Revise]].
+	- BlazingSQL isimli donanım hızlandırmalı SQL motoru [[https://blog.blazingdb.com/blazingsql-is-now-open-source-b859d342ec20][açık kaynak olarak
+    yayınlandı]], [[https://github.com/blazingdb/pyBlazing/][GitHub Deposu]].
+	- Bulut uygulamaları için yayınlama (deploy) işlerini kolaylaştırma iddiası
+    taşıyan [[https://ic.dev/][IC]] isimli proje [[https://medium.com/icdotdev/introducing-ic-b3eabf8bf120][açık kaynak olarak yayınlandı]], [[https://github.com/icdotdev/cli][GitHub Deposu]].
+	- Android uygulama geliştirme için mail gönderme kütüphanesi açık kaynak
+    olarak yayınlandı: [[https://github.com/nedimf/maildroid][maildroid]].
+	- Terminal çıktılarında tıklanabilir linkler oluşturmaya yarayan kütüphane
+    açık kaynak olarak yayınlandı: [[https://github.com/piotrmurach/tty-link][tty-link]].
+	- Jekyll [[https://jekyllrb.com/news/2019/08/04/jekyll-4-0-0-pre-beta1-released/][4.0.0.pre.beta1 sürümü yayınlandı]].
+	- JavaScript için yeni bir para birimi kütüphanesi yayınlandı: [[https://github.com/xxczaki/cashify][Cashify]].
+	- Vue-Router [[https://github.com/vuejs/vue-router/releases/tag/v3.1.0][v3.1.0 sürümü çıktı]].
+	- Kotlin ile yazılmış shell Kash, [[https://github.com/cbeust/kash/releases/tag/v1.14][v1.14 sürümünü çıkardı]].
+	- VectorClass kütüphanesinde [[https://www.agner.org/optimize/blog/read.php?i=1013][büyük değişiklikler var]].
+	- Lazarus, [[https://www.getlazarus.org/release/][2.0.4 sürümünü duyurdu]], [[https://wiki.lazarus.freepascal.org/Lazarus_2.0.0_release_notes][Değişiklik notları]].
+	- OpenAPI Generator [[https://github.com/OpenAPITools/openapi-generator/releases/tag/v4.1.0][4.1.0 sürümü çıktı]].
+* Lisans
+  #+BEGIN_CENTER
+  #+ATTR_HTML: :height 75
+  #+ATTR_LATEX: :height 1.5cm
+  [[file:../../../img/CC_BY-NC-SA_4.0.png]]
+
+  [[file:yazilim-gundemi-05.org][Yazılım Gündemi - 5]] yazısı [[https://erenhatirnaz.github.io][Eren Hatırnaz]] tarafından [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Creative Commons
+  Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı]] (CC BY-NC-SA 4.0)
+  ile lisanslanmıştır.
+  #+END_CENTER

@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 22:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi - 5</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi - 5
+<br />
+<span class="subtitle">5-11 Ağustos 2019</span>
+</h1>
+<div id="table-of-contents">
+<h2>İçindekiler</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org8d7ca23">1. GitHub Actions artık CI/CD süreçlerini destekliyor</a></li>
+<li><a href="#orge1fea9f">2. PHP topluluğundaki gruplar ve P++ meselesi</a></li>
+<li><a href="#org81b2a3e">3. Visual Studio Code Temmuz 2019 güncellemesi yayınlandı</a></li>
+<li><a href="#orga10c640">4. Diğer Haberler</a></li>
+<li><a href="#org54ad15c">5. Lisans</a></li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gundemi-banner.png" alt="yazilim-gundemi-banner.png" />
+</p>
+</div>
+
+<div class="org-center">
+<p>
+<a href="../04/yazilim-gundemi-04.html">&lt; Önceki Gündem</a> | <b>5-11 Ağustos 2019</b> | <a href="../06/yazilim-gundemi-06.html">Sonraki Gündem &gt;</a>
+</p>
+
+<p>
+<a href="https://teknoseyir.com/blog/yazilim-gundemi-5-05-11-agustos-2019">TeknoSeyir'de Oku</a>
+</p>
+</div>
+
+<div id="outline-container-org8d7ca23" class="outline-2">
+<h2 id="org8d7ca23"><span class="section-number-2">1</span> GitHub Actions artık <a href="https://github.blog/2019-08-08-github-actions-now-supports-ci-cd/">CI/CD süreçlerini destekliyor</a></h2>
+<div class="outline-text-2" id="text-1">
+<p>
+GitHub 8 Ağustos tarihinde kendi ofislerinde bir etkinlik gerçekleştirdi.
+Etkinlik aynı zamanda canlı olarak <a href="https://www.youtube.com/watch?v=E1OunoCyuhY">YouTube üzerinden de yayınlandı</a>. Etkinliğin
+asıl amacı yeni bir ürün/hizmet duyurmaktı fakat öncesinde GitHub'ın bu yıl
+boyunca yaptığı şeylerin bir özetini geçtiler. Yayın başında hemen duyursalar
+etkinlikler biterdi çünkü :). GitHub için 2019 yılı böyle geçiyormuş:
+</p>
+<ul class="org-ul">
+<li>Özel depoların (private repository) ücretsiz yapılması,</li>
+<li><a href="https://github.com/features/package-registry">Package Registry</a> hizmetinin duyurulması,</li>
+<li><a href="https://github.com/dependabot">Dependabot</a> projesi,</li>
+<li><a href="https://github.com/sponsors">Sponsors</a> özelliğinin duyurulması,</li>
+<li><a href="https://github.blog/2019-06-17-github-acquires-pull-panda/">Pull Panda'nın satın alınması</a>,</li>
+<li><a href="https://github.blog/2019-06-17-github-acquires-pull-panda/">GitHub Desktop 2.0</a> sürümünün duyurulması,</li>
+<li>100'ün üzerinde üründe iyileştirmeler,</li>
+<li>Bu hafta 40.000.000 geliştirici sayısına ulaşmışlar.</li>
+</ul>
+
+<p>
+Etkinlikte söylememişler doğal olarak ama bir de Amerika'nın ambargo uyguladığı
+ülkelerde yaşayan geliştiricilerin kodlarına el koyulması olayı var. <a href="../03/yazilim-gundemi-03.html">Yazılım
+Gündemi - 3</a> yazısında detaylıca anlatmıştım.
+</p>
+
+<p>
+Gelelim etkinlikte tanıtılan yeni özelliğe: GitHub Actions servisi artık
+Continuous Integration ve Continuous Deployment süreçlerini destekliyor. Yani
+artık bu süreçleri işletebilmek için travis-ci vb. gibi servisler yerine direkt
+GitHub içindeki Actions servisi ile yapabilecekmişiz. Bazı özellikleri şu
+şekilde:
+</p>
+<ul class="org-ul">
+<li>Matrix builds ile projenizin birden çok sürümünü aynı anda test etme,</li>
+<li>Canlı log kayıtları,</li>
+<li>Kod yazar gibi Action yazabilme</li>
+</ul>
+
+
+<div class="figure">
+<p><img src="gorseller/canli-loglar.gif" alt="canli-loglar.gif" />
+</p>
+</div>
+
+<p>
+Diğer özellikler için konu başlığına eklediğim bağlantıya tıklayabilirsiniz.
+GitHub Actions henüz beta olduğu için bu özellikleri kullanabilmeniz için
+Beta'ya kayıt yapmanız gerekiyor: <a href="https://github.com/features/actions">https://github.com/features/actions</a>.
+</p>
+</div>
+</div>
+<div id="outline-container-orge1fea9f" class="outline-2">
+<h2 id="orge1fea9f"><span class="section-number-2">2</span> PHP topluluğundaki gruplar ve <a href="https://wiki.php.net/pplusplus/faq">P++ meselesi</a></h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Bu hafta PHP Wiki'sinde yayınlanan sayfaya göre PHP topluluğunda iki grup
+varmış. İlk grup, PHP'nin geçmişten gelen bazı özellikleri ve bakış açılarını
+terk etmesi gerektiğini, daha kesin tiplendirilmiş bir dil olması gerektiğini;
+diğer grup ise PHP'nin geçmişten gelen felsefesini ve özelliklerini korumak
+gerektiğini savunuyor. Elbette böyle bir tartışmada "doğru" ya da "yanlış"
+taraf yok. Herkesin kendine göre haklı nedenleri var.
+</p>
+
+<p>
+P++'da tam olarak bu nedenden dolayı yapılmak istenen bir PHP lehçesi. Aklımıza
+ilk geldiği gibi bir PHP 'fork'lanması, takımların ve projelerin ayrılması
+durumu henüz söz konusu değil yani. P++ henüz bir kod ismi, kesin olarak bu
+isim belirlenmedi ama bence bir kere bu şekilde duyurulduysa böyle devam
+edecektir. P++, bildiğimiz PHP'ye göre çok daha sıkı kuralları olan ve farklı
+özelliklere sahip bir lehçe olacak gibi duruyor. P++ dosyalarını işaretlemek
+için şöyle bir yöntem önerilmiş:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-php"><span class="org-php-php-tag">&lt;?p</span>++<span class="org-php-php-tag">?&gt;</span>
+<span class="org-php-php-tag">&lt;?php</span> <span class="org-php-keyword">echo</span> <span class="org-php-string">"Merhaba TeknoSeyir!"</span> <span class="org-php-php-tag">?&gt;</span>
+</pre>
+</div>
+
+<p>
+PHP mail grubunda ve <a href="https://www.reddit.com/r/programming/comments/cohb0r/p/">Reddit</a> gibi platformlarda tartışmalar devam ediyor.
+Bakalım ne olacak&#x2026;
+</p>
+</div>
+</div>
+<div id="outline-container-org81b2a3e" class="outline-2">
+<h2 id="org81b2a3e"><span class="section-number-2">3</span> Visual Studio Code <a href="https://code.visualstudio.com/updates/v1_37">Temmuz 2019 güncellemesi yayınlandı</a></h2>
+<div class="outline-text-2" id="text-3">
+
+<div class="figure">
+<p><img src="gorseller/vscode-temmuz2019.png" alt="vscode-temmuz2019.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orga10c640" class="outline-2">
+<h2 id="orga10c640"><span class="section-number-2">4</span> Diğer Haberler</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>PHP 7.4.0 <a href="https://www.php.net/archive/2019.php#2019-08-08-1">Beta 2 yayınlandı</a>, <a href="https://github.com/php/php-src/blob/php-7.4.0beta2/NEWS">değişiklik notları</a>, <a href="https://downloads.php.net/~derick/">indirme bağlantıları</a>.</li>
+<li>PHP-FIG (Framework Interop Group) topluluğu <a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-12-extended-coding-style-guide.md">PSR-12 (Genişletilmiş Kod Stili
+Rehberi) standardını kabul etti</a>.</li>
+<li>Alman Havacılık Merkezi (German Aerospace Center - DLR), CosmoScoutVR isimli
+modüler sanal evren projesini <a href="https://github.com/cosmoscout/cosmoscout-vr">açık kaynak olarak yayınladı</a>.</li>
+<li>Microsoft, Azure Security Lab hizmetini <a href="https://venturebeat.com/2019/08/05/microsoft-launches-azure-security-lab-doubles-top-bug-bounty-to-40000/">duyurdu ve açık bulanlara verilen
+ödülü arttırdı</a>.</li>
+<li>ASP.NET Community Standup yeni bölümü yayınlandı: <a href="https://www.youtube.com/watch?v=t5sBSOydYxI">ASP.NET Core A to Z eBook
+with Shahed Chowdhuri</a>.</li>
+<li>NVIDIA açık kaynak sürücülere destek için <a href="https://www.phoronix.com/scan.php?page=news_item&amp;px=NVIDIA-Open-GPU-Docs">donanımsal dökümanlar paylaşmaya
+başladı</a>.</li>
+<li>Gleam programlama dilinin <a href="https://lpil.uk/blog/gleam-v0.3-released/">v0.3 sürümü yayınlandı</a>, <a href="https://github.com/lpil/gleam">GitHub Deposu</a>.</li>
+<li>Git deponuzun tarihçesini düzenleme olanacağı sunan araç <a href="https://mystor.github.io/git-revise.html">açık kaynak olarak
+yayınlandı</a>: <a href="https://github.com/mystor/git-revise">Git-Revise</a>.</li>
+<li>BlazingSQL isimli donanım hızlandırmalı SQL motoru <a href="https://blog.blazingdb.com/blazingsql-is-now-open-source-b859d342ec20">açık kaynak olarak
+yayınlandı</a>, <a href="https://github.com/blazingdb/pyBlazing/">GitHub Deposu</a>.</li>
+<li>Bulut uygulamaları için yayınlama (deploy) işlerini kolaylaştırma iddiası
+taşıyan <a href="https://ic.dev/">IC</a> isimli proje <a href="https://medium.com/icdotdev/introducing-ic-b3eabf8bf120">açık kaynak olarak yayınlandı</a>, <a href="https://github.com/icdotdev/cli">GitHub Deposu</a>.</li>
+<li>Android uygulama geliştirme için mail gönderme kütüphanesi açık kaynak
+olarak yayınlandı: <a href="https://github.com/nedimf/maildroid">maildroid</a>.</li>
+<li>Terminal çıktılarında tıklanabilir linkler oluşturmaya yarayan kütüphane
+açık kaynak olarak yayınlandı: <a href="https://github.com/piotrmurach/tty-link">tty-link</a>.</li>
+<li>Jekyll <a href="https://jekyllrb.com/news/2019/08/04/jekyll-4-0-0-pre-beta1-released/">4.0.0.pre.beta1 sürümü yayınlandı</a>.</li>
+<li>JavaScript için yeni bir para birimi kütüphanesi yayınlandı: <a href="https://github.com/xxczaki/cashify">Cashify</a>.</li>
+<li>Vue-Router <a href="https://github.com/vuejs/vue-router/releases/tag/v3.1.0">v3.1.0 sürümü çıktı</a>.</li>
+<li>Kotlin ile yazılmış shell Kash, <a href="https://github.com/cbeust/kash/releases/tag/v1.14">v1.14 sürümünü çıkardı</a>.</li>
+<li>VectorClass kütüphanesinde <a href="https://www.agner.org/optimize/blog/read.php?i=1013">büyük değişiklikler var</a>.</li>
+<li>Lazarus, <a href="https://www.getlazarus.org/release/">2.0.4 sürümünü duyurdu</a>, <a href="https://wiki.lazarus.freepascal.org/Lazarus_2.0.0_release_notes">Değişiklik notları</a>.</li>
+<li>OpenAPI Generator <a href="https://github.com/OpenAPITools/openapi-generator/releases/tag/v4.1.0">4.1.0 sürümü çıktı</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org54ad15c" class="outline-2">
+<h2 id="org54ad15c"><span class="section-number-2">5</span> Lisans</h2>
+<div class="outline-text-2" id="text-5">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="../../../img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+<a href="yazilim-gundemi-05.html">Yazılım Gündemi - 5</a> yazısı <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a> (CC BY-NC-SA 4.0)
+ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 11 Ağustos 2019</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 22:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

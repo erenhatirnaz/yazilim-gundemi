@@ -1,0 +1,837 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 22:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi - 17</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi - 17
+<br />
+<span class="subtitle">4-10 Kasım 2019</span>
+</h1>
+<div id="table-of-contents">
+<h2>İçindekiler</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgdd283ce">1. GitLab, önemli pozisyonlar için ülke kısıtlamasına gitmeyi tartışıyor</a></li>
+<li><a href="#org879ca3e">2. GitHub Sponsors özelliği 30 ülkede betadan çıktı</a></li>
+<li><a href="#org2963817">3. GitHub yıllık Octoverse raporunu yayınlandı</a>
+<ul>
+<li><a href="#org736f0ea">3.1. Topluluk</a></li>
+<li><a href="#orgba8a77b">3.2. Ülkeler</a></li>
+<li><a href="#org5e473dd">3.3. Programlama Dilleri</a></li>
+</ul>
+</li>
+<li><a href="#org0c11f5f">4. Microsoft, Visual Studio Online hizmetini duyurdu</a></li>
+<li><a href="#orgf3f1199">5. Git 2.24 sürümü duyuruldu</a>
+<ul>
+<li><a href="#org590ea79">5.1. Yeni özellik makroları</a></li>
+<li><a href="#org63718ae">5.2. Tarihçeyi yeniden yazmak için alternatif araçlar</a></li>
+</ul>
+</li>
+<li><a href="#org3364653">6. Google, Android 11'de AsyncTask API'sini kaldırmaya hazırlanır</a></li>
+<li><a href="#org6908c4a">7. Gradle 6.0.0 yayınlandı</a>
+<ul>
+<li><a href="#orgc941b7b">7.1. Java ve Groovy için daha hızlı derleme</a></li>
+</ul>
+</li>
+<li><a href="#org9a80ccc">8. Visual Studio Code Ekim 2019 sürümü duyuruldu</a></li>
+<li><a href="#orgfc68326">9. Anket: Türkiye Açık Kaynak Platformu Talep Analizi Anketi</a></li>
+<li><a href="#org6cc8c34">10. Yaklaşan Etkinlikler</a></li>
+<li><a href="#org8630f4e">11. Diğer Haberler</a></li>
+<li><a href="#orgd6ee9c6">12. Lisans</a></li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gundemi-banner.png" alt="yazilim-gundemi-banner.png" />
+</p>
+</div>
+
+<div class="org-center">
+<p>
+<a href="../16/yazilim-gundemi-16.html">&lt; Önceki Gündem</a> | <b>4-10 Kasım 2019</b> | <a href="../18/yazilim-gundemi-18.html">Sonraki Gündem &gt;</a>
+</p>
+
+<p>
+<a href="https://teknoseyir.com/blog/yazilim-gundemi-17-4-10-kasim-2019">TeknoSeyir'de Oku</a>
+</p>
+</div>
+
+<div id="outline-container-orgdd283ce" class="outline-2">
+<h2 id="orgdd283ce"><span class="section-number-2">1</span> GitLab, önemli pozisyonlar için ülke <a href="https://www.zdnet.com/article/gitlab-considers-ban-on-new-hires-in-china-and-russia-due-to-espionage-fears/">kısıtlamasına gitmeyi tartışıyor</a></h2>
+<div class="outline-text-2" id="text-1">
+
+<div class="figure">
+<p><img src="gorseller/gitlab-rusya-cin-engel.png" alt="gitlab-rusya-cin-engel.png" height="200" />
+</p>
+</div>
+
+<p>
+Aslında tartışma yeni değil ilgili <a href="https://gitlab.com/gitlab-com/www-gitlab-com/issues/5555">issue sayfasında</a> da görülebileceği üzere
+yaklaşık 3 hafta önce başlamış fakat yeni gündeme geliyor. Tartışmanın başlama
+nedeni ise kurumsal müşterinin veri güvenliklerine ilişkin ilettiği kaygılar.
+Bu doğrultuda GitLab da, Rusya ve Çin gibi ülkelerden şu iki pozisyon için
+insan kabul etmeyecek: Site Güvenilirlik Mühendisi (Site Reliability Engineer)
+ve Destek Mühendisi (Support Engineer). Ayrıca bu engelleme, güvenlik takımını
+da etkiliyor. Bu iki pozisyondaki kişiler müşterilerin tüm verilerine
+erişebiliyormuş. Bu nedenle, ilgili ülkelerdeki kişilerin bu rollerde olması
+istenmiyor.
+</p>
+
+<p>
+Çalışanların yaşadığı ülkelere göre izin sisteminin oluşturulması da ilgili
+kişiler için bir "ikinci sınıf vatandaş" algısı oluşturup, kendilerini rahatsız
+hissetmelerine yol açacağı için istenmiyor. Şimdilik en "insani" çözümün bu
+olduğunu söyleyen GitLab yetkilisi, şu anda bu engelleme kabul edilirse bu
+yolla hiçbir çalışanın etkilenmeyeceğini de belirtiyor.
+</p>
+
+<p>
+Bu ülkelerden ilgili pozisyonlarda insan kaynağını alınmamasının yanı sıra eğer
+bu konu kabul edilirse mevcut çalışanlar da bu listedeki ülkelere
+taşınamayacaklar. Eğer taşınmak isterlerse işten ayrılmak zorunda kalacaklar.
+</p>
+
+<p>
+Diğer açıdan bakacak olursak ismi geçen ülkelerin casusluk faaliyetleri de
+sürekli gündemde olduğu için (hatta bu tartışma da yine Çin'in siber
+ajanlarıyla ilgili bir <a href="https://www.zdnet.com/article/building-chinas-comac-c919-airplane-involved-a-lot-of-hacking-report-says/">raporun yayınlanmasından</a> sonra başladı) kurumsal
+müşterilerin kaygıları da çok haksız sayılmaz. Üstelik bu engelleme yavaş yavaş
+bir sektör pratiği haline de gelmeye başlamış. Maalesef kurunun yanında yaş da
+yanıyor.
+</p>
+
+<p>
+Bu hafta boyunca <a href="https://news.ycombinator.com/item?id=21437334">HackerNews</a> ve <a href="https://www.reddit.com/r/gitlab/comments/dtfccm/gitlabs_director_of_risk_and_global_compliance/">Reddit</a> gibi bir çok platformda tartışılan bu
+konu elbette ilgili issue sayfasında da tartışılmaya devam etti. Bu tartışmalar
+sırasında Candice Ciresi isimli GitLab'ın Global Risk ve Uyum Direktörü de aynı
+issue içerisinde istifa ettiğini paylaştı fakat sonra bu yazı GitLab tarafından
+kurallara uymadığı gerekçesiyle kaldırıldı. Yani bir nevi sansür uygulandı.
+GitLab böyle bir davranış sergilemeseydi, "müşterilerinin kaygılarını gidermeye
+çalışıyor" gözüyle bakmaya devam edecektim fakat böylesi sansürcü bir yaklaşımı
+GitLab'a yakıştıramadım.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/gitlab-istifa-1.png" alt="gitlab-istifa-1.png" />
+</p>
+<p><span class="figure-number">Şekil 3: </span>Candice Ciresi'nin ilk gönderdiği mesaj (bir takipçiye giden mail)</p>
+</div>
+
+
+<div class="figure">
+<p><img src="gorseller/gitlab-istifa-2.png" alt="gitlab-istifa-2.png" />
+</p>
+<p><span class="figure-number">Şekil 4: </span>GitLab'ın müdahalesi</p>
+</div>
+
+<p>
+Daha önceki yazılım gündemi yazılarından birinde de dediğim gibi, artık
+internete bağlandığın konumun bir önemi olmadığı dönemler eskide kaldı (belki
+de öyle bir dönem hiç olmadı, ambargo uygulanan bir ülkede olmadığımız için biz
+fark edemedik), günümüzde maalesef hangi ülkeden internete çıktığın önemli
+konulardan biri haline geldi.
+</p>
+
+<p>
+Siz bu konuda ne düşünüyorsunuz? Böyle bir engelleme o ülkelerde yaşayan ya da
+vatandaşı olan kişilere haksızlık mı, yoksa günümüz siber güvenlik çağında bir
+mecburiyet mi? Yorumlar kısmında konuşalım.
+</p>
+</div>
+</div>
+<div id="outline-container-org879ca3e" class="outline-2">
+<h2 id="org879ca3e"><span class="section-number-2">2</span> GitHub Sponsors özelliği <a href="https://github.blog/2019-11-04-github-sponsors-is-now-out-of-beta-in-30-countries/">30 ülkede betadan çıktı</a></h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Yaklaşık 6 ay önce GitHub, Sponsors özelliğini <a href="https://techcrunch.com/2019/05/23/github-launches-sponsors-lets-you-pay-your-favorite-open-source-contributors/">beta olarak duyurmuştu</a>. Bugün
+ise yeni bir blog yazısı ile bu özelliğin 30 ülke için beta'dan çıktığını
+duyurdular. Ülkelerin listesine <a href="https://help.github.com/en/github/supporting-the-open-source-community-with-github-sponsors/becoming-a-sponsored-developer#submitting-your-bank-and-tax-information">bu adresten</a> bakabilirsiniz fakat sizi yormadan
+ben söyleyeyim, Türkiye bu ülkeler arasında değil.
+</p>
+
+<p>
+GitHub'ın yeni Sponsors özelliği için aslında bir nevi dahili Patreon sistemi
+diyebiliriz. Aynı Patreon'da olduğu gibi kullanıcılar destek olmak istedikleri
+projelere abonelik yöntemi ile 'sponsor' oluyorlar. Proje sahipleri isterlerse
+farklı abonelik seviyeleri (ayda 1 dolar, ayda 5 dolar vb.) de oluşturabiliyor.
+</p>
+
+<p>
+Eğer betadan çıkan 30 ülkenin birinde değilseniz, sizin ülkenize geldiğinde
+haberdar olmak <a href="https://github.com/sponsors">bekleme listesine kayıt olup</a>, Beta programı için başvuru
+yapabilirsiniz. GitHub, "resmi olarak varlık gösterdiğimiz diğer ülkelerde de
+bu özelliği açmak için çalışıyor" diyor fakat Türkiye'de resmi olarak varlar
+mı, bilgim yok ama umarım ülkemiz için de aktif olur.
+</p>
+
+<p>
+Beta programındaki bazı proje sahipleri de şöyle bir <a href="https://www.youtube.com/watch?v=7YcW25PHnAA">kutlama videosu çekmişler</a>.
+</p>
+
+<p>
+Güzel bir özellik, umarım açık kaynak ve özgür yazılım topluluğunun gelişmesine
+vesile olur.
+</p>
+</div>
+</div>
+<div id="outline-container-org2963817" class="outline-2">
+<h2 id="org2963817"><span class="section-number-2">3</span> GitHub yıllık <a href="https://octoverse.github.com/">Octoverse raporunu yayınlandı</a></h2>
+<div class="outline-text-2" id="text-3">
+<p>
+GitHub, her yıl olduğu gibi bu yıl da GitHub'da 1 yıl boyunca olan bitenleri
+rapor haline getirdi ve yayınlandı. Bu hafta <a href="https://github.blog/2019-11-06-the-state-of-the-octoverse-2019/">bir blog yazısı</a> yazarak yeni
+Octoverse raporlarını duyurdular. Şimdi isterseniz rapordan birkaç başlığı
+birlikte inceleyelim:
+</p>
+</div>
+
+<div id="outline-container-org736f0ea" class="outline-3">
+<h3 id="org736f0ea"><span class="section-number-3">3.1</span> Topluluk</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+2019 yılı boyunca:
+</p>
+<ul class="org-ul">
+<li>GitHub'a toplam 10 milyon yeni kullanıcı katılmış ve toplam da 40 milyon
+üzeri kullanıcı sayısına çıkılmış.</li>
+<li>44 milyon yeni depo yaratıldı ya da "fork" edildi ve 2018'e göre %44 daha
+fazla geliştirici ilk deposunu yarattı</li>
+<li>87 milyon pull request kabul edilmiş ve 2018'e göre %28 daha fazla
+geliştirici ilk pull request'ini oluşturmuş.</li>
+<li>20 milyon issue kapatılmış.</li>
+<li>2.9 milyon organizasyon sayfası oluşturulmuş.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgba8a77b" class="outline-3">
+<h3 id="orgba8a77b"><span class="section-number-3">3.2</span> Ülkeler</h3>
+<div class="outline-text-3" id="text-3-2">
+
+<div class="figure">
+<p><img src="gorseller/github-ulke-kullanim.png" alt="github-ulke-kullanim.png" />
+</p>
+<p><span class="figure-number">Şekil 5: </span>En çok açık kaynak kullanan (fork ve clone sayısına göre) ülkeler</p>
+</div>
+
+
+<div class="figure">
+<p><img src="gorseller/github-ulkeler-acik-kaynak.png" alt="github-ulkeler-acik-kaynak.png" />
+</p>
+<p><span class="figure-number">Şekil 6: </span><b>(SOL):</b> Açık kaynak proje sayısının artış oranına göre sıralama <b>(SAĞ):</b> Açık kaynak katkı yapan sayısının artış oranına göre sıralama</p>
+</div>
+
+<p>
+Açıkcası bu sıralama beni şaşırttı çünkü önceki yazılım gündemi yazılarından
+hatırlayacağınız üzere GitHub, Amerika'nın yaptırımlarını uygulamaya başlamış
+ve İran'lı geliştiricilerin hesaplarına bazı kısıtlamalar getirmişti (bkz:
+<a href="../03/yazilim-gundemi-03.html">Yazılım Gündemi - 3</a>). Buna rağmen İran'ın bu listede ikinci sırada yer alması
+şaşırtı beni. Gerçi bu olay Temmuz ayında gerçekleşti ama demek ki bu olaydan
+önce yaratılan açık kaynak depolar bile %44 oranını sağlamış.
+</p>
+
+<p>
+Sağdaki sıralama da beni bir o kadar şaşırttı. Ne yalan söyleyeyim listede
+Türkiye'yi görmeyi beklemiyordum. Diğer ülkelere göre alt sıralarda olsak da,
+açık kaynağa katkı yapanlar sayısındaki artış sevinmeme yetiyor. Umarım
+ilerleyen yıllarda daha da artar.
+</p>
+</div>
+</div>
+<div id="outline-container-org5e473dd" class="outline-3">
+<h3 id="org5e473dd"><span class="section-number-3">3.3</span> Programlama Dilleri</h3>
+<div class="outline-text-3" id="text-3-3">
+
+<div class="figure">
+<p><img src="gorseller/github-populer-diller.png" alt="github-populer-diller.png" />
+</p>
+<p><span class="figure-number">Şekil 7: </span>Popüler ilk 10 programlama dili sıralaması</p>
+</div>
+
+<p>
+Gelelim popüler ilk 10 programlama dilleri sıralamasına. JavaScript 2014'den
+beri gelen liderliğini koruyor fakat Java, "İkinci en popüler programlama
+dili" unvanını Python'a kaptırıyor. PHP ise dördüncülük unvanını kimseye
+bırakmıyor. Listenin devamında ise C# ve C++ arasındaki çekişmeli mücadeleyi
+görmekteyiz. Ardından geçtiğimiz senelerde ilk 10'a girmeyi başaran
+TypeScript'in yerini koruduğunu görürken; Shell ve C arasında bir değiş tokuş
+gerçekleştiğini gözüküyor ve son olarak zaman içerisinde popülaritesinin
+düşüşüyle beni şaşırtan Ruby dilini onuncu sırada görmekteyiz.
+</p>
+
+<p>
+Burada şu uyarısı yapmadan geçemeyeceğim: Bu listelerin projenize uygun dili
+seçme aşamasında sizi etkilemesine izin vermeyin. Sonuçta programlama dilleri
+birer araç ve biz de yapacağımız işe en uygun aracı seçip onu kullanıyoruz.
+Sırf popüler diye bir programlama dilini seçmek ileride teknik anlamda sizi
+zora sokabilir.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org0c11f5f" class="outline-2">
+<h2 id="org0c11f5f"><span class="section-number-2">4</span> Microsoft, <a href="https://visualstudio.microsoft.com/services/visual-studio-online/">Visual Studio Online</a> hizmetini duyurdu</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Yaklaşık birkaç senedir uzaktan kod yazmaya olanak sağlayan hizmet ve
+araçların sayısındaki yükseliş gözüme çarpıyordu ki Microsoft da bu alanda bir
+şeyler görmüş olacak ki Visual Studio Code yazılımını, Visual Studio Online
+olarak uzaktan tarayıcı üzerinden çalışacak hale getirmiş ve Azure
+ekosistemine yeni bir parça daha eklemiş.
+</p>
+
+<p>
+Denemek için <a href="https://online.visualstudio.com">online.visualstudio.com</a> adresinden bir geliştirme ortamı
+oluşturmaya çalıştım fakat aktif bir Azure aboneliği istiyor. 1 aylık bedava
+Azure aktifleştirmeye çalıştım fakat o da kredi kartı bilgileri isteyince
+vazgeçtim. Aslında bu yıl içerisinde yayınlanmış ve sonradan <a href="https://coder.com">coder.com</a> isminde
+bir girişime dönüşmüş, şu açık kaynak çözüm de sanırım fikir vermesi açısından
+denenebilir: <a href="https://github.com/cdr/code-server">https://github.com/cdr/code-server</a>. Sonuçta Microsoft'un kendisi
+de yine VS Code yazılımının alt yapısını kullanarak bu hizmeti oluşturdu.
+Yalnız şöyle bir şey var, ben Firefox ile açmaya çalıştığımda çok kısa bir
+"tarayıcınız şimdilik desteklenmiyor" deyip hemen ana sayfaya yönlendirdi.
+Chrome ile deneyince açıldı. İlginç&#x2026;
+</p>
+
+<p>
+Yalnız bu yeni hizmetin ismi konusunda biraz kafam karışık. Microsoft'un zaten
+Visual Studio Online isminde bir GitHub ve GitLab benzeri kod barındırma
+hizmeti sunduğu bir servisi vardı. [kullanıcı_adın].visualstudio.com şeklinde
+bir alan adresi veriyordu ve orada aynı GitHub gibi kodlarınızı barındırıp,
+issue açıp, proje yönetebiliyordunuz. Hatta ben 2013 yılında birtakım
+projelerim için kullanıyordum fakat görünen o ki Microsoft, bu isimi daha çok
+uygun olan bir projeye aktarmış. Benim kullandığım hizmetin ismi de Azure
+DevOps olmuş sanırım. Gerçi emin de değilim uzun zamandır Microsoft
+teknolojilerinden uzak olduğum için bu isim değişikliğinden haberim olmamış da
+olabilir.
+</p>
+
+<p>
+Bu konu hakkında siz ne düşünüyorsunuz? Bu şekilde geliştirme ortamınızı buluta
+taşımak ister misiniz, yoksa "yok arkadaş ben kendi bilgisayarımda tutarım her
+şeyimi" diyenlerden misiniz? Ben şahsen ikincisiyim. Belki biraz geri kafalılık
+da sayılabilir bilmiyorum ama tarayıcı üzerinden kod yazmak bana biraz garip
+geliyor. Ayrıca Levent Abi'nin söylemini tekrar hatırlatmakta fayda var: "Bulut
+dediğin başkasının bilgisayarıdır. Bir gün gelir de, 'sana hizmet vermiyorum'
+derse kalırsın öyle ortada" (bkz: <a href="../03/yazilim-gundemi-03.html">Yazılım Gündemi - 3</a>). Bu doğrultuda
+endişelerimin de haklı olduğunu düşünüyorum.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf3f1199" class="outline-2">
+<h2 id="orgf3f1199"><span class="section-number-2">5</span> Git 2.24 <a href="https://raw.githubusercontent.com/git/git/master/Documentation/RelNotes/2.24.0.txt">sürümü duyuruldu</a></h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Artık versiyon kontrol sistemlerinin lideri haline gelen Git, bu hafta
+içerisinde 2.24 numaralı sürümünü duyurdu. Birkaç değişikliği birlikte
+inceleyelim:
+</p>
+</div>
+
+<div id="outline-container-org590ea79" class="outline-3">
+<h3 id="org590ea79"><span class="section-number-3">5.1</span> Yeni özellik makroları</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+Git çok uzun zamandır hem global hem de sadece depo bazında ayarlar yapmamıza
+izin veren <code>git config</code> ile kullandığımız ayar alt sistemine sahip. Hem
+kendinizi tanıtmak için hem de bazı özellikleri açıp kapatabilmek ya da
+özelleştirmeler yapabilmek için <code>.gitconfig</code> isimli dosyası komut yardımıyla
+ya da elle düzenlememiz gerekiyor. Fakat bazen yeni gelen bazı özellikleri
+keşfetmek ve ayar yapmak bazen fazla zaman alıcı olabiliyor. Bu yüzden artık
+Git geliştiricileri bazı yeni özellikler için makro sistemi geliştirler ve
+şöyle bir komut ile özellikleri açıp kapatabileceğiz:
+</p>
+<pre class="example">
+$ git config feature.manyFiles true
+</pre>
+<p>
+Bu komutu çalıştırdığınızda Git sizin için o özellikle ilgili ayarları
+düzenliyor. Bu makrolar Git geliştiricileri tarafından önceden belirlenmiş
+olarak geliyor.
+</p>
+</div>
+</div>
+<div id="outline-container-org63718ae" class="outline-3">
+<h3 id="org63718ae"><span class="section-number-3">5.2</span> Tarihçeyi yeniden yazmak için alternatif araçlar</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+Projelerde çalışırken, her ne kadar yapılması tavsiye edilmese de bazen
+belirli nedenler ötürü Git tarihçesini yeniden yazmamız gerekebiliyor. Mesela
+bir dosyayı tüm commit'lerden silmek gibi. Şimdiye kadar bunun için <code>git
+	 filter-branch</code> aracı kullanıyorduk, fakat bu aracın kullanımı biraz karışık
+olabiliyordu. Bu nedenle Git geliştiricileri yeni bir araç geliştirdiler: <code>git
+	 filter-repo</code>. Bu araç ile:
+</p>
+<ul class="org-ul">
+<li><code>git filter-repo --analyze</code> komutu ile artık depomuz hakkındaki bazı
+ölçümlerle ilgili bilgiler alabileceğiz. Mesela kaç tane obje olduğu, en
+büyük dosyaların ya da klasörlerin hangileri olduğu gibi. Bunun gibi
+bilgiler veren başka bir araça göz atmak isterseniz: <a href="https://github.com/github/git-sizer">git-sizer</a></li>
+<li><code>--path-{glob-regex}</code> ile artık tarihçeyi sadece belirli bir dizin için
+değiştirken glob ve regex kullanabileceğiz.</li>
+<li>Diğerine göre daha genişletilebilir bir araç olduğu için artık kendimiz
+bazı alt komutlar ekleyebileceğiz. Demo için şu adresdeki depoya göz
+atabilirsiniz: <a href="https://github.com/newren/git-filter-repo/tree/master/contrib/filter-repo-demos">newren/git-filter-repo</a></li>
+</ul>
+
+<p>
+Diğer özellikler ve yenilikler için GitHub'ın yayınladığı <a href="https://github.blog/2019-11-03-highlights-from-git-2-24/">bu blog yazısı</a> çok
+faydalı olabilir. Ben de bundan faydalandım.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org3364653" class="outline-2">
+<h2 id="org3364653"><span class="section-number-2">6</span> Google, Android 11'de AsyncTask API'sini <a href="https://www.xda-developers.com/asynctask-deprecate-android-11/">kaldırmaya hazırlanır</a></h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Asenktron işler, programlamanın hemen her alanında işimize çok yarayan ve
+gerekli olan yapılar. Çünkü bir web sunucusundan veri çekerken kullanıcıların
+ekranlarını dondurmak istemeyiz. Android tarafında da bu tarz asenkron işler
+için Google tarafından sisteme eklenmiş bir API var. Android geliştirmede pek
+deneyimim olmasa da xda-developers sitesindeki yazıdan anladığım kadarıyla bu
+API biraz sorunluymuş. Şöyle ki bazı durumlarda asenkron iş tamamlandığında
+uygulamanın ilgili görsel tarafı artık var olmayabilir (kullanıcı başka bir
+ekrana geçmiştir vs.) fakat AsyncTask API'si bunu kontrol etmediği için
+uygulamanın çökmesine yol açabiliyor. Elbette siz manuel olarak bazı kontroller
+ekleyebilirsiniz ama bu sefer de kod tekrarı gibi şeyler oluşabiliyor. Bu gibi
+nedenlerden dolayı Google da, sanırım fazla da kullanılmayan bir API olduğu
+için, <a href="https://android-review.googlesource.com/c/platform/frameworks/base/+/1156409">bunu deprecate etmeye karar verdi</a>. Bu ifadeyi Türkçe'ye tam nasıl
+çeviririz bilemiyorum ama biraz açmak gerekirse: API tam olarak kaldırılmayacak
+ama artık desteklenmeyecek ve kullanılması da tavsiye edilmeyecek. Zaten
+xda-developers sitesindeki yazıdan anladığım kadarıyla pek tercih edilen de bir
+API değilmiş. Android geliştirici arkadaşlar da doğrulayabilirler sanırım. Çoğu
+geliştirici onun yerine daha esnek <a href="https://github.com/ReactiveX/RxJava">RxJava</a> ya da Kotlin tarafında <a href="https://kotlinlang.org/docs/reference/coroutines-overview.html">Coroutines</a>
+kütüphanelerini kullanıyor.
+</p>
+
+<p>
+Android geliştiricisi arkadaşlar için pek büyük bir kayıp sayılmasa da
+kullanan arkadaşlar varsa artık yeni kütüphanelere geçmelerini tavsiye ederim.
+</p>
+</div>
+</div>
+<div id="outline-container-org6908c4a" class="outline-2">
+<h2 id="org6908c4a"><span class="section-number-2">7</span> Gradle 6.0.0 <a href="https://docs.gradle.org/6.0/release-notes.html">yayınlandı</a></h2>
+<div class="outline-text-2" id="text-7">
+<p>
+Yazılım geliştirme süreçlerinin evrildiği hal itibariyle artık 3. parti
+kütüphaneler olmadan çözümler geliştirmek pek mümkün gözükmüyor. Haliyle biz
+de bu 3. parti kütüphaneleri ve derleme işlemlerini yönetmek için araçlara
+ihtiyaç duyduk. İşte <a href="https://gradle.org/">Gradle</a> da bu araçlardan birisi. Her ne kadar C++ ve
+JavaScript gibi dillerde desteği olsa da daha çok Java ekosisteminde ve
+Android uygulama geliştirme alanlarında daha çok tercih edilen bir araç. Bu
+hafta itibariyle de 6.0.0 sürümünü duyurdu. Bu sürümde duyurulan bir
+değişikliği birlikte inceleyelim:
+</p>
+</div>
+
+<div id="outline-container-orgc941b7b" class="outline-3">
+<h3 id="orgc941b7b"><span class="section-number-3">7.1</span> Java ve Groovy için daha hızlı derleme</h3>
+<div class="outline-text-3" id="text-7-1">
+<p>
+Direkt bir örnekle açıklamak gerekirse:
+</p>
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-keyword">class</span> <span class="org-type">A</span> {}
+
+<span class="org-keyword">class</span> <span class="org-type">B</span> {
+    <span class="org-keyword">static</span> <span class="org-type">void</span> <span class="org-function-name">foo</span>() {
+        <span class="org-type">A</span> <span class="org-variable-name">a1</span> = <span class="org-keyword">new</span> <span class="org-type">A</span>();
+    }
+}
+
+<span class="org-keyword">class</span> <span class="org-type">C</span> {
+    <span class="org-type">void</span> <span class="org-function-name">bar</span>() {
+        B.foo();
+    }
+}
+</pre>
+</div>
+<p>
+Buradaki her sınıfı ayrı bir dosya olarak düşünün. Gradle'ın önceki
+sürümlerinde <b>A</b> sınıfında bir değişiklik olduğunda tüm diğer dosyalar da
+yeniden derleniyordu fakat artık sadece <b>A</b> ve <b>B</b> sınıfları derlenecek.
+Çünkü <b>A</b> sınıfın değişmesi <b>C</b> sınıfını doğrudan ilgilenmiyor. O sadece <b>B</b>
+sınıfındaki bir fonksiyonu çağırıyor. Böylece derlenecek dosya sayısındaki
+azaltma da derleme hızlarını olumlu olarak etkiliyor.
+</p>
+
+<p>
+Diğer özellik ve değişiklikler için konu başlığına eklediğim bağlantıya
+tıklayabilirsiniz.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org9a80ccc" class="outline-2">
+<h2 id="org9a80ccc"><span class="section-number-2">8</span> Visual Studio Code <a href="https://code.visualstudio.com/updates/v1_40">Ekim 2019 sürümü duyuruldu</a></h2>
+<div class="outline-text-2" id="text-8">
+
+<div class="figure">
+<p><img src="gorseller/vscode1-40.png" alt="vscode1-40.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfc68326" class="outline-2">
+<h2 id="orgfc68326"><span class="section-number-2">9</span> Anket: <a href="https://docs.google.com/forms/d/e/1FAIpQLScDKFrhI4SeTuRtokSNYrdSrNKdM8zmHkPyNfMxIG3PgXnQNg/viewform">Türkiye Açık Kaynak Platformu Talep Analizi Anketi</a></h2>
+<div class="outline-text-2" id="text-9">
+<p>
+Türkiye Açık Kaynak platformu çalışmaları devam ediyor. Konu başlığına
+eklediğim ankete katılarak fikir ve önerilerinizi paylaşabilirsiniz. Türkiye
+Açık Kaynak Platformu hakkında ümitliyim, umarım yakın zamanda bir şeyler
+ortaya çıkar.
+</p>
+</div>
+</div>
+<div id="outline-container-org6cc8c34" class="outline-2">
+<h2 id="org6cc8c34"><span class="section-number-2">10</span> Yaklaşan Etkinlikler</h2>
+<div class="outline-text-2" id="text-10">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" width="100%">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Etkinlik İsmi</th>
+<th scope="col" class="org-left">Yeri</th>
+<th scope="col" class="org-left">Tarihi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/2020-ve-sonras-icin-yazlm-test-trendleri-tickets-78599383873">2020 ve Sonrası için Yazılım Test Trendleri</a></td>
+<td class="org-left">Ankara</td>
+<td class="org-left">14 Kasım 14:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/devnot-yazilimci-bulusmalari/events/flutter-ile-ilk-mobil-uygulamanizi-yazin">Flutter ile İlk Mobil Uygulamanızı Yazın</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">15 Kasım 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/cyber-security-summit-tickets-73829151981">Cyber Security Summit</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">16 Kasım 09:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/tensorflow-turkey/events/tensorflow-world-extended-ankara">TensorFlow World Extended Ankara</a></td>
+<td class="org-left">Ankara</td>
+<td class="org-left">16 Kasım 13:00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org8630f4e" class="outline-2">
+<h2 id="org8630f4e"><span class="section-number-2">11</span> Diğer Haberler</h2>
+<div class="outline-text-2" id="text-11">
+<ul class="org-ul">
+<li>Bazı çalışanlar, Google'ın petrol şirketleri ile yaptığı <a href="https://www.bloomberg.com/news/articles/2019-11-04/now-googlers-are-protesting-company-s-cloud-deals-with-big-oil">iş anlaşmalarını
+protesto etti</a>.</li>
+<li>Electron bazlı uygulamalar Mac uygulama mağazasından <a href="https://www.theregister.co.uk/2019/11/05/apple_app_store_electron">atılma tehdidi ile
+karşı karşıya</a>. <a href="https://onezero.medium.com/apple-is-trying-to-kill-web-technology-a274237c174d">Blog yazısı</a>, <a href="https://news.ycombinator.com/item?id=21486430">HackerNews</a>, <a href="https://www.reddit.com/r/programming/comments/dtuv4v/apple_is_trying_to_kill_web_technology">Reddit</a>.</li>
+<li>JetBrains, IntellijIdea için geliştirdiği yeni <a href="https://blog.jetbrains.com/idea/2019/11/meet-grazie-the-ultimate-spelling-grammar-and-style-checker-for-intellij-idea/">yazım denetimi aracını
+tanıttı</a>: <a href="https://plugins.jetbrains.com/plugin/12175-grazie/">Grazie</a>.</li>
+<li>Kendi sunucusunda GitHub çalıştıranlar için GitHub Actions <a href="https://github.blog/2019-11-05-self-hosted-runners-for-github-actions-is-now-in-beta/">beta olarak
+duyuruldu</a>.</li>
+<li>OpenAI organizasyonunun metin oluşturma yapay zekası <a href="https://openai.com/blog/gpt-2-1-5b-release/">GPT-2 yayınlandı</a>.
+<a href="https://www.theverge.com/2019/11/7/20953040/openai-text-generation-ai-gpt-2-full-model-release-1-5b-parameters">Alternatif</a></li>
+<li>Google, Cardboard yazılımını <a href="https://www.theverge.com/2019/11/6/20952495/google-cardboard-open-source-phone-based-vr-daydream">açık kaynak yaptı</a>. <a href="https://github.com/googlevr/cardboard">GitHub Deposu</a></li>
+<li>Postman'den yeni görselleştirme <a href="https://blog.getpostman.com/2019/11/04/visualizing-apis-of-the-world/">aracını duyurdu</a>: <a href="https://www.getpostman.com/api-visualizer">API Visualizer</a>.</li>
+<li>Microsoft SRC takımı, Windows içerisinde Rust kullanım alanları ile <a href="https://msrc-blog.microsoft.com/2019/11/07/using-rust-in-windows/">ilgili
+bir blog yazısı paylaştı</a>.</li>
+<li>WinUI 3.0 Alpha <a href="https://github.com/microsoft/microsoft-ui-xaml/issues/1531">duyuruldu</a>.</li>
+<li>PHP topluluğu, Union Types özelliği önerisini <a href="https://github.com/php/php-rfcs/pull/1#issuecomment-551454495">kabul etti</a>. <a href="https://wiki.php.net/rfc/union_types_v2">Öneri detayları
+sayfası</a></li>
+<li>Go programlama dili <a href="https://blog.golang.org/10years">10 yaşında</a>.</li>
+<li>TypeScript 3.7 final <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-3-7/">sürümü yayınlandı</a>.</li>
+<li>Rust programlama dilinin <a href="https://blog.rust-lang.org/2019/11/07/Rust-1.39.0.html">1.39.0 sürümü duyuruldu</a>.
+özellikleri hakkında <a href="https://blog.rust-lang.org/2019/11/07/Async-await-stable.html">özel blog yazısı yayınlandı</a>.</li>
+<li>D programlama dilinin <a href="https://dlang.org/blog/2019/11/06/dmd-2-089-0-released/">2.089.0 sürümü yayınlandı</a>.</li>
+<li>Dart programlama dilinin <a href="https://medium.com/dartlang/dart2native-a76c815e6baf">2.6 sürümü yayınlandı</a>.</li>
+<li>Facebook, sıkıştırma algoritması zstandard'ın <a href="https://github.com/facebook/zstd/releases/tag/v1.4.4">1.4.4 sürümünü duyurdu</a>.</li>
+<li>KDAB, yeni bir Qt komponenti <a href="https://www.kdab.com/kddockwidgets/">duyurdu</a>: <a href="https://github.com/KDAB/KDDockWidgets">KDDockWidgets</a>.</li>
+<li>Açık kaynak 3 boyutlu grafik motoru Ogre, <a href="https://www.ogre3d.org/2019/11/05/ogre-1-12-3-released">1.13.3 sürümünü yayınladı</a>.</li>
+<li>GraphQL Zeus, <a href="https://github.com/graphql-editor/graphql-zeus/releases/tag/2.0.0">2.0.0 sürümü çıktı</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd6ee9c6" class="outline-2">
+<h2 id="orgd6ee9c6"><span class="section-number-2">12</span> Lisans</h2>
+<div class="outline-text-2" id="text-12">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="../../../img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+<a href="yazilim-gundemi-17.html">Yazılım Gündemi - 17</a> yazısı <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a> (CC BY-NC-SA 4.0)
+ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 10 Kasım 2019</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 22:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

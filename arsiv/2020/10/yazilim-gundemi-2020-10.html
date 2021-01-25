@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 22:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi - 2020/10</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi - 2020/10
+<br />
+<span class="subtitle">9-15 Mart 2020</span>
+</h1>
+<div id="table-of-contents">
+<h2>İçindekiler</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org096c23b">1. Microsoft, Visual Basic'i artık geliştirmeyeceğini duyurdu</a></li>
+<li><a href="#orga3756a8">2. Twitter, Geliştirici Yönergelerini akademik araştırmaları daha iyi desteklemek için güncelledi</a></li>
+<li><a href="#orgb779c13">3. Bootstrap 5 ile gelecek bazı özellikler belli oldu</a></li>
+<li><a href="#orgb975875">4. Django yönetim şeklini değiştirdi</a></li>
+<li><a href="#org3871257">5. Unicode 13.0.0 sürümü yayınlandı</a></li>
+<li><a href="#orgf654f53">6. Next.js kütüphanesinin 9.3 sürümü yayınlandı</a></li>
+<li><a href="#org3067b30">7. Visual Studio Code Şubat 2020 (v1.43) sürümü yayınlandı</a></li>
+<li><a href="#orga1ec4ab">8. Diğer Haberler</a></li>
+<li><a href="#org62605f7">9. Lisans</a></li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gundemi-banner.png" alt="yazilim-gundemi-banner.png" />
+</p>
+</div>
+
+<div class="org-center">
+<p>
+<a href="../09/yazilim-gundemi-2020-09.html">&lt; Önceki Gündem</a> | <b>9-15 Mart 2020</b> | <a href="../11/yazilim-gundemi-2020-11.html">Sonraki Gündem &gt;</a>
+</p>
+
+<p>
+<a href="https://teknoseyir.com/blog/yazilim-gundemi-2020-10">TeknoSeyir'de Oku</a>
+</p>
+</div>
+
+<div id="outline-container-org096c23b" class="outline-2">
+<h2 id="org096c23b"><span class="section-number-2">1</span> Microsoft, Visual Basic'i artık <a href="https://devblogs.microsoft.com/vbteam/visual-basic-support-planned-for-net-5-0/">geliştirmeyeceğini duyurdu</a></h2>
+<div class="outline-text-2" id="text-1">
+
+<div class="figure">
+<p><img src="gorseller/visual-basic-gelistirme.png" alt="visual-basic-gelistirme.png" />
+</p>
+</div>
+
+<p>
+Microsoft'un açık kaynak camiasına açılmasıyla birlikte gelen köklü
+değişikliklerden biri olan .NET Core projesinin artık Microsoft'un ana
+uygulama geliştirme çatısı haline geldiğini biliyoruz. Geçtiğimiz yazılım
+gündemi yazılarında da (bkz: <a href="../../2019/14/yazilim-gundemi-14.html">Yazılım Gündemi - 14</a>) .NET Framework API'lerinin
+.NET Core'a aktarılmasının tamamlandığını haber vermiştim. Yine başka bir
+yazıda ise .NET Core çatısının artık .NET 5 ismiyle hayatına devam edeceğini
+duyurmuştum. Bu hafta ise Microsoft .NET Takımı, Visual Basic için .NET 5
+planlarını açıkladılar. .NET 5 içerisinde de Visual Basic desteği şu uygulama
+tipleri için olacak:
+</p>
+
+<ul class="org-ul">
+<li>Class Library</li>
+<li>Console</li>
+<li>Windows Forms</li>
+<li>WPF</li>
+<li>Worker Service</li>
+<li>ASP.NET Core Web API</li>
+</ul>
+
+<p>
+Bunların dışında kalan WebForms, Workflow ya da WCF gibi uygulama tipleri ise
+.NET 5 sürümünde yer almayacak. Eğer bu tiplerde geliştirdiğiniz uygulamalar
+varsa Microsoft, .NET 5 çatısına geçirmenizi tavsiye ediyor. Eğer kurumsal
+müşteri iseniz de bu konuda destek veriyor.
+</p>
+
+<p>
+Aynı blog yazısında duyurulan bir diğer gelişme ise, artık Visual Basic'in dil
+olarak geliştirilmeye devam edilmeyeceği haberi oldu. İlerleyen .NET
+sürümlerinde gelecek olan özellikler artık Visual Basic'e eklenmeyecek.
+Microsoft zaten 2017'de C# ve VB.NET'in eşit geliştirilmesini bıraktığını,
+C#'a ağırlık <a href="https://www.thurrott.com/dev/89874/microsoft-outlines-development-language-strategy">vereceğini duyurmuştu</a>. Dolayısıyla pek de sürpriz bir gelişme
+değil yani. Ben de programlamaya ilgi duyduğum orta okul yıllarında biraz
+haşır neşir olduğum bir dildi fakat sonrasında C#'a geçmiştim ben de.
+</p>
+
+<p>
+Eğer hala Visual Basic ile geliştirmeye devam ettiğiniz uygulamalar varsa
+sistemin durumuna göre bir tekrar gözden geçirip, yeni kararlar vermekte fayda
+var fakat yine de unutmayalım ki: "Çalışıyorsa dokunma" :)
+</p>
+</div>
+</div>
+<div id="outline-container-orga3756a8" class="outline-2">
+<h2 id="orga3756a8"><span class="section-number-2">2</span> Twitter, Geliştirici Yönergelerini akademik araştırmaları daha iyi <a href="https://techcrunch.com/2020/03/10/twitter-rewrites-developer-policy-to-better-support-academic-research-and-use-of-good-bots/">desteklemek için güncelledi</a></h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Twitter, bu hafta içerisinde kendi platformu üzerinde uygulama geliştiren
+geliştiricilerin uyması gereken kuralları güncelledi. Yani Developer Policy
+güncellendi ve sadeleştirildi. Önceden 8 bölümden oluşan metin artık 4 bölüme
+inmiş durumda. Bu değişiklikle birlikte öne çıkan iki önemli konu mevcut.
+Birisi Twitter artık akademik araştırmalar için verilerin kullanılması ve
+yeniden dağıtılması konusunda daha anlayışlı, diğeri ise Twitter'ın artık
+"iyi" botlara sıcak bakmaya başlaması.
+</p>
+
+<p>
+Twitter'daki herkese açık paylaşımlar artık ticari olmayan akademik
+araştırmalar için kullanılabilecek. Üstelik yenilenen policy sayesinde artık
+araştırmada sonuç üretmek için kullandığımız tweet'lerin ya da kullanıcıların
+id'lerini de çalışmamızla birlikte yeniden dağıtabiliyoruz. Böylece akran
+değerlendirmesi sırasında aynı tweet ve kullanıcılar kullanılarak, sizin elde
+ettiğiniz sonucu başkaları da elde edebilecekler.
+</p>
+
+<p>
+Veri erişilebilirliğiyle ilgili bu değişikliklerin yanı sıra artık Twitter'da
+bot hesapları da yasal olarak oluşturabileceğiz. "Bot" hesaplardan kast
+ettiğim tabii ki de otomatik beğeni ya da RT yapan botlar değil. Twitter şu
+iki botu örnek olarak göstermiş mesela: <a href="https://twitter.com/earthquakesSF">EarthQuakesSF</a> ve <a href="https://twitter.com/everycolorbot">EveryColorBot</a>.
+İnsanlara faydalı amaçlar için geliştirilmiş botlar olması gerekiyor. Bunu tam
+olarak nasıl belirleyeceklerini bilmiyorum, policy metnini okuyacak vaktim
+olmadı ama üstesinden geleceklerdir sanırım.
+</p>
+
+<p>
+Ayrıca Twitter, uygulamalar ile ilgili bazı istatistikler de paylaştı.
+Twitter, Temmuz 2018'den beri bir milyondan fazla uygulamayı review etmiş ve
+%75'ini kabul etmiş. Ek olarak son 6 ayda 144.000 uygulama da kötü amaçlı
+kullanıldıkları için kaldırılmış.
+</p>
+</div>
+</div>
+<div id="outline-container-orgb779c13" class="outline-2">
+<h2 id="orgb779c13"><span class="section-number-2">3</span> Bootstrap 5 ile gelecek bazı özellikler <a href="https://themesberg.com/blog/design/bootstrap-5-release-date-and-whats-new">belli oldu</a></h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Ben dahil birçok back-end geliştiricisinin onlarca projede imdadına yetişen
+arayüz sistemi Bootstrap <a href="https://github.com/twbs/bootstrap/projects/11">son hızıyla geliştirilmeye devam ediyor</a>. Henüz resmi
+bir açıklama olmasa da Bootstrap 5 sürümünün bahar aylarının sonlarına doğru
+yayınlanması bekleniyor. Bu sırada ise GitHub üzerindeki değişiklikleri
+incelediğimizde gördüğümüz bazı şeyler var. Bunlar şu şekilde:
+</p>
+
+<ul class="org-ul">
+<li>jQuery bağımlılığı kaldırıldı</li>
+<li>Internet Explorer 10 ve 11 desteği kaldırıldı</li>
+<li>SVG icon kütüphanesi eklendi</li>
+</ul>
+
+<p>
+Bu üçünün dışında daha birçok değişikliğin de uygulandığını <a href="https://github.com/twbs/bootstrap/projects/11">bu proje
+sayfası</a>ndan görebilirsiniz. Internet Explorer 10 ve 11 desteğinin
+kaldırılmasına şaşırmadık elbette. Aslında bakarsanız jQuery desteğinin
+kalmasına da şaşırmadım ben. Son 3-4 yıldır VueJS ve React gibi kütüphanelerin
+yaygınlaşmasıyla birlikte zaten jQuery'yi çok nadir görüyorduk. Bootstrap
+ekibi de artık bunun farkına varmış olacak ki artık kullanmamaya karar
+vermişler.
+</p>
+
+<p>
+Diğer değişiklikler ve özellikler için konu başlığına eklediğim bağlantıya ya
+da <a href="https://github.com/twbs/bootstrap/projects/11">proje sayfası</a>na göz atabilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-orgb975875" class="outline-2">
+<h2 id="orgb975875"><span class="section-number-2">4</span> Django yönetim <a href="https://www.djangoproject.com/weblog/2020/mar/12/governance/">şeklini değiştirdi</a></h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Belirli bir büyüklüğe ulaşan her programlama dili ve framework gibi Django'nun
+da artık bazı kararlar vermesi gerekiyordu ve bu hafta içerisinde
+yayınladıkları blog yazısıyla birlikte yönetim sistemiyle ilgili "DEP"
+belgesinin <a href="https://github.com/django/deps/blob/master/accepted/0010-new-governance.rst">kabul edilmiş halini yayınladılar</a>.
+</p>
+
+<p>
+Açıkcası Django ile hiç proje geliştirmediğim için yapısına da hakim değilim
+fakat okuduklarımdan anladığım kadarıyla önceden bir "ana geliştirici akımı"
+varmış ve genelde geliştirmeler bu kişiler tarafından yapılıyor ya da
+dışarıdan gelen katkıları yine bu kişiler değerlendiriyormuş. Fakat artık
+projenin de fazlaca büyümesiyle birlikte bu süreç zorlaşmış olacak ki farklı
+roller getirerek görevleri ve sorumlulukları dağıtmayı tercih etmişler. Ayrıca
+"Techninal Board" gibi komitelerin de kurulacağını belirtmişler. Anlayacağız
+artık Django geliştirme süreci daha sistematik bir şekilde işleyecek.
+</p>
+
+<p>
+Yeni yönetim şekliyle ilgili detaylara konu başlığına eklediğim bağlantı
+üzerinden ulaşabilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-org3871257" class="outline-2">
+<h2 id="org3871257"><span class="section-number-2">5</span> Unicode 13.0.0 <a href="https://unicode.org/versions/Unicode13.0.0/">sürümü yayınlandı</a></h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Aynı zamanda uygulamalar üzerinde kullandığımız "emoji"lerin de standardı olan
+Unicode standardının 13.0 sürümü yayınlandı. Bazı değişiklikler şu şekilde:
+</p>
+
+<ul class="org-ul">
+<li>5.930 yeni karakter eklemesiyle birlikte artık Unicode toplam 143.856
+karakter barındırıyor,</li>
+<li>55 yeni "emoji" eklenmiş. Yeni emojilere <a href="https://unicode.org/emoji/charts-13.0/emoji-released.html">bu adresten</a> göz atabilirsiniz.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf654f53" class="outline-2">
+<h2 id="orgf654f53"><span class="section-number-2">6</span> Next.js kütüphanesinin 9.3 <a href="https://nextjs.org/blog/next-9-3">sürümü yayınlandı</a></h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>Yeni nesil statik site oluşturma desteği,</li>
+<li>Ön-izleme modu,</li>
+<li>Global stillendirme için gömülü SASS desteği (<code>.scss</code>),</li>
+<li>Komponent bazında stillendirme için SASS Modül desteği (<code>.module.scss</code>),</li>
+<li>404 sayfaları için otomatik statik optimizasyon,</li>
+<li>Tüm runtime sadece 32 kB,</li>
+<li>Toplulukla ilgili tartışmalar artık <a href="https://github.com/zeit/next.js/discussions">GitHub Discussions üzerinde</a> olacak.</li>
+</ul>
+
+<p>
+Özelliklerin detayları için konu başlığına eklediğim bağlantıya
+tıklayabilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-org3067b30" class="outline-2">
+<h2 id="org3067b30"><span class="section-number-2">7</span> Visual Studio Code Şubat 2020 (v1.43) <a href="https://code.visualstudio.com/updates/v1_43">sürümü yayınlandı</a></h2>
+<div class="outline-text-2" id="text-7">
+
+<div class="figure">
+<p><img src="gorseller/vscode-1-43.png" alt="vscode-1-43.png" />
+</p>
+<p><span class="figure-number">Şekil 3: </span>Visual Studio Code editörünün Şubat 2020 sürümüyle birlikte gelen özellikler</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orga1ec4ab" class="outline-2">
+<h2 id="orga1ec4ab"><span class="section-number-2">8</span> Diğer Haberler</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li>Korona virüsü nedeniyle ertelenen konferanslar ve etkinlikler:
+<ul class="org-ul">
+<li>PHPKonf İstanbul yaz aylarına <a href="https://2020.phpkonf.org/updates.html">ertelendi</a>. Yeni tarihler ilerleyen
+haftalarda duyurulacak.</li>
+<li>Apple, WWDC20 etkinliğini <a href="https://developer.apple.com/news/?id=03132020a">yaz aylarına erteledi</a>.</li>
+<li>Angular Turkey etkinliğini <a href="https://twitter.com/ngTurkiye/status/1237659540889522176">ileri bir tarihe erteledi</a>.</li>
+</ul></li>
+<li>Atlassian, Syndney ofisini kapattı ve bir sonraki duyuruya kadar evden
+çalışma düzenine <a href="https://mobile.twitter.com/Atlassian/status/1237996563953324032">geçtiklerini duyurdu</a>.</li>
+<li>Microsoft SMBv3'de kritik bir <a href="https://kb.cert.org/vuls/id/872016/">güvenlik açığı keşfedildi</a>.</li>
+<li>Bill Gates, Microsoft'un <a href="https://www.prnewswire.com/news-releases/microsoft-announces-change-to-its-board-of-directors-301023293.html">yönetim kurulundan ayrıldı</a>.</li>
+<li>GitHub CEO'su, sunucularının bir kısmını <a href="https://foldingathome.org/2020/02/27/foldinghome-takes-up-the-fight-against-covid-19-2019-ncov/">Folding@Home projesi</a> için
+<a href="https://mobile.twitter.com/natfriedman/status/1237466267998543872">ayırdığını duyurdu</a>.</li>
+<li>Netflix, kendi geliştirdiği AV1 encoder ve decoder'i <a href="https://netflixtechblog.com/svt-av1-an-open-source-av1-encoder-and-decoder-ad295d9b5ca2">açık kaynak olarak
+yayınladı</a>. <a href="https://github.com/OpenVisualCloud/SVT-AV1/">GitHub Deposu</a></li>
+<li>Amazon, AWS HTTP APIs hizmetini <a href="https://aws.amazon.com/tr/blogs/compute/building-better-apis-http-apis-now-generally-available/">beta'dan çıkardı</a>.</li>
+<li>InfoQ sitesi, <a href="https://www.infoq.com/articles/javascript-web-development-trends-2020/">JavaScript ve Web Geliştirme Trendleri 2020</a> raporunu
+yayınladı.</li>
+<li>Microsoft, .NET Core Uninstall Tool aracını <a href="https://devblogs.microsoft.com/dotnet/announcing-the-net-core-uninstall-tool-1-0/">tanıttı</a>.</li>
+<li>Silverlight açık kaynak olarak geri döndü: <a href="https://www.opensilver.net/announcements/introducing-opensilver.aspx">OpenSilver</a>.</li>
+<li>Google: "<a href="https://opensource.googleblog.com/2020/03/webassembly-brings-extensibility-to.html?m=1">WebAssembly, internet proxy'lerine genişletilebilirlik
+kazandırıyor</a>".</li>
+<li>Rust programlama dilinin 1.42.0 <a href="https://blog.rust-lang.org/2020/03/12/Rust-1.42.html">sürümü duyuruldu</a>.</li>
+<li>GCC 9.3 <a href="https://lists.gnu.org/archive/html/info-gnu/2020-03/msg00006.html">sürümü yayınlandı</a>.</li>
+<li>react-query v1.0.27 <a href="https://github.com/tannerlinsley/react-query/blob/master/CHANGELOG.md#1027">sürümü çıktı</a>.</li>
+<li>Memcached 1.6.0 <a href="https://github.com/memcached/memcached/wiki/ReleaseNotes160">sürümü çıktı</a>.</li>
+<li>Ionic CLI 6.2.1 <a href="https://github.com/ionic-team/ionic-cli/releases/tag/%2540ionic%252Fcli%25406.2.1">sürümü çıktı</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org62605f7" class="outline-2">
+<h2 id="org62605f7"><span class="section-number-2">9</span> Lisans</h2>
+<div class="outline-text-2" id="text-9">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="../../../img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+<a href="yazilim-gundemi-2020-10.html">Yazılım Gündemi - 2020/10</a> yazısı <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a> (CC BY-NC-SA 4.0)
+ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 15 Mart 2020</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 22:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

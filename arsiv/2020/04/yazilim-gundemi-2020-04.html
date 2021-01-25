@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 22:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi - 2020/04</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi - 2020/04
+<br />
+<span class="subtitle">20-26 Ocak 2020</span>
+</h1>
+<div id="table-of-contents">
+<h2>İçindekiler</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgbc23145">1. MEB ve BTG, "Delphi Eğitimi Protokolü" imzaladılar</a></li>
+<li><a href="#org38ef791">2. JetBrains, IntelliJ tabanlı IDE'leri için 2020 yeni özellikler yol haritasını yayınladı</a>
+<ul>
+<li><a href="#orge9c395b">2.1. IDE'yi genel amaçlı metin düzenleyici olarak kullanabilme</a></li>
+<li><a href="#org727dc69">2.2. Makine öğrenmesi tabanlı kod tamamlama önerileri</a></li>
+<li><a href="#orgf88127b">2.3. Geliştirme ortamının kurulması</a></li>
+</ul>
+</li>
+<li><a href="#orgc92beb9">3. Microsoft Edge tarayıcısının geliştirici özelliklerine 3-boyutlu görüntüleme ekledi</a></li>
+<li><a href="#orge4703f9">4. MySQL 5.6'nın 1 yıllık ömrü kalmış</a></li>
+<li><a href="#orgd18e45f">5. Yaklaşan Etkinlikler</a></li>
+<li><a href="#org5c71ed1">6. Diğer Haberler</a></li>
+<li><a href="#org30b98a1">7. Lisans</a></li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gundemi-banner.png" alt="yazilim-gundemi-banner.png" />
+</p>
+</div>
+
+<div class="org-center">
+<p>
+<a href="../03/yazilim-gundemi-2020-03.html">&lt; Önceki Gündem</a> | <b>20-26 Ocak 2020</b> | <a href="../05/yazilim-gundemi-2020-05.html">Sonraki Gündem &gt;</a>
+</p>
+
+<p>
+<a href="https://teknoseyir.com/blog/yazilim-gundemi-2020-04">TeknoSeyir'de Oku</a>
+</p>
+</div>
+
+<div id="outline-container-orgbc23145" class="outline-2">
+<h2 id="orgbc23145"><span class="section-number-2">1</span> MEB ve BTG, <a href="https://www.meb.gov.tr/1-milyon-meslek-lisesi-ogrencisine-yazilim-egitimi/haber/20138/tr">"Delphi Eğitimi Protokolü" imzaladılar</a></h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Milli Eğitim Bakanlığı (MEB) ve <a href="https://www.btgrubu.com/">Bilişim ve Teknoloji Grubu (BTG)</a> (Delphi dilini
+geliştiren Embarcadero firmasının Türkiye Distribütörü) arasında bu hafta
+<a href="https://www.btgrubu.com/wp-content/uploads/2020/01/MEB-BTG-Protokol-1.pdf">imzalanan protokole</a> göre 1 milyon meslek lisesi öğrencisine Delphi programlama
+dili öğretilecekmiş. Türkiye yazılım camiasının bu hafta en çok konuştuğu konu
+buydu, o yüzden ben de biraz uzun bahsedeceğim bu konudan.
+</p>
+
+<p>
+Türkiye yazılım camiasının birçoğu bu haberi HackerNews'de paylaşılan <a href="https://jonlennartaasenden.wordpress.com/2020/01/20/turkey-buys-delphi-licenses-for-an-estimated-one-million-students/">bu blog
+yazısı</a> ile öğrendi. Şimdi başlık düzeltilmiş durumda fakat başlığın ilk hali
+şöyleydi: Turkey buys Delphi licenses for an estimated one million student
+[bunu yazının bağlantısındaki ilgili kısımdan siz de teyit edebilirsiniz].
+Başlıkta "buys" (satın almak) kelimesinin geçmesinden dolayı herkes bu haberi
+"MEB, 1 milyon öğrenci için Delphi lisansı satın aldı" olarak algıladı. <a href="https://www.timeturk.com/meb-den-1-milyon-meslek-lisesi-ogrencisine-yazilim-egitimi/haber-1337091">Türkçe
+kaynaklarda</a> herhangi bir satın almadan ya da ücretten bahsedilmiyor fakat yine
+de başlığın yanlış yazılmasından dolayı çoğumuz da yanlış anladık. Ben de
+TeknoSeyir Sosyal'de paylaştığım gönderide "satın aldı" olarak yazmıştım fakat
+gün içerisinde herhangi bir satın almanın olmadığını öğrendiğimizde benimle
+birlikte yanlış anlayan çoğu kişi ilgili düzeltmeleri yaptılar. Daha sonra
+yayınlanan protokol metininde de şu maddenin olması içimize biraz olsun su
+serpti:
+</p>
+
+<blockquote>
+<p>
+Madde 11- BTG düzenlenen faaliyetlerde öğrenci ve öğretmenlerden hiçbir ad
+altında ücret alamaz.
+</p>
+</blockquote>
+<p>
+[Gerçi bu maddede "öğrenci ve öğretmenlerden ücret alınamaz" deniyor ama yine
+de protokolün devamındaki metinlerde MEB tarafı için de herhangi bir ödeme
+gözükmüyor.]
+</p>
+
+<p>
+Yukarıdaki yanlış anlamadan dolayı çoğumuzun ilk argümanı "Delphi gibi eski ve
+günümüzde kullanılmayan bir dil için bu kadar kamu kaynağının aktarılması
+saçmalıktır" oldu. Aslında bakarsanız yanlış anlaşılma giderildikten sonra da
+argümanımızda çok fazla bir değişiklik olmadı. Sonuç olarak kamu kaynaklarından
+tek bir kuruş ödeme yapılmamış olsa bile Delphi gibi eski, sektörde neredeyse
+hiç kullanılmayan, kapalı kaynak, ücretli ve topluluk desteği olmayan bir
+programlama dilinin 2020 yılında gençlere öğretilmek istenmesi kabul edilemez.
+Sosyalde çeşitli gönderiler altında argümanlarımızı yazmıştım onları bütünlüklü
+bir hale getirmek gerekirse:
+</p>
+
+<ul class="org-ul">
+<li>Delphi kapalı kaynak, ücretli ve tek firmanın elinde olan bir programlama
+dilidir. Her ne kadar gençler bu programlama dili ve araçlarına okullarında
+kurulu olan laboratuvardan ücretsiz olarak erişilebilir olsa da bu işin bir
+de mezuniyet sonrası var. Delphi dilini ve araçlarını ticari olarak
+kullanmak isterseniz yıllık 1700€ ücret vermeniz gerekiyor. Delphi Community
+Edition isimli bir sürümü de mevcut fakat onun için de yıllık kazancınızın
+5.000$ altında olması gerekiyor, bu miktarı geçerseniz ücret lisans almanız
+gerekiyor. Açık kaynak ve özgür lisanslı, ücretsiz programlama dilleri ile
+geliştirme yapıp tek kuruş lisans ücreti ödememek varken niye Delphi
+kullansın bu gençler?</li>
+<li>Çeşitli platformlardaki tartışmalarda karşıma çıkan argümanlardan birisi de
+"Delphi öğrenmesi kolay, sürükle&amp;bırak mantığıyla uygulama tasarlayıp,
+derleyip, çalıştırabileceğiniz bir dil. Hem hızlı uygulama çıkarabilmek hem
+de görsellikten dolayı eğitim için uygundur". Bu argümanın katıldığım
+noktaları var. Özellikle o yaşlardaki gençlerin daha çok sonuç odaklı olarak
+yazdıkları kodların çıktılarını hemen görmek istemelerini gayet anlayışla
+karşılayabiliyorum ve Delphi geliştirme ortamının bunu sağlayabildiğini
+biliyorum. Benim çekincem daha çevremde gözlemlediğim bazı durumlardan
+kaynaklanıyor. Şöyle ki: Meslek yüksekokulunda okurken, meslek lisesinden
+gelen arkadaşların Microsoft Frontpage ve Adobe Dreamvewer gibi
+sürükle&amp;bırak modeli üzerine kurulu uygulamalarda HTML ve CSS
+öğrendiklerinden dolayı, üniversitede zorluklar yaşadılar. Çoğu HTML ve CSS
+kodlarını görmemişti. Üniversitedeki hocamız da doğal olarak sürükle&amp;bırak
+yerine kod yazarak ders işlediğinden dolayı bu arkadaşların derslerden geri
+kaldıklarını gözlemledim. Elbette bu örnekler ile Delphi'yi kıyaslamak çok
+doğru olmayacaktır ama günümüzde pek kullanılmayan bir geliştirme ortamı
+olması dolayısıyla gençlerin günümüz yazılım geliştirme süreçlerine entegre
+olmalarını zorlaştıracağını düşünüyorum.</li>
+<li>Karşılaştığım argümanlardan bir diğerine gelecek olursak: "Delphi
+kullanarak, sürükle&amp;bırak modelinde geliştirdiğiniz uygulamaları çok kolay
+şekilde platformlar-arası (cross-platform) uygulama haline getirebilirsiniz.
+Yazdığınız uygulamaları Windows, macOS, GNU/Linux ve Android gibi
+sistemlerde çalıştırabilirsiniz. Bunu yapabilecek başka bir platform
+öneriniz var mı?". Bu argümana cevabım ise Delphi IDE'sinin üzerine kurulu
+olduğu sürükle&amp;bırak geliştirme modelinin günümüz geliştirme süreçlerinde
+pek de aranan bir şey olmadığı, dolayısıyla da önerimin olmadığı yönünde
+oldu. Her ne kadar Delphi gibi sürükle&amp;bırak modeliyle olmasa da bugün
+platformlar-arası uygulama geliştirmeye yarayan birçok framework mevcut.
+ElectronJS, Qt, Flutter vb. sistemleri örnek olarak sayabiliriz. Günümüzdeki
+bazı geliştirme modelleri, özellikle de ElectronJS'in üzerine kurulu olduğu
+model, benim de hoşuma gitmemesine rağmen sektör tarafından son derece kabul
+edilmiş ve yaygın uygulama geliştirme modelleri olarak karşımızdalar.</li>
+</ul>
+
+<p>
+Benim argümanların genel olarak bu şekildeydi. Özetleyecek olursam: Delphi dili
+ve araçlarıyla kişisel olarak bir problemim yok ama maalesef bu dil ve araçlar
+günümüz için geçerli seçenekler değil. Gençlere açık kaynak ve özgür lisanslı,
+ücretsiz, topluluk tarafından desteklenen ve geliştirilen diller öğretmemizin
+daha doğru olacağını düşünüyorum. Nitekim Bilgisayar Mühendisleri Odası da
+hemen hemen bu yazdıklarıma yakın bir şekilde <a href="https://www.bmo.org.tr/2020/01/23/mebin-teknik-liselerde-yazilim-egitimi-yontemi-cagdisidir/">kendi bildirilerini yayınladılar</a>
+ve Milli Eğitim Bakanlığı'ndan bu protokolü iptal etmelerini talep ettiler.
+</p>
+
+<p>
+Bu konuda siz ne düşünüyorsunuz? Yorumlar bölümünde konuşalım.
+</p>
+</div>
+</div>
+<div id="outline-container-org38ef791" class="outline-2">
+<h2 id="org38ef791"><span class="section-number-2">2</span> JetBrains, IntelliJ tabanlı IDE'leri için <a href="https://blog.jetbrains.com/idea/2020/01/intellij-based-ide-features-roadmap-for-2020/">2020 yeni özellikler yol haritası</a>nı yayınladı</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Geçtiğimiz senedeki yazılım gündemlerinin birinde (bkz: <a href="../../2019/22/yazilim-gundemi-22.html">Yazılım Gündemi - 22</a>)
+JetBrains'in, IntelliJ Platformu için yayınladığı 2020 yol haritasını
+konuşmuştuk. O yazıda daha çok platformun daha derinlerindeki özellikler ile
+ilgili yol haritasından bahsetmişlerdi. Bu hafta yayınladıkları "IntelliJ-based
+IDE Features Roadmap for 2020" başlıklı yazı ile daha çok biz geliştiricilerin
+etkileştikleri yerlere ilgili özelliklerin yol haritasını yayınladılar. Şöyle
+birkaç alt başlığa göz atalım:
+</p>
+</div>
+
+<div id="outline-container-orge9c395b" class="outline-3">
+<h3 id="orge9c395b"><span class="section-number-3">2.1</span> IDE'yi genel amaçlı metin düzenleyici olarak kullanabilme</h3>
+<div class="outline-text-3" id="text-2-1">
+
+<div class="figure">
+<p><img src="gorseller/jetbrains-text-mode.png" alt="jetbrains-text-mode.png" />
+</p>
+</div>
+
+<p>
+JetBrains IDE'lerinin kullanıcıları üzerlerinde çalıştıkları projelere ek
+olarak aynı zamanda çeşitli farklı dosyaları da bu IDE'ler ile düzenlemek
+istiyorlarmış. Mesela log dosyalarını görüntülemek, sunucu ayar dosyalarını
+düzenlemek gibi. Elbette bunu yapmak mümkün fakat JetBrains IDE'leri daha çok
+proje tabanlı çalışmaya uygun oldukları için tek bir dosya açsalar bile sanki
+bir proje açmışlar gibi gözüküyordu ve bazı yavaşlamalar oluyordu. 2020
+yılında artık JetBrains takımı, IDE'lerini genel amaçlı metin düzenleme (text
+editor) işleri için de kolayca kullanılabilir hale getirmeyi planlıyorlar.
+Bunun için de özel bir mod hazırlıyorlarmış. Benim tahminim büyük ihtimal
+komut satırından bir dosyayı açarken "phpstorm &#x2013;text-mode deneme.log" gibi
+bir komut çalıştıracaksınız ve bu mod o şekilde açılacak. Elbette bu modun
+daha hızlı açılabilmesi için çoğu IDE özellikleri çalışmayacak fakat
+kullanıcıların birçoğunun ihtiyaçlarını karşılayacaktır. Aynı zamanda bu
+moddan normal IDE moduna geçmek için de yol olacak deniyor.
+</p>
+</div>
+</div>
+<div id="outline-container-org727dc69" class="outline-3">
+<h3 id="org727dc69"><span class="section-number-3">2.2</span> Makine öğrenmesi tabanlı kod tamamlama önerileri</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+JetBrains IDE'lerinin en meşhur özelliklerinden biri de çok gelişmiş kod
+tamamlama ve öneri sisteminin olmasıdır. Benim de kullandığım zamanlarda
+gerçekten çok işime yarayan özelliklerden biriydi. Biraz da kavramın
+popülerleşmesinden dolayı olsa gerek artık bu öneri sistemine "makine
+öğrenmesi" ekleyeceklermiş. IDE'lerin son sürümlerinde bazı makine öğrenmesi
+yöntemlerinden faydalanmışlar ama sonraki sürümlerinde bu daha da
+geliştireceklerini ve geliştirme sürecinin çok büyük bir eforunu bu kısım
+üzerine yoğunlaştırdıklarını belirtmişler.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf88127b" class="outline-3">
+<h3 id="orgf88127b"><span class="section-number-3">2.3</span> Geliştirme ortamının kurulması</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+JetBrains takımı artık IDE'leri kuranlara yardımcı olmak için geliştirme
+ortamıyla ilgili bazı kurulumlarda da yardımcı olacakmış. Mesela Git'in
+kurulması ya da bir JDK sürümünün kurulması gibi. Böylece JetBrains
+IDE'lerini kullananlar geliştirme ortamlarını daha hızlı bir şekilde hazır
+hale getirebilecekler. Şahsen ben bu tarz kurulumları yine kendim elle yapmak
+isterim ama istemeyen geliştiriciler için güzel bir kolaylık olacaktır diye
+düşünüyorum.
+</p>
+
+<p>
+Bu özelliklerden bazılarını IDE'lerinin 2020.1 sürümlerinde kullanıma
+açılacağını belirtmişler. Nitekim yine bu hafta <a href="https://blog.jetbrains.com/idea/2020/01/intellij-idea-2020-1-eap/">yayınlanan IntelliJ IDEA
+2020.1</a>'de bu sözleri yerine getiriyorlar. Henüz erken erişim programında olan
+bu sürüm ile birlikte yukarıda "Geliştirme ortamının kurulması" alt başlığında
+bahsettiğim JDK sürümleri indirme özelliğini eklemişler.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/jetbrains-jdk-indirme.gif" alt="jetbrains-jdk-indirme.gif" />
+</p>
+</div>
+
+
+<p>
+2020 yılı yeni özellikler yol haritasının tüm alt başlıkları için konu
+başlığına eklediğim bağlantıya; IntelliJ IDEA 2020.1 EAP sürümünün
+detaylarıyla ilgili bilgiler için de <a href="https://blog.jetbrains.com/idea/2020/01/intellij-idea-2020-1-eap/">bu bağlantıya</a> tıklayabilirsiniz.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc92beb9" class="outline-2">
+<h2 id="orgc92beb9"><span class="section-number-2">3</span> Microsoft Edge tarayıcısının geliştirici özelliklerine <a href="https://blogs.windows.com/msedgedev/2020/01/23/debug-z-index-3d-view-edge-devtools/">3-boyutlu görüntüleme ekledi</a></h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Geçtiğimiz haftalarda tüm kullanıcılar için Beta programından çıkan
+Microsoft'un yeni Chromium tabanlı tarayıcısı Edge'in içerisindeki geliştirici
+araçlarına güzel bir özellik eklenmiş. Artık bir web sitesi üzerindeki
+elemanları 3 boyutlu olarak inceleyip, özelliklerine bakabileceğiz. Henüz
+sadece deneysel (experimental) olan bu özelliği aktifleştirmek için Edge'deki
+<b>DevTools</b> kısmını açtıktan sonra <b>Settings</b> sekmesi altından "<b>Enable 3D
+View</b>" seçeneğini işaretlemek gerekiyor.
+</p>
+
+<p>
+Özelliği daha iyi anlayabilmek adına Twitter'daki Microsoft Edge DevTools
+isimli hesabın <a href="https://twitter.com/EdgeDevTools/status/1220399837956333569">paylaştığı videoyu izleyebilirsiniz</a>.
+</p>
+</div>
+</div>
+<div id="outline-container-orge4703f9" class="outline-2">
+<h2 id="orge4703f9"><span class="section-number-2">4</span> MySQL 5.6'nın 1 yıllık <a href="https://lefred.be/content/mysql-5-6-eol-is-february-2021/">ömrü kalmış</a></h2>
+<div class="outline-text-2" id="text-4">
+
+<div class="figure">
+<p><img src="gorseller/mysql56-olum.png" alt="mysql56-olum.png" />
+</p>
+</div>
+
+<p>
+Bu haber doğrudan biz geliştiricileri ilgilendirmiyor ama dolaylı yoldan da
+olsa bizi etkileyebileceği için gündeme almak istedim. MySQL veritabanının 5.6
+sürümü Şubat 2021 tarihinde aramızdan ayrılacakmış. Sistem yöneticilerinizi
+konuyla ilgili bilgilendirebilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd18e45f" class="outline-2">
+<h2 id="orgd18e45f"><span class="section-number-2">5</span> Yaklaşan Etkinlikler</h2>
+<div class="outline-text-2" id="text-5">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" width="100%">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Etkinlik İsmi</th>
+<th scope="col" class="org-left">Yeri</th>
+<th scope="col" class="org-left">Tarihi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/Google-Cloud-Developer-Community-Ankara/events/268138124/">ML in the cloud: Cloud AI Platform</a></td>
+<td class="org-left">Ankara</td>
+<td class="org-left">29 Ocak 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/GDGIstanbul/events/268082538/">CoffeeDroid 5 - Kaldığımız yerden devam edelim</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">29 Ocak 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/TeknasyonLabs/events/268053933/">Geliştirici Savaşları Bölüm 1: Gizli Tehlike</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">30 Ocak 16:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/Facebook-Developer-Circle-Ankara/events/268055524/">An Inside Look: Indie Games Accelerator</a></td>
+<td class="org-left">Ankara</td>
+<td class="org-left">30 Ocak 18:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/IBMCloudTR/events/268163839/">OpenShift ile DevOps Pratiklerini Nasıl Deneyimleriz?</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">30 Ocak 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/Coffee-And-React-Native-%25C4%25B0stanbul/events/vzxzkrybcdbcb/">Coffee and React Native</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">1 Şubat 11:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/flutter-turkiye/events/istanbul-coffee-and-talk">Istanbul Coffee and Talk - 1 (Flutter Turkiye)</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">2 Şubat 13:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/GDG-Cloud-Izmir/events/268107353/">Serverless Application with Flutter and Cloud Functions</a></td>
+<td class="org-left">İzmir</td>
+<td class="org-left">2 Şubat 13:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/cloud-and-serverless-turkey/events/istegelsin-serverless-aws-lambda-mimarisi-ve-production-tecrubeleri">İstegelsin Serverless AWS Lambda Mimarisi ve Production Tecrübeleri</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">4 Şubat 18:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/cloud-and-serverless-turkey/events/aws-fundamentals-computer-networking-security-storage-and-more-ankara">AWS Fundamentals: Computer, Networking, Security, Storage and more</a></td>
+<td class="org-left">Ankara</td>
+<td class="org-left">5 Şubat 18:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/reactjs-istanbul/events/tanisma-toplantisi-first-meeting">Tanışma toplantısı! (ReactJS Istanbul)</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">5 Şubat 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/indiehackers-istanbul-meetup/events/lets-meet-and-catch-a-little-up">Indie Hackers Istanbul Meetup</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">8 Şubat 17:00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org5c71ed1" class="outline-2">
+<h2 id="org5c71ed1"><span class="section-number-2">6</span> Diğer Haberler</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>Microsoft, yeni Node tabanlı tarayıcı otomasyonu <a href="https://css-tricks.com/playwright/">projesini yayınladı</a>:
+<a href="https://github.com/microsoft/playwright">Playwright</a>.</li>
+<li>ProtonVPN tüm uygulamalarını <a href="https://protonvpn.com/blog/open-source/">açık kaynak hale getirdi</a>.</li>
+<li>Android Studio 4.0 Canary 9 <a href="https://androidstudio.googleblog.com/2020/01/android-studio-40-canary-9-available.html">sürümü yayınlandı</a>.</li>
+<li>Birçok AndroidX kütüphanesine <a href="https://developer.android.com/jetpack/androidx/versions/all-channel#january_22_2020">güncelleme geldi</a>.</li>
+<li>Google Cloud ailesinin <a href="https://cloud.google.com/blog/products/identity-security/introducing-google-clouds-secret-manager">yeni üyesi tanıtıldı</a>: <a href="https://cloud.google.com/secret-manager/docs">Secret Manager</a>.</li>
+<li>Intel tarafından geliştirilen Ray Tracing motorunun 2.0.0 <a href="https://github.com/ospray/ospray/releases/tag/v2.0.0">sürümü yayınlandı</a>.</li>
+<li>Pharo programlama dilinin 8.0 <a href="http://pharo.org/news/pharo8.0-released">sürümü yayınlandı</a>.</li>
+<li>Seq programlama dilinin v0.9.3 <a href="https://github.com/seq-lang/seq/releases/tag/v0.9.3">sürümü yayınlandı</a>.</li>
+<li>Flamegraph kütüphanesinin v0.2.0 <a href="https://github.com/flamegraph-rs/flamegraph/releases/tag/v0.2.0">sürümü yayınlandı</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org30b98a1" class="outline-2">
+<h2 id="org30b98a1"><span class="section-number-2">7</span> Lisans</h2>
+<div class="outline-text-2" id="text-7">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="../../../img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+<a href="yazilim-gundemi-2020-04.html">Yazılım Gündemi - 2020/04</a> yazısı <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a> (CC BY-NC-SA 4.0)
+ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 26 Ocak 2020</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 22:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

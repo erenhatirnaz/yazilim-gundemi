@@ -1,0 +1,317 @@
+#+TITLE: Yazılım Gündemi - 2020/24
+#+SUBTITLE: 15-21 Haziran 2020
+#+AUTHOR: Eren Hatırnaz
+#+DATE: 22 Haziran 2020
+#+OPTIONS: ^:nil
+#+LANGUAGE: tr
+#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=black, filecolor=red, urlcolor=blue}
+#+LATEX_HEADER: \usepackage[turkish]{babel}
+#+HTML_HEAD: <link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+#+LATEX: \shorthandoff{=}
+
+[[file:gorseller/yazilim-gundemi-banner.png]]
+
+#+BEGIN_CENTER
+[[file:../23/yazilim-gundemi-2020-23.org][< Önceki Gündem]] | *15-21 Haziran 2020* | [[file:../25/yazilim-gundemi-2020-25.org][Sonraki Gündem >]]
+
+[[https://teknoseyir.com/blog/yazilim-gundemi-2020-24][TeknoSeyir'de Oku]]
+#+END_CENTER
+
+* GitHub varsayılan branch ismini "main" [[https://www.bbc.com/news/technology-53050955][olarak değiştirecek]]
+	Yaklaşık bir ay kadar önce ABD'de bir polisin siyahi bir vatandaşın ölümüne
+	yol açmasının ardından ortaya çıkan "Black Lives Matter" protestoları ucundan
+	kıyısından yazılım sektörünü de etkilemeye başlamıştı. Geçtiğimiz haftalarda
+	Google'ın Go projesi içerisindeki "master/slave" ve "blacklist/whitelist" gibi
+	ifadeleri kaldırığını haberleştirmiştim (bkz: [[file:../22/yazilim-gundemi-2020-22.org][Yazılım Gündemi - 2020/22]]). Bu
+	hafta ise GitHub'ın benzer bir değişikliğe gideceğinin haberi aldık.
+
+	* [[https://twitter.com/natfriedman/status/1271253144442253312][Konuyla ilgili Tweet]]
+
+	Hepimizin bildiği ve neredeyse her gün kullandığımız git versiyon kontrol
+	sisteminin varsayılan branch ismi olan "master" artık "main" olarak
+	değiştiriliyor. Bu dal ismini zaten kendimiz de değiştirebiliyorduk ama artık
+	GitHub'da oluşturduğunuz depoların varsayılan dal ismi "main" şeklinde
+	gelecek. Bunun nedeni olarak ise "master/slave" terminolojisi gösterilmiş.
+	Açıkcası bana bu neden biraz saçma geldi çünkü git versiyonlama sisteminde
+	"master/slave" ikilisi yok; sadece "master" terimi var o da ırkçı bir anlama
+	gelemeyecek kadar genel bir kullanım haline gelmiş durumda. Bu değişikliği
+	saçma bulan bir geliştirici de GitHub'ın bunu uygulamaması için [[https://www.change.org/p/github-we-don-t-need-to-rename-the-master-branch-on-git][Change
+	üzerinde bir imza kampanyası]] başlatmış.
+
+	Aynı ve benzer değişikliklerin farklı projelerde (Örnek: [[https://github.com/openssl/openssl/pull/12089][openssl]]) ve araçlarda
+	da yapılması gerektiğine yönelik birçok tartışma sektör içerisindeki çeşitli
+	platformlarda dönüyor. "blacklist/whitelist" ikilisinin "blocklist/allowlist"
+	olarak değiştirilmesini anlayabiliyorum; aynı şekilde "master/slave" ikilisini
+	kullanan projelerin de değiştirmesini anlıyorum ama *sadece "master"*
+	ifadesini kullanan GitHub'ın böyle bir değişikliğe neden gittiğini
+	anlayamıyorum. Sanırım "Ya herkes /Black Lives Matter/ ile ilgili PR çalışması
+	yapıyor, biz de böyle bi' şey yapalım, geri kalmayalım" diye düşünmüş
+	olabilirler. Açıkcası ben bu tarz yüzeysel şeyleri konuyu farklı noktaya çekme
+	çabası olarak görüyorum. Çünkü ırkçılık sorununun asıl kökenini bulma
+	amacından uzaklaştıran bir davranış. O zaman "üniversitede master yapmak"
+	ifadesi ya da ses terminolojisindeki "master" ifadesi de değiştirilsin yani
+	(!).
+
+	Bu konuda siz ne düşünüyorsunuz? Yorumlar bölümünde konulaşım.
+* GitHub Super Linter [[https://github.blog/2020-06-18-introducing-github-super-linter-one-linter-to-rule-them-all/][tanıtıldı]]
+	Programlama yaparken özellikle de takım halinde çalışırken kodlarda belirli
+	bir standardı oturtmak önceden zaman alıcı olabiliyordu. Her ne kadar
+	günümüzde /linter/ araçları imdadımıza yetişse de onların da konfigürasyonu
+	ile uğraşmak yine süreci uzatıyor. Özellikle de birden çok programlama dilinin
+	kullanıldığı projelerde haliyle birden çok linter aracı kullanmak gerekiyor.
+	İşte bu ve benzeri duruma çözüm getirmek için GitHub'da, geçtiğimiz hafta
+	içerisinde [[https://github.com/github/super-linter][GitHub Super Linter]] isimli açık kaynak projesini tanıttı. [[https://github.com/features/actions][GitHub
+	Action]] üzerinden çalıştırabilen bir /linter/ aracı.
+
+	GitHub Super Linter, aslında isminden de anlaşılacağı gibi birden çok linter
+	aracını tek çatı altında toplayan, bunları çalıştıran ve sonuçlarını
+	raporlayan ve GitHub Action ile projenize kolay bir şekilde dahil
+	edebileceğiniz bir araç. Python, Ruby, JavaScript/TypeScript ve Go gibi
+	popüler programlama dillerinin yanında JSON, YAML, DockerFile ve CSS gibi
+	dosya formatlarını da destekliyor. Yalnız PHP için =phpcs= aracı ile bir
+	destek sunmamışlar. Belki bunu ben ekleyip pull request gönderebilirim.
+	Bakacağım buna.
+
+  #+ATTR_HTML: :height 550
+  #+ATTR_LATEX: :height 7cm
+	#+CAPTION: Birçok programlama dili ve dosya formatı için linter çalıştırabiliyor
+	[[file:gorseller/github-super-linter.png]]
+  #+LATEX: \newpage
+
+	GitHub Super Linter'in sağladığı bazı kolaylıklar ise şu şekilde:
+
+	 * =master= vb. dallara çalışmayan kodların eklenmesini önleme
+	 * Birden çok programlama dili ile çalışırken kolayca kod standardı oluşturma
+     ve tüm projede kontrolleri sağlama
+	 * Code review süreçleri için otomatizasyon yardımı
+
+	GitHub'da depoladığınız projenize GitHub Action üzerinden çok kolay bir
+	şekilde ekleyip, istediğiniz diller ve dosya formatları için özelleştirmesini
+	yaparak aktifleştirebiliyorsunuz. Kullanımı ve özelleştirilmesiyle ilgili
+	diğer konular için [[https://github.blog/2020-06-18-introducing-github-super-linter-one-linter-to-rule-them-all/][şu GitHub deposunun README.md dosyasına]] göz atabilirsiniz.
+* Go dili topluluğu generic programlama özelliği için [[https://blog.golang.org/generics-next-step][yeni bir öneri yayınladı]]: [[https://go.googlesource.com/proposal/+/refs/heads/master/design/go2draft-type-parameters.md][Type Parameters]]
+	İlk yazılım gündemi yazılarının birinde (bkz: [[file:../../2019/04/yazilim-gundemi-04.org][Yazılım Gündemi - 4]]) Go dili
+	topluluğunun programlama diline generic programlama özellikleri eklemeyi
+	tartıştığını haberleştirmiştim. Geçtiğimiz hafta ise uzun bir aradan sonra bu
+	konuda ilk kez bir gelişme oldu ve Go takımı yeni bir öneriyi ("proposal")
+	tasarım taslağı olarak yayınladı. Dolayısıyla bunun henüz dile eklenmiş yeni
+	bir özellik ("feature") olmadığını ve üzerinde çeşitli değişikliklerin devam
+	edeceğini söylemekte fayda var.
+
+	Bu generic programlama özelliği için daha önce yayınlanan proposal'da
+	duyurulan =Contracts= yapısı artık terk edilmiş gözüküyor. Onun yerine gelen
+	tasarımsal değişiklik ise Type Parameters özelliği oldu. Kısaca bir örnek
+	yapmak gerekirse:
+  #+ATTR_LATEX: :options frame=lines, linenos, label=Go
+	#+BEGIN_SRC go
+    func Print(type T)(s []T) {
+      for _, v := range s {
+        fmt.Println(v)
+      }
+    }
+	#+END_SRC
+
+	Yukarıda tanımladığımız fonksiyon kısaca herhangi bir türden diziyi alıp,
+	içerisindeki elemanları her biri bir satır olacak şekilde yazdırıyor. Yani
+	artık =int= dizisi için ayrı, =string= dizisi için ayrı fonksiyon yazmaya
+	gerek kalmıyor. Yukarıdaki fonksiyonun kullanımı ise şu şekilde:
+
+  #+ATTR_LATEX: :options frame=lines, linenos, label=Go
+	#+BEGIN_SRC go
+    Print([]string{"Selam TeknoSeyir!", "Go generic programlama", "özelliğini deniyoruz.\n"})
+    Print([]int{1, 2, 3, 4, 5})
+	#+END_SRC
+
+  #+ATTR_LATEX: :height 3cm
+	#+CAPTION: Siz de bu özelliği test etmek isterseniz Go takımı tarafından
+  #+CAPTION: hazırlanmış şu Playground sayfasını kullanabilirsiniz:
+  #+CAPTION: https://go2goplay.golang.org/
+	[[file:gorseller/go-generic-programlama.png]]
+
+	Go takımı ve topluluğu özellik hakkında geri bildirimler toplamaya ve taslağı
+	geliştirmeye devam edecekler. Eğer bir aksilik olmazsa bu özelliği Ağustos
+	2021'de yayınlanması beklenen Go 1.17 sürümüyle birlikte stabil olarak
+	kullanabileceğiz.
+
+	Takım tarafından sunulan proposal sayfası acayip detaylı ve uzun bir sayfa,
+	benim de hepsini okumaya vaktim olmadığı için şimdilik bu kadar bilgi
+	verebiliyorum ama tabii ki dilerseniz detaylı bilgi ve kullanım örnekleri için
+	konu başlığına eklediğim bağlantılara tıklayabilirsiniz.
+* Chromium takımının 2020 yılı [[https://blog.chromium.org/2020/06/improving-chromiums-browser.html][tarayıcı uyumluluğu çalışmaları]]
+	2019 yılında yayınlanan [[https://insights.developer.mozilla.org/][MDN Developer Needs Assessment]] anketi sonuçlarından
+	sonra görüldü ki eskisi kadar olmasa da hâlâ daha web geliştiricilerin en
+	önemli sorunlarından birisi tarayıcılar arasındaki uyumsuzluk sorunları. Bu
+	bağlamda geçtiğimiz hafta içerisinde de Chromium takımı bir blog yazısı
+	yazarak 2020 yılı boyunca üzerinde çalışacakları uyumsuzluk sorunlarından ve
+	yaptıkları şeylerden bahsettiler.
+
+	Mart ayındaki bir yazılım gündemi yazısında (bkz: [[file:../13/yazilim-gundemi-2020-13.org][Yazılım Gündemi - 2020/13]])
+	form elemanlarının stillerinin yenilendiğinden bahsetmiştim. Dolayısıyla bu
+	yazıya onu tekrar dahil etmiyorum. Sadece şöyle bir ekleme yapayım: Form
+	elemanlarının stillerinin güncellenmesine devam edilecekmiş. Bunun dışında
+	diğer konular ise şu şekilde:
+
+	 * Flexbox ile ilgili uyumsuzluk sorunlarının üzerinde yoğun bir şekilde
+     çalışılıyormuş.
+	 * Flexbox ve CSS Grid özellikleri, takımın üzerinde çalıştığı yeni [[https://www.chromium.org/blink/layoutng][LayoutNG
+     arayüz motoru]] ile yenilenecekmiş.
+	 * Scroll olayı ile ilgili de yeni uyumluluk çözümleri düşünülüyormuş fakat
+     tıkanılan, çözülmesi gereken bazı sorunlar varmış.
+
+	Çalışmalar ile ilgili daha detaylı bilgiler için konu başlığına eklediğim
+	bağlantıya tıklayabilirsiniz.
+* Google, geliştiricilere uygulamayı yüklemeden [[https://techcrunch.com/2020/06/17/google-is-launching-a-way-to-buy-android-app-subscriptions-outside-of-the-app-itself/][abonelik satma imkanı sağlayacak]]
+	Google'ın kendi Android işletim sistemiyle birlikte dağıttığı Play Store
+	mağaza uygulaması üzerinde artık kullanıcılar uygulamayı indirmeden de Google
+	üzerinden ilgili uygulamanın aboneliğini satın alabilecek. Geçtiğimiz hafta
+	Android 11'in yayınlanmasıyla birlikte sessizce duyurulan yeni [[https://android-developers.googleblog.com/2020/06/meet-google-play-billing-library.html][Google Play
+	Billing kütüphanesinin versiyon 3]] sürümü buna izin veriyor.
+
+	Şimdilik sadece belirli birkaç geliştirici ve firmaya test olarak sunulmuş bu
+	özellik ile birlikte uygulamanın market sayfasında "Yükle" butonunun yanına
+	yeni bir "Abone ol ve yükle" butonu geliyor. Eğer uygulama birkaç günlük
+	ücretsiz bir teklif sunuyorsa "Free trials & Install" yazabiliyor.
+
+  #+ATTR_HTML: :height 600
+  #+ATTR_LATEX: :height 7.8cm
+	#+CAPTION: Arayan ve SMS engelleme uygulaması Truecaller bu özelliği test
+  #+CAPTION: edebilen uygulamalardan birisi.
+	[[file:gorseller/google-play-install.png]]
+
+	Böylece artık kullanıcılarımız uygulamayı indirmeden de uygulama içerisinde
+	satılan uygulama-içi satın almalar hakkında bilgi alabiliyor ve dilerse Play
+	Store üzerinden bu işlemini gerçekleştirebiliyor olacak.
+
+	Diğer detaylar için konu başlığına eklediğim haber bağlantısına ya da
+	Google'ın yayınladığı blog yazısına bakabilirsiniz.
+* Bootstrap [[https://blog.getbootstrap.com/2020/06/16/bootstrap-5-alpha/][5 Alpha yayınlandı]]
+	Birçok back-end geliştiricinin kolayca uygulama çıkarabilmesini sağlamış ve bu
+	alandaki diğer arayüz framework'lerine de yol göstermiş olan Bootstrap v5
+	Alpha sürümü geçtiğimiz hafta içerisinde duyuruldu.
+
+	Bu sürümle birlikte artık jQuery terk edilmiş ve eski Internet Explorer
+	sürümleri için de destekler sonlanmış gözüküyor. Artık Bootstrap kullanırken
+	yanında bedava ve ekstra olarak gelen jQuery bağımlılığı yok. Yine de
+	jQuery'ye katkılarından dolayı teşekkür etmek gerek.
+
+	Internet Explorer desteğinin sonlandırılmasının bir getirisi olarak artık
+	Bootstrap 5 ile birlikte CSS üzerinde "Custom Properties" özelliğine sahip
+	olduk. Bu sayede artık CSS kodunun herhangi bir yerinde kullanabilmek üzere
+	değişkenler tanımlayabileceğiz. Örnek vermek gerekirse:
+  #+ATTR_LATEX: :options frame=lines, linenos, label=CSS
+	#+BEGIN_SRC css
+    :root {
+      --teknoseyir-kirmizisi: #ab1500;
+      --beyaz: #fff;
+    }
+
+    .tekno {
+      background-color: var(--beyaz);
+      color: var(--teknoseyir-kirmizisi);
+      /* */
+    }
+	#+END_SRC
+	Artık bu yapıyı Bootstrap kendisi de elemanlarında kullanıyor.
+
+	Tabii ki bu sürümün Alpha etiketiyle yayınlandığını hatırlatmakta fayda var.
+	Yani henüz geçiş yapmak için çok erken. Yine de diğer detayları merak
+	ediyorsanız konu başlığına eklediğim bağlantıya tıklayabilirsiniz.
+* Windows Terminal [[https://devblogs.microsoft.com/commandline/windows-terminal-preview-1-1-release/][Preview 1.1 sürümü yayınlandı]]
+	Microsoft, geliştiricileri Windows ekosistemine çekmek için hamlelerine devam
+	ediyor. Geçtiğimiz hafta yayınlanan Windows Terminal Preview 1.1 sürümüyle
+	birlikte gelen özelliklerin bazıları şu şekilde:
+
+	#+CAPTION: 	Artık ="fontWeight": "normal"= gibi bir ifadeyi ayar dosyanıza
+  #+CAPTION: ekleyerek terminal ekranındaki fontun kalınlığını ayarlabileceğiz.
+  #+CAPTION: Tüm opsiyonlar için [[https://docs.microsoft.com/en-us/windows/terminal/customize-settings/profile-settings#text-settings][buraya]] bakabilirsiniz.
+	[[file:gorseller/winterm11-font-weight.png]]
+  #+LATEX: \newpage
+
+	Artık =Alt+Tıklama= kombinasyonunu aşağıdaki gibi kullanarak terminal
+	ekranımızı çoklu panellere bölebileceğiz.
+
+	[[file:gorseller/winterm11-alt-tiklama.gif]]
+
+	Bu sürümle birlikte Windows Terminal'in sekme özellikleri de gelişmiş durumda.
+	Artık sekmelerin isimleri değiştirebileceğiz ve onlara özel renkler
+	atayabileceğiz.
+
+	#+CAPTION: Sekmenin rengini değiştirmek için sağ tıklayıp, "Color..."
+  #+CAPTION: seçeneğine gelmek gerekiyor.
+	[[file:gorseller/winterm11-sekme-renk.png]]
+  #+LATEX: \newpage
+
+	#+CAPTION: Sekmenin ismini değiştirmek için sağ tıklayıp "Rename Tab"
+  #+CAPTION: demek gerekiyor. Sekme isimlerinde Emoji de kullanılabiliyor :)
+	[[file:gorseller/winterm11-sekme-adlandir.gif]]
+
+	Bunlara ek olarak artık komut satırını kullanarak yeni bir Windows Terminal
+	penceresi oluştururken iki yeni opsiyonumuz da var. İlki =--maximized= ya da
+	=-M= ile yeni pencereyi ekranı kaplayacak şekilde oluşturabiliyoruz; ikincisi
+	ise =--fullscreen= ya da =-F= ile yeni pencereyi tam ekran modunda
+	oluşturabiliyoruz. Ayrıca siz de benim gibi "Terminal benim yaşam ortamım
+	birçok şeyi orada yaparım" diyenlerdenseniz Windows 10'un açılışıyla birlikte
+	bir Windows Terminal penceresi açılsın istiyorsanız ayar dosyanıza aşağıdaki
+	satırı ekleyebilirsiniz:
+  #+ATTR_LATEX: :options frame=lines, linenos, label=JSON
+	#+BEGIN_SRC json
+    "startOnUserLogin": true
+	#+END_SRC
+
+	Her ne kadar GNU/Linux tarafına çoktan geçmiş bir geliştirici olsam da bu
+	gelişmelere Windows üzerinde çalışmak zorunda olan arkadaşlar için
+	seviniyorum. Mutlaka bir ara ben de deneyeceğim. Bakalım Microsoft ilerleyen
+	sürümlerde başka ne gibi özellikler gelecek.
+  #+LATEX: \newpage
+* Yaklaşan Online Etkinlikler
+  #+ATTR_HTML: :width 100%
+  #+ATTR_LATEX: :environment longtable :align |p{9.5cm}|l|
+  |-------------------------------------------------------------------------------+------------------|
+  | Etkinlik İsmi                                                                 | Tarihi           |
+  |-------------------------------------------------------------------------------+------------------|
+  | [[https://kommunity.com/acmhacettepe/events/nodejs-deno-ve-js-ile-backend-gelistirmenin-dunu-ve-bugunu-eser-ozvataf-5ef2730a][Eser Özvataf - Node.js, Deno ve JS ile Backend Geliştirmenin Dünü ve Bugünü]]   | 22 Haziran 21:00 |
+  | [[https://www.meetup.com/tr-TR/Microsoft-Giri%25C5%259Fimcilik-Bulu%25C5%259Fmalar%25C4%25B1/events/270863995/][Developers Guide to AI]]                                                        | 23 Haziran 11:00 |
+  | [[https://www.meetup.com/tr-TR/Microsoft-Giri%25C5%259Fimcilik-Bulu%25C5%259Fmalar%25C4%25B1/events/271151882/][Building time machine with Event Sourcing]]                                     | 23 Haziran 17:00 |
+  | [[https://www.meetup.com/tr-TR/IBMDeveloperTR/events/270949885/][Build a Secure App using S2I on Red Hat OpenShift]]                             | 24 Haziran 14:00 |
+  | [[https://www.meetup.com/tr-TR/Teknolot/events/270951412/][Build, integrate & scale with event-driven apps]]                               | 24 Haziran 14:00 |
+  | [[https://kommunity.com/cozumpark/events/teknoloji-sohbetleri-sanal-gerceklik-icin-yapay-zeka-ve-makine-ogrenimi-3cd4ca45][Teknoloji Sohbetleri - Sanal Gerçeklik için Yapay Zeka ve Makine Öğrenimi]]     | 24 Haziran 14:00 |
+  | [[https://www.meetup.com/tr-TR/Microsoft-Giri%25C5%259Fimcilik-Bulu%25C5%259Fmalar%25C4%25B1/events/271152510/][Azure Hybrid Virtual Event]]                                                    | 24 Haziran 18:00 |
+  | [[https://www.meetup.com/tr-TR/Oracle-Developer-Meetup-Istanbul/events/271395295/][More cloud native dev on OCI, with Functions, API, Streaming {Events} & NoSQL]] | 24 Haziran 18:00 |
+  | [[https://www.meetup.com/tr-TR/AWS-User-Group-Turkey/events/271307836/][AWS Lambda & Amazon API Gateway]]                                               | 24 Haziran 18:30 |
+  | [[https://kommunity.com/cloud-and-serverless-turkey/events/devopsdays-online-turkiye-2020-130a646d][DevOpsDays Online Türkiye 2020]]                                                | 25 Haziran 08:30 |
+  | [[https://www.meetup.com/tr-TR/IBMDeveloperTR/events/271222367/][Cloud Native Security Conference]]                                              | 25 Haziran 11:00 |
+  | [[https://www.meetup.com/tr-TR/Microsoft-Giri%25C5%259Fimcilik-Bulu%25C5%259Fmalar%25C4%25B1/events/271152397/][Data & AI Virtual Summit - Artificial Intelligence Track]]                      | 25 Haziran 11:00 |
+  | [[https://www.meetup.com/tr-TR/IBMDeveloperTR/events/270925205/][Watson Discovery with Node-Red on IBM Cloud]]                                   | 25 Haziran 14:00 |
+  | [[https://www.meetup.com/tr-TR/Istanbul-KNIME-Users/events/271392949/][Text Mining Techniques]]                                                        | 25 Haziran 19:00 |
+  | [[https://www.meetup.com/tr-TR/Hepsitech-Meetup/events/271247034/][Test Automation - Robot Framework]]                                             | 25 Haziran 19:00 |
+  | [[https://www.meetup.com/tr-TR/Turkish-AI-Hub/events/271391778/][Mozilla TTS ve Yapay Zeka Konuşma Sentezi]]                                     | 25 Haziran 20:30 |
+  | [[https://kommunity.com/bilge-adam-teknoloji/events/nodejs-ve-mongodb-kullanarak-uygulama-gelistirme-4e46c1ca][Node.js ve MongoDB Kullanarak Uygulama Geliştirme]]                             | 25 Haziran 21:00 |
+  | [[https://www.meetup.com/tr-TR/IBMDeveloperTR/events/270949799/][Deploy a Cloud-Native Application on Red Hat OpenShift]]                        | 26 Haziran 16:00 |
+  | [[https://kommunity.com/bilge-adam-teknoloji/events/html-css-ve-javascript-ile-web-arayuz-uygulamasi-1f18a563][HTML, CSS ve JavaScript ile Web Arayüz Uygulaması]]                             | 26 Haziran 19:15 |
+  | [[https://www.meetup.com/tr-TR/GDGAnkara/events/271395414/][Flutter Day]]                                                                   | 27 Haziran 16:00 |
+  |-------------------------------------------------------------------------------+------------------|
+* Diğer Haberler
+	- Almanya kendi koronavirüs takip uygulamasını [[https://github.com/corona-warn-app/cwa-documentation][açık kaynak yaptı]].
+	- Microsoft, Windows Subsystem for Linux'a [[https://blogs.windows.com/windowsdeveloper/2020/06/17/gpu-accelerated-ml-training-inside-the-windows-subsystem-for-linux/][NVDIA CUDA desteği ekledi]].
+	- Google Cloud, yeni bir depolama [[https://techcrunch.com/2020/06/16/google-cloud-launches-filestore-high-scale-a-new-storage-tier-for-high-performance-computing-workloads/][seçeneğini duyurdu]]: [[https://cloud.google.com/filestore/docs/high-scale][Filestore High Scale]].
+	- Araştırmacılar Kuantum bilgisayarlar için ilk [[https://ethz.ch/en/news-and-events/eth-news/news/2020/06/the-first-intuitive-programming-language-for-quantum-computers.html][programlama dilini
+    geliştirdiler]]: [[https://silq.ethz.ch/][Silq]].
+	- OpenAI organizasyonu yeni [[https://openai.com/blog/image-gpt/][çalışmasını duyurdu]]: Image GPT.
+	- .NET için gRPC-Web [[https://devblogs.microsoft.com/aspnet/grpc-web-for-net-now-available/][yayınlandı]]. [[https://github.com/grpc/grpc-dotnet][GitHub Deposu]]
+	- AdoptOpenJDK projesi [[https://blog.adoptopenjdk.net/2020/06/adoptopenjdk-to-join-the-eclipse-foundation/][Eclipse Foundation'a katıldı]].
+	- Eclipse IDE [[https://www.eclipse.org/eclipse/news/4.16/][2020-06 (v4.16) sürümü yayınlandı]].
+	- Free Pascal [[https://wiki.freepascal.org/FPC_New_Features_3.2.0#About_this_page][3.2.0 sürümü yayınlandı]].
+	- Apache Spark [[https://spark.apache.org/releases/spark-release-3-0-0.html][3.0.0 sürümü yayınlandı]].
+	- TiDB [[https://pingcap.com/blog/tidb-4.0-ga-gearing-you-up-for-an-unpredictable-world-with-real-time-htap-database/][4.0 GA sürümü yayınlandı]].
+	- OpenAPI [[https://www.openapis.org/blog/2020/06/18/openapi-3-1-0-rc0-its-here][3.1.0 sürümü yayınlandı]].
+	- RestClient.Net [[https://christianfindlay.com/2020/06/17/restclient-net-4-0/][4.0 sürümü yayınlandı]].
+* Lisans
+  #+BEGIN_CENTER
+  #+ATTR_HTML: :height 75
+  #+ATTR_LATEX: :height 1.5cm
+  [[file:../../../img/CC_BY-NC-SA_4.0.png]]
+
+  [[file:yazilim-gundemi-2020-24.org][Yazılım Gündemi - 2020/24]] yazısı [[https://erenhatirnaz.github.io][Eren Hatırnaz]] tarafından [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Creative Commons
+  Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı]] (CC BY-NC-SA 4.0)
+  ile lisanslanmıştır.
+  #+END_CENTER

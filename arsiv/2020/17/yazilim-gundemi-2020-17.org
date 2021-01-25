@@ -1,0 +1,298 @@
+#+TITLE: Yazılım Gündemi - 2020/17
+#+SUBTITLE: 27 Nisan - 3 Mayıs 2020
+#+AUTHOR: Eren Hatırnaz
+#+DATE: 3 Mayıs 2020
+#+OPTIONS: ^:nil
+#+LANGUAGE: tr
+#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=black, filecolor=red, urlcolor=blue}
+#+LATEX_HEADER: \usepackage[turkish]{babel}
+#+HTML_HEAD: <link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+#+LATEX: \shorthandoff{=}
+
+[[file:gorseller/yazilim-gundemi-banner.png]]
+
+#+BEGIN_CENTER
+[[file:../16/yazilim-gundemi-2020-16.org][< Önceki Gündem]] | *27 Nisan - 3 Mayıs 2020* | [[file:../18/yazilim-gundemi-2020-18.org][Sonraki Gündem >]]
+
+[[https://teknoseyir.com/blog/yazilim-gundemi-2020-17][TeknoSeyir'de Oku]]
+#+END_CENTER
+
+* Lise öğrencilerine yönelik uluslararası [[http://meb.gov.tr/lise-ogrencilerine-yonelik-uluslararasi-yazilim-egitimleri-erisime-acildi/haber/20834/tr][yazılım eğitimleri erişime açıldı]]
+	[[file:gorseller/meb-yazilim-egitim.png]]
+
+	Milli Eğitim Bakanlığının web sitesinde bugün yayınlanan duyuruya göre zaten
+	öğretmenler için devam etmekte olan bazı yazılım geliştirme eğitimleri, lise
+	öğrencileri için de erişime açılmış.
+
+	#+BEGIN_QUOTE
+	"Öğrencilerimiz için başlatılan bu eğitimlere, Android mobil uygulama
+	geliştirmek için gerekli teorik bilgiler ile programlama dillerini
+	öğrenecekleri ve bol bol pratik yaparak eğlenceli ve öğretici uygulamalar
+	yazacakları üç yeni eğitim daha eklendi." bilgisini veren Selçuk, şunları
+	kaydetti: "Google iş birliğinde 'Flutter ile Yazılım Geliştirme' ve 'Kotlin
+	ile Yazılım Geliştirme' android uygulama eğitimleri, Öğretmen Yetiştirme ve
+	Geliştirme Genel Müdürlüğü Youtube kanalı üzerinden tüm öğrenci ve
+	öğretmenlerin erişimine açıldı. Google ve Cisco iş birliğinde hazırlanan bu
+	programlarla öğrencilerin mobil uygulama oluşturma, yapay zeka, gömülü
+	sistemler, robotik, big data konusundaki bilgi ve becerilerinin artırılmasını
+	hedefliyoruz."
+	#+END_QUOTE
+
+	Öğretmen Yetiştirme ve Geliştirme Genel Müdürlüğünün YouTube Kanalındaki
+	yazılım geliştirme videolarını içeren oynatma listelerine aşağıdaki
+	bağlantılardan ulaşabilirsiniz:
+	 * [[https://www.youtube.com/playlist?list=PLVR0OGiP4Ky_x69HfEbrhlpbGUvpQ3_JE][Android Uygulamaları - Kotlin]]
+	 * [[https://www.youtube.com/playlist?list=PLVR0OGiP4Ky9VQUSthzimF-BqeBp1YWcU][Android Uygulamaları - Flutter]]
+	 * [[https://www.youtube.com/playlist?list=PLVR0OGiP4Ky9RKQvi_ILDN-lmmWxldoa0][Siber Güvenlik]]
+
+	Ayrıca Cisco tarafından sertifikalı öğretmenler de Python programlama dili
+	için eğitimler verecekmiş fakat ilgili YouTube kanalında o eğitimleri
+	bulamadım. Sanırım henüz yayınlanmamış.
+
+	"Delphi eğitimi" olayın sonra (bkz: [[file:../04/yazilim-gundemi-2020-04.org][Yazılım Gündemi - 2020/04]]) bence güzel bir
+	gelişme bu. Elbette sadece internet üzerinden videolarla olacak iş değil,
+	farklı eğitimsel içeriklerle ve pratiklerle de desteklenmeli ama başlangıç
+	için güzel bir adım. Video sayıları henüz az gözüküyor ama anladığım kadarıyla
+	hepsini birden paylaşmamışlar, her güne ayrı video şeklinde yayınlıyorlar.
+	İlgili arkadaşlar yukarıdaki bağlantıları takip edebilirler ya da çevresindeki
+	lise öğrencilerine tavsiye edebilirler.
+* Visual Studio Online hayatına artık Visual Studio Codespaces [[https://devblogs.microsoft.com/visualstudio/introducing-visual-studio-codespaces/#lower-price][olarak devam edecek]]
+	Geçtiğimiz senenin yazılım gündemi yazılarının birinde (bkz: [[file:../../2019/yazilim-gundemi-17.org][Yazılım Gündemi -
+	17]]) Microsoft'un "Cloud Geliştirme" çözümü olan Visual Studio Online'ın
+	tanıtıldığından bahsetmiştim. "Cloud Geliştirme" ortamları giderek daha da
+	popülerleşirken Microsoft'da bu hizmetinin ismini değiştirdi ve fiyatlarını da
+	aşağıya çekti.
+
+	Kasım ayından bu yana Microsoft aldığı geri bildirimlerle birlikte çoğu
+	kişinin yüksek özellikli geliştirme ortamlarına ihtiyaç duymadığını
+	öğrenmişler ve hizmetlerine yeni bir paket eklemişler: Basic. Bu paketde 2
+	sanal çekirdek, 4GB RAM ve 64GB SSD bulunuyor. Benim de üzerinde çalıştığım
+	çoğu proje için yeterli bir paket fakat "cloud development" bana pek cazip
+	gelmiyor. Güncellenen fiyat listesi işe şu şekilde:
+
+  #+ATTR_HTML: :width 100%
+  #+ATTR_LATEX: :environment longtable :align |p{5cm}|p{3cm}|p{3cm}|
+  #+CAPTION: (*): Fiyat/Saat
+  |--------------------------------+-------------------+---------------|
+  | Linux instance tipi            | Şimdiki fiyatı(*) | Yeni Fiyat(*) |
+  |--------------------------------+-------------------+---------------|
+  | Basic (2 çekirdek, 4GB RAM     | $0.24             | $0.08         |
+  | Standard (4 çekirdek, 8GB RAM) | $0.45             | $0.17         |
+  | Premium (8 çekirdek, 16GB RAM) | $0.87             | $0.34         |
+  |--------------------------------+-------------------+---------------|
+	Fakat yeni fiyatlar hemen yürülüğe girmiyor. Microsoft'un 19 Mayıs'da
+	düzenleyeceği sanal Build 2020 etkinliğinden sonra yeni fiyatlarla
+	kullanılmaya devam edilebilecek.
+
+	Sıkça soruyorum ama konusu açılmışken yine sorayım: Geliştirme ortamınızı
+	"cloud development" olarak güncellemeyi düşünüyor musunuz? "Cloud Development"
+	olayına bakışınız nasıl? Yorumlar bölümünde konuşalım.
+* Microsoft, Rust/WinRT ön izleme [[https://blogs.windows.com/windowsdeveloper/2020/04/30/rust-winrt-public-preview/][sürümünü tanıttı]]
+	Geçtiğimiz yazılım gündemi yazılarında detaylıca değindiğim konular arasında
+	olmasa da Microsoft'un Rust programlama diline olan ilgiliyle alakalı
+	haberleri "Diğer Haberler" bölümü altında paylaşmıştım. [[https://www.rust-lang.org/tr/][Rust]], Mozilla
+	tarafından geliştirilen güvenlik ve performans odaklı bir programla dili ve
+	popülaritesi de gün geçtikçe artmaya devam ediyor. Bu hafta ise Microsoft,
+	Windows için Rust ile uygulama geliştirmeye yarayan WinRT kütüphanesinin ön
+	izleme sürümünü [[https://github.com/microsoft/winrt-rs][GitHub üzerinde açık kaynak olarak paylaştı]].
+
+	Şu anda güncel olarak C++/WinRT üzerinde desteklenen tüm API'ler Rust/WinRT
+	üzerinde de destekleniyor ve kullanılabiliyor. Yani artık Rust ile Windows
+	üzerinde masaüstü uygulamalardan, cihaz sürücülerine (driver) kadar birçok
+	tipte yazılımı geliştirebileceğiz. Microsoft'da örnek olması açısından Rust
+	ile bir mayın tarlası uygulaması geliştirmiş ve [[https://github.com/robmikh/minesweeper-rs][GitHub üzerinde kodlarını
+	paylaşmış]].
+
+	Henüz gerçek uygulamalarda kullanmak için çok erken bir ön izleme sürümü fakat
+	yeni denizlere açılmayı seven geliştirici arkadaşların ilgisine sunmuş olayım.
+	Konu hakkında daha detaylı bilgi ve örnekler için konu başlığına eklediğim
+	bağlantıya tıklayabilirsiniz.
+
+	Ayrıca Microsoft'un Rust'a olan ilgisi de devam edecek gibi gözüküyor. Çünkü
+	Azure takımı da Rust dilini WebAssembly ile birlikte [[https://www.zdnet.com/article/microsoft-why-we-used-programming-language-rust-over-go-for-webassembly-on-kubernetes-app/][Kubernetes üzerinde test
+	ediyormuş]]. Önümüzdeki süreçlerde Microsoft'un Rust'a olan ilgisinin ne kadar
+	süreceğini hep birlikte göreceğiz.
+* Chrome Web Store, Geliştirici Programı Politikalarını [[https://blog.chromium.org/2020/04/keeping-spam-off-chrome-web-store.html][güncelledi]]
+	Google tarafından geliştirilen Chrome web tarayıcısının eklenti mağazası olan
+	Web Store'da eklenti yayınlarken geçerli olan kurallar bu hafta içerisinde
+	güncellendi.
+
+	Google, yollanan her eklentiyi markete eklemeden önce denetimden geçiriyor.
+	Güvenlik vb. gibi konular düşünüldüğünde bu çok da normal bir süreç aslında
+	fakat bazı geliştiriciler sürekli birbirinin benzeri uygulamaları göndererek
+	bu süreç içerisindeki diğer eklentilerin incelenme sürelerini uzatıyorlarmış.
+	Yani siz bir eklenti yapıp bunu markete ekletmek istediğinizde bunun için
+	beklemeniz gereken süre uzuyor. Bu durumun önüne geçmek için Google'da
+	politikalarını değiştirmeye yoluna gidiyor. Politikalardaki güncellemeler şu
+	şekilde:
+
+	 * Birbirinin aynısı deneyimleri ve fonksiyonları olan eklentiler artık
+     yayınlanmayacak.
+	 * Yanıltıcı, yanlış biçimlendirilmiş, açıklayıcı olmayan, alakasız, aşırı
+     veya uyumsuz meta bilgileri olan eklentiler fakat bunlar sadece eklentinin
+     açıklamasını kapsamıyor aynı zamanda eklentinin ismi, başlığı, ikonu, ekran
+     görüntüleri ve promosyon görüntüleri de bu kurallara uymak zorunda.
+	 * Geliştiriciler Chrome Web Store'daki eklentilerin sıralamalarını
+     değiştirmeye yönelik hareketlerde bulunamazlar. Sahte incelemeler,
+     eklentiyi otomatik indiren ve puanlayan botlar vb. şeyler.
+	 * Sadece başka bir web sitesini, uygulamayı ya da temayı aktifleştirmeye
+     yarayan eklentiler artık kabul edilmeyecek.
+	 * Kullanıcılara sürekli spam olarak mesajlar, reklamlar, hedefli saldırılar
+     (phishing), promosyon gönderen eklentiler yayınlanmayacak.
+
+	Bu yeni politikların uygulanmasına 27 Ağustos 2020 tarihinde başlanacakmış.
+	Eğer Chrome Web Store'da yayınlanmış bir eklentiniz varsa yeni politikaları
+	ihlal edip etmediğinizi kontrol edin. Zira 27 Ağustos itibariyle bu kurallara
+	uymayan tüm eklentiler marketten kaldırılacaklar.
+
+	Daha fazla bilgi için konu başlığına eklediğim bağlantıya ya da Chromium
+	takımının hazırladığı [[https://developer.chrome.com/webstore/spam-faq][Sıkça Sorulan Sorular sayfası]]nı ziyaret edebilirsiniz.
+* TypeScript [[https://devblogs.microsoft.com/typescript/announcing-typescript-3-9-rc/][3.9 RC sürümü yayınlandı]]
+	Microsoft tarafından geliştirilen, JavaScript'e derlenebilen tipli programlama
+	dilin olan TypeScript, bu hafta içerisinde 3.9 Release Candidate sürümüne
+	kavuştu. Açıkcası uzun bir zamandır front-end teknolojileri ile pek
+	ilgilenmiyorum dolayısıyla bu haberi de "Diğer Haberler" kısmına taşımıştım ki
+	son anda anlayabildiğim bir yeni özellik fark ettim. Hız iyileştirmeleri
+	hakkında zaten fazla bilgi verilmiş, gidip kodları okumak gerekiyor. Editör
+	iyileştirmelerini de programlama dilinin yapısıyla ilgili olmadığı için
+	almadım. Öyleyse anladığım özelliği aktarayım size :).
+
+** =// @ts-expect-error= yorum satırı [[https://github.com/microsoft/TypeScript/pull/36014][Pull Request Sayfası]]
+	 TypeScript kullanarak bir kütüphane yazıyor olduğunu düşünün ve şöyle bir
+	 fonksiyonunuz var:
+
+   #+ATTR_LATEX: :options frame=lines, linenos, label=TypeScript
+	 #+BEGIN_SRC typescript
+     function hadiBirSeylerOlsun(abc: string, xyz: string) {
+         assert(typeof abc === "string");
+         assert(typeof xyz === "string");
+
+         // bir şeyler oluyor
+     }
+	 #+END_SRC
+	 Bu fonksiyon iki tane =string= türünden değer kabul ediyor, biz TypeScript
+	 ile bu fonksiyonu kullanırken =string= dışında bir türden değişken
+	 gönderirsek TypeScript hata vererek derlenmeyecek, benzer şekilde bu
+	 fonksiyonu JavaScript tarafında kullanmaya çalışırsak da çeşitli hatalar
+	 görüyoruz. Bu durum için test yazmaya çalıştığımızda ise şöyle bir kod
+	 yazabiliriz:
+   #+ATTR_LATEX: :options frame=lines, linenos, label=JavaScript
+	 #+BEGIN_SRC javascript
+     expect(() => {
+       hadiBirSeylerOlsun(123, 456);
+     }).toThrow();
+	 #+END_SRC
+	 Fakat bu kod TypeScript'de derlenmeyecektir çünkü fonksiyona =string= dışında
+	 bir değer gönderdik. İşte bu durumun önlemek için fonksiyonumuzun hemen üst
+	 satırına =// @ts-expect-error= yorum satırını ekliyoruz ve artık TypeScript
+	 derleyicisi bu fonksiyonun çalıştırılmasıyla bir hata beklendiğini anlayacak
+	 ve bu satırın tip kontrolünü atlayacak.
+
+	 Bu iş için daha önceden =ts-ignore= ifadesi kullanılıyormuş sanırım fakat
+	 bazı durumlarda soruna yol açabildiği için bu özel durum için özel bir yorum
+	 satırı işaretleyicisi oluşturmuşlar.
+
+	 TypeScript 3.9 Release Candidate sürümü ile birlikte gelen diğer özellikler ve
+	 değişiklikler için konu başlığına eklediğim bağlantıya tıklayabilirsiniz.
+* SourceHut project hub [[https://sourcehut.org/blog/2020-04-30-the-sourcehut-hub-is-live/][duyuruldu]]
+	[[https://sourcehut.org][SourceHut]], tıpkı diğer uzak git sunucuları (GitHub, GitLab vb.) gibi size git
+	depolarınızı uzak bir sunucuda tutma imkanı veren bir web sitesi. Tabii ki
+	artık modern yazılım geliştirme süreçlerinin birer parçası olan CI (Continuous
+	Integration), proje yönetimi (issue takibi vb.), wiki, kod inceleme (code
+	review) gibi farklı sorunlara da çözüm üreten servisleri mevcut. Yalnız
+	SourceHut'ın diğerlerinden farklı bir yani var: sitede JavaScript
+	kullanılmıyor, her şey sunucu tarafında çalışıyor. Ayrıca %100 açık kaynak ve
+	özgür yazılım olarak bir kişi tarafından geliştiriliyor. İlk yazılım gündemi
+	yazısında bu siteye gelen bir özellikten bahsetmiştim ve benim de çok
+	beğendiğim bir servis olduğu için ne zamandır tekrar gündemde değinmek için
+	bahane arıyordum :).
+
+	SourceHut bu hafta içerisinde "project hub" ismini verdiği yeni servisini
+	duyurdu. Bu yeni servisin ne işe yaradığını anlamak için öncesince
+	SourceHut'ın arkasındaki UNIX felsefesini bilmek gerek. GNU/Linux
+	kullananların da aşina olduğu üzere işletim sistemiyle birlikte gelen
+	araçların çoğu "sadece bir şeyi yap ama en iyi yap" anlayışıyla geliştirilmiş
+	araçlardır. Dolayısıyla elinizin altında birbiriyle kombinleyebileceğiniz bir
+	sürü araç olmuş oluyor. Örneğin =cat= komutu sadece bir dosyanın içeriğini
+	yazdırmaya yararken, =grep= komutu bir dosya içerisinde metin arama gibi
+	işlemleri yapabiliyor. İşte SourceHut da bu yaklaşımla geliştiriliyor. Sadece
+	bir işi en iyi şekilde yapmaya çalışan birçok alt servis var. Git depolarınızı
+	barındırmak için [[https://git.sr.ht][git.sr.ht]], issue takibi vb. işler için [[https://todo.sr.ht][todo.sr.ht]], CI
+	işlemleri için [[https://builds.sr.ht][builds.sr.ht]] vb. birçok alt servis bulunmakta. Hepsini görmek
+	için [[https://sourcehut.org][sourcehut.org]] adresini ziyaret edebilirsiniz.
+
+	Yani oluşturduğunuz bir git deposu sadece git deposu olma işini yapıyor. Issue
+	takip vb. diğer işler için diğer alt servislerden oluşturmanız gerekiyor. İşte
+	"project hub" ise bütün bu alt servisleri GitHub ve GitLab'dan alıştığımız
+	gibi tek bir sayfada birleştiriyor. Fakat yanlış anlaşılmasın bu alt servisler
+	birleşip tek hale gelmiyor, sadece bir projeye ait tüm alt kaynaklar bir
+	sayfada toplanıyor, isterseniz tıklayarak o alt servisteki işlemlerinize
+	gidebiliyorsunuz. Üstelik bir projeye istediğiniz kadar alt servis
+	ekleyebiliyorsunuz, mesela bir uygulamanın Android ve iOS sürümlerini ayrı
+	ayrı git depolarında tutuyorsanız onları da tek bir projeye
+	ekleyebiliyorsunuz.
+
+	#+CAPTION: Örnek için SourceHut'ın tüm alt servisleriyle birlikte kodlarını
+  #+CAPTION: barındıran [[https://sr.ht/~sircmpwn/sourcehut/][bu proje sayfasını ziyaret edebilirsiniz]].
+	[[file:gorseller/sourcehut-project-hub.png]]
+
+	SourceHut dışından gelenler için böyle bir sayfanın olması çok önemliydi ve
+	sonunda eklediler. Siz de benim gibi UNIX felsefesinden hoşlanan ve GNU/Linux
+	araçları gibi basit ve sade araçları kullanmayı seviyorsanız mutlaka
+	[[https://sourcehut.org][SourceHut]]'a bir göz atın. Ayrıca tek kişi tarafından geliştirildiğini aklınıza
+	getirerek bağış yapmayı da düşünebilirsiniz.
+* Yaklaşan Online Etkinlikler #EvdeKal
+  #+ATTR_HTML: :width 100%
+  #+ATTR_LATEX: :environment longtable :align |p{9.5cm}|l|
+  |----------------------------------------------------------------------+----------------|
+  | Etkinlik İsmi                                                        | Tarihi         |
+  |----------------------------------------------------------------------+----------------|
+  | [[https://kommunity.com/tracikkaynak/events/acik-seminer-14-gun-nlp-101-dogal-dil-islemeye-giris-7194f676][Açık Seminer 14. Gün: NLP 101: Doğal Dil İşlemeye Giriş]]              | 5 Mayıs 14:00  |
+  | [[https://kommunity.com/akademi/events/network-uzerinden-tehdit-avciligi-komuta-kontrol-baglantisinin-tespiti-f6ca2346][Network Üzerinden Tehdit Avcılığı - Komuta Kontrol]]                   | 5 Mayıs 16:30  |
+  | [[https://kommunity.com/tracikkaynak/events/acik-seminer-15-gun-bankacilik-finans-alaninda-dogal-dil-isleme-d9e0d4a5][Açık Seminer 15. Gün: Bankacılık & Finans Alanında Doğal Dil İşleme]]  | 6 Mayıs 14:00  |
+  | [[https://kommunity.com/cloud-and-serverless-turkey/events/ramazan-ozel-4-aws-bulut-altyapisi-bilesenleri-8fe02b6e][AWS Bulut Altyapısı Bileşenleri]]                                      | 6 Mayıs 23:00  |
+  | [[https://kommunity.com/cozumpark/events/siber-koruma-cozumleri-webinari-4effd358][Siber Koruma Çözümleri Webinarı]]                                      | 7 Mayıs 14:00  |
+  | [[https://kommunity.com/tracikkaynak/events/acik-seminer-16-gun-bilissel-hizmetler-ile-turkce-chatbot-olusturma-df205099][Açık Seminer 16. Gün: Bilişsel Hizmetler ile Türkçe Chatbot]]          | 7 Mayıs 14:00  |
+  | [[https://kommunity.com/devops-turkiye/events/high-available-kubernetes-clusters-with-kops-e2728634][High Available Kubernetes clusters with KOPS]]                         | 7 Mayıs 22:00  |
+  | [[https://kommunity.com/tracikkaynak/events/acik-seminer-17-gun-dogal-dil-isleme-urunleri-ve-kullanim-alanlari-c9c008c2][Açık Seminer 17. Gün: Doğal Dil İşleme Ürünleri ve Kullanım Alanları]] | 8 Mayıs 14:00  |
+  | [[https://kommunity.com/dotnet-istanbul/events/net-core-grpc-servislerini-tarayici-uygulamalarindan-tuketmek-16e940d0][.NET Core gRPC Servislerini Tarayıcı Uygulamalarından Tüketmek]]       | 8 Mayıs 22:00  |
+  | [[https://kommunity.com/devnot-yazilimci-bulusmalari/events/react-native-vs-flutter-02a9d600][React Native vs. Flutter]]                                             | 9 Mayıs 22:00  |
+  | [[https://kommunity.com/cloud-and-serverless-turkey/events/ramazan-ozel-5-bulutta-ve-kendi-sunucularinizda-kubernetes-dfec6279][Bulutta ve kendi sunucularınızda Kubernetes]]                          | 9 Mayıs 23:00  |
+  | [[https://kommunity.com/cloud-and-serverless-turkey/events/kubernetes-hands-on-2-what-is-deployment-pod-and-service-06b07bda][Kubernetes Hands-On no.2: What is deployment, pod and service?]]       | 10 Mayıs 13:30 |
+  |----------------------------------------------------------------------+----------------|
+* Diğer Haberler
+	- [[https://www.jetbrains.com/academy/][JetBrains Academy]], COVID-19 pandemisi boyunca [[https://techcrunch.com/2020/05/01/jetbrains-academy-for-learning-code-launches-for-free-during-covid-19-pandemic/][ücretsiz oldu]].
+	- Facebook Yapay Zeka takımı chat botlarıyla ilgili [[https://ai.facebook.com/blog/state-of-the-art-open-source-chatbot][detaylı blog yazısı
+    yayınladı]].
+	- Microsoft, yeni bir meta programlama [[https://devblogs.microsoft.com/dotnet/introducing-c-source-generators/][aracı tanıttı: C# Source Generators]].
+	- DigitalOcean özel ağlar için [[https://blog.digitalocean.com/vpc-trust-platform/][yeni hizmetini duyurdu]]: [[https://www.digitalocean.com/products/vpc][Virtual Private Cloud]].
+	- Google Cloud, yeni metadata yönetim [[https://cloud.google.com/blog/products/data-analytics/data-catalog-metadata-management-now-generally-available][servisini genel erişilebilir yaptı]]: [[https://cloud.google.com/data-catalog][Data
+    Catalog]]
+	- Determined AI, derin öğrenme platformunu [[https://determined.ai/blog/ai-infrastructure-for-everyone/][açık kaynak hale getirdi]]. [[https://github.com/determined-ai/determined/][GitHub
+    Deposu]]
+	- JetBrains, WebStorm IDE'sinin [[https://blog.jetbrains.com/webstorm/2020/04/webstorm-2020-1-1][2020.1.1 sürümünü yayınladı]].
+	- Yeni bir API tasarlama aracı [[https://insomnia.rest/blog/introducing-designer][açık kaynak olarak duyuruldu]]: [[https://insomnia.rest/products/designer/][Insomnia
+    Designer]]. [[https://github.com/Kong/insomnia][GitHub Deposu]]
+	- Amazon Web Services yeni veri merkezini açtı: [[https://aws.amazon.com/about-aws/whats-new/2020/04/announcing-the-new-aws-europe-milan-region/][Europe (Milan)]].
+	- [[https://www.khronos.org/news/press/khronos-group-releases-opencl-3.0][OpenCL 3.0 sürümü yayınlandı]].
+	- Redis [[http://antirez.com/news/132][6.0.0 sürümü yayınlandı]].
+	- Açık kaynak proje yönetim sistemi Leantime [[https://leantime.io/2020/04/29/leantime-v2-1-released-%25F0%259F%259A%2580%25F0%259F%259A%2580%25F0%259F%259A%2580/][v2.1 sürümünü yayınladı]].
+	- VueJS [[https://github.com/vuejs/vue-next/releases/tag/v3.0.0-beta.7][v3.0.0 Beta 7 sürümü yayınlandı]].
+	- D programlama dilinin [[https://dlang.org/changelog/2.092.0.html][2.092.0 Beta sürümü yayınlandı]].
+	- AMD Programcı Kılavuzu [[https://www.phoronix.com/scan.php?page=news_item&px=AMD-PRM-PCID-PKEY][güncellendi]].
+	- TypeScript için fonksiyonel programlama kütüphanesi Pruify, [[https://gigobyte.github.io/purify/changelog/0.15/][v0.15 sürümünü
+    yayınladı]]. [[https://github.com/gigobyte/purify][GitHub Deposu]]
+	- Microsoft, Shader Conductor [[https://www.phoronix.com/scan.php?page=news_item&px=Microsoft-Shader-Conductor-0.3][0.3 sürümünü yayınladı]]. [[https://github.com/microsoft/ShaderConductor][GitHub Deposu]]
+	- XMake [[https://tboox.org/2020/04/27/xmake-update-v2.3.3/][v2.3.3 sürümü yayınlandı]]. [[https://github.com/xmake-io/xmake][GitHub Deposu]]
+	- odo [[https://github.com/openshift/odo/releases/tag/v1.2.0][v1.2.0 sürümü yayınlandı]].
+	- NeutralinoJS [[https://github.com/neutralinojs/neutralinojs/releases/tag/v1.4.0][v1.4.0 yayınlandı]].
+* Lisans
+  #+BEGIN_CENTER
+  #+ATTR_HTML: :height 75
+  #+ATTR_LATEX: :height 1.5cm
+  [[file:../../../img/CC_BY-NC-SA_4.0.png]]
+
+  [[file:yazilim-gundemi-2020-17.org][Yazılım Gündemi - 2020/17]] yazısı [[https://erenhatirnaz.github.io][Eren Hatırnaz]] tarafından [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Creative Commons
+  Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı]] (CC BY-NC-SA 4.0)
+  ile lisanslanmıştır.
+  #+END_CENTER

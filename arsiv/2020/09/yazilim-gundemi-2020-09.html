@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 22:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi - 2020/09</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi - 2020/09
+<br />
+<span class="subtitle">2-8 Mart 2020</span>
+</h1>
+<div id="table-of-contents">
+<h2>İçindekiler</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org745bda0">1. Korona virüs yazılım şirketlerini uzaktan çalışmaya zorluyor</a></li>
+<li><a href="#org5223860">2. Apple, App Store uygulama değerlendirme rehberini güncelledi</a></li>
+<li><a href="#org960eeb8">3. Laravel 7 sürümü yayınlandı</a>
+<ul>
+<li><a href="#orgc688ffd">3.1. Laravel Airlock</a></li>
+<li><a href="#org231409a">3.2. HTTP istemcisi</a></li>
+</ul>
+</li>
+<li><a href="#org7958402">4. PowerShell 7.0 sürümü yayınlandı</a></li>
+<li><a href="#org544c13a">5. Yaklaşan Etkinlikler</a></li>
+<li><a href="#org6850797">6. Diğer Haberler</a></li>
+<li><a href="#orgda1a597">7. Lisans</a></li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gundemi-banner.png" alt="yazilim-gundemi-banner.png" />
+</p>
+</div>
+
+<div class="org-center">
+<p>
+<a href="../08/yazilim-gundemi-2020-08.html">&lt; Önceki Gündem</a> | <b>2-8 Mart 2020</b> | <a href="../10/yazilim-gundemi-2020-10.html">Sonraki Gündem &gt;</a>
+</p>
+
+<p>
+<a href="https://teknoseyir.com/blog/yazilim-gundemi-2020-09">TeknoSeyir'de Oku</a>
+</p>
+</div>
+
+<div id="outline-container-org745bda0" class="outline-2">
+<h2 id="org745bda0"><span class="section-number-2">1</span> Korona virüs yazılım şirketlerini <a href="https://www.theverge.com/2020/3/5/21166686/coronavirus-amazon-google-facebook-microsoft-twitter-seattle-staff-remote-work">uzaktan çalışmaya zorluyor</a></h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Uzun bir zamandır tüm dünyanın gündemi, gün geçtikçe daha da fazla ülkede
+görülmeye başlayan "Korona" virüsü. Elbette teknoloji ve dolayısıyla yazılım
+sektörü de bu gündemden payını aldı. Amerika Birleşik Devletlerinde de vaka
+sayılarının artmasıyla birlikte Microsoft, Facebook, Twitter ve Google gibi
+büyük firmalar çalışanlarına "ofise gelmeyin uzaktan çalışabilirsiniz" demeye
+başladı. Aynı zamanda sektörümüzle ilgili konferansların da çoğu ya iptal
+edildi ya da çok ileri bir tarihe ertelendi.
+</p>
+
+<p>
+Her ne kadar kötü bir olay nedeniyle de olsa firmaların artık uzaktan
+çalışmaya sıcak bakması bence iyi bir gelişme. Ülkemizde pek fazla yaygın
+olmasa da dünyada pek çok şirket uzaktan çalışma imkanını sunuyor zaten ama bu
+olaylarla birlikte sayıları geçici olarak artsa bile faydasını gören
+şirketlerin uzun dönem için de uzaktan çalışma imkanlarını
+değerlendireceklerini düşünüyorum. Sadece şirket ve çalışanlar için değil,
+şehir için de faydaları söz konusu olabilir. Nitekim Amazon ve Microsoft,
+Seattle'daki ofisleri kapatmalarından dolayı Seattle şehrinin <a href="https://www.geekwire.com/2020/seattle-morning-traffic-disappears-amazon-microsoft-others-enforce-remote-work-policies/">trafiğinde gözle
+görülür azalmalar olmuş</a>. Aynı şekilde konferans ve etkinliklerin de uzaktan
+yapılacak olması, şirketlere ve organizasyonlara farklı bakış açıları
+kazandıracaktır.
+</p>
+</div>
+</div>
+<div id="outline-container-org5223860" class="outline-2">
+<h2 id="org5223860"><span class="section-number-2">2</span> Apple, App Store uygulama değerlendirme <a href="https://www.developer-tech.com/news/2020/mar/05/apple-ios-developers-send-ads-push-notifications/">rehberini güncelledi</a></h2>
+<div class="outline-text-2" id="text-2">
+<p>
+<a href="https://www.developer-tech.com/">DeveloperTech</a> sitesinin bu hafta yayınlandığı habere göre Apple, kendi
+uygulama mağazası olan App Store'a uygulama gönderirken dikkat edilmesi
+gerekenleri anlattığı dokümanı güncelledi.
+</p>
+
+<p>
+Bu güncelleme ile birlikte artık geliştiriciler, bildirimleri kullanarak
+kullanıcılara reklam içerikli mesajlar gönderebilecekler. Elbette
+geliştiricilerin öncelikle bunun için kullanıcıdan izin almaları ve
+kullanıcıya bu özelliği kapatma imkanının sunulması da gerekiyor.
+</p>
+
+<p>
+Bir diğer önemli değişiklik ise üçüncü parti uygulamalar ve kullanıcı girişi
+işlemlerini etkiliyor. Eğer uygulamanızda "Google ile giriş yap", "Facebook
+ile giriş yap" gibi özellikleri sunuyorsanız, artık onların yanına <a href="https://developer.apple.com/app-store/review/guidelines/#sign-in-with-apple">bir tane
+daha eklemeniz gerekiyor</a>: "Apple ile giriş yap". Bu özelliği Apple geçtiğimiz
+aylardaki bir etkinliğinde duyurmuştu ve gizlilik odaklı bir giriş sistemi
+olduğunu söylemişti. Elbette bazı uygulamalar için ayrıcalık tanınmış durumda.
+Uygulamanız bu listedeki maddeler ile uyumluysa, bu özelliği eklemek zorunda
+değilsiniz:
+</p>
+
+<ul class="org-ul">
+<li>Eğer uygulamanız sadece kendi şirketinizin kullanıcı girişi sistemini kullanıyorsa,</li>
+<li>Eğer uygulamanız kullanıcıların var olan eğitim ya da kurumsal hesaplarıyla
+giriş yapabileceği eğitim için geliştirilmiş ya da kurumsal bir uygulama
+ise,</li>
+<li>Eğer uygulamanız bir devletin vatandaş tanımlama sistemlerini (e-devlet
+gibi) kullanıyorsa,</li>
+<li>Eğer uygulamanız sadece ilgili servisi kullanmaya yarayan bir istemci ise,</li>
+</ul>
+
+<p>
+"Apple ile giriş yap" butonu eklemenize gerek yok. Bazı maddeleri iyi
+çevirememiş olabilirim, bu nedenle en iyisi bir yanlış anlaşılmaya mahal
+vermemek adına <a href="https://developer.apple.com/app-store/review/guidelines/#sign-in-with-apple">dokümanın ilgili kısmına bir göz atın</a> :).
+</p>
+</div>
+</div>
+<div id="outline-container-org960eeb8" class="outline-2">
+<h2 id="org960eeb8"><span class="section-number-2">3</span> Laravel 7 <a href="https://laravel-news.com/laravel7">sürümü yayınlandı</a></h2>
+<div class="outline-text-2" id="text-3">
+<p>
+PHP ile web uygulamaları geliştirmeye yarayan popüler framework sistemlerinden
+olan Laravel'in bu hafta içerisinde 7 numaralı yeni büyük güncellemesi
+yayınlandı. 3 Mart günü duyurulan bu sürüm, 3 Eylül 2020'ye kadar hata giderme
+güncellemesi, 3 Mart 2021'e kadar ise güvenlik güncelleştirmeleri almaya devam
+edecek. Bu sürümle birlikte gelen bazı özellikler ise şu şekilde:
+</p>
+</div>
+
+<div id="outline-container-orgc688ffd" class="outline-3">
+<h3 id="orgc688ffd"><span class="section-number-3">3.1</span> Laravel Airlock</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Laravel'in içerisinde birçok konuda geliştiriciye kolaylıklar sağlayan alt
+kütüphaneler mevcut. Artık bunlara bir yenisi daha ekleniyor: Laravel
+Airlock. Kullanıcı girişi ve yetkilendirilmesi işlerini kolaylaştırıyor.
+Elbette bu versiyondan önce de Laravel bu konuda kolaylıkları olan bir
+framework idi fakat artık bu sistemin kendi bir adı var ve bazı ek özellikler
+de gelmiş. Örneğin artık bir kullanıcıya birden çok erişim anahtarı (TOKEN)
+tanımlayabilir ve bu erişim anahtarlarının kapsamını ve yapabileceklerini
+sınırlayabiliyoruz.
+</p>
+</div>
+</div>
+<div id="outline-container-org231409a" class="outline-3">
+<h3 id="org231409a"><span class="section-number-3">3.2</span> HTTP istemcisi</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Laravel, bu sürümle birlikte popüler PHP HTTP istemcilerinden biri olan
+<a href="https://github.com/guzzle/guzzle">Guzzle</a> kütüphanesinin bazı parçalarını kendi içerisine ekledi. Artık web
+uygulamamız içerisinden başka uygulamalar ya da siteler ile etkileşime
+girerken daha zengin bir API'ye sahibiz. Örneğin bu şekilde bir POST isteği
+yapıp, cevabını da kolayla kullanıcıya gösterebiliriz.
+</p>
+<div class="org-src-container">
+<pre class="src src-php"><span class="org-php-import-declaration">use</span> <span class="org-type">Illuminate\Support\Facades\Http</span>;
+
+<span class="org-php-variable-sigil">$</span><span class="org-php-variable-name">response</span> <span class="org-php-assignment-op">=</span> <span class="org-php-constant">Http</span><span class="org-php-paamayim-nekudotayim">::</span><span class="org-php-static-method-call">withHeaders</span>([
+    <span class="org-php-string">'X-First'</span> <span class="org-php-assignment-op">=</span><span class="org-php-comparison-op">&gt;</span> <span class="org-php-string">'bir'</span>,
+    <span class="org-php-string">'X-Second'</span> <span class="org-php-assignment-op">=</span><span class="org-php-comparison-op">&gt;</span> <span class="org-php-string">'iki'</span>
+])<span class="org-php-object-op">-&gt;</span><span class="org-php-method-call">post</span>(<span class="org-php-string">'http://test.com/users'</span>, [
+    <span class="org-php-string">'name'</span> <span class="org-php-assignment-op">=</span><span class="org-php-comparison-op">&gt;</span> <span class="org-php-string">'Eren'</span>,
+]);
+
+<span class="org-php-keyword">return</span> <span class="org-php-variable-sigil">$</span><span class="org-php-variable-name">response</span>[<span class="org-php-string">'id'</span>];
+</pre>
+</div>
+
+<p>
+Bu sürümle birlikte gelen tüm özellik ve değişiklikler için <a href="https://laravel.com/docs/7.x/releases">bu sayfayı</a> ziyaret
+edebilirsiniz. Ayrıca Laravel 6'dan Laravel 7'ye geçmek için de <a href="https://laravel.com/docs/7.x/upgrade">bu güncelleme
+rehberi</a>nden faydalanabilirsiniz.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org7958402" class="outline-2">
+<h2 id="org7958402"><span class="section-number-2">4</span> PowerShell 7.0 <a href="https://devblogs.microsoft.com/powershell/announcing-PowerShell-7-0/">sürümü yayınlandı</a></h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Microsoft'un geçtiğimiz senelerde platformlar-arası (cross-platform)
+çalışabilir hale getirdiği PowerShell, bu hafta içerisinde yeni sürümü
+yayınladı.
+</p>
+
+<p>
+Bu sürüm ile birlikte diğer shell'lerde olan bazı yeni operatörler
+PowerShell'e de geldi. Örneğin artık pipeline operatörleri ile uygulamaları
+ardı arına çalıştırabilir (<code>&amp;&amp;</code>) ya da birinin çıktısını diğerine
+yönlendirebilirsiniz (<code>||</code>). Ben GNU/Linux dağıtımı kullandığım için bash
+üzerinden bir örnek vereceğim ama uygulamaların windows karşılıklarıyla
+aynısını PowerShell 7 üzerinde siz de çalıştabilirsiniz.
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">wget http://ftp.linux.org.tr/linuxmint/iso/stable/19.3/linuxmint-19.3-cinnamon-64bit.iso &amp;&amp; shutdown -h now
+</pre>
+</div>
+<p>
+Yukarıdeki gibi bir komutu çalıştırarak önce ilgili dosyayı indirebilir,
+ardından ise sisteminizi kapatabilirsiniz.
+</p>
+
+<p>
+Yeni sürümle ilgili detaylı bilgiler ve güncelleme rehberi için konu başlığına
+eklediğim bağlantıya tıklayabilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-org544c13a" class="outline-2">
+<h2 id="org544c13a"><span class="section-number-2">5</span> Yaklaşan Etkinlikler</h2>
+<div class="outline-text-2" id="text-5">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" width="100%">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Etkinlik İsmi</th>
+<th scope="col" class="org-left">Yeri</th>
+<th scope="col" class="org-left">Tarihi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/Open-Source-Analytics-Istanbul/events/269198806/">Deploy AI - Community Day</a></td>
+<td class="org-left">Online</td>
+<td class="org-left">10 Mart 15:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/ngturkey/events/webinar-angular-9-ivy-scully-ve-test-harness-angular-turkey">Angular 9, Ivy, Scully ve Test Harness - Angular Turkey</a></td>
+<td class="org-left">Online</td>
+<td class="org-left">11 Mart 19:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/bilisimtoplulugu/events/269127026/">C# Günleri</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">12 Mart 11:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/istanbul-yapay-zeka-toplulugu/events/269128397/">AI?!: Yapay Zekâda Pratik ve Teori</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">12 Mart 15:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/laravelistanbul/events/269059351/">TDD API Development, the right way</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">12 Mart 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/btorgtr/events/devops-workshop-bilisim-kahvesi-lab">DevOps Workshop, Bilişim Kahvesi Lab</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">12 Mart 19:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/Coffee-And-React-Native-%25C4%25B0stanbul/events/hhtdprybcfbsb/">Coffee and React Native</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">14 Mart 11:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/IzmirGophers/events/269152779/">HTML5 Canvas API ile 2D, Graph ve WebGL Uygulamalari ve Go ile HTTP2MQTT</a></td>
+<td class="org-left">İzmir</td>
+<td class="org-left">15 Mart 15:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/bilisimtoplulugu/events/269153853/">Yapay Zeka ve Çalışma Alanları</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">16 Mart 13:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/turkey-openstack-meetup/events/openinfra-day-turkey">OpenInfra Day Turkey 2020</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">17 Mart 09:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/Turkiye-Yapay-Zeka-%25C4%25B0nisiyatifi/events/xztxmrybcfbxb/">TRAI Meet-Up - no.32 İleri Algoritmalar</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">18 Mart 18:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/devops-turkiye/events/docker-7-yas-partisi">Docker 7. Yaş Partisi!</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">18 Mart 18:45</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/software-craftsmanship-turkey/events/scturkey-meetup">Kendimize İlham Olabilmek (Software Craftsmanship Turkey)</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">18 Mart 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/cloud-and-serverless-turkey/events/azure-functions-on-kubernetes-istanbul">Azure Functions on Kubernetes</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">19 Mart 18:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/Istanbul-Hackers/events/268972005/">İstanbul Coders Reunion</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">19 Mart 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/setur/events/bir-fincan-dolusu-ufuk-acan-sohbetler-coffee-talks">Bir fincan dolusu, ufuk açan sohbetler: Coffee Talks</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">20 Mart 10:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/GDGAnkara/events/268276284/">Women Techmakers Ankara IWD'20</a></td>
+<td class="org-left">Ankara</td>
+<td class="org-left">21 Mart 09:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/ING-%25C4%25B0novasyon-Merkezi/events/269254711/">Python Öğren - Python'a 4 Saatte Başlangıç</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">22 Mart 10:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/ING-%25C4%25B0novasyon-Merkezi/events/269254823/">LearnDocker İstanbul: Docker'a Giriş</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">22 Mart 15:00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org6850797" class="outline-2">
+<h2 id="org6850797"><span class="section-number-2">6</span> Diğer Haberler</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>Yazılımcılar için sosyal medya özelliği olan Dev.to, 8 Mart Dünya Emekçi
+Kadınlar günü için kadınların programlamaya başlama <a href="https://dev.to/t/shecoded">hikayelerini
+anlatabileceği özel bir sayfa hazırladı</a>.</li>
+<li>Google, Korona virüsü nedeniyle iptal edilen organizasyonların ve okulların
+kullanabilmesi için <a href="https://gsuite.google.com/products/meet/">Hangout Meet</a> hizmetine <a href="https://cloud.google.com/blog/products/g-suite/helping-businesses-and-schools-stay-connected-in-response-to-coronavirus">sınırlı süre için ücretsiz paket
+ekledi</a>.</li>
+<li>Korona virüsü nedeniyle iptal edilen organizasyonlar:
+<ul class="org-ul">
+<li>Google I/O konferası <a href="https://techcrunch.com/2020/03/03/google-cancels-its-2020-i-o-developer-conference/">online olarak düzenlenecek</a>.</li>
+<li>Atlassian Summit 2020 <a href="https://www.atlassian.com/company/events/summit">etkinliği iptal edildi</a>.</li>
+<li>KubeCon etkinliği 17 - 20 Kasım 2020 <a href="https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/attend/novel-coronavirus-update/">tarihine ertelendi</a>.</li>
+</ul></li>
+<li>NodeJS v13.10.0 <a href="https://nodejs.org/en/blog/release/v13.10.0/">sürümü yayınlandı</a>.</li>
+<li>VueJS kütüphanesinin v3.0.0-alpha <a href="https://github.com/vuejs/vue-next/releases/tag/v3.0.0-alpha.8">sürümü yayınlandı</a>.</li>
+<li>Angular Framework 9.0.5 <a href="https://github.com/angular/angular/releases/tag/9.0.5">sürümü yayınlandı</a>.</li>
+<li>Kotlin programlama dilinin 1.3.70 <a href="https://blog.jetbrains.com/kotlin/2020/03/kotlin-1-3-70-released/">sürümü yayınlandı</a>.</li>
+<li>Rollup bundler aracının 2.0.0 <a href="https://github.com/rollup/rollup/releases/tag/v2.0.0">sürümü yayınlandı</a>.</li>
+<li>HTTP istek ve cevaplarını OpenAPI standartlarına göre denetleyen openapi-cop
+aracının <a href="https://github.com/EXXETA/openapi-cop">ilk stabil versiyonu 1.0.0 yayınlandı</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgda1a597" class="outline-2">
+<h2 id="orgda1a597"><span class="section-number-2">7</span> Lisans</h2>
+<div class="outline-text-2" id="text-7">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="../../../img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+<a href="yazilim-gundemi-2020-09.html">Yazılım Gündemi - 2020/09</a> yazısı <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a> (CC BY-NC-SA 4.0)
+ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 8 Mart 2020</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 22:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

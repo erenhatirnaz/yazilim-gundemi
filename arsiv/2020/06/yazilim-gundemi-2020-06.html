@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 22:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi - 2020/06</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi - 2020/06
+<br />
+<span class="subtitle">3-9 Şubat 2020</span>
+</h1>
+<div id="table-of-contents">
+<h2>İçindekiler</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org7e69fa3">1. Google Chrome tarayıcısının SameSite Cookie değişiklikleri bu ay devreye giriyor</a></li>
+<li><a href="#orgb6374d3">2. JVM Ekosistem Raporu 2020 yayınlandı.</a></li>
+<li><a href="#org85f2fa0">3. TypeScript 3.8 RC sürümü yayınlandı</a></li>
+<li><a href="#org4784874">4. Angular 9 sürümü yayınlandı</a></li>
+<li><a href="#org7711634">5. Swift 5.2 sürümü yayınlandı</a>
+<ul>
+<li><a href="#orgd475e89">5.1. Key Path Expressions as Functions (SE-0249)</a></li>
+</ul>
+</li>
+<li><a href="#orge11f1a0">6. GNU ve Özgür Yazılım Vakfı (FSF) birlikte çalışmaya devam edecek</a></li>
+<li><a href="#org9895b83">7. Visual Studio v1.42 (Ocak 2020) sürümü yayınlandı</a></li>
+<li><a href="#orgcfa6b3e">8. Yaklaşan Etkinlikler</a></li>
+<li><a href="#org19092c4">9. Diğer Haberler</a></li>
+<li><a href="#org4b8ab92">10. Lisans</a></li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gundemi-banner.png" alt="yazilim-gundemi-banner.png" />
+</p>
+</div>
+
+<div class="org-center">
+<p>
+<a href="../05/yazilim-gundemi-2020-05.html">&lt; Önceki Gündem</a> | <b>3-9 Şubat 2020</b> | <a href="../07/yazilim-gundemi-2020-07.html">Sonraki Gündem &gt;</a>
+</p>
+
+<p>
+<a href="https://teknoseyir.com/blog/yazilim-gundemi-2020-06">TeknoSeyir'de Oku</a>
+</p>
+</div>
+
+<div id="outline-container-org7e69fa3" class="outline-2">
+<h2 id="org7e69fa3"><span class="section-number-2">1</span> Google Chrome tarayıcısının SameSite Cookie değişiklikleri <a href="https://blog.chromium.org/2020/02/samesite-cookie-changes-in-february.html">bu ay devreye giriyor</a></h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Bir fikr-i takip haberi yapalım. Bu konudan <a href="../../2019/15/yazilim-gundemi-15.html">Yazılım Gündemi - 15</a> yazısında
+bahsetmiştik. Bu nedenle değişiklikle ilgili detaylı bilgi edinmek isterseniz
+o yazıya bakabilirsiniz ama şöyle kısa bir bilgi de verelim. 4 Şubat tarihinde
+yayınlanan Chrome 80 sürümü ile hayatımıza giren SameSite Cookie özelliği,
+sitelerde bulunan üçüncü parti çerezlerin <code>SameSite=None;Secure</code> ifadesi ile
+işaretlenmesi gerekliliğini getiriyor. Bu özellik sayesinde çerezler güvenli
+bağlantılar arasında işlenebilecek. Tarayıcınızın bu özelliği destekleyip
+desteklemediğine <a href="https://samesite-sandbox.glitch.me/">bu sayfadan</a> bakabilirsiniz. Sayfadaki her şeyin yeşil olması
+gerekiyor.
+</p>
+
+<p>
+Eğer sitenizde bir çerez üçüncü parti olduğu halde yukarıdaki gibi
+işaretlenmemişse Chrome 80 sürümünün Geliştirici Araçları konsol ekranında
+aşağıdaki gibi bir uyarı ile karşılaşacaksınız.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/chrome-samesite-developer-tools-uyarı.png" alt="chrome-samesite-developer-tools-uyarı.png" />
+</p>
+</div>
+
+<p>
+Bu durumda sizin yapacağınız pek bir şey yok gibi gözüküyor, sayfanıza
+eklediğiniz servisin ilgili değişiklikleri yapmasını bekleyeceksiniz ama eğer
+siz böyle bir servis sunuyorsanız o zaman <a href="https://web.dev/samesite-cookies-explained/">şu yazıyı</a> okumanızda fayda var.
+Fakat bazı servisler geriye uyumluluk olması açısından aynı çerezden iki tane
+kullanabilir, yani birisi eski, diğeri yeni ayarlarda iki çerez yukarıdaki
+uyarı bunlardan birisi için de gözükebilir, nitekim Google'ın bazı
+servislerinde de durum böyle olabilecekmiş.
+</p>
+
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=GPz7onXjP_4">Konuyla ilgili YouTube videosu</a></li>
+</ul>
+
+<p>
+Daha detaylı bilgi ve ileri okuma kaynakları için konu başlığına eklediğim
+bağlantıyı inceleyebilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-orgb6374d3" class="outline-2">
+<h2 id="orgb6374d3"><span class="section-number-2">2</span> <a href="https://snyk.io/blog/jvm-ecosystem-report-2020/">JVM Ekosistem Raporu 2020</a> yayınlandı.</h2>
+<div class="outline-text-2" id="text-2">
+
+<div class="figure">
+<p><img src="gorseller/jvm-ekosistem-2020-ozet.png" alt="jvm-ekosistem-2020-ozet.png" />
+</p>
+<p><span class="figure-number">Şekil 3: </span>Anket sonuçlarının özeti</p>
+</div>
+
+<p>
+Snyk isimli firmanın düzenlemiş olduğu JVM (Java Virtual Machine) ekosistemi
+anketinin sonuçları bu hafta içerisinde yayınlandı. Yukarıdaki görselde
+gördüğünüz özetin tam halini incelemek için <a href="https://snyk.io/wp-content/uploads/jvm_2020.pdf">bu adresteki PDF dosyası</a>nı
+inceleyebilirsiniz.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/jvm-ekosistem-2020-diller.png" alt="jvm-ekosistem-2020-diller.png" />
+</p>
+<p><span class="figure-number">Şekil 4: </span>JVM üzerinde çalışan diller arasında Kotlin yükselişte.</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org85f2fa0" class="outline-2">
+<h2 id="org85f2fa0"><span class="section-number-2">3</span> TypeScript 3.8 RC <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-3-8-rc/">sürümü yayınlandı</a></h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Geçtiğimiz haftalardaki yazılım gündemi yazısında (bkz: <a href="../02/yazilim-gundemi-2020.02.html">Yazılım Gündemi -
+2020/02</a>) Beta sürümünün yayınlandığını duyurduğum TypeScript dilinin bu hafta
+Relase Candidate sürümü yayınlandı. Bu sürümle birlikte gelen "Private Fields"
+özelliğine o yazına değinmiştim. Diğer özellikleri de inceledim fakat aktif
+olarak kullandığım bir dil olmadığı için pek bir şey anladığımı
+söyleyemeyeceğim. Bu nedenle ilgili arkadaşları konu başlığına eklediğim
+bağlantıyı okumaya davet etmekten başka yapabileceğim bir şey yok. Bir sonraki
+sürümde dersime çalışmayı deneyeceğim :)
+</p>
+</div>
+</div>
+<div id="outline-container-org4784874" class="outline-2">
+<h2 id="org4784874"><span class="section-number-2">4</span> Angular 9 <a href="https://blog.angular.io/version-9-of-angular-now-available-project-ivy-has-arrived-23c97b63cfa3">sürümü yayınlandı</a></h2>
+<div class="outline-text-2" id="text-4">
+<p>
+VueJS ve ReactJS gibi kütüphanelerin çıkmasıyla birlikte her ne kadar
+popülerliği azalmış olsa da kurumsal camiada hala daha kullanılmaya devam
+edilen Angular kütüphanesinin bu hafta içerisinde 9.0.0 sürümü yayınlandı.
+Front-End tarafına çok uzak biri sayılmam aslında ama bir projede Angular
+kullanmayalı bayağı uzun zaman oluyor o yüzden pek fazla detaylara
+inemeyeceğim.
+</p>
+
+<p>
+Bu sürüm, <a href="https://angular.io/guide/ivy">Ivy</a> ismini verdikleri derleme ve çalışma zamanında render yapma
+kısımlarında çalışan bir "derleyici" ile birlikte geliyor ve Angular takımının
+iddiasına göre şunları sunuyormuş:
+</p>
+
+<ul class="org-ul">
+<li>Daha küçük paket boyutları.</li>
+<li>Daha hızlı test.</li>
+<li>Daha iyi debugging.</li>
+<li>CSS class ve style tanımlamaları iyileştirilmiş.</li>
+<li>Tip kontrolü iyileştirilmiş.</li>
+<li>Derleme hataları ve derleme zamanı iyileştirilmiş.</li>
+<li>Çoklu dil desteği iyileştirilmiş.</li>
+</ul>
+
+
+<div class="figure">
+<p><img src="gorseller/angular9-paket-boyutlari.png" alt="angular9-paket-boyutlari.png" />
+</p>
+<p><span class="figure-number">Şekil 5: </span>Uygulama boyutlarına göre Angular 9'un küçülme oranları.</p>
+</div>
+
+<p>
+Yukarıdaki grafikte görebileceğiniz üzere Ivy isimli "derleyici" ile birlikte
+uygulamanızın boyutlarına göre dikkate değer bir paket boyutu azalması söz
+konusu. Bu da demek oluyor ki artık uygulamalarınız hem daha az yer
+kaplayacak, hem de kullanılmayan gereksiz komponentler atıldığı için daha
+hızlı yüklenme sürelerine sahip olacaksınız. Angular'ın genelde çok büyük
+paket boyutundan dolayı pek fazla tercih edilmediği düşünüldüğünde bu gelişme
+iyi bir adım diyebiliriz ama VueJS ve ReactJS kullananları kendine çekebilir
+mi bilinmez.
+</p>
+
+<p>
+Bu sürüme yükseltmek için aşağıdaki komutları kullanabilirsiniz ama öncesinde
+şu sayfadaki Angular Güncelleme Rehberi'ni okumanızı şiddetle tavsiye ederim:
+<a href="https://update.angular.io/">https://update.angular.io/</a>
+</p>
+
+<pre class="example">
+$ ng update @angular/cli @angular/core
+</pre>
+</div>
+</div>
+<div id="outline-container-org7711634" class="outline-2">
+<h2 id="org7711634"><span class="section-number-2">5</span> Swift 5.2 <a href="https://www.hackingwithswift.com/articles/212/whats-new-in-swift-5-2">sürümü yayınlandı</a></h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Apple tarafından geliştirilen ve çoğunlukla yine Apple ekosistemindeki
+cihazlar için uygulama geliştirmek için kullanılan programlama dili Swift'in
+5.2 sürümü bu hafta içerisinde yayınlandı. Mobil uygulama geliştirme tarafına
+çok uzak birisi olsam da blog yazılarındaki kodları ve yapıları kolayca
+anlayabildim. O halde gelin bir özelliği birlikte inceleyelim:
+</p>
+</div>
+<div id="outline-container-orgd475e89" class="outline-3">
+<h3 id="orgd475e89"><span class="section-number-3">5.1</span> Key Path Expressions as Functions (<a href="https://github.com/apple/swift-evolution/blob/master/proposals/0249-key-path-literal-function-expressions.md">SE-0249</a>)</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+Hemen her programlama dilinde bulunan, dizi içerisinde çeşitli işlemler
+yapılabilen <code>map</code>, <code>filter</code> gibi fonksiyonlar Swift dilinde de var fakat
+bu sürümde bir kolaylık geldi. Örnek üzerinden anlatmak gerekirse:
+</p>
+
+<p>
+Diyelim bu şekilde bir struct tanımınız var:
+</p>
+<div class="org-src-container">
+<pre class="src src-swift"><span class="org-swift-modeXkeyword">struct</span> <span class="org-swift-modeXfunction-name">Kullanici</span> {
+    <span class="org-swift-modeXkeyword">let</span> isim: String
+    <span class="org-swift-modeXkeyword">let</span> yas: Int
+
+    <span class="org-swift-modeXkeyword">var</span> oyKullanabilirMi: Bool {
+        <span class="org-swift-modeXbuiltin-type">yas</span> &gt;= 18
+    }
+}
+</pre>
+</div>
+
+<p>
+ve bu şekilde objelerimiz olsun:
+</p>
+<div class="org-src-container">
+<pre class="src src-swift"><span class="org-swift-modeXkeyword">let</span> eren = <span class="org-swift-modeXfunction-call">Kullanici</span>(isim: <span class="org-string">"Eren Hat&#305;rnaz"</span>, yas: 25)
+<span class="org-swift-modeXkeyword">let</span> ahmet = <span class="org-swift-modeXfunction-call">Kullanici</span>(isim: <span class="org-string">"Ahmet Mehmeto&#287;lu"</span>, yas: 17)
+<span class="org-swift-modeXkeyword">let</span> mehmet = <span class="org-swift-modeXfunction-call">Kullanici</span>(isim: <span class="org-string">"Mehmet Ahmeto&#287;lu"</span>, yas: 18)
+
+<span class="org-swift-modeXkeyword">let</span> kullanicilar =  [eren, ahmet, mehmet]
+</pre>
+</div>
+
+<p>
+ve bu <code>kullanicilar</code> dizisindeki elemanların isimlerini getirmemiz gerekir.
+Eskiden bu şekilde yapıyorduk:
+</p>
+<div class="org-src-container">
+<pre class="src src-swift"><span class="org-swift-modeXkeyword">let</span> eski_kullaniciAdlari = kullanicilar.map { $<span class="org-swift-modeXbuiltin-method-trailing-closure">0</span>.<span class="org-swift-modeXproperty-access">isim</span> }
+</pre>
+</div>
+<p>
+Artık bu şekilde kullanabiliyoruz:
+</p>
+<div class="org-src-container">
+<pre class="src src-swift"><span class="org-swift-modeXkeyword">let</span> kullaniciAdlari = kullanicilar.<span class="org-swift-modeXfunction-call">map</span>(\.<span class="org-swift-modeXbuiltin-method">isim</span>)
+<span class="org-swift-modeXfunction-call">print</span>(<span class="org-swift-modeXbuiltin-function">kullaniciAdlari</span>)
+</pre>
+</div>
+<p>
+Aynı şekilde <code>filter</code> ve diğer fonksiyonlar için de bu şekilde kullanmak
+mümkün:
+</p>
+<div class="org-src-container">
+<pre class="src src-swift"><span class="org-swift-modeXkeyword">let</span> oyKullanabilenler = kullanicilar.<span class="org-swift-modeXfunction-call">filter</span>(\.<span class="org-swift-modeXbuiltin-method">oyKullanabilirMi</span>)
+</pre>
+</div>
+
+<p>
+Bu arada ilk defa gördüğüm için söylemeden edemeyeceğim. Swift'in söz dizimi
+gerçekten güzelmiş. Özellike bu <code>oyKullanabilirMi</code> özelliğini tanımlarken
+kullandığım <code>yas</code> değeri 18'den büyükse <code>True</code> olsun anlamına gelen söz dizimi
+gerçekten çok zekice.
+</p>
+
+<p>
+Bu sürüm ile birlikte dile başka birçok özellik daha eklendi fakat hepsine
+değinirsem yazı çok uzayacak. Bu nedenle ilgili arkadaşları konu başlığına
+eklediğim bağlantıya tıklamaya davet ediyorum.
+</p>
+
+<p>
+Ayrıca bu hafta başında Swift takımı Swift Crypto isimli yeni bir <a href="https://swift.org/blog/crypto/">açık kaynak
+proje de duyurdu</a>. <a href="https://github.com/apple/swift-crypto">GitHub deposu</a>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orge11f1a0" class="outline-2">
+<h2 id="orge11f1a0"><span class="section-number-2">6</span> GNU ve Özgür Yazılım Vakfı (FSF) <a href="https://www.gnu.org/gnu/2020-announcement-1.html">birlikte çalışmaya devam edecek</a></h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Richard Stallman'ın olayından (bkz: <a href="../../2019/10/yazilim-gundemi-10.html">Yazılım Gündemi - 10</a>) sonra GNU oluşumu
+ile Free Software Foundation arasındaki ilişkiler de tartışmalı duruma
+gelmişti (bkz: <a href="../../2019/13/yazilim-gundemi-13.html">Yazılım Gündemi - 13</a>). Bu hafta iki tarafında kendi sitelerine
+ekledikleri sayfadaki (<a href="https://www.gnu.org/gnu/2020-announcement-1.html">GNU</a>, <a href="https://www.fsf.org/news/gnu-fsf-cooperation-update">FSF</a>) yazı ile birlikte bu olaylar biraz çözülmüş
+gibi gözüküyor. Her ne kadar iletişimlerini minimum seviyeye indirmek
+istediklerini belirtseler de birlikte çalışmaya devam edeceklermiş. Yine de
+konuyla ilgili fikir belirtmek isteyenlerin 13 Şubat tarihine kadar süresi
+varmış.
+</p>
+</div>
+</div>
+<div id="outline-container-org9895b83" class="outline-2">
+<h2 id="org9895b83"><span class="section-number-2">7</span> Visual Studio v1.42 (Ocak 2020) <a href="https://code.visualstudio.com/updates/v1_42">sürümü yayınlandı</a></h2>
+<div class="outline-text-2" id="text-7">
+
+<div class="figure">
+<p><img src="gorseller/vscode-142.png" alt="vscode-142.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcfa6b3e" class="outline-2">
+<h2 id="orgcfa6b3e"><span class="section-number-2">8</span> Yaklaşan Etkinlikler</h2>
+<div class="outline-text-2" id="text-8">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" width="100%">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Etkinlik İsmi</th>
+<th scope="col" class="org-left">Yeri</th>
+<th scope="col" class="org-left">Tarihi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/Turkey-Elastic-Fantastics/events/268505071/">Elasticsearch: Sizing and Capacity Planning</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">12 Şubat 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/IBMCloudTR/events/268445763/">Mikroservis Ortamında Yapay Zeka Uygulaması oluşturma</a></td>
+<td class="org-left">Online</td>
+<td class="org-left">13 Şubat 13:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/IBMCloudTR/events/267606312/">OpenShift 4: Operatörler ile Bulutunuzu Yönetin</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">13 Şubat 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/Microsoft-Giri%25C5%259Fimcilik-Bulu%25C5%259Fmalar%25C4%25B1/events/268435933/">Azure Serverless Architecture</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">17 Şubat 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/GDG-Cloud-Izmir/events/268271805/">Firebase Study Jam</a></td>
+<td class="org-left">İzmir</td>
+<td class="org-left">18 Şubat 18:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/Zemin-Istanbul/events/267959970/">Power BI : Verileriniz Sizinle Konuşmaya Başlasın</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">18 Şubat 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/bilisimtoplulugu/events/1-bilisim-zirvesi">1. Bilişim Zirvesi</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">19 Şubat 10:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/pgtr/events/postgresqlde-ileri-seviye-yedekleme-1">PostgreSQL'de İleri Seviye Yedekleme</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">19 Şubat 18:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/trai-meet-up31-otomotiv-ve-yapay-zeka-tickets-90220212083">TRAI Meet-Up 31 Otomotiv ve Yapay Zeka</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">19 Şubat 18:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/graphql-101-workshop-el-housseine-jaafari-devc-istanbul-tickets-93636351849">GraphQL 101 Workshop - El Housseine Jaafari</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">19 Şubat 18:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/AWS-User-Group-Turkey/events/268534271/">Her şeyi yapan sihirli servis : Elastic Beanstalk - Level 100</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">19 Şubat 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/bilmok-2020-registration-58358884996">Bilgisayar Mühendisliği Öğrencileri Kongresi</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">20 Şubat 09:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/pgtr/events/ankara-postgresqlde-ileri-seviye-kurulum-guncelleme-ve-bakim-teknikleri">PostgreSQL'de ileri seviye kurulum, güncelleme ve bakım teknikleri</a></td>
+<td class="org-left">Ankara</td>
+<td class="org-left">20 Şubat 18:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/istanbul-yapay-zeka-toplulugu/events/268536570/">Big Dataya Giriş: NoSQL &amp; Spark</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">21 Şubat 10:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/GDGAnkara/events/268398519/">Women Techmakers Series 2</a></td>
+<td class="org-left">Ankara</td>
+<td class="org-left">22 Şubat 11:00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org19092c4" class="outline-2">
+<h2 id="org19092c4"><span class="section-number-2">9</span> Diğer Haberler</h2>
+<div class="outline-text-2" id="text-9">
+<ul class="org-ul">
+<li>Microsoft Teams, geçici olarak <a href="https://techcrunch.com/2020/02/03/microsoft-teams-has-been-down-this-morning/">çöktü ve gün içerisinde tekrar açıldı</a>.</li>
+<li>Facebook AI, PyTorch3D kütüphanesini <a href="https://ai.facebook.com/blog/-introducing-pytorch3d-an-open-source-library-for-3d-deep-learning/">tanıttı</a>. <a href="https://github.com/facebookresearch/pytorch3d">GitHub Deposu</a></li>
+<li>Facebook AI, NLP çalışmaları için <a href="https://ai.facebook.com/blog/ccmatrix-a-billion-scale-bitext-data-set-for-training-translation-models/">veri seti yayınladı</a>: <a href="https://github.com/facebookresearch/LASER/tree/master/tasks/CCMatrix">CCMatrix</a>.</li>
+<li>Microsoft'un Jupyter Notebook alternatifi .NET Interactive, Preview 2
+<a href="https://devblogs.microsoft.com/dotnet/net-interactive-is-here-net-notebooks-preview-2/">sürümünü yayınladı</a>.</li>
+<li>JetBrains, birçok IDE'sinin 2020.1 Erken Erişim sürümünü yayınladı:
+<ul class="org-ul">
+<li><a href="https://blog.jetbrains.com/go/2020/02/06/welcome-to-the-goland-2020-1-eap/">GoLand 2020.1 EAP</a></li>
+<li><a href="https://blog.jetbrains.com/clion/2020/02/clion-2020-1-eap-cuda-clang-win/">CLion 2020.1 EAP</a></li>
+<li><a href="https://blog.jetbrains.com/idea/2020/02/intellij-idea-2020-1-eap3/">IntelliJ IDEA 2020.1 EAP3</a></li>
+<li><a href="https://blog.jetbrains.com/phpstorm/2020/02/phpstorm-2020-1-eap-2/">PhpStorm 2020.1 EAP #2</a></li>
+<li><a href="https://blog.jetbrains.com/pycharm/2020/02/pycharm-2020-1-eap-2/">PyCharm 2020.1 EAP 2</a></li>
+<li><a href="https://blog.jetbrains.com/webstorm/">WebStorm 2020.1 EAP #3</a></li>
+</ul></li>
+<li>JetBrains, KotlinConf 2019 etkinliğinin materyallerini <a href="https://blog.jetbrains.com/kotlin/2020/02/kotlinconf-2019-materials-are-available-on-the-website/">sitesine yükledi</a>.</li>
+<li>Rust, "Cleanup Crew" takımı <a href="https://blog.rust-lang.org/inside-rust/2020/02/06/Cleanup-Crew-ICE-breakers.html">oluşturacağını duyurdu</a>. Katılımlar başladı.</li>
+<li>JDK 14 Release Candidate <a href="https://mail.openjdk.java.net/pipermail/jdk-dev/2020-February/003885.html">oldu</a>.</li>
+<li><a href="https://dconf.org/2020/">DConf 2020</a> için konuşmacı <a href="https://dlang.org/blog/2020/02/06/dconf-2020-submission-deadline-early-bird-registration-and-invited-keynote/">başvuruları başladı</a>. Son gün 12 Nisan.</li>
+<li>PHPUnit kütüphanesinin v9 <a href="https://phpunit.de/announcements/phpunit-9.html">sürümü yayınlandı</a>.</li>
+<li>KDevelop 5.5 <a href="https://www.kdevelop.org/news/kdevelop-550-released">sürümü yayınlandı</a>.</li>
+<li>imgaug kütüphanesinin v0.4.0 <a href="https://github.com/aleju/imgaug/releases/tag/0.4.0">sürümü yayınlandı</a>.</li>
+<li>PHP için Markdown dosyası işleme kütüphanesi <a href="https://github.com/thephpleague/commonmark">CommonMark</a> 1.3.0 <a href="https://www.colinodell.com/blog/202002/league-commonmark-130-adds-full-gfm-support">sürümünü
+duyurdu</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4b8ab92" class="outline-2">
+<h2 id="org4b8ab92"><span class="section-number-2">10</span> Lisans</h2>
+<div class="outline-text-2" id="text-10">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="../../../img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+<a href="yazilim-gundemi-2020-06.html">Yazılım Gündemi - 2020/06</a> yazısı <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a> (CC BY-NC-SA 4.0)
+ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 9 Şubat 2020</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 22:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

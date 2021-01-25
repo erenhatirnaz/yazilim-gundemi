@@ -1,0 +1,192 @@
+#+TITLE: Yazılım Gündemi - 2020/12
+#+SUBTITLE: 23-29 Mart 2020
+#+AUTHOR: Eren Hatırnaz
+#+DATE: 29 Mart 2020
+#+OPTIONS: ^:nil
+#+LANGUAGE: tr
+#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=black, filecolor=red, urlcolor=blue}
+#+LATEX_HEADER: \usepackage[turkish]{babel}
+#+HTML_HEAD: <link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+#+LATEX: \shorthandoff{=}
+
+[[file:gorseller/yazilim-gundemi-banner.png]]
+
+#+BEGIN_CENTER
+[[file:../11/yazilim-gundemi-2020-11.org][< Önceki Gündem]] | *23-29 Mart 2020* | [[file:../13/yazilim-gundemi-2020-13.org][Sonraki Gündem >]]
+
+[[https://teknoseyir.com/blog/yazilim-gundemi-2020-12][TeknoSeyir'de Oku]]
+#+END_CENTER
+
+* Safari 13.1 ile tüm üçüncü parti [[https://www.engadget.com/2020-03-24-safari-blocks-all-third-party-cookies-by-default.html][çerezleri engellemeye başladı]]
+	Bu hafta içerisinde yayınlanan iOS ve iPadOS güncellemeleri ile birlikte Apple
+	ekosisteminin varsayılan tarayıcısı olan Safari, artık tüm üçüncü parti
+	çerezleri (cookie) engelliyor. Intelligent Tracking Preventation (ITP) isimli
+	özelliklerindeki bu güncellemenin amacı ise kullanıcıların internette
+	gezinirken takip edilmesini önlemek. Bu derece sert bir kuralı uygulayan bir
+	diğer tarayıcı ise Tor Browser. Brave Browser ise bazı istisnalar hariç diğer
+	çerezleri engelliyor.
+
+	İlgili değişiklikler Apple tarafından açık kaynak olarak geliştirilen tarayıcı
+	motoru WebKit'in [[https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/][blog sayfasında duyuruldu]]. Yazıda bu yolda yalnız
+	olmadıklarını Google tarafından geliştirilen Chrome tarayıcısının da 2022 yılı
+	için bu tarz bir [[https://blog.chromium.org/2020/01/building-more-private-web-path-towards.html][değişikliğe hazırlandığını]] belirtmiş. Aynı zamanda bu
+	uygulamanın standart olması için W3C kurumuna da başvuracaklarını
+	belirtmişler.
+
+	Değişikliğin biz geliştiricileri etkileyen kısmında ise bizlere üçüncü parti
+	çerezler yerine kullanabileceğimiz 3 farklı opsiyon sunmuşlar. Bunlar şu
+	şekilde:
+
+	 * [[https://tools.ietf.org/html/rfc6749][OAuth 2.0 Authorization]]
+	 * [[https://webkit.org/blog/8124/introducing-storage-access-api/][The Storage Access API]]
+	 * Popup'lar için [[https://webkit.org/blog/8311/intelligent-tracking-prevention-2-0/][Geçici Uyumluluk Çözümü]]
+
+	Fakat bu değişiklikler sadece çerezleri etkilemiyor. Tarayıcıda bazı verileri
+	depolamak için kullandığımız IndexedDB, LocalStorage ve SessionStorage gibi
+	yapılar da etkileniyor. Artık bu yapılar üzerinde sadece 7 günlük veriler
+	tutabileceğiz. Bunu yapmalarındaki amaç ise büyük ihtimal kullanıcıları takip
+	eden servislerin çerez engellemesini bu tarz yapıları kullanarak aşmalarını
+	istememeleri olabilir.
+
+	Bu konu hakkında siz ne düşünüyorsunuz? Safari'nin çerezlere olan bu sert
+	yaklaşımı siz doğru mu? Yorumlar bölümünde konuşalım.
+* Git 2.26 [[https://lore.kernel.org/git/xmqqa7477u6j.fsf@gitster.c.googlers.com/T/#u][sürümü yayınlandı]]
+	En popüler versiyon kontrol sistemlerinden biri olan Git, bu hafta içerisinde
+	2.26 numaralı yeni sürümünü duyurdu. Bu sürüm ile birlikte gelen bazı
+	değişikliklere birlikte bakalım.
+
+** Varsayılan protokol versiyonu 2 olarak güncellendi
+	 2018 yılında Git'e Google tarafından katkı sağlanarak eklenen /Git protocol
+	 version 2/ artık varsayılan olarak kullanılacak. Önceki Git protokolünün bazı
+	 ölçekleme sorunları vardı. Bir Git sunucusu, istemci (client) özel olarak
+	 istemediği halde tüm branch'lar, tag'lar ve diğer referanslar hakkında bilgi
+	 veriyordu. İlk bakışta "bunda ne var" diye düşünebilirsiniz ama büyük çaplı
+	 projeler için durum böyle değil. Kullanıcı sadece master dalıyla ilgilendiği
+	 halde ona tüm dallar ve etiketlerle ilgili bilgi dönmesi demek fazladan
+	 birkaç megabyte'ın harcanması demek ve bu da gereksiz veri trafiği anlımına
+	 geliyor. Şimdi ise büyük boyutlu depolardan daha kısa bir sürede veri
+	 çekebiliyor olacağız.
+
+	 Eğer Git versiyonunuzu yükseltmeye henüz hazır değilseniz ve Git 2.19 üzeri
+	 bir sürüm numarasına sahipseniz. Bu değişikliği siz de aşağıdaki komutu
+	 çalıştırarak uygulayabilirsiniz:
+
+	 #+BEGIN_SRC shell
+		 git config --global protocol.version 2
+	 #+END_SRC
+
+	 Bu protokol versiyonu hakkında daha detaylı bilgi almak için [[https://opensource.googleblog.com/2018/05/introducing-git-protocol-version-2.html][bu sayfayı
+	 ziyaret edebilirsiniz]].
+** =git sparse-checkout= komutunda değişiklikler
+	 Bir önceki sürüm (2.25) güncellemesiyle birlikte gelen bu özelliği [[file:../03/yazilim-gundemi-2020-03.org][Yazılım
+	 Gündemi - 2020/03]] yazısında detaylıca anlatmıştık. Dolayısıyla özelliğin
+	 teknik detayları için önce o yazıyı okumanızı tavsiye ederim. Bu sürümle
+	 ise =git sparse-checkout add= modu eklendi. Artık daha kolay bir şekilde
+	 istediğimiz klasörleri indirebileceğiz. Örnek kullanım için:
+
+	 #+BEGIN_EXAMPLE
+		 $ git clone --filter=blob:none --sparse git@github.com:git/git.git
+		 $ cd git
+		 $ git sparse-checkout init --cone
+		 $ git sparse-checkout add t
+		 $ git sparse-checkout add Documentation
+		 $ git sparse-checkout list
+		 Documentation
+		 t
+	 #+END_EXAMPLE
+	 Yukarıda sırasıyla şu işlemleri yaptık:
+	  1. github.com/git/git deposunu sparse-checkout özelliğini kullanarak clone
+       edeceğimizi belirttik.
+		2. =git= klasörünün içine girdik. sparse-checkout yapacağımız için içi boş.
+		3. =sparse-checkout= özelliğini başlattık.
+		4. =t= isimli klasörü uzak sunucudan indirdik.
+		5. =Documentation= isimli klasörü uzak sunucudan indirdik.
+		6. =sparse-checkout= yaptığımız klasörlerin listesini yazdırdık.
+
+	Git 2.26 sürümüyle birlikte gelen diğer yeni özellik ve değişiklikler için
+	GitHub tarafından hazırlanmış [[https://github.blog/2020-03-22-highlights-from-git-2-26/][şu blog yazısını okuyabilir]] ya da konu başlığına
+	eklediğim bağlantıya tıklayabilirsiniz.
+* TypeScript 3.9 Beta [[https://devblogs.microsoft.com/typescript/announcing-typescript-3-9-beta/][duyuruldu]]
+	Microsoft tarafından geliştirilen JavaScript üreten programlama dili
+	TypeScript'in bu hafta içerisinde 3.9 Beta etiketli sürümü duyuruldu.
+	Microsoft TypeScript takımının bloglarında yayınladıkları yazıyı inceledim
+	fakat dile uzak birisi olduğum için pek bir şey anladığım söylenemez. Bu
+	nedenle bu sefer de sizi konu başlığına eklediğim bağlantıya tıklayamaya davet
+	ediyorum. TypeScript'i ilgi alanıma girerse, ilerleyen Yazılım Gündemi
+	yazılarında daha detaylı değinebilirim belki.
+
+	Henüz "Beta" sürecinde olduğu için çalışan projelerinizi bu sürüme geçirmeniz
+	tavsiye edilmez ama yine de ayrı olarak bir deneme yapmak isterseniz şu komutu
+	çalıştırarak TypeScript 3.9 Beta'yı projenize ekleyebilirsiniz:
+	#+BEGIN_SRC shell
+		npm install typescript@beta
+	#+END_SRC
+* Google Play üzerindeki Multiplayer API [[https://support.google.com/googleplay/android-developer/answer/9469745?hl=en][desteği sonlanıyor]]
+	Gün geçmiyor ki bir başka Google hizmeti ya da ürünü [[https://killedbygoogle.com/][Google Mezarlığı]]nda
+	yerini almasın. Android için oyun geliştirirken Google'ın geliştiriciler için
+	sunduğu oyununuza çok-oyuncu (multiplayer) API desteğini kullanabiliyordunuz.
+	Google Play üzerinden sağlanan bu API ile birlikte arka plandaki bazı iş
+	yüklerinden kurtuluyordunuz fakat 31 Mart itibariyle bu özellik artık
+	çalışmayacak. Eğer sizin de Google Play markette yayınlanmış ve Multiplayer
+	API kullanan bir oyununuz varsa bu tarihten itibaren çalışmamaya başlayabilir.
+
+	Neyse ki bazen Google bir taraftan alırken bir taraftan da yeni alternatifler
+	koyabiliyor. Bu hafta içerisinde Google Cloud tarafında oyun yönetimi için
+	[[https://cloud.google.com/blog/products/gaming/introducing-google-cloud-game-servers][yeni bir çözüm tanıtıldı]]: [[https://cloud.google.com/game-servers][Game Servers]]. Henüz "beta" etiketiyle sunuluyor
+	fakat önümüzdeki dönemlerde stabil bir sürüme de kavuşacaktır.
+* GitHub Desktop uygulamasının 2.4 [[https://github.blog/2020-03-25-github-desktop-2-4-introduces-proxy-support-and-issue-creation/][sürümü yayınlandı]]
+  #+ATTR_HTML: :height 350
+  #+ATTR_LATEX: :height 5cm
+	[[file:gorseller/github-desktop-2.4.png]]
+
+	GitHub'ın henüz sadece Windows ve Mac işletim sistemlerini destekleyen
+	masaüstü yazılımı 2.4 sürümüne ulaştı. Bu sürümle birlikte eklenen bazı
+	özellikler şu şekilde:
+
+	 * *Proxy desteği*: Artık GitHub Desktop uygulamasının internetle olan
+     bağlantısını bir proxy üzerinden geçirip kullanabileceğiz.
+	 * *Issue oluşturmak için kısayol*: Repository menüsü altına "Create Issue on
+     GitHub" seçeneği eklendi ve tıkladığınızda varsayılan tarayıcınız üzerinde
+     ilgili deponun issue oluşturma sayfasını açıyor.
+	 * *Koyu tema özelliği betadan çıktı*: Çeşitli testler ve geri dönüşlerden
+     sonra iyileştirilen uygulamanın koyu tema modu sonunda beta'dan çıktı ve
+     herkese açıldı. Keşke GitHub'ın web arayüzüne de gelse koyu tema özelliği
+     ya da bu uygulamanın GNU/Linux dağıtımları için olan sürümünü çıkarsınlar o
+     da uyar bana, gece karanlıkta çalışırken GitHub'ı açınca far görmüş tavşan
+     gibi kalmaktan bıktım! Zaten olmaması ayrı bir saçmalık. Çoğunlukla
+     geliştiricilerin kullandığı bir web sitesinde neden koyu tema özelliği
+     olmaz gerçekten anlamak çok güç.
+
+	Uygulamayı [[https://desktop.github.com/][bu adres üzerinden indirebilirsiniz]].
+* Diğer Haberler
+	- GitHub, COVID-19 salgınıyla ilgili proje geliştirmek isteyen geliştiriciler
+    için rehber niteliğinde [[https://github.blog/2020-03-23-open-collaboration-on-covid-19/][bir blog yazısı yayınladı]].
+	- GitHub Şubat ayı sonlarında yaşanan kesintilerle ilgili [[https://github.blog/2020-03-26-february-service-disruptions-post-incident-analysis/][analiz yayınlandı]].
+	- GitLab, IPv6 [[https://gitlab.com/gitlab-com/gl-infra/infrastructure/-/issues/645#note_313218618][desteğini tamamlandı]].
+	- Spotify, [[https://developer.spotify.com/community/news/2020/03/20/introducing-podcasts-api/][yeni Podcast API'sini duyurdu]].
+	- .NET Core Mart Güncellemeleri yayınlandı:
+		- [[https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1.3/3.1.3.md][.NET Core 3.1.3]]
+		- [[https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1.17/2.1.17.md][.NET Core 2.1.17]]
+	- Microsoft Visual C/C++ için uyumlu preprocessor [[https://devblogs.microsoft.com/cppblog/announcing-full-support-for-a-c-c-conformant-preprocessor-in-msvc/][desteği duyuruldu]].
+	- COVID-19 Global Hackathon 1.0 [[https://covid-global-hackathon.devpost.com/][için kayıtlar başladı]].
+	- LLVM 10.0.0 [[http://lists.llvm.org/pipermail/llvm-announce/2020-March/000087.html][yayınlandı]].
+	- Swift programlama dilinin 5.2 [[https://swift.org/blog/swift-5-2-released/][sürümü yayınlandı]].
+	- Liberica JDK 14 [[https://bell-sw.com/announcements/2020/03/18/Liberica-JDK-14/][sürümü yayınlandı]].
+	- Kubernetes 1.18 [[https://kubernetes.io/blog/2020/03/25/kubernetes-1-18-release-announcement/][sürümü yayınlandı]].
+	- Angular kütüphanesinin 9.1.0 [[https://github.com/angular/angular/releases/tag/9.1.0][sürümü yayınlandı]].
+	- Kafka-on-Pulsar projesi [[https://streamnative.io/blog/tech/2020-03-24-bring-native-kafka-protocol-support-to-apache-pulsar/][duyuruldu]]. [[https://github.com/streamnative/kop][GitHub Deposu]]
+	- Cloud için güvenlik aracı Panther [[https://blog.runpanther.io/panther-v1-open-source-siem/][açık kaynak olarak tanıtıldı]]. [[https://github.com/panther-labs/panther][GitHub
+    Deposu]]
+	- GraphQL için güvenlik testi araco InQL Scanner [[https://blog.doyensec.com/2020/03/26/graphql-scanner.html][açık kaynak olarak tanıtıldı]].
+    [[https://github.com/doyensec/inql][GitHub Deposu]]
+	- OpenAPIGenerator 4.3.0 [[https://github.com/OpenAPITools/openapi-generator/releases/tag/v4.3.0][sürümü yayınlandı]].
+* Lisans
+  #+BEGIN_CENTER
+  #+ATTR_HTML: :height 75
+  #+ATTR_LATEX: :height 1.5cm
+  [[file:../../../img/CC_BY-NC-SA_4.0.png]]
+
+  [[file:yazilim-gundemi-2020-12.org][Yazılım Gündemi - 2020/12]] yazısı [[https://erenhatirnaz.github.io][Eren Hatırnaz]] tarafından [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Creative Commons
+  Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı]] (CC BY-NC-SA 4.0)
+  ile lisanslanmıştır.
+  #+END_CENTER

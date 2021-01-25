@@ -1,0 +1,274 @@
+#+TITLE: Yazılım Gündemi - 2020/05
+#+SUBTITLE: 27 Ocak - 2 Şubat 2020
+#+AUTHOR: Eren Hatırnaz
+#+DATE: 3 Şubat 2020
+#+OPTIONS: ^:nil
+#+LANGUAGE: tr
+#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=black, filecolor=red, urlcolor=blue}
+#+LATEX_HEADER: \usepackage[turkish]{babel}
+#+HTML_HEAD: <link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+#+LATEX: \shorthandoff{=}
+
+[[file:gorseller/yazilim-gundemi-banner.png]]
+
+#+BEGIN_CENTER
+[[file:../04/yazilim-gundemi-2020-04.org][< Önceki Gündem]] | *27 Ocak - 2 Şubat 2020* | [[file:../06/yazilim-gundemi-2020-06.org][Sonraki Gündem >]]
+
+[[https://teknoseyir.com/blog/yazilim-gundemi-2020-05][TeknoSeyir'de Oku]]
+#+END_CENTER
+
+* CWA, Teknoloji ve Oyun sektörü çalışanlarını [[https://gizmodo.com/cwa-launches-new-effort-to-unionize-game-and-tech-worke-1840861878][örgütlemek istiyor]]
+	Amerika'daki büyük işçi sendikalarından biri olan [[https://en.wikipedia.org/wiki/Communications_Workers_of_America][The Communications Workers
+	of America]], şimdi de teknoloji ve oyun sektörü çalışanlarını bünyesine katmak
+	ve onların da sorunlarını dile getirmek için paçaları sıvadı. Bu sendika
+	hakkında pek bir bilgim yok ama bu haber özelinde konuşmak istediklerim olduğu
+	için gündeme aldım bunu.
+
+	Örgütlü mücadele her zaman için ilgili sektördeki sorunların dile
+	getirilebilmesi ve çözüme ulaştırılabilmesi açısından en iyi yöntemlerden
+	birisidir. Konuyla ilgili atasözünün de dediği gibi: "Bir elin nesi var, iki
+	elin sesi var". Ülkemizde maalesef pek fazla iyi örneklerine rastlayamasak da
+	internet kullanıcıları olarak hepimizi etkileyen Adil Kullanım Noktası'nın
+	(AKN) kaldırılması olayının arkasında örgütlü bir mücadele var: [[https://internettekalite.com/][İnternette
+	Kalite Hareketi]]. Bu minvalde yazılım geliştirme sektörü olarak da
+	sorunlarımızı dile getirebileceğimiz, çözüm yolları için uğraşlar
+	verebileceğimiz sendikalara ya da meslek örgütlerine ihtiyacımız var ve
+	ilerlediğimiz gelecekte bu ihtiyacın daha da çok olacağını düşünüyorum.
+	Ayrımcılıklar, fazla çalışma saatleri ve düşük ücretler, mobbing gibi sorunlar
+	hemen her sektörde karşımıza çıksa da, etik olmayan uygulamalar (şirketin
+	kullanıcıların verilerini izni olmadan kullanması vb.) ve hükumetlerle yapılan
+	anlaşmalar gibi sektörümüze özel sorunlar da mevcut.
+
+	Türkiye'de benim bildiğim kadarıyla bizim alanımızı kapsayan meslek örgütü
+	olarak [[https://www.bmo.org.tr/][Bilgisayar Mühendisleri Odası]] var. Faaliyetleri hakkında pek fazla
+	bilgim olmasa da [[https://www.bmo.org.tr/2020/01/23/mebin-teknik-liselerde-yazilim-egitimi-yontemi-cagdisidir/][Delphi eğitimi protokolü için bildiri]]yle farkına vardığım bir
+	oluşum oldu. Aslında önceden de ismini duymuştum fakat pek bakma fırsatım
+	olmamıştı. Sayfalarını incelediğimde "[[https://www.bmo.org.tr/en-az-ucret/][En Az Ücret Tanımları]]" sayfası dikkatimi
+	çekti. BMO, 2018 yılından beri her yıl "Mühendislik Asgari Ücreti"
+	belirliyorlarmış. 2020 yılı için belirlenen Mühendislik Asgari Ücreti ise
+	5.000TL imiş. Sektöre ne kadar etkisi vardır bilinmez ama ben yine de bu tarz
+	örgütlü faaliyetlerin olması gerektiğini düşünüyorum. Mesleki standartların
+	belirlenmesi, haklarımızı aramak ve talep etmek için bu tarz örgütlere üye
+	olmakta ve aktif görev almakta fayda var. Ben de şahsen işe girdiğimde BMO'ya
+	üye olmayı düşünüyorum.
+
+	Bu konu hakkında siz ne düşünüyorsunuz? Sizce teknoloji sektörü çalışanları
+	olarak nasıl örgütlenmeliyiz? Haklarımızı nasıl aramalıyız? Yorumlar bölümünde
+	konuşalım.
+* Cloudflare: "[[https://blog.cloudflare.com/javascript-libraries-are-almost-never-updated/][JavaScript kütüphaneleri projeye eklendikten sonra neredeyse hiç güncellenmiyor]]"
+	Dünya çapında bir çok yerde veri merkezinin olması dolayısıyla CDN hizmetini
+	de çok kolay verebilen [[https://www.cloudflare.com/][Cloudflare]] firması, bu hafta alt hizmeti olan [[https://cdnjs.com/][CDNJS]] ile
+	ilgili bir analiz yayınladı. Bu analiz tam olarak bu haberin başlığındaki
+	cümleyi içeriyor. Yani geliştiriciler olarak bir JavaScript kütüphanesini bir
+	kere projeye ekliyoruz sonra güncellemelerle pek ilgilenmiyoruz.
+
+	#+CAPTION: CDNJS sunucusuna bir günde gelen istek sayısına göre jQuery sürümleri grafiği
+	[[file:gorseller/cloudflare-jquery-1.png]]
+
+	Grafikte sizin de kolayca görebileceğiniz üzere Mayıs 2019 ayında jQuery'nin
+	yeni versiyonu olan 3.4.1 çıkmış olmasına rağmen diğer eski sürümlerin
+	popülaritesini düşürememiş. En çok istek alan jQuery sürümü ise 3.3.1 olmuş.
+
+	#+CAPTION: Hatta 2013 yılında yayınlanan jQuery 1.10.0 sürümü bile hata hatırı
+  #+CAPTION: sayılır derecede istek alıyor
+	[[file:gorseller/cloudflare-jquery-2.png]]
+
+	Elbette sisteminiz ilgili sürümlerde sorunsuz çalışıyorsa ve ihtiyaçlarınızı
+	karşılıyorsa bir üst sürüme geçmek için efor sarf etmenize gerek yok
+	("çalışıyorsa dokunma") ama yine de güvenlik açıkları vb. nedenlerden dolayı
+	projenize eklediğiniz her bağımlılığın sürümlerini takibe almakta fayda var.
+* GitHub, illegal Instagram-API [[https://github.com/github/dmca/blob/master/2020/01/2020-01-22-facebook.md][deposunu kilitledi]]
+	#+CAPTION: İlgili [[https://github.com/mgp25/Instagram-API][GitHub sayfası]]na
+  #+CAPTION: girince sizi karşılayan sayfa
+	[[file:gorseller/github-instagram-api.png]]
+
+	Instagram platformunun resmi olarak biz geliştiricilere sunduğu bir API
+	sistemi olmadığı için çoğu kişi GitHub'da Mgp25 nickli kullanıcının
+	yayınladığı resmi olmayan, PHP ile yazıldığını hatırladığım (yanlış hatırlıyor
+	da olabilirim) Instagram-API isimli kütüphaneyi kullanıyordu. Fakat geçtiğimiz
+	hafta (bu hafta gündem oldu) GitHub, Facebook'un isteği doğrultusunda bu
+	GitHub deposunu kilitledi. Artık deponun sayfasına girmeye çalıştığınızda sizi
+	yukarıdaki ekran görüntüsündeki gibi bir açıklama karşılıyor (bu durum deponun
+	forkları için de geçerli). Açıkcası kullanım amacı kişiden kişiye değişiklik
+	gösterse de çoğu kişi bu kütüphaneyi maalesef beğenme ve takip etme botları
+	gibi amaçlar için kullandığından ve bazı telif hakkı sorunlarına yol açtığı
+	için Facebook'u pek de haksız bulmuyorum.
+
+	Yapılan işlemlerle ilgili daha detaylı ve hukuki bilgiler için konu başlığına
+	eklediğim bağlantıya bakabilirsiniz.
+* Qt 2020 yılına [[https://www.qt.io/blog/qt-offering-changes-2020][değişikliklerle girdi]]
+	Popüler platformlar-arası (cross-platform) uygulama geliştirme
+	framework'lerinden olan Qt, bu hafta bloglarında yayınladıkları yazı ile
+	fiyatlandırma ve lisanslamayla ilgili değişikliklere gittiklerini duyurdular.
+	Maalesef değişiklikler pek bizim açımızdan olumlu yönde değil. Şöyle ki:
+
+	 * Artık Qt binary'lerini indirmek için Qt hesabınız olması gerek.
+	 * Uzun-dönem destekli (LTS - Long-term-supported) sürümler ve çevrimdışı
+     kurumlar (offline installer) artık sadece ticari lisans sahiplerine
+     sunulacak.
+	 * Startuplar ve küçük ölçekli şirketler için Qt fiyatlandırması yıllık $499
+     oldu.
+
+	Yayınladıkları blog yazısında elbette tüm bu değişiklikler için mantıklı
+	sebepler bulduklarını iddia ediyorlar. Örneğin ilk maddeyi şöyle savunmuşlar.
+	Qt açık kaynak kullanıcılarının bile artık Qt binary indirmesi için "Qt
+	Account" açması gerekiyor. Çünkü bu şekilde kendilerinin servislerini en iyi
+	şekilde kullanabilecek ve katkı sağlayabilecekmişiz. Ayrıca bu sayede hata
+	raporları, forumlar, kod incelemeleri vb birçok şeye de erişebilecekmişiz.
+	Kısaca "kimler qt indiriyor ve kullanıyor elimizde tam listesi olsun
+	istiyoruz" demiyorlar da lafı dolandırıyorlar işte. Qt açık kaynağı
+	kodlarından derleyip kullanabilirsiniz tabii ki ama kolay olsun direkt binary
+	indireyim derseniz "Qt Account" şart.
+
+	LTS sürümlerinin ve çevrimdışı kurulumların da sadece ticari lisans
+	sahiplerine verilmesini de açık kaynak kullanıcıların yeni sürümlere daha iyi
+	adapte olabilmesi için yapıyoruz demişler ama kendilerinin de açıkladığı gibi
+	asıl mesele iş modellerini değiştirmek istemeler ve ticari lisansı firmalar
+	için daha cazip kılmak istemeleri. Bunu biraz anlayışla karşılayabiliyorum
+	çünkü ticari bir şirket oldukları için bu tarz kaygıları olması normal.
+
+	Kısaca haberi özetleyecek olursak Qt, açık kaynak kullanıcıları için biraz
+	vanayı kısıyor. Açık kaynak kullanıcıları için kötü haber maalesef. Neyse, en
+	azından tamamen ücretli hale gelmedi.
+* Go 1.15 sürümü için [[https://blog.golang.org/go1.15-proposals][planlar yapıldı]]
+	Go programlama dili gün geçtikçe gelişmeye ve sürüm atlamaya devam ediyor. Bu
+	hafta yayınladıkları blog yazısı ile Go takımı Şubat ayı içerisinde bir
+	aksilik olmazsa, şu an beta sürecinde olan 1.14 sürümünü RC1 etiketi ile
+	yayınlayacaklarını duyurmuşlar. Aynı zamanda bir sonraki sürüm olan 1.15 için de
+	bazı kararların verilmesine başlamışlar. Bu yılın Ağustos ayında yayınlanması
+	planlanan bu sürüm üzerinde çalışmak için GitHub üzerinden gelen şu üç öneriyi
+	seçmişler:
+
+	 * [[https://golang.org/issue/32479][#32479]]: Diagnose string(int) conversion in =go vet=.
+	 * [[https://golang.org/issue/4483][#4483]]: Diagnose impossible interface-interface type assertions in =go vet=.
+	 * [[https://golang.org/issue/28591][#28591]]. Constant-evaluate index and slice expressions with constant strings
+     and indices.
+
+	Görüldüğü üzere daha çok Go dilinin komut satırı aracı olan =go vet= üzerine
+	odaklanmışlar gibi gözüküyor. =go vet= aracı vermiş olduğunuz .go uzantılı
+	dosyayı inceliyor ve duruma göre size hata ve uyarı veriyor. Her ne kadar
+	planlar aşağı yukarı yapılmış gibi gözükse de Go takımı 1.14 sürümünün
+	yayınlanmasından biraz sonra geliştirmeye başlayacağı için 1.15 sürümü için
+	tartışmalara katılabilir ve yeni önerilerde bulunabilirsiniz. Henüz kapı tam
+	kapanmamış yani anlayacağız.
+
+	Üzerinde çalışılması planlanan özelliklerin ve sürecin detayları için konu
+	başlığına eklediğim blog yazısına bakabilirsiniz.
+* RStudio, [[https://blog.rstudio.com/2020/01/29/rstudio-pbc/][Kamu Yararına Şirket oldu]]
+	[[https://www.r-project.org/][R programlama dili]] her ne kadar sektörel yazılımlarda pek tercih edilmese de
+	veri bilimi ve özellikle de istatistik alanında çalışan akademisyenlerin
+	gözdesi olmuş durumda. Çoğumuz R dilinin IDE'si sayılabilecek [[https://rstudio.com/][RStudio]]
+	yazılımını aslında dilin bir parçası sanıyoruz. Hatta ben de bu haberle
+	karşılaşana kadar öyle sanıyordum fakat RStudio aslında ayrıca geliştirilen
+	bir araç, hatta şirketmiş. İşte bu şirket, bu hafta bloglarında yayınladıkları
+	yazı ile birlikte bir "[[https://en.wikipedia.org/wiki/Public-benefit_corporation][Public Benefit Corparation]] (PBC - Kamu Yararına
+	Şirket)" haline gelmiş. Sanırım Türkiye'de olmayan bir şirket türü, biraz
+	detaylarını araştırmaya çalıştım ama pek fazla bir şey anladığım söylenemez.
+	Yine de bizim alanımızla ilgili bir yazılım üreten bir şirketin dönüşmesi
+	olduğu için gündeme almak istedim.
+
+	Bundan sonraki ilerleyecekleri yolla ilgili detaylı bilgilere konu başlığına
+	eklediğim bağlantıyı inceleyebilirsiniz.
+* Google App Maker [[https://support.google.com/a/answer/9682494?hl=en][hizmetini kapatıyor]]
+	Gün geçmiyor ki Google bir ürününü ya da hizmetini [[https://killedbygoogle.com/][Google Mezarlığı]]na
+	göndermesin. Bu hafta da G Suite isimli işletmeler için çeşitli hazır çözümler
+	içeren paketin içerisindeki App Maker hizmetini kapacağını duyurdu. İsminden
+	anladığım kadarıyla işletmeler için kod yazmadan basit mobil uygulamalar
+	oluşturmaya yarayan bir hizmetti. Geçtiğimiz haftalardaki bir yazılım gündemi
+	yazısının (bkz: [[file:../03/yazilim-gundemi-2020-03.org][Yazılım Gündemi - 2020/03]]) "Diğer Haberler" bölümünde
+	Google'ın, kod yazmadan uygulama geliştirme aracı olan AppSheet'i satın
+	aldığını yazmıştım. Dolayısıyla böyle bir gelişme bizim için pek sürpriz
+	olmadı.
+
+	Bu hizmeti hemen kapatmıyorlar tabii ki ama ufaktan fişini çekmeye
+	hazırlanıyorlar. Süreç bu şekilde ilerleyecekmiş:
+
+	 * *27 Ocak 2020*: Var olan uygulamalar çalışmaya devam edecek fakat App Maker
+     hizmetinin geliştirilmesine devam edilmeyecek. Kritik hatalar hâlâ mevcut.
+	 * *15 Nisan 2020*: Geliştiriciler bu tarihten itibaren yeni App Maker
+     uygulaması oluşturamayacaklar.
+	 * *19 Ocak 2021*: Var olan uygulamalar çalışmayacak. App Maker verileriniz
+     Cloud SQL üzerinde değişmeden duracak ve Google Cloud Platform
+     hesabınızının poliçelerini takip etmeye devam edecek. Son cümleyi ben de
+     tam anlamadım fakat sanırım GCP kapsamında bazı ücretlendirmeler fatura
+     edilebilir demek istiyorlar.
+
+	Yani anlayacağız Google yeni satın aldığı bir şirketin çözümünü kendi
+	sistemine entegre ediyor ve kendi çözümünü de kullanımdan kaldırıyor. Dağdan
+	gelen bağdakini kovdu yani. Konu başlığına eklediğim bağlantıda da zaten
+	Google, App Maker alternatifi olarak AppSheet'i göstermiş ve oraya geçilmesini
+	tavsiye etmiş. Eğer sistemi kullanıyorsanız konu başlığındaki bağlantıyı
+	mutlaka okuyun ve aksiyon almaya başlayın.
+* Ekosistem ve topluluk anketleri
+** [[https://surveys.jetbrains.com/s3/developer-ecosystem-survey-2020-sh][JetBrains Developer Ecosystem Survey 2020]]
+	 [[file:gorseller/jetbrains-anket.png]]
+
+	 JetBrains'in her yıl düzenli olarak yaptığı geliştirici ekosistemi anketi bu
+	 yılda katılıma açıldı. Diğer anketlerden farklı olaran JetBrains'in ekonomik
+	 gücü olduğu için katılımcılardan rastgele kişilere ödüller de (MacBook Pro,
+	 $300'lık Amazon hediye kartı ve JetBrains Sürpriz Hediye Paketi) veriyor. Ben
+	 nasıl olsa çıkmaz diyerek MacBook Pro'yu seçtim. Anket biraz uzun 20-25
+	 dakika sürebiliyor ama isterseniz kaydedip sonra da kaldığınız yerden
+	 doldurmaya devam edebiliyorsunuz. Geçtiğimiz senenin anket sonuçları için:
+	 [[https://www.jetbrains.com/lp/devecosystem-2019/][The State of Developer Ecosystem 2019]].
+** [[https://docs.google.com/forms/d/e/1FAIpQLSf-DvTpaz4oSPDMghdpHutdoY1Pn_YqVa8JRLV2tPIiQcM3BA/viewform][Yazılım Geliştiricileri Maaş Anketi 2020]]
+	 [[file:gorseller/yazilim-gelistirici-maas-anketi.png]]
+
+	 Twitter'daki [[https://twitter.com/oncekiyazilimci][oncekiyazilimci]] nickli parodi hesabının 2 yıldır düzenli olarak
+	 yaptığı bir anket çalışması. Ankete katılım 31 Mart 2020 tarihine kadar devam
+	 edecekmiş. Önceki yılların anket sonuçları için bu sayfaları ziyaret
+	 edebilirsiniz:
+	  * [[https://medium.com/@oncekiyazilimci/yaz%C4%B1l%C4%B1mc%C4%B1-maa%C5%9Flar%C4%B1-2019-f0e535d736a3][Yazılımcı Maaşları | 2019]]
+	  * [[https://medium.com/@oncekiyazilimci/yaz%C4%B1l%C4%B1mc%C4%B1-maa%C5%9Flar%C4%B1-c312a05df5a6][Yazılımcı Maaşları | 2018]]
+* Yaklaşan Etkinlikler
+  #+ATTR_HTML: :width 100%
+  #+ATTR_LATEX: :environment longtable :align |p{8cm}|l|l|
+  |--------------------------------------------------------------+----------+----------------|
+  | Etkinlik İsmi                                                | Yeri     | Tarihi         |
+  |--------------------------------------------------------------+----------+----------------|
+  | [[https://www.meetup.com/Istanbul-Spring-Meetup/events/267716831/][Spring Boot uygulamalarında derin Elasticsearch kullanımı]]    | İstanbul | 3 Şubat 19:00  |
+  | [[https://www.meetup.com/trendyol/events/267805404/][Cloud Native Uygulamalarda GitLab + CI ile GitOps Pratikleri]] | İstanbul | 4 Şubat 19:00  |
+  | [[https://www.meetup.com/python-istanbul/events/268319431/][Python Saati 101 - The Zen of Software Developer]]             | İstanbul | 4 Şubat 19:00  |
+  | [[https://www.meetup.com/GDG-Cloud-Istanbul/events/268195069/][Google Cloud Days 3 - Production-Scale ML Platform on GCP]]    | İstanbul | 5 Şubat 18:30  |
+  | [[https://kommunity.com/kodluyoruz/events/kanser-tedavisinde-derin-ogrenme-yontemlerinin-kullanimi][Kanser Tedavisinde Derin Öğrenme Yöntemlerinin Kullanımı]]     | İstanbul | 6 Şubat 18:30  |
+  | [[https://www.meetup.com/IBMCloudTR/events/268323729/][Watson ile Kendi Chatbot'unuzu Nasıl Oluşturursunuz?]]         | İstanbul | 6 Şubat 19:00  |
+  | [[https://www.meetup.com/TestHive/events/268357425/][Test Automation Project With Spring Framework]]                | İstanbul | 11 Şubat 19:00 |
+  | [[https://www.meetup.com/Mekansal-Zeka/events/267511327/][Mobil Harita Üretimi, HD-map ve Mekansal Zeka]]                | İstanbul | 13 Şubat 18:30 |
+  | [[https://www.meetup.com/Istanbul-Java-User-Group/events/267929475/][RxJava'yı legacy koda uygulamak]]                              | İstanbul | 13 Şubat 19:00 |
+  | [[https://www.meetup.com/ING-%25C4%25B0novasyon-Merkezi/events/268406663/][Yapay Zeka Okuryazarlığı]]                                     | İstanbul | 14 Şubat 18:30 |
+  | [[https://www.meetup.com/Akademi-4-0/events/268053643/][Makine Öğrenmesine Giriş - 101]]                               | İstanbul | 15 Şubat 08:30 |
+  | [[https://kommunity.com/istanbulphp/events/microservices][Microservices]]                                                | İstanbul | 15 Şubat 13:00 |
+  | [[https://www.meetup.com/GDGAnkara/events/268384563/][Python ile Programlamaya Giriş]]                               | Ankara   | 15 Şubat 11:00 |
+  |--------------------------------------------------------------+----------+----------------|
+* Diğer Haberler
+	- [[https://openai.com/][OpenAI]] ve [[https://pytorch.org/][PyTorch]] güçlerini [[https://venturebeat.com/2020/01/30/openai-facebook-pytorch-google-tensorflow/][birleştiriyor]].
+	- Google, [[https://tinygo.org/][TinyGo]] projesine [[https://mobile.twitter.com/TinyGolang/status/1223887654158307328][sponsor oldu]].
+	- GitLab'ın Mercurial destekli fork'u açık kaynak ve özgür yazılım [[https://heptapod.net/a-public-heptapod-for-free-and-open-source-software.html][olarak
+    duyuruldu]]: [[https://heptapod.net/][Heptapod]].
+	- Rust programlama dilinin 1.41.0 [[https://blog.rust-lang.org/2020/01/30/Rust-1.41.0.html][sürümü duyuruldu]].
+	- Rust takımı IDE dostu derleyicisini [[https://www.infoq.com/news/2020/01/rust-analyser-ide-support/][duyurdu]]: [[https://rust-analyzer.github.io/][Rust Analyzer]].
+	- GNU C kütüphanesinin 2.31 [[https://lists.gnu.org/archive/html/info-gnu/2020-02/msg00001.html][sürümü yayınlandı]].
+	- Elixir programlama dilinin 1.10 [[https://elixir-lang.org/blog/2020/01/27/elixir-v1-10-0-released/][sürümü yayınlandı]].
+	- JetBrains, [[https://ktor.io/][Ktor]] framework sisteminin 1.3 [[https://blog.jetbrains.com/kotlin/2020/01/ktor-1-3-release/][sürümünü yayınladı]].
+	- Google, Dagger kütüphanesinin 2.26 [[https://github.com/google/dagger/releases/tag/dagger-2.26][sürümünü yayınladı]].
+	- [[https://edgedb.com/][EdgeDB]] veritabanının 1.0 Alpha 2 [[https://edgedb.com/blog/edgedb-1-0-alpha-2/][sürümü duyuruldu]].
+	- Dağıtık veritabanı sistemi [[https://etcd.io/][etcd]], 3.4.3 [[https://etcd.io/blog/jepsen-343-results/][sürümünü yayınladı]].
+	- Unity oyun motorunun 2019.3 [[https://blogs.unity3d.com/2020/01/28/unity-2019-3-is-now-available/][sürümü duyuruldu]].
+	- Godot oyun motorunun 3.2 [[https://godotengine.org/article/here-comes-godot-3-2][sürümü duyuruldu]].
+	- Raspberry Pi'ye Vulkan [[https://www.raspberrypi.org/blog/vulkan-raspberry-pi-first-triangle/][desteği geliyor]].
+	- Derin öğrenme kütüphanesi [[https://github.com/explosion/thinc][Thinc]], v8.0.0a0 [[https://github.com/explosion/thinc/releases/tag/v8.0.0a0][sürümünü yayınladı]].
+	- Görsel bir şekilde Python kodu debug etmeye yarayan [[https://github.com/CCExtractor/vardbg][vardbg]] aracının v0.11.6
+    [[https://github.com/CCExtractor/vardbg/releases/tag/v0.11.6][sürümü yayınlandı]].
+	- Python veri analizi kütüphanesi [[https://pandas.pydata.org/pandas-docs/stable/index.html][Pandas]], 1.0.0 [[https://pandas.pydata.org/pandas-docs/stable/whatsnew/v1.0.0.html][sürümünü yayınladı]]. [[https://github.com/pandas-dev/pandas][GitHub
+    Deposu]]
+	- OpenAPIGenerator v4.2.3 [[https://github.com/OpenAPITools/openapi-generator/releases/tag/v4.2.3][çıktı]].
+* Lisans
+  #+BEGIN_CENTER
+  #+ATTR_HTML: :height 75
+  #+ATTR_LATEX: :height 1.5cm
+  [[file:../../../img/CC_BY-NC-SA_4.0.png]]
+
+  [[file:yazilim-gundemi-2020-05.org][Yazılım Gündemi - 2020/05]] yazısı [[https://erenhatirnaz.github.io][Eren Hatırnaz]] tarafından [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Creative Commons
+  Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı]] (CC BY-NC-SA 4.0)
+  ile lisanslanmıştır.
+  #+END_CENTER

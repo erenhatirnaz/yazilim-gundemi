@@ -1,0 +1,269 @@
+#+TITLE: Yazılım Gündemi - 2020/11
+#+SUBTITLE: 16-22 Mart 2020
+#+AUTHOR: Eren Hatırnaz
+#+DATE: 22 Mart 2020
+#+OPTIONS: ^:nil
+#+LANGUAGE: tr
+#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=black, filecolor=red, urlcolor=blue}
+#+LATEX_HEADER: \usepackage[turkish]{babel}
+#+HTML_HEAD: <link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+#+LATEX: \shorthandoff{=}
+
+[[file:gorseller/yazilim-gundemi-banner.png]]
+
+#+BEGIN_CENTER
+[[file:../10/yazilim-gundemi-2020-10.org][< Önceki Gündem]] | *16-22 Mart 2020* | [[file:../12/yazilim-gundemi-2020-12.org][Sonraki Gündem >]]
+
+[[https://teknoseyir.com/blog/yazilim-gundemi-2020-11][TeknoSeyir'de Oku]]
+#+END_CENTER
+
+* GitHub, npm'i [[https://github.blog/2020-03-16-npm-is-joining-github/][satın aldı]]
+  #+ATTR_HTML: :height 200
+  #+ATTR_LATEX: :height 3cm
+	[[file:gorseller/github-npm.png]]
+
+	Aslında Microsoft satın aldı destek daha doğru olur. Çünkü GitHub da 2018
+	yılında Microsoft tarafından [[https://techcrunch.com/2018/06/04/microsoft-has-acquired-github-for-7-5b-in-microsoft-stock/][satın alınmıştı]]. npm, front-end camiası için çok
+	önemli bir yere sahip. Her ne kadar Facebook tarafından geliştirilen [[https://classic.yarnpkg.com/en/][yarn]] gibi
+	bir alternatifi olsa da hala daha npm pastanın büyük bir bölümünün sahibi.
+	Hatırladığım kadarıyla Windows'da NodeJS kurduğunuzda yanında otomatik olarak
+	npm de kurulu geliyordu. Değişti mi bilmiyorum ama npm'in bu kadar çok
+	kullanılmasının bir nedeni de budur. Öncesinde açık kaynak bir proje olarak
+	başlayan süreç zamanla şirketleşme yolundan devam etti ve bu hafta da GitHub
+	tarafından satın alındı.
+
+	GitHub'ın kendi sitesindeki blogunda yayınlanan yazı ile anlaşmanın
+	gerçekleştirildiği duyuruldu. Görebildiğim kadarıyla Microsoft'un GitHub'ı
+	satın aldığı zamanki kadar büyük tepkiler (insanlar github'dan depolarını
+	taşımaya başlamıştı) yok. Belki de dünyanın şu an çok farklı bir gündemi
+	olduğundan olabilir ama yine de [[https://www.reddit.com/r/node/comments/fjocuy/npm_is_joining_github_and_is_now_owned_by/][Reddit]] ve [[https://news.ycombinator.com/item?id=22594549][HackerNews]] gibi platformlarda
+	insanların tartışma konusu oldu.
+
+	Yazıdaki önemli bir nokta önümüzdeki senelerde GitHub Packages ve npm'in
+	Private Registry özelliklerinin birleştirilecek olması. Yani ücretli olarak
+	npm'in hizmetlerinden yararlananlar ilerleyen zamanlarda GitHub Packages'e
+	geçmeye zorlanabilirler.
+
+	Her ne kadar Microsoft'un son birkaç yıldır yaptığı açık kaynağa yatırım
+	işlerini beğeniyor olsam da bu kadar büyük iki geliştirici hizmeti ve aracının
+	tek bir firmanın elinde olması beni endişelendirmiyor değil. Bu konuda siz ne
+	düşünüyorsunuz? Yorumlar bölümünde konuşalım.
+* GitHub Mobil, Beta [[https://github.blog/2020-03-17-github-for-mobile-is-now-available/][programından çıktı]]
+	Geçtiğimiz sene kasım ayında düzenlenen GitHub Universe 2019 etkinliğinde
+	duyurulan GitHub Mobile Beta Program for iOS ve bu yılın başlarında duyurulan
+	GitHub Mobile Android Beta Program haberlerinden sonra sonunda GitHub'ın mobil
+	uygulamaları Beta'dan çıktı ve herkesin kullanımına açıldı.
+
+	Github Mobile uygulamasını indirmek için:
+	 * Android: https://play.google.com/store/apps/details?id=com.github.android
+	 * iOS: https://apps.apple.com/us/app/github/id1477376905
+
+	[[file:gorseller/github-mobile.png]]
+
+	Daha önce iki işletim sistemi için de bu konuyu ele almıştık. Hatta ben direkt
+	iOS sistemindeki Beta programına kayıt olmuş ve kısa bir inceleme de yapmıştım
+	(bkz: [[file:../../2019/18/yazilim-gundemi-18.org][Yazılım Gündemi - 18]]). Android için Beta programından da bu yılın ilk
+	yazılım gündemi yazılarında (bkz: [[file:../03/yazilim-gundemi-03.org][Yazılım Gündemi - 2020/03]]) bahsetmiştim. Ben
+	iOS üzerindeki Beta programından kullanmaya devam ediyorum. GitHub'ın bu
+	eksikliği gidermesi güzel ama uygulamanın daha çok gelişmesi gerek. Örneğin şu
+	an sadece master branch'ı üzerindeki kodları görüntüleyebiliyoruz, branch
+	değiştirme özelliği uzun zamandır istenmesine rağmen henüz eklenmiş değil.
+	Bakalım, ben Beta programında kalmaya ve gelişmelerden sizleri haberdar etmeye
+	devam edeceğim.
+* Github, "yanlışlıkla" popüler JavaScript framework'ü Aurelia'nın tüm depolarını kilitledi
+	* [[https://twitter.com/eisenbergeffect/status/1240671036292485121][Konuyla ilgili Tweet]]
+
+	Başlığa "popüler" yazmamın nedeni [[https://github.com/aurelia/framework][framework'ün ana deposu]]nun yaklaşık 11.3K
+	star almış olması, yoksa ben de ismini ilk defa duyuyorum. Gerçekten ilginç
+	bir olay, Amerika merkezli bir şirket tarafından açık kaynak hale getirilmiş
+	bir yazılımın tüm GitHub depoları ([[https://aurelia.io/][Aurelia.io]] sitesi de GitHub üzerinde host
+	ediliyormuş), yine Amerika'nın yaptırımları nedeniyle herkes için erişime
+	engelleniyor. Geliştiriciler ve katkı sağlayanlar kodlarına erişemiyor.
+
+	#+CAPTION: GitHub CEO'unun [[https://news.ycombinator.com/item?id=22628961][HackerNews'deki konunun]] altında yaptığı açıklama.
+	[[file:gorseller/github-ceo-hackernews.png]]
+
+	Her ne kadar olay birkaç saat içerisinde çözümlenmiş olsa da onlarca depo'nun
+	bu kadar bir "yanlışlık" nedeniyle erişime kapatılabiliyor olması beni rahatsız
+	etti. İlk yazılım gündemi yazılarının birinde (bkz: [[file:../../2019/03/yazilim-gundemi-03.org][Yazılım Gündemi - 3]])
+	GitHub'ın, Amerika'nın ticari yaptırımlarını uygulamaya başladığından ve birçok
+	Kırım ve İran'lı geliştiricinin bu durumdan etkilendiğini konuşmuştuk. Ben
+	zaten o zamandan beri her ihtimale karşı tüm depolarımı bilgisayarıma
+	indirmiştim ve farklı yerlere yedeklemiştim ama bu vesile ile size tekrardan
+	hatırlamış olayım. Levent Abi'nin dediği gibi: "Bulut dediğin başkasının
+	bilgisayarıdır. Gün gelir de 'Sana hizmet vermiyorum kardeşim' derse, öylece
+	ortada kalırsın!"
+* JDK 14 GA [[https://jdk.java.net/14/][yayınlandı]]
+	Geçtiğimiz aylar boyunca Release Candidate sürümleri yayınlanan JDK 14 sürümü
+	sonunda genel uygunluk (general availability) duruma geldi ve bu hafta
+	içerisinde yayınlandı. JDK 14 ile gelen birkaç özelliği incelleyelim.
+
+** [[https://openjdk.java.net/jeps/305][JEP 305]]: Pattern Matching for instanceof (Preview)
+	 Henüz ön-izleme durumunda olan bu özellik sayesinde aşağıdaki =instanceof=
+	 kullanımı daha sade bir hal aldı.
+
+   #+ATTR_LATEX: :options frame=lines, linenos, label=Java
+	 #+BEGIN_SRC java
+     if (obj instanceof String) {
+         String str = (String) obj;
+         // str değişkeni ile işlemler
+     }
+	 #+END_SRC
+	 Bu kullanım çok fazla yaygın fakat artık bu satırları aşağıdaki şekilde tek
+	 satıra indirebileceğiz:
+   #+ATTR_LATEX: :options frame=lines, linenos, label=Java
+	 #+BEGIN_SRC java
+     if(obj instanceof String str) {
+         // str burada kullanılabilir
+     } else {
+         // str burada kullanılamaz
+     }
+	 #+END_SRC
+** [[https://openjdk.java.net/jeps/359][JEP 356]]: Records (Preview)
+	 Java ya da nesne tabanlı herhangi bir dille biraz olsun haşır neşir
+	 olmuşsanız aşağıdaki sınıf yapısı size de çok tanıdık gelecektir:
+   #+ATTR_LATEX: :options frame=lines, linenos, label=Java
+	 #+BEGIN_SRC java
+     public class Kisi {
+         private String isim;
+         private String soyisim;
+
+         public Kisi(String isim, String soyisim) {
+             this.isim = isim;
+             this.soyisim = soyisim;
+         }
+
+         public String getIsim() {
+             return this.isim;
+         }
+
+         public void setIsım(String isim) {
+             this.isim = isim;
+         }
+
+         public String getSoyisim() {
+             return this.soyisim;
+         }
+
+         public void setSoyisim(String soyisim) {
+             this.soyisim = soyisim;
+         }
+     }
+	 #+END_SRC
+	 Gördüğünüz gibi basit bir kişi bilgisi tutmak için bile bu kadar kod yazmamız
+	 gerekiyor (elbette bu yapının böyle olmasının çok doğru nedenleri mevcut) ama
+	 bu JDK sürümü ile birlikte hayatımıza giren yeni tanımlama şeklide =Records=
+	 ile yukarıdaki tüm kodları şu şekilde tek satıra indirebilirsiniz:
+   #+ATTR_LATEX: :options frame=lines, linenos, label=Java
+	 #+BEGIN_SRC java
+     record Kisi(String isim, String soyisim) { }
+	 #+END_SRC
+	 Artık bunu da aynı sınıfmış gibi kullanabilirsiniz:
+   #+ATTR_LATEX: :options frame=lines, linenos, label=Java
+	 #+BEGIN_SRC java
+     Kisi eren = new Kisi("Eren", "Hatırnaz");
+
+     String isim = eren.isim();
+     String soyisim = eren.soyisim();
+	 #+END_SRC
+	 Fakat bu özellim hem şu an ön-izleme durumunda, yani henüz çalışan
+	 kodlarınıza eklemek için çok erken, hem de bazı kısıtlamaları var:
+	  * Record kendisiyle birlikte içerisindeki tüm veri alanlarını 'final' olarak
+      işaretliyor. Dolayısıyla bu sınıfdan başka bir sınıf türetemiyor ve bir
+      obje oluşturduktan sonra değişkenleri üzerinde değişiklik yapamıyoruz.
+
+		Bunun gibi Record özelliğine ait diğer kurallar için alt konu başlığına
+		eklediğim bağlantıya tıklayabilir ya da Rahman Usta tarafından kodedu
+		sitesinde yazılmış [[https://kodedu.com/2020/01/javada-recordlar/][bu yazıyı]] okuyabilirsiniz.
+
+	JDK 14 ile gelen diğer özellikler için konu başlığına eklediğim bağlantıya
+	tıklayabilir ya da 28 Mart tarihinde online olarak gerçekleşecek bu Webinere
+	kayıt olabilirsiniz: [[https://istanbul-jug.org/2020/03/online-java-14-webineri/][Online Java 14 Webineri - İstanbul Java User Group]].
+* Eclipse 4.15 (2020-03) [[https://www.eclipse.org/eclipse/news/4.15/][sürümü yayınlandı]]
+	* [[https://www.youtube.com/watch?v=XoUvOTiVaDc][Konuyla ilgili YouTube videosu]]
+
+	Eclipse 2020-03 sürümüne JDK 14 desteği eklemek için Eclipse Marketplace
+	üzerinden şu eklentiyi kurabilirsiniz: [[https://marketplace.eclipse.org/content/java-14-support-eclipse-2020-03-415][Java 14 Support for Eclipse 2020-03
+	(4.15)]]
+* .NET 5 Preview 1 [[https://devblogs.microsoft.com/dotnet/announcing-net-5-0-preview-1/][sürümü duyuruldu]]
+	Microsoft'un ".NET'in geleceği" olarak isimlendirdiği ve klasik .NET Framework
+	ile .NET Core'un birleşmiş hali .NET 5 sürümünün ilk ön-izleme sürümü bu hafta
+	içerisinde yayınlandı. Preview 1 ile birkaç performans iyileştirmesi de içeren
+	güncellemeler herkes tarafından erişilebilir durumda. Elbette production
+	ortamında çalışan uygulamalarınızı hemen geçirmek büyük risk olacaktır ama
+	kişisel projeleriniz için ufaktan kullanmaya ve Microsoft'a geri bildirim
+	göndermeye başlayabilirsiniz.
+* Mozilla, Firefox'dan FTP [[https://www.ghacks.net/2020/03/19/mozilla-will-remove-ftp-support-in-the-firefox-web-browser/][desteğini kaldırıyor]]
+	2020 Haziran ayında yayınlanması planlanan Firefox 77 Stable sürümü ile
+	Mozilla takımı, Firefox içerisinden FTP desteğini "varsayılan olarak kapalı"
+	hale hale getirecek ve sonraki versiyonlarda ise desteği tamamen kaldırmayı
+	planlıyor. Tarayıcı üzerinden FTP kullanmak uzun zaman pek tercih edilen bir
+	şey değil zaten, o yüzden bu desteğin kalkacak olması çok da sürpriz olmadı.
+	Zaten Firefox 61 sürümüyle, web siteleri içerisinde yer alan ftp:// uzaktılı
+	içerikleri (resim, müzik vb.) engellemişti. Firefox'un bu desteği
+	kaldırmasının ardında ise güvenlik sorunları yatıyor. FTP, kullanıcı adı ve
+	şifre dışında iletişimle ilgili bir güvenlik katmanı barındırmayan bir
+	protokol olduğu için trafik kolayca izlenebiliyor. Google'un Chrome tarayıcısı
+	da aynı şekilde desteğini sonlandırmaya hazırlanıyor. O da tarayıcıdaki ftp
+	uzantılı bağlantıları sistemde yüklü olan ftp istemcisine yönlendirecek. Bir
+	mail adresine tıkladığınız Outlook vb. programların açılması gibi.
+
+	#+CAPTION: Yine de Firefox üzerinde ftp kullanmakta ısrarcıysanız about:config
+  #+CAPTION: sayfasına girip, =network.ftp.enabled= değişkenini true olarak
+  #+CAPTION: değiştirebilirsiniz
+	[[file:gorseller/firefox-ftp.png]]
+
+	Ayrıca bu hafta içerisinde ilginç de bir olay gerçekleşti: Coronavirüs
+	nedeniyle Firefox ve Chrome, [[https://www.ghacks.net/2020/03/21/mozilla-re-enables-tls-1-0-and-1-1-because-of-coronavirus-and-google/][TLS 1.0 ve TLS 1.1'e tekrar destek vermeye
+	başladı]]. HTTPS bağlantıların gerçeklemesini sağlayan TLS protokolünün bu eski
+	sürümleri aslında iki tarayıcıdan da kaldırılmıştı fakat bu hafta içerisinde bu
+	değişiklikler geri alındı. Çünkü bazı devlet siteleri hala daha eski
+	protokolleri kullandığı için kullanıcıların erişememesi söz konusu olabilirdi.
+	Coronavirüs gündemdeyken bu tarz protokol versiyonu yükseltme işleri de öncelik
+	kapsamında olmadığı için Firefox ve Chrome'da böyle bir şey yapma gereği duydu.
+
+	#+CAPTION: Firefox 74.0 sürümünün değişiklik notları sayfasındaki geri alma duyurusu
+	[[file:gorseller/firefox-chrome-tls10-11.png]]
+  #+LATEX: \newpage
+* Windows Terminal Preview v0.10 [[https://devblogs.microsoft.com/commandline/windows-terminal-preview-v0-10-release/][sürümü yayınlandı]]
+	Microsoft'un Terminal takımı geliştirmelere devam ediyor. Bu hafta yayınlanan
+	sürümle birlikte Windows'un yeni terminal uygulamasının ön-izleme v0.10
+	sürümüne fare desteği eklendi. Artık destekleyen konsol uygulamaları üzerinde
+	fare ile de giriş yapılabilecek.
+
+	[[file:gorseller/windows-terminal-fare.gif]]
+
+	Eklenen diğer özellik ve geliştirmeler için konu başlığına eklediğim
+	bağlantıya tıklayabilirsiniz.
+* Diğer Haberler
+	- Koronavirüs nedeniyle iptal edilen ve ertelenen etkinlikler:
+		- Google Cloud Next '20: Digital Connect [[https://cloud.google.com/blog/topics/inside-google-cloud/postponing-google-cloud-next20-digital-connect][etkinliği ertelendi]].
+		- Google I/O 2020 [[https://www.theverge.com/2020/3/20/21188669/google-i-o-canceled-2020-coronavirus-pandemic][tamamen iptal edildi]].
+		- PyCon US 2020 [[https://pycon.blogspot.com/2020/03/pycon-us-2020-in-pittsburgh.html?m=1][iptal edildi]].
+	- Visual Studio 2019 version 16.5 [[https://devblogs.microsoft.com/visualstudio/visual-studio-2019-version-16-5/][yayınlandı]].
+	- Facebook, kendi tarih-saat [[https://engineering.fb.com/production-engineering/ntp-service/][sunucularını açtı]].
+	- Docker'a GitHub Actions [[https://www.docker.com/blog/first-docker-github-action-is-here/][desteği geldi]].
+	- DirectX 12 Ultimate [[https://devblogs.microsoft.com/directx/announcing-directx-12-ultimate/][sürümü yayınlandı]].
+	- Prettier aracının 2.0 [[https://prettier.io/blog/2020/03/21/2.0.0.html][sürümü yayınlandı]].
+	- PHP programlama dilinin 3 ayrı sürümüne güncelleme geldi:
+		- PHP 7.4.4 [[https://www.php.net/ChangeLog-7.php#7.4.4][yayınlandı]].
+		- PHP 7.3.16 [[https://www.php.net/ChangeLog-7.php#7.3.16][yayınlandı]].
+		- PHP 7.2.29 [[http://www.php.net/ChangeLog-7.php#7.2.29][yayınlandı]].
+	- D programlama dilinin 2.091.0 [[https://dlang.org/blog/2020/03/17/d-2-091-0-released/][sürümü yayınlandı]].
+	- Julia programlama dilinin v1.4.0 [[https://discourse.julialang.org/t/julia-v1-4-0-has-been-released/36324][sürümü yayınlandı]].
+	- TensorFlow 2.2.0-rc1 [[https://github.com/tensorflow/tensorflow/releases/tag/v2.2.0-rc1][sürümü yayınlandı]].
+	- [[https://streamnative.io/blog/tech/2020-03-17-announcing-the-apache-pulsar-2020-user-survey-report/][Apache Pulsar 2020 Kullanıcı Anketi Raporu]] yayınlandı.
+	- GraphQLize Alpha [[https://www.graphqlize.org/blog/announcing-graphqlize-alpha/][duyuruldu]].
+	- Yeni bir Racket kütüphanesi [[https://dedbox.github.io/2020/03/template-macros-initial-release.html][duyuruldu]]: [[https://github.com/dedbox/racket-template][Template Macros]].
+	- Tokie aracının 11.0 [[https://github.com/XAMPPRocky/tokei/releases/tag/v11.0.0][sürümü yayınlandı]].
+	- Ionic CLI aracının 6.3.0 [[https://github.com/ionic-team/ionic-cli/releases/tag/%2540ionic%252Fcli%25406.3.0][sürümü yayınlandı]].
+* Lisans
+  #+BEGIN_CENTER
+  #+ATTR_HTML: :height 75
+  #+ATTR_LATEX: :height 1.5cm
+  [[file:../../../img/CC_BY-NC-SA_4.0.png]]
+
+  [[file:yazilim-gundemi-2020-11.org][Yazılım Gündemi - 2020/11]] yazısı [[https://erenhatirnaz.github.io][Eren Hatırnaz]] tarafından [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Creative Commons
+  Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı]] (CC BY-NC-SA 4.0)
+  ile lisanslanmıştır.
+  #+END_CENTER

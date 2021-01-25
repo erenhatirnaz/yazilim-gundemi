@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 22:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi - 2020/05</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi - 2020/05
+<br />
+<span class="subtitle">27 Ocak - 2 Şubat 2020</span>
+</h1>
+<div id="table-of-contents">
+<h2>İçindekiler</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org16191d1">1. CWA, Teknoloji ve Oyun sektörü çalışanlarını örgütlemek istiyor</a></li>
+<li><a href="#org72b5de9">2. Cloudflare: "JavaScript kütüphaneleri projeye eklendikten sonra neredeyse hiç güncellenmiyor"</a></li>
+<li><a href="#org2da354c">3. GitHub, illegal Instagram-API deposunu kilitledi</a></li>
+<li><a href="#orgad01711">4. Qt 2020 yılına değişikliklerle girdi</a></li>
+<li><a href="#org5180a5e">5. Go 1.15 sürümü için planlar yapıldı</a></li>
+<li><a href="#org1c55f64">6. RStudio, Kamu Yararına Şirket oldu</a></li>
+<li><a href="#org66f7f9f">7. Google App Maker hizmetini kapatıyor</a></li>
+<li><a href="#org862231c">8. Ekosistem ve topluluk anketleri</a>
+<ul>
+<li><a href="#orgdd5ccef">8.1. JetBrains Developer Ecosystem Survey 2020</a></li>
+<li><a href="#orge0ee155">8.2. Yazılım Geliştiricileri Maaş Anketi 2020</a></li>
+</ul>
+</li>
+<li><a href="#org7c8aa24">9. Yaklaşan Etkinlikler</a></li>
+<li><a href="#org42b04a8">10. Diğer Haberler</a></li>
+<li><a href="#orgd7ba41d">11. Lisans</a></li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gundemi-banner.png" alt="yazilim-gundemi-banner.png" />
+</p>
+</div>
+
+<div class="org-center">
+<p>
+<a href="../04/yazilim-gundemi-2020-04.html">&lt; Önceki Gündem</a> | <b>27 Ocak - 2 Şubat 2020</b> | <a href="../06/yazilim-gundemi-2020-06.html">Sonraki Gündem &gt;</a>
+</p>
+
+<p>
+<a href="https://teknoseyir.com/blog/yazilim-gundemi-2020-05">TeknoSeyir'de Oku</a>
+</p>
+</div>
+
+<div id="outline-container-org16191d1" class="outline-2">
+<h2 id="org16191d1"><span class="section-number-2">1</span> CWA, Teknoloji ve Oyun sektörü çalışanlarını <a href="https://gizmodo.com/cwa-launches-new-effort-to-unionize-game-and-tech-worke-1840861878">örgütlemek istiyor</a></h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Amerika'daki büyük işçi sendikalarından biri olan <a href="https://en.wikipedia.org/wiki/Communications_Workers_of_America">The Communications Workers
+of America</a>, şimdi de teknoloji ve oyun sektörü çalışanlarını bünyesine katmak
+ve onların da sorunlarını dile getirmek için paçaları sıvadı. Bu sendika
+hakkında pek bir bilgim yok ama bu haber özelinde konuşmak istediklerim olduğu
+için gündeme aldım bunu.
+</p>
+
+<p>
+Örgütlü mücadele her zaman için ilgili sektördeki sorunların dile
+getirilebilmesi ve çözüme ulaştırılabilmesi açısından en iyi yöntemlerden
+birisidir. Konuyla ilgili atasözünün de dediği gibi: "Bir elin nesi var, iki
+elin sesi var". Ülkemizde maalesef pek fazla iyi örneklerine rastlayamasak da
+internet kullanıcıları olarak hepimizi etkileyen Adil Kullanım Noktası'nın
+(AKN) kaldırılması olayının arkasında örgütlü bir mücadele var: <a href="https://internettekalite.com/">İnternette
+Kalite Hareketi</a>. Bu minvalde yazılım geliştirme sektörü olarak da
+sorunlarımızı dile getirebileceğimiz, çözüm yolları için uğraşlar
+verebileceğimiz sendikalara ya da meslek örgütlerine ihtiyacımız var ve
+ilerlediğimiz gelecekte bu ihtiyacın daha da çok olacağını düşünüyorum.
+Ayrımcılıklar, fazla çalışma saatleri ve düşük ücretler, mobbing gibi sorunlar
+hemen her sektörde karşımıza çıksa da, etik olmayan uygulamalar (şirketin
+kullanıcıların verilerini izni olmadan kullanması vb.) ve hükumetlerle yapılan
+anlaşmalar gibi sektörümüze özel sorunlar da mevcut.
+</p>
+
+<p>
+Türkiye'de benim bildiğim kadarıyla bizim alanımızı kapsayan meslek örgütü
+olarak <a href="https://www.bmo.org.tr/">Bilgisayar Mühendisleri Odası</a> var. Faaliyetleri hakkında pek fazla
+bilgim olmasa da <a href="https://www.bmo.org.tr/2020/01/23/mebin-teknik-liselerde-yazilim-egitimi-yontemi-cagdisidir/">Delphi eğitimi protokolü için bildiri</a>yle farkına vardığım bir
+oluşum oldu. Aslında önceden de ismini duymuştum fakat pek bakma fırsatım
+olmamıştı. Sayfalarını incelediğimde "<a href="https://www.bmo.org.tr/en-az-ucret/">En Az Ücret Tanımları</a>" sayfası dikkatimi
+çekti. BMO, 2018 yılından beri her yıl "Mühendislik Asgari Ücreti"
+belirliyorlarmış. 2020 yılı için belirlenen Mühendislik Asgari Ücreti ise
+5.000TL imiş. Sektöre ne kadar etkisi vardır bilinmez ama ben yine de bu tarz
+örgütlü faaliyetlerin olması gerektiğini düşünüyorum. Mesleki standartların
+belirlenmesi, haklarımızı aramak ve talep etmek için bu tarz örgütlere üye
+olmakta ve aktif görev almakta fayda var. Ben de şahsen işe girdiğimde BMO'ya
+üye olmayı düşünüyorum.
+</p>
+
+<p>
+Bu konu hakkında siz ne düşünüyorsunuz? Sizce teknoloji sektörü çalışanları
+olarak nasıl örgütlenmeliyiz? Haklarımızı nasıl aramalıyız? Yorumlar bölümünde
+konuşalım.
+</p>
+</div>
+</div>
+<div id="outline-container-org72b5de9" class="outline-2">
+<h2 id="org72b5de9"><span class="section-number-2">2</span> Cloudflare: "<a href="https://blog.cloudflare.com/javascript-libraries-are-almost-never-updated/">JavaScript kütüphaneleri projeye eklendikten sonra neredeyse hiç güncellenmiyor</a>"</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Dünya çapında bir çok yerde veri merkezinin olması dolayısıyla CDN hizmetini
+de çok kolay verebilen <a href="https://www.cloudflare.com/">Cloudflare</a> firması, bu hafta alt hizmeti olan <a href="https://cdnjs.com/">CDNJS</a> ile
+ilgili bir analiz yayınladı. Bu analiz tam olarak bu haberin başlığındaki
+cümleyi içeriyor. Yani geliştiriciler olarak bir JavaScript kütüphanesini bir
+kere projeye ekliyoruz sonra güncellemelerle pek ilgilenmiyoruz.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/cloudflare-jquery-1.png" alt="cloudflare-jquery-1.png" />
+</p>
+<p><span class="figure-number">Şekil 2: </span>CDNJS sunucusuna bir günde gelen istek sayısına göre jQuery sürümleri grafiği</p>
+</div>
+
+<p>
+Grafikte sizin de kolayca görebileceğiniz üzere Mayıs 2019 ayında jQuery'nin
+yeni versiyonu olan 3.4.1 çıkmış olmasına rağmen diğer eski sürümlerin
+popülaritesini düşürememiş. En çok istek alan jQuery sürümü ise 3.3.1 olmuş.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/cloudflare-jquery-2.png" alt="cloudflare-jquery-2.png" />
+</p>
+<p><span class="figure-number">Şekil 3: </span>Hatta 2013 yılında yayınlanan jQuery 1.10.0 sürümü bile hata hatırı sayılır derecede istek alıyor</p>
+</div>
+
+<p>
+Elbette sisteminiz ilgili sürümlerde sorunsuz çalışıyorsa ve ihtiyaçlarınızı
+karşılıyorsa bir üst sürüme geçmek için efor sarf etmenize gerek yok
+("çalışıyorsa dokunma") ama yine de güvenlik açıkları vb. nedenlerden dolayı
+projenize eklediğiniz her bağımlılığın sürümlerini takibe almakta fayda var.
+</p>
+</div>
+</div>
+<div id="outline-container-org2da354c" class="outline-2">
+<h2 id="org2da354c"><span class="section-number-2">3</span> GitHub, illegal Instagram-API <a href="https://github.com/github/dmca/blob/master/2020/01/2020-01-22-facebook.md">deposunu kilitledi</a></h2>
+<div class="outline-text-2" id="text-3">
+
+<div class="figure">
+<p><img src="gorseller/github-instagram-api.png" alt="github-instagram-api.png" />
+</p>
+<p><span class="figure-number">Şekil 4: </span>İlgili <a href="https://github.com/mgp25/Instagram-API">GitHub sayfası</a>na girince sizi karşılayan sayfa</p>
+</div>
+
+<p>
+Instagram platformunun resmi olarak biz geliştiricilere sunduğu bir API
+sistemi olmadığı için çoğu kişi GitHub'da Mgp25 nickli kullanıcının
+yayınladığı resmi olmayan, PHP ile yazıldığını hatırladığım (yanlış hatırlıyor
+da olabilirim) Instagram-API isimli kütüphaneyi kullanıyordu. Fakat geçtiğimiz
+hafta (bu hafta gündem oldu) GitHub, Facebook'un isteği doğrultusunda bu
+GitHub deposunu kilitledi. Artık deponun sayfasına girmeye çalıştığınızda sizi
+yukarıdaki ekran görüntüsündeki gibi bir açıklama karşılıyor (bu durum deponun
+forkları için de geçerli). Açıkcası kullanım amacı kişiden kişiye değişiklik
+gösterse de çoğu kişi bu kütüphaneyi maalesef beğenme ve takip etme botları
+gibi amaçlar için kullandığından ve bazı telif hakkı sorunlarına yol açtığı
+için Facebook'u pek de haksız bulmuyorum.
+</p>
+
+<p>
+Yapılan işlemlerle ilgili daha detaylı ve hukuki bilgiler için konu başlığına
+eklediğim bağlantıya bakabilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-orgad01711" class="outline-2">
+<h2 id="orgad01711"><span class="section-number-2">4</span> Qt 2020 yılına <a href="https://www.qt.io/blog/qt-offering-changes-2020">değişikliklerle girdi</a></h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Popüler platformlar-arası (cross-platform) uygulama geliştirme
+framework'lerinden olan Qt, bu hafta bloglarında yayınladıkları yazı ile
+fiyatlandırma ve lisanslamayla ilgili değişikliklere gittiklerini duyurdular.
+Maalesef değişiklikler pek bizim açımızdan olumlu yönde değil. Şöyle ki:
+</p>
+
+<ul class="org-ul">
+<li>Artık Qt binary'lerini indirmek için Qt hesabınız olması gerek.</li>
+<li>Uzun-dönem destekli (LTS - Long-term-supported) sürümler ve çevrimdışı
+kurumlar (offline installer) artık sadece ticari lisans sahiplerine
+sunulacak.</li>
+<li>Startuplar ve küçük ölçekli şirketler için Qt fiyatlandırması yıllık $499
+oldu.</li>
+</ul>
+
+<p>
+Yayınladıkları blog yazısında elbette tüm bu değişiklikler için mantıklı
+sebepler bulduklarını iddia ediyorlar. Örneğin ilk maddeyi şöyle savunmuşlar.
+Qt açık kaynak kullanıcılarının bile artık Qt binary indirmesi için "Qt
+Account" açması gerekiyor. Çünkü bu şekilde kendilerinin servislerini en iyi
+şekilde kullanabilecek ve katkı sağlayabilecekmişiz. Ayrıca bu sayede hata
+raporları, forumlar, kod incelemeleri vb birçok şeye de erişebilecekmişiz.
+Kısaca "kimler qt indiriyor ve kullanıyor elimizde tam listesi olsun
+istiyoruz" demiyorlar da lafı dolandırıyorlar işte. Qt açık kaynağı
+kodlarından derleyip kullanabilirsiniz tabii ki ama kolay olsun direkt binary
+indireyim derseniz "Qt Account" şart.
+</p>
+
+<p>
+LTS sürümlerinin ve çevrimdışı kurulumların da sadece ticari lisans
+sahiplerine verilmesini de açık kaynak kullanıcıların yeni sürümlere daha iyi
+adapte olabilmesi için yapıyoruz demişler ama kendilerinin de açıkladığı gibi
+asıl mesele iş modellerini değiştirmek istemeler ve ticari lisansı firmalar
+için daha cazip kılmak istemeleri. Bunu biraz anlayışla karşılayabiliyorum
+çünkü ticari bir şirket oldukları için bu tarz kaygıları olması normal.
+</p>
+
+<p>
+Kısaca haberi özetleyecek olursak Qt, açık kaynak kullanıcıları için biraz
+vanayı kısıyor. Açık kaynak kullanıcıları için kötü haber maalesef. Neyse, en
+azından tamamen ücretli hale gelmedi.
+</p>
+</div>
+</div>
+<div id="outline-container-org5180a5e" class="outline-2">
+<h2 id="org5180a5e"><span class="section-number-2">5</span> Go 1.15 sürümü için <a href="https://blog.golang.org/go1.15-proposals">planlar yapıldı</a></h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Go programlama dili gün geçtikçe gelişmeye ve sürüm atlamaya devam ediyor. Bu
+hafta yayınladıkları blog yazısı ile Go takımı Şubat ayı içerisinde bir
+aksilik olmazsa, şu an beta sürecinde olan 1.14 sürümünü RC1 etiketi ile
+yayınlayacaklarını duyurmuşlar. Aynı zamanda bir sonraki sürüm olan 1.15 için de
+bazı kararların verilmesine başlamışlar. Bu yılın Ağustos ayında yayınlanması
+planlanan bu sürüm üzerinde çalışmak için GitHub üzerinden gelen şu üç öneriyi
+seçmişler:
+</p>
+
+<ul class="org-ul">
+<li><a href="https://golang.org/issue/32479">#32479</a>: Diagnose string(int) conversion in <code>go vet</code>.</li>
+<li><a href="https://golang.org/issue/4483">#4483</a>: Diagnose impossible interface-interface type assertions in <code>go vet</code>.</li>
+<li><a href="https://golang.org/issue/28591">#28591</a>. Constant-evaluate index and slice expressions with constant strings
+and indices.</li>
+</ul>
+
+<p>
+Görüldüğü üzere daha çok Go dilinin komut satırı aracı olan <code>go vet</code> üzerine
+odaklanmışlar gibi gözüküyor. <code>go vet</code> aracı vermiş olduğunuz .go uzantılı
+dosyayı inceliyor ve duruma göre size hata ve uyarı veriyor. Her ne kadar
+planlar aşağı yukarı yapılmış gibi gözükse de Go takımı 1.14 sürümünün
+yayınlanmasından biraz sonra geliştirmeye başlayacağı için 1.15 sürümü için
+tartışmalara katılabilir ve yeni önerilerde bulunabilirsiniz. Henüz kapı tam
+kapanmamış yani anlayacağız.
+</p>
+
+<p>
+Üzerinde çalışılması planlanan özelliklerin ve sürecin detayları için konu
+başlığına eklediğim blog yazısına bakabilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-org1c55f64" class="outline-2">
+<h2 id="org1c55f64"><span class="section-number-2">6</span> RStudio, <a href="https://blog.rstudio.com/2020/01/29/rstudio-pbc/">Kamu Yararına Şirket oldu</a></h2>
+<div class="outline-text-2" id="text-6">
+<p>
+<a href="https://www.r-project.org/">R programlama dili</a> her ne kadar sektörel yazılımlarda pek tercih edilmese de
+veri bilimi ve özellikle de istatistik alanında çalışan akademisyenlerin
+gözdesi olmuş durumda. Çoğumuz R dilinin IDE'si sayılabilecek <a href="https://rstudio.com/">RStudio</a>
+yazılımını aslında dilin bir parçası sanıyoruz. Hatta ben de bu haberle
+karşılaşana kadar öyle sanıyordum fakat RStudio aslında ayrıca geliştirilen
+bir araç, hatta şirketmiş. İşte bu şirket, bu hafta bloglarında yayınladıkları
+yazı ile birlikte bir "<a href="https://en.wikipedia.org/wiki/Public-benefit_corporation">Public Benefit Corparation</a> (PBC - Kamu Yararına
+Şirket)" haline gelmiş. Sanırım Türkiye'de olmayan bir şirket türü, biraz
+detaylarını araştırmaya çalıştım ama pek fazla bir şey anladığım söylenemez.
+Yine de bizim alanımızla ilgili bir yazılım üreten bir şirketin dönüşmesi
+olduğu için gündeme almak istedim.
+</p>
+
+<p>
+Bundan sonraki ilerleyecekleri yolla ilgili detaylı bilgilere konu başlığına
+eklediğim bağlantıyı inceleyebilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-org66f7f9f" class="outline-2">
+<h2 id="org66f7f9f"><span class="section-number-2">7</span> Google App Maker <a href="https://support.google.com/a/answer/9682494?hl=en">hizmetini kapatıyor</a></h2>
+<div class="outline-text-2" id="text-7">
+<p>
+Gün geçmiyor ki Google bir ürününü ya da hizmetini <a href="https://killedbygoogle.com/">Google Mezarlığı</a>na
+göndermesin. Bu hafta da G Suite isimli işletmeler için çeşitli hazır çözümler
+içeren paketin içerisindeki App Maker hizmetini kapacağını duyurdu. İsminden
+anladığım kadarıyla işletmeler için kod yazmadan basit mobil uygulamalar
+oluşturmaya yarayan bir hizmetti. Geçtiğimiz haftalardaki bir yazılım gündemi
+yazısının (bkz: <a href="../03/yazilim-gundemi-2020-03.html">Yazılım Gündemi - 2020/03</a>) "Diğer Haberler" bölümünde
+Google'ın, kod yazmadan uygulama geliştirme aracı olan AppSheet'i satın
+aldığını yazmıştım. Dolayısıyla böyle bir gelişme bizim için pek sürpriz
+olmadı.
+</p>
+
+<p>
+Bu hizmeti hemen kapatmıyorlar tabii ki ama ufaktan fişini çekmeye
+hazırlanıyorlar. Süreç bu şekilde ilerleyecekmiş:
+</p>
+
+<ul class="org-ul">
+<li><b>27 Ocak 2020</b>: Var olan uygulamalar çalışmaya devam edecek fakat App Maker
+hizmetinin geliştirilmesine devam edilmeyecek. Kritik hatalar hâlâ mevcut.</li>
+<li><b>15 Nisan 2020</b>: Geliştiriciler bu tarihten itibaren yeni App Maker
+uygulaması oluşturamayacaklar.</li>
+<li><b>19 Ocak 2021</b>: Var olan uygulamalar çalışmayacak. App Maker verileriniz
+Cloud SQL üzerinde değişmeden duracak ve Google Cloud Platform
+hesabınızının poliçelerini takip etmeye devam edecek. Son cümleyi ben de
+tam anlamadım fakat sanırım GCP kapsamında bazı ücretlendirmeler fatura
+edilebilir demek istiyorlar.</li>
+</ul>
+
+<p>
+Yani anlayacağız Google yeni satın aldığı bir şirketin çözümünü kendi
+sistemine entegre ediyor ve kendi çözümünü de kullanımdan kaldırıyor. Dağdan
+gelen bağdakini kovdu yani. Konu başlığına eklediğim bağlantıda da zaten
+Google, App Maker alternatifi olarak AppSheet'i göstermiş ve oraya geçilmesini
+tavsiye etmiş. Eğer sistemi kullanıyorsanız konu başlığındaki bağlantıyı
+mutlaka okuyun ve aksiyon almaya başlayın.
+</p>
+</div>
+</div>
+<div id="outline-container-org862231c" class="outline-2">
+<h2 id="org862231c"><span class="section-number-2">8</span> Ekosistem ve topluluk anketleri</h2>
+<div class="outline-text-2" id="text-8">
+</div>
+<div id="outline-container-orgdd5ccef" class="outline-3">
+<h3 id="orgdd5ccef"><span class="section-number-3">8.1</span> <a href="https://surveys.jetbrains.com/s3/developer-ecosystem-survey-2020-sh">JetBrains Developer Ecosystem Survey 2020</a></h3>
+<div class="outline-text-3" id="text-8-1">
+
+<div class="figure">
+<p><img src="gorseller/jetbrains-anket.png" alt="jetbrains-anket.png" />
+</p>
+</div>
+
+<p>
+JetBrains'in her yıl düzenli olarak yaptığı geliştirici ekosistemi anketi bu
+yılda katılıma açıldı. Diğer anketlerden farklı olaran JetBrains'in ekonomik
+gücü olduğu için katılımcılardan rastgele kişilere ödüller de (MacBook Pro,
+$300'lık Amazon hediye kartı ve JetBrains Sürpriz Hediye Paketi) veriyor. Ben
+nasıl olsa çıkmaz diyerek MacBook Pro'yu seçtim. Anket biraz uzun 20-25
+dakika sürebiliyor ama isterseniz kaydedip sonra da kaldığınız yerden
+doldurmaya devam edebiliyorsunuz. Geçtiğimiz senenin anket sonuçları için:
+<a href="https://www.jetbrains.com/lp/devecosystem-2019/">The State of Developer Ecosystem 2019</a>.
+</p>
+</div>
+</div>
+<div id="outline-container-orge0ee155" class="outline-3">
+<h3 id="orge0ee155"><span class="section-number-3">8.2</span> <a href="https://docs.google.com/forms/d/e/1FAIpQLSf-DvTpaz4oSPDMghdpHutdoY1Pn_YqVa8JRLV2tPIiQcM3BA/viewform">Yazılım Geliştiricileri Maaş Anketi 2020</a></h3>
+<div class="outline-text-3" id="text-8-2">
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gelistirici-maas-anketi.png" alt="yazilim-gelistirici-maas-anketi.png" />
+</p>
+</div>
+
+<p>
+Twitter'daki <a href="https://twitter.com/oncekiyazilimci">oncekiyazilimci</a> nickli parodi hesabının 2 yıldır düzenli olarak
+yaptığı bir anket çalışması. Ankete katılım 31 Mart 2020 tarihine kadar devam
+edecekmiş. Önceki yılların anket sonuçları için bu sayfaları ziyaret
+edebilirsiniz:
+</p>
+<ul class="org-ul">
+<li><a href="https://medium.com/@oncekiyazilimci/yaz%C4%B1l%C4%B1mc%C4%B1-maa%C5%9Flar%C4%B1-2019-f0e535d736a3">Yazılımcı Maaşları | 2019</a></li>
+<li><a href="https://medium.com/@oncekiyazilimci/yaz%C4%B1l%C4%B1mc%C4%B1-maa%C5%9Flar%C4%B1-c312a05df5a6">Yazılımcı Maaşları | 2018</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org7c8aa24" class="outline-2">
+<h2 id="org7c8aa24"><span class="section-number-2">9</span> Yaklaşan Etkinlikler</h2>
+<div class="outline-text-2" id="text-9">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" width="100%">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Etkinlik İsmi</th>
+<th scope="col" class="org-left">Yeri</th>
+<th scope="col" class="org-left">Tarihi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/Istanbul-Spring-Meetup/events/267716831/">Spring Boot uygulamalarında derin Elasticsearch kullanımı</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">3 Şubat 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/trendyol/events/267805404/">Cloud Native Uygulamalarda GitLab + CI ile GitOps Pratikleri</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">4 Şubat 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/python-istanbul/events/268319431/">Python Saati 101 - The Zen of Software Developer</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">4 Şubat 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/GDG-Cloud-Istanbul/events/268195069/">Google Cloud Days 3 - Production-Scale ML Platform on GCP</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">5 Şubat 18:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/kodluyoruz/events/kanser-tedavisinde-derin-ogrenme-yontemlerinin-kullanimi">Kanser Tedavisinde Derin Öğrenme Yöntemlerinin Kullanımı</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">6 Şubat 18:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/IBMCloudTR/events/268323729/">Watson ile Kendi Chatbot'unuzu Nasıl Oluşturursunuz?</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">6 Şubat 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/TestHive/events/268357425/">Test Automation Project With Spring Framework</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">11 Şubat 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/Mekansal-Zeka/events/267511327/">Mobil Harita Üretimi, HD-map ve Mekansal Zeka</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">13 Şubat 18:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/Istanbul-Java-User-Group/events/267929475/">RxJava'yı legacy koda uygulamak</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">13 Şubat 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/ING-%25C4%25B0novasyon-Merkezi/events/268406663/">Yapay Zeka Okuryazarlığı</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">14 Şubat 18:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/Akademi-4-0/events/268053643/">Makine Öğrenmesine Giriş - 101</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">15 Şubat 08:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/istanbulphp/events/microservices">Microservices</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">15 Şubat 13:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/GDGAnkara/events/268384563/">Python ile Programlamaya Giriş</a></td>
+<td class="org-left">Ankara</td>
+<td class="org-left">15 Şubat 11:00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org42b04a8" class="outline-2">
+<h2 id="org42b04a8"><span class="section-number-2">10</span> Diğer Haberler</h2>
+<div class="outline-text-2" id="text-10">
+<ul class="org-ul">
+<li><a href="https://openai.com/">OpenAI</a> ve <a href="https://pytorch.org/">PyTorch</a> güçlerini <a href="https://venturebeat.com/2020/01/30/openai-facebook-pytorch-google-tensorflow/">birleştiriyor</a>.</li>
+<li>Google, <a href="https://tinygo.org/">TinyGo</a> projesine <a href="https://mobile.twitter.com/TinyGolang/status/1223887654158307328">sponsor oldu</a>.</li>
+<li>GitLab'ın Mercurial destekli fork'u açık kaynak ve özgür yazılım <a href="https://heptapod.net/a-public-heptapod-for-free-and-open-source-software.html">olarak
+duyuruldu</a>: <a href="https://heptapod.net/">Heptapod</a>.</li>
+<li>Rust programlama dilinin 1.41.0 <a href="https://blog.rust-lang.org/2020/01/30/Rust-1.41.0.html">sürümü duyuruldu</a>.</li>
+<li>Rust takımı IDE dostu derleyicisini <a href="https://www.infoq.com/news/2020/01/rust-analyser-ide-support/">duyurdu</a>: <a href="https://rust-analyzer.github.io/">Rust Analyzer</a>.</li>
+<li>GNU C kütüphanesinin 2.31 <a href="https://lists.gnu.org/archive/html/info-gnu/2020-02/msg00001.html">sürümü yayınlandı</a>.</li>
+<li>Elixir programlama dilinin 1.10 <a href="https://elixir-lang.org/blog/2020/01/27/elixir-v1-10-0-released/">sürümü yayınlandı</a>.</li>
+<li>JetBrains, <a href="https://ktor.io/">Ktor</a> framework sisteminin 1.3 <a href="https://blog.jetbrains.com/kotlin/2020/01/ktor-1-3-release/">sürümünü yayınladı</a>.</li>
+<li>Google, Dagger kütüphanesinin 2.26 <a href="https://github.com/google/dagger/releases/tag/dagger-2.26">sürümünü yayınladı</a>.</li>
+<li><a href="https://edgedb.com/">EdgeDB</a> veritabanının 1.0 Alpha 2 <a href="https://edgedb.com/blog/edgedb-1-0-alpha-2/">sürümü duyuruldu</a>.</li>
+<li>Dağıtık veritabanı sistemi <a href="https://etcd.io/">etcd</a>, 3.4.3 <a href="https://etcd.io/blog/jepsen-343-results/">sürümünü yayınladı</a>.</li>
+<li>Unity oyun motorunun 2019.3 <a href="https://blogs.unity3d.com/2020/01/28/unity-2019-3-is-now-available/">sürümü duyuruldu</a>.</li>
+<li>Godot oyun motorunun 3.2 <a href="https://godotengine.org/article/here-comes-godot-3-2">sürümü duyuruldu</a>.</li>
+<li>Raspberry Pi'ye Vulkan <a href="https://www.raspberrypi.org/blog/vulkan-raspberry-pi-first-triangle/">desteği geliyor</a>.</li>
+<li>Derin öğrenme kütüphanesi <a href="https://github.com/explosion/thinc">Thinc</a>, v8.0.0a0 <a href="https://github.com/explosion/thinc/releases/tag/v8.0.0a0">sürümünü yayınladı</a>.</li>
+<li>Görsel bir şekilde Python kodu debug etmeye yarayan <a href="https://github.com/CCExtractor/vardbg">vardbg</a> aracının v0.11.6
+<a href="https://github.com/CCExtractor/vardbg/releases/tag/v0.11.6">sürümü yayınlandı</a>.</li>
+<li>Python veri analizi kütüphanesi <a href="https://pandas.pydata.org/pandas-docs/stable/index.html">Pandas</a>, 1.0.0 <a href="https://pandas.pydata.org/pandas-docs/stable/whatsnew/v1.0.0.html">sürümünü yayınladı</a>. <a href="https://github.com/pandas-dev/pandas">GitHub
+Deposu</a></li>
+<li>OpenAPIGenerator v4.2.3 <a href="https://github.com/OpenAPITools/openapi-generator/releases/tag/v4.2.3">çıktı</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd7ba41d" class="outline-2">
+<h2 id="orgd7ba41d"><span class="section-number-2">11</span> Lisans</h2>
+<div class="outline-text-2" id="text-11">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="../../../img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+<a href="yazilim-gundemi-2020-05.html">Yazılım Gündemi - 2020/05</a> yazısı <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a> (CC BY-NC-SA 4.0)
+ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 3 Şubat 2020</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 22:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

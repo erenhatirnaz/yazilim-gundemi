@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 22:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi - 2020/14</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi - 2020/14
+<br />
+<span class="subtitle">6-12 Nisan 2020</span>
+</h1>
+<div id="table-of-contents">
+<h2>İçindekiler</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org789096f">1. Qt, 2020 yılı için bir yol haritası yayınladı fakat söylenmeyenler olabilir</a></li>
+<li><a href="#orgec1c872">2. Firefox 75.0 ile gelen yeni özellikler</a>
+<ul>
+<li><a href="#orge825e3e">2.1. Tembel resim yükleme (lazy-loading)</a></li>
+<li><a href="#orgf34a834">2.2. Konsolda çoklu-satır modu ve anında sonuç görme</a></li>
+<li><a href="#org30137e9">2.3. CSS için <code>min()</code>, <code>max()</code>, <code>clamp()</code> fonksiyonları</a></li>
+</ul>
+</li>
+<li><a href="#org4947590">3. IntelliJ IDEA 2020.1 sürümü yayınlandı</a>
+<ul>
+<li><a href="#org4715b2b">3.1. Light Edit Mode</a></li>
+</ul>
+</li>
+<li><a href="#org3054f60">4. Google SRE yeni kitap tanıttı: "Building Secure and Reliable Systems"</a></li>
+<li><a href="#orgcee3d64">5. Visual Studio Code Mart 2020 (1.44) sürümü yayınlandı</a></li>
+<li><a href="#org785d2b1">6. Yaklaşan Etkinlik: "Açık Seminerler (Türkiye Açık Kaynak Topluluğu)"</a></li>
+<li><a href="#org47a7e03">7. Diğer Haberler</a></li>
+<li><a href="#orge0e0ce3">8. Lisans</a></li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gundemi-banner.png" alt="yazilim-gundemi-banner.png" />
+</p>
+</div>
+
+<div class="org-center">
+<p>
+<a href="../13/yazilim-gundemi-2020-13.html">&lt; Önceki Gündem</a> | <b>6-12 Nisan 2020</b> | <a href="../15/yazilim-gundemi-2020-15.html">Sonraki Gündem &gt;</a>
+</p>
+
+<p>
+<a href="https://teknoseyir.com/blog/yazilim-gundemi-2020-14">TeknoSeyir'de Oku</a>
+</p>
+</div>
+
+<div id="outline-container-org789096f" class="outline-2">
+<h2 id="org789096f"><span class="section-number-2">1</span> Qt, <a href="https://www.qt.io/blog/qt-roadmap-for-2020">2020 yılı için bir yol haritası</a> yayınladı fakat <a href="https://www.phoronix.com/scan.php?page=news_item&amp;px=Qt-Might-Restrict-New-Releases">söylenmeyenler olabilir</a></h2>
+<div class="outline-text-2" id="text-1">
+<p>
+C++ dünyasının popüler platformlar-arası (cross-platform) uygulama geliştirme
+framework'lerinden biri olan Qt, bu hafta içerisinde 2020 yılı yol haritasını
+yayınladı fakat KDE projesinin açık e-posta listesindeki bazı ifadeler 2020
+yılı planının söylenmeyen bazı kısımlarını açığa çıkardı. Öncelikle Qt'nin
+blog yazısı ile birlikte duyurduğu yol haritasına bakalım.
+</p>
+
+<ul class="org-ul">
+<li>Qt Design Studio 1.5 sürümü Mayıs ayı içerisinde yayınlanacak.
+<ul class="org-ul">
+<li>Bu sürümde 2 boyutlu ve 3 boyutlu tasarımla ilgili iyileştirilmeler
+yapılmış, bu konularda çalışmaya devam edeceklermiş.</li>
+<li>Annotations desteği: Uygulamanın tasarımı ve geliştirilmesi devam ederken
+sadece geliştiricilerin görebileceği notlar bırakabileceğiz. Bir nevi
+tasarım ekranındaki yorum satırları diyebiliriz.</li>
+<li>Adobe XD vb. diğer araçlar için destek çalışmaları devam ediyormuş.</li>
+</ul></li>
+<li>Qt Creator aracına C++20 desteği ekleniyor.
+<ul class="org-ul">
+<li>Python ve QML desteklerini iyileştirmek için çalışmalar devam ediyor.</li>
+</ul></li>
+<li>CMake 3.17 desteği gelecek.</li>
+<li>Qt 5.15 ile birlikte yeni bir Qt for Microcontrollers sürümü de gelecek ve
+tam QML desteği sağlayacak. Qt for MCUs için araçlar üzerinde çalışılıyor.
+Qt Design Studio yazılımına MCU desteği gelecek.</li>
+<li>Qt 1.15 sürümü Mayıs ayının sün günlerinde yayınlanacak. Ticari kullanım
+lisansı olanlar için LTS (Long-term support/Uzun-dönemli destek) olacak
+fakat açık kaynak kullanıcılar için normal bir sürüm olarak gelecek.
+<ul class="org-ul">
+<li>Qt Quick 3D desteğiyle gelecek.</li>
+<li>Metal ve Vulkan gibi grafik API'lerini kullanabilmek için yeni Rendering
+Hardware Interface gelecek.</li>
+</ul></li>
+<li>Qt'nin bir sonraki büyük sürümü Qt 6.0'ın bu yılın sonunda yayınlanması
+planlanıyor.</li>
+<li>Qt'nin araç setindeki yazılımlara Qt Marketplace entegrasyonu eklemek için
+çalışmalar devam ediyor.</li>
+</ul>
+
+<p>
+Diğer detayları okumak isterseniz Qt firmasının blog sitesideki <a href="https://www.qt.io/blog/qt-roadmap-for-2020">şu yazıya</a>
+bakabilirsiniz. <a href="https://www.phoronix.com/scan.php?page=news_item&amp;px=Qt-2020-Roadmap">Alternatif</a>
+</p>
+
+<p>
+Şimdi gelelim asıl meseleye. Bu yılın ilk yazılım gündemi yazılarının birinde
+(bkz: <a href="../05/yazilim-gundemi-2020-05.html">Yazılım Gündemi - 2020/05</a>), Qt'nin 2020 yılına değişikliklerle girdiğini
+ve bunlar arasında da LTS sürümlerinin sadece ücretli lisans kullanıcılarına
+sunulacağı vardı. Fakat Qt firmasının yukarıdaki yol haritasının yayınlandığı
+gün, KDE projesinin e-posta listesinden tüm KDE topluluğuna "<i>Qt, Open Source
+and corona</i>" başlıklı bir e-posta da gönderildi. E-posta'da Qt ve KDE
+projeleri arasındaki bir takım tarihsel bilgilerden sonra geçtiğimiz hafta Qt
+firmasının KDE takımlarıyla ile iletişime geçerek, "koronavirüs salgınının yol
+açacağı ekonomik sorunlar yüzünden yeni yayınlanacak tüm Qt sürümlerinin 12 ay
+süresince sadece ücretli lisans sahiplerine sunmayı" düşündüklerini iddia eden
+ifadeler yer aldı. Bunun üzerine 9 Nisan tarihinde <a href="https://www.qt.io/blog/qt-and-open-source">bir yazı daha yayınlayarak</a>
+ilgili bilgilerin, "Qt firmasının plan ve görüşlerini yansıtmadığını"
+söylediler. Konu tabii ki <a href="https://www.reddit.com/r/cpp/comments/fxbo24/qt_open_source_and_corona/">Reddit</a> gibi platformlarda tartışmalara yol açtı.
+</p>
+
+<p>
+C++ ve Qt ekosistemine uzak birisi olarak bu haberi doğru
+yorumlayamayabilirim. O yüzden aramızdaki bu alanlarda çalışmış kişilerden
+görüşlerini yorumlar bölümünde belirtmelerini rica ediyorum. Qt'nin gerçekten
+böyle bir karar verip vermediği ilerleyen haftalarda ortaya çıkacak fakat
+böyle bir kararın açık kaynak topluluklarına bölünmelere yol açacağı ortada.
+Umarım Qt firması kararlarını tekrar gözden geçirir.
+</p>
+</div>
+</div>
+<div id="outline-container-orgec1c872" class="outline-2">
+<h2 id="orgec1c872"><span class="section-number-2">2</span> Firefox 75.0 ile <a href="https://hacks.mozilla.org/2020/04/firefox-75-ambitions-for-april/">gelen yeni özellikler</a></h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Mozilla tarafından geliştirilen Firefox tarayıcısının 75.0 numaralı sürümü bu
+hafta içerisinde yayınlandı. Peki bu yeni sürümle birlikte biz geliştiricileri
+ilgilendiren neler var? Gelin birkaç tanesini birlikte inceleyelim.
+</p>
+</div>
+
+<div id="outline-container-orge825e3e" class="outline-3">
+<h3 id="orge825e3e"><span class="section-number-3">2.1</span> Tembel resim yükleme (lazy-loading)</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Geçtiğimiz yazılım gündemi yazılarından birinde (bkz: <a href="../07/yazilim-gundemi-2020-07.html">Yazılım Gündemi -
+2020/07</a>) bu özelliğin W3C tarafından onaylanmış bir internet standardı
+olduğunu duyurmuştum. İşte o özellik bu hafta Firefox'a da geldi. O yazıyı
+okumayanlar için kısaca özetlemek gerekirse: artık aşağıdaki gibi etiketlenmiş
+bir görsel sayfa açıldığında hemen yüklenmeyecek, sadece ekranda görünür
+olduğunda yüklenecek.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-html">&lt;<span class="org-function-name">img</span> <span class="org-variable-name">src</span>=<span class="org-string">"teknoseyir.png"</span> <span class="org-variable-name">loading</span>=<span class="org-string">"lazy"</span> <span class="org-variable-name">alt</span>=<span class="org-string">"TeknoSeyir Logo"</span> /&gt;
+</pre>
+</div>
+<p>
+Bu sayede web sayfalarımız hem bize hem de kullanıcılara gereksiz trafik yükü
+oluşturmayacak.
+</p>
+
+<p>
+Bu özelliği destekleyen tarayıcılar ise şu şekilde:
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/lazy-loading-uyumluluk.png" alt="lazy-loading-uyumluluk.png" />
+</p>
+<p><span class="figure-number">Şekil 2: </span>Kaynak: Mozilla Developer Network - <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#Browser_compatibility">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#Browser_compatibility</a></p>
+</div>
+<p>
+Lazy loading özelliği hakkında daha fazla bilgi almak için <a href="https://developer.mozilla.org/en-US/docs/Web/Performance/Lazy_loading">buraya</a>
+tıklayabilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf34a834" class="outline-3">
+<h3 id="orgf34a834"><span class="section-number-3">2.2</span> Konsolda çoklu-satır modu ve anında sonuç görme</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+JavaScript ile web geliştirme yapanlarımızın adeta eli ayağı gibi olan
+Developer Tools aracının Console kısmında artık çok-satırlı kod yazıp
+çalıştırabileceğiz. Bu özelliği açmak için Console sekmesindeyken <b>CTRL+B</b>
+tuşlarına basmanız yeterli.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/firefox75-console.png" alt="firefox75-console.png" />
+</p>
+</div>
+
+<p>
+Çoklu satır modu açıldığında kodlarınızı yazdığınız yerin yanına bir panel
+daha açılacak. Bu panel kodlarınızı çalıştırdıktan sonra sonuçlarını
+göreceğiniz ekran. Artık çoklu satır modunda olduğunuz için <b>ENTER</b> ile
+kodlarınızı çalıştıramayacaksınız, bunun yerine <b>CTRL+ENTER</b> kullanmanız
+gerekiyor. Ayrıca burada yazdığınız kodları bir dosyaya kaydetmek
+istiyorsanız da <b>CTRL+S</b> tuş kombinasyonlarını kullanabilirsiniz. Çok-satır
+modu hakkında daha fazla bilgi için <a href="https://developer.mozilla.org/en-US/docs/Tools/Web_Console/The_command_line_interpreter#Multi-line_mode">buraya</a> tıklayabilirsiniz.
+</p>
+
+<p>
+Yukarıdaki ekran görüntüsünün en altında bir de <code>Array(8)</code> ile başlayan bir
+satır görüyorsunuz. O ise bu sürümle birlikte gelen "<i>Instant Evaluation</i>"
+özelliği. Biz kodumuzu yazdıkça orası anlık olarak güncelleniyor ve
+yazdığımız kodun sonucunu bize ön-izleme olarak sunuyor. Gayet güzel ve
+faydalı bir özellik.
+</p>
+</div>
+</div>
+<div id="outline-container-org30137e9" class="outline-3">
+<h3 id="org30137e9"><span class="section-number-3">2.3</span> CSS için <code>min()</code>, <code>max()</code>, <code>clamp()</code> fonksiyonları</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+Bu fonksiyonlar ile artık css tarafında bazı hesaplamalar yapabileceğiz.
+Şöyle ki:
+</p>
+
+<ul class="org-ul">
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/min">min()</a>: Bir ya da daha fazla değer alır ve bunlar içerisinden <b>en küçük</b>
+olanı döndürür.</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/max">max()</a>: Bir ya da daha fazla değer alır ve bunlar içerisinden <b>en büyük</b>
+olanı döndürür.</li>
+<li><p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/clamp">clamp()</a>: <code>minimum</code>, <code>tercih edilen</code> ve <code>maximum</code> olmak üzere üç değer
+alır. Eğer hesaplanan değer minumum'dan küçükse <code>minimum</code>; maximum'dan
+büyükse <code>maximum</code> değer geçerli olur. Eğer hesaplanan değer ikisinin
+arasındaysa <code>tercih edilen</code> değer geçerli olur.
+</p>
+
+<p>
+Tahmin edebileceğiniz gibi bu fonksiyonların hepsi responsive tasarım için
+düşünülmüş ve eklenmiş özellikler. Böylece web sitelerimizin tasarımlarında
+daha özel hesaplamalar yapabileceğiz. Fonksiyonlar hakkında detaylar ve
+tarayıcı uyumluluğu listesi için her fonksiyonun kendi bağlantısına
+tıklayabilirsiniz.
+</p></li>
+</ul>
+
+<p>
+Firefox'un bu sürümüyle birlikte gelen diğer özellikler için konu başlığına
+eklediğim bağlantıya tıklayabilirsiniz.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org4947590" class="outline-2">
+<h2 id="org4947590"><span class="section-number-2">3</span> IntelliJ IDEA <a href="https://blog.jetbrains.com/idea/2020/04/intellij-idea-2020-1-released/">2020.1 sürümü yayınlandı</a></h2>
+<div class="outline-text-2" id="text-3">
+<p>
+JetBrains tarafından geliştirilen ve topluluk için ücretsiz sürümü de bulunan,
+Java için geliştirme ortamı (IDE) olan IntelliJ IDEA'nın 2020 yılındaki ilk
+sürümü olan 2020.1, bu hafta içerisinde yayınlandı. Bu sürümle birlikte gelen
+birkaç özellik şu şekilde:
+</p>
+
+<ul class="org-ul">
+<li>Java 14 desteği,</li>
+<li>Artık JDK'yı direkt IDE'nin içerisinden indirip kullanabileceksiniz,</li>
+<li>LightEdit Modu (detaylar aşağıda),</li>
+<li>Zen Modu: Distraction Free Mode (Sıfır dikkat dağınıklığı modu) ve tam
+ekran modunu bir araya getiren, odaklı bir şekilde kod yazmayı vaad eden
+bir mod.</li>
+<li>Varsayılan yazı tipi <a href="http://jetbrains.com/lp/mono/">JetBrains Mono</a> olarak değiştirildi,</li>
+</ul>
+</div>
+
+<div id="outline-container-org4715b2b" class="outline-3">
+<h3 id="org4715b2b"><span class="section-number-3">3.1</span> <a href="https://blog.jetbrains.com/idea/2020/04/lightedit-mode/">Light Edit Mode</a></h3>
+<div class="outline-text-3" id="text-3-1">
+
+<div class="figure">
+<p><img src="gorseller/intellij-idea-lightedit-terminal.png" alt="intellij-idea-lightedit-terminal.png" />
+</p>
+</div>
+
+<p>
+Yazılım Gündemi yazılarını düzenli olarak takip edenler böyle bir özelliğin
+geleceğinden haberdardı :) (bkz: <a href="../04/yazilim-gundemi-2020-04.html">Yazılım Gündemi - 2020/04</a>) Haberdar olmayan
+yeni takipçiler için açıklayalım: JetBrains'in IDE'lerini en az bir kez
+kullanmışsanız biliyorsunuzdur ki, IDE'nin açılması ve projeyle ilgili
+cache'leme işlemlerinin yapılması çok uzun sürüyordu. Artık terminal'den
+sadece dosya ismiyle IntelliJ IDEA'yı çağırdığınızda IDE Light Edit modunda
+açılıyor ve gelişmiş bir metin editörü gibi davranarak sadece o dosyayı
+açıyor. Proje'nin geri alanını yüklemiyor.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/intellij-idea-lightedit-sag-tik.png" alt="intellij-idea-lightedit-sag-tik.png" />
+</p>
+<p><span class="figure-number">Şekil 5: </span>Light Edit modunu terminal ekranından açmak zorunda değilsiniz. Sağ tık menüsünden "Birlikte Aç" ile de açabilirsiniz.</p>
+</div>
+
+<p>
+Yalnız bir istisna var: Eğer açmak istediğiniz dosyanın bağlı olduğu proje
+zaten normal modda Intellij IDEA üzerinde açıkca, LightEdit modu açılmaz, var
+olan proje penceresine yeni bir sekme olarak gelir.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/intellij-idea-light-editproject-mode.png" alt="intellij-idea-light-editproject-mode.png" />
+</p>
+<p><span class="figure-number">Şekil 6: </span>Tekrar normal proje moduna geçmek için File menüsü içerisinden ya da <b>ALT+ENTER</b> ile açılan menüden "Open File in Project" seçeneğini seçebilirsiniz.</p>
+</div>
+<p>
+Intellij IDEA'nın bu sürümüyle birlikte gelen diğer özellikler için aşağıdaki
+videoyu izleyebilir ya da konu başlığına eklediğim bağlantıya
+tıklayabilirsiniz. Aynı şekilde Light Edit modunun detayları için de alt konu
+başlığına tıklayabilirsiniz.
+</p>
+
+<ul class="org-ul">
+<li><p>
+<a href="https://www.youtube.com/watch?v=LtOH7snHBCA">Konuyla ilgili YouTube videosu</a>
+</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org3054f60" class="outline-2">
+<h2 id="org3054f60"><span class="section-number-2">4</span> Google SRE <a href="https://security.googleblog.com/2020/04/introducing-our-new-book-building.html?m=1">yeni kitap tanıttı</a>: "<a href="https://landing.google.com/sre/books/">Building Secure and Reliable Systems</a>"</h2>
+<div class="outline-text-2" id="text-4">
+
+<div class="figure">
+<p><img src="gorseller/google-kitap.png" alt="google-kitap.png" height="450" />
+</p>
+</div>
+
+<p>
+Google'ın Site Reliability Engineering (SRE) projesi kapsamında çıkan 3.kitabı
+raflarda ve <a href="https://www.google.com/books/edition/Building_Secure_and_Reliable_Systems/Kn7UxwEACAAJ">çevrim içi mağaza</a>larda yerini aldı. Google kitabı dijital kopyasını
+çeşitli formatlarda kendi sitesi üzerinden de dağıtıyor.
+</p>
+<ul class="org-ul">
+<li>PDF formatında indirmek için: <a href="https://landing.google.com/sre/static/pdf/SRS.pdf">https://landing.google.com/sre/static/pdf/SRS.pdf</a></li>
+<li>EPUB formatında indirmek için: <a href="https://landing.google.com/sre/static/pdf/srs-epub.epub">https://landing.google.com/sre/static/pdf/srs-epub.epub</a></li>
+<li>Mobi formatında indirmek için: <a href="https://landing.google.com/sre/static/pdf/srs-mobi.mobi">https://landing.google.com/sre/static/pdf/srs-mobi.mobi</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgcee3d64" class="outline-2">
+<h2 id="orgcee3d64"><span class="section-number-2">5</span> Visual Studio Code <a href="https://code.visualstudio.com/updates/v1_44">Mart 2020 (1.44) sürümü yayınlandı</a></h2>
+<div class="outline-text-2" id="text-5">
+
+<div class="figure">
+<p><img src="gorseller/vscode-144.png" alt="vscode-144.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org785d2b1" class="outline-2">
+<h2 id="org785d2b1"><span class="section-number-2">6</span> Yaklaşan Etkinlik: "<a href="http://www.acikseminer.com/">Açık Seminerler (Türkiye Açık Kaynak Topluluğu)</a>"</h2>
+<div class="outline-text-2" id="text-6">
+
+<div class="figure">
+<p><img src="gorseller/acik-seminer.jpeg" alt="acik-seminer.jpeg" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org47a7e03" class="outline-2">
+<h2 id="org47a7e03"><span class="section-number-2">7</span> Diğer Haberler</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>Google ve Apple, Covid-19 takibi için <a href="https://www.apple.com/newsroom/2020/04/apple-and-google-partner-on-covid-19-contact-tracing-technology/">işbirliği yapmaya karar verdi</a>.
+<a href="https://www.bbc.com/news/technology-52246319">Alternatif</a></li>
+<li>ABD'de Covid-19 yüzünden <a href="https://nymag.com/intelligencer/2020/04/what-is-cobol-what-does-it-have-to-do-with-the-coronavirus.html">COBOL programcıları göreve çağırıldı</a>.
+<ul class="org-ul">
+<li>IBM, <a href="https://www.inputmag.com/tech/ibm-will-offer-free-cobol-training-to-address-overloaded-unemployment-systems">ücretsiz COBOL eğitimi</a> vermeyi teklif ediyor.</li>
+</ul></li>
+<li>Git <a href="https://opensource.com/article/20/4/get-started-git">15 yaşında</a>! <a href="https://github.blog/2020-04-07-celebrating-15-years-of-git-an-interview-with-git-maintainer-junio-hamano/">Geliştirici takımından biriyle röportaj yazısı</a>.</li>
+<li>Docker, Compose aracını geliştirmek için yeni bir <a href="https://www.docker.com/blog/announcing-the-compose-specification/">açık topluluk oluşturdu</a>:
+<a href="https://compose-spec.io/">Compose Specification</a>. <a href="https://github.com/compose-spec">GitHub Organizasyon Sayfası</a></li>
+<li>Linux Vakfı, güvenlik odaklı kernel olan <a href="https://sel4.systems/About/">SeL4</a>'e <a href="https://www.zdnet.com/article/linux-foundation-backs-security-oriented-sel4-microkernel-operating-system/">destek oluyor</a>.</li>
+<li><a href="https://www.mapzen.com/">Mapzen</a> açık kaynaklı haritalama projesi artık Linux Vakfı altındaki <a href="https://uc.foundation/">Urban
+Computing Foundation</a> projesi <a href="https://www.zdnet.com/article/mapzen-open-source-mapping-project-revived-under-the-urban-computing-foundation/">oldu</a>.</li>
+<li>Amazon Elastic Container Service, artık Amazon EFS <a href="https://aws.amazon.com/tr/blogs/aws/amazon-ecs-supports-efs/">dosya sistemlerini
+destekliyor</a>.</li>
+<li><a href="https://www.sandboxie.com/">Sandboxie</a> yıllar sonra <a href="https://news.sophos.com/en-us/2020/04/09/sandboxie-is-now-an-open-source-tool/">açık kaynak oldu</a>.</li>
+<li>WebStorm <a href="https://blog.jetbrains.com/webstorm/2020/04/webstorm-2020-1/">2020.1 sürümü yayınlandı</a>.</li>
+<li>NodeJS iki dalda yeni sürüm yayınladı:
+<ul class="org-ul">
+<li><a href="https://nodejs.org/en/blog/release/v12.16.2/">Node v12.16.2 (LTS)</a></li>
+<li><a href="https://nodejs.org/en/blog/release/v10.20.1/">Node v10.20.1 (LTS)</a></li>
+</ul></li>
+<li>Go programlama dilinin <a href="https://golang.org/doc/devel/release.html#go1.14.minor">1.41.2</a> ve <a href="https://golang.org/doc/devel/release.html#go1.13.minor">1.13.10</a> <a href="https://groups.google.com/forum/m/#!msg/golang-announce/9UJN3gwMzhY/HVdQFNOVBgAJ">sürümleri yayınlandı</a>.</li>
+<li>Crystal programlama dilinin <a href="https://crystal-lang.org/2020/04/06/crystal-0.34.0-released.html">0.34.0 sürümü yayınlandı</a>.</li>
+<li><a href="https://cuelang.org/">Cue</a> programlama dilinin <a href="https://github.com/cuelang/cue/releases/tag/v0.1.0">v0.1.0 sürümü yayınlandı</a>.</li>
+<li>ASP.NET Core için <a href="https://ext.net/v7-0-preview-for-asp-net-core/">Ext.NET 7.0 Preview yayınlandı</a>.</li>
+<li>Kubernetes IDE'si Lens, <a href="https://github.com/lensapp/lens/releases/tag/v3.2.0">v3.2.0 sürümünü yayınladı</a>.</li>
+<li>Apache Flink, Stateful Functions <a href="https://flink.apache.org/news/2020/04/07/release-statefun-2.0.0.html">2.0 sürümünü yayınladı</a>.</li>
+<li>CheerpJ <a href="https://medium.com/leaningtech/cheerpj-2-1-released-java-bytecode-to-webassembly-and-javascript-303fb8dd5d98">2.1 sürümü yayınlandı</a>.</li>
+<li>Spring Graal Native <a href="https://spring.io/blog/2020/04/09/spring-graal-native-0-6-0-released">0.6.0 sürümü yayınlandı</a>.</li>
+<li>Horray <a href="https://www.freerdp.com/2020/04/09/2_0_0-released">2.0.0 sürümü yayınlandı</a>.</li>
+<li>PyOxidizer <a href="https://gregoryszorc.com/blog/2020/04/09/pyoxidizer-0.7/">0.7 sürümü yayınlandı</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge0e0ce3" class="outline-2">
+<h2 id="orge0e0ce3"><span class="section-number-2">8</span> Lisans</h2>
+<div class="outline-text-2" id="text-8">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="../../../img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+<a href="yazilim-gundemi-2020-14.html">Yazılım Gündemi - 2020/14</a> yazısı <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a> (CC BY-NC-SA 4.0)
+ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 13 Nisan 2020</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 22:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 22:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi - 2020/22</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi - 2020/22
+<br />
+<span class="subtitle">1-7 Haziran 2020</span>
+</h1>
+<div id="table-of-contents">
+<h2>İçindekiler</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org0aa6b2a">1. GitHub, geliştiricileri hedef alan yeni bir zararlıyı ortaya çıkardı: Octopus Scanner</a></li>
+<li><a href="#org751e67c">2. Microsoft Defender SmartScreen, bağımsız geliştiricileri zora sokuyor</a></li>
+<li><a href="#orga395b8d">3. SpaceX Yazılım Takımı, Reddit üzerinde Soru&amp;Cevap etkinliği gerçekleştirdi</a></li>
+<li><a href="#orgc100d0f">4. Tarayıcılara <code>:is()</code> ve <code>:where()</code> CSS özelikleri geliyor</a>
+<ul>
+<li><a href="#org942fa38">4.1. <code>is()</code> özelliği</a></li>
+</ul>
+</li>
+<li><a href="#org322e983">5. Swift programlama dili topluluğu kendi Paket Kayıt Servisi'ni tanımlamayı tartışıyor</a></li>
+<li><a href="#org2601928">6. Go takımı kaynak kodlardaki "<i>blacklist</i>", "<i>whitelist</i>", "<i>master</i>", "<i>slave</i>" gibi ifadeleri kaldırdı</a></li>
+<li><a href="#org112814e">7. Yaklaşan Online Etkinlikler</a></li>
+<li><a href="#org3bf3c0c">8. Diğer Haberler</a></li>
+<li><a href="#orgefca899">9. Lisans</a></li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gundemi-banner.png" alt="yazilim-gundemi-banner.png" />
+</p>
+</div>
+
+<div class="org-center">
+<p>
+<a href="../21/yazilim-gundemi-2020-21.html">&lt; Önceki Gündem</a> | <b>1-7 Haziran 2020</b> | <a href="../23/yazilim-gundemi-2020-23.html">Sonraki Gündem &gt;</a>
+</p>
+
+<p>
+<a href="https://teknoseyir.com/blog/yazilim-gundemi-2020-22">TeknoSeyir'de Oku</a>
+</p>
+</div>
+
+<div id="outline-container-org0aa6b2a" class="outline-2">
+<h2 id="org0aa6b2a"><span class="section-number-2">1</span> GitHub, geliştiricileri hedef alan yeni <a href="https://securitylab.github.com/research/octopus-scanner-malware-open-source-supply-chain">bir zararlıyı ortaya çıkardı</a>: Octopus Scanner</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Yazılım gündemi yazıları yazmaya başladığımdan beri sıklıkla geliştiricileri
+hedef alan zararlı yazılımların arttığına yönelik haberleri sizlere iletiyorum
+fakat bu seferki durum biraz farklı. Mart ayının başlarında GitHub'a <a href="https://securitylab.github.com/research/octopus-scanner-malware-open-source-supply-chain">JJ</a> takma
+isimli güvenlik araştırmacısı GitHub'ı bir güvenlik zafiyeti hakkında uyarıyor
+ve GitHub'ın güvenlik takımı harekete geçiyor. Daha önce karşılaştığımız diğer
+zararlı yazılım türlerinde saldırganın kendisi kodlarını GitHub'a yükleyip,
+yemin yutulmasını beklerken bu sefer zararlı kod bulunan depoların
+(repository) sahiplerinin durumdan haberi yok.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/github-octopus-scanner.png" alt="github-octopus-scanner.png" />
+</p>
+<p><span class="figure-number">Şekil 2: </span>Zararlı yazılımın bulaşma sistemini gösteren grafik</p>
+</div>
+
+<p>
+<b>NetBeans</b> ile geliştirilen <b>Java</b> projelerini hedefleyen bu zararlı yazılım,
+ilk olarak bilgisayarınızda NetBeans'in kurulu olup olmadığını kontrol ediyor,
+eğer kuruluysa bütün NetBeans projelerinize bekiyor ve proje klasörünüzün
+içindeki <code>nbproject</code> dizini altına <code>cache.dat</code> isimli bir dosya bırakıyor.
+Daha sonra <code>nbproject/build-impl.xml</code> dosyasını düzenleyerek kendisini sizin
+geliştirdiğiniz uygulamanın içerisine enjekte ediyor. Oluşturduğunuz JAR
+dosyasının içinde bu zararlı yazılım da oluyor. Zararlı yazılım ise
+bilgisayarınızda uzak komut çalıştırmaya yarayan bir arka kapı işlevi görüyor.
+Ayrıca zararlı yazılım bulaştığı JAR dosyalarının enjekte olmamış hallerini
+üretmeyi de önlüyor, yani kendisinin yerine başka bir şey gelmesini
+zorlaştırmış oluyor.
+</p>
+
+<p>
+GitHub Güvenlik Takımı, bu zararlı yazılımın bulaştığı 26 tane açık kaynaklı
+proje tespit etmiş fakat bu projelerin zararlı yazılımdan temizlenmesi biraz
+sıkıntılı. GitHub, ilgili repository'lerin sahiplerini bilgilendirerek virüsü
+o depolardan temizlese bile kodları bilgisayarına çekmiş olan kullanıcıların
+sistemlerinde olan virüs ilgili depolara tekrar kendini kopyalayacak. Takımın
+elinde Octopus Scanner zararlısının birkaç varyasyonlu kopyası mevcut fakat
+suçlu olmayan kullanıcıları cezalandırmak istemedikleri için şimdilik bir
+aksiyon almış değiller fakat geliştiricileri uyarmadan da geçmek istememişler.
+</p>
+
+<p>
+Sizler de Java projeleriniz için NetBeans kullanıyorsanız mutlaka
+projelerinizdeki <code>nbproject</code> klasörünü kontrol edin. Zararlı yazılım hakkında
+daha teknik detaylar için konu başlığına eklediğim blog yazısına göz
+atabilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-org751e67c" class="outline-2">
+<h2 id="org751e67c"><span class="section-number-2">2</span> Microsoft Defender SmartScreen, bağımsız <a href="https://getimageview.net/2020/06/02/microsoft-defender-smartscreen-is-hurting-independent-developers/">geliştiricileri zora sokuyor</a></h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Microsoft tarafından geliştirilen Windows 10 işletim sistemiyle birlikte
+dağıtılan Microsoft Defender antivirüs yazılımının bir özelliği olan
+SmartScreen, bağımsız geliştiriciler tarafından yayınlanan uygulamaları
+"tanınmayan" (unknown, unrecognized) olarak işaretlediği için kullanıcılar bu
+uygulamaları çalıştırmaya çekiniyorlar.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/smartscreen-uyari.png" alt="smartscreen-uyari.png" height="350" />
+</p>
+<p><span class="figure-number">Şekil 3: </span>Microsoft Defender SmartScreen tarafından tanınmayan bir uygulamayı açmaya çalıştığınızda gösterilen uyarı penceresi. Yine de uygulamayı çalıştırmak istiyorsanız "More info" yazısına tıklayıp, oradan "run it anyway" düğmesine tıklamanız gerekiyor.</p>
+</div>
+
+<p>
+SmartScreen'in çalışma mantığını aslında oyunlardaki "itibar" (reputation)
+sistemi gibi düşünebiliriz. <code>.exe</code> ile uzantısıyla dağıttığınız uygulamanız ne
+kadar kişi tarafından çalıştırılırsa o kadar güvenilir oluyorsunuz. Fakat tek
+değerlendirme kriteri bu değil tabii ki, Microsoft aynı zamanda uygulamanın
+kim tarafından yayınlandığına da bakıyor fakat bu basit bir "Geliştiren: Eren
+Hatırnaz" ifadesinden ibaret değil, tanınmış bir otorite tarafından onaylanmış
+bir sertifika almanız ve kodlarınızı bu şekilde imzalamanız gerekiyor. Tahmin
+edebileceğiniz gibi ücretsiz bir işlem değil bu. Kod İmzalama Sertifikası
+fiyatları sitelere göre değişiklik gösterse de bağımsız geliştiriciler için
+uygun denilebilecek bir noktada değil. Üstelik web tarafında ücretsiz SSL
+sertifikası sağlayan "Let's Encrypt" gibi bir çözüm de bu tarafta mevcut
+değil.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/sslcom-code-signing-fiyatlar.png" alt="sslcom-code-signing-fiyatlar.png" height="450" />
+</p>
+<p><span class="figure-number">Şekil 4: </span>ssl.com sitesinin Kod İmzalama Sertifikasının yıllık fiyatları</p>
+</div>
+
+<p>
+Bu sertifika ile dağıttınız exe dosyalarını imzalamak maalesef "güvenilir"
+olmaya yetmiyor. Çünkü zararlı yazılım geliştiren kişi de aynı şekilde
+fiyatını verip, dağıttığı virüsün "güvenilir" sayılmasını sağlayabilir.
+Dolayısıyla SmartScreen'in 'itibar' sistemi hala daha geçerli. Exe dosyanız
+imzalı olsa bile SmartScreen, daha fazla kullanıcı bu programı çalıştırana
+kadar uyarıyı göstermeye devam ediyor. Fakat burada şöyle bir sonsuz döngü de
+ortaya çıkıyor: Kullanıcılar uyarı aldığını için programdan şüphelenip
+kurmuyorlar, kurmadıkları için SmartScreen, ilgili programın itibar puanını
+yükseltmiyor, programın itibarı yükselmediği için de kullanıcılar uyarı mesajı
+görmeye devam ediyor.
+</p>
+
+<p>
+Üstelik SmartScreen sertifika yenileme işlemini tanımıyor. Yani yeni bir
+sertifika aldığınızda tüm bu süreçleri baştan yaşamanız gerekiyor. Bunun da
+bir çözümü mevcut fakat bağımsız geliştiriciler için değil, büyük yayıncılar
+için mevcut. EV Code Signing Sertifikaları burada devreye giriyor. Yazılım bu
+tarz sertifikalar ile bir kere imzalandıktan sonra SmartScreen'den otomatik
+olarak geçiyor. Fakat dediğim gibi bu sertifikaların fiyatları bağımsız
+geliştiriciler için hiç de ulaşılabilir noktalarda değil.
+</p>
+
+<p>
+Sonuç olarak Windows ekosistemi için bağımsız olarak uygulama geliştirmek ve
+dağıtmak bir eziyet haline geliyor. Açık kaynak dünyasına iyi bir giriş yapan
+Microsoft'un artık Windows ekosistemiyle ilgili bazı şeyleri de tekrar gözden
+geçirmesi gerekiyor.
+</p>
+
+<p>
+Bu konuda siz ne düşünüyorsunuz? Yorumlar bölümünde konuşalım.
+</p>
+</div>
+</div>
+<div id="outline-container-orga395b8d" class="outline-2">
+<h2 id="orga395b8d"><span class="section-number-2">3</span> SpaceX Yazılım Takımı, Reddit üzerinde <a href="https://www.reddit.com/r/spacex/comments/gxb7j1/we_are_the_spacex_software_team_ask_us_anything/">Soru&amp;Cevap etkinliği gerçekleştirdi</a></h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Bir önceki hafta gerçekleşen başarılı Crew Dragon 2 görevinden sonra gündeme
+gelen SpaceX, geçtiğimiz hafta da Reddit üzerindeki <a href="https://www.reddit.com/r/spacex/">/r/spacex</a> kanalında
+yazılım ekibiyle soru &amp; cevap etkinliği gerçekleştirdi. Binlerce yorum
+içerisinden benim gözüme çarpan bazı soruları ve ekibin yazdığı cevapları
+sizlere aktarmak isterim.
+</p>
+
+<ul class="org-ul">
+<li><p>
+<b>Falcon 9 roketinde ve Dragon kapsülünün yazılım tarafında en çok kullanılan
+programlama dili nedir? Hangi programlama paradigmalarını kullanıyorsunuz?</b>
+<a href="https://www.reddit.com/r/spacex/comments/gxb7j1/we_are_the_spacex_software_team_ask_us_anything/ft0aj3b/">Kaynak</a>
+</p>
+<blockquote>
+<p>
+Otonom sistemlerdeki yazılımların tamamı C++ programlama diliyle ve nesne
+yönelimli programlama teknikleriyle geliştirildi. Her şeyi mümkün olduğunca
+basit tutmaya çalışıyoruz.
+</p>
+</blockquote></li>
+
+<li><p>
+<b>Uçuş sırasında hata algılama ve hata doğrulama işlerini nasıl
+yapıyorsunuz?</b> <a href="https://www.reddit.com/r/spacex/comments/gxb7j1/we_are_the_spacex_software_team_ask_us_anything/ft0aj3b/">Kaynak</a>
+</p>
+<blockquote>
+<p>
+Bilgisayarın hesaplamasından kaynaklanabilecek sorunlar için farklı
+bilgisayarlar üzerinde aynı hesaplamaları yaptırıyor ve çıktılarını
+karşılaştırıyoruz. Sensörlerden kaynaklanabilecek hatalar için de aynı şekilde
+birden fazla sensör verisini değerlendiriyoruz. Veri aktarımı sırasında ortaya
+çıkabilecek sorunlar için ise aktarılan verilerin içerisine eklenmiş hata
+tespit ve hata doğrulama kodlarını kullanıyoruz.
+</p>
+</blockquote></li>
+
+<li><p>
+<b>Yazılımlarınız küçük küçük parçalardan oluşan bir yapıda mı yoksa her şey
+tek bir büyük modül olarak mı geliştiriliyor?</b> <b>(<i>Kısaca micro service mi,
+yoksa mono-repo mu kullanıyorsunuz demek istemiş</i>)</b> <a href="https://www.reddit.com/r/spacex/comments/gxb7j1/we_are_the_spacex_software_team_ask_us_anything/ft0aj3b/">Kaynak</a>
+</p>
+<blockquote>
+<p>
+Yazılımlarımız kesinlikle birden çok küçük modülde oluşan bir yapıda. Araçtaki
+alt seviye komponentlerden, ara sistemlere kadar her kısımda bir hiyerarşi
+mevcut. Farklı alt sistemler genelde birbirlerinden izole edilmiş durumda; bu
+izolasyon bazen aynı bilgisayar içerisinde olabilirken, bazen de farklı
+bilgisayarlarla sağlanmış izolasyonlar tercih edebiliyoruz.
+</p>
+</blockquote></li>
+
+<li><p>
+<b>Yazılımlarınızı araçlara yüklemeden önce nasıl test ediyorsunuz?</b>
+<b>Falcon/Dragon/Starlink için ne kadar telemetri verisi topluyorsunuz?</b>
+<b>Buveriler üzerinde makine öğrenmesi ya da veri analizi yapıyor musunuz?</b>
+<a href="https://www.reddit.com/r/spacex/comments/gxb7j1/we_are_the_spacex_software_team_ask_us_anything/ft0ahrd/">Kaynak</a>
+</p>
+<blockquote>
+<p>
+Her cihaz için, loop simulator'de olan bir donanıma sahibiz (<i>anladığım
+kadarıyla yazılım ekibinin elinin</i> <i>altında sadece geliştirme için kullanılan
+cihazın bir kopyası mevcut</i>). Production ortamına gitmeden önce tüm kodlarımız
+bu simülasyonda test edilip sonra asıl aracın içine yükleniyor.
+</p>
+
+<p>
+Tipik bir Dragon görevinde yüzlerce GB telemetri verisi topluyoruz. Starlink
+cihazlarımız için bu durum 5TB gibi rakamlara ulaşmış durumda. Her uçuştan
+sonra, topladığımız tüm verileri gözden geçirip, ilgili cihazın beklediğimiz
+gibi çalışıp çalışmadığını kontrol ediyoruz.
+</p>
+</blockquote></li>
+</ul>
+
+<p>
+Benim okuduklarım içerisinde gözüme çarpan ve aktarmak istediğim sorular ve
+cevapları bu şekildeydi (hatalı çevirdiklerim varsa lütfen yorumlar bölümünde
+beni uyarın) fakat ilgili reddit gönderisinin altında ilginizi çekebilecek
+yüzlerce hatta binlerce soru ve cevap görebilirsiniz. Konu başlığına eklediğim
+bağlantıya tıklayarak ilgili gönderiye ulaşabilirsiniz. Eğer sizin ilginizi
+çeken başka bir soru ve cevabı varsa yorumlar bölümünde bundan bahsetmeyi
+unutmayın.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc100d0f" class="outline-2">
+<h2 id="orgc100d0f"><span class="section-number-2">4</span> Tarayıcılara <code>:is()</code> ve <code>:where()</code> CSS <a href="https://webplatform.news/issues/2020-06-04">özelikleri geliyor</a></h2>
+<div class="outline-text-2" id="text-4">
+<p>
+<a href="https://webplatform.news/">WebPlatform.news</a> sitesinde geçtiğimiz hafta yayınlanan blog yazısına göre yeni
+CSS standartlarından <code>:is()</code> ve <code>:where()</code> artık tarayıcılar tarafından
+desteklenecekler. <a href="https://webkit.org/blog/10580/release-notes-for-safari-technology-preview-106/">Safari</a> ve <a href="https://www.fxsitecompat.dev/en-CA/docs/2020/is-pseudo-class-has-been-unprefixed/">Firefox</a> bu özelliği implement etmişler, Chromium
+ise özellik üzerinde <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=568705">çalışmaya başlamış gözüküyor</a>. Gelelim bu özelliklerin ne
+işe yaradıklarına:
+</p>
+</div>
+
+<div id="outline-container-org942fa38" class="outline-3">
+<h3 id="org942fa38"><span class="section-number-3">4.1</span> <code>is()</code> özelliği</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+<code>is</code> (<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:is">Dokümantasyon</a>) aslında bir parametre olarak birden fazla CSS selector
+kabul edip, içerisindeki seçiciler tarafından seçilebilen herhangi bir
+elemanı seçen bir pseudo-class. Cümle biraz karışık oldu farkındayım ama
+aşağıdaki örneği inceleyince ne demek istediğini anlayacaksınız. Diyelim ki
+elimizde şöyle bir HTML yapısı var:
+</p>
+<div class="org-src-container">
+<pre class="src src-html">&lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"div1"</span>&gt;
+  &lt;<span class="org-function-name">h1</span>&gt;<span class="org-underline"><span class="org-bold">Selam TeknoSeyir</span></span>&lt;/<span class="org-function-name">h1</span>&gt;
+&lt;/<span class="org-function-name">div</span>&gt;
+&lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"div2"</span>&gt;
+  &lt;<span class="org-function-name">h1</span>&gt;<span class="org-underline"><span class="org-bold">is() &#246;zelli&#287;ini</span></span>&lt;/<span class="org-function-name">h1</span>&gt;
+&lt;/<span class="org-function-name">div</span>&gt;
+&lt;<span class="org-function-name">div</span> <span class="org-variable-name">class</span>=<span class="org-string">"div3"</span>&gt;
+  &lt;<span class="org-function-name">h1</span>&gt;<span class="org-underline"><span class="org-bold">deniyoruz</span></span>&lt;/<span class="org-function-name">h1</span>&gt;
+&lt;/<span class="org-function-name">div</span>&gt;
+</pre>
+</div>
+<p>
+ve her div'in içerisindeki h1 elemanının yazı rengini kırmızı yapmak
+istiyoruz. Önceden bunu şu şekilde yapıyorduk:
+</p>
+<div class="org-src-container">
+<pre class="src src-css"><span class="org-css-selector">.div1 h1, .div2 h1, .div3 h1 </span>{
+    <span class="org-css-property">color</span>:<span class="custom">red</span>;
+}
+</pre>
+</div>
+<p>
+Fakat artık böyle daha sade bir şekilde yazabileceğiz:
+</p>
+<div class="org-src-container">
+<pre class="src src-css">:is(.div1, .div2, .div3) h1 {
+    <span class="org-css-property">color</span>: <span class="custom">red</span>;
+}
+</pre>
+</div>
+<p>
+Önceden bu ihtiyacımızı <code>:any()</code> ile giderebiliyorduk fakat onda istediğimiz
+düzeyde karışık seçicileri kullanamıyorduk.
+</p>
+
+<p>
+<code>:where()</code> özelliği de <code>:is()</code> ile benzer bir yapıya sahip fakat bazı farkları
+mevcut. Front-end tarafına pek yakın birisi olmadığı için ne kadar anlamaya
+çaba göstersem de farklarını tam olarak anlayamadım o yüzden sizi Mozilla
+Developer Network'deki <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:where">dokümantasyon sayfasına yönlendirmek</a> durumundayım. Eğer
+konu hakkında bilgili arkadaşlar varsa lütfen yorumlar bölümünde bizimle
+paylaşsın.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org322e983" class="outline-2">
+<h2 id="org322e983"><span class="section-number-2">5</span> Swift programlama dili topluluğu kendi Paket Kayıt Servisi'ni <a href="https://forums.swift.org/t/swift-package-registry-service/37219">tanımlamayı tartışıyor</a></h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Apple tarafından geliştirilen açık kaynak kodlu programlama dili Swift,
+geçtiğimiz Haziran ayında GitHub'ın kendi paket kayıt (Package Registry)
+servisine <a href="https://github.blog/2019-06-03-github-package-registry-will-support-swift-packages/">eklenmişti</a>. Fakat bu paket kayıt sisteminin GitHub'ın tekelinde
+olmasını istemeyen topluluk üyeleri Swift'in kendi paket kayıt servisini
+tanımlaması gerektiği konusunda <a href="https://forums.swift.org/t/github-swift-package-management-service/30406">tartışmalar başlatmıştı</a>. Geçtiğimiz hafta ise
+bu paket kayıt servisini tanılamak için bir <a href="https://forums.swift.org/t/swift-package-registry-service/37219">öneri taslağı ("proposal")
+yayınlandı</a>.
+</p>
+
+<p>
+Burada şunu belirtmekte fayda var: Swift programlama dilinin, projedeki
+bağımlılıklarınızı yönetebileceğiniz bir paket yönetim aracı zaten var; burada
+konuşulan paket <a href="https://www.npmjs.com/">npm</a> gibi, <a href="https://rubygems.org/">RubyGems</a> gibi paket kayıt sistemleri. Elbette bu
+tartışmaların sonucunda yine bu paket yöneticisine, kendi paket kayıt
+servislerimizi ekleme özelliğinin gelmesi planlanıyor.
+</p>
+
+<p>
+Swift programlama dilinin forum sayfasında ilgili tartışma devam ediyor.
+İlerleyen süreçlerde ne gibi sonuçların çıkacağını hep birlikte göreceğiz.
+</p>
+</div>
+</div>
+<div id="outline-container-org2601928" class="outline-2">
+<h2 id="org2601928"><span class="section-number-2">6</span> Go takımı kaynak kodlardaki "<i>blacklist</i>", "<i>whitelist</i>", "<i>master</i>", "<i>slave</i>" gibi <a href="https://go-review.googlesource.com/c/go/+/236857/">ifadeleri kaldırdı</a></h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Amerika Birleşik Devletlerinde bir polisin siyahi bir vatandaşı öldürmesiyle
+başlayan olaylardan sonra ırkçılık konusuyla ilgili var olan hassasiyetlerin
+seviyesi de oldukça artmış durumda. Geçtiğimiz hafta içerisinde de Google
+tarafından geliştirilen Go programlama dilinin kaynak kodları içerisindeki
+"kara liste" ("<i>siyah liste</i>"), "<i>beyaz liste</i>", "<i>efendi</i>" ve "<i>köle</i>" gibi
+ifadelerin yerini "<i>allowlist</i>" ("<i>kabul listesi</i>"), "<i>blocklist</i>" ("<i>engel
+listesi</i>"), "<i>control</i>" ve "<i>process</i>" gibi ifadelere bıraktılar.
+</p>
+
+<p>
+Özellikle "<i>blacklist</i>" ve "<i>whitelist</i>" sadece programlama alanında değil birçok
+farklı alanda da artık kalıplaşmış kelimeler olduğu için pek önemli değil gibi
+gözükse de biraz düşününce aslında bu değişikliğin mantıklı olduğu ortaya
+çıkıyor. En azından bana öyle geliyor. Kaynak kodlardan bu tarz ifadelerin
+kaldırılması iyi olmuş bence de.
+</p>
+</div>
+</div>
+<div id="outline-container-org112814e" class="outline-2">
+<h2 id="org112814e"><span class="section-number-2">7</span> Yaklaşan Online Etkinlikler</h2>
+<div class="outline-text-2" id="text-7">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" width="100%">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Etkinlik İsmi</th>
+<th scope="col" class="org-left">Tarihi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><a href="https://kommunity.com/cozumpark/events/cozumpark-sql-tech-talk-live-guvenlik-bakim-ve-performans-363df7aa">SQL Server Güvenlik, Bakım ve Performans</a></td>
+<td class="org-left">9 Haziran 14:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/tracikkaynak/events/acik-seminer-31-gun-devops-ve-micro-frontendler-8b2de35c">Açık Seminer 31. Gün: DevOps ve Micro Frontendler</a></td>
+<td class="org-left">9 Haziran 14:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/tr-TR/trendyol/events/270950447">Debezium ile Transaction Log Tailing</a></td>
+<td class="org-left">9 Haziran 18:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/tr-TR/TestHive/events/270909328">Test Otomasyon Projelerinde Kubernetes Kullanımı</a></td>
+<td class="org-left">9 Haziran 19:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/cloud-and-serverless-turkey/events/bulut-cozumlerinde-tasarruf-saglamanin-en-iyi-yontemleri-8b9464e4">Bulut çözümlerinde tasarruf sağlamanın en iyi yöntemleri</a></td>
+<td class="org-left">10 Haziran 12:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/tracikkaynak/events/acik-seminer-32-gun-78318ade">Açık Seminer 32. Gün: Mikroservis Mimarisi</a></td>
+<td class="org-left">10 Haziran 14:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/cozumpark/events/teknoloji-sohbetleri-acik-kaynak-kodlu-yazilimlarla-soc-kurulumu-ve-yonetimi-a7da5264">Açık Kaynak Kodlu Yazılımlarla SOC Kurulumu ve Yönetimi</a></td>
+<td class="org-left">10 Haziran 14:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/tr-TR/Teknolot/events/270951400">C# ve Tensorflow ile Auto Encoder Örneği</a></td>
+<td class="org-left">10 Haziran 14:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/tr-TR/IBMDeveloperTR/events/270784273">Python ve scikit-learn kullanarak kümeleme algoritmalarına giriş!</a></td>
+<td class="org-left">10 Haziran 15:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/ruby-turkiye/events/ruby-turkiye-bulusmasi-8-online-1-7166a878">Ruby Türkiye Buluşması no.8 Online 1</a></td>
+<td class="org-left">10 Haziran 20:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/tr-TR/GDG-Cloud-Istanbul/events/271074887">Concurrency 2 - Sohbet Zamanı</a></td>
+<td class="org-left">10 Haziran 21:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/devops-turkiye/events/edge-computing-nedir-ve-ne-zaman-kullanilmali-hands-on-demo-7daf47ae">Edge computing nedir ve ne zaman kullanılmalı?</a></td>
+<td class="org-left">11 Haziran 12:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/tracikkaynak/events/acik-seminer-33-gun-mikroservis-tasarim-prensipleri-7d235132">Açık Seminer 33. Gün: Mikroservis Tasarım Prensipleri</a></td>
+<td class="org-left">11 Haziran 14:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/ddd-istanbul/events/event-driven-design-07b35a22">Event Driven Design</a></td>
+<td class="org-left">11 Haziran 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/ngturkey/events/state-management-webinar-113474a0">State Management</a></td>
+<td class="org-left">11 Haziran 20:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/tr-TR/IBMDeveloperTR/events/270949619">Build your First Microservice based Web Application</a></td>
+<td class="org-left">12 Haziran 14:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/devnot-yazilimci-bulusmalari/events/java-net-platformlarinda-microservice-bilesenleri-84d7a825">Java &amp; .NET Platformlarında Microservice Bileşenleri</a></td>
+<td class="org-left">12 Haziran 22:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/tr-TR/GDGIstanbul/events/271109645">Android 11 Beta Launch</a></td>
+<td class="org-left">13 Haziran 19:00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org3bf3c0c" class="outline-2">
+<h2 id="org3bf3c0c"><span class="section-number-2">8</span> Diğer Haberler</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li>Apple, parola yöneticisi uygulamalar için <a href="https://developer.apple.com/news/?id=06052020a&amp;1591373342">yeni kaynaklar yayınladı</a>. <a href="https://github.com/apple/password-manager-resources">GitHub
+Deposu</a></li>
+<li>Atlassian, yeni DevOps <a href="https://techcrunch.com/2020/06/02/atlassian-launches-new-devops-features/">özelliklerini duyurdu</a>.</li>
+<li>Microsoft Azure takımı, Azure Maps Creator hizmetini <a href="https://azure.microsoft.com/en-us/blog/azure-maps-creator-now-available-in-preview/">ön izleme olarak
+kullanıma açtı</a>.</li>
+<li>IBM, MacOs ve iOS için kendi <a href="https://www.ibm.com/blogs/research/2020/06/ibm-releases-fully-homomorphic-encryption-toolkit-for-macos-and-ios-linux-and-android-coming-soon/">şifreleme araç setini duyurdu</a>. Linux ve Android
+için de yakında gelecekmiş.</li>
+<li>Amazon ve Slack <a href="https://www.theverge.com/2020/6/4/21280829/slack-amazon-aws-partnership-amazon-chime-voice-video-calls">partnerliklerini duyurdular</a>.</li>
+<li>AWS, 2. Nesil AMD EPYC işlemcili EC2 C5a <a href="https://aws.amazon.com/blogs/aws/new-amazon-ec2-c5a-instances-powered-by-2nd-gen-amd-epyc-processors/">makinelerini kullanıma açtı</a>.</li>
+<li>Git <a href="https://lore.kernel.org/git/xmqqzh9mu4my.fsf@gitster.c.googlers.com/">v2.27.0 sürümü yayınlandı</a>.</li>
+<li>PhpStorm <a href="https://blog.jetbrains.com/phpstorm/2020/06/phpstorm-2020-2-eap-2/">2020.2 EAP 2 sürümü yayınlandı</a>.</li>
+<li>Rust programlama dilinin <a href="https://blog.rust-lang.org/2020/06/04/Rust-1.44.0.html">1.44.0 sürümü yayınlandı</a>.</li>
+<li>MultiCore OCaml projesi için <a href="https://discuss.ocaml.org/t/multicore-ocaml-may-2020-update/5898">Mayıs 2020 raporu yayınlandı</a>.</li>
+<li>Blazor WebAssembly <a href="https://www.hiddenbrains.com/blog/blazor-webassembly-3-2-0-released.html">3.2.0 sürümü yayınlandı</a>.</li>
+<li>Polaris <a href="https://www.fairwinds.com/blog/fairwinds-polaris-1.0-best-practices-for-kubernetes-workloads">v1.0.0 sürümü yayınlandı</a>.</li>
+<li>Wine <a href="https://www.winehq.org/announce/5.10">5.10 sürümü yayınlandı</a>.</li>
+<li>Kuesa 3D <a href="https://www.kdab.com/kuesa-3d-1-2-release/">1.2 sürümü yayınlandı</a>.</li>
+<li>LibreSSL <a href="https://ftp.openbsd.org/pub/OpenBSD/LibreSSL/libressl-3.2.0-relnotes.txt">3.2.0 sürümü yayınlandı</a>.</li>
+<li>TerminusDB <a href="https://github.com/terminusdb/terminusdb-server/releases/tag/v2.0.0">v2.0.0 sürümü yayınlandı</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgefca899" class="outline-2">
+<h2 id="orgefca899"><span class="section-number-2">9</span> Lisans</h2>
+<div class="outline-text-2" id="text-9">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="../../../img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+<a href="yazilim-gundemi-2020-22.html">Yazılım Gündemi - 2020/22</a> yazısı <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a> (CC BY-NC-SA 4.0)
+ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 8 Haziran 2020</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 22:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

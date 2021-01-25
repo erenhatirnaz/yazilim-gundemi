@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 22:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi - 2020/23</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi - 2020/23
+<br />
+<span class="subtitle">8-14 Haziran 2020</span>
+</h1>
+<div id="table-of-contents">
+<h2>İçindekiler</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org48a26da">1. PHP 25 yaşında ve PHP 8 sürümü yayın takvimi yayınlandı</a></li>
+<li><a href="#org94e232e">2. Android 11 Beta yayınlandı</a></li>
+<li><a href="#org7d903b6">3. Visual Studio Code Go eklentisi artık Go projesinin parçası haline geldi</a></li>
+<li><a href="#org17a9580">4. Apache Software Foundation belgeseli yayınlandı</a></li>
+<li><a href="#org4ca6147">5. Visual Studio Code Mayıs 2020 (v1.46) sürümü yayınlandı</a></li>
+<li><a href="#orgf247d86">6. Yaklaşan Online Etkinlikler</a></li>
+<li><a href="#orgd9b01d9">7. Diğer Haberler</a></li>
+<li><a href="#orga48348c">8. Lisans</a></li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gundemi-banner.png" alt="yazilim-gundemi-banner.png" />
+</p>
+</div>
+
+<div class="org-center">
+<p>
+<a href="../22/yazilim-gundemi-2020-22.html">&lt; Önceki Gündem</a> | <b>8-14 Haziran 2020</b> | <a href="../24/yazilim-gundemi-2020-24.html">Sonraki Gündem &gt;</a>
+</p>
+
+<p>
+<a href="https://teknoseyir.com/blog/yazilim-gundemi-2020-23">TeknoSeyir'de Oku</a>
+</p>
+</div>
+
+<div id="outline-container-org48a26da" class="outline-2">
+<h2 id="org48a26da"><span class="section-number-2">1</span> PHP <a href="https://www.jetbrains.com/lp/php-25/">25 yaşında</a> ve PHP 8 sürümü <a href="https://externals.io/message/110470">yayın takvimi yayınlandı</a></h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Geçtiğimiz hafta içerisinde PHP programlama dili 25 yaşına girdi. Yani
+yaratıcısı Rasmus Lerdorf'un Personal Home Page Tools adı altında kendi
+kişisel ihtiyaçları için geliştirdiği C kütüphanesinin ilk sürümünün
+yayınlanmasının ardından 25 yıl geçti. Bugün ise web arka yüz (back-end)
+tarafında en çok kullanılan programlama dillerinden birisi haline gelmiş
+durumda. JetBrains firması da PHP'nin <a href="https://www.jetbrains.com/lp/php-25/">25 yıllık hikayesini anlatan bir sayfa</a>
+hazırladı. Mutlaka göz atmanızı tavsiye ederim. Ben de PHP ile yaşıtım :)
+</p>
+
+<p>
+Ben de programlamaya derinlemesine merak salmadan önce ortaokuldayken forum
+siteleri açıp, kapatmakla uğraşıyordum sürekli. phpBB, MyBB, SMF (Simple
+Machines Forum) ve vBullettin gibi birçok forum altyapıysa uğraştım. Bunları
+özelleştirdim, eklentiler geliştirdim fakat maalesef açtığım hiçbir forum
+sitesi tutmadı. Hepsi PHP ile geliştirilmiş sistemler olduğu için tabii bir
+miktar PHP de öğrenmiş oldum. Sonraları programlamaya ilgim daha da arttı ama
+o zamanlarda güzel zamanlardı :). Paket yönetim sistemleri ve standardizasyon
+çalışmalarından önceki PHP gerçekten zor zamanlar yaşatıyordu insanlara ama
+<a href="https://getcomposer.org/">Composer</a> ve <a href="https://www.php-fig.org/">PHP-FIG</a> ile birlikte bu tarz sorunlar da aşıldı fakat o
+zamanlardan kalan insanların ön yargılarını hala daha kırabilmiş değil. Hala
+daha insanlar "PHP öldü" deseler de PHP, diğer hype teknolojilerin uzağında
+sektörde daha aktif kullanılarak yaşımına devam ediyor. Benim de yazmaktan
+zevk aldığım bir programlama dili, umarım bir gün PHP kaynak kodlarına katkı
+sağlama noktasına da gelebilirim. İyi ki doğdun PHP, nice senelere! :)
+</p>
+
+<p>
+Ayrıca geçtiğimiz hafta içerisinde PHP 8.0 sürümü için de <a href="https://wiki.php.net/todo/php80">yayın takvimi</a>
+<a href="https://externals.io/message/110470">duyuruldu</a>. Eğer bir aksilik olmazsa PHP 8.0 sürümünün yayın çizelgesi bu
+şekilde olacak:
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Tablo 1:</span> (*): Bu tarihten sonra yeni özellik eklenmeyecek</caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Tarih</th>
+<th scope="col" class="org-left">Sürüm Etiketi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">25 Haziran 2020</td>
+<td class="org-left">Alpha 1</td>
+</tr>
+
+<tr>
+<td class="org-left">09 Temmuz 2020</td>
+<td class="org-left">Alpha 2</td>
+</tr>
+
+<tr>
+<td class="org-left">23 Temmuz 2020</td>
+<td class="org-left">Alpha 3</td>
+</tr>
+
+<tr>
+<td class="org-left">04 Ağustos 2020</td>
+<td class="org-left">Feature Freeze (*)</td>
+</tr>
+
+<tr>
+<td class="org-left">06 Ağustos 2020</td>
+<td class="org-left">Beta 1</td>
+</tr>
+
+<tr>
+<td class="org-left">20 Ağustos 2020</td>
+<td class="org-left">Beta 2</td>
+</tr>
+
+<tr>
+<td class="org-left">03 Eylül 2020</td>
+<td class="org-left">Beta 3</td>
+</tr>
+
+<tr>
+<td class="org-left">17 Eylül 2020</td>
+<td class="org-left">Release Candidate 1</td>
+</tr>
+
+<tr>
+<td class="org-left">01 Ekim 2020</td>
+<td class="org-left">Release Candidate 2</td>
+</tr>
+
+<tr>
+<td class="org-left">15 Ekim 2020</td>
+<td class="org-left">Release Candidate 3</td>
+</tr>
+
+<tr>
+<td class="org-left">29 Etkim 2020</td>
+<td class="org-left">Release Candidate 4</td>
+</tr>
+
+<tr>
+<td class="org-left">12 Kasım 2020</td>
+<td class="org-left">Release Candidate 5</td>
+</tr>
+
+<tr>
+<td class="org-left">26 Kasım 2020</td>
+<td class="org-left">General Available (Stabil son sürüm)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org94e232e" class="outline-2">
+<h2 id="org94e232e"><span class="section-number-2">2</span> Android 11 <a href="https://blog.google/products/android/android-11-beta/">Beta yayınlandı</a></h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Google Android takımı mayıs ayının son haftasında Android 11 Beta sürümünü,
+Amerika'daki olaylar nedeniyle yayınlamayı <a href="https://twitter.com/AndroidDev/status/1266589514937466880">ertelediklerini duyurmuştu</a>. Aradan
+geçen birkaç haftanın ardından geçtiğimiz hafta ise <a href="https://developer.android.com/android11">Android 11 Beta</a> sürümü
+yayınlandı. Canlı yayın yerine bu sefer çeşitli kısa videolar yayınlayarak
+duyuruyu yaptılar.
+</p>
+
+<p>
+Bu sürümde üzerinde durdukları üç ana konu var: <b>İnsanlar</b>, <b>Kontroller</b> ve
+<b>Gizlilik</b>. Bu üç konu altındaki yenilikler ise şu şekilde:
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/android11-insanlar.gif" alt="android11-insanlar.gif" height="500" />
+</p>
+</div>
+
+<ul class="org-ul">
+<li><b>İnsanlar</b>:
+<ul class="org-ul">
+<li>Anlık mesajlaşma uygulamalarından gelen bildirimler bildirim panelinde
+ayrı özel bir bölümde gösterilecek.</li>
+<li>Başka bir uygulamadayken mesajlaşma uygulamalarından bildirim gelince
+uygulamayı açmadan bildirime tıklayarak cevap yazılabilecek. Bubbless API
+buna izin veriyor.</li>
+<li>Otomatik tamamlama önerileri artık daha içeriğe özel olacak.</li>
+<li>Sesli kontrol ile telefonun birçok özelliğini kontrol edebilme.</li>
+</ul></li>
+</ul>
+
+
+<div class="figure">
+<p><img src="gorseller/android11-kontroller.gif" alt="android11-kontroller.gif" height="500" />
+</p>
+</div>
+
+<ul class="org-ul">
+<li><b>Kontroller</b>:
+<ul class="org-ul">
+<li><b>Cihaz Kontrolleri</b> ile artık telefonunuza bağlı akıllı cihazları tek bir
+konumdan yönetebileceksiniz. Kilit tuşuna basılı tutarak açabileceğiniz
+bu ekranda akıllı cihazlarınıza çeşitli komutlar gönderebileceksiniz.
+Teknik detaylar için <a href="https://developer.android.com/preview/features/device-control">buraya tıklayabilirsiniz</a>.</li>
+<li><b>Medya Kontrolleri</b> ile de telefonunuzun ses ve görüntü içeriklerini
+farklı cihazlar arasında paylaştırma işlemleri yapabileceksiniz. Teknik
+detaylar için <a href="https://developer.android.com/preview/features/media-controls">buraya tıklayabilirsiniz</a>.</li>
+</ul></li>
+</ul>
+
+
+<div class="figure">
+<p><img src="gorseller/android11-gizlilik.gif" alt="android11-gizlilik.gif" height="500" />
+</p>
+</div>
+
+<ul class="org-ul">
+<li><b>Gizlilik</b>:
+<ul class="org-ul">
+<li><b>Tek seferlik izinler</b> ile artık ilgili uygulamaya bir izini sadece bir
+seferlik verebileceksiniz. Uygulamanın ikinci kez aynı şeyi
+kullanabilmesi için tekrar izin vermeniz gerekecek. Teknik detaylar için
+<a href="https://developer.android.com/preview/privacy/permissions">buraya bakabilirsiniz</a></li>
+<li><b>İzinleri otomatik sıfırlama</b>: Android 11'de artık bir uygulama belirli
+bir periyotta hiç kullanılmadıysa, sistem onun aldığı izinleri otomatik
+olarak sıfırlayacak. Kullanıcı tekrar uygulamayı açarsa tekrar izin
+verilmesi gerekecek. <a href="https://developer.android.com/preview/privacy/permissions#auto-reset">Teknik Detaylar</a></li>
+<li>Arka planda konum verisi kullanabilmek için artık özel izin almak
+gerekiyor. Bu konuya yazılım gündeminin önceki yazılarında da (bkz:
+<a href="../15/yazilim-gundemi-2020-15.html">Yazılım Gündemi - 2020/15</a>) değinmiştik. <a href="https://support.google.com/googleplay/android-developer/answer/9799150">Detaylar</a></li>
+<li>Geçtiğimiz yıllarda hayatımıza giren Google Play Sistem Güncellemeleri ile
+güncellenebilecek yeni 12 tane modül eklendi.</li>
+</ul></li>
+</ul>
+
+<p>
+Biz geliştiricileri ilgilendiren özelliklerden bazıları da şu şekilde:
+</p>
+
+<ul class="org-ul">
+<li>Geliştirici Özellikleri kısmına birçok ayarın açılıp kapatılabileceği yeni
+bir arayüz eklendi.</li>
+<li>Uygulamalarınızı stabil bir şekilde yeni sistemlere geçirebilmeniz için
+yeni <a href="https://developer.android.com/preview/overview#timeline">Platform Stability</a></li>
+<li>Uygulamada hata ayıklama için kablosuz ADB özelliklerinde iyileştirmeler.</li>
+</ul>
+
+
+<div class="figure">
+<p><img src="gorseller/android-studio.jpg" alt="android-studio.jpg" />
+</p>
+<p><span class="figure-number">Şekil 5: </span>Android Studio 4.1 Beta ve 4.2 Canary ile gelen özellikler</p>
+</div>
+
+<p>
+Bu sürümle birlikte gelen diğer özellik ve değişiklikler için konu başlığına
+eklediğim ya da yazı içerisinde satır aralarında verdiğim teknik detaylar
+bağlantılarına tıklayabilirsiniz. Eğer aramızda Android uygulama geliştirmede
+deneyimli arkadaşlar varsa, onlar da yorumlar bölümünde önemli buldukları
+özellik ve değişiklikleri vurgulayabilirler.
+</p>
+</div>
+</div>
+<div id="outline-container-org7d903b6" class="outline-2">
+<h2 id="org7d903b6"><span class="section-number-2">3</span> Visual Studio Code Go eklentisi artık Go projesinin <a href="https://blog.golang.org/vscode-go">parçası haline geldi</a></h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Microsoft tarafından açık kaynak olarak geliştirilen Visual Studio Code metin
+editörünün Go programlama dili için olan eklentisi, geçtiğimiz hafta
+içerisinde sahibi Microsoft'dan Google'a Go takımına geçti. Eklentinin yeni
+depo adresi bu şekilde oldu: <a href="https://github.com/golang/vscode-go">https://github.com/golang/vscode-go</a>. Benim
+tahminim artık yeni bir Go sürümü yayınlandığında periyodik olarak aynı
+zamanda VS Code Go eklentisi de güncellenecek, böylece de yeni özellikler için
+Microsoft'un ilgili takımının ya da açık kaynak topluluğunun geliştirme
+yapmasını beklemek gerekmeyecek.
+</p>
+
+<p>
+Geçiş ile ilgili Go takımının yazdığı blog yazısına konu başlığına eklediğim
+bağlantıya tıklayarak ulaşabilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-org17a9580" class="outline-2">
+<h2 id="org17a9580"><span class="section-number-2">4</span> Apache Software Foundation <a href="https://www.youtube.com/watch?v=JUt2nb0mgwg">belgeseli yayınlandı</a></h2>
+<div class="outline-text-2" id="text-4">
+<p>
+<a href="https://www.youtube.com/watch?v=JUt2nb0mgwg">Konuyla ilgili YouTube Videosu</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org4ca6147" class="outline-2">
+<h2 id="org4ca6147"><span class="section-number-2">5</span> Visual Studio Code Mayıs 2020 (v1.46) <a href="https://code.visualstudio.com/updates/v1_46">sürümü yayınlandı</a></h2>
+<div class="outline-text-2" id="text-5">
+
+<div class="figure">
+<p><img src="gorseller/vscode-1-46.png" alt="vscode-1-46.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf247d86" class="outline-2">
+<h2 id="orgf247d86"><span class="section-number-2">6</span> Yaklaşan Online Etkinlikler</h2>
+<div class="outline-text-2" id="text-6">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" width="100%">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Etkinlik İsmi</th>
+<th scope="col" class="org-left">Tarihi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><a href="https://kommunity.com/acmhacettepe/events/temel-bulut-bilisim-workshop-ozgur-ozturk-acsdays-1-334aedde">Özgür Öztürk - Temel Bulut Bilişim Workshop</a></td>
+<td class="org-left">15 Haziran 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/acmhacettepe/events/powerful-mobile-application-development-veli-bacik-acsdays-2-2f8c2007">Veli Bacık - Powerful Mobile Application Development</a></td>
+<td class="org-left">15 Haziran 21:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/tracikkaynak/events/acik-seminer-35-gun-5g-media-servis-gelistirme-kiti-0589a2f2">Açık Seminer 35. Gün: 5G-MEDIA Servis Geliştirme Kiti</a></td>
+<td class="org-left">16 Haziran 14:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/cozumpark/events/gercek-hayatta-yapay-zeka-1bd98d10">Gerçek Hayatta Yapay Zeka</a></td>
+<td class="org-left">16 Haziran 14:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/acmhacettepe/events/reactjs-ile-web-ve-mobil-uygulamalari-gelistirme-zafer-ayan-acsdays-3-336f845e">Zafer Ayan - ReactJS ile Web ve Mobil Uygulamaları Geliştirme</a></td>
+<td class="org-left">16 Haziran 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/bilge-adam-teknoloji/events/spring-boot-rest-service-9f25998f">Spring Boot REST Service</a></td>
+<td class="org-left">16 Haziran 21:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://aws.amazon.com/events/summits/online/emea/agenda/">AWS Summit Online</a></td>
+<td class="org-left">17 Haziran 09:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/tracikkaynak/events/acik-seminer-36-gun-5g-use-caseler-ve-5g-3gpp-standarlarindan-nef-8007f5c7">Açık Seminer 36. Gün: 5G Kullanım Örnekleri ve Kablosuz Haberleşme Ağları</a></td>
+<td class="org-left">17 Haziran 14:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/acmhacettepe/events/pandemide-yazilimci-olmak-ender-ahmet-yurt-acsdays-5-af0545e2">Ender Ahmet Yurt - Pandemide Yazılımcı Olmak</a></td>
+<td class="org-left">17 Haziran 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/mavidurakio/events/s1e47-yazilimci-bulusmasi-13124b44">Yazılımcı Buluşması {MaviDurakIO}</a></td>
+<td class="org-left">17 Haziran 20:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/acmhacettepe/events/sosyal-yonleriyle-acik-kaynak-gelistiriciligi-fatih-kadir-akin-acsdays-6-4ce6fd17">Fatih Kadir Akın - Sosyal Yönleriyle Açık Kaynak Geliştiriciliği</a></td>
+<td class="org-left">17 Haziran 21:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/tracikkaynak/events/acik-seminer-37-gun-3b11c4ed">Açık Seminer 37. Gün: 5G Nedir?</a></td>
+<td class="org-left">18 Haziran 14:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/acmhacettepe/events/performans-neden-onemlidir-bilal-cinarli-acsdays-7-6bdfb155">Bilal Çınarlı - Performans Neden Önemlidir?</a></td>
+<td class="org-left">18 Haziran 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/bilge-adam-teknoloji/events/react-native-ile-mobil-uygulama-gelistirme-245c083b">React Native ile Mobil Uygulama Geliştirme</a></td>
+<td class="org-left">18 Haziran 20:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/acmhacettepe/events/yazilim-muhendisliginde-kariyer-harita-arazinin-kendisi-degil-berk-ulsoy-fe3c6d29">Berk Ulsoy - Yazılım Mühendisliğinde Kariyer</a></td>
+<td class="org-left">18 Haziran 21:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/microsoft-student-partners-turkiye/events/lets-meet-with-microsoft-student-partner-ae6f043f">Let's meet with Microsoft Student Partner Program</a></td>
+<td class="org-left">18 Haziran 21:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/tracikkaynak/events/acik-seminer-38-gun-9d1b528b">Açık Seminer 38. Gün: Haberleşme Teknolojileri Kümelenmesi (HTK)</a></td>
+<td class="org-left">19 Haziran 14:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/acmhacettepe/events/sinyal-istihbarati-murat-sisman-acsdays-9-cb66ab0b">Murat Şişman - Sinyal İstihbaratı</a></td>
+<td class="org-left">19 Haziran 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/kare-disket/events/web-sitesinin-calisma-prensipleri-ve-temel-html-egitimi-660e1e14">Web Sitesinin Çalışma Prensipleri ve Temel HTML Eğitimi</a></td>
+<td class="org-left">19 Haziran 20:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/acmhacettepe/events/nodejs-deno-ve-js-ile-backend-gelistirmenin-dunu-ve-bugunu-eser-ozvataf-5ef2730a">Eser Özvataf - Node.js, Deno ve JS ile Backend Geliştirmenin Dünü ve Bugünü</a></td>
+<td class="org-left">19 Haziran 21:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/bilge-adam-teknoloji/events/net-core-ile-gercek-zamanli-web-uygulamasi-gelistirme-305ed24d">.NET Core ile Gerçek Zamanlı Web Uygulaması Geliştirme</a></td>
+<td class="org-left">19 Haziran 21:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/devnot-yazilimci-bulusmalari/events/online-microservices-ddd-konferansi-560b28ae">Online Microservices &amp; DDD Konferansı</a></td>
+<td class="org-left">20 Haziran 09:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/bilge-adam-teknoloji/events/aspnet-web-api-ile-odata-kullanimi-4d505a79">ASP.NET Web API ile OData Kullanımı</a></td>
+<td class="org-left">20 Haziran 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/acmhacettepe/events/baran-somakli-freelance-ve-uzaktan-calisma-acsdays-11-004cb0e7">Baran Somaklı - Freelance ve Uzaktan Çalışma</a></td>
+<td class="org-left">20 Haziran 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/microsoft-student-partners-turkiye/events/introduction-to-abp-framework-by-ahmet-cotur-fad979a2">Introduction to ABP Framework by Ahmet Çotur</a></td>
+<td class="org-left">20 Haziran 21:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/istanbul-bilisim-toplulugu/events/career-talks-8-oguz-kilic-bir-gelistiricinin-kariyer-yolculugu-93f87bdd">Career Talks no.8 - Oğuz Kılıç - Bir Geliştiricinin Kariyer Yolculuğu</a></td>
+<td class="org-left">20 Haziran 21:00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orgd9b01d9" class="outline-2">
+<h2 id="orgd9b01d9"><span class="section-number-2">7</span> Diğer Haberler</h2>
+<div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>Cloudflare TV <a href="https://blog.cloudflare.com/ladies-and-gentlemen-cloudflare-tv/">tanıtıldı</a>. <a href="https://cloudflare.tv/live">Web Sitesi</a></li>
+<li>Apple, WWDC20 <a href="https://www.apple.com/newsroom/2020/06/apple-reveals-lineup-for-its-biggest-ever-worldwide-developers-conference/">etkinliğinin programını açıkladı</a>.</li>
+<li>JetBrains Geliştirici Ekosistemi 2020 <a href="https://www.jetbrains.com/lp/devecosystem-2020">anketi sonuçları açıklandı</a>.</li>
+<li>Facebook Yapay Zeka takımı, programlama dilleri arasında çevirim yapabilen
+<a href="https://towardsdatascience.com/facebooks-transcoder-an-ai-source-to-source-compiler-23ea77f3234b">yapay zeka geliştirdi</a>. <a href="https://arxiv.org/abs/2006.03511">Akademik Makale</a></li>
+<li>OpenAI takımı yeni yapay zeka <a href="https://openai.com/blog/openai-api/">API araçlarını kullanıma açtı</a>.</li>
+<li>AWS yeni <a href="https://aws.amazon.com/about-aws/whats-new/2020/06/introducing-aws-codeartifact-a-fully-managed-software-artifact-repository-service/">hizmetini tanıttı</a>: <a href="https://aws.amazon.com/about-aws/whats-new/2020/06/introducing-aws-codeartifact-a-fully-managed-software-artifact-repository-service/">AWS CodeArtifact</a>.</li>
+<li>GitLab, Peach Teach and Fuzzit <a href="https://about.gitlab.com/press/releases/2020-06-11-gitlab-acquires-peach-tech-and-fuzzit-to-expand-devsecops-offering.html">şirketlerini satın aldı</a>.</li>
+<li>DigitalOcean, sorunlar giderilene kadar FRA1 ve NYC3 lokasyonlarında yeni
+<a href="https://www.digitalocean.com/docs/release-notes/upcoming/spaces-fra1-nyc3/">Spaces oluşturmayı devre dışı bıraktı</a>.</li>
+<li>QUIC ve HTTP/3 destekli özel NGINX sürümü teknoloji <a href="https://www.nginx.com/blog/introducing-technology-preview-nginx-support-for-quic-http-3/">ön izlemesi olarak
+tanıtıldı</a>.</li>
+<li>.NET 5.0 <a href="https://devblogs.microsoft.com/dotnet/announcing-net-5-0-preview-5/">Preview 5 sürümü duyuruldu</a>.</li>
+<li>Valve, OpenXR Geliştirici Ön İzlemesi <a href="https://uploadvr.com/valve-openxr-steamvr-beta">sürümünü yayınladı</a>.</li>
+<li>JDK 15 sürümü <a href="https://mail.openjdk.java.net/pipermail/jdk-dev/2020-June/004401.html">Rampdown Phase One aşamasına geçti</a>.</li>
+<li>Rust Nightly sürümüne Inline Assembly <a href="https://blog.rust-lang.org/inside-rust/2020/06/08/new-inline-asm.html">desteği geldi</a>.</li>
+<li>Dart programlama dili "Null Safety" özelliği <a href="https://medium.com/dartlang/announcing-sound-null-safety-defd2216a6f3">ön izleme olarak duyurdu</a>.</li>
+<li>VueJS <a href="https://github.com/vuejs/vue-next/releases/tag/v3.0.0-beta.15">3.0.0 Beta 15 sürümü yayınlandı</a>.</li>
+<li>PostgreSQL <a href="http://jepsen.io/analyses/postgresql-12.3">12.3 sürümü yayınlandı</a>.</li>
+<li>Apache Flink Stateful Functions <a href="https://flink.apache.org/news/2020/06/09/release-statefun-2.1.0.html">2.1.0 sürümü yayınlandı</a>.</li>
+<li>WildFly <a href="https://wildfly.org/news/2020/06/08/WildFly20-Final-Released/">20 sürümü yayınlandı</a>.</li>
+<li>Crystal <a href="https://crystal-lang.org/2020/06/09/crystal-0.35.0-released.html">0.35.0 sürümü yayınlandı</a>.</li>
+<li>Prisma <a href="https://www.prisma.io/blog/announcing-prisma-2-n0v98rzc8br1">2.0 sürümü duyuruldu</a>. <a href="https://github.com/prisma/prisma">GitHub Deposu</a></li>
+<li>Linkerd <a href="https://linkerd.io/2020/06/09/announcing-linkerd-2.8/">2.8 sürümü duyuruldu</a>.</li>
+<li>Lens <a href="https://github.com/lensapp/lens/releases/tag/v3.5.0-rc.1">3.5.0 RC1 sürümü yayınlandı</a>.</li>
+<li>xmake <a href="https://github.com/xmake-io/xmake/wiki/xmake-v2.3.4-released,-Better-toolchain-support">v2.3.4 sürümü yayınlandı</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga48348c" class="outline-2">
+<h2 id="orga48348c"><span class="section-number-2">8</span> Lisans</h2>
+<div class="outline-text-2" id="text-8">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="../../../img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+<a href="yazilim-gundemi-2020-23.html">Yazılım Gündemi - 2020/23</a> yazısı <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a> (CC BY-NC-SA 4.0)
+ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 15 Haziran 2020</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 22:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

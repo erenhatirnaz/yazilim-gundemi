@@ -1,0 +1,244 @@
+#+TITLE: Yazılım Gündemi - 2020/14
+#+SUBTITLE: 6-12 Nisan 2020
+#+AUTHOR: Eren Hatırnaz
+#+DATE: 13 Nisan 2020
+#+OPTIONS: ^:nil
+#+LANGUAGE: tr
+#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=black, filecolor=red, urlcolor=blue}
+#+LATEX_HEADER: \usepackage[turkish]{babel}
+#+HTML_HEAD: <link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+#+LATEX: \shorthandoff{=}
+
+[[file:gorseller/yazilim-gundemi-banner.png]]
+
+#+BEGIN_CENTER
+[[file:../13/yazilim-gundemi-2020-13.org][< Önceki Gündem]] | *6-12 Nisan 2020* | [[file:../15/yazilim-gundemi-2020-15.org][Sonraki Gündem >]]
+
+[[https://teknoseyir.com/blog/yazilim-gundemi-2020-14][TeknoSeyir'de Oku]]
+#+END_CENTER
+
+* Qt, [[https://www.qt.io/blog/qt-roadmap-for-2020][2020 yılı için bir yol haritası]] yayınladı fakat [[https://www.phoronix.com/scan.php?page=news_item&px=Qt-Might-Restrict-New-Releases][söylenmeyenler olabilir]]
+	C++ dünyasının popüler platformlar-arası (cross-platform) uygulama geliştirme
+	framework'lerinden biri olan Qt, bu hafta içerisinde 2020 yılı yol haritasını
+	yayınladı fakat KDE projesinin açık e-posta listesindeki bazı ifadeler 2020
+	yılı planının söylenmeyen bazı kısımlarını açığa çıkardı. Öncelikle Qt'nin
+	blog yazısı ile birlikte duyurduğu yol haritasına bakalım.
+
+	 * Qt Design Studio 1.5 sürümü Mayıs ayı içerisinde yayınlanacak.
+		 * Bu sürümde 2 boyutlu ve 3 boyutlu tasarımla ilgili iyileştirilmeler
+       yapılmış, bu konularda çalışmaya devam edeceklermiş.
+		 * Annotations desteği: Uygulamanın tasarımı ve geliştirilmesi devam ederken
+       sadece geliştiricilerin görebileceği notlar bırakabileceğiz. Bir nevi
+       tasarım ekranındaki yorum satırları diyebiliriz.
+		 * Adobe XD vb. diğer araçlar için destek çalışmaları devam ediyormuş.
+	 * Qt Creator aracına C++20 desteği ekleniyor.
+		 * Python ve QML desteklerini iyileştirmek için çalışmalar devam ediyor.
+	 * CMake 3.17 desteği gelecek.
+	 * Qt 5.15 ile birlikte yeni bir Qt for Microcontrollers sürümü de gelecek ve
+     tam QML desteği sağlayacak. Qt for MCUs için araçlar üzerinde çalışılıyor.
+     Qt Design Studio yazılımına MCU desteği gelecek.
+	 * Qt 1.15 sürümü Mayıs ayının sün günlerinde yayınlanacak. Ticari kullanım
+     lisansı olanlar için LTS (Long-term support/Uzun-dönemli destek) olacak
+     fakat açık kaynak kullanıcılar için normal bir sürüm olarak gelecek.
+		 * Qt Quick 3D desteğiyle gelecek.
+		 * Metal ve Vulkan gibi grafik API'lerini kullanabilmek için yeni Rendering
+       Hardware Interface gelecek.
+	 * Qt'nin bir sonraki büyük sürümü Qt 6.0'ın bu yılın sonunda yayınlanması
+     planlanıyor.
+	 * Qt'nin araç setindeki yazılımlara Qt Marketplace entegrasyonu eklemek için
+     çalışmalar devam ediyor.
+
+	Diğer detayları okumak isterseniz Qt firmasının blog sitesideki [[https://www.qt.io/blog/qt-roadmap-for-2020][şu yazıya]]
+	bakabilirsiniz. [[https://www.phoronix.com/scan.php?page=news_item&px=Qt-2020-Roadmap][Alternatif]]
+
+	Şimdi gelelim asıl meseleye. Bu yılın ilk yazılım gündemi yazılarının birinde
+	(bkz: [[file:../05/yazilim-gundemi-2020-05.org][Yazılım Gündemi - 2020/05]]), Qt'nin 2020 yılına değişikliklerle girdiğini
+	ve bunlar arasında da LTS sürümlerinin sadece ücretli lisans kullanıcılarına
+	sunulacağı vardı. Fakat Qt firmasının yukarıdaki yol haritasının yayınlandığı
+	gün, KDE projesinin e-posta listesinden tüm KDE topluluğuna "/Qt, Open Source
+	and corona/" başlıklı bir e-posta da gönderildi. E-posta'da Qt ve KDE
+	projeleri arasındaki bir takım tarihsel bilgilerden sonra geçtiğimiz hafta Qt
+	firmasının KDE takımlarıyla ile iletişime geçerek, "koronavirüs salgınının yol
+	açacağı ekonomik sorunlar yüzünden yeni yayınlanacak tüm Qt sürümlerinin 12 ay
+	süresince sadece ücretli lisans sahiplerine sunmayı" düşündüklerini iddia eden
+	ifadeler yer aldı. Bunun üzerine 9 Nisan tarihinde [[https://www.qt.io/blog/qt-and-open-source][bir yazı daha yayınlayarak]]
+	ilgili bilgilerin, "Qt firmasının plan ve görüşlerini yansıtmadığını"
+	söylediler. Konu tabii ki [[https://www.reddit.com/r/cpp/comments/fxbo24/qt_open_source_and_corona/][Reddit]] gibi platformlarda tartışmalara yol açtı.
+
+	C++ ve Qt ekosistemine uzak birisi olarak bu haberi doğru
+	yorumlayamayabilirim. O yüzden aramızdaki bu alanlarda çalışmış kişilerden
+	görüşlerini yorumlar bölümünde belirtmelerini rica ediyorum. Qt'nin gerçekten
+	böyle bir karar verip vermediği ilerleyen haftalarda ortaya çıkacak fakat
+	böyle bir kararın açık kaynak topluluklarına bölünmelere yol açacağı ortada.
+	Umarım Qt firması kararlarını tekrar gözden geçirir.
+* Firefox 75.0 ile [[https://hacks.mozilla.org/2020/04/firefox-75-ambitions-for-april/][gelen yeni özellikler]]
+	Mozilla tarafından geliştirilen Firefox tarayıcısının 75.0 numaralı sürümü bu
+	hafta içerisinde yayınlandı. Peki bu yeni sürümle birlikte biz geliştiricileri
+	ilgilendiren neler var? Gelin birkaç tanesini birlikte inceleyelim.
+
+** Tembel resim yükleme (lazy-loading)
+	 Geçtiğimiz yazılım gündemi yazılarından birinde (bkz: [[file:../07/yazilim-gundemi-2020-07.org][Yazılım Gündemi -
+	 2020/07]]) bu özelliğin W3C tarafından onaylanmış bir internet standardı
+	 olduğunu duyurmuştum. İşte o özellik bu hafta Firefox'a da geldi. O yazıyı
+	 okumayanlar için kısaca özetlemek gerekirse: artık aşağıdaki gibi etiketlenmiş
+	 bir görsel sayfa açıldığında hemen yüklenmeyecek, sadece ekranda görünür
+	 olduğunda yüklenecek.
+
+   #+ATTR_LATEX: :options frame=lines, linenos, label=HTML
+	 #+BEGIN_SRC html
+     <img src="teknoseyir.png" loading="lazy" alt="TeknoSeyir Logo" />
+	 #+END_SRC
+	 Bu sayede web sayfalarımız hem bize hem de kullanıcılara gereksiz trafik yükü
+	 oluşturmayacak.
+
+	 Bu özelliği destekleyen tarayıcılar ise şu şekilde:
+
+	 #+CAPTION: Kaynak: Mozilla Developer Network -
+   #+CAPTION: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#Browser_compatibility
+	 [[file:gorseller/lazy-loading-uyumluluk.png]]
+   #+LATEX: \newpage
+
+	 Lazy loading özelliği hakkında daha fazla bilgi almak için [[https://developer.mozilla.org/en-US/docs/Web/Performance/Lazy_loading][buraya]]
+	 tıklayabilirsiniz.
+** Konsolda çoklu-satır modu ve anında sonuç görme
+	 JavaScript ile web geliştirme yapanlarımızın adeta eli ayağı gibi olan
+	 Developer Tools aracının Console kısmında artık çok-satırlı kod yazıp
+	 çalıştırabileceğiz. Bu özelliği açmak için Console sekmesindeyken *CTRL+B*
+	 tuşlarına basmanız yeterli.
+
+	 [[file:gorseller/firefox75-console.png]]
+
+	 Çoklu satır modu açıldığında kodlarınızı yazdığınız yerin yanına bir panel
+	 daha açılacak. Bu panel kodlarınızı çalıştırdıktan sonra sonuçlarını
+	 göreceğiniz ekran. Artık çoklu satır modunda olduğunuz için *ENTER* ile
+	 kodlarınızı çalıştıramayacaksınız, bunun yerine *CTRL+ENTER* kullanmanız
+	 gerekiyor. Ayrıca burada yazdığınız kodları bir dosyaya kaydetmek
+	 istiyorsanız da *CTRL+S* tuş kombinasyonlarını kullanabilirsiniz. Çok-satır
+	 modu hakkında daha fazla bilgi için [[https://developer.mozilla.org/en-US/docs/Tools/Web_Console/The_command_line_interpreter#Multi-line_mode][buraya]] tıklayabilirsiniz.
+
+	 Yukarıdaki ekran görüntüsünün en altında bir de =Array(8)= ile başlayan bir
+	 satır görüyorsunuz. O ise bu sürümle birlikte gelen "/Instant Evaluation/"
+	 özelliği. Biz kodumuzu yazdıkça orası anlık olarak güncelleniyor ve
+	 yazdığımız kodun sonucunu bize ön-izleme olarak sunuyor. Gayet güzel ve
+	 faydalı bir özellik.
+** CSS için =min()=, =max()=, =clamp()= fonksiyonları
+	 Bu fonksiyonlar ile artık css tarafında bazı hesaplamalar yapabileceğiz.
+	 Şöyle ki:
+
+        * [[https://developer.mozilla.org/en-US/docs/Web/CSS/min][min()]]: Bir ya da daha fazla değer alır ve bunlar içerisinden *en küçük*
+          olanı döndürür.
+        * [[https://developer.mozilla.org/en-US/docs/Web/CSS/max][max()]]: Bir ya da daha fazla değer alır ve bunlar içerisinden *en büyük*
+          olanı döndürür.
+        * [[https://developer.mozilla.org/en-US/docs/Web/CSS/clamp][clamp()]]: =minimum=, =tercih edilen= ve =maximum= olmak üzere üç değer
+          alır. Eğer hesaplanan değer minumum'dan küçükse =minimum=; maximum'dan
+          büyükse =maximum= değer geçerli olur. Eğer hesaplanan değer ikisinin
+          arasındaysa =tercih edilen= değer geçerli olur.
+
+          Tahmin edebileceğiniz gibi bu fonksiyonların hepsi responsive tasarım için
+          düşünülmüş ve eklenmiş özellikler. Böylece web sitelerimizin tasarımlarında
+          daha özel hesaplamalar yapabileceğiz. Fonksiyonlar hakkında detaylar ve
+          tarayıcı uyumluluğu listesi için her fonksiyonun kendi bağlantısına
+          tıklayabilirsiniz.
+
+	      Firefox'un bu sürümüyle birlikte gelen diğer özellikler için konu başlığına
+	      eklediğim bağlantıya tıklayabilirsiniz.
+* IntelliJ IDEA [[https://blog.jetbrains.com/idea/2020/04/intellij-idea-2020-1-released/][2020.1 sürümü yayınlandı]]
+	JetBrains tarafından geliştirilen ve topluluk için ücretsiz sürümü de bulunan,
+	Java için geliştirme ortamı (IDE) olan IntelliJ IDEA'nın 2020 yılındaki ilk
+	sürümü olan 2020.1, bu hafta içerisinde yayınlandı. Bu sürümle birlikte gelen
+	birkaç özellik şu şekilde:
+
+  * Java 14 desteği,
+  * Artık JDK'yı direkt IDE'nin içerisinden indirip kullanabileceksiniz,
+  * LightEdit Modu (detaylar aşağıda),
+  * Zen Modu: Distraction Free Mode (Sıfır dikkat dağınıklığı modu) ve tam
+    ekran modunu bir araya getiren, odaklı bir şekilde kod yazmayı vaad eden
+    bir mod.
+  * Varsayılan yazı tipi [[http://jetbrains.com/lp/mono/][JetBrains Mono]] olarak değiştirildi,
+
+** [[https://blog.jetbrains.com/idea/2020/04/lightedit-mode/][Light Edit Mode]]
+	 [[file:gorseller/intellij-idea-lightedit-terminal.png]]
+
+	 Yazılım Gündemi yazılarını düzenli olarak takip edenler böyle bir özelliğin
+	 geleceğinden haberdardı :) (bkz: [[file:../04/yazilim-gundemi-2020-04.org][Yazılım Gündemi - 2020/04]]) Haberdar olmayan
+	 yeni takipçiler için açıklayalım: JetBrains'in IDE'lerini en az bir kez
+	 kullanmışsanız biliyorsunuzdur ki, IDE'nin açılması ve projeyle ilgili
+	 cache'leme işlemlerinin yapılması çok uzun sürüyordu. Artık terminal'den
+	 sadece dosya ismiyle IntelliJ IDEA'yı çağırdığınızda IDE Light Edit modunda
+	 açılıyor ve gelişmiş bir metin editörü gibi davranarak sadece o dosyayı
+	 açıyor. Proje'nin geri alanını yüklemiyor.
+
+	 #+CAPTION: Light Edit modunu terminal ekranından açmak zorunda değilsiniz.
+   #+CAPTION: Sağ tık menüsünden "Birlikte Aç" ile de açabilirsiniz.
+	 [[file:gorseller/intellij-idea-lightedit-sag-tik.png]]
+
+	 Yalnız bir istisna var: Eğer açmak istediğiniz dosyanın bağlı olduğu proje
+	 zaten normal modda Intellij IDEA üzerinde açıkca, LightEdit modu açılmaz, var
+	 olan proje penceresine yeni bir sekme olarak gelir.
+
+	 #+CAPTION: Tekrar normal proje moduna geçmek için File menüsü içerisinden
+   #+CAPTION: ya da *ALT+ENTER* ile açılan menüden "Open File in Project"
+   #+CAPTION: seçeneğini seçebilirsiniz.
+	 [[file:gorseller/intellij-idea-light-editproject-mode.png]]
+    #+LATEX: \newpage
+	Intellij IDEA'nın bu sürümüyle birlikte gelen diğer özellikler için aşağıdaki
+	videoyu izleyebilir ya da konu başlığına eklediğim bağlantıya
+	tıklayabilirsiniz. Aynı şekilde Light Edit modunun detayları için de alt konu
+	başlığına tıklayabilirsiniz.
+
+  * [[https://www.youtube.com/watch?v=LtOH7snHBCA][Konuyla ilgili YouTube videosu]]
+    #+LATEX: \newpage
+* Google SRE [[https://security.googleblog.com/2020/04/introducing-our-new-book-building.html?m=1][yeni kitap tanıttı]]: "[[https://landing.google.com/sre/books/][Building Secure and Reliable Systems]]"
+  #+ATTR_HTML: :height 450
+  #+ATTR_LATEX: :height 5cm
+	[[file:gorseller/google-kitap.png]]
+
+	Google'ın Site Reliability Engineering (SRE) projesi kapsamında çıkan 3.kitabı
+	raflarda ve [[https://www.google.com/books/edition/Building_Secure_and_Reliable_Systems/Kn7UxwEACAAJ][çevrim içi mağaza]]larda yerini aldı. Google kitabı dijital kopyasını
+	çeşitli formatlarda kendi sitesi üzerinden de dağıtıyor.
+   * PDF formatında indirmek için: https://landing.google.com/sre/static/pdf/SRS.pdf
+	 * EPUB formatında indirmek için: https://landing.google.com/sre/static/pdf/srs-epub.epub
+	 * Mobi formatında indirmek için: https://landing.google.com/sre/static/pdf/srs-mobi.mobi
+* Visual Studio Code [[https://code.visualstudio.com/updates/v1_44][Mart 2020 (1.44) sürümü yayınlandı]]
+	[[file:gorseller/vscode-144.png]]
+* Yaklaşan Etkinlik: "[[http://www.acikseminer.com/][Açık Seminerler (Türkiye Açık Kaynak Topluluğu)]]"
+	[[file:gorseller/acik-seminer.jpeg]]
+  #+LATEX: \newpage
+* Diğer Haberler
+	- Google ve Apple, Covid-19 takibi için [[https://www.apple.com/newsroom/2020/04/apple-and-google-partner-on-covid-19-contact-tracing-technology/][işbirliği yapmaya karar verdi]].
+    [[https://www.bbc.com/news/technology-52246319][Alternatif]]
+	- ABD'de Covid-19 yüzünden [[https://nymag.com/intelligencer/2020/04/what-is-cobol-what-does-it-have-to-do-with-the-coronavirus.html][COBOL programcıları göreve çağırıldı]].
+		- IBM, [[https://www.inputmag.com/tech/ibm-will-offer-free-cobol-training-to-address-overloaded-unemployment-systems][ücretsiz COBOL eğitimi]] vermeyi teklif ediyor.
+	- Git [[https://opensource.com/article/20/4/get-started-git][15 yaşında]]! [[https://github.blog/2020-04-07-celebrating-15-years-of-git-an-interview-with-git-maintainer-junio-hamano/][Geliştirici takımından biriyle röportaj yazısı]].
+	- Docker, Compose aracını geliştirmek için yeni bir [[https://www.docker.com/blog/announcing-the-compose-specification/][açık topluluk oluşturdu]]:
+    [[https://compose-spec.io/][Compose Specification]]. [[https://github.com/compose-spec][GitHub Organizasyon Sayfası]]
+	- Linux Vakfı, güvenlik odaklı kernel olan [[https://sel4.systems/About/][SeL4]]'e [[https://www.zdnet.com/article/linux-foundation-backs-security-oriented-sel4-microkernel-operating-system/][destek oluyor]].
+	- [[https://www.mapzen.com/][Mapzen]] açık kaynaklı haritalama projesi artık Linux Vakfı altındaki [[https://uc.foundation/][Urban
+    Computing Foundation]] projesi [[https://www.zdnet.com/article/mapzen-open-source-mapping-project-revived-under-the-urban-computing-foundation/][oldu]].
+	- Amazon Elastic Container Service, artık Amazon EFS [[https://aws.amazon.com/tr/blogs/aws/amazon-ecs-supports-efs/][dosya sistemlerini
+    destekliyor]].
+	- [[https://www.sandboxie.com/][Sandboxie]] yıllar sonra [[https://news.sophos.com/en-us/2020/04/09/sandboxie-is-now-an-open-source-tool/][açık kaynak oldu]].
+	- WebStorm [[https://blog.jetbrains.com/webstorm/2020/04/webstorm-2020-1/][2020.1 sürümü yayınlandı]].
+	- NodeJS iki dalda yeni sürüm yayınladı:
+		- [[https://nodejs.org/en/blog/release/v12.16.2/][Node v12.16.2 (LTS)]]
+		- [[https://nodejs.org/en/blog/release/v10.20.1/][Node v10.20.1 (LTS)]]
+	- Go programlama dilinin [[https://golang.org/doc/devel/release.html#go1.14.minor][1.41.2]] ve [[https://golang.org/doc/devel/release.html#go1.13.minor][1.13.10]] [[https://groups.google.com/forum/m/#!msg/golang-announce/9UJN3gwMzhY/HVdQFNOVBgAJ][sürümleri yayınlandı]].
+	- Crystal programlama dilinin [[https://crystal-lang.org/2020/04/06/crystal-0.34.0-released.html][0.34.0 sürümü yayınlandı]].
+	- [[https://cuelang.org/][Cue]] programlama dilinin [[https://github.com/cuelang/cue/releases/tag/v0.1.0][v0.1.0 sürümü yayınlandı]].
+	- ASP.NET Core için [[https://ext.net/v7-0-preview-for-asp-net-core/][Ext.NET 7.0 Preview yayınlandı]].
+	- Kubernetes IDE'si Lens, [[https://github.com/lensapp/lens/releases/tag/v3.2.0][v3.2.0 sürümünü yayınladı]].
+	- Apache Flink, Stateful Functions [[https://flink.apache.org/news/2020/04/07/release-statefun-2.0.0.html][2.0 sürümünü yayınladı]].
+	- CheerpJ [[https://medium.com/leaningtech/cheerpj-2-1-released-java-bytecode-to-webassembly-and-javascript-303fb8dd5d98][2.1 sürümü yayınlandı]].
+	- Spring Graal Native [[https://spring.io/blog/2020/04/09/spring-graal-native-0-6-0-released][0.6.0 sürümü yayınlandı]].
+	- Horray [[https://www.freerdp.com/2020/04/09/2_0_0-released][2.0.0 sürümü yayınlandı]].
+	- PyOxidizer [[https://gregoryszorc.com/blog/2020/04/09/pyoxidizer-0.7/][0.7 sürümü yayınlandı]].
+* Lisans
+  #+BEGIN_CENTER
+  #+ATTR_HTML: :height 75
+  #+ATTR_LATEX: :height 1.5cm
+  [[file:../../../img/CC_BY-NC-SA_4.0.png]]
+
+  [[file:yazilim-gundemi-2020-14.org][Yazılım Gündemi - 2020/14]] yazısı [[https://erenhatirnaz.github.io][Eren Hatırnaz]] tarafından [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Creative Commons
+  Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı]] (CC BY-NC-SA 4.0)
+  ile lisanslanmıştır.
+  #+END_CENTER

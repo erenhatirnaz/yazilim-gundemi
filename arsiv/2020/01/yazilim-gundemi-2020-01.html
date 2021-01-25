@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 22:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi - 2020/01</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi - 2020/01
+<br />
+<span class="subtitle">1-5 Ocak 2020</span>
+</h1>
+<div id="table-of-contents">
+<h2>İçindekiler</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org81ae480">1. Rust dilinin 32-bit Apple sistemler için desteği azalıyor</a></li>
+<li><a href="#orgf3b3759">2. Oracle, Amazon API'sini kopyalamakla suçlanıyor</a></li>
+<li><a href="#org4ae37eb">3. Amerika yapay zeka yazılımlarının ihracına sınırlama getiriyor</a></li>
+<li><a href="#org01ef56a">4. Yaklaşan Etkinlikler</a></li>
+<li><a href="#org8b439c2">5. Diğer Haberler</a></li>
+<li><a href="#org493fcc6">6. Lisans</a></li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gundemi-banner.png" alt="yazilim-gundemi-banner.png" />
+</p>
+</div>
+<div class="org-center">
+<p>
+<a href="../../2019/23/yazilim-gundemi-23.html">&lt; Önceki Gündem</a> | <b>1-5 Ocak 2020</b> | <a href="../02/yazilim-gundemi-2020-02.html">Sonraki Gündem &gt;</a>
+</p>
+
+<p>
+<a href="https://teknoseyir.com/blog/yazilim-gundemi-2020-01">TeknoSeyir'de Oku</a>
+</p>
+</div>
+
+<div id="outline-container-org81ae480" class="outline-2">
+<h2 id="org81ae480"><span class="section-number-2">1</span> Rust dilinin 32-bit Apple sistemler için <a href="https://blog.rust-lang.org/2020/01/03/reducing-support-for-32-bit-apple-targets.html">desteği azalıyor</a></h2>
+<div class="outline-text-2" id="text-1">
+<p>
+<a href="https://www.rust-lang.org/">Rust</a>, gün geçtikçe popülerliği daha da artan bir programlama dili. Yazılım
+gündemi yazıları yazmaya başladığımdan beri bunu daha iyi görüyorum. Hemen her
+hafta Rust ile ilgili bir gelişme oluyor, olmazsa bile geliştiricilerin
+ilgileri gitgide artıyor. Bununla birlikte Rust'ın geliştirilme süreci de hızla
+devam ediyor. Bir önceki yazılım gündeminde Rust programlama dilinin 1.41.0
+sürümünün yayınlandığını duyurmuştum. Bu hafta ise bloglarında yayınlandıkları
+bir yazı ile 1.42.0 sürümü itibariyle, 32-bit Apple sistemler için Rust
+programlama dilinin desteğinin azaltıldığını açıkladılar ve bu platformun
+destek sürecini Tier 3 ismini verdikleri kategoriye taşıdılar.
+</p>
+
+<p>
+Rust geliştirici takımının çeşitli platformlardaki destek süreçlerini
+tanımladıkları şöyle bir dokümanları mevcut: <a href="https://forge.rust-lang.org/release/platform-support.html">Platform Support</a>. Bu dokümana göre
+üç destek grubu var. Bunlar şu şekilde:
+</p>
+
+<ul class="org-ul">
+<li>Tier 1: Bu kategorideki platformlarda Rust'ın <span class="underline">çalışması garanti</span> edilmiştir.</li>
+<li>Tier 2: Rust'ın <span class="underline">derlenmesinin garanti</span> edildiği platformlar listesidir.</li>
+<li>Tier 2.5: Yine Rust'ın derlenmesinin garanti edildiği platformlar fakat bu
+listedeki platformlar için <code>rustup</code> aracı ile güncelleme özelliği desteği
+sağlanmıyor. Kaynak kodlarını kullanarak kendiniz derlemeniz gerekiyor.</li>
+<li>Tier 3: <span class="underline">Hiçbir garantinin verilmediği</span> platformlar listesi. Rust dilini
+kaynak kodları kullanarak bu sistemlerde derlemeye çalışabilirsiniz fakat
+hatalarla veya eksik özelliklerle karşılaşmanız çok mümkün.</li>
+</ul>
+
+<p>
+İşte 32-bit Apple sistemler de 1.42.0 sürümüyle birlikte Tier 3 kategorisinde
+altında yer alacak. Bu kategori değişikliğinden etkilenen platformların kod
+isimleri ise bu şekilde:
+</p>
+
+<ul class="org-ul">
+<li>armv7-apple-ios</li>
+<li>armv7s-apple-ios</li>
+<li>i386-apple-ios</li>
+</ul>
+
+<p>
+32-bit sistemlere desteğin kesilmesi günümüzde çok şaşırmadığımız bir durum
+elbette fakat yine de desteğin neden kesildiğini açıklamakta fayda var. Rust
+takımından önce zaten Apple <a href="https://support.apple.com/en-us/HT208436">macOS 10.15</a> ve <a href="https://developer.apple.com/documentation/uikit/app_and_environment/updating_your_app_from_32-bit_to_64-bit_architecture">iOS 11</a> ile birlikte 32-bit desteğini
+sonlandırmıştı, üstelik Xcode ile 32-bit derleme yapmanın da önüne geçmişti.
+Zaten günümüzde 32-bit sistem ile geliştirme yapmak pek de mümkün olmadığı için
+Rust takımı da böyle bir varar vermiş ve bence de yerinde bir karar.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf3b3759" class="outline-2">
+<h2 id="orgf3b3759"><span class="section-number-2">2</span> Oracle, Amazon API'sini kopyalamakla <a href="https://arstechnica.com/tech-policy/2020/01/oracle-copied-amazons-api-was-that-copyright-infringement/">suçlanıyor</a></h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Oracle ve Google arasında Java API'si (Application Programming Interface)
+üzerinden devam etmekte olan hukuk savaşını zaten yıllardır Haftalık Gündem
+Değerlendirmesi'nde dinliyoruz. Bilmeyenler için kısaca özetlemek gerekirse
+Google'ın Android işletim sistemini geliştirirken Java API'sini birebir
+kopyaladığını ve telif haklarını ihlal ettiğini söyleyen Oracle, Google'ın
+cezalandırılmasını istiyor. Burada kopyalamaktan kasıt kopyala&amp;yapıştır
+kullanımındaki gibi değil. Google, Java'nın API sistemindeki fonksiyonellikleri
+ve method isimlerinin aynısını kullanarak bir nevi Java'yı yeniden yazmasından
+bahsediyoruz.
+</p>
+
+<p>
+Bu hafta ArsTechnina sitesinde çıkan yazıda ise Oracle şirketinin Amazon'un S3
+isimli veri depolama hizmetinin API sistemini kopyaladığı iddiası var. Hatta
+sadece iddia da değil, Oracle Cloud hizmetinin dokümantasyonundaki şu sayfa
+doğrudan bunu ortaya çıkıyor: <a href="https://docs.cloud.oracle.com/iaas/Content/Object/Tasks/s3compatibleapi.htm">Amazon S3 Compatibility API</a>. E hal böyleyken
+demezler mi adama "bu ne perhiz, bu ne lahana turşusu?" diye, işte ArsTechnica
+da tam olarak bunu söylemiş.
+</p>
+
+<p>
+Bu tarz API "kopyalamaları" her ne kadar üzerine tartışılabilir konular olsa da
+biraz gerekli olduğunu düşünüyorum. Amazon S3 örneğinden gidecek olursak,
+Amazon bulut bilişim sektöründe çok büyük bir oyuncu ve bu oyuncuyla rekabet
+edebilmek için onunla hemen hemen aynı özellikleri sunmak gerekiyor. Bunu
+yaparken de API sistemi ne kadar Amazon'unkine benzerse geliştiriciler de o
+kadar az efor sarf ederek Amazon ekosisteminden çıkabilirler. Yani minumum kod
+değişikliği ile bu dönüşümün sağlanması rekabet ortamı için önemli bir konu.
+</p>
+
+<p>
+Bu konuda siz ne düşünüyorsunuz? Bu tarz API benzerliklerinin sağlanması sizce
+büyük firmalarla rekabet edilebilmesi için gerekli mi yoksa ne olursa olsun
+firma özgün bir çözüm mü sunmalı? Yorumlar bölümünde konuşalım.
+</p>
+</div>
+</div>
+<div id="outline-container-org4ae37eb" class="outline-2">
+<h2 id="org4ae37eb"><span class="section-number-2">3</span> Amerika yapay zeka yazılımlarının ihracına <a href="https://www.reuters.com/article/us-usa-artificial-intelligence/u-s-government-limits-exports-of-artificial-intelligence-software-idUSKBN1Z21PT">sınırlama getiriyor</a></h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Yapay zeka yazılımları üreten Amerika merkezli şirketler Pazartesi gününden
+itibaren yazılımlarını Kanada harici, deniz aşırı ülkelere ihraç ederken bir
+lisans almak zorunda kalacaklar. Yeni ihracat tedbiri özellikle coğrafi
+görüntüleme yazılımlarını ilgilendirmekle birlikte askeri ya da sivil amaçlarla
+olsun fark etmeksizin herhangi bir hedef belirleme süreci içeren yazılımları ve
+donanımları da kapsamakta.
+</p>
+</div>
+</div>
+<div id="outline-container-org01ef56a" class="outline-2">
+<h2 id="org01ef56a"><span class="section-number-2">4</span> Yaklaşan Etkinlikler</h2>
+<div class="outline-text-2" id="text-4">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" width="100%">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Etkinlik İsmi</th>
+<th scope="col" class="org-left">Yeri</th>
+<th scope="col" class="org-left">Tarihi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/IBMCloudTR/events/267424987/">Online Webinar: Text Analysis Application on Kubernetes</a></td>
+<td class="org-left">Online</td>
+<td class="org-left">6 Ocak 13:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/IBMCloudTR/events/267577304/">Analyze Real Time Bank Customer Data</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">9 Ocak 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/trendyol/events/267060271/">Domain Driven Design</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">9 Ocak 20:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/Agile-Bulusmalar/events/267522502/">Agile Talks 2020 Episode 1</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">11 Ocak 11:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/busiber-siber-ks-kamp-2020-registration-85540641361">BÜSİBER Siber Kış Kampı 2020</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">13 Ocak 09:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/frontend-istanbul/events/the-future-of-react-server-rendering-is-not-a-silver-bullet">The Future of React &amp; Server Rendering is not a Silver Bullet</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">16 Ocak 19:30</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+<b><b><a href="https://kamp.siberkulupler.com/">Siber Küme Kış Kampı</a> başvuruları başladı. Son başvuru tarihi 10 Ocak.</b></b>
+</p>
+</div>
+</div>
+<div id="outline-container-org8b439c2" class="outline-2">
+<h2 id="org8b439c2"><span class="section-number-2">5</span> Diğer Haberler</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>Rust dilinin uzay çalışmalarındaki kullanım alanlarını araştıracak <a href="https://www.reddit.com/r/rust/comments/ejdv7w/announcing_aerorust_the_unofficial_working_group/">çalışma
+grubu kuruldu</a>: <a href="https://github.com/AeroRust/Welcome">AeroRust</a>, <a href="https://github.com/AeroRust/awesome-space">Faydalı Kaynaklar</a>.</li>
+<li>.NET Teknolojileri ile platformlar-arası (cross-platform) uygulama geliştirme
+kütüphanesi Uno Platform, <a href="https://platform.uno/uno-platform-2-0-reloaded-general-availability-hot-reload-and-more/">2.0 sürümünü duyurdu</a>, <a href="https://github.com/unoplatform/uno">GitHub Deposu</a>.</li>
+<li>Android Emulator <a href="https://androidstudio.googleblog.com/2020/01/emulator-2934-canary.html">29.3.4 Canary sürümü yayınlandı</a>.</li>
+<li>Python için iş kuyrukları oluşturma kütüphanesi RQ, <a href="https://github.com/rq/rq/releases/tag/v1.2.0">1.2.0 sürümünü yayınladı</a>.</li>
+<li>Popüler PHP HTTP istemcilerinden Guzzle, <a href="https://github.com/guzzle/guzzle/releases/tag/7.0.0-beta.1">7.0.0-beta.1 sürümünü yayınladı</a>.</li>
+<li>Postman alternatifi olan Milkman, <a href="https://github.com/warmuuh/milkman/releases/tag/4.0.0">4.0.0 sürümünü yayınladı</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org493fcc6" class="outline-2">
+<h2 id="org493fcc6"><span class="section-number-2">6</span> Lisans</h2>
+<div class="outline-text-2" id="text-6">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="../../../img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+<a href="yazilim-gundemi-2020-01.html">Yazılım Gündemi - 2020/01</a> yazısı <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a> (CC BY-NC-SA 4.0)
+ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 5 Ocak 2020</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 22:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 22:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi - 2020/11</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi - 2020/11
+<br />
+<span class="subtitle">16-22 Mart 2020</span>
+</h1>
+<div id="table-of-contents">
+<h2>İçindekiler</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org0abdc20">1. GitHub, npm'i satın aldı</a></li>
+<li><a href="#org3e6199a">2. GitHub Mobil, Beta programından çıktı</a></li>
+<li><a href="#org5dd70a1">3. Github, "yanlışlıkla" popüler JavaScript framework'ü Aurelia'nın tüm depolarını kilitledi</a></li>
+<li><a href="#org8a00459">4. JDK 14 GA yayınlandı</a>
+<ul>
+<li><a href="#orgcc23445">4.1. JEP 305: Pattern Matching for instanceof (Preview)</a></li>
+<li><a href="#orgcaf1efd">4.2. JEP 356: Records (Preview)</a></li>
+</ul>
+</li>
+<li><a href="#org0bbf485">5. Eclipse 4.15 (2020-03) sürümü yayınlandı</a></li>
+<li><a href="#org8d8d5f2">6. .NET 5 Preview 1 sürümü duyuruldu</a></li>
+<li><a href="#org054f072">7. Mozilla, Firefox'dan FTP desteğini kaldırıyor</a></li>
+<li><a href="#org8e727bf">8. Windows Terminal Preview v0.10 sürümü yayınlandı</a></li>
+<li><a href="#org8743622">9. Diğer Haberler</a></li>
+<li><a href="#org5524ee8">10. Lisans</a></li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gundemi-banner.png" alt="yazilim-gundemi-banner.png" />
+</p>
+</div>
+
+<div class="org-center">
+<p>
+<a href="../10/yazilim-gundemi-2020-10.html">&lt; Önceki Gündem</a> | <b>16-22 Mart 2020</b> | <a href="../12/yazilim-gundemi-2020-12.html">Sonraki Gündem &gt;</a>
+</p>
+
+<p>
+<a href="https://teknoseyir.com/blog/yazilim-gundemi-2020-11">TeknoSeyir'de Oku</a>
+</p>
+</div>
+
+<div id="outline-container-org0abdc20" class="outline-2">
+<h2 id="org0abdc20"><span class="section-number-2">1</span> GitHub, npm'i <a href="https://github.blog/2020-03-16-npm-is-joining-github/">satın aldı</a></h2>
+<div class="outline-text-2" id="text-1">
+
+<div class="figure">
+<p><img src="gorseller/github-npm.png" alt="github-npm.png" height="200" />
+</p>
+</div>
+
+<p>
+Aslında Microsoft satın aldı destek daha doğru olur. Çünkü GitHub da 2018
+yılında Microsoft tarafından <a href="https://techcrunch.com/2018/06/04/microsoft-has-acquired-github-for-7-5b-in-microsoft-stock/">satın alınmıştı</a>. npm, front-end camiası için çok
+önemli bir yere sahip. Her ne kadar Facebook tarafından geliştirilen <a href="https://classic.yarnpkg.com/en/">yarn</a> gibi
+bir alternatifi olsa da hala daha npm pastanın büyük bir bölümünün sahibi.
+Hatırladığım kadarıyla Windows'da NodeJS kurduğunuzda yanında otomatik olarak
+npm de kurulu geliyordu. Değişti mi bilmiyorum ama npm'in bu kadar çok
+kullanılmasının bir nedeni de budur. Öncesinde açık kaynak bir proje olarak
+başlayan süreç zamanla şirketleşme yolundan devam etti ve bu hafta da GitHub
+tarafından satın alındı.
+</p>
+
+<p>
+GitHub'ın kendi sitesindeki blogunda yayınlanan yazı ile anlaşmanın
+gerçekleştirildiği duyuruldu. Görebildiğim kadarıyla Microsoft'un GitHub'ı
+satın aldığı zamanki kadar büyük tepkiler (insanlar github'dan depolarını
+taşımaya başlamıştı) yok. Belki de dünyanın şu an çok farklı bir gündemi
+olduğundan olabilir ama yine de <a href="https://www.reddit.com/r/node/comments/fjocuy/npm_is_joining_github_and_is_now_owned_by/">Reddit</a> ve <a href="https://news.ycombinator.com/item?id=22594549">HackerNews</a> gibi platformlarda
+insanların tartışma konusu oldu.
+</p>
+
+<p>
+Yazıdaki önemli bir nokta önümüzdeki senelerde GitHub Packages ve npm'in
+Private Registry özelliklerinin birleştirilecek olması. Yani ücretli olarak
+npm'in hizmetlerinden yararlananlar ilerleyen zamanlarda GitHub Packages'e
+geçmeye zorlanabilirler.
+</p>
+
+<p>
+Her ne kadar Microsoft'un son birkaç yıldır yaptığı açık kaynağa yatırım
+işlerini beğeniyor olsam da bu kadar büyük iki geliştirici hizmeti ve aracının
+tek bir firmanın elinde olması beni endişelendirmiyor değil. Bu konuda siz ne
+düşünüyorsunuz? Yorumlar bölümünde konuşalım.
+</p>
+</div>
+</div>
+<div id="outline-container-org3e6199a" class="outline-2">
+<h2 id="org3e6199a"><span class="section-number-2">2</span> GitHub Mobil, Beta <a href="https://github.blog/2020-03-17-github-for-mobile-is-now-available/">programından çıktı</a></h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Geçtiğimiz sene kasım ayında düzenlenen GitHub Universe 2019 etkinliğinde
+duyurulan GitHub Mobile Beta Program for iOS ve bu yılın başlarında duyurulan
+GitHub Mobile Android Beta Program haberlerinden sonra sonunda GitHub'ın mobil
+uygulamaları Beta'dan çıktı ve herkesin kullanımına açıldı.
+</p>
+
+<p>
+Github Mobile uygulamasını indirmek için:
+</p>
+<ul class="org-ul">
+<li>Android: <a href="https://play.google.com/store/apps/details?id=com.github.android">https://play.google.com/store/apps/details?id=com.github.android</a></li>
+<li>iOS: <a href="https://apps.apple.com/us/app/github/id1477376905">https://apps.apple.com/us/app/github/id1477376905</a></li>
+</ul>
+
+
+<div class="figure">
+<p><img src="gorseller/github-mobile.png" alt="github-mobile.png" />
+</p>
+</div>
+
+<p>
+Daha önce iki işletim sistemi için de bu konuyu ele almıştık. Hatta ben direkt
+iOS sistemindeki Beta programına kayıt olmuş ve kısa bir inceleme de yapmıştım
+(bkz: <a href="../../2019/18/yazilim-gundemi-18.html">Yazılım Gündemi - 18</a>). Android için Beta programından da bu yılın ilk
+yazılım gündemi yazılarında (bkz: <a href="../03/yazilim-gundemi-03.html">Yazılım Gündemi - 2020/03</a>) bahsetmiştim. Ben
+iOS üzerindeki Beta programından kullanmaya devam ediyorum. GitHub'ın bu
+eksikliği gidermesi güzel ama uygulamanın daha çok gelişmesi gerek. Örneğin şu
+an sadece master branch'ı üzerindeki kodları görüntüleyebiliyoruz, branch
+değiştirme özelliği uzun zamandır istenmesine rağmen henüz eklenmiş değil.
+Bakalım, ben Beta programında kalmaya ve gelişmelerden sizleri haberdar etmeye
+devam edeceğim.
+</p>
+</div>
+</div>
+<div id="outline-container-org5dd70a1" class="outline-2">
+<h2 id="org5dd70a1"><span class="section-number-2">3</span> Github, "yanlışlıkla" popüler JavaScript framework'ü Aurelia'nın tüm depolarını kilitledi</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li><a href="https://twitter.com/eisenbergeffect/status/1240671036292485121">Konuyla ilgili Tweet</a></li>
+</ul>
+
+<p>
+Başlığa "popüler" yazmamın nedeni <a href="https://github.com/aurelia/framework">framework'ün ana deposu</a>nun yaklaşık 11.3K
+star almış olması, yoksa ben de ismini ilk defa duyuyorum. Gerçekten ilginç
+bir olay, Amerika merkezli bir şirket tarafından açık kaynak hale getirilmiş
+bir yazılımın tüm GitHub depoları (<a href="https://aurelia.io/">Aurelia.io</a> sitesi de GitHub üzerinde host
+ediliyormuş), yine Amerika'nın yaptırımları nedeniyle herkes için erişime
+engelleniyor. Geliştiriciler ve katkı sağlayanlar kodlarına erişemiyor.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/github-ceo-hackernews.png" alt="github-ceo-hackernews.png" />
+</p>
+<p><span class="figure-number">Şekil 4: </span>GitHub CEO'unun <a href="https://news.ycombinator.com/item?id=22628961">HackerNews'deki konunun</a> altında yaptığı açıklama.</p>
+</div>
+
+<p>
+Her ne kadar olay birkaç saat içerisinde çözümlenmiş olsa da onlarca depo'nun
+bu kadar bir "yanlışlık" nedeniyle erişime kapatılabiliyor olması beni rahatsız
+etti. İlk yazılım gündemi yazılarının birinde (bkz: <a href="../../2019/03/yazilim-gundemi-03.html">Yazılım Gündemi - 3</a>)
+GitHub'ın, Amerika'nın ticari yaptırımlarını uygulamaya başladığından ve birçok
+Kırım ve İran'lı geliştiricinin bu durumdan etkilendiğini konuşmuştuk. Ben
+zaten o zamandan beri her ihtimale karşı tüm depolarımı bilgisayarıma
+indirmiştim ve farklı yerlere yedeklemiştim ama bu vesile ile size tekrardan
+hatırlamış olayım. Levent Abi'nin dediği gibi: "Bulut dediğin başkasının
+bilgisayarıdır. Gün gelir de 'Sana hizmet vermiyorum kardeşim' derse, öylece
+ortada kalırsın!"
+</p>
+</div>
+</div>
+<div id="outline-container-org8a00459" class="outline-2">
+<h2 id="org8a00459"><span class="section-number-2">4</span> JDK 14 GA <a href="https://jdk.java.net/14/">yayınlandı</a></h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Geçtiğimiz aylar boyunca Release Candidate sürümleri yayınlanan JDK 14 sürümü
+sonunda genel uygunluk (general availability) duruma geldi ve bu hafta
+içerisinde yayınlandı. JDK 14 ile gelen birkaç özelliği incelleyelim.
+</p>
+</div>
+
+<div id="outline-container-orgcc23445" class="outline-3">
+<h3 id="orgcc23445"><span class="section-number-3">4.1</span> <a href="https://openjdk.java.net/jeps/305">JEP 305</a>: Pattern Matching for instanceof (Preview)</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Henüz ön-izleme durumunda olan bu özellik sayesinde aşağıdaki <code>instanceof</code>
+kullanımı daha sade bir hal aldı.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-keyword">if</span> (obj <span class="org-keyword">instanceof</span> String) {
+    <span class="org-type">String</span> <span class="org-variable-name">str</span> = (<span class="org-type">String</span>) obj;
+    <span class="org-comment-delimiter">// </span><span class="org-comment">str de&#287;i&#351;keni ile i&#351;lemler</span>
+}
+</pre>
+</div>
+<p>
+Bu kullanım çok fazla yaygın fakat artık bu satırları aşağıdaki şekilde tek
+satıra indirebileceğiz:
+</p>
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-keyword">if</span>(obj <span class="org-keyword">instanceof</span> String str) {
+    <span class="org-comment-delimiter">// </span><span class="org-comment">str burada kullan&#305;labilir</span>
+} <span class="org-keyword">else</span> {
+    <span class="org-comment-delimiter">// </span><span class="org-comment">str burada kullan&#305;lamaz</span>
+}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcaf1efd" class="outline-3">
+<h3 id="orgcaf1efd"><span class="section-number-3">4.2</span> <a href="https://openjdk.java.net/jeps/359">JEP 356</a>: Records (Preview)</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+Java ya da nesne tabanlı herhangi bir dille biraz olsun haşır neşir
+olmuşsanız aşağıdaki sınıf yapısı size de çok tanıdık gelecektir:
+</p>
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-keyword">public</span> <span class="org-keyword">class</span> <span class="org-type">Kisi</span> {
+    <span class="org-keyword">private</span> <span class="org-type">String</span> <span class="org-variable-name">isim</span>;
+    <span class="org-keyword">private</span> <span class="org-type">String</span> <span class="org-variable-name">soyisim</span>;
+
+    <span class="org-keyword">public</span> <span class="org-function-name">Kisi</span>(<span class="org-type">String</span> <span class="org-variable-name">isim</span>, <span class="org-type">String</span> <span class="org-variable-name">soyisim</span>) {
+        <span class="org-keyword">this</span>.isim = isim;
+        <span class="org-keyword">this</span>.soyisim = soyisim;
+    }
+
+    <span class="org-keyword">public</span> <span class="org-type">String</span> <span class="org-function-name">getIsim</span>() {
+        <span class="org-keyword">return</span> <span class="org-keyword">this</span>.isim;
+    }
+
+    <span class="org-keyword">public</span> <span class="org-type">void</span> <span class="org-function-name">setIs&#305;m</span>(<span class="org-type">String</span> <span class="org-variable-name">isim</span>) {
+        <span class="org-keyword">this</span>.isim = isim;
+    }
+
+    <span class="org-keyword">public</span> <span class="org-type">String</span> <span class="org-function-name">getSoyisim</span>() {
+        <span class="org-keyword">return</span> <span class="org-keyword">this</span>.soyisim;
+    }
+
+    <span class="org-keyword">public</span> <span class="org-type">void</span> <span class="org-function-name">setSoyisim</span>(<span class="org-type">String</span> <span class="org-variable-name">soyisim</span>) {
+        <span class="org-keyword">this</span>.soyisim = soyisim;
+    }
+}
+</pre>
+</div>
+<p>
+Gördüğünüz gibi basit bir kişi bilgisi tutmak için bile bu kadar kod yazmamız
+gerekiyor (elbette bu yapının böyle olmasının çok doğru nedenleri mevcut) ama
+bu JDK sürümü ile birlikte hayatımıza giren yeni tanımlama şeklide <code>Records</code>
+ile yukarıdaki tüm kodları şu şekilde tek satıra indirebilirsiniz:
+</p>
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-type">record</span> <span class="org-function-name">Kisi</span>(<span class="org-type">String</span> <span class="org-variable-name">isim</span>, <span class="org-type">String</span> <span class="org-variable-name">soyisim</span>) { }
+</pre>
+</div>
+<p>
+Artık bunu da aynı sınıfmış gibi kullanabilirsiniz:
+</p>
+<div class="org-src-container">
+<pre class="src src-java"><span class="org-type">Kisi</span> <span class="org-variable-name">eren</span> = <span class="org-keyword">new</span> <span class="org-type">Kisi</span>(<span class="org-string">"Eren"</span>, <span class="org-string">"Hat&#305;rnaz"</span>);
+
+<span class="org-type">String</span> <span class="org-variable-name">isim</span> = eren.isim();
+<span class="org-type">String</span> <span class="org-variable-name">soyisim</span> = eren.soyisim();
+</pre>
+</div>
+<p>
+Fakat bu özellim hem şu an ön-izleme durumunda, yani henüz çalışan
+kodlarınıza eklemek için çok erken, hem de bazı kısıtlamaları var:
+</p>
+<ul class="org-ul">
+<li>Record kendisiyle birlikte içerisindeki tüm veri alanlarını 'final' olarak
+işaretliyor. Dolayısıyla bu sınıfdan başka bir sınıf türetemiyor ve bir
+obje oluşturduktan sonra değişkenleri üzerinde değişiklik yapamıyoruz.</li>
+</ul>
+
+<p>
+Bunun gibi Record özelliğine ait diğer kurallar için alt konu başlığına
+eklediğim bağlantıya tıklayabilir ya da Rahman Usta tarafından kodedu
+sitesinde yazılmış <a href="https://kodedu.com/2020/01/javada-recordlar/">bu yazıyı</a> okuyabilirsiniz.
+</p>
+
+<p>
+JDK 14 ile gelen diğer özellikler için konu başlığına eklediğim bağlantıya
+tıklayabilir ya da 28 Mart tarihinde online olarak gerçekleşecek bu Webinere
+kayıt olabilirsiniz: <a href="https://istanbul-jug.org/2020/03/online-java-14-webineri/">Online Java 14 Webineri - İstanbul Java User Group</a>.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org0bbf485" class="outline-2">
+<h2 id="org0bbf485"><span class="section-number-2">5</span> Eclipse 4.15 (2020-03) <a href="https://www.eclipse.org/eclipse/news/4.15/">sürümü yayınlandı</a></h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=XoUvOTiVaDc">Konuyla ilgili YouTube videosu</a></li>
+</ul>
+
+<p>
+Eclipse 2020-03 sürümüne JDK 14 desteği eklemek için Eclipse Marketplace
+üzerinden şu eklentiyi kurabilirsiniz: <a href="https://marketplace.eclipse.org/content/java-14-support-eclipse-2020-03-415">Java 14 Support for Eclipse 2020-03
+(4.15)</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org8d8d5f2" class="outline-2">
+<h2 id="org8d8d5f2"><span class="section-number-2">6</span> .NET 5 Preview 1 <a href="https://devblogs.microsoft.com/dotnet/announcing-net-5-0-preview-1/">sürümü duyuruldu</a></h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Microsoft'un ".NET'in geleceği" olarak isimlendirdiği ve klasik .NET Framework
+ile .NET Core'un birleşmiş hali .NET 5 sürümünün ilk ön-izleme sürümü bu hafta
+içerisinde yayınlandı. Preview 1 ile birkaç performans iyileştirmesi de içeren
+güncellemeler herkes tarafından erişilebilir durumda. Elbette production
+ortamında çalışan uygulamalarınızı hemen geçirmek büyük risk olacaktır ama
+kişisel projeleriniz için ufaktan kullanmaya ve Microsoft'a geri bildirim
+göndermeye başlayabilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-org054f072" class="outline-2">
+<h2 id="org054f072"><span class="section-number-2">7</span> Mozilla, Firefox'dan FTP <a href="https://www.ghacks.net/2020/03/19/mozilla-will-remove-ftp-support-in-the-firefox-web-browser/">desteğini kaldırıyor</a></h2>
+<div class="outline-text-2" id="text-7">
+<p>
+2020 Haziran ayında yayınlanması planlanan Firefox 77 Stable sürümü ile
+Mozilla takımı, Firefox içerisinden FTP desteğini "varsayılan olarak kapalı"
+hale hale getirecek ve sonraki versiyonlarda ise desteği tamamen kaldırmayı
+planlıyor. Tarayıcı üzerinden FTP kullanmak uzun zaman pek tercih edilen bir
+şey değil zaten, o yüzden bu desteğin kalkacak olması çok da sürpriz olmadı.
+Zaten Firefox 61 sürümüyle, web siteleri içerisinde yer alan <a href="ftp://">ftp://</a> uzaktılı
+içerikleri (resim, müzik vb.) engellemişti. Firefox'un bu desteği
+kaldırmasının ardında ise güvenlik sorunları yatıyor. FTP, kullanıcı adı ve
+şifre dışında iletişimle ilgili bir güvenlik katmanı barındırmayan bir
+protokol olduğu için trafik kolayca izlenebiliyor. Google'un Chrome tarayıcısı
+da aynı şekilde desteğini sonlandırmaya hazırlanıyor. O da tarayıcıdaki ftp
+uzantılı bağlantıları sistemde yüklü olan ftp istemcisine yönlendirecek. Bir
+mail adresine tıkladığınız Outlook vb. programların açılması gibi.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/firefox-ftp.png" alt="firefox-ftp.png" />
+</p>
+<p><span class="figure-number">Şekil 5: </span>Yine de Firefox üzerinde ftp kullanmakta ısrarcıysanız about:config sayfasına girip, <code>network.ftp.enabled</code> değişkenini true olarak değiştirebilirsiniz</p>
+</div>
+
+<p>
+Ayrıca bu hafta içerisinde ilginç de bir olay gerçekleşti: Coronavirüs
+nedeniyle Firefox ve Chrome, <a href="https://www.ghacks.net/2020/03/21/mozilla-re-enables-tls-1-0-and-1-1-because-of-coronavirus-and-google/">TLS 1.0 ve TLS 1.1'e tekrar destek vermeye
+başladı</a>. HTTPS bağlantıların gerçeklemesini sağlayan TLS protokolünün bu eski
+sürümleri aslında iki tarayıcıdan da kaldırılmıştı fakat bu hafta içerisinde bu
+değişiklikler geri alındı. Çünkü bazı devlet siteleri hala daha eski
+protokolleri kullandığı için kullanıcıların erişememesi söz konusu olabilirdi.
+Coronavirüs gündemdeyken bu tarz protokol versiyonu yükseltme işleri de öncelik
+kapsamında olmadığı için Firefox ve Chrome'da böyle bir şey yapma gereği duydu.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/firefox-chrome-tls10-11.png" alt="firefox-chrome-tls10-11.png" />
+</p>
+<p><span class="figure-number">Şekil 6: </span>Firefox 74.0 sürümünün değişiklik notları sayfasındaki geri alma duyurusu</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org8e727bf" class="outline-2">
+<h2 id="org8e727bf"><span class="section-number-2">8</span> Windows Terminal Preview v0.10 <a href="https://devblogs.microsoft.com/commandline/windows-terminal-preview-v0-10-release/">sürümü yayınlandı</a></h2>
+<div class="outline-text-2" id="text-8">
+<p>
+Microsoft'un Terminal takımı geliştirmelere devam ediyor. Bu hafta yayınlanan
+sürümle birlikte Windows'un yeni terminal uygulamasının ön-izleme v0.10
+sürümüne fare desteği eklendi. Artık destekleyen konsol uygulamaları üzerinde
+fare ile de giriş yapılabilecek.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/windows-terminal-fare.gif" alt="windows-terminal-fare.gif" />
+</p>
+</div>
+
+<p>
+Eklenen diğer özellik ve geliştirmeler için konu başlığına eklediğim
+bağlantıya tıklayabilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-org8743622" class="outline-2">
+<h2 id="org8743622"><span class="section-number-2">9</span> Diğer Haberler</h2>
+<div class="outline-text-2" id="text-9">
+<ul class="org-ul">
+<li>Koronavirüs nedeniyle iptal edilen ve ertelenen etkinlikler:
+<ul class="org-ul">
+<li>Google Cloud Next '20: Digital Connect <a href="https://cloud.google.com/blog/topics/inside-google-cloud/postponing-google-cloud-next20-digital-connect">etkinliği ertelendi</a>.</li>
+<li>Google I/O 2020 <a href="https://www.theverge.com/2020/3/20/21188669/google-i-o-canceled-2020-coronavirus-pandemic">tamamen iptal edildi</a>.</li>
+<li>PyCon US 2020 <a href="https://pycon.blogspot.com/2020/03/pycon-us-2020-in-pittsburgh.html?m=1">iptal edildi</a>.</li>
+</ul></li>
+<li>Visual Studio 2019 version 16.5 <a href="https://devblogs.microsoft.com/visualstudio/visual-studio-2019-version-16-5/">yayınlandı</a>.</li>
+<li>Facebook, kendi tarih-saat <a href="https://engineering.fb.com/production-engineering/ntp-service/">sunucularını açtı</a>.</li>
+<li>Docker'a GitHub Actions <a href="https://www.docker.com/blog/first-docker-github-action-is-here/">desteği geldi</a>.</li>
+<li>DirectX 12 Ultimate <a href="https://devblogs.microsoft.com/directx/announcing-directx-12-ultimate/">sürümü yayınlandı</a>.</li>
+<li>Prettier aracının 2.0 <a href="https://prettier.io/blog/2020/03/21/2.0.0.html">sürümü yayınlandı</a>.</li>
+<li>PHP programlama dilinin 3 ayrı sürümüne güncelleme geldi:
+<ul class="org-ul">
+<li>PHP 7.4.4 <a href="https://www.php.net/ChangeLog-7.php#7.4.4">yayınlandı</a>.</li>
+<li>PHP 7.3.16 <a href="https://www.php.net/ChangeLog-7.php#7.3.16">yayınlandı</a>.</li>
+<li>PHP 7.2.29 <a href="http://www.php.net/ChangeLog-7.php#7.2.29">yayınlandı</a>.</li>
+</ul></li>
+<li>D programlama dilinin 2.091.0 <a href="https://dlang.org/blog/2020/03/17/d-2-091-0-released/">sürümü yayınlandı</a>.</li>
+<li>Julia programlama dilinin v1.4.0 <a href="https://discourse.julialang.org/t/julia-v1-4-0-has-been-released/36324">sürümü yayınlandı</a>.</li>
+<li>TensorFlow 2.2.0-rc1 <a href="https://github.com/tensorflow/tensorflow/releases/tag/v2.2.0-rc1">sürümü yayınlandı</a>.</li>
+<li><a href="https://streamnative.io/blog/tech/2020-03-17-announcing-the-apache-pulsar-2020-user-survey-report/">Apache Pulsar 2020 Kullanıcı Anketi Raporu</a> yayınlandı.</li>
+<li>GraphQLize Alpha <a href="https://www.graphqlize.org/blog/announcing-graphqlize-alpha/">duyuruldu</a>.</li>
+<li>Yeni bir Racket kütüphanesi <a href="https://dedbox.github.io/2020/03/template-macros-initial-release.html">duyuruldu</a>: <a href="https://github.com/dedbox/racket-template">Template Macros</a>.</li>
+<li>Tokie aracının 11.0 <a href="https://github.com/XAMPPRocky/tokei/releases/tag/v11.0.0">sürümü yayınlandı</a>.</li>
+<li>Ionic CLI aracının 6.3.0 <a href="https://github.com/ionic-team/ionic-cli/releases/tag/%2540ionic%252Fcli%25406.3.0">sürümü yayınlandı</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5524ee8" class="outline-2">
+<h2 id="org5524ee8"><span class="section-number-2">10</span> Lisans</h2>
+<div class="outline-text-2" id="text-10">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="../../../img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+<a href="yazilim-gundemi-2020-11.html">Yazılım Gündemi - 2020/11</a> yazısı <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a> (CC BY-NC-SA 4.0)
+ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 22 Mart 2020</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 22:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

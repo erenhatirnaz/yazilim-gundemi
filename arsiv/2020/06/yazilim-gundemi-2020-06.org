@@ -1,0 +1,237 @@
+#+TITLE: Yazılım Gündemi - 2020/06
+#+SUBTITLE: 3-9 Şubat 2020
+#+AUTHOR: Eren Hatırnaz
+#+DATE: 9 Şubat 2020
+#+OPTIONS: ^:nil
+#+LANGUAGE: tr
+#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=black, filecolor=red, urlcolor=blue}
+#+LATEX_HEADER: \usepackage[turkish]{babel}
+#+HTML_HEAD: <link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+#+LATEX: \shorthandoff{=}
+
+[[file:gorseller/yazilim-gundemi-banner.png]]
+
+#+BEGIN_CENTER
+[[file:../05/yazilim-gundemi-2020-05.org][< Önceki Gündem]] | *3-9 Şubat 2020* | [[file:../07/yazilim-gundemi-2020-07.org][Sonraki Gündem >]]
+
+[[https://teknoseyir.com/blog/yazilim-gundemi-2020-06][TeknoSeyir'de Oku]]
+#+END_CENTER
+
+* Google Chrome tarayıcısının SameSite Cookie değişiklikleri [[https://blog.chromium.org/2020/02/samesite-cookie-changes-in-february.html][bu ay devreye giriyor]]
+	Bir fikr-i takip haberi yapalım. Bu konudan [[file:../../2019/15/yazilim-gundemi-15.org][Yazılım Gündemi - 15]] yazısında
+	bahsetmiştik. Bu nedenle değişiklikle ilgili detaylı bilgi edinmek isterseniz
+	o yazıya bakabilirsiniz ama şöyle kısa bir bilgi de verelim. 4 Şubat tarihinde
+	yayınlanan Chrome 80 sürümü ile hayatımıza giren SameSite Cookie özelliği,
+	sitelerde bulunan üçüncü parti çerezlerin =SameSite=None;Secure= ifadesi ile
+	işaretlenmesi gerekliliğini getiriyor. Bu özellik sayesinde çerezler güvenli
+	bağlantılar arasında işlenebilecek. Tarayıcınızın bu özelliği destekleyip
+	desteklemediğine [[https://samesite-sandbox.glitch.me/][bu sayfadan]] bakabilirsiniz. Sayfadaki her şeyin yeşil olması
+	gerekiyor.
+
+	Eğer sitenizde bir çerez üçüncü parti olduğu halde yukarıdaki gibi
+	işaretlenmemişse Chrome 80 sürümünün Geliştirici Araçları konsol ekranında
+	aşağıdaki gibi bir uyarı ile karşılaşacaksınız.
+
+	[[file:gorseller/chrome-samesite-developer-tools-uyarı.png]]
+
+	Bu durumda sizin yapacağınız pek bir şey yok gibi gözüküyor, sayfanıza
+	eklediğiniz servisin ilgili değişiklikleri yapmasını bekleyeceksiniz ama eğer
+	siz böyle bir servis sunuyorsanız o zaman [[https://web.dev/samesite-cookies-explained/][şu yazıyı]] okumanızda fayda var.
+	Fakat bazı servisler geriye uyumluluk olması açısından aynı çerezden iki tane
+	kullanabilir, yani birisi eski, diğeri yeni ayarlarda iki çerez yukarıdaki
+	uyarı bunlardan birisi için de gözükebilir, nitekim Google'ın bazı
+	servislerinde de durum böyle olabilecekmiş.
+
+	* [[https://www.youtube.com/watch?v=GPz7onXjP_4][Konuyla ilgili YouTube videosu]]
+
+	Daha detaylı bilgi ve ileri okuma kaynakları için konu başlığına eklediğim
+	bağlantıyı inceleyebilirsiniz.
+* [[https://snyk.io/blog/jvm-ecosystem-report-2020/][JVM Ekosistem Raporu 2020]] yayınlandı.
+	#+CAPTION: Anket sonuçlarının özeti
+	[[file:gorseller/jvm-ekosistem-2020-ozet.png]]
+
+	Snyk isimli firmanın düzenlemiş olduğu JVM (Java Virtual Machine) ekosistemi
+	anketinin sonuçları bu hafta içerisinde yayınlandı. Yukarıdaki görselde
+	gördüğünüz özetin tam halini incelemek için [[https://snyk.io/wp-content/uploads/jvm_2020.pdf][bu adresteki PDF dosyası]]nı
+	inceleyebilirsiniz.
+
+	#+CAPTION: JVM üzerinde çalışan diller arasında Kotlin yükselişte.
+	[[file:gorseller/jvm-ekosistem-2020-diller.png]]
+  #+LATEX: \newpage
+* TypeScript 3.8 RC [[https://devblogs.microsoft.com/typescript/announcing-typescript-3-8-rc/][sürümü yayınlandı]]
+	Geçtiğimiz haftalardaki yazılım gündemi yazısında (bkz: [[file:../02/yazilim-gundemi-2020.02.org][Yazılım Gündemi -
+	2020/02]]) Beta sürümünün yayınlandığını duyurduğum TypeScript dilinin bu hafta
+	Relase Candidate sürümü yayınlandı. Bu sürümle birlikte gelen "Private Fields"
+	özelliğine o yazına değinmiştim. Diğer özellikleri de inceledim fakat aktif
+	olarak kullandığım bir dil olmadığı için pek bir şey anladığımı
+	söyleyemeyeceğim. Bu nedenle ilgili arkadaşları konu başlığına eklediğim
+	bağlantıyı okumaya davet etmekten başka yapabileceğim bir şey yok. Bir sonraki
+	sürümde dersime çalışmayı deneyeceğim :)
+* Angular 9 [[https://blog.angular.io/version-9-of-angular-now-available-project-ivy-has-arrived-23c97b63cfa3][sürümü yayınlandı]]
+	VueJS ve ReactJS gibi kütüphanelerin çıkmasıyla birlikte her ne kadar
+	popülerliği azalmış olsa da kurumsal camiada hala daha kullanılmaya devam
+	edilen Angular kütüphanesinin bu hafta içerisinde 9.0.0 sürümü yayınlandı.
+	Front-End tarafına çok uzak biri sayılmam aslında ama bir projede Angular
+	kullanmayalı bayağı uzun zaman oluyor o yüzden pek fazla detaylara
+	inemeyeceğim.
+
+	Bu sürüm, [[https://angular.io/guide/ivy][Ivy]] ismini verdikleri derleme ve çalışma zamanında render yapma
+	kısımlarında çalışan bir "derleyici" ile birlikte geliyor ve Angular takımının
+	iddiasına göre şunları sunuyormuş:
+
+  * Daha küçük paket boyutları.
+  * Daha hızlı test.
+  * Daha iyi debugging.
+  * CSS class ve style tanımlamaları iyileştirilmiş.
+  * Tip kontrolü iyileştirilmiş.
+  * Derleme hataları ve derleme zamanı iyileştirilmiş.
+  * Çoklu dil desteği iyileştirilmiş.
+
+	#+CAPTION: Uygulama boyutlarına göre Angular 9'un küçülme oranları.
+	[[file:gorseller/angular9-paket-boyutlari.png]]
+
+	Yukarıdaki grafikte görebileceğiniz üzere Ivy isimli "derleyici" ile birlikte
+	uygulamanızın boyutlarına göre dikkate değer bir paket boyutu azalması söz
+	konusu. Bu da demek oluyor ki artık uygulamalarınız hem daha az yer
+	kaplayacak, hem de kullanılmayan gereksiz komponentler atıldığı için daha
+	hızlı yüklenme sürelerine sahip olacaksınız. Angular'ın genelde çok büyük
+	paket boyutundan dolayı pek fazla tercih edilmediği düşünüldüğünde bu gelişme
+	iyi bir adım diyebiliriz ama VueJS ve ReactJS kullananları kendine çekebilir
+	mi bilinmez.
+
+	Bu sürüme yükseltmek için aşağıdaki komutları kullanabilirsiniz ama öncesinde
+	şu sayfadaki Angular Güncelleme Rehberi'ni okumanızı şiddetle tavsiye ederim:
+	https://update.angular.io/
+
+	#+BEGIN_EXAMPLE
+    $ ng update @angular/cli @angular/core
+	#+END_EXAMPLE
+* Swift 5.2 [[https://www.hackingwithswift.com/articles/212/whats-new-in-swift-5-2][sürümü yayınlandı]]
+	Apple tarafından geliştirilen ve çoğunlukla yine Apple ekosistemindeki
+	cihazlar için uygulama geliştirmek için kullanılan programlama dili Swift'in
+	5.2 sürümü bu hafta içerisinde yayınlandı. Mobil uygulama geliştirme tarafına
+	çok uzak birisi olsam da blog yazılarındaki kodları ve yapıları kolayca
+	anlayabildim. O halde gelin bir özelliği birlikte inceleyelim:
+** Key Path Expressions as Functions ([[https://github.com/apple/swift-evolution/blob/master/proposals/0249-key-path-literal-function-expressions.md][SE-0249]])
+	 Hemen her programlama dilinde bulunan, dizi içerisinde çeşitli işlemler
+	 yapılabilen =map=, =filter= gibi fonksiyonlar Swift dilinde de var fakat
+	 bu sürümde bir kolaylık geldi. Örnek üzerinden anlatmak gerekirse:
+
+	 Diyelim bu şekilde bir struct tanımınız var:
+   #+ATTR_LATEX: :options frame=lines, linenos, label=Swift, labelposition=topline
+	 #+BEGIN_SRC swift
+     struct Kullanici {
+         let isim: String
+         let yas: Int
+
+         var oyKullanabilirMi: Bool {
+             yas >= 18
+         }
+     }
+	 #+END_SRC
+
+	 ve bu şekilde objelerimiz olsun:
+   #+ATTR_LATEX: :options frame=lines, linenos, label=Swift, labelposition=topline
+	 #+BEGIN_SRC swift
+     let eren = Kullanici(isim: "Eren Hatırnaz", yas: 25)
+     let ahmet = Kullanici(isim: "Ahmet Mehmetoğlu", yas: 17)
+     let mehmet = Kullanici(isim: "Mehmet Ahmetoğlu", yas: 18)
+
+     let kullanicilar =  [eren, ahmet, mehmet]
+	 #+END_SRC
+
+	 ve bu =kullanicilar= dizisindeki elemanların isimlerini getirmemiz gerekir.
+	 Eskiden bu şekilde yapıyorduk:
+   #+ATTR_LATEX: :options frame=lines, linenos, label=Swift, labelposition=topline
+	 #+BEGIN_SRC swift
+     let eski_kullaniciAdlari = kullanicilar.map { $0.isim }
+	 #+END_SRC
+	 Artık bu şekilde kullanabiliyoruz:
+   #+ATTR_LATEX: :options frame=lines, linenos, label=Swift, labelposition=topline
+	 #+BEGIN_SRC swift
+     let kullaniciAdlari = kullanicilar.map(\.isim)
+     print(kullaniciAdlari)
+	 #+END_SRC
+	 Aynı şekilde =filter= ve diğer fonksiyonlar için de bu şekilde kullanmak
+	 mümkün:
+   #+ATTR_LATEX: :options frame=lines, linenos, label=Swift, labelposition=topline
+	 #+BEGIN_SRC swift
+     let oyKullanabilenler = kullanicilar.filter(\.oyKullanabilirMi)
+	 #+END_SRC
+
+	Bu arada ilk defa gördüğüm için söylemeden edemeyeceğim. Swift'in söz dizimi
+	gerçekten güzelmiş. Özellike bu =oyKullanabilirMi= özelliğini tanımlarken
+	kullandığım =yas= değeri 18'den büyükse =True= olsun anlamına gelen söz dizimi
+	gerçekten çok zekice.
+
+	Bu sürüm ile birlikte dile başka birçok özellik daha eklendi fakat hepsine
+	değinirsem yazı çok uzayacak. Bu nedenle ilgili arkadaşları konu başlığına
+	eklediğim bağlantıya tıklamaya davet ediyorum.
+
+	Ayrıca bu hafta başında Swift takımı Swift Crypto isimli yeni bir [[https://swift.org/blog/crypto/][açık kaynak
+	proje de duyurdu]]. [[https://github.com/apple/swift-crypto][GitHub deposu]]
+* GNU ve Özgür Yazılım Vakfı (FSF) [[https://www.gnu.org/gnu/2020-announcement-1.html][birlikte çalışmaya devam edecek]]
+	Richard Stallman'ın olayından (bkz: [[file:../../2019/10/yazilim-gundemi-10.org][Yazılım Gündemi - 10]]) sonra GNU oluşumu
+	ile Free Software Foundation arasındaki ilişkiler de tartışmalı duruma
+	gelmişti (bkz: [[file:../../2019/13/yazilim-gundemi-13.org][Yazılım Gündemi - 13]]). Bu hafta iki tarafında kendi sitelerine
+	ekledikleri sayfadaki ([[https://www.gnu.org/gnu/2020-announcement-1.html][GNU]], [[https://www.fsf.org/news/gnu-fsf-cooperation-update][FSF]]) yazı ile birlikte bu olaylar biraz çözülmüş
+	gibi gözüküyor. Her ne kadar iletişimlerini minimum seviyeye indirmek
+	istediklerini belirtseler de birlikte çalışmaya devam edeceklermiş. Yine de
+	konuyla ilgili fikir belirtmek isteyenlerin 13 Şubat tarihine kadar süresi
+	varmış.
+* Visual Studio v1.42 (Ocak 2020) [[https://code.visualstudio.com/updates/v1_42][sürümü yayınlandı]]
+	[[file:gorseller/vscode-142.png]]
+* Yaklaşan Etkinlikler
+  #+ATTR_HTML: :width 100%
+  #+ATTR_LATEX: :environment longtable :align |p{8cm}|l|l|
+  |--------------------------------------------------------------------+----------+----------------|
+  | Etkinlik İsmi                                                      | Yeri     | Tarihi         |
+  |--------------------------------------------------------------------+----------+----------------|
+  | [[https://www.meetup.com/Turkey-Elastic-Fantastics/events/268505071/][Elasticsearch: Sizing and Capacity Planning]]                        | İstanbul | 12 Şubat 19:00 |
+  | [[https://www.meetup.com/IBMCloudTR/events/268445763/][Mikroservis Ortamında Yapay Zeka Uygulaması oluşturma]]              | Online   | 13 Şubat 13:00 |
+  | [[https://www.meetup.com/IBMCloudTR/events/267606312/][OpenShift 4: Operatörler ile Bulutunuzu Yönetin]]                    | İstanbul | 13 Şubat 19:00 |
+  | [[https://www.meetup.com/Microsoft-Giri%25C5%259Fimcilik-Bulu%25C5%259Fmalar%25C4%25B1/events/268435933/][Azure Serverless Architecture]]                                      | İstanbul | 17 Şubat 19:00 |
+  | [[https://www.meetup.com/GDG-Cloud-Izmir/events/268271805/][Firebase Study Jam]]                                                 | İzmir    | 18 Şubat 18:00 |
+  | [[https://www.meetup.com/Zemin-Istanbul/events/267959970/][Power BI : Verileriniz Sizinle Konuşmaya Başlasın]]                  | İstanbul | 18 Şubat 19:00 |
+  | [[https://kommunity.com/bilisimtoplulugu/events/1-bilisim-zirvesi][1. Bilişim Zirvesi]]                                                 | İstanbul | 19 Şubat 10:00 |
+  | [[https://kommunity.com/pgtr/events/postgresqlde-ileri-seviye-yedekleme-1][PostgreSQL'de İleri Seviye Yedekleme]]                               | İstanbul | 19 Şubat 18:00 |
+  | [[https://www.eventbrite.com/e/trai-meet-up31-otomotiv-ve-yapay-zeka-tickets-90220212083][TRAI Meet-Up 31 Otomotiv ve Yapay Zeka]]                             | İstanbul | 19 Şubat 18:00 |
+  | [[https://www.eventbrite.com/e/graphql-101-workshop-el-housseine-jaafari-devc-istanbul-tickets-93636351849][GraphQL 101 Workshop - El Housseine Jaafari]]                        | İstanbul | 19 Şubat 18:30 |
+  | [[https://www.meetup.com/AWS-User-Group-Turkey/events/268534271/][Her şeyi yapan sihirli servis : Elastic Beanstalk - Level 100]]      | İstanbul | 19 Şubat 19:00 |
+  | [[https://www.eventbrite.com/e/bilmok-2020-registration-58358884996][Bilgisayar Mühendisliği Öğrencileri Kongresi]]                       | İstanbul | 20 Şubat 09:00 |
+  | [[https://kommunity.com/pgtr/events/ankara-postgresqlde-ileri-seviye-kurulum-guncelleme-ve-bakim-teknikleri][PostgreSQL'de ileri seviye kurulum, güncelleme ve bakım teknikleri]] | Ankara   | 20 Şubat 18:30 |
+  | [[https://www.meetup.com/istanbul-yapay-zeka-toplulugu/events/268536570/][Big Dataya Giriş: NoSQL & Spark]]                                    | İstanbul | 21 Şubat 10:00 |
+  | [[https://www.meetup.com/GDGAnkara/events/268398519/][Women Techmakers Series 2]]                                          | Ankara   | 22 Şubat 11:00 |
+  |--------------------------------------------------------------------+----------+----------------|
+* Diğer Haberler
+	- Microsoft Teams, geçici olarak [[https://techcrunch.com/2020/02/03/microsoft-teams-has-been-down-this-morning/][çöktü ve gün içerisinde tekrar açıldı]].
+	- Facebook AI, PyTorch3D kütüphanesini [[https://ai.facebook.com/blog/-introducing-pytorch3d-an-open-source-library-for-3d-deep-learning/][tanıttı]]. [[https://github.com/facebookresearch/pytorch3d][GitHub Deposu]]
+	- Facebook AI, NLP çalışmaları için [[https://ai.facebook.com/blog/ccmatrix-a-billion-scale-bitext-data-set-for-training-translation-models/][veri seti yayınladı]]: [[https://github.com/facebookresearch/LASER/tree/master/tasks/CCMatrix][CCMatrix]].
+	- Microsoft'un Jupyter Notebook alternatifi .NET Interactive, Preview 2
+    [[https://devblogs.microsoft.com/dotnet/net-interactive-is-here-net-notebooks-preview-2/][sürümünü yayınladı]].
+	- JetBrains, birçok IDE'sinin 2020.1 Erken Erişim sürümünü yayınladı:
+		- [[https://blog.jetbrains.com/go/2020/02/06/welcome-to-the-goland-2020-1-eap/][GoLand 2020.1 EAP]]
+		- [[https://blog.jetbrains.com/clion/2020/02/clion-2020-1-eap-cuda-clang-win/][CLion 2020.1 EAP]]
+		- [[https://blog.jetbrains.com/idea/2020/02/intellij-idea-2020-1-eap3/][IntelliJ IDEA 2020.1 EAP3]]
+		- [[https://blog.jetbrains.com/phpstorm/2020/02/phpstorm-2020-1-eap-2/][PhpStorm 2020.1 EAP #2]]
+		- [[https://blog.jetbrains.com/pycharm/2020/02/pycharm-2020-1-eap-2/][PyCharm 2020.1 EAP 2]]
+		- [[https://blog.jetbrains.com/webstorm/][WebStorm 2020.1 EAP #3]]
+	- JetBrains, KotlinConf 2019 etkinliğinin materyallerini [[https://blog.jetbrains.com/kotlin/2020/02/kotlinconf-2019-materials-are-available-on-the-website/][sitesine yükledi]].
+	- Rust, "Cleanup Crew" takımı [[https://blog.rust-lang.org/inside-rust/2020/02/06/Cleanup-Crew-ICE-breakers.html][oluşturacağını duyurdu]]. Katılımlar başladı.
+	- JDK 14 Release Candidate [[https://mail.openjdk.java.net/pipermail/jdk-dev/2020-February/003885.html][oldu]].
+	- [[https://dconf.org/2020/][DConf 2020]] için konuşmacı [[https://dlang.org/blog/2020/02/06/dconf-2020-submission-deadline-early-bird-registration-and-invited-keynote/][başvuruları başladı]]. Son gün 12 Nisan.
+	- PHPUnit kütüphanesinin v9 [[https://phpunit.de/announcements/phpunit-9.html][sürümü yayınlandı]].
+	- KDevelop 5.5 [[https://www.kdevelop.org/news/kdevelop-550-released][sürümü yayınlandı]].
+	- imgaug kütüphanesinin v0.4.0 [[https://github.com/aleju/imgaug/releases/tag/0.4.0][sürümü yayınlandı]].
+	- PHP için Markdown dosyası işleme kütüphanesi [[https://github.com/thephpleague/commonmark][CommonMark]] 1.3.0 [[https://www.colinodell.com/blog/202002/league-commonmark-130-adds-full-gfm-support][sürümünü
+    duyurdu]].
+* Lisans
+  #+BEGIN_CENTER
+  #+ATTR_HTML: :height 75
+  #+ATTR_LATEX: :height 1.5cm
+  [[file:../../../img/CC_BY-NC-SA_4.0.png]]
+
+  [[file:yazilim-gundemi-2020-06.org][Yazılım Gündemi - 2020/06]] yazısı [[https://erenhatirnaz.github.io][Eren Hatırnaz]] tarafından [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Creative Commons
+  Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı]] (CC BY-NC-SA 4.0)
+  ile lisanslanmıştır.
+  #+END_CENTER

@@ -1,0 +1,311 @@
+#+TITLE: Yazılım Gündemi - 2020/20
+#+SUBTITLE: 18-24 Mayıs 2020
+#+AUTHOR: Eren Hatırnaz
+#+DATE: 25 Mayıs 2020
+#+OPTIONS: ^:nil
+#+LANGUAGE: tr
+#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=black, filecolor=red, urlcolor=blue}
+#+LATEX_HEADER: \usepackage[turkish]{babel}
+#+HTML_HEAD: <link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+#+LATEX: \shorthandoff{=}
+
+[[file:gorseller/yazilim-gundemi-banner.png]]
+
+#+BEGIN_CENTER
+[[file:../19/yazilim-gundemi-2020-19.org][< Önceki Gündem]] | *18-24 Mayıs 2020* | [[file:../21/yazilim-gundemi-2020-21.org][Sonraki Gündem >]]
+
+[[https://teknoseyir.com/blog/yazilim-gundemi-2020-20][TeknoSeyir'de Oku]]
+#+END_CENTER
+
+* C# [[https://devblogs.microsoft.com/dotnet/welcome-to-c-9-0/][9.0 sürümü yayınlandı]]
+	Microsoft'un geliştiriciler için özel olarak düzenlediği etkinliği olan BUILD
+	bu yıl koronavirüs nedeniyle sanal olarak düzenlendi. Geçtiğimiz hafta
+	düzenlenen BUILD 2020 etkinliğinde .NET ekosistemi altında geliştirilen
+	programlama dili C#'ın da 9.0 numaralı sürümü yayınlandı. Her ne kadar uzun
+	bir süredir .NET ekosisteminden uzak kalmış olsam da C# ilk göz ağrılarımdan
+	biridir. Programlama başlarken kullandığım dillerden biri olması dolayısıyla
+	yapısı hakkında bilgim var. Bu sürümle birlikte gelen birkaç özelliği birlikte
+	inceleyelim:
+
+** Init-only properties
+	 Nesne yönelimli programlama dili olmasından dolayı verileri nesne olarak
+	 temsil etme özellikleri oldukça gelişmiş olan C#'da halihazırda bu şekilde
+	 basit bir sınıf oluşturup kullanabiliyorduk:
+
+   #+ATTR_LATEX: :options frame=lines, linenos, label=C\#
+	 #+BEGIN_SRC csharp
+     public class Kisi
+     {
+         public string Ad { get; set; }
+         public string Soyad { get; set; }
+     }
+
+     new Kisi
+     {
+         Ad = "Eren",
+         Soyad = "Hatırnaz"
+     }
+	 #+END_SRC
+
+	 Fakat bazı durumlarda bazı property'lerin tanımlandıktan sonra
+	 değiştirilememesini isteyebiliriz. İşte bu durumda imdadımıza init-only
+	 propert'ler yetişiyor ve bu şekilde bir tanımlama ile isteğimizi
+	 gerçekleştirebiliyoruz:
+   #+ATTR_LATEX: :options frame=lines, linenos, label=C\#
+	 #+BEGIN_SRC csharp
+     public class Kisi
+     {
+         public string Ad { get; init; }
+         public string Soyad { get; init; }
+     }
+	 #+END_SRC
+** Records
+	 Eğer yukarıdaki kullanımın askine birkaç property'yi değil tüm objeyi
+	 immutable yapmak istiyorsanız o zaman da yardımımıza yeni Records özelliği
+	 koşuyor:
+   #+ATTR_LATEX: :options frame=lines, linenos, label=C\#
+	 #+BEGIN_SRC csharp
+     public data class Kisi
+     {
+         public string Ad { get; init; }
+         public string Soyad { get; init; }
+     }
+	 #+END_SRC
+	 Tanımladığınız sınıfı =public data class= olarak işaretlediğinizde o artık
+	 bir Record haline gelmiş oluyor ve artık bir kere oluşturduğunuz bir record
+	 objesini bir daha değiştiremiyorsunuz, onun yerine artık bu şekilde var olan
+	 objenin özelliklerini değiştirip yeni objeler oluşturarak devam ediyorsunuz:
+   #+ATTR_LATEX: :options frame=lines, linenos, label=C\#
+	 #+BEGIN_SRC csharp
+     var digerKisi = person with { Ad = "Ahmet" }
+	 #+END_SRC
+	 Daha önce "Ad=Eren, Soyad=Hatırnaz" olarak tanımladığımız objeyi kullanarak
+	 "Ad=Ahmet, Soyad=Hatırnaz" şeklinde yeni bir obje oluşturmuş olduk.
+
+	 Immutable konusu benim de zaman zaman kafamı karıştıran bir konu, dolayısıyla
+	 bu tarz kullanımların tam olarak hangi sorun için bir çözüm olduğunu
+	 bilemiyorum ama takip ettiğim kadarıyla topluluk bu özellikler için sevinmiş
+	 durumda.
+** Top-level programs
+	 Diğer birçok programlama dilinden de alışık olduğumuz üzere C#'da basit bir
+	 programın yapısı şöyle oluyor genelde:
+   #+ATTR_LATEX: :options frame=lines, linenos, label=C\#
+	 #+BEGIN_SRC csharp
+     using System;
+
+     class Program
+     {
+         static void Main()
+         {
+             Console.WriteLine("Merhaba Dünya");
+         }
+     }
+	 #+END_SRC
+	 Fakat artık daha da basit şekilde, Python ve Ruby gibi dillerden aşılık
+	 olduğumuz gibi bu şekilde de uygulamalar yazabileceğiz:
+   #+ATTR_LATEX: :options frame=lines, linenos, label=C\#
+	 #+BEGIN_SRC csharp
+     using System;
+
+     Console.WriteLine("Merhaba Dünya");
+	 #+END_SRC
+
+	 C# 9.0 ile birlikte gelen diğer özellikler ve detaylar için konu başlığına
+	 eklediğim bağlantıya tıklayabilirsiniz. Ayrıca geçtiğimiz hafta içerisinde
+	 [[https://devblogs.microsoft.com/dotnet/announcing-net-5-preview-4-and-our-journey-to-one-net/][.NET 5 Preview 4]] sürümü de duyuruldu.
+* Microsoft yeni platformlar arası uygulama geliştirme [[https://devblogs.microsoft.com/dotnet/introducing-net-multi-platform-app-ui/][çözümünü tanıttı]]: [[https://github.com/dotnet/maui][.NET Multi-platform App UI]]
+	Microsoft'un 2016 yılında .NET için açık kaynaklı teknolojiler üreten Xamarin
+	[[https://blogs.microsoft.com/blog/2016/02/24/microsoft-to-acquire-xamarin-and-empower-more-developers-to-build-apps-on-any-device/][firmasını satın almıştı]]. Xamarin tarafından geliştirilen Xamarin.Forms'da
+	doğal olarak Microsoft'a geçmiş oldu. İşte bu satın almanın yeni meyvesi
+	olacak şey de bugün konuşacağımız .NET Multi-platform App UI oldu.
+
+	[[file:gorseller/dotnet-multiplatform-app-ui.png]]
+
+	[[https://github.com/xamarin/xamarin.forms][Xamarin.Forms]] hatırlamayan ya da bilmeyenler için .NET ekosistemi içerisinde
+	platformlar arası (cross-platform) uygulama geliştirmeye yarayan bir
+	teknoloji. Geçtiğimiz hafta içerisinde ise bu teknolojinin artık evrimleşip
+	başka bir teknolojiyle birleşme vaktinin geldiğini duyuruldu. .NET MAUI,
+	kısaca Xamarin.Forms'un evrimleşmiş ve gelişmiş halidir diyebiliriz.
+	Microsoft, henüz erken geliştirilme aşamasında olan bu teknolojisi ile biz
+	geliştiricilere tek bir projeden hem Windows hem macOS hem de iOS ve Android
+	uygulaması çıkarmayı vaat ediyor.
+
+	#+CAPTION: Xamarin.Forms ve .NET MAUI arasındaki farklar tablosu
+	[[file:gorseller/dotnet-maui-vs-xamarin-forms.png]]
+
+	.NET 6 sürümüyle birlikte hayatımıza girmesi planlanan bu teknolojiyle
+	birlikte MVVM (Model-View-ViewModel) ve RxUI gibi Design Pattern ve uygulama
+	modellerinin yanı sıra .NET MAUI, MVU(Model-View-Update) ve Blazor gibi
+	yapıları da destekleyecek.
+
+	Peki bu gelişmeler Xamarin ve Xamarin.Forms için ne anlama geliyor? diye
+	soracak olursanız ise cevabı çok zor değil. Microsoft'un birçok uygulama
+	geliştirme teknolojisini .NET 5 ile tek çatı altında toplamak istediğini
+	önceki yazılım gündemi yazılarının birinde belirtmiştim. İşte bu gelişmeyi de
+	aynı bağlamda değerlendirebiliriz-ki Microsoft'da zaten planlarında bu
+	olduğunu açıkladı. Xamarin'in ve alt teknolojilerinin yeni sürümleri bir süre
+	daha gelmeye devam edecek fakat Microsoft'un artık yeni odağı .NET 6'nın
+	içerisinde olacak bu teknoloji. Geliştiricilerin geçiş yapmasını
+	kolaylaştıracak gelişmelerden sonra da Xamarin projesi büyük ihtimal
+	durdurulur.
+* GitLab 13.0 [[https://about.gitlab.com/releases/2020/05/22/gitlab-13-0-released/][sürümü yayınlandı]]
+	Uzak git sunucusu ve proje yönetimi hizmetleri sunan GitLab, geçtiğimiz hafta
+	içerisinde 13.0 sürümünü duyurdu. Aynı zamanda GitLab.com'da son sürüme
+	güncellenmiş oldu. Bu sürümle birlikte gelen bazı özellikler ise şu şekilde:
+
+** Amazon ECS'ye otomatik deploy (GitLab Auto DevOps)
+	 Artık geliştirdiğiniz projeleri otomatik olarak AWS Elastic Container Service
+	 tarafına gönderip, uygulamanızı ayağa kaldırabileceksiniz. Bunun için
+	 deponuzun CI/CD ayarlarından Auto DevOps özelliğini aktifleştirmeniz ve
+	 deponuza şu değişkenleri tanımlamanız gerekiyor: =AWS_ACCESS_KEY_ID=,
+	 =AWS_ACCOUNT_ID= ve =AWS_REGION=. Nasıl çalıştığını görmek için [[https://www.youtube.com/watch?v=AGerrF9KO30][şuradaki kısa
+	 demo videosunu izleyebilirsiniz]]
+** Versioned Snippets
+	 GitLab'in Snippet olarak isimlendirdiği şeyi biz aslında GitHub'daki Gist ile
+	 biliyoruz. İkisi de aynı amaca hizmet ediyorlar. Tek başına deposu
+	 (repository) olması gerektirmeyen betikleri ya da kodları paylaşmak için
+	 kullandığımız bir hizmet. Ülkemizde hala daha yasaklı olan pastebin.com gibi
+	 yani. İşte GitLab'daki bu snippet sistemine yeni bir özellik geldi, artık
+	 bunları da git ile bilgisayarımıza clone edip, değişiklik yapıp ve
+	 commit'leyip onu gitlab'a gönderebileceğiz. Böylece hem versiyonlanmış olacak
+	 hem de kendi bilgisayarımızda dosyayı düzenleyebileceğiz. Fakat web
+	 arayüzünde henüz snippet geçmişini gösteren bir özellik yok, ileride eklenir
+	 diye umuyorum. Benim örneğimi bu şekilde clone edip, geçmişe bakabilirsiniz.
+	 #+BEGIN_SRC shell
+     git clone https://gitlab.com/snippets/1980000.git
+	 #+END_SRC
+** Web IDE için karanlık tema
+	 #+CAPTION: Tarayıcı üzerinden kod yazmaya olanak sağlayan GitLab Web IDE'de
+   #+CAPTION: artık karanlık tema mevcut.
+	 [[file:gorseller/gitlab-web-ide-karanlik-tema.png]]
+    #+LATEX: \newpage
+	GitLab 13.0 ile gelen diğer özellikler için konu başlığına eklediğim
+	bağlantıya tıklayabilirsiniz.
+* Docker ve Snyk firmalarından konteyner güvenliği alanında [[https://www.docker.com/press-release/Docker-Snyk-Announce-Partnership-Container-Vulnerability-Scanning][iş birliği duyurusu]]
+	Linux içerisindeki =cgroups= ile birlikte gelen konteyner sistemini
+	popülerleştirmesiyle bilinen Docker firması ve yazılımın çeşitli alanlarıyla
+	ilgili güvenlik çözümleri sunan Snyk şirketi, geçtiğimiz hafta içerisinde iş
+	birliği yaptıklarını duyurdular.
+
+	Bu iş birliği kapsamında Docker Hub sistemine eklenecek yeni bir entegrasyon
+	sayesinde artık Docker Hub'a gönderdiğimiz konteyner imajlarına otomatik
+	olarak güvenlik taraması yaptırabilir ve raporlayabilir olacağız.
+
+	Container teknolojisinin artan popülaritesi ile birlikte güvenlik
+	ihtiyaçlarının da aynı oranda artacağı tahmin edilebilir bir durum. Snyk
+	firması da bu alana erkenden giren firmalardan birisi olmuş.
+
+	Bu iş birliğinin ilk meyvelerini 2020'nin üçüncü yarısında görmeye
+	başlayacağız. Container teknolojisi ile ilgili arkadaşlara "Container
+	Security" alanına bakmalarını tavsiye ederim.
+* Electron [[https://www.electronjs.org/blog/electron-9-0][9.0.0 sürümü yayınlandı]]
+	JavaScript kullanarak platformlar arası masaüstü uygulama geliştirmeye yarayan
+	kütüphane Electron, geçtiğimiz hafta içerisinde 9.0.0 etiketli sürümünü
+	yayınladı. Bu sürümle birlikte gelen bazı yenilik ve değişiklikler ise şöyle:
+
+	 * Chromium sürümü 83.0.4103.64 olarak yükseltildi.
+		 * [[https://developers.google.com/web/updates/2020/04/nic81][Chrome 81 sürüm notları]]
+		 * Chrome 82 sürümü [[https://chromereleases.googleblog.com/2020/03/chrome-and-chrome-os-release-updates.html][koronavirüs nedeniyle atlandı]].
+		 * [[https://developers.google.com/web/updates/2020/05/nic83][Chrome 83 sürüm notları]]
+	 * Node.js sürümü 12.14.1 olarak yükseltildi. [[https://nodejs.org/en/blog/release/v12.14.1/][Sürüm Notları]]
+	 * V8 sürümü 8.3 olarak yükseltildi.
+		 * [[https://v8.dev/blog/v8-release-81][V8 8.1 sürüm notları]]
+		 * [[https://v8.dev/blog/v8-release-83][V8 8.3 sürüm notları]]
+	 * İmla kontrolü özelliğinde iyileştirmeler: [[https://github.com/electron/electron/pull/22128][#22128]] ve [[https://github.com/electron/electron/pull/22368][#22368]]
+	 * Linux üzerinde Window Events Handler verimliliği iyileştirildi. ([[https://github.com/electron/electron/pull/23260][#23260]])
+	 * PDF görüntüleyici desteği geri geldi. ([[https://github.com/electron/electron/pull/22131][#22131]])
+	 * =enableRemoteModle: true= olmadan =remote= kullanılırsa artık deprecate
+     uyarısı veriyor. ([[https://github.com/electron/electron/pull/21546][#21546]])
+	 * =app.enableRendererProcessReuse= özelliği artık artık varsayılan olarak
+     =true=. ([[https://github.com/electron/electron/pull/22336][#22336]])
+	 * JavaScript olmayan objeleri IPC üzerinden gönderirken artık exception
+     fırlatıyor. ([[https://github.com/electron/electron/pull/21560][#21560]])
+
+	Bu sürümle gelen diğer yenilik ve değişiklikler için konu başlığına eklediğim
+	bağlantıya tıklayabilirsiniz.
+* Windows Terminal [[https://devblogs.microsoft.com/commandline/windows-terminal-1-0/][1.0 sürümü yayınlandı]] ve Windows Package Maganer Preview [[https://devblogs.microsoft.com/commandline/windows-package-manager-preview/][tanıtıldı]]
+	Microsoft'un GNU/Linux ve MacOS taraflarına kaybettiği geliştirici kitlesini
+	geri kazanmak için yaptığı hamleler sürüyor. Uzun süredir geliştirilmekte
+	olan, benim de sık sık gündemde yer verdiğim Windows'un yeni Terminal'i
+	geçtiğimiz hafta düzenlenen BUILD 2020 etkinliğinde 1.0 olarak stabil
+	versiyonuna kavulmuş oldu.
+
+	#+CAPTION: Artık Windows üzerinde de gelişmiş bir terminal emülatörümüz mevcut.
+	[[file:gorseller/windows-terminal-1-0.png]]
+  #+LATEX: \newpage
+
+	Önceki yazılım gündemi yazılarında zaten birçok Windows Terminal sürümününde
+	gelen yenilikleri konuşmuştuk. Bugün biraz daha önemli olduğunu düşündüğüm
+	[[https://github.com/microsoft/winget-cli][Windows Package Manager]] üzerine konuşmak istiyorum.
+
+	=sudo apt install firefox=
+
+	Aramızdaki çoğu kişi yukarıda yazdığım komut satırı kodunun ne iş yaptığını
+	biliyor. Gerçi bilmeseniz bile ingilizce olarak okuduğunuzda zaten
+	anlaşılıyor. Firefox yazılımını sisteme kuruyor. İşte bu yapının benzeri artık
+	windows tarafında şu şekilde mevcut:
+
+	#+CAPTION: =winget install firefox=
+	[[file:gorseller/winget-install.png]]
+  #+LATEX: \newpage
+
+	Henüz ön izleme sürümü yayınlanmış bu paket yöneticisi Windows için oyun
+	değiştirici olma rolünü üstlenebilir. Şimdilik sadece [[https://github.com/microsoft/winget-pkgs][şu depodaki manifest
+	dosyaları]] üzerinden exe dosyalarını indirip, çalıştırma görevi görüyor olsa da
+	hash doğrulama gibi önemli özellikleri de mevcut. Bence paket yöneticilerinin
+	en önemli özelliği =upgrade= komutu ile sistemde yüklü tüm uygulamaları tek
+	seferde güncelleyebilmek fakat bu henüz =winget='e gelmiş değil. Bu özelliğin
+	kesinlikle getireceklerdir. Geliştirme ortamlarını Windows üzerinde kurmuş
+	birçok kişiye hatta son kullanıcıların bile çok işine yarayacağını
+	düşünüyorum.
+* Yaklaşan Online Etkinlikler #EvdeKal
+  #+ATTR_HTML: :width 100%
+  #+ATTR_LATEX: :environment longtable :align |p{9.5cm}|l|
+  |----------------------------------------------------------------------------+----------------|
+  | Etkinlik İsmi                                                              | Tarihi         |
+  |----------------------------------------------------------------------------+----------------|
+  | [[https://kommunity.com/pgtr/events/postgresql-sohbetleri-16-turkiyede-postgresql-ne-durumda-turker-gulum-587e9d43][PostgreSQL Sohbetleri 16: Türkiye'de PostgreSQL ne durumda? (Türker Gülüm)]] | 26 Mayıs 13:30 |
+  | [[https://kommunity.com/devops-turkiye/events/kubernetes-118de-gelen-yenilikler-3defef02][Kubernetes 1.18'de gelen yenilikler]]                                        | 27 Mayıs 20:00 |
+  | [[https://kommunity.com/cloud-and-serverless-turkey/events/cloudflare-workers-just-write-code-54aace34][Cloudflare Workers: Just Write Code]]                                        | 28 Mayıs 12:00 |
+  | [[https://kommunity.com/teknoloji-gelistirenler-icin-devlet-tesvikleri/events/mobil-uygulama-oyun-gelistirenler-icin-devlet-tesvikleri-111055dc][Mobil Uygulama-Oyun Geliştirenler İçin Devlet Teşvikleri]]                   | 28 Mayıs 14:00 |
+  | [[https://kommunity.com/bilisim-vadisi/events/google-cloud-gaming-ile-ilgili-cozumler-75d9af64][Google Cloud Gaming ile İlgili Çözümler]]                                    | 29 Mayıs 13:00 |
+  | [[https://kommunity.com/tensorflow-turkey/events/contextual-chatbots-with-rasa-and-tensorflow-36eee01c][Contextual chatbots with Rasa and TensorFlow]]                               | 30 Mayıs 21:00 |
+  | [[https://kommunity.com/cloud-and-serverless-turkey/events/kubernetes-hands-on-4-kubernetes-ingress-and-network-policies-4f1cd707][Kubernetes Hands-On no.4: Kubernetes Ingress and Network Policies]]          | 31 Mayıs 13:30 |
+  |----------------------------------------------------------------------------+----------------|
+* Diğer Haberler
+	- GitHub, Go'nun MySQL sürücüsünde [[https://github.blog/2020-05-20-three-bugs-in-the-go-mysql-driver/][3 hatayı düzeltmiş.]].
+	- Microsoft: "Açık Kaynak konusunda [[https://www.zdnet.com/article/microsoft-we-were-wrong-about-open-source-but-luckily-you-can-change/][yanıldık]]." [[https://www.theregister.co.uk/2020/05/15/microsoft_brad_smith_open_source/][Alternatif]]
+	- Microsoft, Linux'e Direct3D 12 desteği [[https://devblogs.microsoft.com/directx/directx-heart-linux/][getireceğini açıkladı]]. [[https://www.phoronix.com/scan.php?page=news_item&px=Microsoft-DX12-WSL2][Alternatif]]
+	- Defold oyun motoru [[https://defold.com/opensource/][açık kaynak hale geldi]]. [[https://github.com/defold/defold][GitHub Deposu]]
+	- Microsoft klasik masaüstü uygulamalar ile UWP uygulamalarını [[https://www.theverge.com/2020/5/19/21258697/microsoft-windows-project-reunion-win32-uwp-apps-apis-build][birleştirmek
+    istiyor]]: [[https://github.com/microsoft/ProjectReunion][Project Reunion]].
+	- Visual Studio 2019 [[https://docs.microsoft.com/en-us/visualstudio/releases/2019/release-notes-preview][Preview 1 sürümü yayınlandı]].
+	- Python programlama dilinin [[https://pythoninsider.blogspot.com/2020/05/python-390b1-is-now-available-for.html][3.9.0 Beta 1 sürümü yayınlandı]].
+	- Node.js [[https://nodejs.org/en/blog/release/v14.3.0/][v14.3.0 sürümü yayınlandı]].
+	- Deno [[https://github.com/denoland/deno/releases/tag/v1.0.2][v1.0.2 sürümü yayınlandı]].
+	- F# programlama dilinin [[https://devblogs.microsoft.com/dotnet/f-5-update-for-net-5-preview-4/][5.0 sürümü yayınlandı]].
+	- Microsoft, [[https://codeforces.com/blog/entry/77614][Q# Programlama Yarışması'nı duyurdu]].
+	- Microsoft, GW-BASIC programlama dilinin [[https://devblogs.microsoft.com/commandline/microsoft-open-sources-gw-basic/][kodlarını açık kaynak yaptı]]. [[https://github.com/microsoft/GW-BASIC][GitHub
+    Deposu]]
+	- Blazor WebAssembly kütüphanesinin [[https://devblogs.microsoft.com/aspnet/blazor-webassembly-3-2-0-now-available/][3.2.0 sürümü yayınlandı]].
+	- Curl kullanıcı [[https://daniel.haxx.se/blog/2020/05/18/help-curl-the-user-survey-2020/][anketi başladı]]. [[https://forms.gle/4L4A2de4WgmJbJkg9][Anket]]
+	- Grafana [[https://grafana.com/blog/2020/05/18/grafana-v7.0-released-new-plugin-architecture-visualizations-transformations-native-trace-support-and-more/?isource=hp][v7.0 sürümü yayınlandı]].
+	- PostgreSQL [[https://www.postgresql.org/about/news/2040/][13 Beta 1 sürümü yayınlandı]].
+	- SQLite [[https://sqlite.org/releaselog/3_32_0.html][3.32.0 sürümü yayınlandı]].
+	- Beekeeper Studio [[https://www.beekeeperstudio.io/blog/release-1.4][1.4 sürümü yayınlandı]].
+	- Orx oyun motorunun [[https://www.gamedev.net/news/orx-portable-game-engine-version-111-has-been-released-r1349/][1.11 sürümü yayınlandı]].
+	- EA, Command&Conquer ve Red Alert'in [[https://kotaku.com/ea-is-releasing-command-conquer-and-red-alerts-source-1843574798][kaynak kodlarını yayınlayacak]].
+	- Swift programlama dili için fonksiyonel mimari çözümü sunan [[https://www.47deg.com/blog/bow-arch-0-1-0-release/][açık kaynaklı
+    kütüphane tanıtıldı]]: [[https://arch.bow-swift.io/][Bow Arch]]. [[https://github.com/bow-swift/bow-arch][GitHub Deposu]]
+	- tree-hugger açık kaynaklı [[https://medium.com/codist-ai/introducing-tree-hugger-source-code-mining-for-human-b5fcd31bef55][projesi tanıtıldı]]. [[https://github.com/autosoft-dev/tree-hugger][GitHub Deposu]]
+	- GrallVM [[https://www.graalvm.org/docs/release-notes/20_1/][20.1.0 sürümü yayınlandı]].
+* Lisans
+  #+BEGIN_CENTER
+  #+ATTR_HTML: :height 75
+  #+ATTR_LATEX: :height 1.5cm
+  [[file:../../../img/CC_BY-NC-SA_4.0.png]]
+
+  [[file:yazilim-gundemi-2020-20.org][Yazılım Gündemi - 2020/20]] yazısı [[https://erenhatirnaz.github.io][Eren Hatırnaz]] tarafından [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Creative Commons
+  Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı]] (CC BY-NC-SA 4.0)
+  ile lisanslanmıştır.
+  #+END_CENTER

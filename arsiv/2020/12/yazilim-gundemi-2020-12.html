@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 22:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi - 2020/12</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi - 2020/12
+<br />
+<span class="subtitle">23-29 Mart 2020</span>
+</h1>
+<div id="table-of-contents">
+<h2>İçindekiler</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgeb3c47e">1. Safari 13.1 ile tüm üçüncü parti çerezleri engellemeye başladı</a></li>
+<li><a href="#org436333e">2. Git 2.26 sürümü yayınlandı</a>
+<ul>
+<li><a href="#org53aa4f9">2.1. Varsayılan protokol versiyonu 2 olarak güncellendi</a></li>
+<li><a href="#org3a406f4">2.2. <code>git sparse-checkout</code> komutunda değişiklikler</a></li>
+</ul>
+</li>
+<li><a href="#org9f1c4d0">3. TypeScript 3.9 Beta duyuruldu</a></li>
+<li><a href="#orgc84dcf0">4. Google Play üzerindeki Multiplayer API desteği sonlanıyor</a></li>
+<li><a href="#org708a6fa">5. GitHub Desktop uygulamasının 2.4 sürümü yayınlandı</a></li>
+<li><a href="#org704b68c">6. Diğer Haberler</a></li>
+<li><a href="#org1e32e6e">7. Lisans</a></li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gundemi-banner.png" alt="yazilim-gundemi-banner.png" />
+</p>
+</div>
+
+<div class="org-center">
+<p>
+<a href="../11/yazilim-gundemi-2020-11.html">&lt; Önceki Gündem</a> | <b>23-29 Mart 2020</b> | <a href="../13/yazilim-gundemi-2020-13.html">Sonraki Gündem &gt;</a>
+</p>
+
+<p>
+<a href="https://teknoseyir.com/blog/yazilim-gundemi-2020-12">TeknoSeyir'de Oku</a>
+</p>
+</div>
+
+<div id="outline-container-orgeb3c47e" class="outline-2">
+<h2 id="orgeb3c47e"><span class="section-number-2">1</span> Safari 13.1 ile tüm üçüncü parti <a href="https://www.engadget.com/2020-03-24-safari-blocks-all-third-party-cookies-by-default.html">çerezleri engellemeye başladı</a></h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Bu hafta içerisinde yayınlanan iOS ve iPadOS güncellemeleri ile birlikte Apple
+ekosisteminin varsayılan tarayıcısı olan Safari, artık tüm üçüncü parti
+çerezleri (cookie) engelliyor. Intelligent Tracking Preventation (ITP) isimli
+özelliklerindeki bu güncellemenin amacı ise kullanıcıların internette
+gezinirken takip edilmesini önlemek. Bu derece sert bir kuralı uygulayan bir
+diğer tarayıcı ise Tor Browser. Brave Browser ise bazı istisnalar hariç diğer
+çerezleri engelliyor.
+</p>
+
+<p>
+İlgili değişiklikler Apple tarafından açık kaynak olarak geliştirilen tarayıcı
+motoru WebKit'in <a href="https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/">blog sayfasında duyuruldu</a>. Yazıda bu yolda yalnız
+olmadıklarını Google tarafından geliştirilen Chrome tarayıcısının da 2022 yılı
+için bu tarz bir <a href="https://blog.chromium.org/2020/01/building-more-private-web-path-towards.html">değişikliğe hazırlandığını</a> belirtmiş. Aynı zamanda bu
+uygulamanın standart olması için W3C kurumuna da başvuracaklarını
+belirtmişler.
+</p>
+
+<p>
+Değişikliğin biz geliştiricileri etkileyen kısmında ise bizlere üçüncü parti
+çerezler yerine kullanabileceğimiz 3 farklı opsiyon sunmuşlar. Bunlar şu
+şekilde:
+</p>
+
+<ul class="org-ul">
+<li><a href="https://tools.ietf.org/html/rfc6749">OAuth 2.0 Authorization</a></li>
+<li><a href="https://webkit.org/blog/8124/introducing-storage-access-api/">The Storage Access API</a></li>
+<li>Popup'lar için <a href="https://webkit.org/blog/8311/intelligent-tracking-prevention-2-0/">Geçici Uyumluluk Çözümü</a></li>
+</ul>
+
+<p>
+Fakat bu değişiklikler sadece çerezleri etkilemiyor. Tarayıcıda bazı verileri
+depolamak için kullandığımız IndexedDB, LocalStorage ve SessionStorage gibi
+yapılar da etkileniyor. Artık bu yapılar üzerinde sadece 7 günlük veriler
+tutabileceğiz. Bunu yapmalarındaki amaç ise büyük ihtimal kullanıcıları takip
+eden servislerin çerez engellemesini bu tarz yapıları kullanarak aşmalarını
+istememeleri olabilir.
+</p>
+
+<p>
+Bu konu hakkında siz ne düşünüyorsunuz? Safari'nin çerezlere olan bu sert
+yaklaşımı siz doğru mu? Yorumlar bölümünde konuşalım.
+</p>
+</div>
+</div>
+<div id="outline-container-org436333e" class="outline-2">
+<h2 id="org436333e"><span class="section-number-2">2</span> Git 2.26 <a href="https://lore.kernel.org/git/xmqqa7477u6j.fsf@gitster.c.googlers.com/T/#u">sürümü yayınlandı</a></h2>
+<div class="outline-text-2" id="text-2">
+<p>
+En popüler versiyon kontrol sistemlerinden biri olan Git, bu hafta içerisinde
+2.26 numaralı yeni sürümünü duyurdu. Bu sürüm ile birlikte gelen bazı
+değişikliklere birlikte bakalım.
+</p>
+</div>
+
+<div id="outline-container-org53aa4f9" class="outline-3">
+<h3 id="org53aa4f9"><span class="section-number-3">2.1</span> Varsayılan protokol versiyonu 2 olarak güncellendi</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+2018 yılında Git'e Google tarafından katkı sağlanarak eklenen <i>Git protocol
+version 2</i> artık varsayılan olarak kullanılacak. Önceki Git protokolünün bazı
+ölçekleme sorunları vardı. Bir Git sunucusu, istemci (client) özel olarak
+istemediği halde tüm branch'lar, tag'lar ve diğer referanslar hakkında bilgi
+veriyordu. İlk bakışta "bunda ne var" diye düşünebilirsiniz ama büyük çaplı
+projeler için durum böyle değil. Kullanıcı sadece master dalıyla ilgilendiği
+halde ona tüm dallar ve etiketlerle ilgili bilgi dönmesi demek fazladan
+birkaç megabyte'ın harcanması demek ve bu da gereksiz veri trafiği anlımına
+geliyor. Şimdi ise büyük boyutlu depolardan daha kısa bir sürede veri
+çekebiliyor olacağız.
+</p>
+
+<p>
+Eğer Git versiyonunuzu yükseltmeye henüz hazır değilseniz ve Git 2.19 üzeri
+bir sürüm numarasına sahipseniz. Bu değişikliği siz de aşağıdaki komutu
+çalıştırarak uygulayabilirsiniz:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">git config --global protocol.version 2
+</pre>
+</div>
+
+<p>
+Bu protokol versiyonu hakkında daha detaylı bilgi almak için <a href="https://opensource.googleblog.com/2018/05/introducing-git-protocol-version-2.html">bu sayfayı
+ziyaret edebilirsiniz</a>.
+</p>
+</div>
+</div>
+<div id="outline-container-org3a406f4" class="outline-3">
+<h3 id="org3a406f4"><span class="section-number-3">2.2</span> <code>git sparse-checkout</code> komutunda değişiklikler</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Bir önceki sürüm (2.25) güncellemesiyle birlikte gelen bu özelliği <a href="../03/yazilim-gundemi-2020-03.html">Yazılım
+Gündemi - 2020/03</a> yazısında detaylıca anlatmıştık. Dolayısıyla özelliğin
+teknik detayları için önce o yazıyı okumanızı tavsiye ederim. Bu sürümle
+ise <code>git sparse-checkout add</code> modu eklendi. Artık daha kolay bir şekilde
+istediğimiz klasörleri indirebileceğiz. Örnek kullanım için:
+</p>
+
+<pre class="example">
+$ git clone --filter=blob:none --sparse git@github.com:git/git.git
+$ cd git
+$ git sparse-checkout init --cone
+$ git sparse-checkout add t
+$ git sparse-checkout add Documentation
+$ git sparse-checkout list
+Documentation
+t
+</pre>
+<p>
+Yukarıda sırasıyla şu işlemleri yaptık:
+</p>
+<ol class="org-ol">
+<li>github.com/git/git deposunu sparse-checkout özelliğini kullanarak clone
+edeceğimizi belirttik.</li>
+<li><code>git</code> klasörünün içine girdik. sparse-checkout yapacağımız için içi boş.</li>
+<li><code>sparse-checkout</code> özelliğini başlattık.</li>
+<li><code>t</code> isimli klasörü uzak sunucudan indirdik.</li>
+<li><code>Documentation</code> isimli klasörü uzak sunucudan indirdik.</li>
+<li><code>sparse-checkout</code> yaptığımız klasörlerin listesini yazdırdık.</li>
+</ol>
+
+<p>
+Git 2.26 sürümüyle birlikte gelen diğer yeni özellik ve değişiklikler için
+GitHub tarafından hazırlanmış <a href="https://github.blog/2020-03-22-highlights-from-git-2-26/">şu blog yazısını okuyabilir</a> ya da konu başlığına
+eklediğim bağlantıya tıklayabilirsiniz.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org9f1c4d0" class="outline-2">
+<h2 id="org9f1c4d0"><span class="section-number-2">3</span> TypeScript 3.9 Beta <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-3-9-beta/">duyuruldu</a></h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Microsoft tarafından geliştirilen JavaScript üreten programlama dili
+TypeScript'in bu hafta içerisinde 3.9 Beta etiketli sürümü duyuruldu.
+Microsoft TypeScript takımının bloglarında yayınladıkları yazıyı inceledim
+fakat dile uzak birisi olduğum için pek bir şey anladığım söylenemez. Bu
+nedenle bu sefer de sizi konu başlığına eklediğim bağlantıya tıklayamaya davet
+ediyorum. TypeScript'i ilgi alanıma girerse, ilerleyen Yazılım Gündemi
+yazılarında daha detaylı değinebilirim belki.
+</p>
+
+<p>
+Henüz "Beta" sürecinde olduğu için çalışan projelerinizi bu sürüme geçirmeniz
+tavsiye edilmez ama yine de ayrı olarak bir deneme yapmak isterseniz şu komutu
+çalıştırarak TypeScript 3.9 Beta'yı projenize ekleyebilirsiniz:
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">npm install typescript@beta
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc84dcf0" class="outline-2">
+<h2 id="orgc84dcf0"><span class="section-number-2">4</span> Google Play üzerindeki Multiplayer API <a href="https://support.google.com/googleplay/android-developer/answer/9469745?hl=en">desteği sonlanıyor</a></h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Gün geçmiyor ki bir başka Google hizmeti ya da ürünü <a href="https://killedbygoogle.com/">Google Mezarlığı</a>nda
+yerini almasın. Android için oyun geliştirirken Google'ın geliştiriciler için
+sunduğu oyununuza çok-oyuncu (multiplayer) API desteğini kullanabiliyordunuz.
+Google Play üzerinden sağlanan bu API ile birlikte arka plandaki bazı iş
+yüklerinden kurtuluyordunuz fakat 31 Mart itibariyle bu özellik artık
+çalışmayacak. Eğer sizin de Google Play markette yayınlanmış ve Multiplayer
+API kullanan bir oyununuz varsa bu tarihten itibaren çalışmamaya başlayabilir.
+</p>
+
+<p>
+Neyse ki bazen Google bir taraftan alırken bir taraftan da yeni alternatifler
+koyabiliyor. Bu hafta içerisinde Google Cloud tarafında oyun yönetimi için
+<a href="https://cloud.google.com/blog/products/gaming/introducing-google-cloud-game-servers">yeni bir çözüm tanıtıldı</a>: <a href="https://cloud.google.com/game-servers">Game Servers</a>. Henüz "beta" etiketiyle sunuluyor
+fakat önümüzdeki dönemlerde stabil bir sürüme de kavuşacaktır.
+</p>
+</div>
+</div>
+<div id="outline-container-org708a6fa" class="outline-2">
+<h2 id="org708a6fa"><span class="section-number-2">5</span> GitHub Desktop uygulamasının 2.4 <a href="https://github.blog/2020-03-25-github-desktop-2-4-introduces-proxy-support-and-issue-creation/">sürümü yayınlandı</a></h2>
+<div class="outline-text-2" id="text-5">
+
+<div class="figure">
+<p><img src="gorseller/github-desktop-2.4.png" alt="github-desktop-2.4.png" height="350" />
+</p>
+</div>
+
+<p>
+GitHub'ın henüz sadece Windows ve Mac işletim sistemlerini destekleyen
+masaüstü yazılımı 2.4 sürümüne ulaştı. Bu sürümle birlikte eklenen bazı
+özellikler şu şekilde:
+</p>
+
+<ul class="org-ul">
+<li><b>Proxy desteği</b>: Artık GitHub Desktop uygulamasının internetle olan
+bağlantısını bir proxy üzerinden geçirip kullanabileceğiz.</li>
+<li><b>Issue oluşturmak için kısayol</b>: Repository menüsü altına "Create Issue on
+GitHub" seçeneği eklendi ve tıkladığınızda varsayılan tarayıcınız üzerinde
+ilgili deponun issue oluşturma sayfasını açıyor.</li>
+<li><b>Koyu tema özelliği betadan çıktı</b>: Çeşitli testler ve geri dönüşlerden
+sonra iyileştirilen uygulamanın koyu tema modu sonunda beta'dan çıktı ve
+herkese açıldı. Keşke GitHub'ın web arayüzüne de gelse koyu tema özelliği
+ya da bu uygulamanın GNU/Linux dağıtımları için olan sürümünü çıkarsınlar o
+da uyar bana, gece karanlıkta çalışırken GitHub'ı açınca far görmüş tavşan
+gibi kalmaktan bıktım! Zaten olmaması ayrı bir saçmalık. Çoğunlukla
+geliştiricilerin kullandığı bir web sitesinde neden koyu tema özelliği
+olmaz gerçekten anlamak çok güç.</li>
+</ul>
+
+<p>
+Uygulamayı <a href="https://desktop.github.com/">bu adres üzerinden indirebilirsiniz</a>.
+</p>
+</div>
+</div>
+<div id="outline-container-org704b68c" class="outline-2">
+<h2 id="org704b68c"><span class="section-number-2">6</span> Diğer Haberler</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>GitHub, COVID-19 salgınıyla ilgili proje geliştirmek isteyen geliştiriciler
+için rehber niteliğinde <a href="https://github.blog/2020-03-23-open-collaboration-on-covid-19/">bir blog yazısı yayınladı</a>.</li>
+<li>GitHub Şubat ayı sonlarında yaşanan kesintilerle ilgili <a href="https://github.blog/2020-03-26-february-service-disruptions-post-incident-analysis/">analiz yayınlandı</a>.</li>
+<li>GitLab, IPv6 <a href="https://gitlab.com/gitlab-com/gl-infra/infrastructure/-/issues/645#note_313218618">desteğini tamamlandı</a>.</li>
+<li>Spotify, <a href="https://developer.spotify.com/community/news/2020/03/20/introducing-podcasts-api/">yeni Podcast API'sini duyurdu</a>.</li>
+<li>.NET Core Mart Güncellemeleri yayınlandı:
+<ul class="org-ul">
+<li><a href="https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1.3/3.1.3.md">.NET Core 3.1.3</a></li>
+<li><a href="https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1.17/2.1.17.md">.NET Core 2.1.17</a></li>
+</ul></li>
+<li>Microsoft Visual C/C++ için uyumlu preprocessor <a href="https://devblogs.microsoft.com/cppblog/announcing-full-support-for-a-c-c-conformant-preprocessor-in-msvc/">desteği duyuruldu</a>.</li>
+<li>COVID-19 Global Hackathon 1.0 <a href="https://covid-global-hackathon.devpost.com/">için kayıtlar başladı</a>.</li>
+<li>LLVM 10.0.0 <a href="http://lists.llvm.org/pipermail/llvm-announce/2020-March/000087.html">yayınlandı</a>.</li>
+<li>Swift programlama dilinin 5.2 <a href="https://swift.org/blog/swift-5-2-released/">sürümü yayınlandı</a>.</li>
+<li>Liberica JDK 14 <a href="https://bell-sw.com/announcements/2020/03/18/Liberica-JDK-14/">sürümü yayınlandı</a>.</li>
+<li>Kubernetes 1.18 <a href="https://kubernetes.io/blog/2020/03/25/kubernetes-1-18-release-announcement/">sürümü yayınlandı</a>.</li>
+<li>Angular kütüphanesinin 9.1.0 <a href="https://github.com/angular/angular/releases/tag/9.1.0">sürümü yayınlandı</a>.</li>
+<li>Kafka-on-Pulsar projesi <a href="https://streamnative.io/blog/tech/2020-03-24-bring-native-kafka-protocol-support-to-apache-pulsar/">duyuruldu</a>. <a href="https://github.com/streamnative/kop">GitHub Deposu</a></li>
+<li>Cloud için güvenlik aracı Panther <a href="https://blog.runpanther.io/panther-v1-open-source-siem/">açık kaynak olarak tanıtıldı</a>. <a href="https://github.com/panther-labs/panther">GitHub
+Deposu</a></li>
+<li>GraphQL için güvenlik testi araco InQL Scanner <a href="https://blog.doyensec.com/2020/03/26/graphql-scanner.html">açık kaynak olarak tanıtıldı</a>.
+<a href="https://github.com/doyensec/inql">GitHub Deposu</a></li>
+<li>OpenAPIGenerator 4.3.0 <a href="https://github.com/OpenAPITools/openapi-generator/releases/tag/v4.3.0">sürümü yayınlandı</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1e32e6e" class="outline-2">
+<h2 id="org1e32e6e"><span class="section-number-2">7</span> Lisans</h2>
+<div class="outline-text-2" id="text-7">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="../../../img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+<a href="yazilim-gundemi-2020-12.html">Yazılım Gündemi - 2020/12</a> yazısı <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a> (CC BY-NC-SA 4.0)
+ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 29 Mart 2020</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 22:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

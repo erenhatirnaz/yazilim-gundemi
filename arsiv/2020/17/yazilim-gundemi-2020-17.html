@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 22:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi - 2020/17</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi - 2020/17
+<br />
+<span class="subtitle">27 Nisan - 3 Mayıs 2020</span>
+</h1>
+<div id="table-of-contents">
+<h2>İçindekiler</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org76e0962">1. Lise öğrencilerine yönelik uluslararası yazılım eğitimleri erişime açıldı</a></li>
+<li><a href="#org384668e">2. Visual Studio Online hayatına artık Visual Studio Codespaces olarak devam edecek</a></li>
+<li><a href="#org4a6076a">3. Microsoft, Rust/WinRT ön izleme sürümünü tanıttı</a></li>
+<li><a href="#orgd26d103">4. Chrome Web Store, Geliştirici Programı Politikalarını güncelledi</a></li>
+<li><a href="#org3ee13d4">5. TypeScript 3.9 RC sürümü yayınlandı</a>
+<ul>
+<li><a href="#org1f2e807">5.1. <code>// @ts-expect-error</code> yorum satırı Pull Request Sayfası</a></li>
+</ul>
+</li>
+<li><a href="#orgdd4d2ca">6. SourceHut project hub duyuruldu</a></li>
+<li><a href="#org8f4d69d">7. Yaklaşan Online Etkinlikler #EvdeKal</a></li>
+<li><a href="#org11e5858">8. Diğer Haberler</a></li>
+<li><a href="#org07d8e9a">9. Lisans</a></li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gundemi-banner.png" alt="yazilim-gundemi-banner.png" />
+</p>
+</div>
+
+<div class="org-center">
+<p>
+<a href="../16/yazilim-gundemi-2020-16.html">&lt; Önceki Gündem</a> | <b>27 Nisan - 3 Mayıs 2020</b> | <a href="../18/yazilim-gundemi-2020-18.html">Sonraki Gündem &gt;</a>
+</p>
+
+<p>
+<a href="https://teknoseyir.com/blog/yazilim-gundemi-2020-17">TeknoSeyir'de Oku</a>
+</p>
+</div>
+
+<div id="outline-container-org76e0962" class="outline-2">
+<h2 id="org76e0962"><span class="section-number-2">1</span> Lise öğrencilerine yönelik uluslararası <a href="http://meb.gov.tr/lise-ogrencilerine-yonelik-uluslararasi-yazilim-egitimleri-erisime-acildi/haber/20834/tr">yazılım eğitimleri erişime açıldı</a></h2>
+<div class="outline-text-2" id="text-1">
+
+<div class="figure">
+<p><img src="gorseller/meb-yazilim-egitim.png" alt="meb-yazilim-egitim.png" />
+</p>
+</div>
+
+<p>
+Milli Eğitim Bakanlığının web sitesinde bugün yayınlanan duyuruya göre zaten
+öğretmenler için devam etmekte olan bazı yazılım geliştirme eğitimleri, lise
+öğrencileri için de erişime açılmış.
+</p>
+
+<blockquote>
+<p>
+"Öğrencilerimiz için başlatılan bu eğitimlere, Android mobil uygulama
+geliştirmek için gerekli teorik bilgiler ile programlama dillerini
+öğrenecekleri ve bol bol pratik yaparak eğlenceli ve öğretici uygulamalar
+yazacakları üç yeni eğitim daha eklendi." bilgisini veren Selçuk, şunları
+kaydetti: "Google iş birliğinde 'Flutter ile Yazılım Geliştirme' ve 'Kotlin
+ile Yazılım Geliştirme' android uygulama eğitimleri, Öğretmen Yetiştirme ve
+Geliştirme Genel Müdürlüğü Youtube kanalı üzerinden tüm öğrenci ve
+öğretmenlerin erişimine açıldı. Google ve Cisco iş birliğinde hazırlanan bu
+programlarla öğrencilerin mobil uygulama oluşturma, yapay zeka, gömülü
+sistemler, robotik, big data konusundaki bilgi ve becerilerinin artırılmasını
+hedefliyoruz."
+</p>
+</blockquote>
+
+<p>
+Öğretmen Yetiştirme ve Geliştirme Genel Müdürlüğünün YouTube Kanalındaki
+yazılım geliştirme videolarını içeren oynatma listelerine aşağıdaki
+bağlantılardan ulaşabilirsiniz:
+</p>
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/playlist?list=PLVR0OGiP4Ky_x69HfEbrhlpbGUvpQ3_JE">Android Uygulamaları - Kotlin</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLVR0OGiP4Ky9VQUSthzimF-BqeBp1YWcU">Android Uygulamaları - Flutter</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLVR0OGiP4Ky9RKQvi_ILDN-lmmWxldoa0">Siber Güvenlik</a></li>
+</ul>
+
+<p>
+Ayrıca Cisco tarafından sertifikalı öğretmenler de Python programlama dili
+için eğitimler verecekmiş fakat ilgili YouTube kanalında o eğitimleri
+bulamadım. Sanırım henüz yayınlanmamış.
+</p>
+
+<p>
+"Delphi eğitimi" olayın sonra (bkz: <a href="../04/yazilim-gundemi-2020-04.html">Yazılım Gündemi - 2020/04</a>) bence güzel bir
+gelişme bu. Elbette sadece internet üzerinden videolarla olacak iş değil,
+farklı eğitimsel içeriklerle ve pratiklerle de desteklenmeli ama başlangıç
+için güzel bir adım. Video sayıları henüz az gözüküyor ama anladığım kadarıyla
+hepsini birden paylaşmamışlar, her güne ayrı video şeklinde yayınlıyorlar.
+İlgili arkadaşlar yukarıdaki bağlantıları takip edebilirler ya da çevresindeki
+lise öğrencilerine tavsiye edebilirler.
+</p>
+</div>
+</div>
+<div id="outline-container-org384668e" class="outline-2">
+<h2 id="org384668e"><span class="section-number-2">2</span> Visual Studio Online hayatına artık Visual Studio Codespaces <a href="https://devblogs.microsoft.com/visualstudio/introducing-visual-studio-codespaces/#lower-price">olarak devam edecek</a></h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Geçtiğimiz senenin yazılım gündemi yazılarının birinde (bkz: <a href="../../2019/yazilim-gundemi-17.html">Yazılım Gündemi -
+17</a>) Microsoft'un "Cloud Geliştirme" çözümü olan Visual Studio Online'ın
+tanıtıldığından bahsetmiştim. "Cloud Geliştirme" ortamları giderek daha da
+popülerleşirken Microsoft'da bu hizmetinin ismini değiştirdi ve fiyatlarını da
+aşağıya çekti.
+</p>
+
+<p>
+Kasım ayından bu yana Microsoft aldığı geri bildirimlerle birlikte çoğu
+kişinin yüksek özellikli geliştirme ortamlarına ihtiyaç duymadığını
+öğrenmişler ve hizmetlerine yeni bir paket eklemişler: Basic. Bu paketde 2
+sanal çekirdek, 4GB RAM ve 64GB SSD bulunuyor. Benim de üzerinde çalıştığım
+çoğu proje için yeterli bir paket fakat "cloud development" bana pek cazip
+gelmiyor. Güncellenen fiyat listesi işe şu şekilde:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" width="100%">
+<caption class="t-above"><span class="table-number">Tablo 1:</span> (*): Fiyat/Saat</caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Linux instance tipi</th>
+<th scope="col" class="org-left">Şimdiki fiyatı(*)</th>
+<th scope="col" class="org-left">Yeni Fiyat(*)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Basic (2 çekirdek, 4GB RAM</td>
+<td class="org-left">$0.24</td>
+<td class="org-left">$0.08</td>
+</tr>
+
+<tr>
+<td class="org-left">Standard (4 çekirdek, 8GB RAM)</td>
+<td class="org-left">$0.45</td>
+<td class="org-left">$0.17</td>
+</tr>
+
+<tr>
+<td class="org-left">Premium (8 çekirdek, 16GB RAM)</td>
+<td class="org-left">$0.87</td>
+<td class="org-left">$0.34</td>
+</tr>
+</tbody>
+</table>
+<p>
+Fakat yeni fiyatlar hemen yürülüğe girmiyor. Microsoft'un 19 Mayıs'da
+düzenleyeceği sanal Build 2020 etkinliğinden sonra yeni fiyatlarla
+kullanılmaya devam edilebilecek.
+</p>
+
+<p>
+Sıkça soruyorum ama konusu açılmışken yine sorayım: Geliştirme ortamınızı
+"cloud development" olarak güncellemeyi düşünüyor musunuz? "Cloud Development"
+olayına bakışınız nasıl? Yorumlar bölümünde konuşalım.
+</p>
+</div>
+</div>
+<div id="outline-container-org4a6076a" class="outline-2">
+<h2 id="org4a6076a"><span class="section-number-2">3</span> Microsoft, Rust/WinRT ön izleme <a href="https://blogs.windows.com/windowsdeveloper/2020/04/30/rust-winrt-public-preview/">sürümünü tanıttı</a></h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Geçtiğimiz yazılım gündemi yazılarında detaylıca değindiğim konular arasında
+olmasa da Microsoft'un Rust programlama diline olan ilgiliyle alakalı
+haberleri "Diğer Haberler" bölümü altında paylaşmıştım. <a href="https://www.rust-lang.org/tr/">Rust</a>, Mozilla
+tarafından geliştirilen güvenlik ve performans odaklı bir programla dili ve
+popülaritesi de gün geçtikçe artmaya devam ediyor. Bu hafta ise Microsoft,
+Windows için Rust ile uygulama geliştirmeye yarayan WinRT kütüphanesinin ön
+izleme sürümünü <a href="https://github.com/microsoft/winrt-rs">GitHub üzerinde açık kaynak olarak paylaştı</a>.
+</p>
+
+<p>
+Şu anda güncel olarak C++/WinRT üzerinde desteklenen tüm API'ler Rust/WinRT
+üzerinde de destekleniyor ve kullanılabiliyor. Yani artık Rust ile Windows
+üzerinde masaüstü uygulamalardan, cihaz sürücülerine (driver) kadar birçok
+tipte yazılımı geliştirebileceğiz. Microsoft'da örnek olması açısından Rust
+ile bir mayın tarlası uygulaması geliştirmiş ve <a href="https://github.com/robmikh/minesweeper-rs">GitHub üzerinde kodlarını
+paylaşmış</a>.
+</p>
+
+<p>
+Henüz gerçek uygulamalarda kullanmak için çok erken bir ön izleme sürümü fakat
+yeni denizlere açılmayı seven geliştirici arkadaşların ilgisine sunmuş olayım.
+Konu hakkında daha detaylı bilgi ve örnekler için konu başlığına eklediğim
+bağlantıya tıklayabilirsiniz.
+</p>
+
+<p>
+Ayrıca Microsoft'un Rust'a olan ilgisi de devam edecek gibi gözüküyor. Çünkü
+Azure takımı da Rust dilini WebAssembly ile birlikte <a href="https://www.zdnet.com/article/microsoft-why-we-used-programming-language-rust-over-go-for-webassembly-on-kubernetes-app/">Kubernetes üzerinde test
+ediyormuş</a>. Önümüzdeki süreçlerde Microsoft'un Rust'a olan ilgisinin ne kadar
+süreceğini hep birlikte göreceğiz.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd26d103" class="outline-2">
+<h2 id="orgd26d103"><span class="section-number-2">4</span> Chrome Web Store, Geliştirici Programı Politikalarını <a href="https://blog.chromium.org/2020/04/keeping-spam-off-chrome-web-store.html">güncelledi</a></h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Google tarafından geliştirilen Chrome web tarayıcısının eklenti mağazası olan
+Web Store'da eklenti yayınlarken geçerli olan kurallar bu hafta içerisinde
+güncellendi.
+</p>
+
+<p>
+Google, yollanan her eklentiyi markete eklemeden önce denetimden geçiriyor.
+Güvenlik vb. gibi konular düşünüldüğünde bu çok da normal bir süreç aslında
+fakat bazı geliştiriciler sürekli birbirinin benzeri uygulamaları göndererek
+bu süreç içerisindeki diğer eklentilerin incelenme sürelerini uzatıyorlarmış.
+Yani siz bir eklenti yapıp bunu markete ekletmek istediğinizde bunun için
+beklemeniz gereken süre uzuyor. Bu durumun önüne geçmek için Google'da
+politikalarını değiştirmeye yoluna gidiyor. Politikalardaki güncellemeler şu
+şekilde:
+</p>
+
+<ul class="org-ul">
+<li>Birbirinin aynısı deneyimleri ve fonksiyonları olan eklentiler artık
+yayınlanmayacak.</li>
+<li>Yanıltıcı, yanlış biçimlendirilmiş, açıklayıcı olmayan, alakasız, aşırı
+veya uyumsuz meta bilgileri olan eklentiler fakat bunlar sadece eklentinin
+açıklamasını kapsamıyor aynı zamanda eklentinin ismi, başlığı, ikonu, ekran
+görüntüleri ve promosyon görüntüleri de bu kurallara uymak zorunda.</li>
+<li>Geliştiriciler Chrome Web Store'daki eklentilerin sıralamalarını
+değiştirmeye yönelik hareketlerde bulunamazlar. Sahte incelemeler,
+eklentiyi otomatik indiren ve puanlayan botlar vb. şeyler.</li>
+<li>Sadece başka bir web sitesini, uygulamayı ya da temayı aktifleştirmeye
+yarayan eklentiler artık kabul edilmeyecek.</li>
+<li>Kullanıcılara sürekli spam olarak mesajlar, reklamlar, hedefli saldırılar
+(phishing), promosyon gönderen eklentiler yayınlanmayacak.</li>
+</ul>
+
+<p>
+Bu yeni politikların uygulanmasına 27 Ağustos 2020 tarihinde başlanacakmış.
+Eğer Chrome Web Store'da yayınlanmış bir eklentiniz varsa yeni politikaları
+ihlal edip etmediğinizi kontrol edin. Zira 27 Ağustos itibariyle bu kurallara
+uymayan tüm eklentiler marketten kaldırılacaklar.
+</p>
+
+<p>
+Daha fazla bilgi için konu başlığına eklediğim bağlantıya ya da Chromium
+takımının hazırladığı <a href="https://developer.chrome.com/webstore/spam-faq">Sıkça Sorulan Sorular sayfası</a>nı ziyaret edebilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-org3ee13d4" class="outline-2">
+<h2 id="org3ee13d4"><span class="section-number-2">5</span> TypeScript <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-3-9-rc/">3.9 RC sürümü yayınlandı</a></h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Microsoft tarafından geliştirilen, JavaScript'e derlenebilen tipli programlama
+dilin olan TypeScript, bu hafta içerisinde 3.9 Release Candidate sürümüne
+kavuştu. Açıkcası uzun bir zamandır front-end teknolojileri ile pek
+ilgilenmiyorum dolayısıyla bu haberi de "Diğer Haberler" kısmına taşımıştım ki
+son anda anlayabildiğim bir yeni özellik fark ettim. Hız iyileştirmeleri
+hakkında zaten fazla bilgi verilmiş, gidip kodları okumak gerekiyor. Editör
+iyileştirmelerini de programlama dilinin yapısıyla ilgili olmadığı için
+almadım. Öyleyse anladığım özelliği aktarayım size :).
+</p>
+</div>
+
+<div id="outline-container-org1f2e807" class="outline-3">
+<h3 id="org1f2e807"><span class="section-number-3">5.1</span> <code>// @ts-expect-error</code> yorum satırı <a href="https://github.com/microsoft/TypeScript/pull/36014">Pull Request Sayfası</a></h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+TypeScript kullanarak bir kütüphane yazıyor olduğunu düşünün ve şöyle bir
+fonksiyonunuz var:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-typescript"><span class="org-keyword">function</span> <span class="org-function-name">hadiBirSeylerOlsun</span>(<span class="org-variable-name">abc</span>: <span class="org-typescript-primitive">string</span>, <span class="org-variable-name">xyz</span>: <span class="org-typescript-primitive">string</span>) {
+    <span class="org-function-name">assert</span>(<span class="org-keyword">typeof</span> abc === <span class="org-string">"string"</span>);
+    <span class="org-function-name">assert</span>(<span class="org-keyword">typeof</span> xyz === <span class="org-string">"string"</span>);
+
+    <span class="org-comment-delimiter">// </span><span class="org-comment">bir &#351;eyler oluyor</span>
+}
+</pre>
+</div>
+<p>
+Bu fonksiyon iki tane <code>string</code> türünden değer kabul ediyor, biz TypeScript
+ile bu fonksiyonu kullanırken <code>string</code> dışında bir türden değişken
+gönderirsek TypeScript hata vererek derlenmeyecek, benzer şekilde bu
+fonksiyonu JavaScript tarafında kullanmaya çalışırsak da çeşitli hatalar
+görüyoruz. Bu durum için test yazmaya çalıştığımızda ise şöyle bir kod
+yazabiliriz:
+</p>
+<div class="org-src-container">
+<pre class="src src-javascript">expect(() =&gt; {
+  hadiBirSeylerOlsun(123, 456);
+}).toThrow();
+</pre>
+</div>
+<p>
+Fakat bu kod TypeScript'de derlenmeyecektir çünkü fonksiyona <code>string</code> dışında
+bir değer gönderdik. İşte bu durumun önlemek için fonksiyonumuzun hemen üst
+satırına <code>// @ts-expect-error</code> yorum satırını ekliyoruz ve artık TypeScript
+derleyicisi bu fonksiyonun çalıştırılmasıyla bir hata beklendiğini anlayacak
+ve bu satırın tip kontrolünü atlayacak.
+</p>
+
+<p>
+Bu iş için daha önceden <code>ts-ignore</code> ifadesi kullanılıyormuş sanırım fakat
+bazı durumlarda soruna yol açabildiği için bu özel durum için özel bir yorum
+satırı işaretleyicisi oluşturmuşlar.
+</p>
+
+<p>
+TypeScript 3.9 Release Candidate sürümü ile birlikte gelen diğer özellikler ve
+değişiklikler için konu başlığına eklediğim bağlantıya tıklayabilirsiniz.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgdd4d2ca" class="outline-2">
+<h2 id="orgdd4d2ca"><span class="section-number-2">6</span> SourceHut project hub <a href="https://sourcehut.org/blog/2020-04-30-the-sourcehut-hub-is-live/">duyuruldu</a></h2>
+<div class="outline-text-2" id="text-6">
+<p>
+<a href="https://sourcehut.org">SourceHut</a>, tıpkı diğer uzak git sunucuları (GitHub, GitLab vb.) gibi size git
+depolarınızı uzak bir sunucuda tutma imkanı veren bir web sitesi. Tabii ki
+artık modern yazılım geliştirme süreçlerinin birer parçası olan CI (Continuous
+Integration), proje yönetimi (issue takibi vb.), wiki, kod inceleme (code
+review) gibi farklı sorunlara da çözüm üreten servisleri mevcut. Yalnız
+SourceHut'ın diğerlerinden farklı bir yani var: sitede JavaScript
+kullanılmıyor, her şey sunucu tarafında çalışıyor. Ayrıca %100 açık kaynak ve
+özgür yazılım olarak bir kişi tarafından geliştiriliyor. İlk yazılım gündemi
+yazısında bu siteye gelen bir özellikten bahsetmiştim ve benim de çok
+beğendiğim bir servis olduğu için ne zamandır tekrar gündemde değinmek için
+bahane arıyordum :).
+</p>
+
+<p>
+SourceHut bu hafta içerisinde "project hub" ismini verdiği yeni servisini
+duyurdu. Bu yeni servisin ne işe yaradığını anlamak için öncesince
+SourceHut'ın arkasındaki UNIX felsefesini bilmek gerek. GNU/Linux
+kullananların da aşina olduğu üzere işletim sistemiyle birlikte gelen
+araçların çoğu "sadece bir şeyi yap ama en iyi yap" anlayışıyla geliştirilmiş
+araçlardır. Dolayısıyla elinizin altında birbiriyle kombinleyebileceğiniz bir
+sürü araç olmuş oluyor. Örneğin <code>cat</code> komutu sadece bir dosyanın içeriğini
+yazdırmaya yararken, <code>grep</code> komutu bir dosya içerisinde metin arama gibi
+işlemleri yapabiliyor. İşte SourceHut da bu yaklaşımla geliştiriliyor. Sadece
+bir işi en iyi şekilde yapmaya çalışan birçok alt servis var. Git depolarınızı
+barındırmak için <a href="https://git.sr.ht">git.sr.ht</a>, issue takibi vb. işler için <a href="https://todo.sr.ht">todo.sr.ht</a>, CI
+işlemleri için <a href="https://builds.sr.ht">builds.sr.ht</a> vb. birçok alt servis bulunmakta. Hepsini görmek
+için <a href="https://sourcehut.org">sourcehut.org</a> adresini ziyaret edebilirsiniz.
+</p>
+
+<p>
+Yani oluşturduğunuz bir git deposu sadece git deposu olma işini yapıyor. Issue
+takip vb. diğer işler için diğer alt servislerden oluşturmanız gerekiyor. İşte
+"project hub" ise bütün bu alt servisleri GitHub ve GitLab'dan alıştığımız
+gibi tek bir sayfada birleştiriyor. Fakat yanlış anlaşılmasın bu alt servisler
+birleşip tek hale gelmiyor, sadece bir projeye ait tüm alt kaynaklar bir
+sayfada toplanıyor, isterseniz tıklayarak o alt servisteki işlemlerinize
+gidebiliyorsunuz. Üstelik bir projeye istediğiniz kadar alt servis
+ekleyebiliyorsunuz, mesela bir uygulamanın Android ve iOS sürümlerini ayrı
+ayrı git depolarında tutuyorsanız onları da tek bir projeye
+ekleyebiliyorsunuz.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/sourcehut-project-hub.png" alt="sourcehut-project-hub.png" />
+</p>
+<p><span class="figure-number">Şekil 3: </span>Örnek için SourceHut'ın tüm alt servisleriyle birlikte kodlarını barındıran <a href="https://sr.ht/~sircmpwn/sourcehut/">bu proje sayfasını ziyaret edebilirsiniz</a>.</p>
+</div>
+
+<p>
+SourceHut dışından gelenler için böyle bir sayfanın olması çok önemliydi ve
+sonunda eklediler. Siz de benim gibi UNIX felsefesinden hoşlanan ve GNU/Linux
+araçları gibi basit ve sade araçları kullanmayı seviyorsanız mutlaka
+<a href="https://sourcehut.org">SourceHut</a>'a bir göz atın. Ayrıca tek kişi tarafından geliştirildiğini aklınıza
+getirerek bağış yapmayı da düşünebilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-org8f4d69d" class="outline-2">
+<h2 id="org8f4d69d"><span class="section-number-2">7</span> Yaklaşan Online Etkinlikler #EvdeKal</h2>
+<div class="outline-text-2" id="text-7">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" width="100%">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Etkinlik İsmi</th>
+<th scope="col" class="org-left">Tarihi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><a href="https://kommunity.com/tracikkaynak/events/acik-seminer-14-gun-nlp-101-dogal-dil-islemeye-giris-7194f676">Açık Seminer 14. Gün: NLP 101: Doğal Dil İşlemeye Giriş</a></td>
+<td class="org-left">5 Mayıs 14:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/akademi/events/network-uzerinden-tehdit-avciligi-komuta-kontrol-baglantisinin-tespiti-f6ca2346">Network Üzerinden Tehdit Avcılığı - Komuta Kontrol</a></td>
+<td class="org-left">5 Mayıs 16:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/tracikkaynak/events/acik-seminer-15-gun-bankacilik-finans-alaninda-dogal-dil-isleme-d9e0d4a5">Açık Seminer 15. Gün: Bankacılık &amp; Finans Alanında Doğal Dil İşleme</a></td>
+<td class="org-left">6 Mayıs 14:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/cloud-and-serverless-turkey/events/ramazan-ozel-4-aws-bulut-altyapisi-bilesenleri-8fe02b6e">AWS Bulut Altyapısı Bileşenleri</a></td>
+<td class="org-left">6 Mayıs 23:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/cozumpark/events/siber-koruma-cozumleri-webinari-4effd358">Siber Koruma Çözümleri Webinarı</a></td>
+<td class="org-left">7 Mayıs 14:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/tracikkaynak/events/acik-seminer-16-gun-bilissel-hizmetler-ile-turkce-chatbot-olusturma-df205099">Açık Seminer 16. Gün: Bilişsel Hizmetler ile Türkçe Chatbot</a></td>
+<td class="org-left">7 Mayıs 14:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/devops-turkiye/events/high-available-kubernetes-clusters-with-kops-e2728634">High Available Kubernetes clusters with KOPS</a></td>
+<td class="org-left">7 Mayıs 22:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/tracikkaynak/events/acik-seminer-17-gun-dogal-dil-isleme-urunleri-ve-kullanim-alanlari-c9c008c2">Açık Seminer 17. Gün: Doğal Dil İşleme Ürünleri ve Kullanım Alanları</a></td>
+<td class="org-left">8 Mayıs 14:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/dotnet-istanbul/events/net-core-grpc-servislerini-tarayici-uygulamalarindan-tuketmek-16e940d0">.NET Core gRPC Servislerini Tarayıcı Uygulamalarından Tüketmek</a></td>
+<td class="org-left">8 Mayıs 22:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/devnot-yazilimci-bulusmalari/events/react-native-vs-flutter-02a9d600">React Native vs. Flutter</a></td>
+<td class="org-left">9 Mayıs 22:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/cloud-and-serverless-turkey/events/ramazan-ozel-5-bulutta-ve-kendi-sunucularinizda-kubernetes-dfec6279">Bulutta ve kendi sunucularınızda Kubernetes</a></td>
+<td class="org-left">9 Mayıs 23:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/cloud-and-serverless-turkey/events/kubernetes-hands-on-2-what-is-deployment-pod-and-service-06b07bda">Kubernetes Hands-On no.2: What is deployment, pod and service?</a></td>
+<td class="org-left">10 Mayıs 13:30</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org11e5858" class="outline-2">
+<h2 id="org11e5858"><span class="section-number-2">8</span> Diğer Haberler</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li><a href="https://www.jetbrains.com/academy/">JetBrains Academy</a>, COVID-19 pandemisi boyunca <a href="https://techcrunch.com/2020/05/01/jetbrains-academy-for-learning-code-launches-for-free-during-covid-19-pandemic/">ücretsiz oldu</a>.</li>
+<li>Facebook Yapay Zeka takımı chat botlarıyla ilgili <a href="https://ai.facebook.com/blog/state-of-the-art-open-source-chatbot">detaylı blog yazısı
+yayınladı</a>.</li>
+<li>Microsoft, yeni bir meta programlama <a href="https://devblogs.microsoft.com/dotnet/introducing-c-source-generators/">aracı tanıttı: C# Source Generators</a>.</li>
+<li>DigitalOcean özel ağlar için <a href="https://blog.digitalocean.com/vpc-trust-platform/">yeni hizmetini duyurdu</a>: <a href="https://www.digitalocean.com/products/vpc">Virtual Private Cloud</a>.</li>
+<li>Google Cloud, yeni metadata yönetim <a href="https://cloud.google.com/blog/products/data-analytics/data-catalog-metadata-management-now-generally-available">servisini genel erişilebilir yaptı</a>: <a href="https://cloud.google.com/data-catalog">Data
+Catalog</a></li>
+<li>Determined AI, derin öğrenme platformunu <a href="https://determined.ai/blog/ai-infrastructure-for-everyone/">açık kaynak hale getirdi</a>. <a href="https://github.com/determined-ai/determined/">GitHub
+Deposu</a></li>
+<li>JetBrains, WebStorm IDE'sinin <a href="https://blog.jetbrains.com/webstorm/2020/04/webstorm-2020-1-1">2020.1.1 sürümünü yayınladı</a>.</li>
+<li>Yeni bir API tasarlama aracı <a href="https://insomnia.rest/blog/introducing-designer">açık kaynak olarak duyuruldu</a>: <a href="https://insomnia.rest/products/designer/">Insomnia
+Designer</a>. <a href="https://github.com/Kong/insomnia">GitHub Deposu</a></li>
+<li>Amazon Web Services yeni veri merkezini açtı: <a href="https://aws.amazon.com/about-aws/whats-new/2020/04/announcing-the-new-aws-europe-milan-region/">Europe (Milan)</a>.</li>
+<li><a href="https://www.khronos.org/news/press/khronos-group-releases-opencl-3.0">OpenCL 3.0 sürümü yayınlandı</a>.</li>
+<li>Redis <a href="http://antirez.com/news/132">6.0.0 sürümü yayınlandı</a>.</li>
+<li>Açık kaynak proje yönetim sistemi Leantime <a href="https://leantime.io/2020/04/29/leantime-v2-1-released-%25F0%259F%259A%2580%25F0%259F%259A%2580%25F0%259F%259A%2580/">v2.1 sürümünü yayınladı</a>.</li>
+<li>VueJS <a href="https://github.com/vuejs/vue-next/releases/tag/v3.0.0-beta.7">v3.0.0 Beta 7 sürümü yayınlandı</a>.</li>
+<li>D programlama dilinin <a href="https://dlang.org/changelog/2.092.0.html">2.092.0 Beta sürümü yayınlandı</a>.</li>
+<li>AMD Programcı Kılavuzu <a href="https://www.phoronix.com/scan.php?page=news_item&amp;px=AMD-PRM-PCID-PKEY">güncellendi</a>.</li>
+<li>TypeScript için fonksiyonel programlama kütüphanesi Pruify, <a href="https://gigobyte.github.io/purify/changelog/0.15/">v0.15 sürümünü
+yayınladı</a>. <a href="https://github.com/gigobyte/purify">GitHub Deposu</a></li>
+<li>Microsoft, Shader Conductor <a href="https://www.phoronix.com/scan.php?page=news_item&amp;px=Microsoft-Shader-Conductor-0.3">0.3 sürümünü yayınladı</a>. <a href="https://github.com/microsoft/ShaderConductor">GitHub Deposu</a></li>
+<li>XMake <a href="https://tboox.org/2020/04/27/xmake-update-v2.3.3/">v2.3.3 sürümü yayınlandı</a>. <a href="https://github.com/xmake-io/xmake">GitHub Deposu</a></li>
+<li>odo <a href="https://github.com/openshift/odo/releases/tag/v1.2.0">v1.2.0 sürümü yayınlandı</a>.</li>
+<li>NeutralinoJS <a href="https://github.com/neutralinojs/neutralinojs/releases/tag/v1.4.0">v1.4.0 yayınlandı</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org07d8e9a" class="outline-2">
+<h2 id="org07d8e9a"><span class="section-number-2">9</span> Lisans</h2>
+<div class="outline-text-2" id="text-9">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="../../../img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+<a href="yazilim-gundemi-2020-17.html">Yazılım Gündemi - 2020/17</a> yazısı <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a> (CC BY-NC-SA 4.0)
+ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 3 Mayıs 2020</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 22:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

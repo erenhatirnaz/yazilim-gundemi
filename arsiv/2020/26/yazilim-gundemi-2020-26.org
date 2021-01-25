@@ -1,0 +1,51 @@
+#+TITLE: Yazılım Gündemi - 2020/26 [TASLAK]
+#+SUBTITLE: 29 Haziran - 5 Temmuz 2020 (Yayınlanmadı)
+#+AUTHOR: Eren Hatırnaz
+#+OPTIONS: ^:nil, toc:nil, num:nil
+#+LANGUAGE: tr
+#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=black, filecolor=red, urlcolor=blue}
+#+LATEX_HEADER: \usepackage[turkish]{babel}
+#+HTML_HEAD: <link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+#+LATEX: \shorthandoff{=}
+
+[[file:gorseller/yazilim-gundemi-banner.png]]
+
+#+BEGIN_CENTER
+[[file:../25/yazilim-gundemi-2020-25.org][< Önceki Gündem]] | *29 Haziran - 5 Temmuz 2020* |
+#+END_CENTER
+
+**Bu sayfa 2020 yılında yazmakta olduğum son Yazılım Gündemi yazısının taslak
+halidir.** **Bu gündemde değerlendirilecek olan haberler aşağıdaki listedeki
+bağlantılardır.** **Yazılım Gündemlerine ara vermeye karar verdiğim için bu şekilde
+kaldı ama yine de bakmak isteyenler olabilir diye paylaşmak istedim.**
+
+* Haberler
+	- [[https://about.gitlab.com/blog/2020/06/29/welcome-kde/][Why the KDE community is #MovingToGitlab | GitLab]]
+	- [[https://godotengine.org/article/godot-40-gets-sdf-based-real-time-global-illumination][Godot Engine - Godot 4.0 gets SDF based real-time global illumination]]
+	- [[http://www.lua.org/manual/5.4/readme.html#changes][Lua 5.4 readme]]
+	- [[https://github.com/vuejs/vue-next/releases/tag/v3.0.0-beta.16][Release v3.0.0-beta.16 · vuejs/vue-next · GitHub]]
+	- [[http://antirez.com/news/133][The end of the Redis adventure - <antirez>]]
+	- [[https://twitter.com/glenmaddern/status/1278252319646367744]]
+	- [[https://codefund.io/][CodeFund]]
+	- [[https://security.googleblog.com/2020/06/system-hardening-in-android-11.html][Google Online Security Blog: System hardening in Android 11]]
+	- [[https://aws.amazon.com/tr/blogs/aws/aws-app2container-a-new-containerizing-tool-for-java-and-asp-net-applications/][AWS App2Container – A New Containerizing Tool for Java and .NET Applications ...]]
+	- [[https://github.blog/2020-07-01-launching-docs-github-com/][Launching docs.github.com - The GitHub Blog]]
+	- [[https://discourse.mozilla.org/t/common-voice-dataset-release-mid-year-2020/62938][Common Voice Dataset Release - Mid Year 2020 - Common Voice - Mozilla Discourse]]
+	- [[https://www.infoq.com/news/2020/07/mandrel-graalvm/][RedHat Mandrel Makes Java Native]]
+	- [[https://discourse.julialang.org/t/pkg-jl-telemetry-should-be-opt-in/42209][Pkg.jl telemetry should be opt-in - Internals & Design - JuliaLang]]
+	- [[https://old.reddit.com/r/assholedesign/comments/hj57fv/apple_forcing_app_developers_to_implement/][Apple forcing app developers to implement auto-billing after free trial : ass...]]
+	- [[https://github.com/duckduckgo/Android/issues/527][duckduckgo/Android#527 Domains visited get leaked to DDG servers]]
+	- [[https://devblogs.microsoft.com/python/announcing-pylance-fast-feature-rich-language-support-for-python-in-visual-studio-code/][Announcing Pylance: Fast, feature-rich language support for Python in Visual ...]]
+	- [[https://aws.amazon.com/tr/blogs/aws/find-your-most-expensive-lines-of-code-amazon-codeguru-is-now-generally-available/][Find Your Most Expensive Lines of Code – Amazon CodeGuru Is Now Generally Ava...]]
+	- [[https://www.theregister.com/2020/07/01/mit_dataset_removed/][MIT apologizes, permanently pulls offline huge dataset that taught AI systems...]]
+	- [[https://wiki.php.net/rfc/match_expression_v2][PHP: rfc:match_expression_v2]]
+* Lisans
+  #+BEGIN_CENTER
+  #+ATTR_HTML: :height 75
+  #+ATTR_LATEX: :height 1.5cm
+  [[file:../../../img/CC_BY-NC-SA_4.0.png]]
+
+  [[file:yazilim-gundemi-2020-26.org][Yazılım Gündemi - 2020/26]] yazısı [[https://erenhatirnaz.github.io][Eren Hatırnaz]] tarafından [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Creative Commons
+  Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı]] (CC BY-NC-SA 4.0)
+  ile lisanslanmıştır.
+  #+END_CENTER

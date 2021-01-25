@@ -1,0 +1,181 @@
+#+TITLE: Yazılım Gündemi - 2020/09
+#+SUBTITLE: 2-8 Mart 2020
+#+AUTHOR: Eren Hatırnaz
+#+DATE: 8 Mart 2020
+#+OPTIONS: ^:nil
+#+LANGUAGE: tr
+#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=black, filecolor=red, urlcolor=blue}
+#+LATEX_HEADER: \usepackage[turkish]{babel}
+#+HTML_HEAD: <link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+#+LATEX: \shorthandoff{=}
+
+[[file:gorseller/yazilim-gundemi-banner.png]]
+
+#+BEGIN_CENTER
+[[file:../08/yazilim-gundemi-2020-08.org][< Önceki Gündem]] | *2-8 Mart 2020* | [[file:../10/yazilim-gundemi-2020-10.org][Sonraki Gündem >]]
+
+[[https://teknoseyir.com/blog/yazilim-gundemi-2020-09][TeknoSeyir'de Oku]]
+#+END_CENTER
+
+* Korona virüs yazılım şirketlerini [[https://www.theverge.com/2020/3/5/21166686/coronavirus-amazon-google-facebook-microsoft-twitter-seattle-staff-remote-work][uzaktan çalışmaya zorluyor]]
+	Uzun bir zamandır tüm dünyanın gündemi, gün geçtikçe daha da fazla ülkede
+	görülmeye başlayan "Korona" virüsü. Elbette teknoloji ve dolayısıyla yazılım
+	sektörü de bu gündemden payını aldı. Amerika Birleşik Devletlerinde de vaka
+	sayılarının artmasıyla birlikte Microsoft, Facebook, Twitter ve Google gibi
+	büyük firmalar çalışanlarına "ofise gelmeyin uzaktan çalışabilirsiniz" demeye
+	başladı. Aynı zamanda sektörümüzle ilgili konferansların da çoğu ya iptal
+	edildi ya da çok ileri bir tarihe ertelendi.
+
+	Her ne kadar kötü bir olay nedeniyle de olsa firmaların artık uzaktan
+	çalışmaya sıcak bakması bence iyi bir gelişme. Ülkemizde pek fazla yaygın
+	olmasa da dünyada pek çok şirket uzaktan çalışma imkanını sunuyor zaten ama bu
+	olaylarla birlikte sayıları geçici olarak artsa bile faydasını gören
+	şirketlerin uzun dönem için de uzaktan çalışma imkanlarını
+	değerlendireceklerini düşünüyorum. Sadece şirket ve çalışanlar için değil,
+	şehir için de faydaları söz konusu olabilir. Nitekim Amazon ve Microsoft,
+	Seattle'daki ofisleri kapatmalarından dolayı Seattle şehrinin [[https://www.geekwire.com/2020/seattle-morning-traffic-disappears-amazon-microsoft-others-enforce-remote-work-policies/][trafiğinde gözle
+	görülür azalmalar olmuş]]. Aynı şekilde konferans ve etkinliklerin de uzaktan
+	yapılacak olması, şirketlere ve organizasyonlara farklı bakış açıları
+	kazandıracaktır.
+* Apple, App Store uygulama değerlendirme [[https://www.developer-tech.com/news/2020/mar/05/apple-ios-developers-send-ads-push-notifications/][rehberini güncelledi]]
+	[[https://www.developer-tech.com/][DeveloperTech]] sitesinin bu hafta yayınlandığı habere göre Apple, kendi
+	uygulama mağazası olan App Store'a uygulama gönderirken dikkat edilmesi
+	gerekenleri anlattığı dokümanı güncelledi.
+
+	Bu güncelleme ile birlikte artık geliştiriciler, bildirimleri kullanarak
+	kullanıcılara reklam içerikli mesajlar gönderebilecekler. Elbette
+	geliştiricilerin öncelikle bunun için kullanıcıdan izin almaları ve
+	kullanıcıya bu özelliği kapatma imkanının sunulması da gerekiyor.
+
+	Bir diğer önemli değişiklik ise üçüncü parti uygulamalar ve kullanıcı girişi
+	işlemlerini etkiliyor. Eğer uygulamanızda "Google ile giriş yap", "Facebook
+	ile giriş yap" gibi özellikleri sunuyorsanız, artık onların yanına [[https://developer.apple.com/app-store/review/guidelines/#sign-in-with-apple][bir tane
+	daha eklemeniz gerekiyor]]: "Apple ile giriş yap". Bu özelliği Apple geçtiğimiz
+	aylardaki bir etkinliğinde duyurmuştu ve gizlilik odaklı bir giriş sistemi
+	olduğunu söylemişti. Elbette bazı uygulamalar için ayrıcalık tanınmış durumda.
+	Uygulamanız bu listedeki maddeler ile uyumluysa, bu özelliği eklemek zorunda
+	değilsiniz:
+
+	 * Eğer uygulamanız sadece kendi şirketinizin kullanıcı girişi sistemini kullanıyorsa,
+	 * Eğer uygulamanız kullanıcıların var olan eğitim ya da kurumsal hesaplarıyla
+     giriş yapabileceği eğitim için geliştirilmiş ya da kurumsal bir uygulama
+     ise,
+	 * Eğer uygulamanız bir devletin vatandaş tanımlama sistemlerini (e-devlet
+     gibi) kullanıyorsa,
+	 * Eğer uygulamanız sadece ilgili servisi kullanmaya yarayan bir istemci ise,
+
+	"Apple ile giriş yap" butonu eklemenize gerek yok. Bazı maddeleri iyi
+	çevirememiş olabilirim, bu nedenle en iyisi bir yanlış anlaşılmaya mahal
+	vermemek adına [[https://developer.apple.com/app-store/review/guidelines/#sign-in-with-apple][dokümanın ilgili kısmına bir göz atın]] :).
+* Laravel 7 [[https://laravel-news.com/laravel7][sürümü yayınlandı]]
+	PHP ile web uygulamaları geliştirmeye yarayan popüler framework sistemlerinden
+	olan Laravel'in bu hafta içerisinde 7 numaralı yeni büyük güncellemesi
+	yayınlandı. 3 Mart günü duyurulan bu sürüm, 3 Eylül 2020'ye kadar hata giderme
+	güncellemesi, 3 Mart 2021'e kadar ise güvenlik güncelleştirmeleri almaya devam
+	edecek. Bu sürümle birlikte gelen bazı özellikler ise şu şekilde:
+
+** Laravel Airlock
+	 Laravel'in içerisinde birçok konuda geliştiriciye kolaylıklar sağlayan alt
+	 kütüphaneler mevcut. Artık bunlara bir yenisi daha ekleniyor: Laravel
+	 Airlock. Kullanıcı girişi ve yetkilendirilmesi işlerini kolaylaştırıyor.
+	 Elbette bu versiyondan önce de Laravel bu konuda kolaylıkları olan bir
+	 framework idi fakat artık bu sistemin kendi bir adı var ve bazı ek özellikler
+	 de gelmiş. Örneğin artık bir kullanıcıya birden çok erişim anahtarı (TOKEN)
+	 tanımlayabilir ve bu erişim anahtarlarının kapsamını ve yapabileceklerini
+	 sınırlayabiliyoruz.
+** HTTP istemcisi
+	 Laravel, bu sürümle birlikte popüler PHP HTTP istemcilerinden biri olan
+	 [[https://github.com/guzzle/guzzle][Guzzle]] kütüphanesinin bazı parçalarını kendi içerisine ekledi. Artık web
+	 uygulamamız içerisinden başka uygulamalar ya da siteler ile etkileşime
+	 girerken daha zengin bir API'ye sahibiz. Örneğin bu şekilde bir POST isteği
+	 yapıp, cevabını da kolayla kullanıcıya gösterebiliriz.
+   #+ATTR_LATEX: :options frame=lines, linenos, label=PHP, startinline
+	 #+BEGIN_SRC php
+     use Illuminate\Support\Facades\Http;
+
+     $response = Http::withHeaders([
+         'X-First' => 'bir',
+         'X-Second' => 'iki'
+     ])->post('http://test.com/users', [
+         'name' => 'Eren',
+     ]);
+
+     return $response['id'];
+	 #+END_SRC
+
+	Bu sürümle birlikte gelen tüm özellik ve değişiklikler için [[https://laravel.com/docs/7.x/releases][bu sayfayı]] ziyaret
+	edebilirsiniz. Ayrıca Laravel 6'dan Laravel 7'ye geçmek için de [[https://laravel.com/docs/7.x/upgrade][bu güncelleme
+	rehberi]]nden faydalanabilirsiniz.
+* PowerShell 7.0 [[https://devblogs.microsoft.com/powershell/announcing-PowerShell-7-0/][sürümü yayınlandı]]
+	Microsoft'un geçtiğimiz senelerde platformlar-arası (cross-platform)
+	çalışabilir hale getirdiği PowerShell, bu hafta içerisinde yeni sürümü
+	yayınladı.
+
+	Bu sürüm ile birlikte diğer shell'lerde olan bazı yeni operatörler
+	PowerShell'e de geldi. Örneğin artık pipeline operatörleri ile uygulamaları
+	ardı arına çalıştırabilir (=&&=) ya da birinin çıktısını diğerine
+	yönlendirebilirsiniz (=||=). Ben GNU/Linux dağıtımı kullandığım için bash
+	üzerinden bir örnek vereceğim ama uygulamaların windows karşılıklarıyla
+	aynısını PowerShell 7 üzerinde siz de çalıştabilirsiniz.
+	#+BEGIN_SRC shell
+    wget http://ftp.linux.org.tr/linuxmint/iso/stable/19.3/linuxmint-19.3-cinnamon-64bit.iso && shutdown -h now
+	#+END_SRC
+	Yukarıdeki gibi bir komutu çalıştırarak önce ilgili dosyayı indirebilir,
+	ardından ise sisteminizi kapatabilirsiniz.
+
+	Yeni sürümle ilgili detaylı bilgiler ve güncelleme rehberi için konu başlığına
+	eklediğim bağlantıya tıklayabilirsiniz.
+* Yaklaşan Etkinlikler
+  #+ATTR_HTML: :width 100%
+  #+ATTR_LATEX: :environment longtable :align |p{8cm}|l|l|
+  |--------------------------------------------------------------------------+----------+---------------|
+  | Etkinlik İsmi                                                            | Yeri     | Tarihi        |
+  |--------------------------------------------------------------------------+----------+---------------|
+  | [[https://www.meetup.com/Open-Source-Analytics-Istanbul/events/269198806/][Deploy AI - Community Day]]                                                | Online   | 10 Mart 15:00 |
+  | [[https://kommunity.com/ngturkey/events/webinar-angular-9-ivy-scully-ve-test-harness-angular-turkey][Angular 9, Ivy, Scully ve Test Harness - Angular Turkey]]                  | Online   | 11 Mart 19:30 |
+  | [[https://www.meetup.com/bilisimtoplulugu/events/269127026/][C# Günleri]]                                                               | İstanbul | 12 Mart 11:00 |
+  | [[https://www.meetup.com/istanbul-yapay-zeka-toplulugu/events/269128397/][AI?!: Yapay Zekâda Pratik ve Teori]]                                       | İstanbul | 12 Mart 15:00 |
+  | [[https://www.meetup.com/laravelistanbul/events/269059351/][TDD API Development, the right way]]                                       | İstanbul | 12 Mart 19:00 |
+  | [[https://kommunity.com/btorgtr/events/devops-workshop-bilisim-kahvesi-lab][DevOps Workshop, Bilişim Kahvesi Lab]]                                     | İstanbul | 12 Mart 19:30 |
+  | [[https://www.meetup.com/Coffee-And-React-Native-%25C4%25B0stanbul/events/hhtdprybcfbsb/][Coffee and React Native]]                                                  | İstanbul | 14 Mart 11:00 |
+  | [[https://www.meetup.com/IzmirGophers/events/269152779/][HTML5 Canvas API ile 2D, Graph ve WebGL Uygulamalari ve Go ile HTTP2MQTT]] | İzmir    | 15 Mart 15:00 |
+  | [[https://www.meetup.com/bilisimtoplulugu/events/269153853/][Yapay Zeka ve Çalışma Alanları]]                                           | İstanbul | 16 Mart 13:30 |
+  | [[https://kommunity.com/turkey-openstack-meetup/events/openinfra-day-turkey][OpenInfra Day Turkey 2020]]                                                | İstanbul | 17 Mart 09:00 |
+  | [[https://www.meetup.com/Turkiye-Yapay-Zeka-%25C4%25B0nisiyatifi/events/xztxmrybcfbxb/][TRAI Meet-Up - no.32 İleri Algoritmalar]]                                  | İstanbul | 18 Mart 18:00 |
+  | [[https://kommunity.com/devops-turkiye/events/docker-7-yas-partisi][Docker 7. Yaş Partisi!]]                                                   | İstanbul | 18 Mart 18:45 |
+  | [[https://kommunity.com/software-craftsmanship-turkey/events/scturkey-meetup][Kendimize İlham Olabilmek (Software Craftsmanship Turkey)]]                | İstanbul | 18 Mart 19:00 |
+  | [[https://kommunity.com/cloud-and-serverless-turkey/events/azure-functions-on-kubernetes-istanbul][Azure Functions on Kubernetes]]                                            | İstanbul | 19 Mart 18:30 |
+  | [[https://www.meetup.com/Istanbul-Hackers/events/268972005/][İstanbul Coders Reunion]]                                                  | İstanbul | 19 Mart 19:00 |
+  | [[https://kommunity.com/setur/events/bir-fincan-dolusu-ufuk-acan-sohbetler-coffee-talks][Bir fincan dolusu, ufuk açan sohbetler: Coffee Talks]]                     | İstanbul | 20 Mart 10:30 |
+  | [[https://www.meetup.com/GDGAnkara/events/268276284/][Women Techmakers Ankara IWD'20]]                                           | Ankara   | 21 Mart 09:00 |
+  | [[https://www.meetup.com/ING-%25C4%25B0novasyon-Merkezi/events/269254711/][Python Öğren - Python'a 4 Saatte Başlangıç]]                               | İstanbul | 22 Mart 10:00 |
+  | [[https://www.meetup.com/ING-%25C4%25B0novasyon-Merkezi/events/269254823/][LearnDocker İstanbul: Docker'a Giriş]]                                     | İstanbul | 22 Mart 15:00 |
+  |--------------------------------------------------------------------------+----------+---------------|
+* Diğer Haberler
+	- Yazılımcılar için sosyal medya özelliği olan Dev.to, 8 Mart Dünya Emekçi
+    Kadınlar günü için kadınların programlamaya başlama [[https://dev.to/t/shecoded][hikayelerini
+    anlatabileceği özel bir sayfa hazırladı]].
+	- Google, Korona virüsü nedeniyle iptal edilen organizasyonların ve okulların
+    kullanabilmesi için [[https://gsuite.google.com/products/meet/][Hangout Meet]] hizmetine [[https://cloud.google.com/blog/products/g-suite/helping-businesses-and-schools-stay-connected-in-response-to-coronavirus][sınırlı süre için ücretsiz paket
+    ekledi]].
+	- Korona virüsü nedeniyle iptal edilen organizasyonlar:
+		- Google I/O konferası [[https://techcrunch.com/2020/03/03/google-cancels-its-2020-i-o-developer-conference/][online olarak düzenlenecek]].
+		- Atlassian Summit 2020 [[https://www.atlassian.com/company/events/summit][etkinliği iptal edildi]].
+		- KubeCon etkinliği 17 - 20 Kasım 2020 [[https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/attend/novel-coronavirus-update/][tarihine ertelendi]].
+	- NodeJS v13.10.0 [[https://nodejs.org/en/blog/release/v13.10.0/][sürümü yayınlandı]].
+	- VueJS kütüphanesinin v3.0.0-alpha [[https://github.com/vuejs/vue-next/releases/tag/v3.0.0-alpha.8][sürümü yayınlandı]].
+	- Angular Framework 9.0.5 [[https://github.com/angular/angular/releases/tag/9.0.5][sürümü yayınlandı]].
+	- Kotlin programlama dilinin 1.3.70 [[https://blog.jetbrains.com/kotlin/2020/03/kotlin-1-3-70-released/][sürümü yayınlandı]].
+	- Rollup bundler aracının 2.0.0 [[https://github.com/rollup/rollup/releases/tag/v2.0.0][sürümü yayınlandı]].
+	- HTTP istek ve cevaplarını OpenAPI standartlarına göre denetleyen openapi-cop
+    aracının [[https://github.com/EXXETA/openapi-cop][ilk stabil versiyonu 1.0.0 yayınlandı]].
+* Lisans
+  #+BEGIN_CENTER
+  #+ATTR_HTML: :height 75
+  #+ATTR_LATEX: :height 1.5cm
+  [[file:../../../img/CC_BY-NC-SA_4.0.png]]
+
+  [[file:yazilim-gundemi-2020-09.org][Yazılım Gündemi - 2020/09]] yazısı [[https://erenhatirnaz.github.io][Eren Hatırnaz]] tarafından [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Creative Commons
+  Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı]] (CC BY-NC-SA 4.0)
+  ile lisanslanmıştır.
+  #+END_CENTER

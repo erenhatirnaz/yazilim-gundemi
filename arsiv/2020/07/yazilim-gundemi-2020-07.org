@@ -1,0 +1,219 @@
+#+TITLE: Yazılım Gündemi - 2020/07
+#+SUBTITLE: 10-16 Şubat 2020
+#+AUTHOR: Eren Hatırnaz
+#+DATE: 17 Şubat 2020
+#+OPTIONS: ^:nil
+#+LANGUAGE: tr
+#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=black, filecolor=red, urlcolor=blue}
+#+LATEX_HEADER: \usepackage[turkish]{babel}
+#+HTML_HEAD: <link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+#+LATEX: \shorthandoff{=}
+
+[[file:gorseller/yazilim-gundemi-banner.png]]
+
+#+BEGIN_CENTER
+[[file:../06/yazilim-gundemi-2020-06.org][< Önceki Gündem]] | *10-16 Şubat 2020* | [[file:../08/yazilim-gundemi-2020-08.org][Sonraki Gündem >]]
+
+[[https://teknoseyir.com/blog/yazilim-gundemi-2020-07][TeknoSeyir'de Oku]]
+#+END_CENTER
+
+* GitHub komut satırı aracının [[https://github.blog/2020-02-12-supercharge-your-command-line-experience-github-cli-is-now-in-beta/][beta programını tanıttı]]
+	Komut satırı araçları biz geliştiriciler için olmazsa olmazlardan birisi.
+	Elbette aramızda pek komut satırı kullanmaktan hoşlanmayanlar da olabilir
+	fakat mutlaka en az 1 ya da 2 tane komut satırı aracı kullanmak durumundadır.
+	GitHub da kendi hizmetleri için bir komut satırı aracı çıkardı. Henüz beta
+	programında olan bu komut satırı aracı ile şunları yapabilmekteyiz:
+
+	 * Issue'leri listeleme ve filtreleme
+	 * Issue sayfasını tarayıcı ile açtırma
+	 * Pull Request oluşturma
+	 * Pull Request durumunu yazdırma
+	 * Pull Request'i bilgisayara checkout yapma
+
+	Şu an beta programında olduğu için çok stabil çalışmasını beklemek yersiz
+	fakat ben yine de yazıya birkaç görüntü ekleyebilmek için denedim.
+
+	[[https://cli.github.com/][Bu sayfadan]] işletim sisteminize göre olan kurulum dosyasını indirip,
+	kuruyorsunuz. Ben Linux için olanı kurdum (=sudo dpkg --install
+	gh-0.5.5-linux-amd64.deb=). Sonrasında bilgisayarınızdaki bir git dizininin
+	içine giriyorsunuz (elbette remote'lar arasında github olmak zorunda) ve =gh
+	issue list= komutunu çalıştırıyorsunuz. Bu komutu ilk kez çalıştırdığınızda
+	size "tarayıcınızda github'ı açıp izin vermek için enter tuşuna basın" diyor.
+	Enter'e bastığınızda ise şöyle bir sayfa açılıyor:
+
+  #+ATTR_HTML: :height 650
+  #+ATTR_LATEX: :height 8cm
+	#+CAPTION: Görüldüğü gibi bayağı bir izin istiyor ama uygulama zaten GitHub'ın
+  #+CAPTION: kendine ait olduğu için sıkıntı yok
+	[[file:gorseller/github-cli-izin.png]]
+  #+LATEX: \newpage
+
+	GitHub CLI uygulamasına hesabınızın tüm izinlerini verdikten sonra işlem
+	başarılı olmuşsa sizden bir kere daha Enter tuşuna basmanızı isteyecek ve
+	bastığınız ise ilgili github deponuzdaki bütün issue girişlerinin listesini
+	verecek.
+
+  #+ATTR_LATEX: :height 7.5cm
+	#+CAPTION: Ben kendi depomda denedim.
+	[[file:gorseller/github-cli-demo.png]]
+  #+LATEX: \newpage
+
+	Komut satırı aracında bulduğunuz hataları bildirmek ya da özellik talebinde
+	bulunmak için bu [[https://github.com/cli/cli][github deposunu]] ziyaret edebilir ya da [[https://forms.gle/umxd3h31c7aMQFKG7][bu formu]]
+	doldurabilirsiniz.
+
+	Ayrıca bu hafta içerisinde GitHub, [[https://github.blog/2020-02-13-github-enterprise-is-now-free-through-microsoft-for-startups/][Microsoft for Startups hizmeti ile birlikte
+	GitHub Enterprise çözümünün ücretsiz sunulacağı]]nı da duyurdu.
+* Tembel resim yükleme (lazy-loading) özelliği [[https://github.com/whatwg/html/pull/3752#issuecomment-585202516][HTML standardı oldu]]
+  #+ATTR_HTML: :height 250
+  #+ATTR_LATEX: :height 5cm
+	[[file:gorseller/lazy-loading.png]]
+
+	Türkçeye çevirince biraz komik bir ifade oldu ama İngilizcesinden anlaşıldığı
+	üzere bu özellik sayesinde artık bir web sayfasını açtığınızda tüm resimler
+	aynı anda yüklenmeyecek resimin konumuna göre sayfa scroll edildikte
+	yüklenecekler. Böylece gereksiz trafik oluşturmaktan kurtulacağız. Hali
+	hazırda bu özelliği zaten birçok web sitesinde görmüşsünüzdür fakat artık
+	bunun için ekstra bir kütüphane ya da araça gerek kalmayacak, doğrudan
+	tarayıcı tarafından desteklenecek.
+
+	Bu özelliği kullanmak için HTML kodlarımızı bu şekilde düzenlememiz yeterli
+	olacak:
+  #+ATTR_LATEX: :options frame=lines, linenos, label=HTML
+	#+BEGIN_SRC html
+    <img loading=lazy src="img/teknoseyir.png">
+	#+END_SRC
+
+	Özellik hakkında detaylı bilgi almak için [[https://web.dev/native-lazy-loading/][şu blog yazısı]]nı okuyabilirsiniz.
+
+	Özelliğin HTML standardı olduğunu duyuran Google Chrome çalışanının [[https://twitter.com/addyosmani/status/1227619409625174016][tweet'ine
+	ise şuradan ulaşabilirsiniz]].
+* Windows Terminal Preview v0.9 [[https://devblogs.microsoft.com/commandline/windows-terminal-preview-v0-9-release/][yayınlandı]]
+	Microsoft'un yaklaşık bir yıldır geliştirmeye devam ettiği yeni Windows
+	Terminal uygulamasının v0.9 Önizleme sürümü bu hafta içerisinde duyuruldu.
+
+	Bu sürüm ile birlikte artık komut satırından da yeni bir Windows Terminal
+	penceresi oluşturabiliyoruz. Üstelik oluşturulan bu yeni terminal penceresini
+	yeni sekme, bölümlenmiş ekran gibi özelliklerle birlikte de oluşturabiliyoruz.
+	Yani tek bir komut ile terminal sekmesini istediğiniz parçalara bölüp o
+	parçalarda istediğiniz uygulamaları çalıştırabilirsiniz.
+
+	Örneğin önce sekmeyi ortadan ikiye dikey bölüp, sonra da sağ tarafı ortadan
+	ikiye yatay bölmek için şöyle bir komut çalıştırabilirsiniz:
+  #+ATTR_LATEX: :options frame=lines, linenos
+	#+BEGIN_SRC shell
+    wt -d C:\Users\cinnamon\GitHub\WindowsTerminal ; split-pane -p "Command Prompt" ; split-pane -p "Ubuntu" -d \\wsl$\Ubuntu\home\cinnak -H
+	#+END_SRC
+
+	Bu komutun çıktısı ise şu şekilde:
+	[[file:gorseller/windows-terminal-v09.gif]]
+
+	Ayrıca bir terminal penceresini kapatmak istediğinizde her zaman "tüm sekmeler
+	kapatılsın mı" sorusunu sormasın istiyorsanız bunun için de bir ayar eklendi.
+	Bunu etkinleştirmek için Windows Terminal ayarlarına şu satırı eklemeniz
+	yeterli:
+  #+ATTR_LATEX: :options frame=lines, linenos, label=JSON, labelposition=topline
+	#+BEGIN_SRC json
+    "confirmCloseAllTabs": "true"
+	#+END_SRC
+	Böylece terminal penceresini kapatmak istediğinizde tüm sekmeler de hemen
+	kapatılacak.
+* Qt 5.15 Alpha [[https://www.qt.io/blog/qt-5.15-alpha-released][sürümü yayınlandı]]
+	C++ ile platformlar-arası uygulama geliştirmeye yarayan framework Qt'nin 5.15
+	Alpha sürümü bu hafta içerisinde yayınlandı. Henüz Alpha seviyesinde olması
+	nedeniyle çalışan uygulamalarınızı bu sürüme yükseltmeniz tavsiye edilmiyor
+	ama farklı projelerde kullanıp, bulduğunuz hataları Qt takımına
+	raporlayabilirsiniz. Bu sürüm ile birlikte gelen yeni özellikler için [[https://wiki.qt.io/New_Features_in_Qt_5.15][bu wiki
+	sayfasını]] ziyaret edebilirsiniz.
+
+	Ayrıca Qt 5.14.0 sürümüyle birlikte artık "yeniden konumlandırılabilir" oldu.
+	Ben de ilgili blog yazısının başlığını okuyunca anlamamıştım ama yazıyı
+	okuyunca fark ettim ki aslında kast edilen: Qt'nin kurulduğunu dizini
+	değiştebilirsiniz. Böyle bir ihtiyacınız varsa [[https://www.qt.io/blog/qt-is-relocatable][bu blog yazısı]]nı
+	okuyabilirsiniz.
+
+	Son olarak da KDAB geçtiğimiz sene düzenlediği Qt World Summit 2019
+	etkinliğinin tüm videolarını bu hafta içerisinde paylaşmış. İlgili duyuru
+	yazısı için [[https://www.kdab.com/qt-world-summit-2019-talk-videos-are-online/][buraya]] tıklayabilirsiniz.
+* Yaklaşan Etkinlikler
+  #+ATTR_HTML: :width 100%
+  #+ATTR_LATEX: :environment longtable :align |p{8cm}|l|l|
+  |-----------------------------------------------------------------------------------------------+----------+----------------|
+  | Etkinlik İsmi                                                                                 | Yeri     | Tarihi         |
+  |-----------------------------------------------------------------------------------------------+----------+----------------|
+  | [[https://www.meetup.com/Microsoft-Giri%25C5%259Fimcilik-Bulu%25C5%259Fmalar%25C4%25B1/events/268435933/][Azure Serverless Architecture]]                                                                 | İstanbul | 17 Şubat 19:00 |
+  | [[https://www.meetup.com/istanbul-yapay-zeka-toplulugu/events/268718822/][Fuat Beşer ile "Yapay Zekâda Öncü Olmak"]]                                                      | İstanbul | 18 Şubat 14:00 |
+  | [[https://www.meetup.com/istanbul-yapay-zeka-toplulugu/events/268768436/][Let The Machine Learn]]                                                                         | İstanbul | 18 Şubat 17:00 |
+  | [[https://www.meetup.com/GDG-Cloud-Izmir/events/268271805/][Firebase Study Jam]]                                                                            | İzmir    | 18 Şubat 18:00 |
+  | [[https://www.meetup.com/Teknopark-%25C4%25B0stanbul-Yaz%25C4%25B1l%25C4%25B1mc%25C4%25B1-Bulu%25C5%259Fmalar%25C4%25B1/events/268624461/][Selenium ve Robot Framework ile UI Test Otomasyonuna Giriş]]                                    | İstanbul | 19 Şubat 12:30 |
+  | [[https://www.meetup.com/IBMDeveloperTR/events/268626077/][Yapay Zeka ile Dokümanlarınızı Analiz Edin!]]                                                   | İstanbul | 20 Şubat 19:00 |
+  | [[https://kommunity.com/devnot-yazilimci-bulusmalari/events/coklu-cluster-ortaminda-cicd-pipeline-ile-uygulama-yonetimi][Çoklu Cluster Ortamında CI/CD Pipeline ile Uygulama Yönetimi]]                                  | İstanbul | 21 Şubat 18:30 |
+  | [[https://www.eventbrite.com/e/ieee-turkey-2nd-comsoc-conference-tickets-94153113497][IEEE Turkey 2nd ComSoc Conference]]                                                             | İstanbul | 22 Şubat 09:30 |
+  | [[https://www.eventbrite.com/e/deep-learning-fundamentals-workshop-tickets-94146818669][Deep Learning Fundamentals workshop]]                                                           | Ankara   | 23 Şubat 10:00 |
+  | [[https://www.meetup.com/rladies-istanbul/events/268481383/][Shiny Paketi ile Dashboard Hazirlama]]                                                          | İstanbul | 23 Şubat 12:30 |
+  | [[https://www.meetup.com/Microsoft-Giri%25C5%259Fimcilik-Bulu%25C5%259Fmalar%25C4%25B1/events/268504659/][Microservice with Azure Kubernetes Service and Azure Devops]]                                   | İzmir    | 25 Şubat 13:00 |
+  | [[https://www.eventbrite.co.uk/e/rdtech-registration-94626158387][RDTech Solid & Unit Testing]]                                                                   | İstanbul | 26 Şubat 18:00 |
+  | [[https://kommunity.com/jamstack/events/jamstack-istanbul][JAMstack Istanbul]]                                                                             | İstanbul | 26 Şubat 19:00 |
+  | [[https://www.meetup.com/Sahibinden-D2D-Events/events/268634768/][Kotlin ve Java'nın Yeni Versiyonları]]                                                          | İstanbul | 26 Şubat 19:00 |
+  | [[https://www.eventbrite.com/e/testdefence-yuksek-kaliteli-guvenilir-savunma-sistemleri-ve-yazlmlar-nasl-gelistirilir-tickets-88086646531][TestDefence: Yüksek Kaliteli, Güvenilir Savunma Sistemleri ve Yazılımları Nasıl Geliştirilir?]] | Ankara   | 27 Şubat 13:00 |
+  | [[https://www.meetup.com/Microsoft-Giri%25C5%259Fimcilik-Bulu%25C5%259Fmalar%25C4%25B1/events/268504693/][Microservice with Azure Kubernetes Service and Azure Devops]]                                   | Ankara   | 27 Şubat 13:00 |
+  | [[https://www.eventbrite.com/e/codeyapkredi-vol-4-ses-teknolojilerinin-yarattg-degisim-ve-podcast-tickets-94125416655][Code.YapıKredi Vol 4: Ses Teknolojilerinin Yarattığı Değişim ve Podcast]]                       | İstanbul | 27 Şubat 19:00 |
+  | [[https://www.eventbrite.com/e/siber-guvenlikte-yapay-zeka-tickets-92908165825][Siber Güvenlikte Yapay Zeka]]                                                                   | Ankara   | 27 Şubat 19:00 |
+  | [[https://www.meetup.com/Hepsitech-Meetup/events/268530407/][Hepsiburada Micro Frontends Dönüşümü]]                                                          | İstanbul | 27 Şubat 19:00 |
+  | [[https://www.meetup.com/Javascript-Ankara/events/268677048/][JS Ankara Şubat 2020 Etkinliği]]                                                                | Ankara   | 27 Şubat 19:00 |
+  | [[https://kommunity.com/cloud-and-serverless-turkey/events/the-future-of-real-time-offline-data-istanbul][The Future of Real-time - Offline - Data]]                                                      | İstanbul | 28 Şubat 18:30 |
+  | [[https://www.eventbrite.com/e/geekday-2020-tickets-93463962227][GeekDay 2020]]                                                                                  | Kocaeli  | 29 Şubat 09:00 |
+  | [[https://www.meetup.com/GDGKocaeli/events/268678688/][Tensor Flow Study Jam]]                                                                         | Kocaeli  | 29 Şubat 13:00 |
+  | [[https://kommunity.com/freecodecamp-istanbul/events/freecodecamp-istanbul-tanitim-etkinligi][freeCodeCamp İstanbul Tanıtım Etkinliği]]                                                       | İstanbul | 29 Şubat 14:00 |
+  | [[https://kommunity.com/bilge-adam-teknoloji/events/tensorflow][TensorFlow Fest (TensorFlow Turkey)]]                                                           | Ankara   | 1 Mart 10:00   |
+  | [[https://www.meetup.com/GDG-Manisa/events/268736708/][Firebase Study Jam]]                                                                            | Manisa   | 3 Mart 12:00   |
+  | [[https://kommunity.com/devops-turkiye/events/prometheus-ve-grafana-ile-metrik-olusturma-ve-goruntuleme][Prometheus ve Grafana ile Metrik Oluşturma ve Görüntüleme]]                                     | İstanbul | 4 Mart 18:30   |
+  | [[https://www.meetup.com/Microsoft-Giri%25C5%259Fimcilik-Bulu%25C5%259Fmalar%25C4%25B1/events/268504717/][Microservice with Azure Kubernetes Service and Azure Devops]]                                   | İstanbul | 5 Mart 13:00   |
+  | [[https://www.meetup.com/QWomen-%25C4%25B0stanbul/events/268233749/][Kuantum Programlamaya Giriş Atölyesi]]                                                          | İstanbul | 7 Mart 09:00   |
+  | [[https://www.meetup.com/gdgtekirdag/events/268421016/][WTM Tekirdağ IWD 2020]]                                                                         | Tekirdağ | 7 Mart 10:00   |
+  | [[https://www.meetup.com/GDG-Cloud-Istanbul/events/268749560/][Google Cloud Run Workshop]]                                                                     | İstanbul | 7 Mart 14:00   |
+  | [[https://www.meetup.com/GDG-Cloud-Izmir/events/268749612/][GCP Projects, Service Account And Billing & Intro to Computing in GCP]]                         | İzmir    | 8 Mart 13:00   |
+  |-----------------------------------------------------------------------------------------------+----------+----------------|
+* Diğer Haberler
+	- DeepMind, yapay zekada uzun dönem hafıza araştırmaları için [[https://deepmind.com/blog/article/A_new_model_and_dataset_for_long-range_memory][yeni bir model
+    ve veri seti yayınladı]].
+	- GitHub, resmi olarak [[https://github.blog/2020-02-12-announcing-github-india/][Hindistan'a girdi]].
+	- Microsoft Azure takımı, büyük git depoları için [[https://devblogs.microsoft.com/devops/introducing-scalar/][optimizasyon çözümünü
+    tanıttı]]: [[https://github.com/microsoft/scalar/][Scalar]].
+	- .NET Core takımı native WPF komponentlerini [[https://github.com/dotnet/wpf/issues/2554][açık kaynak yaptı]].
+	- Netflix, [[https://aomediacodec.github.io/av1-avif/][AVIF resim formatı]] için hazırladığı sıkıştırma karşılaştırma
+    aracını [[https://netflixtechblog.com/avif-for-next-generation-image-coding-b1d75675fe4][açık kaynak olarak yayınladı]]: [[https://github.com/Netflix/image_compression_comparison][netflix/image-compression-comparion]]
+	- Facebook ve Social Science One, milyonlarda facebook URL'sinden oluşan veri
+    setini [[https://socialscience.one/blog/unprecedented-facebook-urls-dataset-now-available-research-through-social-science-one][akademik çalışmalar için yayınladı]].
+	- Google, Samsung'u Android çekirdeğinde gereksiz değişiklikler yaparak
+    [[https://9to5google.com/2020/02/14/google-samsung-android-kernel-changes-security/][zaafiyetlere yol açmakla itham ediyor]]. Google Project Zero takımının [[https://googleprojectzero.blogspot.com/2020/02/mitigations-are-attack-surface-too.html][detaylı
+    blog yazısı]]
+	- Google Yapay Zeka takımı, video boyutlarını otomatik olarak akıllı şekilde
+    kırpabilen aracını [[https://ai.googleblog.com/2020/02/autoflip-open-source-framework-for.html][açık kaynak olarak yayınlandı]]: [[https://github.com/google/mediapipe/blob/master/mediapipe/docs/autoflip.md][AutoFlip]].
+	- Google kendi bellek ayırma kütüphanesi TCMalloc'u [[https://abseil.io/blog/20200212-tcmalloc][açık kaynak olarak
+    yayınladı]]. [[https://github.com/google/tcmalloc][GitHub Deposu]]
+	- ING Bank, web komponentleri kütüphanesini [[https://medium.com/ing-blog/ing-open-sources-lion-a-library-for-performant-accessible-flexible-web-components-22ad165b1d3d][açık kaynak hale getirdi]]: [[https://github.com/ing-bank/lion][Lion]].
+	- Yeni bir sıralama algoritması tanıtıldı: [[https://github.com/scandum/quadsort][quadsort]].
+	- Go programlama dilinin 1.13.8 ve 1.12.17 [[https://golang.org/doc/devel/release.html#go1.13.minor][sürümleri yayınlandı]].
+	- Crystal programlama dilinin 0.33.0 [[https://crystal-lang.org/2020/02/14/crystal-0.33.0-released.html][sürümü yayınlandı]].
+	- Racket programlama dilinin 7.6 [[https://download.racket-lang.org/v7.6.html][sürümü yayınlandı]].
+	- Delphi 25 [[https://community.idera.com/developer-tools/b/blog/posts/25-years-of-excellence][yaşına girdi]].
+	- Spring framework web [[https://spring.io/blog/2020/02/14/announcing-the-new-spring-website][sitesini güncelledi]].
+	- Redux Toolkit v1.3.0-Alpha.5 [[https://github.com/reduxjs/redux-toolkit/releases/tag/v1.3.0-alpha.5][sürümü yayınlandı]].
+	- Uzak Git deposu sunucu Gitea 1.11.0 [[https://blog.gitea.io/2020/02/gitea-1.11.0-is-released/][sürümünü yayınladı]].
+	- OpenSSH 8.2 [[https://lists.mindrot.org/pipermail/openssh-unix-announce/2020-February/000138.html][sürümü yayınlandı]].
+	- Apache Flink 1.10 [[https://flink.apache.org/news/2020/02/11/release-1.10.0.html][sürümü yayınlandı]].
+	- PostgreSQL 12.2, 11.7, 10.12, 9.6.16, 9.5.21 ve 9.4.29 [[https://www.postgresql.org/about/news/2011/][sürümleri yayınlandı]].
+	- [[https://openchakra.app/][OpenChakra]] aracının ilk stabil versiyonu 1.0.0 [[https://github.com/premieroctet/openchakra/releases/tag/v1.0.0][çıktı]].
+	- GDBFrontend v0.0.16-alpha [[https://github.com/rohanrhu/gdb-frontend/releases/tag/v0.0.16-alpha][sürümü çıktı]].
+	- KDE Frameworks 5.67.0 [[https://kde.org/announcements/kde-frameworks-5.67.0.php][sürümü çıktı]].
+* Lisans
+  #+BEGIN_CENTER
+  #+ATTR_HTML: :height 75
+  #+ATTR_LATEX: :height 1.5cm
+  [[file:../../../img/CC_BY-NC-SA_4.0.png]]
+
+  [[file:yazilim-gundemi-2020-07.org][Yazılım Gündemi - 2020/07]] yazısı [[https://erenhatirnaz.github.io][Eren Hatırnaz]] tarafından [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Creative Commons
+  Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı]] (CC BY-NC-SA 4.0)
+  ile lisanslanmıştır.
+  #+END_CENTER

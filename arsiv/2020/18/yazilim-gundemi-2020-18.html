@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 22:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi - 2020/18</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi - 2020/18
+<br />
+<span class="subtitle">4-10 Mayıs 2020</span>
+</h1>
+<div id="table-of-contents">
+<h2>İçindekiler</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orga9079d2">1. GitHub, Satellite 2020 etkinliğini gerçekleştirdi</a>
+<ul>
+<li><a href="#org86441cb">1.1. GitHub Discussions</a></li>
+<li><a href="#orgc28b48b">1.2. GitHub Codespaces</a></li>
+<li><a href="#orgccc96af">1.3. GitHub Codescanning ve Secret Scanning</a></li>
+</ul>
+</li>
+<li><a href="#orge7e8f5e">2. Microsoft'un GitHub hesabı hacklendi</a></li>
+<li><a href="#org0b2b0f9">3. Facebook SDK kütüphanesindeki bir hata, popüler iOS uygulamalarının çökmesine yol açtı</a></li>
+<li><a href="#org9481e7f">4. Flutter 1.17 ve Dart 2.8 sürümleri yayınlandı</a></li>
+<li><a href="#org2132058">5. Firefox 76 ile gelen yeni özellikler</a>
+<ul>
+<li><a href="#org5f73597">5.1. Debug yaparken dizini tamamen görmezden gelme</a></li>
+<li><a href="#org74d0b24">5.2. Audio Worklets</a></li>
+<li><a href="#orgb6f702e">5.3. Developer Edition için: CSS Uyumluluk Paneli</a></li>
+</ul>
+</li>
+<li><a href="#org4bdb164">6. TIOBE popüler programlama dilleri sıralamasını Mayıs 2020 için güncelledi</a></li>
+<li><a href="#org73b1f99">7. Visual Studio Code Nisan 2020 (v1.45) sürümü yayınlandı</a></li>
+<li><a href="#org9bdb4f0">8. Yaklaşan Online Etkinlikler #EvdeKal</a></li>
+<li><a href="#org5cb4152">9. Diğer Haberler</a></li>
+<li><a href="#org85d34f9">10. Lisans</a></li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gundemi-banner.png" alt="yazilim-gundemi-banner.png" />
+</p>
+</div>
+
+<div class="org-center">
+<p>
+<a href="../17/yazilim-gundemi-2020-17.html">&lt; Önceki Gündem</a> | <b>4-10 Mayıs 2020</b> | <a href="../19/yazilim-gundemi-2020-19.html">Sonraki Gündem &gt;</a>
+</p>
+
+<p>
+<a href="https://teknoseyir.com/blog/yazilim-gundemi-2020-18">TeknoSeyir'de Oku</a>
+</p>
+</div>
+
+<div id="outline-container-orga9079d2" class="outline-2">
+<h2 id="orga9079d2"><span class="section-number-2">1</span> GitHub, <a href="https://githubsatellite.com/">Satellite 2020</a> etkinliğini <a href="https://github.blog/2020-05-06-new-from-satellite-2020-github-codespaces-github-discussions-securing-code-in-private-repositories-and-more/">gerçekleştirdi</a></h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Geçtiğimiz yıllarda Microsoft tarafından satın alınan GitHub, geçtiğimiz hafta
+içerisinde Satellite 2020 etkinliğini sanal olarak gerçekleştirdi. Etkinlikte
+duyurulan yeniliklere birlikte göz atalım.
+</p>
+</div>
+
+<div id="outline-container-org86441cb" class="outline-3">
+<h3 id="org86441cb"><span class="section-number-3">1.1</span> GitHub Discussions</h3>
+<div class="outline-text-3" id="text-1-1">
+
+<div class="figure">
+<p><img src="gorseller/github-discussions.png" alt="github-discussions.png" height="450" />
+</p>
+<p><span class="figure-number">Şekil 2: </span>Örnek bir discussions sayfası için burayı ziyaret edebilirsiniz: <a href="https://github.com/zeit/next.js/discussions">https://github.com/zeit/next.js/discussions</a></p>
+</div>
+
+<p>
+Yazılım geliştiriciler olarak sıklıkla takıldığımız konularda yardım alma
+ihtiyacımız oluyor. Uzun bir zamandır bu ihtiyacımızı StackOverflow üzerinde
+gideriyorduk. Zaman zaman alternatifleri çıksa da StackOverflow kadar tutmadı
+fakat artık yalnız değil. GitHub, Discussions özelliği ile doğrudan
+StackOverflow'u hedef alıyor bence. Herkese açık depolar için yakında beta
+olarak açılacak bu özellikle artık GitHub üzerinde proje sayfalarında da
+ilgili projeyle ilgili sorular sorup, çözümü yazan kişilerin mesajlarını
+çözüldü olarak işaretleyebileceğiz. Önceden beri issue sistemi zaten vardı
+fakat bu discussions ile artık StackOverflow'daki gibi sorular sorabileceğiz.
+GitHub ve StackOverflow arasında ortaya çıkan bu rekabet nereye varacak.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc28b48b" class="outline-3">
+<h3 id="orgc28b48b"><span class="section-number-3">1.2</span> <a href="https://github.com/features/codespaces/">GitHub Codespaces</a></h3>
+<div class="outline-text-3" id="text-1-2">
+
+<div class="figure">
+<p><img src="gorseller/github-codespaces.png" alt="github-codespaces.png" height="450" />
+</p>
+</div>
+
+<p>
+Yazılım gündemi yazılarını takip edenler bu ismi mutlaka hatırlayacaklardır.
+Evet, bir önceki gündem yazısından hatırlıyorsunuz. Microsoft, "Visual Studio
+Online" olan cloud tabanlı geliştirme çözümünün ismini "Visual Studio
+Codespaces" olarak değiştirmişti (bkz: <a href="../17/yazilim-gundemi-2020-17.html">Yazılım Gündemi - 2020/17</a>). Ne
+tesadüftür ki bir başka Microsoft firması da aynı isimde özellik tanıtıyor
+:). Çoğunuzun da anladığı üzere artık GitHub üzerinden tek bir tıklama ile
+cloud tabanlı geliştirme ortamımızı ayağa kaldırabileceğiz. Henüz limitli
+açık beta sürecinde ücretsiz olarak kullanılabilen bu özellik herkese
+açıldığında kendine özel bir ücretlendirme ile gelecekmiş. Muhtemelen geçen
+hafta duyurduğum "Visual Studio Codespaces"deki fiyatlarla aynı olacaktır.
+GitHub'daki normal basit dosya düzenleme özelliği ücretsiz kalmaya devam
+edecek tabii ki. Limitli açık beta için başvuru yapmıştım fakat henüz onay
+gelmediği için detaylı bir şeyler yazamıyorum. Sizler de konu alt başlığına
+tıklayarak özelliğin sunum sayfasına erişebilir, açık beta için başvuru
+yapabilirsiniz. Onay alıp, deneme imkanınız olursa deneyimlerinizi yorumlar
+bölümünde paylaşmaktan kendinizi geri koymayın.
+</p>
+</div>
+</div>
+<div id="outline-container-orgccc96af" class="outline-3">
+<h3 id="orgccc96af"><span class="section-number-3">1.3</span> GitHub Codescanning ve Secret Scanning</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Geçtiğimiz senenin yazılım gündemi yazılarının birinde (bkz: <a href="../10/yazilim-gundemi-2020-10.html">Yazılım
+Gündemi - 10</a>) GitHub'ın Semmle isimli kod analizi çözümü sunan bir şirketi
+satın aldığını haber yapmıştım ve "GitHub bunu mutlaka kullanır bir şekilde"
+demiştim. İşte o kullanımlar geçtiğimiz hafta duyuruldu. Artık GitHub'a
+yüklediğimiz kodlar üzerinde güvenlik açıkları ve zafiyetler için
+otomatikleştirilmiş süreçler içeren 2 ürün var. Henüz ikisi de beta sürecinde
+olsa da incelemeye değer.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/github-codescanning.png" alt="github-codescanning.png" height="450" />
+</p>
+</div>
+
+<ul class="org-ul">
+<li>GitHub Code scanning ile herkese açık depolarımız üzerinde potansiyel
+güvenlik açıklarına yönelik taramalar yapabiliyor ve bunu CI/CD gibi
+süreçlerin bir parçası yapabiliyoruz. Yani "ben <code>git push</code> yaptığımda
+otomatik olarak taramaları yap" diyebileceğiz. Olası güvenlik sorunlarına
+karşı uyarı bildirimleri gönderen bu servis, arka planda GitHub tarafından
+geliştirilen <a href="https://github.com/github/codeql">CodeQL</a> motorunu kullanıyor. Projeleriniz için beta
+başvurusunda bulunmak için <a href="https://github.com/features/security/advanced-security/signup">bu sayfayı ziyaret edebilirsiniz</a>.</li>
+<li>Secret scanning ise GitHub'da 2018'den beri olan bir özellik fakat artık
+private depolarınız için de kullanabileceksiniz. Ne kadar dikkat etsek de
+bazen boşta bulunup kodlar içerisinde olmaması gereken bir şifreyi ya da
+gizli bir anahtarı unutabiliyoruz. Bu da haliyle güvenlik sorunlarına yol
+açıyor. İşte secret scanning tam da bu sorunu çözmeye yönelik bir özellik.
+Projelerinizde şifreye ya da gizli anahtara benzer metinsel ifadeler
+gördüğünde sizi uyarıyor ve yapmanız gerekenler hakkında bilgi veriyor.</li>
+</ul>
+
+
+<p>
+GitHub'ın bu mecburiyetten dolayı sanal olarak düzenlediği Satellite 2020
+etkinliğinde duyurulan belli başlı özellikler bu şekildeydi. Etkinliğin toplam
+12 saatlik kaydı YouTube üzerinde mevcut, <a href="https://www.youtube.com/watch?v=FhZTPM9ysWk&amp;feature=emb_title">buraya tıklayarak ilgili videoya
+erişebilirsiniz</a>.
+</p>
+
+<p>
+Gördüğünüz gibi GitHub yazılım geliştirme ekosisteminin her alanı için bir
+çözüm üretmeye devam ediyor. Elbette çoğu geliştirici için GitHub'da tüm
+işlerini halledebilmek çok büyük bir kolaylık olacaktır ama ben GitHub'ın
+sektördeki konumundan da dolayı giderek tekelleştiğini düşünmeye başladım.
+Elbette bir firma açısından baktığımızda müşterilerini başka firmaların
+ürünlerini kullanmak zorunda bırakmadan, kendi bünyesi içerisinden çözümler
+sunmak istemesi çok doğal fakat ben şahsen yazılım geliştirmeyle ilgili her
+şeyimi GitHub'a emanet etmek istemezdim. Bunun için de haklı nedenlerim
+olduğunu düşünüyorum. Geçmişte Amerika'nın ambargo uyguladığı ülkelerdeki
+geliştiricilerin hesaplarını nasıl kilitlediklerini ve kodlarına resmen el
+koyduklarını hep birlikte görmüştük (bkz: <a href="../../2019/03/yazilim-gundemi-03.html">Yazılım Gündemi - 3</a>). Elbette tüm
+kararınızı olası bir "ambargo" kararına göre vermek mantıklı değil fakat
+Levent Abi'nin sözünü tekrar hatırlatmak istiyorum: "/Cloud dediğin başkasının
+bilgisayarıdır. Gün gelir de 'sana hizmet vermiyorum kardeşim' derse
+yapabileceğin bir şey yok/". Bu konuda siz ne düşünüyorsunuz? GitHub'ın bu
+kadar büyümesi ve yeni hizmetler sağlaması sizi endişelendiriyor mu? Yoksa bu
+yönde çekinceleriniz yok mu? Yorumlar bölümünde konuşalım.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orge7e8f5e" class="outline-2">
+<h2 id="orge7e8f5e"><span class="section-number-2">2</span> Microsoft'un GitHub <a href="https://www.bleepingcomputer.com/news/security/microsofts-github-account-hacked-private-repositories-stolen/">hesabı hacklendi</a></h2>
+<div class="outline-text-2" id="text-2">
+<p>
+<a href="https://www.bleepingcomputer.com/">BleepingComputer</a> sitesinin geçtiğimiz hafta yayınladığı habere göre "Shiny
+Hunter" rumuzlu hacker, Microsoft çalışanlarından birinin GitHub hesabını
+hackleyerek, private (herkese açık olmayan) depolara erişim sağladığını ve
+500GB'dan daha fazla büyüklükte veri çaldığını iddia etti. Haftanın ilerleyen
+günlerinde ise bir Microsoft çalışanından olayın gerçek olduğunu öğrendik.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/microsoft-github-leak.jpg" alt="microsoft-github-leak.jpg" height="450" />
+</p>
+<p><span class="figure-number">Şekil 5: </span>Hacker'ın paylaştığı ekran görüntüsündeki tarih bilgilerinden olayın 28 Mart günü gerçekleştiği ortaya çıkıyor.</p>
+</div>
+
+<p>
+Hacker ilk bu verileri yer altı forumlarında satmayı düşünmüş olsa da,
+sonradan ücretsiz olarak sızdırmayı tercih etmiş gibi gözüküyor.
+BleepingComputer sitesinin incelediğine göre sıvan private repoların içinde
+Microsoft'u zora sokacak derecede projelerin kodları yok. Çoğunlukla gizlilik
+gerektirmeyen kodlar, kod örnekleri, test projeleri ve e-kitapların yer aldığı
+söyleniyor. Zaten bu yüzden de pek fazla ses getirmedi bu olay ve çok az
+konuşuldu.
+</p>
+</div>
+</div>
+<div id="outline-container-org0b2b0f9" class="outline-2">
+<h2 id="org0b2b0f9"><span class="section-number-2">3</span> Facebook SDK kütüphanesindeki bir hata, popüler iOS uygulamalarının <a href="https://www.theverge.com/2020/5/7/21250689/facebook-sdk-bug-ios-app-crash-apple-spotify-venmo-tiktok-tinder">çökmesine yol açtı</a></h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Günümüzde birçok mobil uygulama ve web sitenin açılış ekranlarında çok sık
+"Facebook ile giriş yap", "Twitter ile kayıt ol" tarzı alternatif kimlik
+doğrulama yöntemlerini görüyoruz. Biz yazılım geliştiriciler olarak bu tarz
+özellikleri yine ilgili sosyal medya sitesinin sağladığı Software Development
+Kit'ler (SDK) aracılığıyla uygulamalarımıza ya da web sitelerimiz ekliyoruz.
+Geçtiğimiz hafta içerisinde de Facebook'un sağladığı SDK paketinin iOS
+sürümünde çıkan bir hata, bu paketi kullanan popüler iOS uygulamalarının
+açılırken çökmesine yol açtı. Bu uygulamalar arasında Spotify, TikTok ve
+Pinterest gibi uygulamalar da var. "Facebook ile giriş yap" özelliğinden
+faydalanmayan kullanıcılar da durumdan etkilenmişler.
+</p>
+
+<ul class="org-ul">
+<li><a href="https://twitter.com/aburninghilll/status/1258169688959352832">Konuyla ilgili Tweet</a></li>
+</ul>
+
+<p>
+Olay hakkında daha detaylı bilgi için konu başlığına eklediğim bağlantıya
+tıklayabilirsiniz ya da Facebook'un iOS SDK paketinin GitHub deposundaki <a href="https://github.com/facebook/facebook-ios-sdk/issues/1374">şu
+issue sayfasını</a> ziyaret edebilirsiniz. Uygulama geliştiren arkadaşların
+Facebook SDK ile olan bağlarını tekrar gözden geçirmelerini tavsiye ederim.
+</p>
+</div>
+</div>
+<div id="outline-container-org9481e7f" class="outline-2">
+<h2 id="org9481e7f"><span class="section-number-2">4</span> <a href="https://medium.com/flutter/announcing-flutter-1-17-4182d8af7f8e">Flutter 1.17</a> ve <a href="https://medium.com/dartlang/announcing-dart-2-8-7750918db0a">Dart 2.8</a> sürümleri yayınlandı</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Google tarafından geliştirilen platformlar-arası (cross-platform) uygulama
+geliştirme framework'ü Flutter ve programlama dili Dart, geçtiğimiz hafta
+içerisinde yeni sürümlerini yayınladılar. Birbiriyle ilişkili iki teknoloji
+olduğu için birlikte değerlendirmek istedim.
+</p>
+
+<p>
+Flutter 1.17 ile birlikte gelen bazı yenilik ve değişiklikler:
+</p>
+<ul class="org-ul">
+<li><b>Mobil performans ve boyut iyileştirmeleri</b>: Hiçbir şey yapmadan sadece
+uygulamanızın Flutter sürümünü 1.17'ye yükselterek bile daha hızlı
+animasyonlar, daha küçük uygulama boyutları ve daha az bellek kullanımları
+elde edebiliyorsunuz. Flutter takımının iddiasına göre %40 oranında CPU/GPU
+kullanımında azalma ve uygulama boyutunda %18.5'lik bir azalma oluyor.
+Flutter'ın örnek <a href="https://github.com/flutter/gallery">Flutter Galery</a> uygulaması bu sürüm değişikliğiyle birlikte
+9.6MB'dan 8.1MB'a düşmüş.</li>
+<li><b>iOS için Metal desteği, %50'lik bir performans iyileştirmesi sağlıyor</b>:
+OpenGL gibi bir grafik kütüphanesi olan ve Apple tarafından geliştirilen
+Metal, artık Flutter'ın iOS tarafında varsayılan olarak kullandığı grafik
+kütüphanesi haline gelmiş. Apple tarafından geliştirilmesinden dolayı da iOS
+işletim sisteminde iyi performansla çalışabiliyor. Artık Flutter ile
+geliştirdiğimiz uygulamaların grafik işlemleri öncekine göre daha hızlı
+gerçekleşecek.</li>
+<li><p>
+<b>Material tasarıma sahip yeni widget'lar</b>: <code>NavigationRail</code>, <code>DatePicker</code>.
+Doğrudan Google Material Design takımı tarafından tasarlanan bu yeni
+widget'lar artık Flutter 1.17 ile emrinize amade.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/flutter1-17-navigationrail.gif" alt="flutter1-17-navigationrail.gif" height="500" />
+</p>
+<p><span class="figure-number">Şekil 6: </span>Yeni <code>NavigationRail</code> elemanı</p>
+</div>
+
+
+<div class="figure">
+<p><img src="gorseller/flutter1-17-datepicker.gif" alt="flutter1-17-datepicker.gif" height="500" />
+</p>
+<p><span class="figure-number">Şekil 7: </span><code>DatePicker</code> elamanı</p>
+</div></li>
+</ul>
+
+<p>
+Dart programlama dili kendi içerisinde <code>pub</code> isimli bir paket yöneticisi
+(bağımlılık yöneticisi) ile birlikte geliyor. Geçtiğimiz hafta yayınlanan Dart
+2.8 sürümüyle de Dart takımının bu paket yöneticisini daha iyileştirmeye
+yönelik çalışmalar yaptığını görebiliyoruz. Şöyle ki:
+</p>
+<ul class="org-ul">
+<li>* <code>pub get</code> komutunda hız iyileştirmeleri*: Artık <a href="https://pub.dev/">pub.dev</a> üzerinden
+paketleri daha hızlı indirebileceğiz. Flutter takımı örnek veri olarak
+Flutter 1.12 sürümünde <code>flutter create</code> komutunun 6.5 saniye sürdüğünü,
+fakat artık Dart 2.8'de bunun sadece 2.5 saniye sürdüğünü belirtmiş.</li>
+<li>*Yeni komut <code>=pub outdated</code> *: Bu yeni komut sayesinde artık eski sürümde
+kalmış kütüphaneleri daha kolay tespit edebilecek ve sürümler arası
+geçişler için daha fazla bilgi edinebileceksiniz.</li>
+</ul>
+
+<p>
+Flutter 1.17 ve Dart 2.8 ile birlikte gelen diğer özellik ve değişiklikler
+için konu başlığına eklediğim bağlantılara tıklayabilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-org2132058" class="outline-2">
+<h2 id="org2132058"><span class="section-number-2">5</span> Firefox 76 ile <a href="https://hacks.mozilla.org/2020/05/firefox-76-audio-worklets-and-other-tricks/">gelen yeni özellikler</a></h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Popüler web tarayıcılardan biri olan Mozilla Firefox, geçtiğimiz hafta
+içerisinde 76.0 numaralı sürümünü yayınladı. Bu sürümle birlikte gelen ve biz
+geliştiricileri ilgilendiren yeni özelliklerin birkaçına birlikte bakalım.
+</p>
+</div>
+
+<div id="outline-container-org5f73597" class="outline-3">
+<h3 id="org5f73597"><span class="section-number-3">5.1</span> Debug yaparken dizini tamamen görmezden gelme</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+Her ne kadar çoğumuz hata ayıklama (debug) için <code>printf</code>, <code>echo</code>,
+<code>console.log</code> gibi komutları kullansak da tarayıcıların sağladığı Debugger
+özelliği bazı durumlarda daha işe yarar olabiliyor. Bu durumlarda da
+genellikle sadece proje klasörünüzün içerisindeki dosyaları debug etmek,
+oradaki olaylara bakmak isterseniz. İşte Firefox 76 ile birlikte gelen
+"<i>blackboxing</i>" özelliği ile bu mümkün. <b><b>Debugger</b></b> panelinin, <b><b>Sources</b></b>
+sekmesinden bir dizin seçip "<i>bu dizin içindeki tüm dosyaları görmezden gel
+(ignore)</i>" ya da "<i>bu dizin haricindeki tüm dizinleri görmezden gel</i>"
+diyebileceğiz.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/firefox76-dizin-gormezden-gel.gif" alt="firefox76-dizin-gormezden-gel.gif" height="300" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org74d0b24" class="outline-3">
+<h3 id="org74d0b24"><span class="section-number-3">5.2</span> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_AudioWorklet">Audio Worklets</a></h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+Firefox 76 ile birlikte gelen bu yeni API sayesinde tarayıcı üzerinde arka
+planda ses işleme süreçleri işletebileceğiz. Açıkcası benim de çok yabancı
+olduğum bir alan fakat ilgili arkadaşlar alt konu başlığına eklediğim
+bağlantıya tıklayarak detaylı dokümantasyon yazısına ulaşabilirler.
+</p>
+</div>
+</div>
+<div id="outline-container-orgb6f702e" class="outline-3">
+<h3 id="orgb6f702e"><span class="section-number-3">5.3</span> Developer Edition için: CSS Uyumluluk Paneli</h3>
+<div class="outline-text-3" id="text-5-3">
+<p>
+Bildiğiniz gibi Mozilla, Firefox'un bir de pre-release kanalı olarak
+Developer Edition sürümünü kullanıma sürüyor. Bu sürümde genelde sonraki
+Firefox sürümlerinde olan özellikler önceden geliştiricilerin kullanımına
+açılıyor ve test ediliyor. Bu özelliklere bir yenisi daha eklendi. F12 ile
+açtığımız Geliştirici Araçlarındaki CSS bölümüne artık <b>Compatibility</b>
+sekmesi de eklendi. Bu sekme sayesinde seçilen HTML elamanındaki aktif CSS
+özelliklerinin hangi tarayıcılarda desteklendiğini görebiliyoruz.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/firefox76-css-uyumluluk-panel.png" alt="firefox76-css-uyumluluk-panel.png" height="400" />
+</p>
+</div>
+
+<p>
+Firefox 76 ile birlikte gelen diğer geliştirici özellikleri için konu
+başlığına eklediğim bağlantıya tıklayabilirsiniz.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org4bdb164" class="outline-2">
+<h2 id="org4bdb164"><span class="section-number-2">6</span> TIOBE popüler programlama dilleri sıralamasını <a href="https://jaxenter.com/c-programming-may-2020-171598.html">Mayıs 2020 için güncelledi</a></h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Belirli periyotlarla internetteki programlama trendlerini analiz edip
+bunlardan programlama dilleri popülerliğini çıkartan TIOBE firması, Mayıs 2020
+için güncel popüler programlama dilleri sıralamasını geçtiğimiz hafta
+içerisinde yayınlandı. Yeni tablo bu şekilde:
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/tiobe-index.png" alt="tiobe-index.png" height="550" />
+</p>
+</div>
+
+<p>
+Elbette bu liste sadece popülerliğe göre belirlendiği için bizim için çok bir
+anlam ifade etmiyor. Sonuçta geliştireceğimiz yazılımlarda işimize en uygun
+olanı hangisiyse onu tercih ediyoruz, popülerlik sıralamasına göre tercih
+yapmıyoruz ama yine de programlama alanıyla ilgili olduğu için gündeme almak
+istedim.
+</p>
+
+<p>
+Daha detaylı analizler ve interaktif grafikler için TIOBE sitesindeki <a href="https://www.tiobe.com/tiobe-index/">bu
+sayfayı</a> ziyaret edebilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-org73b1f99" class="outline-2">
+<h2 id="org73b1f99"><span class="section-number-2">7</span> Visual Studio Code <a href="https://code.visualstudio.com/updates/v1_45">Nisan 2020 (v1.45) sürümü yayınlandı</a></h2>
+<div class="outline-text-2" id="text-7">
+
+<div class="figure">
+<p><img src="gorseller/vscode1-45.png" alt="vscode1-45.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org9bdb4f0" class="outline-2">
+<h2 id="org9bdb4f0"><span class="section-number-2">8</span> Yaklaşan Online Etkinlikler #EvdeKal</h2>
+<div class="outline-text-2" id="text-8">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" width="100%">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Etkinlik İsmi</th>
+<th scope="col" class="org-left">Tarihi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><a href="https://kommunity.com/tracikkaynak/events/acik-seminer-18-gun-olceklenebilir-makine-ogrenimi-uygulamalari-621dca47">Açık Seminer 18. Gün: Ölçeklenebilir Makine Öğrenimi Uygulamaları</a></td>
+<td class="org-left">12 Mayıs 14:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/cozumpark/events/uzaktan-siber-guvenlik-yaklasimi-ve-olaylari-monitor-etme-c989475b">Uzaktan Siber Güvenlik Yaklaşımı ve Olayları Monitör Etme</a></td>
+<td class="org-left">12 Mayıs 14:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/akademi/events/malware-forensics-zararli-yazilim-tespiti-webinar-dc4a41a9">Malware Forensics - Zararlı Yazılım Tespiti</a></td>
+<td class="org-left">12 Mayıs 16:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/cloud-and-serverless-turkey/events/ramazan-ozel-6-devops-vs-sre-41220ba0">DevOps vs SRE</a></td>
+<td class="org-left">12 Mayıs 23:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/cozumpark/events/siber-guvenlikte-tehdit-avciligi-threat-hunting-21ee4d23">Siber Güvenlikte Tehdit Avcılığı (Threat Hunting)</a></td>
+<td class="org-left">13 Mayıs 14:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/tracikkaynak/events/acik-seminer-19-gun-watson-apis-chatbot-and-vr-implementations-68e687f7">Açık Seminer 19. Gün: Watson APIs, Chatbot and VR Implementations</a></td>
+<td class="org-left">13 Mayıs 14:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/mavidurakio/events/s1e41-yazilimci-bulusmasi-52fe964f">Yazılımcı Buluşması {MaviDurak-IO}</a></td>
+<td class="org-left">13 Mayıs 21:15</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/bilge-adam-teknoloji/events/nodejs-ile-uygulama-gelistirme-d4055b37">Node.js ile Uygulama Geliştirme</a></td>
+<td class="org-left">13 Mayıs 21:15</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/devops-turkiye/events/aws-suspicious-activity-monitoring-with-humio-f70d68e0">AWS suspicious activity monitoring with humio</a></td>
+<td class="org-left">13 Mayıs 22:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/tracikkaynak/events/acik-seminer-20-gun-microsoft-yapay-zeka-servislerine-genel-bakis-2a911429">Açık Seminer 20. Gün: Microsoft Yapay Zeka Servislerine Genel Bakış</a></td>
+<td class="org-left">14 Mayıs 14:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/dotnet-istanbul/events/net-core-ile-restful-api-design-fe171c15">.NET Core ile RESTful API Design</a></td>
+<td class="org-left">15 Mayıs 22:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/cloud-and-serverless-turkey/events/ramazan-ozel-7-faas-serverless-aws-lambda-problemleri-ve-cozumleri-5888dd48">FaaS - Serverless (AWS Lambda) Problemleri ve Çözümleri</a></td>
+<td class="org-left">15 Mayıs 23:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/cloud-and-serverless-turkey/events/kubernetes-hands-on-3-volume-and-configuration-management-2547c2f3">Kubernetes Hands-On no.3: Volume And Configuration Management</a></td>
+<td class="org-left">17 Mayıs 13:30</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org5cb4152" class="outline-2">
+<h2 id="org5cb4152"><span class="section-number-2">9</span> Diğer Haberler</h2>
+<div class="outline-text-2" id="text-9">
+<ul class="org-ul">
+<li>İngiltere, COVID-19 takibi için geliştirdiği mobil uygulamaların kodlarını
+<a href="https://github.com/nhsx">açık kaynak hale getirdi</a>.</li>
+<li>Avustralya, COVIDSafe uygulamasının kodlarını <a href="https://www.dta.gov.au/news/dta-publicly-releases-covidsafe-application-source-code">açık kaynak hale getirdi</a>.</li>
+<li>GitHub, Covid-19 süresinde geliştiricilerin üretkenlikleriyle ilgili bir
+<a href="https://github.blog/2020-05-06-octoverse-spotlight-an-analysis-of-developer-productivity-work-cadence-and-collaboration-in-the-early-days-of-covid-19/">analiz raporu yayınladı</a>.</li>
+<li>Microsoft, Yapay Zeka ile ilgilenenler için yeni <a href="https://www.zdnet.com/article/microsoft-our-new-free-python-programming-language-courses-are-for-novice-ai-developers/">Python eğitim serisini
+duyurdu</a>.</li>
+<li>Microsoft, Yeni Zelanda'da veri merkezi kurmayı <a href="https://news.microsoft.com/en-nz/2020/05/06/aotearoa-disclosure/">planladığını açıkladı</a>.</li>
+<li>AWS, EC2 hizmetinin fiyatlarını <a href="https://aws.amazon.com/blogs/aws/ec2-price-reduction-for-ec2-instance-saving-plans-and-standard-reserved-instances/">düşürdüğünü açıkladı</a>.</li>
+<li>Backblaze, B2 Bulut Depolama çözümünün artık AWS S3 API'leri ile <a href="https://www.backblaze.com/blog/backblaze-b2-s3-compatible-api/">uyumlu
+olduğunu duyurdu</a>.</li>
+<li>GCC <a href="https://gcc.gnu.org/pipermail/gcc-announce/2020/000163.html">10.1 sürümü yayınlandı</a>. <a href="https://gcc.gnu.org/gcc-10/changes.html">Detaylı Yazı</a></li>
+<li>Unreal Engine <a href="https://www.unrealengine.com/en-US/blog/unreal-engine-4-25-released">4.25 sürümü yayınlandı</a>.</li>
+<li>Rust programlama dilinin <a href="https://blog.rust-lang.org/2020/05/07/Rust.1.43.1.html">1.43.1 sürümü yayınlandı</a>.</li>
+<li>Racket programlama dilinin <a href="https://download.racket-lang.org/v7.7.html">v7.7 sürümü yayınlandı</a>.</li>
+<li>Bolt programlama dilinin <a href="https://github.com/mukul-rathi/bolt/releases/tag/1.0">1.0 sürümü yayınlandı</a>.</li>
+<li>Anvil, Runtime Engine aracını <a href="https://anvil.works/blog/open-source">açık kaynak hale getirdi</a>. <a href="https://github.com/anvil-works/anvil-runtime">GitHub Deposu</a></li>
+<li>Merkesizleştirilmiş uygulama geliştirme ve ölçekleme için <a href="https://blog.textile.io/announcing-the-textile-protocol-hub/">yeni bir araç
+kutusu duyuruldu</a>: Textile Hub.</li>
+<li>Go ile yazılmış web sunucusu Caddy'nin <a href="https://github.com/caddyserver/caddy/releases/tag/v2.0.0">v2.0.0 sürümü yayınlandı</a>.</li>
+<li>TileDB <a href="https://medium.com/tiledb/tiledb-2-0-and-the-future-of-data-science-929cdcfe95ed">2.0 sürümü yayınlandı</a>.</li>
+<li>Beekeeper Studio <a href="https://www.beekeeperstudio.io/blog/release-1.2">v1.2 sürümü yayınlandı</a>.</li>
+<li>Lite metin editörünün <a href="https://github.com/rxi/lite/releases/tag/v1.03">1.03 sürümü yayınlandı</a>.</li>
+<li>C++ oyun kütüphanesi EnTT <a href="https://github.com/skypjack/entt/releases/tag/v3.4.0">3.4.0 sürümü yayınlandı</a>.</li>
+<li>Kubernetes IDE'si Lens, <a href="https://github.com/lensapp/lens/releases">v3.4.0 sürümünü yayınladı</a>.</li>
+<li>Platformlar-arası terminal arayüzü kütüphanesi LTUI <a href="https://github.com/tboox/ltui/wiki/LTUI-v1.7-released,-A-cross-platform-terminal-ui-library-based-on-Lua">v1.7 sürümünü yayınladı</a>.</li>
+<li>OpenAPIGenerator <a href="https://mobile.twitter.com/oas_generator/status/1258057660974329861">v7.7 sürümü yayınlandı</a>.</li>
+<li>StellarGraph <a href="https://medium.com/stellargraph/stellargraph-1-0-taking-graph-machine-learning-to-a-new-level-2bd6a04fbc77">1.0 sürümü yayınlandı</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org85d34f9" class="outline-2">
+<h2 id="org85d34f9"><span class="section-number-2">10</span> Lisans</h2>
+<div class="outline-text-2" id="text-10">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="../../../img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+<a href="yazilim-gundemi-2020-18.html">Yazılım Gündemi - 2020/18</a> yazısı <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a> (CC BY-NC-SA 4.0)
+ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 11 Mayıs 2020</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 22:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

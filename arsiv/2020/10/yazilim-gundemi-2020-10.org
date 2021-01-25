@@ -1,0 +1,179 @@
+#+TITLE: Yazılım Gündemi - 2020/10
+#+SUBTITLE: 9-15 Mart 2020
+#+AUTHOR: Eren Hatırnaz
+#+DATE: 15 Mart 2020
+#+OPTIONS: ^:nil
+#+LANGUAGE: tr
+#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=black, filecolor=red, urlcolor=blue}
+#+LATEX_HEADER: \usepackage[turkish]{babel}
+#+HTML_HEAD: <link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+#+LATEX: \shorthandoff{=}
+
+[[file:gorseller/yazilim-gundemi-banner.png]]
+
+#+BEGIN_CENTER
+[[file:../09/yazilim-gundemi-2020-09.org][< Önceki Gündem]] | *9-15 Mart 2020* | [[file:../11/yazilim-gundemi-2020-11.org][Sonraki Gündem >]]
+
+[[https://teknoseyir.com/blog/yazilim-gundemi-2020-10][TeknoSeyir'de Oku]]
+#+END_CENTER
+
+* Microsoft, Visual Basic'i artık [[https://devblogs.microsoft.com/vbteam/visual-basic-support-planned-for-net-5-0/][geliştirmeyeceğini duyurdu]]
+	[[file:gorseller/visual-basic-gelistirme.png]]
+
+	Microsoft'un açık kaynak camiasına açılmasıyla birlikte gelen köklü
+	değişikliklerden biri olan .NET Core projesinin artık Microsoft'un ana
+	uygulama geliştirme çatısı haline geldiğini biliyoruz. Geçtiğimiz yazılım
+	gündemi yazılarında da (bkz: [[file:../../2019/14/yazilim-gundemi-14.org][Yazılım Gündemi - 14]]) .NET Framework API'lerinin
+	.NET Core'a aktarılmasının tamamlandığını haber vermiştim. Yine başka bir
+	yazıda ise .NET Core çatısının artık .NET 5 ismiyle hayatına devam edeceğini
+	duyurmuştum. Bu hafta ise Microsoft .NET Takımı, Visual Basic için .NET 5
+	planlarını açıkladılar. .NET 5 içerisinde de Visual Basic desteği şu uygulama
+	tipleri için olacak:
+
+	 * Class Library
+	 * Console
+	 * Windows Forms
+	 * WPF
+	 * Worker Service
+	 * ASP.NET Core Web API
+
+	Bunların dışında kalan WebForms, Workflow ya da WCF gibi uygulama tipleri ise
+	.NET 5 sürümünde yer almayacak. Eğer bu tiplerde geliştirdiğiniz uygulamalar
+	varsa Microsoft, .NET 5 çatısına geçirmenizi tavsiye ediyor. Eğer kurumsal
+	müşteri iseniz de bu konuda destek veriyor.
+
+	Aynı blog yazısında duyurulan bir diğer gelişme ise, artık Visual Basic'in dil
+	olarak geliştirilmeye devam edilmeyeceği haberi oldu. İlerleyen .NET
+	sürümlerinde gelecek olan özellikler artık Visual Basic'e eklenmeyecek.
+	Microsoft zaten 2017'de C# ve VB.NET'in eşit geliştirilmesini bıraktığını,
+	C#'a ağırlık [[https://www.thurrott.com/dev/89874/microsoft-outlines-development-language-strategy][vereceğini duyurmuştu]]. Dolayısıyla pek de sürpriz bir gelişme
+	değil yani. Ben de programlamaya ilgi duyduğum orta okul yıllarında biraz
+	haşır neşir olduğum bir dildi fakat sonrasında C#'a geçmiştim ben de.
+
+	Eğer hala Visual Basic ile geliştirmeye devam ettiğiniz uygulamalar varsa
+	sistemin durumuna göre bir tekrar gözden geçirip, yeni kararlar vermekte fayda
+	var fakat yine de unutmayalım ki: "Çalışıyorsa dokunma" :)
+* Twitter, Geliştirici Yönergelerini akademik araştırmaları daha iyi [[https://techcrunch.com/2020/03/10/twitter-rewrites-developer-policy-to-better-support-academic-research-and-use-of-good-bots/][desteklemek için güncelledi]]
+	Twitter, bu hafta içerisinde kendi platformu üzerinde uygulama geliştiren
+	geliştiricilerin uyması gereken kuralları güncelledi. Yani Developer Policy
+	güncellendi ve sadeleştirildi. Önceden 8 bölümden oluşan metin artık 4 bölüme
+	inmiş durumda. Bu değişiklikle birlikte öne çıkan iki önemli konu mevcut.
+	Birisi Twitter artık akademik araştırmalar için verilerin kullanılması ve
+	yeniden dağıtılması konusunda daha anlayışlı, diğeri ise Twitter'ın artık
+	"iyi" botlara sıcak bakmaya başlaması.
+
+	Twitter'daki herkese açık paylaşımlar artık ticari olmayan akademik
+	araştırmalar için kullanılabilecek. Üstelik yenilenen policy sayesinde artık
+	araştırmada sonuç üretmek için kullandığımız tweet'lerin ya da kullanıcıların
+	id'lerini de çalışmamızla birlikte yeniden dağıtabiliyoruz. Böylece akran
+	değerlendirmesi sırasında aynı tweet ve kullanıcılar kullanılarak, sizin elde
+	ettiğiniz sonucu başkaları da elde edebilecekler.
+
+	Veri erişilebilirliğiyle ilgili bu değişikliklerin yanı sıra artık Twitter'da
+	bot hesapları da yasal olarak oluşturabileceğiz. "Bot" hesaplardan kast
+	ettiğim tabii ki de otomatik beğeni ya da RT yapan botlar değil. Twitter şu
+	iki botu örnek olarak göstermiş mesela: [[https://twitter.com/earthquakesSF][EarthQuakesSF]] ve [[https://twitter.com/everycolorbot][EveryColorBot]].
+	İnsanlara faydalı amaçlar için geliştirilmiş botlar olması gerekiyor. Bunu tam
+	olarak nasıl belirleyeceklerini bilmiyorum, policy metnini okuyacak vaktim
+	olmadı ama üstesinden geleceklerdir sanırım.
+
+	Ayrıca Twitter, uygulamalar ile ilgili bazı istatistikler de paylaştı.
+	Twitter, Temmuz 2018'den beri bir milyondan fazla uygulamayı review etmiş ve
+	%75'ini kabul etmiş. Ek olarak son 6 ayda 144.000 uygulama da kötü amaçlı
+	kullanıldıkları için kaldırılmış.
+* Bootstrap 5 ile gelecek bazı özellikler [[https://themesberg.com/blog/design/bootstrap-5-release-date-and-whats-new][belli oldu]]
+	Ben dahil birçok back-end geliştiricisinin onlarca projede imdadına yetişen
+	arayüz sistemi Bootstrap [[https://github.com/twbs/bootstrap/projects/11][son hızıyla geliştirilmeye devam ediyor]]. Henüz resmi
+	bir açıklama olmasa da Bootstrap 5 sürümünün bahar aylarının sonlarına doğru
+	yayınlanması bekleniyor. Bu sırada ise GitHub üzerindeki değişiklikleri
+	incelediğimizde gördüğümüz bazı şeyler var. Bunlar şu şekilde:
+
+	 * jQuery bağımlılığı kaldırıldı
+	 * Internet Explorer 10 ve 11 desteği kaldırıldı
+	 * SVG icon kütüphanesi eklendi
+
+	Bu üçünün dışında daha birçok değişikliğin de uygulandığını [[https://github.com/twbs/bootstrap/projects/11][bu proje
+	sayfası]]ndan görebilirsiniz. Internet Explorer 10 ve 11 desteğinin
+	kaldırılmasına şaşırmadık elbette. Aslında bakarsanız jQuery desteğinin
+	kalmasına da şaşırmadım ben. Son 3-4 yıldır VueJS ve React gibi kütüphanelerin
+	yaygınlaşmasıyla birlikte zaten jQuery'yi çok nadir görüyorduk. Bootstrap
+	ekibi de artık bunun farkına varmış olacak ki artık kullanmamaya karar
+	vermişler.
+
+	Diğer değişiklikler ve özellikler için konu başlığına eklediğim bağlantıya ya
+	da [[https://github.com/twbs/bootstrap/projects/11][proje sayfası]]na göz atabilirsiniz.
+* Django yönetim [[https://www.djangoproject.com/weblog/2020/mar/12/governance/][şeklini değiştirdi]]
+	Belirli bir büyüklüğe ulaşan her programlama dili ve framework gibi Django'nun
+	da artık bazı kararlar vermesi gerekiyordu ve bu hafta içerisinde
+	yayınladıkları blog yazısıyla birlikte yönetim sistemiyle ilgili "DEP"
+	belgesinin [[https://github.com/django/deps/blob/master/accepted/0010-new-governance.rst][kabul edilmiş halini yayınladılar]].
+
+	Açıkcası Django ile hiç proje geliştirmediğim için yapısına da hakim değilim
+	fakat okuduklarımdan anladığım kadarıyla önceden bir "ana geliştirici akımı"
+	varmış ve genelde geliştirmeler bu kişiler tarafından yapılıyor ya da
+	dışarıdan gelen katkıları yine bu kişiler değerlendiriyormuş. Fakat artık
+	projenin de fazlaca büyümesiyle birlikte bu süreç zorlaşmış olacak ki farklı
+	roller getirerek görevleri ve sorumlulukları dağıtmayı tercih etmişler. Ayrıca
+	"Techninal Board" gibi komitelerin de kurulacağını belirtmişler. Anlayacağız
+	artık Django geliştirme süreci daha sistematik bir şekilde işleyecek.
+
+	Yeni yönetim şekliyle ilgili detaylara konu başlığına eklediğim bağlantı
+	üzerinden ulaşabilirsiniz.
+* Unicode 13.0.0 [[https://unicode.org/versions/Unicode13.0.0/][sürümü yayınlandı]]
+	Aynı zamanda uygulamalar üzerinde kullandığımız "emoji"lerin de standardı olan
+	Unicode standardının 13.0 sürümü yayınlandı. Bazı değişiklikler şu şekilde:
+
+	 * 5.930 yeni karakter eklemesiyle birlikte artık Unicode toplam 143.856
+     karakter barındırıyor,
+	 * 55 yeni "emoji" eklenmiş. Yeni emojilere [[https://unicode.org/emoji/charts-13.0/emoji-released.html][bu adresten]] göz atabilirsiniz.
+* Next.js kütüphanesinin 9.3 [[https://nextjs.org/blog/next-9-3][sürümü yayınlandı]]
+	* Yeni nesil statik site oluşturma desteği,
+	* Ön-izleme modu,
+	* Global stillendirme için gömülü SASS desteği (=.scss=),
+	* Komponent bazında stillendirme için SASS Modül desteği (=.module.scss=),
+	* 404 sayfaları için otomatik statik optimizasyon,
+	* Tüm runtime sadece 32 kB,
+	* Toplulukla ilgili tartışmalar artık [[https://github.com/zeit/next.js/discussions][GitHub Discussions üzerinde]] olacak.
+
+	Özelliklerin detayları için konu başlığına eklediğim bağlantıya
+	tıklayabilirsiniz.
+  #+LATEX: \newpage
+* Visual Studio Code Şubat 2020 (v1.43) [[https://code.visualstudio.com/updates/v1_43][sürümü yayınlandı]]
+	#+CAPTION: Visual Studio Code editörünün Şubat 2020 sürümüyle birlikte gelen özellikler
+	[[file:gorseller/vscode-1-43.png]]
+* Diğer Haberler
+	- Korona virüsü nedeniyle ertelenen konferanslar ve etkinlikler:
+		- PHPKonf İstanbul yaz aylarına [[https://2020.phpkonf.org/updates.html][ertelendi]]. Yeni tarihler ilerleyen
+      haftalarda duyurulacak.
+		- Apple, WWDC20 etkinliğini [[https://developer.apple.com/news/?id=03132020a][yaz aylarına erteledi]].
+		- Angular Turkey etkinliğini [[https://twitter.com/ngTurkiye/status/1237659540889522176][ileri bir tarihe erteledi]].
+	- Atlassian, Syndney ofisini kapattı ve bir sonraki duyuruya kadar evden
+    çalışma düzenine [[https://mobile.twitter.com/Atlassian/status/1237996563953324032][geçtiklerini duyurdu]].
+	- Microsoft SMBv3'de kritik bir [[https://kb.cert.org/vuls/id/872016/][güvenlik açığı keşfedildi]].
+	- Bill Gates, Microsoft'un [[https://www.prnewswire.com/news-releases/microsoft-announces-change-to-its-board-of-directors-301023293.html][yönetim kurulundan ayrıldı]].
+	- GitHub CEO'su, sunucularının bir kısmını [[https://foldingathome.org/2020/02/27/foldinghome-takes-up-the-fight-against-covid-19-2019-ncov/][Folding@Home projesi]] için
+    [[https://mobile.twitter.com/natfriedman/status/1237466267998543872][ayırdığını duyurdu]].
+	- Netflix, kendi geliştirdiği AV1 encoder ve decoder'i [[https://netflixtechblog.com/svt-av1-an-open-source-av1-encoder-and-decoder-ad295d9b5ca2][açık kaynak olarak
+    yayınladı]]. [[https://github.com/OpenVisualCloud/SVT-AV1/][GitHub Deposu]]
+	- Amazon, AWS HTTP APIs hizmetini [[https://aws.amazon.com/tr/blogs/compute/building-better-apis-http-apis-now-generally-available/][beta'dan çıkardı]].
+	- InfoQ sitesi, [[https://www.infoq.com/articles/javascript-web-development-trends-2020/][JavaScript ve Web Geliştirme Trendleri 2020]] raporunu
+    yayınladı.
+	- Microsoft, .NET Core Uninstall Tool aracını [[https://devblogs.microsoft.com/dotnet/announcing-the-net-core-uninstall-tool-1-0/][tanıttı]].
+	- Silverlight açık kaynak olarak geri döndü: [[https://www.opensilver.net/announcements/introducing-opensilver.aspx][OpenSilver]].
+	- Google: "[[https://opensource.googleblog.com/2020/03/webassembly-brings-extensibility-to.html?m=1][WebAssembly, internet proxy'lerine genişletilebilirlik
+    kazandırıyor]]".
+	- Rust programlama dilinin 1.42.0 [[https://blog.rust-lang.org/2020/03/12/Rust-1.42.html][sürümü duyuruldu]].
+	- GCC 9.3 [[https://lists.gnu.org/archive/html/info-gnu/2020-03/msg00006.html][sürümü yayınlandı]].
+	- react-query v1.0.27 [[https://github.com/tannerlinsley/react-query/blob/master/CHANGELOG.md#1027][sürümü çıktı]].
+	- Memcached 1.6.0 [[https://github.com/memcached/memcached/wiki/ReleaseNotes160][sürümü çıktı]].
+	- Ionic CLI 6.2.1 [[https://github.com/ionic-team/ionic-cli/releases/tag/%2540ionic%252Fcli%25406.2.1][sürümü çıktı]].
+* Lisans
+  #+BEGIN_CENTER
+  #+ATTR_HTML: :height 75
+  #+ATTR_LATEX: :height 1.5cm
+  [[file:../../../img/CC_BY-NC-SA_4.0.png]]
+
+  [[file:yazilim-gundemi-2020-10.org][Yazılım Gündemi - 2020/10]] yazısı [[https://erenhatirnaz.github.io][Eren Hatırnaz]] tarafından [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Creative Commons
+  Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı]] (CC BY-NC-SA 4.0)
+  ile lisanslanmıştır.
+  #+END_CENTER

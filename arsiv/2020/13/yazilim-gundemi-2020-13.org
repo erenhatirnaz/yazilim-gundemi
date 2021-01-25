@@ -1,0 +1,282 @@
+#+TITLE: Yazılım Gündemi - 2020/13
+#+SUBTITLE: 30 Mart - 5 Nisan 2020
+#+AUTHOR: Eren Hatırnaz
+#+DATE: 5 Nisan 2020
+#+OPTIONS: ^:nil
+#+LANGUAGE: tr
+#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=black, filecolor=red, urlcolor=blue}
+#+LATEX_HEADER: \usepackage[turkish]{babel}
+#+HTML_HEAD: <link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+#+LATEX: \shorthandoff{=}
+
+[[file:gorseller/yazilim-gundemi-banner.png]]
+
+#+BEGIN_CENTER
+[[file:../12/yazilim-gundemi-2020-12.org][< Önceki Gündem]] | *30 Mart - 5 Nisan 2020* | [[file:../14/yazilim-gundemi-2020-14.org][Sonraki Gündem >]]
+
+[[https://teknoseyir.com/blog/yazilim-gundemi-2020-13][TeknoSeyir'de Oku]]
+#+END_CENTER
+
+* Chromium tabanlı tarayıcılarda [[https://blog.chromium.org/2020/03/updates-to-form-controls-and-focus.html][form elemanlarının varsayılan görünümü değişiyor]]
+	Microsoft'un yeni Edge tarayıcısının ve Google'ın Chrome tarayıcısının da
+	kullandığı Chromium açık kaynaklı tarayıcısının bu hafta blogunda yayınlanan
+	yazı ile artık form kontrollerinin işletim sistemi değişmeksizin aynı
+	görüneceği duyuruldu. Sorunun ne olduğunu anlamak için web geliştirme yapmış
+	kişilerin mutlaka bir dönem kullandığı belki hala daha kullanıyor olduğu
+	"reset.css" dosyasını hatırlatmak isterim. Hatırlamayan ya da bilmeyenler için
+	bu dosya işletim sistemi ve tarayıcılardan kaynaklanan stil farklılıklarını
+	temizleyen bir css dosyası. Sayfaya önce bu css dosyası eklenir, daha sonra
+	kendi özel css dosyalarımız eklenirdi ki sayfamız tüm tarayıcılarda ve işletim
+	sistemlerinde aynı gözüksün. Modern web dünyasında eskisi kadar ihtiyaç
+	duymasak da Google Chromium ve Microsoft Edge takımları bunu dert edinmişler.
+
+  #+ATTR_HTML: :height 500
+  #+ATTR_LATEX: height 6cm
+	#+CAPTION: *(SOL):* Chrome 80 ve önceki sürümlerdeki stillendirme.
+  #+CAPTION: *(SAĞ):* Yeniden tasarlanan form elemanları.
+	[[file:gorseller/chromium-form-eski-yeni.png]]
+
+	Google'ın Chromium takımı ve Microsoft'un Edge takımının birlikte çalışması
+	sonucu oluşmuş bu yeni form elemanları tasarımları Edge tarayıcısının son
+	sürümünde kullanılmış fakat Chrome'un 81 numaralı sürümünde deneysel olarak
+	kullanıma açılacakmış. Chrome 81'de bu tasarıma geçmek için:
+	chrome://flags/#form-controls-refresh özelliğini aktifleştirmek yeterli olacak
+	deniyor.
+
+	[[file:gorseller/chromium-focus-ring.gif]]
+
+	Aynı zamanda tarayıcıdaki bağlantı ve objeler üzerinde gezinmek için
+	kullanabildiğimiz TAB tuşuyla birlikte ortaya çıkan "focus halkası" (focus
+	ring) de yenilenmiş. Daha görünür olması için siyah renk ve beyaz çerçeve
+	tercih edilmiş. Yine de bazı durumlarda görünmez olabileceği söylenmiş.
+
+	Yapılan diğer değişiklik ve yeniden tasarımlar için konu başlığına eklediğim
+	bağlantıya tıklayabilirsiniz.
+
+	Sizce yeni tasarımlar nasıl oldu? Böyle bir değişikliğe gerek var mıydı?
+	Yorumlar bölümünde konuşalım.
+* GitLab, 18 tane özelliğini [[https://about.gitlab.com/blog/2020/03/30/new-features-to-core/][açık kaynak yapmaya hazırlanıyor]]
+	Popüler uzak git sunucularından biri olan GitLab, bu hafta içerisinde
+	yayınladıkları bir blog yazısı ile birlikte normalde ücretli sürümde olan 18
+	adet özelliği açık kaynak olan sürüme getireceklerini duyurdular. Fakat ilginç
+	bir yöntemle. Özellikler GitLab'in şu 7 parçasının içerisinden alınacakmış:
+	[[https://about.gitlab.com/features/#plan][Plan]], [[https://about.gitlab.com/features/#create][Create]], [[https://about.gitlab.com/features/#verify][Verify]], [[https://about.gitlab.com/features/#release][Release]], [[https://about.gitlab.com/features/#configure][Configure]], [[https://about.gitlab.com/features/#defend][Defend]].
+
+	#+CAPTION: Yani Monitor hariç DevOps sürecinin diğer tüm kısımlardan
+  #+CAPTION: bir şeyler açık kaynak olacak
+	[[file:gorseller/gitlab-devops-plan.png]]
+
+	İlginç bir yöntem dedim çünkü bu özellikleri açık kaynak yapmak için
+	topluluktan yardım istiyorlar. [[https://gitlab.com/gitlab-org/gitlab/-/issues/212330][Issue Export]]'dan, [[https://gitlab.com/gitlab-org/gitlab/-/issues/211685][Web IDE'si için Web
+	Terminal]]'a kadar birçok konuda "gelin bunları birlikte açık kaynak yapalım"
+	diyorlar. Konu başlığına eklediğim blog yazısında açık kaynak yapmak
+	istedikleri her özellik için açılan issue sayfalarının linklerini vermişler.
+	İlgili issue sayfalarında yapılacaklarla ilgili bilgiler vermişler. Böylece
+	insanlar da o konularla ilgili yardım edebiliyor.
+
+	Sonuçta GitLab'ın ücretli sürümünün kaynak kodlarına erişimi olan onlar ve
+	doğal olarak oradan kendileri de açık kaynak hale getirebilirler ilgili
+	parçaları (içerdeki kod yapısı hakkında bilgim yok tabii). Topluluktan yardım
+	istemeleri bana biraz tuhaf geldi. Neyse yine de bizim işimize yarayacak
+	şeyler olduğu için fazla kurcalamayayım :).
+* Eclipse, VSCode alternatifi IDE'sini [[https://www.eclipse.org/org/press-release/20200331-theia.php][açık kaynak olarak duyurdu]]: [[https://theia-ide.org/#features][Eclipse Theia]]
+	Daha çok Java için IDE'si olmakta tanınan ama başka çözümleri de bulunan
+	Eclipse Foundation, bu hafta içerisinde yeni hem bulutta hem de masaüstünde
+	çalışabilen IDE'sini açık kaynak olarak tanıttı.
+
+	Proje aslında 2016 yılında [[https://www.ericsson.com/en][Ericsson]] ve [[https://www.typefox.io/][TypeFox]] firmaları tarafından
+	başlatılmış fakat zamanla Eclipse Foundation gibi birçok firmanın katkılarıyla
+	bu hale gelmiş. Proje şu an Eclipse Foundation altındaki [[https://ecdtools.eclipse.org/][Eclipse Cloud
+	Development Tools Working Group]] (ECD WG) tarafından devam ettiriliyor. Aynı
+	zamanda açık kaynakta olduğu için topluluğun katkılarına açık. Aynı zamanda
+	Google Cloud, RedHat, Arduino, IBM gibi firmalar da projeye katkı yapmışlar.
+
+	#+CAPITON: Görünüm itibariyle VS Code'a çok benziyor, hatta aynısı bile diyebiliriz.
+	[[file:gorseller/eclipse-theia-demo.png]]
+
+	Eclipse'in duyuru yazısında VSCode eklentilerini de bu IDE'de
+	çalıştırabiliyorsunuz diyor fakat ben denemedim. Aynı yazıda Eclipse Theia ile
+	VS Code arasındaki farklar olarak şu üç madde sıralanmış:
+
+	 * Theia'nın mimarisi daha modüler ve özelleştirmelere daha uygun.
+	 * Theia hem masaüstünde hem de bulutta çalışabiliyor.
+	 * Theia topluluk-destekli ve Eclipse Foundation'ın bağımsız yönetimi
+     tarafından geliştiriliyor.
+
+	Son maddeyi ben de tam anlamadım. VS Code'da zaten açık kaynak olduğu için
+	topluluk katkı yapabiliyor ve Microsoft sürümlerini yayınlıyor. Büyük ihtimal
+	yanlış anlamış ve çevirmiş olabilirim. Eğer yanlış anlamışsan, yorumlar
+	bölümünde beni düzeltmekten kendinizi geri koymayın.
+
+	IDE'nin masaüstü uygulaması [[https://www.electronjs.org/][Electron]] tabanlı ve uzaktaki sunucu ile [[https://www.jsonrpc.org/specification][JSON-RPC]]
+	mesajlarını HTTP ya da WebSocket üzerinden ileterek çalışıyor. Ben docker
+	kullanarak kendi bilgisayarıma kurdum ve biraz kurcaladım. Eğer siz de denemek
+	isterseniz bilgisayarınıza Docker kurduktan sonra aşağıdaki komutu açmak
+	istediğiniz proje dizinindeyken çalıştırabilirsiniz (yalnız dosya kaydetme
+	kısmında izinlerle ilgili bir hata veriyor, pek uğraşamadım çözmek için):
+
+	#+BEGIN_SRC bash
+    docker run --rm -it -p 3000:3000 -v "$(pwd):/home/project:cached" theiaide/theia
+	#+END_SRC
+
+	Bu yazılım gündemi yazılarını yazmaya başladığımdan beri fark ettim ki son bir
+	yıldır herkes geliştiricilere bir uzaktan geliştirme çözümü üretmeye
+	çalışıyor. Önümüzdeki birkaç senede popülerliği daha da artacaktır diye
+	umuyorum "Cloud Development" (ya da ileride ne isim verirlerse) olayının. Siz
+	bu konuda ne düşünüyorsunuz? Bu tarz çözümleri kullanır mıydınız ya da
+	kullanıyor musunuz? yoksa "yok arkadaş ben o kadar yenilikçi değilim eski tip
+	masaüstü uygulaması IDE ya da metin editörümle iyiyim" diyenlerden misiniz?
+	yorumlar bölümünde konuşalım.
+* Covid-19 Pandemisi, NodeJS sürüm [[https://nodejs.org/en/blog/announcements/adjusted-release-schedule-covid/][yayınlama takvimini de etkiledi]]
+	Tüm dünya olarak içinde bulunduğumuz süreçten elbette yazılım sektörü de
+	payını almaya devam ediyor. Her ne kadar uzaktan çalışmaya en uygun
+	mesleklerden biri bizimki olsa da, pratikte bazı şeyler düşünüldüğü gibi
+	olmuyor. NodeJS takımı da olası sorunların önüne geçmek amacıyla bu hafta
+	sürüm yayınlama takvimini güncelledi. Buna göre:
+
+	 * =v10.x= ve =v12.x= dallarındaki bir sonraki sürüm 7 Nisan tarihinde çıkacak.
+	 * =v12.x= dalındaki minor sürüm numaralarının yanın tarihleri ertelendi:
+		 * =v12.17.0=: 26 Mayıs 2020
+		 * =v12.18.0=: 25 Ağustos 2020
+	 * =v13.x= dalında, End of Life (hayatının sonu) tarihi olan Haziran 2020'ye
+     kadar yeni bir sürüm yok.
+	 * =v14.x= dalının ilk sürümü ise planlandığı gibi 21 Nisan 2020 tarihinde
+     yayınlanacakmış.
+
+	Tarihlerle ilgili daha detaylı bilgiler için konu başlığına eklediğim
+	bağlantıya tıklayabilirsiniz.
+* PHP 8 sürümünün [[https://wiki.php.net/todo/php80][yayın takvimi belli oldu]]
+	Aşağıdaki sürümlerin hepsi 2020 yılı içerisinde çıkacak.
+
+	| Sürüm      | Yayınlanma Tarihi             |
+	|------------+-------------------------------|
+	| 18 Haziran | Alpha 1                       |
+	| 2 Temmuz   | Alpha 2                       |
+	| 16 Temmuz  | Alpha 3                       |
+	| 27 Temmuz  | Feature freeze                |
+	| 20 Temmuz  | Beta 1                        |
+	| 13 Ağustos | Beta 2                        |
+	| 27 Ağustos | Beta 3                        |
+	| 10 Eylül   | Relase Candidate 1            |
+	| 24 Eylül   | Relase Candidate 2            |
+	| 8 Ekim     | Release Candidate 3           |
+	| 22 Ekim    | Release Candidate 4           |
+	| 5 Kasım    | Release Candidate 5           |
+	| 19 Kasım   | Release Candidate 6           |
+	| 3 Aralık   | Genel Erişilebilirlik (Final) |
+* Safari 13.1 ile [[https://webkit.org/blog/10247/new-webkit-features-in-safari-13-1/][gelen yenilikler]]
+	Geçtiğimiz haftaki yazılım gündemi yazısında (bkz: [[file:../12/yazilim-gundemi-2020-12.org][Yazılım Gündemi - 2020/12]])
+	Safari 13.1 ile birlikte tüm üçüncü parti çerezlerin engellenmeye başlandığını
+	söylemiştim. Bu hafta ise Safari 13.1 ile birlikte gelen ve biz
+	geliştiricileri ilgilendiren diğer birkaç özelliğe birlikte göz atalım.
+
+** JavaScript iyileştirlemeleri
+	 Safari tarayıcısının bu sürümüyle birlikte artık =replaceAll()= fonksiyonu
+	 desteklenmeye başlandı. Yani artık bu kullanım Safari'de de çalışacak:
+   #+ATTR_LATEX: :options frame=lines, linenos, label=JavaScript
+	 #+BEGIN_SRC js
+     "selam teknoseyir replace all deniyoruz".replaceAll(" ", "-");
+     // selam-teknoseyir-replace-all-deniyoruz
+	 #+END_SRC
+
+	 Ayrıca bu sürümle birlikte =??= operatörü de destekleniyor. Artık
+	 değişkenlere şu kullanımla varsayılan değer atayabileceğiz:
+   #+ATTR_LATEX: :options frame=lines, linenos, label=JavaScript
+	 #+BEGIN_SRC js
+     const nullDeger = null
+     const sonuc = nullDeger ?? "varsayılan";  // "varsayılan"
+	 #+END_SRC
+	 Yani yukarıda dedik ki =nullDeger= isimli değişken null ya da 0 ise =sonuc=
+	 değişkenine ="varsayılan"= ifadesi ata.
+** [[https://webkit.org/blog/8343/web-animations-in-webkit/][Web Animations API]]
+	 [[file:gorseller/safari13-web-animations.png]]
+
+	 Safari'nin bu sürümüyle birlikte eklenen bu API sayesinde artık CSS
+	 animasyonlarını JavaScript tarafından yönetebileceğiz. Ayrıca tarayıcının Web
+	 Inspector aracına animasyonları gösterebilecek "Media & Animations" kısmı da
+	 eklenmiş.
+** [[https://w3c.github.io/clipboard-apis/#async-clipboard-api][Async Clipboard API]]
+	 W3C tarafından yeni bir web standardı olarak tanımlanan bu yeni API sayesinde
+	 artık kullanıcıların clipboard'larına asenkron olarak erişip, kopyaladıkları
+	 metinleri web sayfamız içerisinde amacımıza uygun olarak kullanabileceğiz.
+	 Asenkron olmasının avantajı bu işlemler gerçekleştirilirken web sayfamız
+	 tıkanmayacak. Aynı zamanda bu yeni API ile birden fazla farkı türden içeriği
+	 kullanıcının panosuna gönderebilecek ve programlamasal olarak "Yapıştır"
+	 işlemi yapabileceğiz. Mesela bu sayede artık kullanıcının panosunda "http"
+	 ile bağlayan bir ifade varsa bunu =txtSiteUrl= metin kutusuna "Yapıştır" gibi
+	 işlemleri yapabileceğiz.
+** Sources Sekmesi
+   #+ATTR_HTML: :height 450
+   #+ATTR_LATEX: :height 6cm
+	 [[file:gorseller/safari13-sources-tab.png]]
+
+	 Tarayıcının Web Inspector aracına yeni eklenen bu sekme aslında önceki
+	 Resources ve Debugger sekmelerinin birleştirilmiş ve iyileştirilmiş hali.
+	 Üstelik artık yeni [[https://webkit.org/web-inspector/javascript-breakpoints/][JavaScript Breakpoint]]'leri ile debug yapma özelliğine de
+	 sahip.
+
+	Safari 13.1 sürümüyle gelen ve biz geliştiricileri ilgilendiren diğer özellik
+	ve değişiklikler için mutlaka konu başlığına eklediğim bağlantıya tıklayarak,
+	ilgi sayfayı incelemeyi unutmayın.
+* StackOverflow'a [[https://stackoverflow.blog/2020/03/30/introducing-dark-mode-for-stack-overflow/][karanlık mod özelliği beta olarak geldi]]
+	[[file:gorseller/stackoverflow-dark-mode.png]]
+
+	Başlığı okuyunca ben de sizin gibi "Şimdiye kadar nasıl olmaz bu?!" dedim ama
+	yokmuş ve bu hafta eklenmiş. Aslında çeşitli eklentiler ile zaten biz karanlık
+	mod yapabiliyorduk ama sitenin kendinden desteklemesi daha iyi oldu. Bugüne
+	kadar olmaması başlı başına saçmalık zaten. Neyse geç olsun, güç olmasın
+	diyelim.
+
+	Temayı aktifleştirmek için [[https://stackoverflow.com/users/preferences/current][User Preferences]] sayfasını açın ve "Theme"
+	kısmından istediğiniz temayı seçin ve işte! Artık geceleri StackOverflow'a
+	girince far görmüş tavşan gibi bakmayacaksınız ekrana :)
+* [[https://cs.opensource.google/][Google açık kaynak projeleri için kod arama]] sayfasını [[https://opensource.googleblog.com/2020/04/code-search-for-google-open-source.html?m=1][açtı]]
+	[[file:gorseller/google-code-search.png]]
+
+	Google açık kaynak takımının bu hafta blogunda yayınladığı yazı ile artık
+	Google'ın tüm açık kaynak projelerinde arama yapabileceğimiz Code Search
+	sayfası kullanıma açıldı. Bu adresten sayfayı açarak siz de Google'ın açık
+	kaynak projeleri üzerinde dosya ya da kod araması yapabilirsiniz:
+	https://cs.opensource.google/
+
+	Aynı zamanda Android açık kaynak projesi için de bu sayfayı ziyaret
+	edebilirsiniz: https://cs.android.com/
+* Diğer Haberler
+	- Microsoft, Koronavirüs yüzünden artan Azure kullanımlarıyla [[https://mspoweruser.com/azure-overwhelmed-775-percent-demand-in-lockdown/][başa çıkmaya
+    çalışıyor]].
+	- Google, Chroma'daki SameSite Cookie değişikliklerini [[https://blog.chromium.org/2020/04/temporarily-rolling-back-samesite.html?m=1][geçici olarak geri
+    aldı]].
+	- Google servis yönetimini kolaylaştıracak yeni [[https://cloud.google.com/blog/products/networking/introducing-service-directory][hizmetini beta olarak duyurdu]]:
+    [[https://cloud.google.com/service-directory][Service Directory]].
+	- Unreal Engine Wiki [[https://forums.unrealengine.com/unreal-engine/announcements-and-releases/1739154-changes-to-the-official-unreal-engine-wiki][kapatıldı]]. Tüm wiki arşivi [[https://epicgames.ent.box.com/s/2e5hhlvqyu9octooxbkgwt2xdmmrea9z][buradan]] indirilebiliyor.
+	- Go dili için mikroservis framework'ü olan Go Micro, [[https://github.com/micro/go-micro/releases/tag/v2.4.0][v2.4.0 sürümünü
+    yayınladı]].
+	- Nim programlama dilinin [[https://nim-lang.org/blog/2020/04/03/version-120-released.html][1.2.0 sürümü yayınlandı]].
+	- Idris 2 programlama dilinin [[https://www.idris-lang.org/idris-2-version-010-released.html][0.1.0 sürümü yayınlandı]].
+	- Rust programlama dilinin dokümantasyon [[https://blog.rust-lang.org/inside-rust/2020/03/27/goodbye-docs-team.html][takımı kapatıldı]].
+	- Kotlin için GraphQL kütüphanesi graphql-kotlin, [[https://github.com/ExpediaGroup/graphql-kotlin/releases][2.0.0 sürümünü yayınladı]].
+	- VueJS kütüphanesinin [[https://github.com/vuejs/vue-next/releases/tag/v3.0.0-alpha.11][v3.0.0-alpha.11 sürümü yayınlandı]].
+	- Android için HTTP inspector aracı Chucker, [[https://github.com/ChuckerTeam/chucker/releases/tag/3.2.0][v3.2.0 sürümünü yayınladı]].
+	- Sourcetrail aracının [[https://www.sourcetrail.com/blog/release_2020_1/][2020.1 sürümü yayınlandı]].
+	- MultiCore OCaml projesi için [[https://discuss.ocaml.org/t/multicore-ocaml-march-2020-update/5406][Mart 2020 raporu]] yayınlandı.
+	- Sidekick Load Balancer [[https://blog.min.io/introducing-sidekick-a-high-performance-load-balancer/][aracı tanıtıldı]].
+	- Prisma 2.0 Beta programı [[https://www.prisma.io/blog/prisma-2-beta-b7bcl0gd8d8e][duyuruldu]].
+	- RapidFuzz kütüphanesinin [[https://github.com/rhasspy/rapidfuzz/releases/tag/0.6.3][0.6.3 sürümü çıktı]].
+	- simdjson kütüphanesinin 0.3 sürümü [[https://lemire.me/blog/2020/03/31/we-released-simdjson-0-3-the-fastest-json-parser-in-the-world-is-even-better/][yayınlandı]].
+	- Kubie aracı [[https://blog.sbstp.ca/introducing-kubie/][tanıtıldı]]. [[https://github.com/sbstp/kubie][GitHub Deposu]]
+	- Eclipse Dirigible [[https://www.dirigible.io/release/2020/04/04/news_new_release_4_4.html][4.4 sürümü yayınlandı]].
+	- Cortex [[https://grafana.com/blog/2020/04/02/cortex-v1.0-released-the-highly-scalable-fast-prometheus-implementation-is-generally-available-for-production-use/][v1.0 sürümü yayınlandı]].
+	- dapr [[https://github.com/dapr/dapr/releases/tag/v0.6.0][v0.6.0 çıktı]].
+	- libgit2 [[https://github.com/libgit2/libgit2/releases/tag/v1.0.0][v1.0.0 çıktı]].
+	- sctructure [[https://github.com/talyssonoc/structure/releases/tag/v2.0.0][v2.0.0 çıktı]].
+	- SpaceVim [[https://spacevim.org/SpaceVim-release-v1.4.0/][v1.4.0 çıktı]].
+* Lisans
+  #+BEGIN_CENTER
+  #+ATTR_HTML: :height 75
+  #+ATTR_LATEX: :height 1.5cm
+  [[file:../../../img/CC_BY-NC-SA_4.0.png]]
+
+  [[file:yazilim-gundemi-2020-13.org][Yazılım Gündemi - 2020/13]] yazısı [[https://erenhatirnaz.github.io][Eren Hatırnaz]] tarafından [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Creative Commons
+  Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı]] (CC BY-NC-SA 4.0)
+  ile lisanslanmıştır.
+  #+END_CENTER

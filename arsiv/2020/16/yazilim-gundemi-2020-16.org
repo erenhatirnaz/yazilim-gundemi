@@ -1,0 +1,312 @@
+#+TITLE: Yazılım Gündemi - 2020/16
+#+SUBTITLE: 20-26 Nisan 2020
+#+AUTHOR: Eren Hatırnaz
+#+DATE: 29 Nisan 2020
+#+OPTIONS: ^:nil
+#+LANGUAGE: tr
+#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=black, filecolor=red, urlcolor=blue}
+#+LATEX_HEADER: \usepackage[turkish]{babel}
+#+HTML_HEAD: <link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+#+LATEX: \shorthandoff{=}
+
+[[file:gorseller/yazilim-gundemi-banner.png]]
+
+#+BEGIN_CENTER
+[[file:../15/yazilim-gundemi-2020-15.org][< Önceki Gündem]] | *20-26 Nisan 2020* | [[file:../17/yazilim-gundemi-2020-17.org][Sonraki Gündem >]]
+
+[[https://teknoseyir.com/blog/yazilim-gundemi-2020-16][TeknoSeyir'de Oku]]
+#+END_CENTER
+
+* 1 Milyon Yazılımcı [[https://www.hurriyet.com.tr/galeri-1-milyon-yazilimci-projesi-basvurusu-nasil-yapilir-btk-akademi-egitimleri-nasil-olacak-41499705/1][Projesi duyuruldu]]
+	Geçtiğimiz haftanın yazılım gündemi yazısında (bkz: [[file:../15/yazilim-gundemi-2020-15.org][Yazılım Gündemi - 2020/15]])
+	Sanayi ve Teknoloji Bakanı Mustafa Varank'ın Açık Seminer etkinliğinin ilk
+	gününde yaptığı bazı açıklamalara yer vermiştim. Bu hafta da sırasıyla
+	Cumhurbaşkanı ve Hazine ve Maliye Bakanı da alanımızla ilgili bir proje
+	duyurdular ve bazı söylemlerle bulundular. Proje ilk "3 yılda 1 milyon
+	yazılımcı" gibi sloganlarla duyuruldu fakat sonrasında "1 Milyon İstihdam
+	Projesi" olarak güncellendi.
+
+	Proje kapsamında 'yazılımcı' olmak isteyen adaylar [[https://1milyonistihdam.hmb.gov.tr/login][bu adres]] üzerinden kayıt
+	yaptırdıktan sonra BTKAkademi'nin web sitesinin "[[https://www.btkakademi.gov.tr/portal/catalog][Eğitim Kataloğu]]" sayfasında
+	yer alan eğitimleri, uzaktan eğitim yoluyla takip edebilecekler. Bitirdikleri
+	her eğitim, "1 Milyon İstihdam Projesi" kapsamında oluşturulacak öz
+	geçmişlerine (CV) yetenek olarak otomatik şekilde eklenecek. Firmalar ve
+	kurumlar ise bu öz geçmiş havuzundaki kişilerden seçip işe alım
+	yapabilecekler.
+
+	Konu hakkında yorumlarımı TeknoSeyir Sosyal'de birkaç gönderi belirtsem de
+	eleştirilerimin politik bir yanı da olduğu için pek fazla detay vermedim. Bu
+	yazıda da politikadan uzak durmaya çalışarak neden bu projenin karşısında
+	olduğumu açıklamaya çalışacağım.
+
+	Açıkcası ben, bu projenin amacı eğitim sistemimizdeki ve sektördeki sorunları
+	halının altına süpürüp, insanların odaklarını farklı ve alakasız bir noktaya
+	çekmek olduğunu düşünüyorum. Çünkü sektörümüzdeki ve eğitim sistemimizdeki
+	asıl sorun nicelik, yani yazılımcı sayısı değil; niteliktir! Sorun yazılımcı
+	sayısı olmadığı için de bilmem kaç yılda bilmem kaç tane yazılımcı
+	yetiştirerek bu sorunu çözemezsiniz, aksine yeni sorunlar ortaya çıkardığınız
+	gibi mesleğimizin itibarını da zedelemiş olursunuz.
+
+	Asıl konuşmamız gereken meslek alanımızdaki üniversite bölümlerinin
+	kalitesidir. Bu bölümlerden her yıl binlerce öğrenci mezun olmasına rağmen
+	neden sektördeki kalifiye mühendis/yazılımcı ihtiyacı karşılanamıyor?
+	Sorulması ve üzerine kafa yorulup, projeler yapılması gereken konu budur. Her
+	ne kadar artık ülkedeki bu tarz şeylere şaşırmıyor olsam da kendi alanımla
+	ilgili bu tarz şeyler görünce sinirlenmeden edemiyorum.
+
+	[[file:gorseller/bmo-bildiri.jpg]]
+
+	Yazının tamamını bu konuya ayırmak istemiyorum o yüzden sizleri Bilgisayar
+	Mühendisleri Odası'nın [[https://www.bmo.org.tr/2020/04/26/meslek-alanimizdaki-sorunlari-artiracak-siyasi-projelere-karsiyiz/][bugün yayınladığı bildiriyi okumaya davet ediyorum]].
+	Bildiride yazılan her şeye ben de sonuna kadar katılıyorum ve destekliyorum.
+
+	Bu konu hakkında siz ne düşünüyorsunuz? Yorumlar bölümünde konuşalım.
+* Tek satırlık kütüphane tüm [[https://www.zdnet.com/article/another-one-line-npm-package-breaks-the-javascript-ecosystem/][JavaScript ekosistemini kırdı]]
+  #+ATTR_LATEX: :options frame=lines, linenos, label=JavaScript
+	#+BEGIN_SRC javascript
+    function isPromise(obj) {
+      return !!obj &&
+        (typeof obj === 'object' || typeof obj === 'function') &&
+        typeof obj.then === 'function';
+    }
+	#+END_SRC
+
+	Yukarıdaki tek satırlık fonksiyon aslında [[https://github.com/then/is-promise][is-promise]] isimli bir JavaScript
+	kütüphanesi. Yaptığı tek işlem ise verdiğiniz değişkenin "[[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise][Promise]]" objesi olup
+	olmadığını kontrol etmek ve geriye boolean değer döndürmek. Yaptığı iş bu
+	kadar basit olmasına rağmen kütüphane(!) olabilmiş, hatta yetmemiş 3.4 milyon
+	farklı projede kullanılmış, hatta ve hatta komple bir ekosistemi birkaç
+	saatliğine kırabilmiş. İşte size modern yazılım geliştirme süreçlerindeki
+	bağımlılık yönetiminin geldiği halin özeti.
+
+	Bu kütüphaneye [[https://github.com/then/is-promise/commit/feb90a40501c8ef69b0c65bdf1eb703182214407][25 Nisan günü yapılan bir değişiklik]] ve [[https://github.com/then/is-promise/releases/tag/2.2.0][2.2.0 sürümü]]yle
+	birlikte ES Module desteği gelmişti fakat sanırım bu standardı iyi bir şekilde
+	projeye eklememiş olacaklar ki sürümün yayınlanmasından sadece birkaç saat
+	sonra bu kütüphaneyi kullanan projelerin geliştiricileri [[https://github.com/then/is-promise/issues/12][hatalar almaya]]
+	[[https://github.com/then/is-promise/issues/13][başladılar]]. Kütüphanenin yeni sürümündeki hatanın etki alanı oldukça büyük:
+	Facebook'un "[[https://github.com/facebook/create-react-app/issues/8896#issuecomment-619406384][Create React App]]" aracından, Google'ın [[https://github.com/then/is-promise/issues/23][AngularJS framework'üne]],
+	oradan Amazon'un AWS Serverless komut satırı aracına kadar birçok yerden
+	sarsıntılar hissedildi. Hali hazırda çalışan uygulamalarda anlık bir soruna
+	yol açmadı fakat geliştiriciler derleme sırasında hata aldıkları için
+	projelerin geliştirilme süreci aksamış oldu.
+
+	Neyse ki sorunun çözülmesi fazla uzun sürmedi. Birkaç saat içerisinde önceki
+	değişiklikleri geri alan ve sorunu çözen 2.2.2 sürümü yayınlandı.
+
+	Aslında JavaScript ekosistemi için bu olay hiç de yeni bir şey değil. Takip
+	edenler mutlaka hatırlayacaktır. 2016 yılında da left-pad isimli bir
+	kütüphanenin npm'den silinmesi üzerine aynı şeyler yaşanmıştı. Üstelik ilgili
+	kütüphanenin geliştiricisi Türkiye'den bir isimdi: [[https://kodfabrik.com/][Azer Koçulu]]. Konuyla ilgili
+	kendisinin konuk olduğu [[https://podtail.com/en/podcast/devpod/-036-azer-koculu/][şöyle bir podcast yayını]] var. Mutlaka dinlemenizi
+	tavsiye ederim.
+
+	Görünüşe göre yazılım camiası o olaydan dersini almamış. Bu olay da her ne
+	kadar [[https://www.reddit.com/r/programming/comments/g7xweu/another_1liner_npm_package_broke_the_js_ecosystem/][Reddit]] ve [[https://news.ycombinator.com/item?id=22979245][HackerNews]] gibi platformlarda uzun süre ilk sıralarda otursa
+	da yine ders çıkarılacağını pek sanmıyorum. Modern yazılım geliştirme
+	süreçlerinin geldiği durumu pek beğenmiyorum. Şu yukarıdaki gibi tek satırlık
+	bir kodu bile üçüncü parti kütüphane olarak eklemek bana soracak olursanız
+	üşengeçlikten başka bir şey değil.
+
+	Bu konu hakkında siz ne düşünüyorsunuz? Günümüz modern yazılım geliştirme
+	süreçlerinden memnun musunuz? Sizin karşılaştığınız ya da tespit ettiğiniz
+	sorunlar neler? Yorumlar bölümünde konuşalım.
+* Hollanda, kamu hizmetlerinin yazılımlarının [[https://joinup.ec.europa.eu/collection/open-source-observatory-osor/news/legal-barrier-be-removed][açık kaynak olmasını teşvik etmeye başlayacak]]
+	Geçtiğimiz hafta Hollanda İçişleri ve Krallık ilişkileri Devlet Sekreteri
+	Raymond Knops, kamu kurum ve kuruluşlarında açık kaynak kullanımıyla ilgili
+	[[https://www.rijksoverheid.nl/documenten/kamerstukken/2020/04/17/kamerbrief-inzake-vrijgeven-broncode-overheidssoftware][açık mektup yayınlayarak]] (metnin İngilizce çevirisi için [[https://www.reddit.com/r/freesoftware/comments/g77202/netherlands_commits_to_free_software_by_default/fogpeub/][bu reddit yorumu]]na
+	bakabilirsiniz) diğer ülkelere de çağrıda bulundu.
+
+	Metinde kamu kurum ve kuruluşlarının ürettiği yazılımları neden açık kaynak
+	olarak paylaşılması gerektiğinden bahseden Knops, "Eğer iyi bir nedeniniz
+	yoksa kamu yazılımlarını açık kaynak olarak paylaşmalısınız" dedi. Tabii ki
+	bunlara askeri sistemler vb. güvenliğin çok hassas olduğu projeler dahil
+	değil. Bu bağlamda Hollanda'nın da 2021'in ilk aylarında kamu yazılımlarının
+	açık kaynak yapılmasını önünde duran bazı yasal bariyerleri kaldıracaklarını
+	ve kamu kurumlarının yazılımlarının daha şeffaf olması yönünde düzenlemeler
+	yapacaklarını belirttiler. Fakat bu yeni düzenlemeler çıktığı tarihten sonra
+	geliştirilmeye başlanan yazılımları kapsayacak görünüyor. Yalnız şunu
+	belirtmekte fayda var "artık kamu kurum ve kuruluşları yazılımlarını açık
+	kaynak yapmak zorunda" gibi bir durum yok, şu an sadece kurumlara
+	yazılımlarını açık kaynak yapabilmeleri için imkan ve teşvik sağlıyorlar.
+
+	Bu haber farklı bir kaynakta da karşıma çıktı fakat biraz kendi taraflarına
+	yormuşlar gibi geliyor bana. Özgür Yazılım Vakfı Avrupa (FSFE) organizasyonun
+	(bildiğimiz Özgür Yazılım Vakfı ile çalışmaları var fakat birbirlerine bağlı
+	değiller) web sitesinde de bu haber "[[https://fsfe.org/news/2020/news-20200424-01.html][Netherlands commits to Free Software by
+	default]]" başlığıyla yayınlandı. Fakat ben Raymond Knops'un yayınladığı açık
+	mektupun İngilizce çevirisini okuduğumda özgür yazılımla ilgili bir ibareye
+	rastlamadım. Knops, daha çok açık kaynağın getirdiği ekonomik ve teknik
+	faydalardan bahsetmiş. Teknik faydalardan kast ettiğim şunlar: topluluk
+	tarafından desteklenme, ortak geliştirme yapabilme, diğer geliştiricilerin
+	katkı sağlayabilmesi, şeffaflık. Burada özgür yazılım tarafına yorabileceğimiz
+	bir ifade var, o da "şeffaflık". Yazıda parantez içerisinde "açık kaynak"
+	("open source") ifadesini de kullanmışlar fakat benim bu haberden anladığım
+	Hollanda da, büyük yazılım firmaları gibi açık kaynağı kendi amaçları için
+	kullanmak istiyor. Ben de bir özgür yazılım destekçisiyim ama bu habere
+	tarafsız gözle incelediğimde özgür yazılım adına bir ifade göremedim. Yine de
+	başlangıç için çok güzel bir gelişme, ileride özgür yazılımı konuşmanın önünü
+	açabilecek bir gelişme bence.
+
+	Bu konu hakkında siz ne düşünüyorsunuz? Sizce kamu kaynakları kullanılarak
+	oluşturulan yazılımların kaynak kodları yine kamuya açılmalı mı? Devletlerin
+	özgür yazılım tarafına geçmesi mümkün mü? Yorumlar bölümünde konuşalım.
+
+	Ayrıca yeri gelmişken Özgür Yazılım Vakfı Avrupa tarafından başlatılmış
+	"Halkın Parası. Halkın Kodu!" ("Public Money? Public Code!") kampanyasının da
+	[[https://www.youtube.com/watch?v=iuVUzg6x2yo][şu videosunu izlemenizi öneririm]].
+* GitHub'ın yeni bildirim sayfası tasarımı [[https://github.blog/2020-04-22-improving-notifications-for-everyone/][Beta'dan çıktı]]
+	Popüler uzak git sunucularından biri olan GitHub, bu hafta içerisinde uzun bir
+	süredir Beta programında olan bildirim sayfasının yeniden tasarlanmış halini
+	program kapsamından çıkararak, herkes tarafından erişilebilir yaptı. Bu yeni
+	tasarımda artık bildirimler arasında arama yapabilir ve çeşitli filtreler
+	seçerek ekranınızı özelleştirebilirsiniz.
+
+	#+CAPTION: GitHub'ın yeni bildirim sayfası tasarımı
+	[[file:gorseller/github-bildirimler-yeni.png]]
+
+	Yeni tasarımı incelemek için siz de kendi [[https://github.com/notifications][GitHub hesabınızın bildirimler
+	sayfasına]] göz atabilirsiniz.
+* GitLab [[https://about.gitlab.com/releases/2020/04/22/gitlab-12-10-released/][12.10 sürümü yayınlandı]]
+	GitHub'ın en büyük rakiplerinden biri olan GitLab, bu hafta içerisinde 12.10
+	numaralı sürümünü duyurdu. Bu sürümle ile birlikte gelen bazı özellikler
+	ücretsiz kullanıcılara da açıkken, bazıları da sadece ücretli paketlerdeki
+	lisanslı kullanıcılara açık. Gelin birkaç özelliği birlikte inceleyelim.
+
+** CI/CD anahtarlarını HashiCorp Vault üzerinden getirme
+	 Artık HashiCorp firması tarafından sağlanan şifre, anahtar ve sertifika
+	 yönetimi servisi Vault üzerinden ihtiyacımız olan anahtarları getirip, CI
+	 (Continuous Integration) ve CD (Continuous Delivery) süreçleri üzerinde JWT
+	 (JSON Web Token) doğrulama yöntemiyle kullanabileceğiz. Bu özelliklik
+	 ücretsiz ve ücretli tüm GitLab kullanıcılarına açık.
+** Jira üzerinden issue'leri içeri aktarma
+	 Atlassian firması tarafından issue takibi ve proje yönetimi hizmeti olarak
+	 sağlanan Jira platformu üzerindeki issue'leri artık GitLab'a aktarabileceğiz.
+	 Bu özellik de herkesin kullanımına açık.
+** GitHub CI işlerini AWS Fargate üzerinde otomatik ölçekleme
+	 Günümüz modern yazılım geliştirme süreçlerinin önemli bir parçası da artık
+	 Continuous Integration süreçleri oldu. Projede bir değişiklik yaptığınızda bu
+	 değişikliklerin yol açabileceği şeyler farklı sistemler üzerinde denenmek ve
+	 raporlanmak zorunda. Bu deneme ve raporlama işleri de GitLab tarafında GitLab
+	 CI ile çözülüyor. Bu güncelleme ile birlikte artık CI süreçlerinde çalışan
+	 işler AWS Fargate üzerinde otomatik ölçeklenebilecek (autoscaling).
+	 Dolayısıyla deneme ve raporlama süreçleri daha erken bitebilecek. Bu özelliği
+	 GitLab.com üzerinde kullanamıyorsunuz fakat kendi sunucunuzda GitLab
+	 kullanırken ücretsiz olarak bu özellikten faydalanabiliyorsunuz.
+
+	 [[file:gorseller/gitlab-autoscale-aws.png]]
+
+	Bu sürüm ile birlikte pek çok farklı özellikte geldi fakat hepsine burada
+	değinemiyorum. GitLab 12.10 sürümüyle birlikte gelen diğer özellikler için
+	konu başlığına eklediğim bağlantıya tıklayabilirsiniz.
+* NodeJS [[https://medium.com/nodejs/node-js-version-14-available-now-8170d384567e][14.0 sürümü yayınlandı]]
+	Sunucu tarafında JavaScript kullanımına olanak sağlayan NodeJS, bu hafta
+	itibariyle 14 numaralı sürümünü yayınladı. Bu sürümle birlikte gelen bazı
+	özelliklere birlikte bakalım.
+
+	#+CAPTION: Şu anda "Current" dalında olan bu sürüm Ekim 2020'de Long-Term
+  #+CAPTION: Support sürecine girecek. Yani üretim ortamında kullandığınız
+  #+CAPTION: bir NodeJS var ise onu hemen güncellemeniz tavsiye edilmez.
+  #+CAPTION: Uzun dönem desteklenecek hale geldiğince üretim ortamı için
+  #+CAPTION: daha uygun olacaktır.
+	[[file:gorseller/node14-surum.png]]
+
+** JavaScript motoru sürümü V8 8.1 olarak güncellendi
+	 Bu JavaScript motoruyla birlikte gelen bazı özellikler de doğal olarak
+	 NodeJS'e gelmiş oldu. Bunlardan bazıları şu şekilde:
+
+	  * [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining][Optional Chanining]]
+		* [[https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_Coalescing_Operator][Nullish Coalescing]]
+		* [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames][Intl.DisplayNames]]
+		* =calendar= ve =numberingSystem= seçenekleri [[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat][Intl.DateTimeFormat]] için
+      aktifleştirildi.
+** [[https://nodejs.org/api/async_hooks.html#async_hooks_class_asynclocalstorage][Deneysel Asenkron Local Storage API]]
+	 Asenkron yapılar artık günümüzde birçok projede kullanılıyor. Kısaca
+	 açıklamak gerekirse bu yapılar sayesinde belirli bir zaman alan işlemlerin
+	 yazılımı durdurmasının önüne geçiliyor. Yani siz bir siteye girdiğinizde,
+	 sitenin içerisindeki bazı bilgiler başka servislerden geliyor olabilir. Bu
+	 bilgilerin gelme işlemi devam ederken siz site üzerinde gezinti yapmaya devam
+	 edebiliyorsunuz. İşte bu yapı artık Local Storage için de geldi. Artık Local
+	 Storage üzerine veri kayıt ederken ve okurken asenkron olabileceğiz.
+
+
+	NodeJS 14 ile birlikte gelen diğer özellik ve değişiklikler için konu
+	başlığına eklediğim bağlantıya; değindiğim özelliklerin detayları için de
+	ilgili alt başlığın içerisindeki bağlantılara tıklayabilirsiniz. Ayrıca
+	alternatif kaynak için IBM'deki geliştiriciler tarafından hazırlanmış [[https://www.youtube.com/watch?v=2iIJhi6_ngo][şu
+	videoyu da izleyebilirsiniz]].
+* Python 2 için [[https://www.python.org/downloads/release/python-2718/][son güncelleme: 2.7.18]]
+	Geçtiğimiz senenin eylül ayı içerisinde Python 2 sürüm dalının 3 aylık ömrü
+	kaldığını haber vermiştim (bkz: [[file:../../2019/yazilim-gundemi-09.org][Yazılım Gündemi - 9]]). Bu hafta ise Python 2
+	sürüm dalı son güncellemesini aldı. Artık Python 2 sürümü geliştirilmeye devam
+	edilmeyecek. Bu haber vesilesiyle Python 2 ile artık yeni projelere
+	başlanmamasını, var olan aktif geliştirilen projelerin de Python 3 sürüm
+	dalına geçirilmesini tavsiye etmiş olayım.
+
+	Ayrıca konuyla ilgili StackOverflow'un Blog sayfasında da [[https://stackoverflow.blog/2020/04/23/the-final-python-2-release-marks-the-end-of-an-era/][bir yazı yayınlandı]].
+	İlgili arkadaşlar nostalji yapmak için o yazıyı da okuyabilirler.
+  #+LATEX: \newpage
+* Yaklaşan Online Etkinlikler #EvdeKal
+  #+ATTR_HTML: :width 100%
+  #+ATTR_LATEX: :environment longtable :align |p{9.5cm}|l|
+  |-----------------------------------------------------------+----------------|
+  | Etkinlik İsmi                                             | Tarihi         |
+  |-----------------------------------------------------------+----------------|
+  | [[https://kommunity.com/tracikkaynak/events/acik-seminer-11-gun-ml-algorithms-use-cases-watson-studio-workshops-hands-on-8936cb51][AçıkSeminer 11. Gün: Makine Öğrenmesine Giriş]]             | 29 Nisan 14:00 |
+  | [[https://kommunity.com/akademi/events/carbon-black-uzerinden-olay-mudahalesi-ve-tehdit-avciligi-c4276138][Carbon Black Üzerinden Olay Müdahalesi ve Tehdit Avcılığı]] | 29 Nisan 16:30 |
+  | [[https://kommunity.com/mavidurakio/events/s1e38-yazilimci-bulusmasi-3c624265][Yazılımcı Buluşması (MaviDurak-IO)]]                        | 29 Nisan 20:45 |
+  | [[https://kommunity.com/kadin-yazilim-tasarim/events/soylesi-kadin-yazilimcilar-toplaniyor-yazilima-adim-atmak-canli-yayin-a2709f1b][Kadın Yazılımcılar Toplanıyor - Yazılıma Adım Atmak]]       | 29 Nisan 21:00 |
+  | [[https://kommunity.com/istanbulphp/events/4x4-laravel-a5e89ab9][4x4 Laravel]]                                               | 29 Nisan 21:00 |
+  | [[https://kommunity.com/devops-turkiye/events/kubernetes-insights-with-humio-3f940956][Kubernetes insights with Humio]]                            | 29 Nisan 22:00 |
+  | [[https://kommunity.com/tracikkaynak/events/acik-seminer-12-gun-dijital-cagda-deneyim-yonetimi-50cbfc05][AçıkSeminer 12. Gün: Dijital Çağda Deneyim Yönetimi]]       | 30 Nisan 14:00 |
+  | [[https://kommunity.com/mobilerdev/events/fluttera-dogru-2-dart-fecaa463][Flutter'a Doğru no.2 - Dart]]                               | 30 Nisan 21:00 |
+  | [[https://kommunity.com/cloud-and-serverless-turkey/events/ramazan-ozel-2-nosql-nedir-ve-ne-zaman-kullanilmali-0e8533fb][NoSQL nedir ve ne zaman kullanılmalı]]                      | 30 Nisan 23:00 |
+  | [[https://kommunity.com/tracikkaynak/events/acik-seminer-13-gun-acik-kaynak-kodlu-veri-bilimi-yaklasim-0a14d5dd][AçıkSeminer 13. Gün: Açık Kaynak Veri Bilimi]]              | 1 Mayıs 14:00  |
+  | [[https://kommunity.com/react-native-turkey/events/etkinlik-iki-aws-amplify-ve-react-1735e369][ReactJS ve AWS Amplify - Serverless Web Development]]       | 1 Mayıs 16:10  |
+  | [[https://kommunity.com/akademi/events/bulutta-siber-olay-mudahalesi-b92d1d73][Bulut'ta Siber Olay Müdahalesi]]                            | 1 Mayıs 16:30  |
+  | [[https://kommunity.com/flutter-izmir-1/events/flutter-izmir-canli-yayini-2-f1b24bbf][Flutter İzmir Canlı Yayını - 2]]                            | 2 Mayıs 13:00  |
+  | [[https://kommunity.com/cloud-and-serverless-turkey/events/kubernetes-hands-on-1-kubernetes-installation-the-hard-way-7bf5e75f][Kubernetes Installation, The Hard Way]]                     | 2 Mayıs 13:30  |
+  | [[https://kommunity.com/tensorflow-turkey/events/ml-in-the-wild-series-1-data-preparation-73ac8e24][ML in the Wild Series - 1: Data Preparation]]               | 2 Mayıs 21:00  |
+  | [[https://kommunity.com/devnot-yazilimci-bulusmalari/events/fluttera-giris-e38503c7][Flutter'a Giriş]]                                           | 2 Mayıs 22:00  |
+  | [[https://kommunity.com/teknolojisohbetleri/events/elasticsearch-ve-kibana-21cec45e][Elasticsearch ve Kibana]]                                   | 3 Mayıs 21:00  |
+  | [[https://kommunity.com/cloud-and-serverless-turkey/events/ramazan-ozel-3-kim-on-call-olmali-neden-ve-nasil-24a94df1][Kim On-Call olmalı, neden ve nasıl]]                        | 3 Mayıs 23:00  |
+  |-----------------------------------------------------------+----------------|
+* Diğer Haberler
+	- OpenSSL'deki kritik bir [[https://www.openssl.org/news/secadv/20200421.txt][güvenlik açığı kapatıldı]].
+	- BitBucket, COVID-19 salgını yüzünden Mercurial kullanan [[https://bitbucket.org/blog/sunsetting-mercurial-support-in-bitbucket][depoları silmeyi
+    erteledi]]. Son gün: 1 Temmuz 2020. (bkz: [[file:../../2019/06/yazilim-gundemi-06.org][Yazılım Gündemi - 6]])
+	- Amazon Web Services, Afrika'da (Cape Town) [[https://aws.amazon.com/blogs/aws/now-open-aws-africa-cape-town-region/][veri merkezi açtı]]: =af-south-1=.
+	- AWS ChatBot, Beta [[https://aws.amazon.com/blogs/aws/aws-chatbot-chatops-for-slack-and-chime/][programından çıktı]].
+	- Google, Anthos [[https://cloud.google.com/blog/topics/anthos/anthos-for-aws-is-now-ga][platformunu genişletiyor]].
+	- Facebook ve Amazon yeni ortak PyTorch [[https://aws.amazon.com/blogs/aws/announcing-torchserve-an-open-source-model-server-for-pytorch/][araçlarını duyurdular]]: [[https://github.com/pytorch/serve][TorchServe]],
+    [[https://ai.facebook.com/blog/facebook-ai-aws-partner-to-release-new-pytorch-libraries-/][Alternatif]]
+	- PyTorch [[https://pytorch.org/blog/pytorch-1-dot-5-released-with-new-and-updated-apis/][1.5 sürümü yayınlandı]].
+	- ProtonMail Android uygulaması [[https://protonmail.com/blog/android-open-source/][açık kaynak oldu]].
+	- Android 11 Geliştirici [[https://android-developers.googleblog.com/2020/04/android-11-developer-preview-3.html][Ön İzlemesi 3 sürümü yayınlandı]].
+	- .NET 5.0 [[https://devblogs.microsoft.com/dotnet/announcing-net-5-0-preview-3/][Preview 3 sürümü duyuruldu]].
+	- Windows Terminal Preview [[https://devblogs.microsoft.com/commandline/windows-terminal-preview-v0-11-release/][v0.11 sürümü yayınlandı]].
+	- Go Geliştirici Anketi 2019 [[https://blog.golang.org/survey2019-results][sonuçları açıklandı]].
+	- Rust programlama dilinin [[https://blog.rust-lang.org/2020/04/23/Rust-1.43.0.html][1.43.0 sürümü yayınlandı]].
+	- R programlama dilinin [[https://stat.ethz.ch/pipermail/r-announce/2020/000653.html][4.0.0 sürümü yayınlandı]].
+	- VueJS v3.0.0 [[https://github.com/vuejs/vue-next/releases/tag/v3.0.0-beta.4][Beta 4 sürümü yayınlandı]].
+	- Angular [[https://github.com/angular/angular/releases/tag/9.1.3][9.1.3 sürümü yayınlandı]].
+	- ClojureScript [[https://clojurescript.org/news/2020-04-24-release][1.10.741 sürümü yayınlandı]].
+	- Embeddable Common-Lisp [[https://common-lisp.net/project/ecl/posts/ECL-20424-release.html][20.4.24 sürümü yayınlandı]].
+	- TestContainers Java kütüphanesinin [[https://github.com/testcontainers/testcontainers-java/releases/tag/1.14.1][1.41.1 sürümü yayınlandı]].
+	- WineHQ [[https://www.winehq.org/announce/5.7][5.7 sürümü yayınlandı]].
+	- css.gg [[https://github.com/astrit/css.gg/releases/tag/2.0.0][v2.0.0 çıktı]].
+	- Blitz [[https://github.com/blitz-js/blitz/releases/tag/v0.6.6][v0.6.6 çıktı]].
+	- DataFusion [[https://andygrove.io/2020/04/datafusion-0.17.0/][v0.17.0 çıktı]].
+	- Tide [[https://github.com/http-rs/tide/releases/tag/v0.8.0][v0.8.0 çıktı]].
+	- i18n-ally [[https://github.com/antfu/i18n-ally/releases/tag/v2.0.3][v2.0.3 çıktı]].
+	- Cap'n Proto [[https://capnproto.org/news/2020-04-23-capnproto-0.8.html][v0.8 çıktı]].
+	- Voyager [[https://github.com/appscode/voyager/releases/tag/v12.0.0-rc.2][v12.0.0-rc.2 çıktı]].
+* Lisans
+  #+BEGIN_CENTER
+  #+ATTR_HTML: :height 75
+  #+ATTR_LATEX: :height 1.5cm
+  [[file:../../../img/CC_BY-NC-SA_4.0.png]]
+
+  [[file:yazilim-gundemi-2020-16.org][Yazılım Gündemi - 2020/16]] yazısı [[https://erenhatirnaz.github.io][Eren Hatırnaz]] tarafından [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Creative Commons
+  Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı]] (CC BY-NC-SA 4.0)
+  ile lisanslanmıştır.
+  #+END_CENTER

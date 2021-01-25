@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 22:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi - 2020/08</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi - 2020/08
+<br />
+<span class="subtitle">17 Şubat - 1 Mart 2020</span>
+</h1>
+<div id="table-of-contents">
+<h2>İçindekiler</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org0cc44d3">1. Son 13 yılın tüm Apache Tomcat sürümlerini etkileyen güvenlik açığı ortaya çıktı: Ghostcat</a></li>
+<li><a href="#org4c19b9e">2. Safari yakında 13 aydan uzun geçerliliği olan sertifikaları kabul etmemeye başlayacak</a></li>
+<li><a href="#orgd6624f7">3. GitHub Öğrenci Geliştirici Paketi 100+ ücretsiz servis ve araç sayısına ulaştı</a></li>
+<li><a href="#orgfb690d5">4. .NET Core 3 sürümü 3 Mart'da emekliye ayrılıyor</a></li>
+<li><a href="#orgc4806b3">5. VueJS Belgeseli yayınlandı</a></li>
+<li><a href="#org797496e">6. Qt, Visual Studio Linux desteği için çalışmaya başlamış</a></li>
+<li><a href="#org09005b5">7. Yaklaşan Etkinlikler</a></li>
+<li><a href="#org38f9845">8. Diğer Haberler</a></li>
+<li><a href="#orgbb9e0eb">9. Lisans</a></li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gundemi-banner.png" alt="yazilim-gundemi-banner.png" />
+</p>
+</div>
+
+<div class="org-center">
+<p>
+<a href="../07/yazilim-gundemi-2020-07.html">&lt; Önceki Gündem</a> | <b>17 Şubat - 1 Mart 2020</b> | <a href="../09/yazilim-gundemi-2020-09.html">Sonraki Gündem &gt;</a>
+</p>
+
+<p>
+<a href="https://teknoseyir.com/blog/yazilim-gundemi-2020-08">TeknoSeyir'de Oku</a>
+</p>
+</div>
+
+<div id="outline-container-org0cc44d3" class="outline-2">
+<h2 id="org0cc44d3"><span class="section-number-2">1</span> Son 13 yılın tüm Apache Tomcat sürümlerini etkileyen <a href="https://www.zdnet.com/article/ghostcat-bug-impacts-all-apache-tomcat-versions-released-in-the-last-13-years/">güvenlik açığı ortaya çıktı</a>: <a href="https://www.chaitin.cn/en/ghostcat">Ghostcat</a></h2>
+<div class="outline-text-2" id="text-1">
+
+<div class="figure">
+<p><img src="gorseller/ghostcat.png" alt="ghostcat.png" height="100" />
+</p>
+<p><span class="figure-number">Şekil 2: </span>Ghostcat Maskotu. Son yıllarda artık güvenlik açıklarının da maskotunun olması moda oldu.</p>
+</div>
+
+<p>
+Çinli siber güvenlik firması Chaitin Tech tarafından ortaya çıkan bu güvenlik
+açığı sayesinde kötü amaçlı kişiler sunucunuzdaki dosyaları okuyabilir, hatta
+bazı durumlarda ise yazabiliyor. 2007 yılından bu yana çıkmış bütün Apache
+Tomcat versiyonlarını kapsayan bu açık Java ile geliştirilmiş web
+uygulamalarını tehdit ediyor. Bulan araştırmacılar ise açığa "Ghostcat" ismini
+vermişler. Açığın uluslararası kodu ise <a href="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-1938">CVE-2020-1938</a>.
+</p>
+
+<p>
+Aslında açığın asıl kaynağı Apache Tomcat'in içinde kullanılan bir AJP isimli
+parçadan kaynaklanıyor. Açılımı Apache JServ Protocol olan bu parça, sunucunun
+diğer Tomcat ya da Apache HTTPD sunucuları ile veri alışverişi yapabilmesine
+yarıyormuş. Bu parça tüm Tomcat sunucularında varsayılan olarak açık geliyor
+ve 8009 numaralı port üzerinden yayın yapıyor. Bu açık sayesinde hackerlar
+sunucunuzun ayar dosyaları okuyup, bir takım hassas verileri çalabilirler.
+Eğer sunucunuzda kullanıcıların dosya yüklemesini sağlayan bir mekanizma varsa
+bu açık sayesinde kötü amaçlı kişiler sisteminize bir takım zararlı yazılımlar
+da enjekte edebiliyorlar.
+</p>
+
+<p>
+Açığı bulan firma ve Apache Tomcat birlikte çalışmışlar ve açığı kapatan sürüm
+güncellemelerini yayınlamışlar fakat bu güncellemeler sadece <a href="https://tomcat.apache.org/security-7.html#Fixed_in_Apache_Tomcat_7.0.100">Tomcat 7.x</a>,
+<a href="https://tomcat.apache.org/security-8.html#Fixed_in_Apache_Tomcat_8.5.51">Tomcat 8.x</a> ve <a href="https://tomcat.apache.org/security-9.html#Fixed_in_Apache_Tomcat_9.0.31">Tomcat 9.x</a> sürümleri için yayınlandı. Diğer sürümler
+hayatlarının sonuna gelmiş (End of Life) oldukları için o sürümler için
+güncelleme gelmeyecek.
+</p>
+
+<p>
+Hangi sunucuların etkilendiğini tespit etmek güç olsa da BinaryEdge firmasına
+göre yaklaşık bir milyondan fazla Tomcat sunucusu şu an internette yayın
+yapmakta. Aynı zamanda Java ile web uygulama geliştirmeye yarayan Spring Boot
+kütüphanesinin de bu açıktan etkilenenler <a href="https://snyk.io/blog/ghostcat-breach-affects-all-tomcat-versions/">arasında olduğu söyleniyor</a>.
+</p>
+
+<p>
+Eğer sizin de Apache Tomcat üzerinden yayın yapan web uygulamalarınız varsa
+en kısa zamanda son sürüme güncellemenizi şiddetle tavsiye ederim.
+</p>
+</div>
+</div>
+<div id="outline-container-org4c19b9e" class="outline-2">
+<h2 id="org4c19b9e"><span class="section-number-2">2</span> Safari yakında 13 aydan uzun geçerliliği olan <a href="https://thenextweb.com/security/2020/02/24/safari-will-soon-reject-any-https-certificate-valid-for-more-than-13-months/">sertifikaları kabul etmemeye başlayacak</a></h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Apple ekosisteminin varsayılan tarayıcısı olan Safari, geçtiğimiz haftalarda
+düzenlenen 49'uncu <a href="https://cabforum.org/">CA/Browser Forum</a>'unda yeni bir kural duyurdu: "Eğer
+sertifikanın geçerlilik tarihi 13 aydan fazla (398 gün) ise reddedeceğim".
+Yani demek oluyor ki web sitenizin HTTPS sertifikasını her yıl yenilemezseniz
+Safari tarayıcısı kullanıcılarına "bu site güvenli değil" uyarısı gösterecek.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/safari-sertifika-github.png" alt="safari-sertifika-github.png" height="450" />
+</p>
+<p><span class="figure-number">Şekil 3: </span>GitHub'ın güncel sertifika bilgileri</p>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/safari-sertifika-microsoft.png" alt="safari-sertifika-microsoft.png" height="450" />
+</p>
+<p><span class="figure-number">Şekil 4: </span>Microsoft'un güncel sertifika bilgileri</p>
+</div>
+<p>
+GitHub ve Microsoft gibi büyük şirketler de fazla uğraşmamak için HTTPS
+sertifikalarını 2 yıllık alıyor. Eğer Safari bu kararından geri adım atmazsa
+Microsoft ve GitHub da sertifikalarını yenilemek zorunda kalacak.
+</p>
+
+<p>
+Safari'nin neden böyle bir karar aldığını anlamak güç. Let's Encrypt gibi
+ücretsiz sertifika sağlayan otoritelerin otomatik yenileme araçları olsa da
+diğer otoritelerin böyle bir çözümü var mı emin değilim. Sizler de Safari'nin
+bu yeni kuralından etkilenmek istemiyorsanız aktif web sitelerinizin HTTPS
+sertifikalarının geçerlilik sürelerini kontrol edin.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd6624f7" class="outline-2">
+<h2 id="orgd6624f7"><span class="section-number-2">3</span> GitHub Öğrenci Geliştirici Paketi 100+ ücretsiz <a href="https://github.blog/2020-02-25-over-100-partners-to-help-you-succeed-with-the-github-student-developer-pack/">servis ve araç sayısına ulaştı</a></h2>
+<div class="outline-text-2" id="text-3">
+
+<div class="figure">
+<p><img src="gorseller/github-ogrenci-gelistirici-paketi.png" alt="github-ogrenci-gelistirici-paketi.png" height="200" />
+</p>
+</div>
+
+<p>
+GitHub'ın yaklaşık 6 yıl vermeye başladığı bu paket, bu hafta eklenen 14
+teklifle birlikte 100'den fazla ücretsiz servis ve aracı öğrenci
+geliştiricilerle buluşturmaya devam ediyor. Üniversiteniz size <b>.edu</b> ya da
+<b>.edu.tr</b> ile biten bir mail adresi veriyorsa bu paketten siz de
+yararlanabiliyorsunuz. <a href="https://education.github.com/pack">Bu adresten</a> paketi almak için başvuru yapabilirsiniz.
+Genelde çok kısa bir süre içinde aktif oluyor paketiniz ve içerisinde
+geliştirme yaparken kullanabileceğiniz birçok araç ve hizmet var. Ben de
+üniversiteyken almıştım ve birçok avantajından faylanmıştım. Öğrenci
+arkadaşların mutlaka göz atmasını ve paketi almalarını tavsiye ederim. Sektöre
+hazırlık için çok faydalı olacak. Eğer üniversiteniz bu .edu ya da .edu.tr ile
+biten e-posta adresi sağlamıyorsa gerekli mercilere başvurarak ısrarla
+isteyiniz :)
+</p>
+
+<p>
+Ayrıca bu hafta içerisinde GitHub'a çok satırlı kod önerme özelliği de <a href="https://github.blog/changelog/2020-02-26-multi-line-code-suggestions-beta/">beta
+olarak yayınlandı</a>.
+</p>
+</div>
+</div>
+<div id="outline-container-orgfb690d5" class="outline-2">
+<h2 id="orgfb690d5"><span class="section-number-2">4</span> .NET Core 3 sürümü 3 Mart'da <a href="https://devblogs.microsoft.com/dotnet/net-core-3-0-end-of-life/">emekliye ayrılıyor</a></h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Microsoft'un açık kaynak olarak geliştirmeye devam ettiği .NET ekosisteminin
+ana parçası olan .NET Core'un 3 numaralı sürümü 3 Mart'tan itibaren emekliye
+ayrılıyor. Bu da demek oluyor ki bundan sonra .NET Core 3 sürümü için destek
+sunulmayacak. Microsoft onun yerine geçtiğimiz aylarda LTS (Long-term
+Support - Uzun dönemli destek) olarak duyurduğu 3.1 sürümüne geçmeyi tavsiye
+ediyor.
+</p>
+
+<p>
+Bu sürüm güncellemesini yapmak için <code>.csproj</code>, <code>.vbproj</code> ya da <code>.fsproj</code> ile
+biten proje dosyasınızı açıp içerisindeki şu satırı:
+</p>
+<div class="org-src-container">
+<pre class="src src-xml"><span class="org-nxml-tag-delimiter">&lt;</span><span class="org-nxml-element-local-name">TargetFramework</span><span class="org-nxml-tag-delimiter">&gt;</span><span class="org-nxml-text">netcoreapp3.0</span><span class="org-nxml-tag-delimiter">&lt;</span><span class="org-nxml-tag-slash">/</span><span class="org-nxml-element-local-name">TargetFramework</span><span class="org-nxml-tag-delimiter">&gt;</span>
+</pre>
+</div>
+<p>
+şununda değiştirebilirsiniz:
+</p>
+<div class="org-src-container">
+<pre class="src src-xml"><span class="org-nxml-tag-delimiter">&lt;</span><span class="org-nxml-element-local-name">TargetFramework</span><span class="org-nxml-tag-delimiter">&gt;</span><span class="org-nxml-text">netcoreapp3.1</span><span class="org-nxml-tag-delimiter">&lt;</span><span class="org-nxml-tag-slash">/</span><span class="org-nxml-element-local-name">TargetFramework</span><span class="org-nxml-tag-delimiter">&gt;</span>
+</pre>
+</div>
+
+<p>
+Eğer hali hazırda .NET Core 3 ile çalışan bir uygulamanız varsa o kadar da
+acele etmenize gerek yok fakat yavaş yavaş sürüm yükseltmeye hazırlanmanız
+sizin için iyi olacaktır.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc4806b3" class="outline-2">
+<h2 id="orgc4806b3"><span class="section-number-2">5</span> VueJS Belgeseli yayınlandı</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Popüler JavaScript kütüphanelerinden biri olan VueJS'in hikayesini
+geliştiricisi Evan You ve katkı sağlayan diğer geliştiricilerinden ağzından
+dinlemek için <a href="https://www.youtube.com/watch?v=OrxmtDw4pVI">şu YouTube videosunu izleyebilirsiniz</a>.
+</p>
+</div>
+</div>
+<div id="outline-container-org797496e" class="outline-2">
+<h2 id="org797496e"><span class="section-number-2">6</span> Qt, Visual Studio Linux desteği için <a href="https://devblogs.microsoft.com/cppblog/qt-to-support-visual-studio-linux-projects/">çalışmaya başlamış</a></h2>
+<div class="outline-text-2" id="text-6">
+<p>
+C++ ile platformlar-arası uygulama geliştirmeye yarayan uygulama çatısı Qt
+geçtiğimiz haftalarda yayınlandığı <a href="https://www.qt.io/blog/cross-platform-development-with-qt-and-visual-studio">blog yazısı</a>yla birlikte Visual Studio Linux
+sürümü için de Qt desteği sunmak için çalıştıklarını duyurdu. İlk sürümününü
+bu yılın yaz aylarında yayınlamayı planlıyorlarmış. Bu sayede zaten birçok
+platform için destek sunan Qt, kapsamını daha da genişletmiş olacak.
+</p>
+</div>
+</div>
+<div id="outline-container-org09005b5" class="outline-2">
+<h2 id="org09005b5"><span class="section-number-2">7</span> Yaklaşan Etkinlikler</h2>
+<div class="outline-text-2" id="text-7">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" width="100%">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Etkinlik İsmi</th>
+<th scope="col" class="org-left">Yeri</th>
+<th scope="col" class="org-left">Tarihi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/yurt-dsnda-yazlmc-olmak-tickets-97277791493">Yurt Dışında Yazılımcı Olmak!</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">2 Mart 18:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/siber-guvenlik-ve-bt-denetiminde-kariyer-registration-96218045765">Siber Güvenlik ve BT Denetiminde Kariyer</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">3 Mart 18:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/DevTest-Community/events/269032606/">Dealing with Errors on JVM with e</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">3 Mart 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/devops-turkiye/events/prometheus-ve-grafana-ile-metrik-olusturma-ve-goruntuleme">Prometheus ve Grafana ile Metrik Oluşturma ve Görüntüleme</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">4 Mart 18:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/AWS-User-Group-Turkey/events/268979622/">AWS Meetup No.46 - AWS ve Güvenlik</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">4 Mart 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/Microsoft-Giri%25C5%259Fimcilik-Bulu%25C5%259Fmalar%25C4%25B1/events/268504717/">Microservice with Azure Kubernetes Service and Azure Devops</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">5 Mart 13:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/nedir-bu-devops-dedikleri-tickets-95894584283">Nedir Bu DevOps Dedikleri</a></td>
+<td class="org-left">Ankara</td>
+<td class="org-left">5 Mart 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/Istanbul-Hackers/events/268983054/">Private Kubernetes Cluster Automation with Terraform</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">5 Mart 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/fp-istanbul/events/functional-programming-istanbul-001">Functional Programming Istanbul 001</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">5 Mart 19:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/QWomen-%25C4%25B0stanbul/events/268233749/">Kuantum Programlamaya Giriş Atölyesi</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">7 Mart 09:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/gdgtekirdag/events/268421016/">WTM Tekirdağ IWD 2020</a></td>
+<td class="org-left">Tekirdağ</td>
+<td class="org-left">7 Mart 10:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/GDG-Cloud-Istanbul/events/268749560/">Google Cloud Run Workshop</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">7 Mart 14:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/rladies-ankara/events/269092053/">Tanışma ve Kaynaşma Buluşması (R-Ladies Ankara)</a></td>
+<td class="org-left">Ankara</td>
+<td class="org-left">7 Mart 13:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/GDG-Cloud-Izmir/events/268749612/">GCP Projects, Service Account And Billing &amp; Intro to Computing in GCP</a></td>
+<td class="org-left">İzmir</td>
+<td class="org-left">8 Mart 13:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/GDG-Manisa/events/268736708/">Firebase Study Jam</a></td>
+<td class="org-left">Manisa</td>
+<td class="org-left">10 Mart 12:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/gdg-cloud-ankara/events/269089185/">Kubernetes'e Giriş StudyJam</a></td>
+<td class="org-left">Ankara</td>
+<td class="org-left">10 Mart 18:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/cloud-and-serverless-turkey/events/serverless-mindset-and-serverless-data-analytics-getir-ankara">Serverless Mindset and Serverless Data Analytics</a></td>
+<td class="org-left">Ankara</td>
+<td class="org-left">12 Mart 18:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/trendyol/events/268292201/">Kotlin Reactive Programing-Coroutines</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">12 Mart 19:15</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/Facebook-Developer-Circle-Istanbul/events/269082757/">Containers for Java Devs - Mohammed Aboullaite</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">12 Mart 19:15</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/Istanbul-Java-User-Group/events/268426411/">Java Day Pre-Conference</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">13 Mart 13:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/devnot-yazilimci-bulusmalari/events/merkeziyetsiz-uygulamalardapps-gelistirme">Merkeziyetsiz Uygulamalar(dApps) Geliştirme</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">13 Mart 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/btorgtr/events/test-bilisim-kahvesi-laboratuari">Test: Bilişim Kahvesi Lab</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">13 Mart 19:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/Istanbul-Java-User-Group/events/267956332/">Java Day Istanbul 2020</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">14 Mart 08:00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org38f9845" class="outline-2">
+<h2 id="org38f9845"><span class="section-number-2">8</span> Diğer Haberler</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li>Let's Encrypt, 1 milyar <a href="https://letsencrypt.org/2020/02/27/one-billion-certs.html">sertifika rakamına ulaştı</a>.</li>
+<li><a href="https://www.jetbrains.com/company/annualreport/2019/">JetBrains 20 yaşında</a>.</li>
+<li>JetBrains, <a href="https://surveys.jetbrains.com/s3/e4-kotlin-census-2019">Kotlin Census 2019 Anketi</a>ni başlattı.</li>
+<li>Microsoft, Koronavirüs nedeniyle Game Developer Conference 2020 <a href="https://www.gematsu.com/2020/02/microsoft-cancels-gdc-2020-presence-due-to-coronavirus-concerns">etkinliğini
+iptal etti</a>. Facebook'da kendi geliştirici konferansını <a href="https://www.theguardian.com/technology/2020/feb/27/facebook-f8-coronavirus-san-francisco-health">aynı nedenle iptal
+etti</a>. <a href="https://esa-pages.io/p/sharing/68/posts/1006/b15a58c675f5a69d06e5.html">RubyKaigi 2020</a> etkinliği de iptal edildi.</li>
+<li>Facebook, deneysel Javascript araç kutusunu <a href="https://twitter.com/sebmck/status/1232885861135421441">açık kaynak olarak yayınladı</a>:
+<a href="https://github.com/facebookexperimental/rome">Rome</a>.</li>
+<li>Netflix, kriz yönetim sistemini <a href="https://medium.com/NetflixTechBlog/introducing-dispatch-da4b8a2a8072%0A">açık kaynak hale getirdi</a>: <a href="https://github.com/Netflix/dispatch">Dispatch</a>.</li>
+<li>Google, Cloud sistemi için monitörleme panellerinin <a href="https://cloud.google.com/blog/products/management-tools/introducing-the-cloud-monitoring-dashboards-api">API'sini duyurdu</a>:
+<a href="https://cloud.google.com/monitoring/dashboards/api-dashboard">Stackdriver Cloud Monitoring dashboards API</a>.</li>
+<li>Özgür Yazılım Vakfı, 2020 yılı içinde kendi kod barındırma platformunu <a href="https://www.fsf.org/blogs/sysadmin/coming-soon-a-new-site-for-fully-free-collaboration">ayağa
+kaldıracağını duyurdu</a>.</li>
+<li>JPEG komitesi yapay zeka bazlı resim sıkıştırma <a href="https://jpeg.org/items/20200217_press.html">için çağrıda bulundu</a>.</li>
+<li>Android Studio ve araçlarının yeni versiyonları yayınlandı:
+<ul class="org-ul">
+<li><a href="https://androidstudio.googleblog.com/2020/02/android-studio-361-available.html">Android Studio 3.6.1</a></li>
+<li><a href="https://androidstudio.googleblog.com/2020/02/android-studio-41-canary-1-available.html">Android Studio 4.1 Canary 1</a></li>
+<li><a href="https://androidstudio.googleblog.com/2020/02/android-studio-40-beta-1-available.html">Android Studio 4.0 Beta 1</a></li>
+<li><a href="https://androidstudio.googleblog.com/2020/02/emulator-3002-canary-haxm-756-and-amd.html">Android Emulator 30.0.2, HAXM 7.5.6 ve Hypervisor 1.4</a></li>
+</ul></li>
+<li>TypeScript 3.8 Final <a href="https://devblogs.microsoft.com/typescript/announcing-typescript-3-8/">sürümü yayınlandı</a>.</li>
+<li>Go programlama dilinin 1.14 <a href="https://tip.golang.org/doc/go1.14">sürümü yayınlandı</a>.</li>
+<li>OCaml programlama dilinin 4.10 <a href="https://discuss.ocaml.org/t/ocaml-4-10-released/5194">sürümü yayınlandı</a></li>
+<li>Nim Topluluk Anketi 2019 <a href="https://nim-lang.org/blog/2020/02/18/community-survey-results-2019.html">sonuçları yayınlandı</a>.</li>
+<li>Rust dili için <a href="https://blog.rust-lang.org/inside-rust/2020/02/25/intro-rustc-self-profile.html">profilleyici tanıtıldı</a>.</li>
+<li>R programlama dili <a href="https://twitter.com/_R_Foundation/status/1233671896144793600">20 yaşında</a>.</li>
+<li>CouchDB 3.0 <a href="https://blog.couchdb.org/2020/02/26/3-0/">sürümü yayınlandı</a>.</li>
+<li>Swift takımı, <a href="https://github.com/apple/swift-argument-parser">ArgumentParser</a> kütüphanesini <a href="https://swift.org/blog/argument-parser/">duyurdu</a>.</li>
+<li>Tech Debt Developer anketi <a href="https://codeahoy.com/2020/02/17/technical-debt-survey/">sonuçları yayınlandı</a>.</li>
+<li>State of Clojure 2020 anketi <a href="https://clojure.org/news/2020/02/20/state-of-clojure-2020">sonuçları yayınlandı</a>.</li>
+<li>C++ kütüphanesi EnTT, 3.3.0 <a href="https://github.com/skypjack/entt/releases/tag/v3.3.0">sürümünü yayınladı</a>.</li>
+<li>IRedis aracının 1.2.0 <a href="https://github.com/laixintao/iredis/releases/tag/v1.2.0">sürümü çıktı</a>.</li>
+<li>XMake v2.3.1 <a href="https://tboox.org/2020/02/23/xmake-update-v2.3.1/">sürümü yayınlandı</a>.</li>
+<li>Scala.JS kütüphanesinin ilk stabil <a href="https://www.scala-js.org/news/2020/02/25/announcing-scalajs-1.0.0/">sürümü 1.0.0 çıktı</a>.</li>
+<li>Tarayıcı üzerinde çalışan metin editörü <a href="https://edtr.io/blog">edtr.io tanıtıldı</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbb9e0eb" class="outline-2">
+<h2 id="orgbb9e0eb"><span class="section-number-2">9</span> Lisans</h2>
+<div class="outline-text-2" id="text-9">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="../../../img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+<a href="yazilim-gundemi-2020-08.html">Yazılım Gündemi - 2020/08</a> yazısı <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a> (CC BY-NC-SA 4.0)
+ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 1 Mart 2020</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 22:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

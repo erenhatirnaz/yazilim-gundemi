@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 22:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi - 2020/20</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi - 2020/20
+<br />
+<span class="subtitle">18-24 Mayıs 2020</span>
+</h1>
+<div id="table-of-contents">
+<h2>İçindekiler</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgf38827b">1. C# 9.0 sürümü yayınlandı</a>
+<ul>
+<li><a href="#org375a54e">1.1. Init-only properties</a></li>
+<li><a href="#org4f0b9fe">1.2. Records</a></li>
+<li><a href="#orgd751a45">1.3. Top-level programs</a></li>
+</ul>
+</li>
+<li><a href="#orga94772e">2. Microsoft yeni platformlar arası uygulama geliştirme çözümünü tanıttı: .NET Multi-platform App UI</a></li>
+<li><a href="#org238e308">3. GitLab 13.0 sürümü yayınlandı</a>
+<ul>
+<li><a href="#orga0c62f7">3.1. Amazon ECS'ye otomatik deploy (GitLab Auto DevOps)</a></li>
+<li><a href="#org65f12e2">3.2. Versioned Snippets</a></li>
+<li><a href="#org9f5de69">3.3. Web IDE için karanlık tema</a></li>
+</ul>
+</li>
+<li><a href="#org5361459">4. Docker ve Snyk firmalarından konteyner güvenliği alanında iş birliği duyurusu</a></li>
+<li><a href="#org1f62d45">5. Electron 9.0.0 sürümü yayınlandı</a></li>
+<li><a href="#org1f2a23f">6. Windows Terminal 1.0 sürümü yayınlandı ve Windows Package Maganer Preview tanıtıldı</a></li>
+<li><a href="#orgdaac929">7. Yaklaşan Online Etkinlikler #EvdeKal</a></li>
+<li><a href="#orga922922">8. Diğer Haberler</a></li>
+<li><a href="#org5edc952">9. Lisans</a></li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gundemi-banner.png" alt="yazilim-gundemi-banner.png" />
+</p>
+</div>
+
+<div class="org-center">
+<p>
+<a href="../19/yazilim-gundemi-2020-19.html">&lt; Önceki Gündem</a> | <b>18-24 Mayıs 2020</b> | <a href="../21/yazilim-gundemi-2020-21.html">Sonraki Gündem &gt;</a>
+</p>
+
+<p>
+<a href="https://teknoseyir.com/blog/yazilim-gundemi-2020-20">TeknoSeyir'de Oku</a>
+</p>
+</div>
+
+<div id="outline-container-orgf38827b" class="outline-2">
+<h2 id="orgf38827b"><span class="section-number-2">1</span> C# <a href="https://devblogs.microsoft.com/dotnet/welcome-to-c-9-0/">9.0 sürümü yayınlandı</a></h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Microsoft'un geliştiriciler için özel olarak düzenlediği etkinliği olan BUILD
+bu yıl koronavirüs nedeniyle sanal olarak düzenlendi. Geçtiğimiz hafta
+düzenlenen BUILD 2020 etkinliğinde .NET ekosistemi altında geliştirilen
+programlama dili C#'ın da 9.0 numaralı sürümü yayınlandı. Her ne kadar uzun
+bir süredir .NET ekosisteminden uzak kalmış olsam da C# ilk göz ağrılarımdan
+biridir. Programlama başlarken kullandığım dillerden biri olması dolayısıyla
+yapısı hakkında bilgim var. Bu sürümle birlikte gelen birkaç özelliği birlikte
+inceleyelim:
+</p>
+</div>
+
+<div id="outline-container-org375a54e" class="outline-3">
+<h3 id="org375a54e"><span class="section-number-3">1.1</span> Init-only properties</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Nesne yönelimli programlama dili olmasından dolayı verileri nesne olarak
+temsil etme özellikleri oldukça gelişmiş olan C#'da halihazırda bu şekilde
+basit bir sınıf oluşturup kullanabiliyorduk:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-csharp"><span class="org-keyword">public</span> <span class="org-keyword">class</span> <span class="org-type">Kisi</span>
+{
+    <span class="org-keyword">public</span> <span class="org-type">string</span> <span class="org-variable-name">Ad</span> { <span class="org-keyword">get</span>; <span class="org-keyword">set</span>; }
+    <span class="org-keyword">public</span> <span class="org-type">string</span> <span class="org-variable-name">Soyad</span> { <span class="org-keyword">get</span>; <span class="org-keyword">set</span>; }
+}
+
+<span class="org-keyword">new</span> <span class="org-type">Kisi</span>
+{
+    <span class="org-variable-name">Ad</span> = <span class="org-string">"Eren"</span>,
+    <span class="org-variable-name">Soyad</span> = <span class="org-string">"Hat&#305;rnaz"</span>
+}
+</pre>
+</div>
+
+<p>
+Fakat bazı durumlarda bazı property'lerin tanımlandıktan sonra
+değiştirilememesini isteyebiliriz. İşte bu durumda imdadımıza init-only
+propert'ler yetişiyor ve bu şekilde bir tanımlama ile isteğimizi
+gerçekleştirebiliyoruz:
+</p>
+<div class="org-src-container">
+<pre class="src src-csharp"><span class="org-keyword">public</span> <span class="org-keyword">class</span> <span class="org-type">Kisi</span>
+{
+    <span class="org-keyword">public</span> <span class="org-type">string</span> <span class="org-variable-name">Ad</span> { <span class="org-keyword">get</span>; init; }
+    <span class="org-keyword">public</span> <span class="org-type">string</span> <span class="org-variable-name">Soyad</span> { <span class="org-keyword">get</span>; init; }
+}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org4f0b9fe" class="outline-3">
+<h3 id="org4f0b9fe"><span class="section-number-3">1.2</span> Records</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Eğer yukarıdaki kullanımın askine birkaç property'yi değil tüm objeyi
+immutable yapmak istiyorsanız o zaman da yardımımıza yeni Records özelliği
+koşuyor:
+</p>
+<div class="org-src-container">
+<pre class="src src-csharp"><span class="org-keyword">public</span> data <span class="org-keyword">class</span> <span class="org-type">Kisi</span>
+{
+    <span class="org-keyword">public</span> <span class="org-type">string</span> <span class="org-variable-name">Ad</span> { <span class="org-keyword">get</span>; init; }
+    <span class="org-keyword">public</span> <span class="org-type">string</span> <span class="org-variable-name">Soyad</span> { <span class="org-keyword">get</span>; init; }
+}
+</pre>
+</div>
+<p>
+Tanımladığınız sınıfı <code>public data class</code> olarak işaretlediğinizde o artık
+bir Record haline gelmiş oluyor ve artık bir kere oluşturduğunuz bir record
+objesini bir daha değiştiremiyorsunuz, onun yerine artık bu şekilde var olan
+objenin özelliklerini değiştirip yeni objeler oluşturarak devam ediyorsunuz:
+</p>
+<div class="org-src-container">
+<pre class="src src-csharp"><span class="org-type">var</span> <span class="org-variable-name">digerKisi</span> = person with { Ad = <span class="org-string">"Ahmet"</span> }
+</pre>
+</div>
+<p>
+Daha önce "Ad=Eren, Soyad=Hatırnaz" olarak tanımladığımız objeyi kullanarak
+"Ad=Ahmet, Soyad=Hatırnaz" şeklinde yeni bir obje oluşturmuş olduk.
+</p>
+
+<p>
+Immutable konusu benim de zaman zaman kafamı karıştıran bir konu, dolayısıyla
+bu tarz kullanımların tam olarak hangi sorun için bir çözüm olduğunu
+bilemiyorum ama takip ettiğim kadarıyla topluluk bu özellikler için sevinmiş
+durumda.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd751a45" class="outline-3">
+<h3 id="orgd751a45"><span class="section-number-3">1.3</span> Top-level programs</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Diğer birçok programlama dilinden de alışık olduğumuz üzere C#'da basit bir
+programın yapısı şöyle oluyor genelde:
+</p>
+<div class="org-src-container">
+<pre class="src src-csharp"><span class="org-keyword">using</span> <span class="org-variable-name">System</span>;
+
+<span class="org-keyword">class</span> <span class="org-type">Program</span>
+{
+    <span class="org-keyword">static</span> <span class="org-type">void</span> <span class="org-function-name">Main</span>()
+    {
+        Console.<span class="org-function-name">WriteLine</span>(<span class="org-string">"Merhaba D&#252;nya"</span>);
+    }
+}
+</pre>
+</div>
+<p>
+Fakat artık daha da basit şekilde, Python ve Ruby gibi dillerden aşılık
+olduğumuz gibi bu şekilde de uygulamalar yazabileceğiz:
+</p>
+<div class="org-src-container">
+<pre class="src src-csharp"><span class="org-keyword">using</span> <span class="org-variable-name">System</span>;
+
+Console.<span class="org-function-name">WriteLine</span>(<span class="org-string">"Merhaba D&#252;nya"</span>);
+</pre>
+</div>
+
+<p>
+C# 9.0 ile birlikte gelen diğer özellikler ve detaylar için konu başlığına
+eklediğim bağlantıya tıklayabilirsiniz. Ayrıca geçtiğimiz hafta içerisinde
+<a href="https://devblogs.microsoft.com/dotnet/announcing-net-5-preview-4-and-our-journey-to-one-net/">.NET 5 Preview 4</a> sürümü de duyuruldu.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orga94772e" class="outline-2">
+<h2 id="orga94772e"><span class="section-number-2">2</span> Microsoft yeni platformlar arası uygulama geliştirme <a href="https://devblogs.microsoft.com/dotnet/introducing-net-multi-platform-app-ui/">çözümünü tanıttı</a>: <a href="https://github.com/dotnet/maui">.NET Multi-platform App UI</a></h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Microsoft'un 2016 yılında .NET için açık kaynaklı teknolojiler üreten Xamarin
+<a href="https://blogs.microsoft.com/blog/2016/02/24/microsoft-to-acquire-xamarin-and-empower-more-developers-to-build-apps-on-any-device/">firmasını satın almıştı</a>. Xamarin tarafından geliştirilen Xamarin.Forms'da
+doğal olarak Microsoft'a geçmiş oldu. İşte bu satın almanın yeni meyvesi
+olacak şey de bugün konuşacağımız .NET Multi-platform App UI oldu.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/dotnet-multiplatform-app-ui.png" alt="dotnet-multiplatform-app-ui.png" />
+</p>
+</div>
+
+<p>
+<a href="https://github.com/xamarin/xamarin.forms">Xamarin.Forms</a> hatırlamayan ya da bilmeyenler için .NET ekosistemi içerisinde
+platformlar arası (cross-platform) uygulama geliştirmeye yarayan bir
+teknoloji. Geçtiğimiz hafta içerisinde ise bu teknolojinin artık evrimleşip
+başka bir teknolojiyle birleşme vaktinin geldiğini duyuruldu. .NET MAUI,
+kısaca Xamarin.Forms'un evrimleşmiş ve gelişmiş halidir diyebiliriz.
+Microsoft, henüz erken geliştirilme aşamasında olan bu teknolojisi ile biz
+geliştiricilere tek bir projeden hem Windows hem macOS hem de iOS ve Android
+uygulaması çıkarmayı vaat ediyor.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/dotnet-maui-vs-xamarin-forms.png" alt="dotnet-maui-vs-xamarin-forms.png" />
+</p>
+<p><span class="figure-number">Şekil 3: </span>Xamarin.Forms ve .NET MAUI arasındaki farklar tablosu</p>
+</div>
+
+<p>
+.NET 6 sürümüyle birlikte hayatımıza girmesi planlanan bu teknolojiyle
+birlikte MVVM (Model-View-ViewModel) ve RxUI gibi Design Pattern ve uygulama
+modellerinin yanı sıra .NET MAUI, MVU(Model-View-Update) ve Blazor gibi
+yapıları da destekleyecek.
+</p>
+
+<p>
+Peki bu gelişmeler Xamarin ve Xamarin.Forms için ne anlama geliyor? diye
+soracak olursanız ise cevabı çok zor değil. Microsoft'un birçok uygulama
+geliştirme teknolojisini .NET 5 ile tek çatı altında toplamak istediğini
+önceki yazılım gündemi yazılarının birinde belirtmiştim. İşte bu gelişmeyi de
+aynı bağlamda değerlendirebiliriz-ki Microsoft'da zaten planlarında bu
+olduğunu açıkladı. Xamarin'in ve alt teknolojilerinin yeni sürümleri bir süre
+daha gelmeye devam edecek fakat Microsoft'un artık yeni odağı .NET 6'nın
+içerisinde olacak bu teknoloji. Geliştiricilerin geçiş yapmasını
+kolaylaştıracak gelişmelerden sonra da Xamarin projesi büyük ihtimal
+durdurulur.
+</p>
+</div>
+</div>
+<div id="outline-container-org238e308" class="outline-2">
+<h2 id="org238e308"><span class="section-number-2">3</span> GitLab 13.0 <a href="https://about.gitlab.com/releases/2020/05/22/gitlab-13-0-released/">sürümü yayınlandı</a></h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Uzak git sunucusu ve proje yönetimi hizmetleri sunan GitLab, geçtiğimiz hafta
+içerisinde 13.0 sürümünü duyurdu. Aynı zamanda GitLab.com'da son sürüme
+güncellenmiş oldu. Bu sürümle birlikte gelen bazı özellikler ise şu şekilde:
+</p>
+</div>
+
+<div id="outline-container-orga0c62f7" class="outline-3">
+<h3 id="orga0c62f7"><span class="section-number-3">3.1</span> Amazon ECS'ye otomatik deploy (GitLab Auto DevOps)</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Artık geliştirdiğiniz projeleri otomatik olarak AWS Elastic Container Service
+tarafına gönderip, uygulamanızı ayağa kaldırabileceksiniz. Bunun için
+deponuzun CI/CD ayarlarından Auto DevOps özelliğini aktifleştirmeniz ve
+deponuza şu değişkenleri tanımlamanız gerekiyor: <code>AWS_ACCESS_KEY_ID</code>,
+<code>AWS_ACCOUNT_ID</code> ve <code>AWS_REGION</code>. Nasıl çalıştığını görmek için <a href="https://www.youtube.com/watch?v=AGerrF9KO30">şuradaki kısa
+demo videosunu izleyebilirsiniz</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org65f12e2" class="outline-3">
+<h3 id="org65f12e2"><span class="section-number-3">3.2</span> Versioned Snippets</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+GitLab'in Snippet olarak isimlendirdiği şeyi biz aslında GitHub'daki Gist ile
+biliyoruz. İkisi de aynı amaca hizmet ediyorlar. Tek başına deposu
+(repository) olması gerektirmeyen betikleri ya da kodları paylaşmak için
+kullandığımız bir hizmet. Ülkemizde hala daha yasaklı olan pastebin.com gibi
+yani. İşte GitLab'daki bu snippet sistemine yeni bir özellik geldi, artık
+bunları da git ile bilgisayarımıza clone edip, değişiklik yapıp ve
+commit'leyip onu gitlab'a gönderebileceğiz. Böylece hem versiyonlanmış olacak
+hem de kendi bilgisayarımızda dosyayı düzenleyebileceğiz. Fakat web
+arayüzünde henüz snippet geçmişini gösteren bir özellik yok, ileride eklenir
+diye umuyorum. Benim örneğimi bu şekilde clone edip, geçmişe bakabilirsiniz.
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">git clone https://gitlab.com/snippets/1980000.git
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org9f5de69" class="outline-3">
+<h3 id="org9f5de69"><span class="section-number-3">3.3</span> Web IDE için karanlık tema</h3>
+<div class="outline-text-3" id="text-3-3">
+
+<div class="figure">
+<p><img src="gorseller/gitlab-web-ide-karanlik-tema.png" alt="gitlab-web-ide-karanlik-tema.png" />
+</p>
+<p><span class="figure-number">Şekil 4: </span>Tarayıcı üzerinden kod yazmaya olanak sağlayan GitLab Web IDE'de artık karanlık tema mevcut.</p>
+</div>
+<p>
+GitLab 13.0 ile gelen diğer özellikler için konu başlığına eklediğim
+bağlantıya tıklayabilirsiniz.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org5361459" class="outline-2">
+<h2 id="org5361459"><span class="section-number-2">4</span> Docker ve Snyk firmalarından konteyner güvenliği alanında <a href="https://www.docker.com/press-release/Docker-Snyk-Announce-Partnership-Container-Vulnerability-Scanning">iş birliği duyurusu</a></h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Linux içerisindeki <code>cgroups</code> ile birlikte gelen konteyner sistemini
+popülerleştirmesiyle bilinen Docker firması ve yazılımın çeşitli alanlarıyla
+ilgili güvenlik çözümleri sunan Snyk şirketi, geçtiğimiz hafta içerisinde iş
+birliği yaptıklarını duyurdular.
+</p>
+
+<p>
+Bu iş birliği kapsamında Docker Hub sistemine eklenecek yeni bir entegrasyon
+sayesinde artık Docker Hub'a gönderdiğimiz konteyner imajlarına otomatik
+olarak güvenlik taraması yaptırabilir ve raporlayabilir olacağız.
+</p>
+
+<p>
+Container teknolojisinin artan popülaritesi ile birlikte güvenlik
+ihtiyaçlarının da aynı oranda artacağı tahmin edilebilir bir durum. Snyk
+firması da bu alana erkenden giren firmalardan birisi olmuş.
+</p>
+
+<p>
+Bu iş birliğinin ilk meyvelerini 2020'nin üçüncü yarısında görmeye
+başlayacağız. Container teknolojisi ile ilgili arkadaşlara "Container
+Security" alanına bakmalarını tavsiye ederim.
+</p>
+</div>
+</div>
+<div id="outline-container-org1f62d45" class="outline-2">
+<h2 id="org1f62d45"><span class="section-number-2">5</span> Electron <a href="https://www.electronjs.org/blog/electron-9-0">9.0.0 sürümü yayınlandı</a></h2>
+<div class="outline-text-2" id="text-5">
+<p>
+JavaScript kullanarak platformlar arası masaüstü uygulama geliştirmeye yarayan
+kütüphane Electron, geçtiğimiz hafta içerisinde 9.0.0 etiketli sürümünü
+yayınladı. Bu sürümle birlikte gelen bazı yenilik ve değişiklikler ise şöyle:
+</p>
+
+<ul class="org-ul">
+<li>Chromium sürümü 83.0.4103.64 olarak yükseltildi.
+<ul class="org-ul">
+<li><a href="https://developers.google.com/web/updates/2020/04/nic81">Chrome 81 sürüm notları</a></li>
+<li>Chrome 82 sürümü <a href="https://chromereleases.googleblog.com/2020/03/chrome-and-chrome-os-release-updates.html">koronavirüs nedeniyle atlandı</a>.</li>
+<li><a href="https://developers.google.com/web/updates/2020/05/nic83">Chrome 83 sürüm notları</a></li>
+</ul></li>
+<li>Node.js sürümü 12.14.1 olarak yükseltildi. <a href="https://nodejs.org/en/blog/release/v12.14.1/">Sürüm Notları</a></li>
+<li>V8 sürümü 8.3 olarak yükseltildi.
+<ul class="org-ul">
+<li><a href="https://v8.dev/blog/v8-release-81">V8 8.1 sürüm notları</a></li>
+<li><a href="https://v8.dev/blog/v8-release-83">V8 8.3 sürüm notları</a></li>
+</ul></li>
+<li>İmla kontrolü özelliğinde iyileştirmeler: <a href="https://github.com/electron/electron/pull/22128">#22128</a> ve <a href="https://github.com/electron/electron/pull/22368">#22368</a></li>
+<li>Linux üzerinde Window Events Handler verimliliği iyileştirildi. (<a href="https://github.com/electron/electron/pull/23260">#23260</a>)</li>
+<li>PDF görüntüleyici desteği geri geldi. (<a href="https://github.com/electron/electron/pull/22131">#22131</a>)</li>
+<li><code>enableRemoteModle: true</code> olmadan <code>remote</code> kullanılırsa artık deprecate
+uyarısı veriyor. (<a href="https://github.com/electron/electron/pull/21546">#21546</a>)</li>
+<li><code>app.enableRendererProcessReuse</code> özelliği artık artık varsayılan olarak
+<code>true</code>. (<a href="https://github.com/electron/electron/pull/22336">#22336</a>)</li>
+<li>JavaScript olmayan objeleri IPC üzerinden gönderirken artık exception
+fırlatıyor. (<a href="https://github.com/electron/electron/pull/21560">#21560</a>)</li>
+</ul>
+
+<p>
+Bu sürümle gelen diğer yenilik ve değişiklikler için konu başlığına eklediğim
+bağlantıya tıklayabilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-org1f2a23f" class="outline-2">
+<h2 id="org1f2a23f"><span class="section-number-2">6</span> Windows Terminal <a href="https://devblogs.microsoft.com/commandline/windows-terminal-1-0/">1.0 sürümü yayınlandı</a> ve Windows Package Maganer Preview <a href="https://devblogs.microsoft.com/commandline/windows-package-manager-preview/">tanıtıldı</a></h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Microsoft'un GNU/Linux ve MacOS taraflarına kaybettiği geliştirici kitlesini
+geri kazanmak için yaptığı hamleler sürüyor. Uzun süredir geliştirilmekte
+olan, benim de sık sık gündemde yer verdiğim Windows'un yeni Terminal'i
+geçtiğimiz hafta düzenlenen BUILD 2020 etkinliğinde 1.0 olarak stabil
+versiyonuna kavulmuş oldu.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/windows-terminal-1-0.png" alt="windows-terminal-1-0.png" />
+</p>
+<p><span class="figure-number">Şekil 5: </span>Artık Windows üzerinde de gelişmiş bir terminal emülatörümüz mevcut.</p>
+</div>
+<p>
+Önceki yazılım gündemi yazılarında zaten birçok Windows Terminal sürümününde
+gelen yenilikleri konuşmuştuk. Bugün biraz daha önemli olduğunu düşündüğüm
+<a href="https://github.com/microsoft/winget-cli">Windows Package Manager</a> üzerine konuşmak istiyorum.
+</p>
+
+<p>
+<code>sudo apt install firefox</code>
+</p>
+
+<p>
+Aramızdaki çoğu kişi yukarıda yazdığım komut satırı kodunun ne iş yaptığını
+biliyor. Gerçi bilmeseniz bile ingilizce olarak okuduğunuzda zaten
+anlaşılıyor. Firefox yazılımını sisteme kuruyor. İşte bu yapının benzeri artık
+windows tarafında şu şekilde mevcut:
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/winget-install.png" alt="winget-install.png" />
+</p>
+<p><span class="figure-number">Şekil 6: </span><code>winget install firefox</code></p>
+</div>
+<p>
+Henüz ön izleme sürümü yayınlanmış bu paket yöneticisi Windows için oyun
+değiştirici olma rolünü üstlenebilir. Şimdilik sadece <a href="https://github.com/microsoft/winget-pkgs">şu depodaki manifest
+dosyaları</a> üzerinden exe dosyalarını indirip, çalıştırma görevi görüyor olsa da
+hash doğrulama gibi önemli özellikleri de mevcut. Bence paket yöneticilerinin
+en önemli özelliği <code>upgrade</code> komutu ile sistemde yüklü tüm uygulamaları tek
+seferde güncelleyebilmek fakat bu henüz <code>winget</code>'e gelmiş değil. Bu özelliğin
+kesinlikle getireceklerdir. Geliştirme ortamlarını Windows üzerinde kurmuş
+birçok kişiye hatta son kullanıcıların bile çok işine yarayacağını
+düşünüyorum.
+</p>
+</div>
+</div>
+<div id="outline-container-orgdaac929" class="outline-2">
+<h2 id="orgdaac929"><span class="section-number-2">7</span> Yaklaşan Online Etkinlikler #EvdeKal</h2>
+<div class="outline-text-2" id="text-7">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" width="100%">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Etkinlik İsmi</th>
+<th scope="col" class="org-left">Tarihi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><a href="https://kommunity.com/pgtr/events/postgresql-sohbetleri-16-turkiyede-postgresql-ne-durumda-turker-gulum-587e9d43">PostgreSQL Sohbetleri 16: Türkiye'de PostgreSQL ne durumda? (Türker Gülüm)</a></td>
+<td class="org-left">26 Mayıs 13:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/devops-turkiye/events/kubernetes-118de-gelen-yenilikler-3defef02">Kubernetes 1.18'de gelen yenilikler</a></td>
+<td class="org-left">27 Mayıs 20:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/cloud-and-serverless-turkey/events/cloudflare-workers-just-write-code-54aace34">Cloudflare Workers: Just Write Code</a></td>
+<td class="org-left">28 Mayıs 12:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/teknoloji-gelistirenler-icin-devlet-tesvikleri/events/mobil-uygulama-oyun-gelistirenler-icin-devlet-tesvikleri-111055dc">Mobil Uygulama-Oyun Geliştirenler İçin Devlet Teşvikleri</a></td>
+<td class="org-left">28 Mayıs 14:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/bilisim-vadisi/events/google-cloud-gaming-ile-ilgili-cozumler-75d9af64">Google Cloud Gaming ile İlgili Çözümler</a></td>
+<td class="org-left">29 Mayıs 13:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/tensorflow-turkey/events/contextual-chatbots-with-rasa-and-tensorflow-36eee01c">Contextual chatbots with Rasa and TensorFlow</a></td>
+<td class="org-left">30 Mayıs 21:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/cloud-and-serverless-turkey/events/kubernetes-hands-on-4-kubernetes-ingress-and-network-policies-4f1cd707">Kubernetes Hands-On no.4: Kubernetes Ingress and Network Policies</a></td>
+<td class="org-left">31 Mayıs 13:30</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orga922922" class="outline-2">
+<h2 id="orga922922"><span class="section-number-2">8</span> Diğer Haberler</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li>GitHub, Go'nun MySQL sürücüsünde <a href="https://github.blog/2020-05-20-three-bugs-in-the-go-mysql-driver/">3 hatayı düzeltmiş.</a>.</li>
+<li>Microsoft: "Açık Kaynak konusunda <a href="https://www.zdnet.com/article/microsoft-we-were-wrong-about-open-source-but-luckily-you-can-change/">yanıldık</a>." <a href="https://www.theregister.co.uk/2020/05/15/microsoft_brad_smith_open_source/">Alternatif</a></li>
+<li>Microsoft, Linux'e Direct3D 12 desteği <a href="https://devblogs.microsoft.com/directx/directx-heart-linux/">getireceğini açıkladı</a>. <a href="https://www.phoronix.com/scan.php?page=news_item&amp;px=Microsoft-DX12-WSL2">Alternatif</a></li>
+<li>Defold oyun motoru <a href="https://defold.com/opensource/">açık kaynak hale geldi</a>. <a href="https://github.com/defold/defold">GitHub Deposu</a></li>
+<li>Microsoft klasik masaüstü uygulamalar ile UWP uygulamalarını <a href="https://www.theverge.com/2020/5/19/21258697/microsoft-windows-project-reunion-win32-uwp-apps-apis-build">birleştirmek
+istiyor</a>: <a href="https://github.com/microsoft/ProjectReunion">Project Reunion</a>.</li>
+<li>Visual Studio 2019 <a href="https://docs.microsoft.com/en-us/visualstudio/releases/2019/release-notes-preview">Preview 1 sürümü yayınlandı</a>.</li>
+<li>Python programlama dilinin <a href="https://pythoninsider.blogspot.com/2020/05/python-390b1-is-now-available-for.html">3.9.0 Beta 1 sürümü yayınlandı</a>.</li>
+<li>Node.js <a href="https://nodejs.org/en/blog/release/v14.3.0/">v14.3.0 sürümü yayınlandı</a>.</li>
+<li>Deno <a href="https://github.com/denoland/deno/releases/tag/v1.0.2">v1.0.2 sürümü yayınlandı</a>.</li>
+<li>F# programlama dilinin <a href="https://devblogs.microsoft.com/dotnet/f-5-update-for-net-5-preview-4/">5.0 sürümü yayınlandı</a>.</li>
+<li>Microsoft, <a href="https://codeforces.com/blog/entry/77614">Q# Programlama Yarışması'nı duyurdu</a>.</li>
+<li>Microsoft, GW-BASIC programlama dilinin <a href="https://devblogs.microsoft.com/commandline/microsoft-open-sources-gw-basic/">kodlarını açık kaynak yaptı</a>. <a href="https://github.com/microsoft/GW-BASIC">GitHub
+Deposu</a></li>
+<li>Blazor WebAssembly kütüphanesinin <a href="https://devblogs.microsoft.com/aspnet/blazor-webassembly-3-2-0-now-available/">3.2.0 sürümü yayınlandı</a>.</li>
+<li>Curl kullanıcı <a href="https://daniel.haxx.se/blog/2020/05/18/help-curl-the-user-survey-2020/">anketi başladı</a>. <a href="https://forms.gle/4L4A2de4WgmJbJkg9">Anket</a></li>
+<li>Grafana <a href="https://grafana.com/blog/2020/05/18/grafana-v7.0-released-new-plugin-architecture-visualizations-transformations-native-trace-support-and-more/?isource=hp">v7.0 sürümü yayınlandı</a>.</li>
+<li>PostgreSQL <a href="https://www.postgresql.org/about/news/2040/">13 Beta 1 sürümü yayınlandı</a>.</li>
+<li>SQLite <a href="https://sqlite.org/releaselog/3_32_0.html">3.32.0 sürümü yayınlandı</a>.</li>
+<li>Beekeeper Studio <a href="https://www.beekeeperstudio.io/blog/release-1.4">1.4 sürümü yayınlandı</a>.</li>
+<li>Orx oyun motorunun <a href="https://www.gamedev.net/news/orx-portable-game-engine-version-111-has-been-released-r1349/">1.11 sürümü yayınlandı</a>.</li>
+<li>EA, Command&amp;Conquer ve Red Alert'in <a href="https://kotaku.com/ea-is-releasing-command-conquer-and-red-alerts-source-1843574798">kaynak kodlarını yayınlayacak</a>.</li>
+<li>Swift programlama dili için fonksiyonel mimari çözümü sunan <a href="https://www.47deg.com/blog/bow-arch-0-1-0-release/">açık kaynaklı
+kütüphane tanıtıldı</a>: <a href="https://arch.bow-swift.io/">Bow Arch</a>. <a href="https://github.com/bow-swift/bow-arch">GitHub Deposu</a></li>
+<li>tree-hugger açık kaynaklı <a href="https://medium.com/codist-ai/introducing-tree-hugger-source-code-mining-for-human-b5fcd31bef55">projesi tanıtıldı</a>. <a href="https://github.com/autosoft-dev/tree-hugger">GitHub Deposu</a></li>
+<li>GrallVM <a href="https://www.graalvm.org/docs/release-notes/20_1/">20.1.0 sürümü yayınlandı</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5edc952" class="outline-2">
+<h2 id="org5edc952"><span class="section-number-2">9</span> Lisans</h2>
+<div class="outline-text-2" id="text-9">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="../../../img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+<a href="yazilim-gundemi-2020-20.html">Yazılım Gündemi - 2020/20</a> yazısı <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a> (CC BY-NC-SA 4.0)
+ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 25 Mayıs 2020</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 22:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

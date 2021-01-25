@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 22:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi - 2020/07</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi - 2020/07
+<br />
+<span class="subtitle">10-16 Şubat 2020</span>
+</h1>
+<div id="table-of-contents">
+<h2>İçindekiler</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgff8e2e4">1. GitHub komut satırı aracının beta programını tanıttı</a></li>
+<li><a href="#org07cda75">2. Tembel resim yükleme (lazy-loading) özelliği HTML standardı oldu</a></li>
+<li><a href="#org5250dfb">3. Windows Terminal Preview v0.9 yayınlandı</a></li>
+<li><a href="#org86b74a4">4. Qt 5.15 Alpha sürümü yayınlandı</a></li>
+<li><a href="#orgf6af5e9">5. Yaklaşan Etkinlikler</a></li>
+<li><a href="#orga43c720">6. Diğer Haberler</a></li>
+<li><a href="#org619f8db">7. Lisans</a></li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gundemi-banner.png" alt="yazilim-gundemi-banner.png" />
+</p>
+</div>
+
+<div class="org-center">
+<p>
+<a href="../06/yazilim-gundemi-2020-06.html">&lt; Önceki Gündem</a> | <b>10-16 Şubat 2020</b> | <a href="../08/yazilim-gundemi-2020-08.html">Sonraki Gündem &gt;</a>
+</p>
+
+<p>
+<a href="https://teknoseyir.com/blog/yazilim-gundemi-2020-07">TeknoSeyir'de Oku</a>
+</p>
+</div>
+
+<div id="outline-container-orgff8e2e4" class="outline-2">
+<h2 id="orgff8e2e4"><span class="section-number-2">1</span> GitHub komut satırı aracının <a href="https://github.blog/2020-02-12-supercharge-your-command-line-experience-github-cli-is-now-in-beta/">beta programını tanıttı</a></h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Komut satırı araçları biz geliştiriciler için olmazsa olmazlardan birisi.
+Elbette aramızda pek komut satırı kullanmaktan hoşlanmayanlar da olabilir
+fakat mutlaka en az 1 ya da 2 tane komut satırı aracı kullanmak durumundadır.
+GitHub da kendi hizmetleri için bir komut satırı aracı çıkardı. Henüz beta
+programında olan bu komut satırı aracı ile şunları yapabilmekteyiz:
+</p>
+
+<ul class="org-ul">
+<li>Issue'leri listeleme ve filtreleme</li>
+<li>Issue sayfasını tarayıcı ile açtırma</li>
+<li>Pull Request oluşturma</li>
+<li>Pull Request durumunu yazdırma</li>
+<li>Pull Request'i bilgisayara checkout yapma</li>
+</ul>
+
+<p>
+Şu an beta programında olduğu için çok stabil çalışmasını beklemek yersiz
+fakat ben yine de yazıya birkaç görüntü ekleyebilmek için denedim.
+</p>
+
+<p>
+<a href="https://cli.github.com/">Bu sayfadan</a> işletim sisteminize göre olan kurulum dosyasını indirip,
+kuruyorsunuz. Ben Linux için olanı kurdum (<code>sudo dpkg --install
+	gh-0.5.5-linux-amd64.deb</code>). Sonrasında bilgisayarınızdaki bir git dizininin
+içine giriyorsunuz (elbette remote'lar arasında github olmak zorunda) ve <code>gh
+	issue list</code> komutunu çalıştırıyorsunuz. Bu komutu ilk kez çalıştırdığınızda
+size "tarayıcınızda github'ı açıp izin vermek için enter tuşuna basın" diyor.
+Enter'e bastığınızda ise şöyle bir sayfa açılıyor:
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/github-cli-izin.png" alt="github-cli-izin.png" height="650" />
+</p>
+<p><span class="figure-number">Şekil 2: </span>Görüldüğü gibi bayağı bir izin istiyor ama uygulama zaten GitHub'ın kendine ait olduğu için sıkıntı yok</p>
+</div>
+<p>
+GitHub CLI uygulamasına hesabınızın tüm izinlerini verdikten sonra işlem
+başarılı olmuşsa sizden bir kere daha Enter tuşuna basmanızı isteyecek ve
+bastığınız ise ilgili github deponuzdaki bütün issue girişlerinin listesini
+verecek.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/github-cli-demo.png" alt="github-cli-demo.png" />
+</p>
+<p><span class="figure-number">Şekil 3: </span>Ben kendi depomda denedim.</p>
+</div>
+<p>
+Komut satırı aracında bulduğunuz hataları bildirmek ya da özellik talebinde
+bulunmak için bu <a href="https://github.com/cli/cli">github deposunu</a> ziyaret edebilir ya da <a href="https://forms.gle/umxd3h31c7aMQFKG7">bu formu</a>
+doldurabilirsiniz.
+</p>
+
+<p>
+Ayrıca bu hafta içerisinde GitHub, <a href="https://github.blog/2020-02-13-github-enterprise-is-now-free-through-microsoft-for-startups/">Microsoft for Startups hizmeti ile birlikte
+GitHub Enterprise çözümünün ücretsiz sunulacağı</a>nı da duyurdu.
+</p>
+</div>
+</div>
+<div id="outline-container-org07cda75" class="outline-2">
+<h2 id="org07cda75"><span class="section-number-2">2</span> Tembel resim yükleme (lazy-loading) özelliği <a href="https://github.com/whatwg/html/pull/3752#issuecomment-585202516">HTML standardı oldu</a></h2>
+<div class="outline-text-2" id="text-2">
+
+<div class="figure">
+<p><img src="gorseller/lazy-loading.png" alt="lazy-loading.png" height="250" />
+</p>
+</div>
+
+<p>
+Türkçeye çevirince biraz komik bir ifade oldu ama İngilizcesinden anlaşıldığı
+üzere bu özellik sayesinde artık bir web sayfasını açtığınızda tüm resimler
+aynı anda yüklenmeyecek resimin konumuna göre sayfa scroll edildikte
+yüklenecekler. Böylece gereksiz trafik oluşturmaktan kurtulacağız. Hali
+hazırda bu özelliği zaten birçok web sitesinde görmüşsünüzdür fakat artık
+bunun için ekstra bir kütüphane ya da araça gerek kalmayacak, doğrudan
+tarayıcı tarafından desteklenecek.
+</p>
+
+<p>
+Bu özelliği kullanmak için HTML kodlarımızı bu şekilde düzenlememiz yeterli
+olacak:
+</p>
+<div class="org-src-container">
+<pre class="src src-html">&lt;<span class="org-function-name">img</span> loading=lazy <span class="org-variable-name">src</span>=<span class="org-string">"img/teknoseyir.png"</span>&gt;
+</pre>
+</div>
+
+<p>
+Özellik hakkında detaylı bilgi almak için <a href="https://web.dev/native-lazy-loading/">şu blog yazısı</a>nı okuyabilirsiniz.
+</p>
+
+<p>
+Özelliğin HTML standardı olduğunu duyuran Google Chrome çalışanının <a href="https://twitter.com/addyosmani/status/1227619409625174016">tweet'ine
+ise şuradan ulaşabilirsiniz</a>.
+</p>
+</div>
+</div>
+<div id="outline-container-org5250dfb" class="outline-2">
+<h2 id="org5250dfb"><span class="section-number-2">3</span> Windows Terminal Preview v0.9 <a href="https://devblogs.microsoft.com/commandline/windows-terminal-preview-v0-9-release/">yayınlandı</a></h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Microsoft'un yaklaşık bir yıldır geliştirmeye devam ettiği yeni Windows
+Terminal uygulamasının v0.9 Önizleme sürümü bu hafta içerisinde duyuruldu.
+</p>
+
+<p>
+Bu sürüm ile birlikte artık komut satırından da yeni bir Windows Terminal
+penceresi oluşturabiliyoruz. Üstelik oluşturulan bu yeni terminal penceresini
+yeni sekme, bölümlenmiş ekran gibi özelliklerle birlikte de oluşturabiliyoruz.
+Yani tek bir komut ile terminal sekmesini istediğiniz parçalara bölüp o
+parçalarda istediğiniz uygulamaları çalıştırabilirsiniz.
+</p>
+
+<p>
+Örneğin önce sekmeyi ortadan ikiye dikey bölüp, sonra da sağ tarafı ortadan
+ikiye yatay bölmek için şöyle bir komut çalıştırabilirsiniz:
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">wt -d C:\Users\cinnamon\GitHub\WindowsTerminal ; split-pane -p <span class="org-string">"Command Prompt"</span> ; split-pane -p <span class="org-string">"Ubuntu"</span> -d <span class="org-string">\\</span>wsl$\Ubuntu\home\cinnak -H
+</pre>
+</div>
+
+<p>
+Bu komutun çıktısı ise şu şekilde:
+<img src="gorseller/windows-terminal-v09.gif" alt="windows-terminal-v09.gif" />
+</p>
+
+<p>
+Ayrıca bir terminal penceresini kapatmak istediğinizde her zaman "tüm sekmeler
+kapatılsın mı" sorusunu sormasın istiyorsanız bunun için de bir ayar eklendi.
+Bunu etkinleştirmek için Windows Terminal ayarlarına şu satırı eklemeniz
+yeterli:
+</p>
+<div class="org-src-container">
+<pre class="src src-json"><span class="org-keyword">"confirmCloseAllTabs"</span>: <span class="org-string">"true"</span>
+</pre>
+</div>
+<p>
+Böylece terminal penceresini kapatmak istediğinizde tüm sekmeler de hemen
+kapatılacak.
+</p>
+</div>
+</div>
+<div id="outline-container-org86b74a4" class="outline-2">
+<h2 id="org86b74a4"><span class="section-number-2">4</span> Qt 5.15 Alpha <a href="https://www.qt.io/blog/qt-5.15-alpha-released">sürümü yayınlandı</a></h2>
+<div class="outline-text-2" id="text-4">
+<p>
+C++ ile platformlar-arası uygulama geliştirmeye yarayan framework Qt'nin 5.15
+Alpha sürümü bu hafta içerisinde yayınlandı. Henüz Alpha seviyesinde olması
+nedeniyle çalışan uygulamalarınızı bu sürüme yükseltmeniz tavsiye edilmiyor
+ama farklı projelerde kullanıp, bulduğunuz hataları Qt takımına
+raporlayabilirsiniz. Bu sürüm ile birlikte gelen yeni özellikler için <a href="https://wiki.qt.io/New_Features_in_Qt_5.15">bu wiki
+sayfasını</a> ziyaret edebilirsiniz.
+</p>
+
+<p>
+Ayrıca Qt 5.14.0 sürümüyle birlikte artık "yeniden konumlandırılabilir" oldu.
+Ben de ilgili blog yazısının başlığını okuyunca anlamamıştım ama yazıyı
+okuyunca fark ettim ki aslında kast edilen: Qt'nin kurulduğunu dizini
+değiştebilirsiniz. Böyle bir ihtiyacınız varsa <a href="https://www.qt.io/blog/qt-is-relocatable">bu blog yazısı</a>nı
+okuyabilirsiniz.
+</p>
+
+<p>
+Son olarak da KDAB geçtiğimiz sene düzenlediği Qt World Summit 2019
+etkinliğinin tüm videolarını bu hafta içerisinde paylaşmış. İlgili duyuru
+yazısı için <a href="https://www.kdab.com/qt-world-summit-2019-talk-videos-are-online/">buraya</a> tıklayabilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf6af5e9" class="outline-2">
+<h2 id="orgf6af5e9"><span class="section-number-2">5</span> Yaklaşan Etkinlikler</h2>
+<div class="outline-text-2" id="text-5">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" width="100%">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Etkinlik İsmi</th>
+<th scope="col" class="org-left">Yeri</th>
+<th scope="col" class="org-left">Tarihi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/Microsoft-Giri%25C5%259Fimcilik-Bulu%25C5%259Fmalar%25C4%25B1/events/268435933/">Azure Serverless Architecture</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">17 Şubat 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/istanbul-yapay-zeka-toplulugu/events/268718822/">Fuat Beşer ile "Yapay Zekâda Öncü Olmak"</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">18 Şubat 14:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/istanbul-yapay-zeka-toplulugu/events/268768436/">Let The Machine Learn</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">18 Şubat 17:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/GDG-Cloud-Izmir/events/268271805/">Firebase Study Jam</a></td>
+<td class="org-left">İzmir</td>
+<td class="org-left">18 Şubat 18:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/Teknopark-%25C4%25B0stanbul-Yaz%25C4%25B1l%25C4%25B1mc%25C4%25B1-Bulu%25C5%259Fmalar%25C4%25B1/events/268624461/">Selenium ve Robot Framework ile UI Test Otomasyonuna Giriş</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">19 Şubat 12:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/IBMDeveloperTR/events/268626077/">Yapay Zeka ile Dokümanlarınızı Analiz Edin!</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">20 Şubat 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/devnot-yazilimci-bulusmalari/events/coklu-cluster-ortaminda-cicd-pipeline-ile-uygulama-yonetimi">Çoklu Cluster Ortamında CI/CD Pipeline ile Uygulama Yönetimi</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">21 Şubat 18:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/ieee-turkey-2nd-comsoc-conference-tickets-94153113497">IEEE Turkey 2nd ComSoc Conference</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">22 Şubat 09:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/deep-learning-fundamentals-workshop-tickets-94146818669">Deep Learning Fundamentals workshop</a></td>
+<td class="org-left">Ankara</td>
+<td class="org-left">23 Şubat 10:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/rladies-istanbul/events/268481383/">Shiny Paketi ile Dashboard Hazirlama</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">23 Şubat 12:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/Microsoft-Giri%25C5%259Fimcilik-Bulu%25C5%259Fmalar%25C4%25B1/events/268504659/">Microservice with Azure Kubernetes Service and Azure Devops</a></td>
+<td class="org-left">İzmir</td>
+<td class="org-left">25 Şubat 13:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.co.uk/e/rdtech-registration-94626158387">RDTech Solid &amp; Unit Testing</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">26 Şubat 18:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/jamstack/events/jamstack-istanbul">JAMstack Istanbul</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">26 Şubat 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/Sahibinden-D2D-Events/events/268634768/">Kotlin ve Java'nın Yeni Versiyonları</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">26 Şubat 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/testdefence-yuksek-kaliteli-guvenilir-savunma-sistemleri-ve-yazlmlar-nasl-gelistirilir-tickets-88086646531">TestDefence: Yüksek Kaliteli, Güvenilir Savunma Sistemleri ve Yazılımları Nasıl Geliştirilir?</a></td>
+<td class="org-left">Ankara</td>
+<td class="org-left">27 Şubat 13:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/Microsoft-Giri%25C5%259Fimcilik-Bulu%25C5%259Fmalar%25C4%25B1/events/268504693/">Microservice with Azure Kubernetes Service and Azure Devops</a></td>
+<td class="org-left">Ankara</td>
+<td class="org-left">27 Şubat 13:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/codeyapkredi-vol-4-ses-teknolojilerinin-yarattg-degisim-ve-podcast-tickets-94125416655">Code.YapıKredi Vol 4: Ses Teknolojilerinin Yarattığı Değişim ve Podcast</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">27 Şubat 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/siber-guvenlikte-yapay-zeka-tickets-92908165825">Siber Güvenlikte Yapay Zeka</a></td>
+<td class="org-left">Ankara</td>
+<td class="org-left">27 Şubat 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/Hepsitech-Meetup/events/268530407/">Hepsiburada Micro Frontends Dönüşümü</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">27 Şubat 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/Javascript-Ankara/events/268677048/">JS Ankara Şubat 2020 Etkinliği</a></td>
+<td class="org-left">Ankara</td>
+<td class="org-left">27 Şubat 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/cloud-and-serverless-turkey/events/the-future-of-real-time-offline-data-istanbul">The Future of Real-time - Offline - Data</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">28 Şubat 18:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/geekday-2020-tickets-93463962227">GeekDay 2020</a></td>
+<td class="org-left">Kocaeli</td>
+<td class="org-left">29 Şubat 09:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/GDGKocaeli/events/268678688/">Tensor Flow Study Jam</a></td>
+<td class="org-left">Kocaeli</td>
+<td class="org-left">29 Şubat 13:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/freecodecamp-istanbul/events/freecodecamp-istanbul-tanitim-etkinligi">freeCodeCamp İstanbul Tanıtım Etkinliği</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">29 Şubat 14:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/bilge-adam-teknoloji/events/tensorflow">TensorFlow Fest (TensorFlow Turkey)</a></td>
+<td class="org-left">Ankara</td>
+<td class="org-left">1 Mart 10:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/GDG-Manisa/events/268736708/">Firebase Study Jam</a></td>
+<td class="org-left">Manisa</td>
+<td class="org-left">3 Mart 12:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/devops-turkiye/events/prometheus-ve-grafana-ile-metrik-olusturma-ve-goruntuleme">Prometheus ve Grafana ile Metrik Oluşturma ve Görüntüleme</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">4 Mart 18:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/Microsoft-Giri%25C5%259Fimcilik-Bulu%25C5%259Fmalar%25C4%25B1/events/268504717/">Microservice with Azure Kubernetes Service and Azure Devops</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">5 Mart 13:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/QWomen-%25C4%25B0stanbul/events/268233749/">Kuantum Programlamaya Giriş Atölyesi</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">7 Mart 09:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/gdgtekirdag/events/268421016/">WTM Tekirdağ IWD 2020</a></td>
+<td class="org-left">Tekirdağ</td>
+<td class="org-left">7 Mart 10:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/GDG-Cloud-Istanbul/events/268749560/">Google Cloud Run Workshop</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">7 Mart 14:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/GDG-Cloud-Izmir/events/268749612/">GCP Projects, Service Account And Billing &amp; Intro to Computing in GCP</a></td>
+<td class="org-left">İzmir</td>
+<td class="org-left">8 Mart 13:00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orga43c720" class="outline-2">
+<h2 id="orga43c720"><span class="section-number-2">6</span> Diğer Haberler</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>DeepMind, yapay zekada uzun dönem hafıza araştırmaları için <a href="https://deepmind.com/blog/article/A_new_model_and_dataset_for_long-range_memory">yeni bir model
+ve veri seti yayınladı</a>.</li>
+<li>GitHub, resmi olarak <a href="https://github.blog/2020-02-12-announcing-github-india/">Hindistan'a girdi</a>.</li>
+<li>Microsoft Azure takımı, büyük git depoları için <a href="https://devblogs.microsoft.com/devops/introducing-scalar/">optimizasyon çözümünü
+tanıttı</a>: <a href="https://github.com/microsoft/scalar/">Scalar</a>.</li>
+<li>.NET Core takımı native WPF komponentlerini <a href="https://github.com/dotnet/wpf/issues/2554">açık kaynak yaptı</a>.</li>
+<li>Netflix, <a href="https://aomediacodec.github.io/av1-avif/">AVIF resim formatı</a> için hazırladığı sıkıştırma karşılaştırma
+aracını <a href="https://netflixtechblog.com/avif-for-next-generation-image-coding-b1d75675fe4">açık kaynak olarak yayınladı</a>: <a href="https://github.com/Netflix/image_compression_comparison">netflix/image-compression-comparion</a></li>
+<li>Facebook ve Social Science One, milyonlarda facebook URL'sinden oluşan veri
+setini <a href="https://socialscience.one/blog/unprecedented-facebook-urls-dataset-now-available-research-through-social-science-one">akademik çalışmalar için yayınladı</a>.</li>
+<li>Google, Samsung'u Android çekirdeğinde gereksiz değişiklikler yaparak
+<a href="https://9to5google.com/2020/02/14/google-samsung-android-kernel-changes-security/">zaafiyetlere yol açmakla itham ediyor</a>. Google Project Zero takımının <a href="https://googleprojectzero.blogspot.com/2020/02/mitigations-are-attack-surface-too.html">detaylı
+blog yazısı</a></li>
+<li>Google Yapay Zeka takımı, video boyutlarını otomatik olarak akıllı şekilde
+kırpabilen aracını <a href="https://ai.googleblog.com/2020/02/autoflip-open-source-framework-for.html">açık kaynak olarak yayınlandı</a>: <a href="https://github.com/google/mediapipe/blob/master/mediapipe/docs/autoflip.md">AutoFlip</a>.</li>
+<li>Google kendi bellek ayırma kütüphanesi TCMalloc'u <a href="https://abseil.io/blog/20200212-tcmalloc">açık kaynak olarak
+yayınladı</a>. <a href="https://github.com/google/tcmalloc">GitHub Deposu</a></li>
+<li>ING Bank, web komponentleri kütüphanesini <a href="https://medium.com/ing-blog/ing-open-sources-lion-a-library-for-performant-accessible-flexible-web-components-22ad165b1d3d">açık kaynak hale getirdi</a>: <a href="https://github.com/ing-bank/lion">Lion</a>.</li>
+<li>Yeni bir sıralama algoritması tanıtıldı: <a href="https://github.com/scandum/quadsort">quadsort</a>.</li>
+<li>Go programlama dilinin 1.13.8 ve 1.12.17 <a href="https://golang.org/doc/devel/release.html#go1.13.minor">sürümleri yayınlandı</a>.</li>
+<li>Crystal programlama dilinin 0.33.0 <a href="https://crystal-lang.org/2020/02/14/crystal-0.33.0-released.html">sürümü yayınlandı</a>.</li>
+<li>Racket programlama dilinin 7.6 <a href="https://download.racket-lang.org/v7.6.html">sürümü yayınlandı</a>.</li>
+<li>Delphi 25 <a href="https://community.idera.com/developer-tools/b/blog/posts/25-years-of-excellence">yaşına girdi</a>.</li>
+<li>Spring framework web <a href="https://spring.io/blog/2020/02/14/announcing-the-new-spring-website">sitesini güncelledi</a>.</li>
+<li>Redux Toolkit v1.3.0-Alpha.5 <a href="https://github.com/reduxjs/redux-toolkit/releases/tag/v1.3.0-alpha.5">sürümü yayınlandı</a>.</li>
+<li>Uzak Git deposu sunucu Gitea 1.11.0 <a href="https://blog.gitea.io/2020/02/gitea-1.11.0-is-released/">sürümünü yayınladı</a>.</li>
+<li>OpenSSH 8.2 <a href="https://lists.mindrot.org/pipermail/openssh-unix-announce/2020-February/000138.html">sürümü yayınlandı</a>.</li>
+<li>Apache Flink 1.10 <a href="https://flink.apache.org/news/2020/02/11/release-1.10.0.html">sürümü yayınlandı</a>.</li>
+<li>PostgreSQL 12.2, 11.7, 10.12, 9.6.16, 9.5.21 ve 9.4.29 <a href="https://www.postgresql.org/about/news/2011/">sürümleri yayınlandı</a>.</li>
+<li><a href="https://openchakra.app/">OpenChakra</a> aracının ilk stabil versiyonu 1.0.0 <a href="https://github.com/premieroctet/openchakra/releases/tag/v1.0.0">çıktı</a>.</li>
+<li>GDBFrontend v0.0.16-alpha <a href="https://github.com/rohanrhu/gdb-frontend/releases/tag/v0.0.16-alpha">sürümü çıktı</a>.</li>
+<li>KDE Frameworks 5.67.0 <a href="https://kde.org/announcements/kde-frameworks-5.67.0.php">sürümü çıktı</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org619f8db" class="outline-2">
+<h2 id="org619f8db"><span class="section-number-2">7</span> Lisans</h2>
+<div class="outline-text-2" id="text-7">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="../../../img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+<a href="yazilim-gundemi-2020-07.html">Yazılım Gündemi - 2020/07</a> yazısı <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a> (CC BY-NC-SA 4.0)
+ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 17 Şubat 2020</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 22:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

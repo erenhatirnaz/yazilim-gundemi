@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 22:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi - 2020/13</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi - 2020/13
+<br />
+<span class="subtitle">30 Mart - 5 Nisan 2020</span>
+</h1>
+<div id="table-of-contents">
+<h2>İçindekiler</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org58eb5e0">1. Chromium tabanlı tarayıcılarda form elemanlarının varsayılan görünümü değişiyor</a></li>
+<li><a href="#org6d942b0">2. GitLab, 18 tane özelliğini açık kaynak yapmaya hazırlanıyor</a></li>
+<li><a href="#orga5c69ba">3. Eclipse, VSCode alternatifi IDE'sini açık kaynak olarak duyurdu: Eclipse Theia</a></li>
+<li><a href="#orgd76a0fd">4. Covid-19 Pandemisi, NodeJS sürüm yayınlama takvimini de etkiledi</a></li>
+<li><a href="#orgfd0ecd0">5. PHP 8 sürümünün yayın takvimi belli oldu</a></li>
+<li><a href="#org13482e1">6. Safari 13.1 ile gelen yenilikler</a>
+<ul>
+<li><a href="#org7f1d02f">6.1. JavaScript iyileştirlemeleri</a></li>
+<li><a href="#orgc129fae">6.2. Web Animations API</a></li>
+<li><a href="#orge3fd72e">6.3. Async Clipboard API</a></li>
+<li><a href="#org916601e">6.4. Sources Sekmesi</a></li>
+</ul>
+</li>
+<li><a href="#org8248470">7. StackOverflow'a karanlık mod özelliği beta olarak geldi</a></li>
+<li><a href="#org52dd53e">8. Google açık kaynak projeleri için kod arama sayfasını açtı</a></li>
+<li><a href="#org0c121e0">9. Diğer Haberler</a></li>
+<li><a href="#orgd12fbca">10. Lisans</a></li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gundemi-banner.png" alt="yazilim-gundemi-banner.png" />
+</p>
+</div>
+
+<div class="org-center">
+<p>
+<a href="../12/yazilim-gundemi-2020-12.html">&lt; Önceki Gündem</a> | <b>30 Mart - 5 Nisan 2020</b> | <a href="../14/yazilim-gundemi-2020-14.html">Sonraki Gündem &gt;</a>
+</p>
+
+<p>
+<a href="https://teknoseyir.com/blog/yazilim-gundemi-2020-13">TeknoSeyir'de Oku</a>
+</p>
+</div>
+
+<div id="outline-container-org58eb5e0" class="outline-2">
+<h2 id="org58eb5e0"><span class="section-number-2">1</span> Chromium tabanlı tarayıcılarda <a href="https://blog.chromium.org/2020/03/updates-to-form-controls-and-focus.html">form elemanlarının varsayılan görünümü değişiyor</a></h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Microsoft'un yeni Edge tarayıcısının ve Google'ın Chrome tarayıcısının da
+kullandığı Chromium açık kaynaklı tarayıcısının bu hafta blogunda yayınlanan
+yazı ile artık form kontrollerinin işletim sistemi değişmeksizin aynı
+görüneceği duyuruldu. Sorunun ne olduğunu anlamak için web geliştirme yapmış
+kişilerin mutlaka bir dönem kullandığı belki hala daha kullanıyor olduğu
+"reset.css" dosyasını hatırlatmak isterim. Hatırlamayan ya da bilmeyenler için
+bu dosya işletim sistemi ve tarayıcılardan kaynaklanan stil farklılıklarını
+temizleyen bir css dosyası. Sayfaya önce bu css dosyası eklenir, daha sonra
+kendi özel css dosyalarımız eklenirdi ki sayfamız tüm tarayıcılarda ve işletim
+sistemlerinde aynı gözüksün. Modern web dünyasında eskisi kadar ihtiyaç
+duymasak da Google Chromium ve Microsoft Edge takımları bunu dert edinmişler.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/chromium-form-eski-yeni.png" alt="chromium-form-eski-yeni.png" height="500" />
+</p>
+<p><span class="figure-number">Şekil 2: </span><b>(SOL):</b> Chrome 80 ve önceki sürümlerdeki stillendirme. <b>(SAĞ):</b> Yeniden tasarlanan form elemanları.</p>
+</div>
+
+<p>
+Google'ın Chromium takımı ve Microsoft'un Edge takımının birlikte çalışması
+sonucu oluşmuş bu yeni form elemanları tasarımları Edge tarayıcısının son
+sürümünde kullanılmış fakat Chrome'un 81 numaralı sürümünde deneysel olarak
+kullanıma açılacakmış. Chrome 81'de bu tasarıma geçmek için:
+chrome://flags/#form-controls-refresh özelliğini aktifleştirmek yeterli olacak
+deniyor.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/chromium-focus-ring.gif" alt="chromium-focus-ring.gif" />
+</p>
+</div>
+
+<p>
+Aynı zamanda tarayıcıdaki bağlantı ve objeler üzerinde gezinmek için
+kullanabildiğimiz TAB tuşuyla birlikte ortaya çıkan "focus halkası" (focus
+ring) de yenilenmiş. Daha görünür olması için siyah renk ve beyaz çerçeve
+tercih edilmiş. Yine de bazı durumlarda görünmez olabileceği söylenmiş.
+</p>
+
+<p>
+Yapılan diğer değişiklik ve yeniden tasarımlar için konu başlığına eklediğim
+bağlantıya tıklayabilirsiniz.
+</p>
+
+<p>
+Sizce yeni tasarımlar nasıl oldu? Böyle bir değişikliğe gerek var mıydı?
+Yorumlar bölümünde konuşalım.
+</p>
+</div>
+</div>
+<div id="outline-container-org6d942b0" class="outline-2">
+<h2 id="org6d942b0"><span class="section-number-2">2</span> GitLab, 18 tane özelliğini <a href="https://about.gitlab.com/blog/2020/03/30/new-features-to-core/">açık kaynak yapmaya hazırlanıyor</a></h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Popüler uzak git sunucularından biri olan GitLab, bu hafta içerisinde
+yayınladıkları bir blog yazısı ile birlikte normalde ücretli sürümde olan 18
+adet özelliği açık kaynak olan sürüme getireceklerini duyurdular. Fakat ilginç
+bir yöntemle. Özellikler GitLab'in şu 7 parçasının içerisinden alınacakmış:
+<a href="https://about.gitlab.com/features/#plan">Plan</a>, <a href="https://about.gitlab.com/features/#create">Create</a>, <a href="https://about.gitlab.com/features/#verify">Verify</a>, <a href="https://about.gitlab.com/features/#release">Release</a>, <a href="https://about.gitlab.com/features/#configure">Configure</a>, <a href="https://about.gitlab.com/features/#defend">Defend</a>.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/gitlab-devops-plan.png" alt="gitlab-devops-plan.png" />
+</p>
+<p><span class="figure-number">Şekil 4: </span>Yani Monitor hariç DevOps sürecinin diğer tüm kısımlardan bir şeyler açık kaynak olacak</p>
+</div>
+
+<p>
+İlginç bir yöntem dedim çünkü bu özellikleri açık kaynak yapmak için
+topluluktan yardım istiyorlar. <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/212330">Issue Export</a>'dan, <a href="https://gitlab.com/gitlab-org/gitlab/-/issues/211685">Web IDE'si için Web
+Terminal</a>'a kadar birçok konuda "gelin bunları birlikte açık kaynak yapalım"
+diyorlar. Konu başlığına eklediğim blog yazısında açık kaynak yapmak
+istedikleri her özellik için açılan issue sayfalarının linklerini vermişler.
+İlgili issue sayfalarında yapılacaklarla ilgili bilgiler vermişler. Böylece
+insanlar da o konularla ilgili yardım edebiliyor.
+</p>
+
+<p>
+Sonuçta GitLab'ın ücretli sürümünün kaynak kodlarına erişimi olan onlar ve
+doğal olarak oradan kendileri de açık kaynak hale getirebilirler ilgili
+parçaları (içerdeki kod yapısı hakkında bilgim yok tabii). Topluluktan yardım
+istemeleri bana biraz tuhaf geldi. Neyse yine de bizim işimize yarayacak
+şeyler olduğu için fazla kurcalamayayım :).
+</p>
+</div>
+</div>
+<div id="outline-container-orga5c69ba" class="outline-2">
+<h2 id="orga5c69ba"><span class="section-number-2">3</span> Eclipse, VSCode alternatifi IDE'sini <a href="https://www.eclipse.org/org/press-release/20200331-theia.php">açık kaynak olarak duyurdu</a>: <a href="https://theia-ide.org/#features">Eclipse Theia</a></h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Daha çok Java için IDE'si olmakta tanınan ama başka çözümleri de bulunan
+Eclipse Foundation, bu hafta içerisinde yeni hem bulutta hem de masaüstünde
+çalışabilen IDE'sini açık kaynak olarak tanıttı.
+</p>
+
+<p>
+Proje aslında 2016 yılında <a href="https://www.ericsson.com/en">Ericsson</a> ve <a href="https://www.typefox.io/">TypeFox</a> firmaları tarafından
+başlatılmış fakat zamanla Eclipse Foundation gibi birçok firmanın katkılarıyla
+bu hale gelmiş. Proje şu an Eclipse Foundation altındaki <a href="https://ecdtools.eclipse.org/">Eclipse Cloud
+Development Tools Working Group</a> (ECD WG) tarafından devam ettiriliyor. Aynı
+zamanda açık kaynakta olduğu için topluluğun katkılarına açık. Aynı zamanda
+Google Cloud, RedHat, Arduino, IBM gibi firmalar da projeye katkı yapmışlar.
+</p>
+
+
+<div class="figure">
+<p><img src="gorseller/eclipse-theia-demo.png" alt="eclipse-theia-demo.png" />
+</p>
+</div>
+
+<p>
+Eclipse'in duyuru yazısında VSCode eklentilerini de bu IDE'de
+çalıştırabiliyorsunuz diyor fakat ben denemedim. Aynı yazıda Eclipse Theia ile
+VS Code arasındaki farklar olarak şu üç madde sıralanmış:
+</p>
+
+<ul class="org-ul">
+<li>Theia'nın mimarisi daha modüler ve özelleştirmelere daha uygun.</li>
+<li>Theia hem masaüstünde hem de bulutta çalışabiliyor.</li>
+<li>Theia topluluk-destekli ve Eclipse Foundation'ın bağımsız yönetimi
+tarafından geliştiriliyor.</li>
+</ul>
+
+<p>
+Son maddeyi ben de tam anlamadım. VS Code'da zaten açık kaynak olduğu için
+topluluk katkı yapabiliyor ve Microsoft sürümlerini yayınlıyor. Büyük ihtimal
+yanlış anlamış ve çevirmiş olabilirim. Eğer yanlış anlamışsan, yorumlar
+bölümünde beni düzeltmekten kendinizi geri koymayın.
+</p>
+
+<p>
+IDE'nin masaüstü uygulaması <a href="https://www.electronjs.org/">Electron</a> tabanlı ve uzaktaki sunucu ile <a href="https://www.jsonrpc.org/specification">JSON-RPC</a>
+mesajlarını HTTP ya da WebSocket üzerinden ileterek çalışıyor. Ben docker
+kullanarak kendi bilgisayarıma kurdum ve biraz kurcaladım. Eğer siz de denemek
+isterseniz bilgisayarınıza Docker kurduktan sonra aşağıdaki komutu açmak
+istediğiniz proje dizinindeyken çalıştırabilirsiniz (yalnız dosya kaydetme
+kısmında izinlerle ilgili bir hata veriyor, pek uğraşamadım çözmek için):
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">docker run --rm -it -p 3000:3000 -v <span class="org-string">"$(</span><span class="org-sh-quoted-exec">pwd</span><span class="org-string">):/home/project:cached"</span> theiaide/theia
+</pre>
+</div>
+
+<p>
+Bu yazılım gündemi yazılarını yazmaya başladığımdan beri fark ettim ki son bir
+yıldır herkes geliştiricilere bir uzaktan geliştirme çözümü üretmeye
+çalışıyor. Önümüzdeki birkaç senede popülerliği daha da artacaktır diye
+umuyorum "Cloud Development" (ya da ileride ne isim verirlerse) olayının. Siz
+bu konuda ne düşünüyorsunuz? Bu tarz çözümleri kullanır mıydınız ya da
+kullanıyor musunuz? yoksa "yok arkadaş ben o kadar yenilikçi değilim eski tip
+masaüstü uygulaması IDE ya da metin editörümle iyiyim" diyenlerden misiniz?
+yorumlar bölümünde konuşalım.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd76a0fd" class="outline-2">
+<h2 id="orgd76a0fd"><span class="section-number-2">4</span> Covid-19 Pandemisi, NodeJS sürüm <a href="https://nodejs.org/en/blog/announcements/adjusted-release-schedule-covid/">yayınlama takvimini de etkiledi</a></h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Tüm dünya olarak içinde bulunduğumuz süreçten elbette yazılım sektörü de
+payını almaya devam ediyor. Her ne kadar uzaktan çalışmaya en uygun
+mesleklerden biri bizimki olsa da, pratikte bazı şeyler düşünüldüğü gibi
+olmuyor. NodeJS takımı da olası sorunların önüne geçmek amacıyla bu hafta
+sürüm yayınlama takvimini güncelledi. Buna göre:
+</p>
+
+<ul class="org-ul">
+<li><code>v10.x</code> ve <code>v12.x</code> dallarındaki bir sonraki sürüm 7 Nisan tarihinde çıkacak.</li>
+<li><code>v12.x</code> dalındaki minor sürüm numaralarının yanın tarihleri ertelendi:
+<ul class="org-ul">
+<li><code>v12.17.0</code>: 26 Mayıs 2020</li>
+<li><code>v12.18.0</code>: 25 Ağustos 2020</li>
+</ul></li>
+<li><code>v13.x</code> dalında, End of Life (hayatının sonu) tarihi olan Haziran 2020'ye
+kadar yeni bir sürüm yok.</li>
+<li><code>v14.x</code> dalının ilk sürümü ise planlandığı gibi 21 Nisan 2020 tarihinde
+yayınlanacakmış.</li>
+</ul>
+
+<p>
+Tarihlerle ilgili daha detaylı bilgiler için konu başlığına eklediğim
+bağlantıya tıklayabilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-orgfd0ecd0" class="outline-2">
+<h2 id="orgfd0ecd0"><span class="section-number-2">5</span> PHP 8 sürümünün <a href="https://wiki.php.net/todo/php80">yayın takvimi belli oldu</a></h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Aşağıdaki sürümlerin hepsi 2020 yılı içerisinde çıkacak.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Sürüm</th>
+<th scope="col" class="org-left">Yayınlanma Tarihi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">18 Haziran</td>
+<td class="org-left">Alpha 1</td>
+</tr>
+
+<tr>
+<td class="org-left">2 Temmuz</td>
+<td class="org-left">Alpha 2</td>
+</tr>
+
+<tr>
+<td class="org-left">16 Temmuz</td>
+<td class="org-left">Alpha 3</td>
+</tr>
+
+<tr>
+<td class="org-left">27 Temmuz</td>
+<td class="org-left">Feature freeze</td>
+</tr>
+
+<tr>
+<td class="org-left">20 Temmuz</td>
+<td class="org-left">Beta 1</td>
+</tr>
+
+<tr>
+<td class="org-left">13 Ağustos</td>
+<td class="org-left">Beta 2</td>
+</tr>
+
+<tr>
+<td class="org-left">27 Ağustos</td>
+<td class="org-left">Beta 3</td>
+</tr>
+
+<tr>
+<td class="org-left">10 Eylül</td>
+<td class="org-left">Relase Candidate 1</td>
+</tr>
+
+<tr>
+<td class="org-left">24 Eylül</td>
+<td class="org-left">Relase Candidate 2</td>
+</tr>
+
+<tr>
+<td class="org-left">8 Ekim</td>
+<td class="org-left">Release Candidate 3</td>
+</tr>
+
+<tr>
+<td class="org-left">22 Ekim</td>
+<td class="org-left">Release Candidate 4</td>
+</tr>
+
+<tr>
+<td class="org-left">5 Kasım</td>
+<td class="org-left">Release Candidate 5</td>
+</tr>
+
+<tr>
+<td class="org-left">19 Kasım</td>
+<td class="org-left">Release Candidate 6</td>
+</tr>
+
+<tr>
+<td class="org-left">3 Aralık</td>
+<td class="org-left">Genel Erişilebilirlik (Final)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org13482e1" class="outline-2">
+<h2 id="org13482e1"><span class="section-number-2">6</span> Safari 13.1 ile <a href="https://webkit.org/blog/10247/new-webkit-features-in-safari-13-1/">gelen yenilikler</a></h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Geçtiğimiz haftaki yazılım gündemi yazısında (bkz: <a href="../12/yazilim-gundemi-2020-12.html">Yazılım Gündemi - 2020/12</a>)
+Safari 13.1 ile birlikte tüm üçüncü parti çerezlerin engellenmeye başlandığını
+söylemiştim. Bu hafta ise Safari 13.1 ile birlikte gelen ve biz
+geliştiricileri ilgilendiren diğer birkaç özelliğe birlikte göz atalım.
+</p>
+</div>
+
+<div id="outline-container-org7f1d02f" class="outline-3">
+<h3 id="org7f1d02f"><span class="section-number-3">6.1</span> JavaScript iyileştirlemeleri</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+Safari tarayıcısının bu sürümüyle birlikte artık <code>replaceAll()</code> fonksiyonu
+desteklenmeye başlandı. Yani artık bu kullanım Safari'de de çalışacak:
+</p>
+<div class="org-src-container">
+<pre class="src src-js"><span class="org-string">"selam teknoseyir replace all deniyoruz"</span>.replaceAll(<span class="org-string">" "</span>, <span class="org-string">"-"</span>);
+<span class="org-comment-delimiter">// </span><span class="org-comment">selam-teknoseyir-replace-all-deniyoruz</span>
+</pre>
+</div>
+
+<p>
+Ayrıca bu sürümle birlikte <code>??</code> operatörü de destekleniyor. Artık
+değişkenlere şu kullanımla varsayılan değer atayabileceğiz:
+</p>
+<div class="org-src-container">
+<pre class="src src-js"><span class="org-keyword">const</span> <span class="org-variable-name">nullDeger</span> = <span class="org-constant">null</span>
+<span class="org-keyword">const</span> <span class="org-variable-name">sonuc</span> = nullDeger ?? <span class="org-string">"varsay&#305;lan"</span>;  <span class="org-comment-delimiter">// </span><span class="org-comment">"varsay&#305;lan"</span>
+</pre>
+</div>
+<p>
+Yani yukarıda dedik ki <code>nullDeger</code> isimli değişken null ya da 0 ise <code>sonuc</code>
+değişkenine <code>"varsayılan"</code> ifadesi ata.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc129fae" class="outline-3">
+<h3 id="orgc129fae"><span class="section-number-3">6.2</span> <a href="https://webkit.org/blog/8343/web-animations-in-webkit/">Web Animations API</a></h3>
+<div class="outline-text-3" id="text-6-2">
+
+<div class="figure">
+<p><img src="gorseller/safari13-web-animations.png" alt="safari13-web-animations.png" />
+</p>
+</div>
+
+<p>
+Safari'nin bu sürümüyle birlikte eklenen bu API sayesinde artık CSS
+animasyonlarını JavaScript tarafından yönetebileceğiz. Ayrıca tarayıcının Web
+Inspector aracına animasyonları gösterebilecek "Media &amp; Animations" kısmı da
+eklenmiş.
+</p>
+</div>
+</div>
+<div id="outline-container-orge3fd72e" class="outline-3">
+<h3 id="orge3fd72e"><span class="section-number-3">6.3</span> <a href="https://w3c.github.io/clipboard-apis/#async-clipboard-api">Async Clipboard API</a></h3>
+<div class="outline-text-3" id="text-6-3">
+<p>
+W3C tarafından yeni bir web standardı olarak tanımlanan bu yeni API sayesinde
+artık kullanıcıların clipboard'larına asenkron olarak erişip, kopyaladıkları
+metinleri web sayfamız içerisinde amacımıza uygun olarak kullanabileceğiz.
+Asenkron olmasının avantajı bu işlemler gerçekleştirilirken web sayfamız
+tıkanmayacak. Aynı zamanda bu yeni API ile birden fazla farkı türden içeriği
+kullanıcının panosuna gönderebilecek ve programlamasal olarak "Yapıştır"
+işlemi yapabileceğiz. Mesela bu sayede artık kullanıcının panosunda "http"
+ile bağlayan bir ifade varsa bunu <code>txtSiteUrl</code> metin kutusuna "Yapıştır" gibi
+işlemleri yapabileceğiz.
+</p>
+</div>
+</div>
+<div id="outline-container-org916601e" class="outline-3">
+<h3 id="org916601e"><span class="section-number-3">6.4</span> Sources Sekmesi</h3>
+<div class="outline-text-3" id="text-6-4">
+
+<div class="figure">
+<p><img src="gorseller/safari13-sources-tab.png" alt="safari13-sources-tab.png" height="450" />
+</p>
+</div>
+
+<p>
+Tarayıcının Web Inspector aracına yeni eklenen bu sekme aslında önceki
+Resources ve Debugger sekmelerinin birleştirilmiş ve iyileştirilmiş hali.
+Üstelik artık yeni <a href="https://webkit.org/web-inspector/javascript-breakpoints/">JavaScript Breakpoint</a>'leri ile debug yapma özelliğine de
+sahip.
+</p>
+
+<p>
+Safari 13.1 sürümüyle gelen ve biz geliştiricileri ilgilendiren diğer özellik
+ve değişiklikler için mutlaka konu başlığına eklediğim bağlantıya tıklayarak,
+ilgi sayfayı incelemeyi unutmayın.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org8248470" class="outline-2">
+<h2 id="org8248470"><span class="section-number-2">7</span> StackOverflow'a <a href="https://stackoverflow.blog/2020/03/30/introducing-dark-mode-for-stack-overflow/">karanlık mod özelliği beta olarak geldi</a></h2>
+<div class="outline-text-2" id="text-7">
+
+<div class="figure">
+<p><img src="gorseller/stackoverflow-dark-mode.png" alt="stackoverflow-dark-mode.png" />
+</p>
+</div>
+
+<p>
+Başlığı okuyunca ben de sizin gibi "Şimdiye kadar nasıl olmaz bu?!" dedim ama
+yokmuş ve bu hafta eklenmiş. Aslında çeşitli eklentiler ile zaten biz karanlık
+mod yapabiliyorduk ama sitenin kendinden desteklemesi daha iyi oldu. Bugüne
+kadar olmaması başlı başına saçmalık zaten. Neyse geç olsun, güç olmasın
+diyelim.
+</p>
+
+<p>
+Temayı aktifleştirmek için <a href="https://stackoverflow.com/users/preferences/current">User Preferences</a> sayfasını açın ve "Theme"
+kısmından istediğiniz temayı seçin ve işte! Artık geceleri StackOverflow'a
+girince far görmüş tavşan gibi bakmayacaksınız ekrana :)
+</p>
+</div>
+</div>
+<div id="outline-container-org52dd53e" class="outline-2">
+<h2 id="org52dd53e"><span class="section-number-2">8</span> <a href="https://cs.opensource.google/">Google açık kaynak projeleri için kod arama</a> sayfasını <a href="https://opensource.googleblog.com/2020/04/code-search-for-google-open-source.html?m=1">açtı</a></h2>
+<div class="outline-text-2" id="text-8">
+
+<div class="figure">
+<p><img src="gorseller/google-code-search.png" alt="google-code-search.png" />
+</p>
+</div>
+
+<p>
+Google açık kaynak takımının bu hafta blogunda yayınladığı yazı ile artık
+Google'ın tüm açık kaynak projelerinde arama yapabileceğimiz Code Search
+sayfası kullanıma açıldı. Bu adresten sayfayı açarak siz de Google'ın açık
+kaynak projeleri üzerinde dosya ya da kod araması yapabilirsiniz:
+<a href="https://cs.opensource.google/">https://cs.opensource.google/</a>
+</p>
+
+<p>
+Aynı zamanda Android açık kaynak projesi için de bu sayfayı ziyaret
+edebilirsiniz: <a href="https://cs.android.com/">https://cs.android.com/</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org0c121e0" class="outline-2">
+<h2 id="org0c121e0"><span class="section-number-2">9</span> Diğer Haberler</h2>
+<div class="outline-text-2" id="text-9">
+<ul class="org-ul">
+<li>Microsoft, Koronavirüs yüzünden artan Azure kullanımlarıyla <a href="https://mspoweruser.com/azure-overwhelmed-775-percent-demand-in-lockdown/">başa çıkmaya
+çalışıyor</a>.</li>
+<li>Google, Chroma'daki SameSite Cookie değişikliklerini <a href="https://blog.chromium.org/2020/04/temporarily-rolling-back-samesite.html?m=1">geçici olarak geri
+aldı</a>.</li>
+<li>Google servis yönetimini kolaylaştıracak yeni <a href="https://cloud.google.com/blog/products/networking/introducing-service-directory">hizmetini beta olarak duyurdu</a>:
+<a href="https://cloud.google.com/service-directory">Service Directory</a>.</li>
+<li>Unreal Engine Wiki <a href="https://forums.unrealengine.com/unreal-engine/announcements-and-releases/1739154-changes-to-the-official-unreal-engine-wiki">kapatıldı</a>. Tüm wiki arşivi <a href="https://epicgames.ent.box.com/s/2e5hhlvqyu9octooxbkgwt2xdmmrea9z">buradan</a> indirilebiliyor.</li>
+<li>Go dili için mikroservis framework'ü olan Go Micro, <a href="https://github.com/micro/go-micro/releases/tag/v2.4.0">v2.4.0 sürümünü
+yayınladı</a>.</li>
+<li>Nim programlama dilinin <a href="https://nim-lang.org/blog/2020/04/03/version-120-released.html">1.2.0 sürümü yayınlandı</a>.</li>
+<li>Idris 2 programlama dilinin <a href="https://www.idris-lang.org/idris-2-version-010-released.html">0.1.0 sürümü yayınlandı</a>.</li>
+<li>Rust programlama dilinin dokümantasyon <a href="https://blog.rust-lang.org/inside-rust/2020/03/27/goodbye-docs-team.html">takımı kapatıldı</a>.</li>
+<li>Kotlin için GraphQL kütüphanesi graphql-kotlin, <a href="https://github.com/ExpediaGroup/graphql-kotlin/releases">2.0.0 sürümünü yayınladı</a>.</li>
+<li>VueJS kütüphanesinin <a href="https://github.com/vuejs/vue-next/releases/tag/v3.0.0-alpha.11">v3.0.0-alpha.11 sürümü yayınlandı</a>.</li>
+<li>Android için HTTP inspector aracı Chucker, <a href="https://github.com/ChuckerTeam/chucker/releases/tag/3.2.0">v3.2.0 sürümünü yayınladı</a>.</li>
+<li>Sourcetrail aracının <a href="https://www.sourcetrail.com/blog/release_2020_1/">2020.1 sürümü yayınlandı</a>.</li>
+<li>MultiCore OCaml projesi için <a href="https://discuss.ocaml.org/t/multicore-ocaml-march-2020-update/5406">Mart 2020 raporu</a> yayınlandı.</li>
+<li>Sidekick Load Balancer <a href="https://blog.min.io/introducing-sidekick-a-high-performance-load-balancer/">aracı tanıtıldı</a>.</li>
+<li>Prisma 2.0 Beta programı <a href="https://www.prisma.io/blog/prisma-2-beta-b7bcl0gd8d8e">duyuruldu</a>.</li>
+<li>RapidFuzz kütüphanesinin <a href="https://github.com/rhasspy/rapidfuzz/releases/tag/0.6.3">0.6.3 sürümü çıktı</a>.</li>
+<li>simdjson kütüphanesinin 0.3 sürümü <a href="https://lemire.me/blog/2020/03/31/we-released-simdjson-0-3-the-fastest-json-parser-in-the-world-is-even-better/">yayınlandı</a>.</li>
+<li>Kubie aracı <a href="https://blog.sbstp.ca/introducing-kubie/">tanıtıldı</a>. <a href="https://github.com/sbstp/kubie">GitHub Deposu</a></li>
+<li>Eclipse Dirigible <a href="https://www.dirigible.io/release/2020/04/04/news_new_release_4_4.html">4.4 sürümü yayınlandı</a>.</li>
+<li>Cortex <a href="https://grafana.com/blog/2020/04/02/cortex-v1.0-released-the-highly-scalable-fast-prometheus-implementation-is-generally-available-for-production-use/">v1.0 sürümü yayınlandı</a>.</li>
+<li>dapr <a href="https://github.com/dapr/dapr/releases/tag/v0.6.0">v0.6.0 çıktı</a>.</li>
+<li>libgit2 <a href="https://github.com/libgit2/libgit2/releases/tag/v1.0.0">v1.0.0 çıktı</a>.</li>
+<li>sctructure <a href="https://github.com/talyssonoc/structure/releases/tag/v2.0.0">v2.0.0 çıktı</a>.</li>
+<li>SpaceVim <a href="https://spacevim.org/SpaceVim-release-v1.4.0/">v1.4.0 çıktı</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd12fbca" class="outline-2">
+<h2 id="orgd12fbca"><span class="section-number-2">10</span> Lisans</h2>
+<div class="outline-text-2" id="text-10">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="../../../img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+<a href="yazilim-gundemi-2020-13.html">Yazılım Gündemi - 2020/13</a> yazısı <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a> (CC BY-NC-SA 4.0)
+ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 5 Nisan 2020</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 22:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

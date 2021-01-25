@@ -1,0 +1,163 @@
+#+TITLE: Yazılım Gündemi - 2020/02
+#+SUBTITLE: 6-12 Ocak 2020
+#+AUTHOR: Eren Hatırnaz
+#+DATE: 12 Ocak 2020
+#+OPTIONS: ^:nil
+#+LANGUAGE: tr
+#+LATEX_HEADER: \hypersetup{colorlinks=true, linkcolor=black, filecolor=red, urlcolor=blue}
+#+LATEX_HEADER: \usepackage[turkish]{babel}
+#+HTML_HEAD: <link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+#+LATEX: \shorthandoff{=}
+
+[[file:gorseller/yazilim-gundemi-banner.png]]
+
+#+BEGIN_CENTER
+[[file:../01/yazilim-gundemi-2020-01.org][< Önceki Gündem]] | *6-12 Ocak 2020* | [[file:../03/yazilim-gundemi-2020-03.org][Sonraki Gündem >]]
+
+[[https://teknoseyir.com/blog/yazilim-gundemi-2020-02][TeknoSeyir'de Oku]]
+#+END_CENTER
+
+* 13 Ocak'tan itibaren Java kodları [[https://www.alphabot.com/security/blog/2020/java/Your-Java-builds-might-break-starting-January-13th.html?utm_name=iossmf][derlemede sorun yaşayabilirsiniz]]
+  #+ATTR_HTML: :height 100
+  #+ATTR_LATEX: :height 2cm
+	[[file:gorseller/java-https.png]]
+
+	Daha önce de sıkça bahsettiğim gibi günümüzün yazılım geliştirme süreçlerinde
+	üçüncü parti kütüphaneler ve araçlar artık neredeyse olmazsa olmazlardan biri.
+	Kendimiz yapsak farklı sorunlarla karşılaşacağımız ya da vaktimizi alacak
+	birçok ihtiyacımızı bu üçüncü parti kütüphaneler ve araçlarla gideriyoruz fakat
+	beraberinde getirdiği riskler de yok değil. İşte bu risklerden biri olan
+	MITM(Man-in-the-middle) saldırılarını önlemek için Java ekosistemindeki üçüncü
+	parti kütüphane depoları (artifact repository) sadece HTTPS bağlantılarına izin
+	verecekler. Tabii ki bu kararı yeni almadılar, önceden duyurmuşlardı fakat yine
+	de hatırlatmak için gündeme almak istedim. Popüler bazı depoların HTTP
+	desteklerini sonlandıracakları tarihler bu şekilde:
+
+	  - JCenter(JFrog Bintray) | http://jcenter.bintray.com : *13 Ocak 2020*.
+      [[https://jfrog.com/blog/secure-jcenter-with-https/][Duyuru yazısı]]
+		- Maven Central | http://repo1.maven.org, http://repo.maven.apache.org: *15
+      Ocak 2020*. [[https://central.sonatype.org/articles/2019/Apr/30/http-access-to-repo1mavenorg-and-repomavenapacheorg-is-being-deprecated/][Duyuru yazısı]]
+		- Spring (Pivotal) | http://repo.spring.io: *15 Ocak 2020*. [[https://spring.io/blog/2019/09/16/goodbye-http-repo-spring-use-https][Duyuru yazısı]]
+		- Gradle | http://repo.gradle.org: *15 Ocak 2020*. [[https://blog.gradle.org/decommissioning-http][Duyuru yazısı]]
+
+	Bu değişiklikten etkilenmemek için ilgili depoların yayınladıkları duyuru
+	yazılarındaki yönergeleri uygulamalısınız.
+
+	Elbette üçüncü parti kütüphaneler ile ilgili tek sorun MITM saldırıları değil.
+	Projeye eklediğimiz kütüphaneyle birlikte o kütüphanenin varsa güvenlik
+	açıklarını da projeye ekliyoruz. [[file:../../2019/01/yazilim-gundemi-01.org][İlk yazılım gündemi yazısı]]ndan beri sürekli
+	çeşitli kütüphanelerdeki açıkların etkileriyle ilgili konuları işliyorum.
+	Hacker'lar artık son kullanıcı yerine direkt bizim kodlarımızı kullanarak
+	içeriye girmeye çalışıyorlar, bu alanı keşfettiler. Dolayısıyla projemize
+	bağımlılık olarak bir kütüphane eklerken, körü körüne eklemek yerine en azından
+	kodlarına şöyle bir göz gezdirmekte fayda var.
+* TypeScript 3.8 Beta [[https://devblogs.microsoft.com/typescript/announcing-typescript-3-8-beta][duyuruldu]]
+	Microsoft tarafından geliştirilen ve gittikçe popülaritesi artan dillerden
+	TypeScript, 3.8 Beta sürümünü bu hafta içerisinde yayınladı. Bu sürüm ile
+	birlikte gelen bir özelliği inceleyelim:
+** Private Fields
+	 ECMAScript'de [[https://tc39.es/process-document/][stage-3 aşaması]]na geçen [[https://github.com/tc39/proposal-class-fields/][class fields]] özelliğinin [[https://github.com/tc39/proposal-class-fields/#private-fields][bir parçası]]
+	 aslında bu özellik. Diğer dillerde görmeye alışık olduğumuz class'a ait bir
+	 özelliğin dışarıdan erişilemez olmasını sağlıyor. Örneğin:
+   #+ATTR_LATEX: :options frame=lines, linenos, label=TypeScript, labelposition=topline
+   #+BEGIN_SRC typescript
+     class Kisi {
+         #isim: string
+
+         constructor(isim: string) {
+             this.#isim = isim;
+         }
+
+         selamla() {
+             console.log("Selam, benim adım ${this.#isim}!");
+         }
+     }
+
+     let eren = new Kisi("Eren Hatırnaz");
+     eren.#isim
+   #+END_SRC
+	 Artık böyle bir kod yazmak mümkün olacak ve son satırdaki gibi sınıfın dışından
+	 bir erişim yapılmaya çalışılırsa şu hata alınacak:
+	 #+BEGIN_QUOTE
+	 Property '#isim' is not accessible outside class 'Kisi' because it has a
+	 private identifier.
+	 #+END_QUOTE
+	 Fakat bu özelliği kullanmak için şunları unutmamalıyız:
+   - Private field'lar =#= karakteri ile başlamalıdır ve sınıf içerisinde aynı
+     şekilde çağırılmalıdır.
+   - Her private field sadece kendi sınıfı içerisinde private durumundadır.
+   - TypeScript'deki diğer =public= ve =private= gibi anahtar kelimeler bu
+     özellikle birlikte kullanılamaz.
+	 Bazı maddeler tam anlaşılmamış olabilir fakat örneklerle birlikte açıklamak
+	 yazıyı biraz uzatacağı için bu özellikle ilgili arkadaşları konu bağlığına
+	 eklediğim bağlantıya tıklayamaya davet ediyorum.
+* WebAssembly kullanan sitelerin birçoğu kötü amaçlı kullanıyor
+	Geçtiğimiz haftalarda W3C tarafından bir web standardı olarak kabul edilen
+	WebAssembly programlama dili performanslı olmasıyla öne çıktığı için kötü
+	amaçlı kişilerin de gözünden kaçamamış maalesef. Geçtiğimiz sene yayınlanan [[https://www.sec.cs.tu-bs.de/pubs/2019a-dimva.pdf][bir
+	akademik çalışma]] ortaya koydu ki Alexa'nın popüler ilk 1 milyon web sitesi
+	içerisindeki sitelerden WebAssembly kullananların birçoğu bunu kötü amaçlarına
+	alet ediyorlarmış.
+
+	[[file:gorseller/webassembly-kotu-amaclar.png]]
+
+	Araştırmacılar Alexa'nın ilk 1 milyon web sitesinden rastgele seçilmiş 3
+	sayfayı seçeyerek bu sayfada WebAssembly kodu olup olmadığını analiz etmişler
+	ve toplam 1.639 web sitesinin WebAssembly kodu içerdiğini tespit etmişler.
+	Bunlardan bazıları diğer birçok site tarafından kullanılan kütüphaneler fakat
+	araştırmacılar diğer yaygın olmayan kodları incelediğinde bazılarının kripto
+	para madenciliği amacıyla yazıldığını fark etmişler. Dil hem performanslı hem
+	de tarayıcıda çalışınca işte fırsatı kaçırmamışlar.
+
+	Bazı web sayfalarının ise obfuscate yöntemleri kullanarak WebAssembly
+	kodlarının içeriğini gizlediğini fark etmişler. Araştırmacılar bu kategori için
+	de "malicious" diye tanımlamışlar ama ben tam öyle düşünmüyorum. Her ne kadar
+	kodlarını saklamalarında biraz şüphe olsa da insanlar kodlarını saklamayı
+	seçebilirler, bu illaki kötü amaçlı olacaklarını göstermez.
+
+	İşte siber güvenlik alanında çalışacaklar için yeni bir alt alan daha. Web
+	standardı olarak kabul edilmesiyle birlikte bu tarz amaçlar için kullanan
+	kişilerin de artacağını düşünüyorum. Siber güvenlik alanıyla ilgili
+	arkadaşların araştırmalarını tavsiye ederim.
+* Yaklaşan Etkinlikler
+  #+ATTR_HTML: :width 100%
+  #+ATTR_LATEX: :environment longtable :align |p{8cm}|l|l|
+  |-----------------------------------------------------------------------+----------+---------------|
+  | Etkinlik İsmi                                                         | Yeri     | Tarihi        |
+  |-----------------------------------------------------------------------+----------+---------------|
+  | [[https://www.meetup.com/Cozumpark/events/267512181/][Bulutun Geleceği, Hibrit Bulut {Webcast}]]                              | Online   | 14 Ocak 10:00 |
+  | [[https://www.meetup.com/NS-Ankara/events/267855245/][NS Ankara Ocak Ayı 1.Buluşması]]                                        | Ankara   | 14 Ocak 19:00 |
+  | [[https://www.eventbrite.com/e/trai-meet-up-30-biyometrik-guvenlik-ve-yapay-zeka-tickets-88912765475][TRAI Meet-up 30 - Biyometrik Güvenlik ve Yapay Zeka]]                   | İstanbul | 15 Ocak 18:00 |
+  | [[https://www.eventbrite.com/e/devc-istanbul-semi-ideathon-tickets-88393923605][DevC İstanbul Semi Ideathon]]                                           | İstanbul | 18 Ocak 07:00 |
+  | [[https://www.meetup.com/GDGAnkara/events/267812348/][Women Techmakers Series]]                                               | Ankara   | 18 Ocak 11:00 |
+  | [[https://www.eventbrite.com/e/mobile-game-meetup-tickets-88795231929][Mobile Game Meetup]]                                                    | İstanbul | 18 Ocak 13:00 |
+  | [[https://www.eventbrite.com/e/game-meetup1-tickets-88215020501][Game Meetup'1]]                                                         | İstanbul | 20 Ocak 11:00 |
+  | [[https://www.meetup.com/Microsoft-Giri%25C5%259Fimcilik-Bulu%25C5%259Fmalar%25C4%25B1/events/267510267/][F2P Mobil Oyunlar için Metrikler ve Analiz Rehberi]]                    | Ankara   | 21 Ocak 19:00 |
+  | [[https://www.meetup.com/IzmirGophers/events/267488435/][Test Driven Development ve Clean Architecture]]                         | İzmir    | 21 Ocak 19:00 |
+  | [[https://www.meetup.com/PostgreSQL-TR/events/267534661/][PostgreSQL Konuşmaları: Pgbadger ile Log Analizi ve Performans İzleme]] | Ankara   | 21 Ocak 19:00 |
+  | [[https://kommunity.com/devops-turkiye/events/infrastructure-as-software][Infrastructure as Software]]                                            | İstanbul | 23 Ocak 18:30 |
+  | [[https://kommunity.com/devnot-yazilimci-bulusmalari/events/promethues-ve-grafana-ile-metrik-olusturma-ve-goruntuleme][Promethues ve Grafana ile Metrik Oluşturma ve Görüntüleme]]             | İstanbul | 24 Ocak 19:00 |
+  |-----------------------------------------------------------------------+----------+---------------|
+* Diğer Haberler
+	- D programlama dilinin 2.090.0 [[https://dlang.org/changelog/2.090.0.html][sürümü duyuruldu]].
+	- Kubernetes için yeni [[https://grafana.com/blog/2020/01/09/introducing-tanka-our-way-of-deploying-to-kubernetes/][bir araç tanıtıltı]]: [[https://github.com/grafana/tanka][Grafana Tanka]].
+	- Idris programlama dilinin geliştiricisi [[https://www.type-driven.org.uk/edwinb/linearity-and-erasure-in-idris-2.html][Idris 2 üzerinde çalışıyormuş]].
+	- Testlerde kullanmak için sahte API'ler oluşturmaya yarayan [[https://nehalist.io/mocking-hans/][yeni bir araç
+    tanıtıldı]]: [[https://github.com/loremipsum/mocking-hans][Mocking Hans]].
+	- Python için HTTP istemcisi olan [[https://github.com/encode/httpx][HTTPX]] kütüphanesinin 0.11.0 [[https://github.com/encode/httpx/releases/tag/0.11.0][sürümü
+    yayınlandı]].
+	- [[https://github.com/sagiegurari/duckscript][DuckScript]] dilinin 0.1.5 [[https://github.com/sagiegurari/duckscript/releases/tag/0.1.5][sürümü yayınlandı]].
+	- [[https://github.com/dafer45/TBTK][TBTK]] kütüphanesinin [[https://github.com/dafer45/TBTK/releases/tag/v2.0.0][v2.0.0 sürümü yayınlandı]].
+	- [[https://github.com/dtolnay/cxx][CXX]] kütüphanesinin ilk versiyonu [[https://github.com/dtolnay/cxx/releases/tag/0.1.0][0.1.0 yayınlandı]].
+	- Terminal ekranında grafiksel kullanıcı arayüzleri oluşturmaya yarayan C#
+    kütüphanesi [[https://github.com/goblinfactory/konsole/][Konsole]]'nin 5.4.2 [[https://github.com/goblinfactory/konsole/releases/tag/5.4.2][sürümü duyuruldu]].
+* Lisans
+  #+BEGIN_CENTER
+  #+ATTR_HTML: :height 75
+  #+ATTR_LATEX: :height 1.5cm
+  [[file:../../../img/CC_BY-NC-SA_4.0.png]]
+
+  [[file:yazilim-gundemi-2020-02.org][Yazılım Gündemi - 2020/02]] yazısı [[https://erenhatirnaz.github.io][Eren Hatırnaz]] tarafından [[http://creativecommons.org/licenses/by-nc-sa/4.0/][Creative Commons
+  Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı]] (CC BY-NC-SA 4.0)
+  ile lisanslanmıştır.
+  #+END_CENTER

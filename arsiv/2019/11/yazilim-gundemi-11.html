@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 22:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi - 11</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi - 11
+<br />
+<span class="subtitle">23-29 Eylül 2019</span>
+</h1>
+<div id="table-of-contents">
+<h2>İçindekiler</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgb5efc73">1. GitHub, CodeSearchNet projesini duyurdu</a></li>
+<li><a href="#org0c73987">2. .NET Core 3.0 duyuruldu</a></li>
+<li><a href="#orgefb1a38">3. Yaklaşan Etkinlikler</a></li>
+<li><a href="#org6cc671c">4. Diğer Haberler</a></li>
+<li><a href="#org44921a0">5. Lisans</a></li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gundemi-banner.png" alt="yazilim-gundemi-banner.png" />
+</p>
+</div>
+
+<div class="org-center">
+<p>
+<a href="../10/yazilim-gundemi-10.html">&lt; Önceki Gündem</a> | <b>23-29 Eylül 2019</b> | <a href="../12/yazilim-gundemi-12.html">Sonraki Gündem &gt;</a>
+</p>
+
+<p>
+<a href="https://teknoseyir.com/blog/yazilim-gundemi-11-23-29-eylul-2019">TeknoSeyir'de Oku</a>
+</p>
+</div>
+
+<div id="outline-container-orgb5efc73" class="outline-2">
+<h2 id="orgb5efc73"><span class="section-number-2">1</span> GitHub, <a href="https://github.blog/2019-09-26-introducing-the-codesearchnet-challenge/">CodeSearchNet projesini</a> duyurdu</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Veri, çağımızın en değerli şeyi haline gelirken GitHub'da elindeki kod
+veritabanını değerlendirmeye çalışıyor. Bu çalışmalar doğrultusunda da semantik
+şekilde kod araması yapabileceğimiz bir sistem üzerine geliştirmeler
+yapıyorlarmış. CodeSearchNet ismini verdikleri bu projede henüz kullanılabilir
+arayüzü olan bir arama motoru çıkmasa da, deneyimlerini aktarmak için
+CodeSearchNet projesinde kullanılan verileri ve geliştirdikleri sistemi test
+etmek için yarattıkları benchmark yönteminig tanıttılar. Böylece konuyla
+ilgilenen diğer araştırmacılar da bu verileri ve yöntemleri kullanabilecekler.
+</p>
+
+<p>
+Akademik makaleye ulaşmak için <a href="https://arxiv.org/abs/1909.09436">buraya</a> tıklayabilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-org0c73987" class="outline-2">
+<h2 id="org0c73987"><span class="section-number-2">2</span> .NET Core <a href="https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/">3.0 duyuruldu</a></h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Microsoft'un son birkaç senedir üzerinde fazla yoğunlaştığı açık kaynaklı
+uygulama çatısı .NET Core 3.0 sürümü bu hafta duyuruldu. Uzun zamandır .NET
+tarafında geliştirme yapmıyorum fakat .NET Core uygulama çatısı, özellikle
+GNU/Linux sistemlerde de çalışma özelliğine sahip olduğu için ilgimi çekiyor.
+Bir ara inceleyeceğim. Ayrıca bu yeni sürüm birkaç aydır <a href="https://dot.net">dot.net</a> sitesinde ve
+bing arama motorunda kullanılıyormuş, oralarda test etmişler yani.
+</p>
+
+<p>
+Bu sürümle gelen bazı değişiklikler ise şu şekilde:
+</p>
+<ul class="org-ul">
+<li>C# 8 ve F# 4.7 desteği,</li>
+<li>Hem Windows Forms olarak hem de WPF olarak Windows masaüstü uygulaması
+geliştirebilme,</li>
+<li>.NET Core uygulamaları artık varsayılan olarak çalıştırabilir (executable)
+formatta olacak. Yani artık uygulama çalıştırmak için <code>dotnet myapp.dll</code>
+yazmak yerine direkt <code>./myapp</code> yazarak çalıştırılabilecekler.</li>
+<li>Yüksek performanslı JSON API sistemi eklenmiş.</li>
+<li>Çöp toplayıcı (Garbage Collector) artık daha az bellek kullanıyor.</li>
+</ul>
+
+<p>
+Visual Studio kullanıcıları bu sürümü kullanmak için Visual Studio 2019 16.3
+sürümünü kullanmak zorundalar. Diğer özellikler için mutlaka konu başlığına
+eklediğim bağlantıya tıklayınız.
+</p>
+</div>
+</div>
+<div id="outline-container-orgefb1a38" class="outline-2">
+<h2 id="orgefb1a38"><span class="section-number-2">3</span> Yaklaşan Etkinlikler</h2>
+<div class="outline-text-2" id="text-3">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" width="100%">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Etkinlik İsmi</th>
+<th scope="col" class="org-left">Yer</th>
+<th scope="col" class="org-left">Tarihi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><a href="https://kommunity.com/software-craftsmanship-turkey/events/bash-lingua-non-grata">BASH: Lingua Non Grata</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">2 Ekim 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/ruby-turkiye/events/ruby-turkiye-bulusmasi-5">Ruby Türkiye Buluşması #5</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">5 Ekim 13:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/istanbulphp/events/typed-properties-ve-dahasi-ile-php-74">Typed Properties ve dahası ile PHP 7.4</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">5 Ekim 13:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/gnulinux-talk/events/gnulinux-talks-2-ozgur-yazilim-lisanslar">Gnu/Linux Talks #2 - Özgür Yazılım</a></td>
+<td class="org-left">Ankara</td>
+<td class="org-left">5 Ekim 17:00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org6cc671c" class="outline-2">
+<h2 id="org6cc671c"><span class="section-number-2">4</span> Diğer Haberler</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>Cloudflare, HTTP/3 standardının <a href="https://blog.cloudflare.com/http3-the-past-present-and-future/">dünü, bugünü ve yarını ile ilgili yazı
+yayınlandı</a>.</li>
+<li>Amazon Web Services, <a href="https://aws.amazon.com/blogs/opensource/aws-joins-the-net-foundation">.NET Foundation'a katıldı</a>.</li>
+<li>Telegram, blok zincir geliştiricilerine <a href="https://luvcrypto.com/telegram-blockchain-coding-competition/">yarışmayla 400.000$ verecek</a>.</li>
+<li>Gremlin firması, sunucu çökmesi gibi çeşitli senaryoları test etmeye
+imkan sağlayan <a href="https://www.gremlin.com/blog/introducing-scenarios/">yeni bir hizmet duyurdu</a>: <a href="https://www.gremlin.com/try-scenarios/">Scenarios</a>.</li>
+<li>Apple, bağımsız bir geliştiricinin uygulamasını <a href="https://github.com/glushchenko/fsnotes/issues/695">nedensiz şekilde kaldırmaya
+çalışıyor</a>.</li>
+<li>Richard Stallman, GNU Projesine <a href="https://lists.gnu.org/archive/html/info-gnu/2019-09/msg00008.html">liderlik etmeye devam ettiğini duyurdu</a>.</li>
+<li>Oracle, ADBA (Asynchronous Database Access) <a href="https://mail.openjdk.java.net/pipermail/jdbc-spec-discuss/2019-September/000529.html">özelliği üzerinde çalışmayı
+durdurdu</a>.</li>
+<li>OpenJDK, <a href="https://openjdk.java.net/jeps/362">Solaris desteğini sonlandırıyor</a>.</li>
+<li>Rust programlama dili <a href="https://blog.rust-lang.org/2019/09/26/Rust-1.38.0.html">1.38.0 sürümü duyuruldu</a>.</li>
+<li>Nim programlama dili ilk stabil <a href="https://nim-lang.org/blog/2019/09/23/version-100-released.html">sürümü 1.0 duyuruldu</a>.</li>
+<li>Crystal programlama dili <a href="https://crystal-lang.org/2019/09/23/crystal-0.31.0-released.html">0.31.0 sürümü yayınlandı</a>.</li>
+<li>PostgreSQL <a href="https://www.postgresql.org/about/news/1975/">12 RC1 sürümü yayınlandı</a>.</li>
+<li>C/C++ için paket yöneticisi olan Conan, <a href="https://blog.conan.io/2019/09/27/package-id-modes.html">'Package ID' özelliğini duyurdu</a>.</li>
+<li>GNU <a href="https://lists.gnu.org/archive/html/info-gnu/2018-10/msg00001.html">Nazik İletişim Kılavuzu (Kind Communication Guidelines) yayınlandı</a>.</li>
+<li>React <a href="https://github.com/facebook/react/blob/master/CHANGELOG.md#16100-september-27-2019">16.10.0 sürümü duyuruldu</a>.</li>
+<li>PHP projeler için sertifika yönetim kütüphanesi <a href="https://github.com/paragonie/certainty">Certainty</a>, <a href="https://github.com/paragonie/certainty/releases/tag/v2.5.0">2.5.0 sürümünü
+yayınlandı</a>.</li>
+<li>Rust dili için web framework sistemi yew, <a href="https://github.com/yewstack/yew/releases/tag/0.9.0">0.9.0 sürümü yayınlandı</a>.</li>
+<li>Mesa 3D kütüphanesinin <a href="https://www.mesa3d.org/relnotes/19.2.0.html">19.2.0 sürümü yayınlandı</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org44921a0" class="outline-2">
+<h2 id="org44921a0"><span class="section-number-2">5</span> Lisans</h2>
+<div class="outline-text-2" id="text-5">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="../../../img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+<a href="yazilim-gundemi-11.html">Yazılım Gündemi - 11</a> yazısı <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a> (CC BY-NC-SA 4.0)
+ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 29 Eylül 2019</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 22:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

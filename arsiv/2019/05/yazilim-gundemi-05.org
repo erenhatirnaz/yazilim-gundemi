@@ -68,8 +68,8 @@
 
   #+ATTR_LATEX: :options frame=lines, linenos, label=PHP, labelposition=topline
 	#+BEGIN_SRC php
-		<?p++?>
-		<?php echo "Merhaba TeknoSeyir!" ?>
+    <?p++?>
+    <?php echo "Merhaba TeknoSeyir!" ?>
 	#+END_SRC
 
 	PHP mail grubunda ve [[https://www.reddit.com/r/programming/comments/cohb0r/p/][Reddit]] gibi platformlarda tartışmalar devam ediyor.

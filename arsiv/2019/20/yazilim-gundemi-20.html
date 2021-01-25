@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr">
+<head>
+<!-- 2021-01-24 Sun 22:46 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılım Gündemi - 20</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Eren Hatırnaz" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" href="../../../css/org.css" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Yazılım Gündemi - 20
+<br />
+<span class="subtitle">2-8 Aralık 2019</span>
+</h1>
+<div id="table-of-contents">
+<h2>İçindekiler</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org33ed726">1. 2 zararlı Python kütüphanesi PyPI üzerinden kaldırıldı</a></li>
+<li><a href="#org1f552e4">2. WebAssembly artık W3C onaylı bir web standardı oldu</a></li>
+<li><a href="#org8a5ef0a">3. AWS, kodlarımızı inceleyecek yapay zeka hizmetini duyurdu: Amazon CodeGuru</a></li>
+<li><a href="#orgd22a25f">4. JetBrains takımlar için yeni bir ürün tanıttı: Space</a></li>
+<li><a href="#orgbbfe588">5. Django 3.0 sürümü yayınlandı</a></li>
+<li><a href="#org7fabfd3">6. PHP Versiyonları İstatistikleri 2019.2 yayınlandı</a></li>
+<li><a href="#orgae1f7f8">7. Qt yeni eklenti mağazasını duyurdu: Qt Marketplace</a></li>
+<li><a href="#orge172ce1">8. Yaklaşan Etkinlikler</a></li>
+<li><a href="#orgedc13fb">9. Diğer Haberler</a></li>
+<li><a href="#orgbe855d4">10. Lisans</a></li>
+</ul>
+</div>
+</div>
+
+<div class="figure">
+<p><img src="gorseller/yazilim-gundemi-banner.png" alt="yazilim-gundemi-banner.png" />
+</p>
+</div>
+
+<div class="org-center">
+<p>
+<a href="../19/yazilim-gundemi-19.html">&lt; Önceki Gündem</a> | <b>2-8 Aralık 2019</b> | <a href="../21/yazilim-gundemi-21.html">Sonraki Gündem &gt;</a>
+</p>
+
+<p>
+<a href="https://teknoseyir.com/blog/yazilim-gundemi-20-2-8-aralik-2019">TeknoSeyir'de Oku</a>
+</p>
+</div>
+
+<div id="outline-container-org33ed726" class="outline-2">
+<h2 id="org33ed726"><span class="section-number-2">1</span> 2 zararlı Python kütüphanesi PyPI üzerinden <a href="https://www.zdnet.com/article/two-malicious-python-libraries-removed-from-pypi/">kaldırıldı</a></h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Gün geçmiyor ki kişilerin dikkatsizliklerini suistimal eden zararlı yazılımlar
+gün yüzüne çıkmasın. Genelde uygulamalar ve hizmetlerde görmeye alıştığımız
+fakat son zamanlarda programlama kütüphanelerinde de yayılmakta olan bu tarz
+kötü amaçlı kodlar içeren kütüphaneler gittikçe daha ciddi bir tehdit
+oluşturmaya başladı. Bu sefer de kütüphane isimlerinde bir benzerlik hilesi
+yaparak kendini başka bir kütüphane gibi gösteren ama aslında zararlı kodlar
+içeren 2 Python kütüphanesi tespit edildi ve Python paket yöneticilerinin
+kullandığı Python Package Index (PyPI) sisteminden kaldırıldı. Kütüphaneler
+bunlar:
+</p>
+<ul class="org-ul">
+<li>Gerçek kütüphane: <a href="https://pypi.org/project/python-dateutil/">dateutil</a>. Sahtesi: <a href="https://pypi.org/project/python3-dateutil/">python3-dateutil</a>.</li>
+<li>Gerçek kütüphane: <a href="https://pypi.org/project/jellyfish/">jellyfish</a>. Sahtesi: <a href="https://pypi.org/project/jeIlyfish/">jeIlyfish</a> (ilk L harfi aslında bir I
+harfi).</li>
+</ul>
+<p>
+İki sahte kütüphane de aynı kişi tarafından geliştirilmiş ve aslında zararlı
+kodları içeren kütüphane jeIlyfish olan, diğerinde ise bu kütüphane içindeki
+zararlı dosyayı indirip çalıştıran kodlar mevcut. Zararlı kodların amacı ise
+çalıştırıldığı bilgisayardaki SSH ve GPG anahtarlarını çalmak. python3-dateutil
+sahte kütüphanesi 29 kasımda yayınlanmış fakat diğeri 1 yıldır (11 Aralık 2018)
+yayındaymış.
+</p>
+
+<p>
+İki kütüphane de artık erişilemez durumda fakat siz projenize eklemişseniz
+elbette otomatik olarak silinmeyecek, bu yüzden Python ile geliştirdiğiniz
+projelerinizi bir gözden geçirmenizde fayda var. Her ne kadar dikkatli olmaya
+çalışsak da bu tarz güvenlik zafiyetleri maalesef bir anlık dikkatsizliğimizi
+bile çok iyi kullanıyor. Bir kere böyle bir kütüphaneyi bağımlılık olarak
+eklediysek sonrasında fark etmemiz çok zor oluyor. O yüzden "ben yemem böyle
+şeyleri" dememek gerek.
+</p>
+</div>
+</div>
+<div id="outline-container-org1f552e4" class="outline-2">
+<h2 id="org1f552e4"><span class="section-number-2">2</span> WebAssembly artık W3C onaylı bir <a href="https://www.w3.org/2019/12/pressrelease-wasm-rec.html.en">web standardı oldu</a></h2>
+<div class="outline-text-2" id="text-2">
+
+<div class="figure">
+<p><img src="gorseller/webassembly-w3c.png" alt="webassembly-w3c.png" height="250" />
+</p>
+</div>
+
+<p>
+Her ne kadar alternatifleri çıksa da, zamanla bir şekilde hepsini geride
+bırakmış bir dil olan JavaScript uzun zamandır hayatımızda. Fakat son yıllarda
+JavaScript'in tahtı yavaş yavaş sallanmaya başlamıştı ve artık kendi
+kategorisinde tek dil değil. Çoğumuzun mutlaka ismini en az bir kere duyduğu
+WebAssembly, bu hafta içerisinde JavaScript'den sonraki dördüncü Web Standartı
+oldu. "Web Standartı" dediğimize göre hepimiz biliyoruz ki bunu ilan
+edebilecek bir kurum var: World Wide Web Consortium, çoğumuzun bildiği
+şekliyle nam-ı diğer W3C.
+</p>
+
+<p>
+Konu başlığına eklediğim bağlantıdaki basın bülteninin yayınlanmasıyla
+tarayıcı üzerinde çalışabilen yeni bir W3C onaylı programlama dilimiz oldu
+(aslında uzun bir süredir vardı fakat artık resmi olarak onaylı). Tüm yazılım
+camiasına hayırlı uğurlu olsun. Elbette WebAssembly sadece tarayıcı üzerinde
+çalışan bir dil değil, kendisiyle başka çeşit çeşit işler de yapmak mümkün.
+Ayrıca yine W3C geliştiricilere hız ve verimlilik için <a href="https://www.w3.org/blog/news/archives/8123">WebAssembly öneriyor</a>.
+</p>
+
+<p>
+Bu basın bülteninin yayınlanmasının bir diğer anlamı ise artık tarayıcıların
+WebAssembly diline destek vermek için büyük bir nedeni var. Benim tahminim
+önümüzdeki aylar içerisinde tarayıcılar WebAssembly diline daha büyük
+yatırımlar yapacak ve birer birer desteklerini duyuracaklardır. Böylece benim
+de WebAssembly hakkında araştırmalar ve denemeler yapmak için bir motivasyonum
+oldu. Şimdiye kadar pek detaylıca incelemediğim bu dili daha iyi inceleme
+vakti gelmiş.
+</p>
+
+<p>
+Siz WebAssembly hakkında ne düşünüyorsunuz? Deneme ve araştırma imkanınız oldu
+mu? Olduysa deneyimlerinizi ve görüşlerinizi yorumlar bölümünde
+belirtebilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-org8a5ef0a" class="outline-2">
+<h2 id="org8a5ef0a"><span class="section-number-2">3</span> AWS, kodlarımızı inceleyecek <a href="https://aws.amazon.com/about-aws/whats-new/2019/12/aws-announces-amazon-codeguru-for-automated-code-reviews-and-application-performance-recommendations/">yapay zeka hizmetini duyurdu</a>: <a href="https://aws.amazon.com/tr/codeguru/">Amazon CodeGuru</a></h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Amazon Web Services (AWS) girenin içerisinden kolay kolay çıkamadığı dev bir
+ekosistem. Bu ekosistem bu hafta içerisinde daha da genişledi ve içerisine yeni
+onlarca servis eklendi fakat ben bunlardan biriyle ilgili konuşmak istiyorum.
+Evet, başlıkta da ismi olan Amazon CodeGuru servisinden bahsediyorum. Bu servis
+sizin kodlarınızı inceleyerek size çeşitli önerilerde bulunan eğitilmiş bir
+yapay zeka. Şu an Preview olarak bazı bölgelerde kullanımda açılmış.
+</p>
+
+<p>
+Günümüzde gerek teknolojik gelişmelerin hızlanması gerekse de bilgisayar
+sistemlerinin verimliliğinin artmasıyla bazı mesleklerin yerini yapay zeka
+sistemlerinin alacağı öngörüleri fazlaca yaygın. Bu yapay zeka sistemlerini
+geliştiren bizler her ne kadar "ya sistemleri biz geliştiriyoruz zaten, bize
+bi' şey olmaz", diye düşünsek de, ben aynı fikirde değilim. Günün birinde
+birisi mutlaka "kod yazan yapay zeka" sistemi çıkaracaktır ve bu sistem verimli
+ve ekonomik olduğu takdirde de bizim pabuçumuzun dama atılması çok kolay. Böyle
+bir şeye de çok uzak olduğumuz söylenemez. Bugün de Amazon'un bu hizmeti ile
+birlikte bunun mümkünlüğüne daha çok inanmaya başladım.
+</p>
+
+<p>
+Yani anlayacağınız <a href="https://tr.pinterest.com/pin/363665738639735548/">çember bizim için de daralıyor</a> arkadaşlar. Bugün kodlarımızı
+inceleyip bize öneri sunan yapay zeka, yarın kod da yazar. Biraz komplo teorisi
+vari olacak ama belki de Amazon bu servisi "kod yazan yapay zeka"yı yaratmak
+için kullanacak, kim bilir&#x2026; Elbette yine yazılım mesleğinin yerini tamamen
+yapay zeka almayacak. Sonuçta bu yapay zekaları geliştirecek olanlar da
+bizleriz (gerçi bundan da emin değilim çünkü geçen senelerde bir haftalık
+gündem değerlendirmesinde "yapay zekanın geliştirdiği yapay zeka, insanların
+geliştirdiği yapay zekadan daha verimli" gibi bir haber dinlediğimi
+hatırlıyorum) ama eskiye göre yazılım geliştirici ihtiyacı bir hayli
+azalacaktır diye düşünüyorum.
+</p>
+
+<p>
+O gün geldiğinde yazılım camiasının vereceği tepkiyi çok merak ediyorum. Şu an
+yapay zeka geliştirmeleriyle birçok mesleğin yerini almayı planlayarak sevinen,
+"ya benim geliştirdiğim sistem insandan daha verimli çalışıyor işte
+istatistikler" diyerek olaya son derece bilimsel yaklaşabilen arkadaşlar, o gün
+geldiğinde de acaba "e tabii ki de benden verimliyse buyursun geçsin yerime ben
+kenara çekilirim" diyebilecekler mi, yoksa Osmanlı döneminde matbaanın
+gelmesini istemeyen hattatlar gibi bir akım mı oluşacak? Benim tahminim
+ikincisinin gerçekleşeceği yönünde, çünkü hiç kimse -haklı olarak- mesleğini
+kolay kolay bırakmak istemez. Fakat artık Osmanlı döneminde değiliz, böyle bir
+sistem ekonomik ve verimli olduğu takdirde hiçbir işveren bizim göz yaşımıza
+bakmaz. Fazla mesai ücreti vermeden (gerçi Türkiye'de zaten alamıyoruz ama)
+7/24 çalıştırabileceği bir yapay zeka varken niye bize maaş ödesin?!
+</p>
+
+<p>
+Bu konuda siz ne düşünüyorsunuz arkadaşlar? Özellikle bu konu hakkında
+görüşlerini çok merak ediyorum. Lütfen okuyorsanız fikirlerinizi belirtmekten
+kendinizi geri koymayın. Yorumlar bölümünde konuşalım.
+</p>
+
+<p>
+Ayrıca Amazon'un tanıttığı diğer hizmetlerin birkaçı da bu şekilde (gözden
+kaçırdıklarım olabilir, takip etmek çok zor):
+</p>
+<ul class="org-ul">
+<li><a href="https://aws.amazon.com/tr/blogs/aws/amazon-braket-get-started-with-quantum-computing/">Amazon Braket – Quantum Computing</a></li>
+<li><a href="https://aws.amazon.com/tr/blogs/aws/new-amazon-managed-apache-cassandra-service-mcs/">Amazon Managed Apache Cassandra Service (MCS)</a></li>
+<li><a href="https://aws.amazon.com/tr/blogs/aws/amazon-sagemaker-autopilot-fully-managed-automatic-machine-learning/">Amazon SageMaker Autopilot – Automatically Create High-Quality</a></li>
+<li><a href="https://aws.amazon.com/tr/kendra/">Amazon Kendra – Enterprise Search Service</a></li>
+<li><a href="https://aws.amazon.com/tr/blogs/aws/identify-unintended-resource-access-with-aws-identity-and-access-management-iam-access-analyzer/">AWS Identity and Access Management (IAM) Access Analyzer</a></li>
+<li><a href="https://aws.amazon.com/tr/ec2/nitro/nitro-enclaves/">AWS Nitro Enclaves - Isolated Compute Environments</a></li>
+<li><a href="https://aws.amazon.com/tr/fraud-detector">Amazon Fraud Detector</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd22a25f" class="outline-2">
+<h2 id="orgd22a25f"><span class="section-number-2">4</span> JetBrains takımlar için yeni bir <a href="https://blog.jetbrains.com/blog/2019/12/05/welcome-to-space/">ürün tanıttı</a>: <a href="https://www.jetbrains.com/space/">Space</a></h2>
+<div class="outline-text-2" id="text-4">
+<p>
+JetBrains firmasını çoğumuz, hemen her programlama dili için çıkardıkları IDE
+araçları ve Kotlin programlama dili ile tanıyoruz. Bu sefer programlama
+dillerinden ziyade daha çok şirketlerdeki geliştirici takımları çıkardıkları
+bir ürünün erken erişim programını duyurumalarıyla gündemimizde yer alıyorlar.
+Git bazlı versiyon kontrol, bloglar, planlama, code review süreçleri vb. gibi
+birçok özellik ile birlikte gelen bu ürünü hem servis olarak JetBrains
+üzerinden kullanabiliyorsunuz, hem de kurumsal firmalar için kendi sunucunuzda
+barındırabiliyorsunuz.
+</p>
+
+<p>
+Daha detaylı bilgi için konu başlığına eklediğim bağlantılara tıklayabilir ya
+da <a href="https://www.youtube.com/watch?v=t1vMUV9jYRs">şuradaki duyuru videosunu izleyebilirsiniz</a>.
+</p>
+</div>
+</div>
+<div id="outline-container-orgbbfe588" class="outline-2">
+<h2 id="orgbbfe588"><span class="section-number-2">5</span> Django 3.0 sürümü <a href="https://docs.djangoproject.com/en/3.0/releases/3.0/">yayınlandı</a></h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Popüler Python web framework'ü Django'nun 3.0 sürümü yayınlandı. Bu yeni Django
+sürümü Python 3.6, 3.7 ve 3.8 sürümlerini destekliyor. Django geliştiricileri,
+üçüncü parti kütüphane geliştiricilerine Django 2.2'den önceki tüm sürümlere
+destek vermeyi durdurmayı tavsiye etmişler. Bu sürümde gelen yeniliklerin
+birkaçı ise şu şekilde:
+</p>
+<ul class="org-ul">
+<li>MariaDB desteği,</li>
+<li><a href="https://asgi.readthedocs.io/en/latest/">ASGI (Asynchronous Server Gateway Interface)</a> desteği,</li>
+<li>Diğer özellikler için konu başlığına eklediğim bağlantıya tıklayabilir ya
+da <a href="https://www.youtube.com/watch?v=_BBNVFirvTY">şuradaki videoyu izleyebilirsiniz</a>.</li>
+</ul>
+
+<p>
+Ayrıca Django sürüm yükseltme rehberi için <a href="https://docs.djangoproject.com/en/3.0/howto/upgrade-version/">buraya</a> tıklayabilirsiniz.
+</p>
+</div>
+</div>
+<div id="outline-container-org7fabfd3" class="outline-2">
+<h2 id="org7fabfd3"><span class="section-number-2">6</span> PHP Versiyonları İstatistikleri <a href="https://blog.packagist.com/php-versions-stats-2019-2-edition/">2019.2 yayınlandı</a></h2>
+<div class="outline-text-2" id="text-6">
+
+<div class="figure">
+<p><img src="gorseller/php-versiyon-1.png" alt="php-versiyon-1.png" />
+</p>
+<p><span class="figure-number">Şekil 3: </span><b>(SAĞ):</b> Mayıs 2019 PHP Versiyonları Kullanım Oranları <br />
+ <b>(SOL):</b> Kasım 2019 PHP Versiyonları Kullanım Oranları</p>
+</div>
+
+
+<div class="figure">
+<p><img src="gorseller/php-versiyon-2.png" alt="php-versiyon-2.png" />
+</p>
+<p><span class="figure-number">Şekil 4: </span>Composer kullanım verilerine göre PHP versiyonlarının zamanda değişen kullanım	oranları</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgae1f7f8" class="outline-2">
+<h2 id="orgae1f7f8"><span class="section-number-2">7</span> Qt yeni eklenti mağazasını <a href="https://www.qt.io/blog/qt-marketplace">duyurdu</a>: <a href="https://marketplace.qt.io/">Qt Marketplace</a></h2>
+<div class="outline-text-2" id="text-7">
+<p>
+C++ ile platformlar-arası (cross-platform) uygulama geliştirmeye yarayan Qt
+uygulama çatısının artık bir eklenti mağazası var. Geliştiriciler ücretli ya da
+ücretsiz birçok eklentisi bu mağaza üzerinden alıp, doğrudan uygulamaları
+üzerinde kullanabilecekler.
+</p>
+</div>
+</div>
+<div id="outline-container-orge172ce1" class="outline-2">
+<h2 id="orge172ce1"><span class="section-number-2">8</span> Yaklaşan Etkinlikler</h2>
+<div class="outline-text-2" id="text-8">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" width="100%">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Etkinlik İsmi</th>
+<th scope="col" class="org-left">Yeri</th>
+<th scope="col" class="org-left">Tarihi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/tersine-muhendislik-workshop-tickets-84404653591">Tersine Mühendislik - Workshop</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">10 Aralık 18:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/tr-TR/Istanbul-Java-User-Group/events/265809996/">Future of Java Virtual Machines and Frameworks - GraalVM and Quarkus</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">10 Aralık 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/tr-TR/TestHive/events/266285658/">Test Automation with Taiko</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">10 Aralık 19:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/tr-TR/ING-%25C4%25B0novasyon-Merkezi/events/266930475/">LearnDocker İstanbul: Docker'a Giriş</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">11 Aralık 18:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/tr-TR/Oracle-Developer-Meetup-Istanbul/events/266783829/">Oracle Developer Meetup</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">11 Aralık 18:45</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/tr-TR/Docker-Istanbul/events/266413178/">LearnDocker İstanbul: Docker'a Giriş - Uygulamalı</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">11 Aralık 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/tr-TR/DL_Experts_Ist/events/266781111/">DL Exerts - #1 : Introduction to TensorFlow 2.0</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">11 Aralık 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/siber-olaylarda-5n1k-yeterli-mi-hacknightsorg-tickets-78022424171">Siber Olaylarda 5N1K Yeterli Mi?</a></td>
+<td class="org-left">Ankara</td>
+<td class="org-left">12 Aralık 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/tr-TR/Emlakjet-Engineering/events/266403417/">Introduction to Tensorflow 2.0</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">12 Aralık 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/kuantum-programlama-uygulamalar-hackathonu-tickets-84534931255">Kuantum Programlama Uygulamaları Hackathonu</a></td>
+<td class="org-left">Ankara</td>
+<td class="org-left">14 Aralık 09:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/tr-TR/JAMstack/events/266280664/">JAMstack Istanbul Coffee Talk - 4</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">14 Aralık 13:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/yapay-zeka-ve-hukuk-zirvesi-tickets-84402900347">Yapay Zeka ve Hukuk Zirvesi</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">16 Aralık 09:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/tr-TR/AWS-User-Group-Turkey/events/266942291/">AWS Meetup 44 - Re: Invent Yeni Servisler ve Gelişmeler</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">16 Aralık 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/tr-TR/Software-Craftsmanship-Turkey/events/262170141/">Software Craftsmanship Turkey Meetup</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">18 Aralık 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/tr-TR/GDG-Manisa/events/266749804/">GDG DevFest Manisa 19'</a></td>
+<td class="org-left">Manisa</td>
+<td class="org-left">19 Aralık 09:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/hakan-erdogan-ile-developer-muhabbeti-facebook-devc-istanbul-tickets-85326589125">Hakan Erdoğan ile Developer Muhabbeti</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">19 Aralık 18:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.eventbrite.com/e/windows-forensics-hacknightsorg-tickets-78022654861">Windows Forensics</a></td>
+<td class="org-left">Ankara</td>
+<td class="org-left">19 Aralık 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/devnot-yazilimci-bulusmalari/events/yazilim-sektorunde-serbest-danisman-olarak-calismak">Yazılım Sektöründe Serbest Danışman Olarak Çalışmak</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">20 Aralık 19:00</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://kommunity.com/frontend-istanbul/events/tatilcomun-monolotik-uygulamadan-spaya-gecis-oykusu">Tatil.com’un Monolitik Uygulamadan SPA’ya Geçiş Öyküsü</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">20 Aralık 19:30</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.meetup.com/tr-TR/istanbul-yapay-zeka-toplulugu/events/267007562/">TensorFlow 2.0 Atölyesi</a></td>
+<td class="org-left">İstanbul</td>
+<td class="org-left">22 Aralık 15:00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orgedc13fb" class="outline-2">
+<h2 id="orgedc13fb"><span class="section-number-2">9</span> Diğer Haberler</h2>
+<div class="outline-text-2" id="text-9">
+<ul class="org-ul">
+<li>Microsoft, Rust benzeri yeni bir güvenlik odaklı dil <a href="https://www.zdnet.com/article/microsoft-were-creating-a-new-rust-based-programming-language-for-secure-coding/">üzerinde çalışıyormuş</a></li>
+<li>.Net Core 3.1 <a href="https://devblogs.microsoft.com/dotnet/announcing-net-core-3-1/">duyuruldu</a>.</li>
+<li>Netflix, gerçek zamanlı veri bilimi aracını <a href="https://medium.com/netflix-techblog/open-sourcing-metaflow-a-human-centric-framework-for-data-science-fa72e04a5d9">açık kaynak yaptı</a>: <a href="https://metaflow.org/">Metaflow</a>,
+<a href="https://github.com/Netflix/metaflow">GitHub Deposu</a>.</li>
+<li>Rust, 2019 yılı durumu için anket <a href="https://blog.rust-lang.org/2019/12/03/survey-launch.html">başlattı</a>: <a href="https://docs.google.com/forms/d/e/1FAIpQLSdu9oHszoG4CAq1X1FkJIp70bXSbMNKIP0n4Serr_gTszl01Q/viewform">2019 State of Rust Language
+Survey</a>, <a href="https://github.com/rust-community/team/wiki/State-of-the-Rust-Language-Community-Survey-FAQ">SSS</a></li>
+<li>Mozilla'nın sesten yazı elde etme motoru <a href="https://hacks.mozilla.org/2019/12/deepspeech-0-6-mozillas-speech-to-text-engine/">DeepSpeech 0.6 sürümüne ulaştı</a>.
+<a href="https://github.com/mozilla/DeepSpeech/releases/tag/v0.6.0">Değişiklik Notları</a>.</li>
+<li>Onaylanan bir Pull Request GitHub'ın geçici olarak <a href="https://github.com/ianstormtaylor/slate/pull/3093#issuecomment-559313932">çökmesine neden oldu</a>.</li>
+<li>React projeleri oluşturmaya yarayan <a href="https://github.com/facebook/create-react-app">create-react-app</a> aracının 3.3.0 sürümü
+<a href="https://github.com/facebook/create-react-app/releases/tag/v3.3.0">yayınlandı</a>.</li>
+<li>Go programlama dilinin <a href="https://golang.org/doc/devel/release.html#go1.13.minor">3.13.5</a> ve <a href="https://golang.org/doc/devel/release.html#go1.12.minor">3.12.14</a> sürümleri yayınlandı.</li>
+<li>Android geliştirme araçlarında güncellemeler:
+<ul class="org-ul">
+<li><a href="https://androidstudio.googleblog.com/2019/12/android-studio-40-canary-5-available.html">Android Studio 4.0 Canary 5</a></li>
+<li><a href="https://androidstudio.googleblog.com/2019/12/android-studio-36-beta-5-available.html">Android Studio 3.6 Beta 5</a></li>
+<li><a href="https://androidstudio.googleblog.com/2019/12/android-studio-353-available.html">Android Studio 3.5.3</a></li>
+<li><a href="https://androidstudio.googleblog.com/2019/12/emulator-29212-to-canary.html">Emulator 29.2.12 Canary</a></li>
+</ul></li>
+<li>Birçok AndroidX API'sine <a href="https://developer.android.com/jetpack/androidx/versions/all-channel#december_4_2019">güncelleme geldi</a>. <a href="https://mobile.twitter.com/ianhlake/status/1202322055124750337">Twitter</a></li>
+<li>Google, Kotlin ile yola <a href="https://android-developers.googleblog.com/2019/12/androids-commitment-to-kotlin.html">devam ediyor</a>.</li>
+<li>JetBrains Academy platformuna Kotlin <a href="https://blog.jetbrains.com/blog/2019/12/05/jetbrains-academy-kotlin/">içerikleri eklendi</a></li>
+<li>KotlinConf 2019'da Kotlin 1.4 ile gelecek bazı yeniliklerden <a href="https://blog.jetbrains.com/kotlin/2019/12/what-to-expect-in-kotlin-1-4-and-beyond/">bahsedildi</a>.</li>
+<li>Certbot Beta'dan çıktı ve 1.0 ile stabil <a href="https://www.eff.org/deeplinks/2019/12/certbot-leaves-beta-release-10">sürüme ulaştı</a>.</li>
+<li>GitClear, proje keşfetmeyi kolaylaştırmak için bir <a href="https://www.gitclear.com/blog/introducing_open_repos_a_free_product_to_aid_open_source_development">beta özellik duyurdu</a>:
+<a href="https://www.gitclear.com/open_repos">Open Repos</a>.</li>
+<li>Rust ve WebAssemby ile geliştirilmiş yeni bir ön-yüz kütüphanesi <a href="https://blog.anp.lol/rust/moxie-intro/">duyuruldu</a>:
+<a href="https://github.com/anp/moxie">moxie</a>.</li>
+<li>Uygulamalar için sanal sunucu olan GraalVM, WebAssembly desteğini <a href="https://medium.com/graalvm/announcing-graalwasm-a-webassembly-engine-in-graalvm-25cd0400a7f2">duyurdu</a>:
+<a href="https://github.com/oracle/graal/tree/master/wasm">GraalWasm</a>.</li>
+<li>Jupyter Notebooks ile kütüphane geliştirmeye yarayan yeni bir araç
+<a href="https://www.fast.ai/2019/12/02/nbdev/">duyuruldu</a>: <a href="https://nbdev.fast.ai/">nbdev</a>, <a href="https://github.com/fastai/nbdev">GitHub Deposu</a>.</li>
+<li>PHP Statik analiz aracı PHPStan'ın 0.12 sürümü <a href="https://medium.com/ondrejmirtes/phpstan-0-12-released-f1a88036535d">yayınlandı</a>.</li>
+<li>Çevrimiçi editör Gitpod'a, GitLab <a href="https://www.gitpod.io/blog/gitlab-support/">desteği eklendi</a>.</li>
+<li>Notepad++ 7.8.2 "Free Uyghur Edition" sürümü <a href="https://notepad-plus-plus.org/news/v782-free-uyghur-edition/">yayınlandı</a>.</li>
+<li>C++ ağ kütüphanesi <a href="https://github.com/seladb/PcapPlusPlus">PcapPlusPlus</a>, v19.12 sürümünü <a href="https://github.com/seladb/PcapPlusPlus/releases/tag/v19.12">duyurdu</a>.</li>
+<li>Bettendar 1.0 sürümü <a href="https://bottender.js.org/blog/2019/12/05/bottender-1">duyuruldu</a>.</li>
+<li>OpenAPIGenerator 4.2.2 sürümü <a href="https://github.com/OpenAPITools/openapi-generator/releases/tag/v4.2.2">yayınlandı</a>.</li>
+<li>Tera 1.0 <a href="https://www.vincentprouillet.com/blog/tera-v1-is-here/">yayınlandı</a>.</li>
+<li>uvw 2.3.0 sürümü <a href="https://github.com/skypjack/uvw/releases/tag/v2.3.0_libuv-v1.34">çıktı</a>.</li>
+<li>WT &amp; JWT 3.5.0 ve WT 4.2.0 sürümleri <a href="https://www.webtoolkit.eu/wt/news/2019/12/03/wt___jwt_3_5_0_and_wt_4_2_0">çıktı</a>.</li>
+<li>Keigen 1.6.0 sürümü <a href="https://github.com/paramsen/Keigen/releases/tag/1.6.0">çıktı</a>.</li>
+<li>Mimalloc Rust 0.1.11 sürümü <a href="https://github.com/purpleprotocol/mimalloc_rust/releases/tag/v0.1.11">çıktı</a>.</li>
+<li>Cap'n Proto for Rust 0.11.0 sürümü <a href="https://dwrensha.github.io/capnproto-rust/2019/12/06/async-await.html">çıktı</a>.</li>
+<li>Emacs paketi lsp-mode 6.2 sürümünü <a href="https://github.com/emacs-lsp/lsp-mode/blob/master/doc/changelog.org#release-62">çıkardı</a>.</li>
+<li>Tokio v0.2.3 sürümü <a href="https://github.com/tokio-rs/tokio/releases/tag/tokio-0.2.3">çıktı</a>.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbe855d4" class="outline-2">
+<h2 id="orgbe855d4"><span class="section-number-2">10</span> Lisans</h2>
+<div class="outline-text-2" id="text-10">
+<div class="org-center">
+
+<div class="figure">
+<p><img src="../../../img/CC_BY-NC-SA_4.0.png" alt="CC_BY-NC-SA_4.0.png" height="75" />
+</p>
+</div>
+
+<p>
+<a href="yazilim-gundemi-20.html">Yazılım Gündemi - 20</a> yazısı <a href="https://erenhatirnaz.github.io">Eren Hatırnaz</a> tarafından <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons
+Atıf-GayriTicari-AynıLisanslaPaylaş 4.0 Uluslararası Lisansı</a> (CC BY-NC-SA 4.0)
+ile lisanslanmıştır.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Tarih: 8 Aralık 2019</p>
+<p class="author">Yazar: Eren Hatırnaz</p>
+<p class="date">Oluşturuldu: 2021-01-24 Sun 22:46</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

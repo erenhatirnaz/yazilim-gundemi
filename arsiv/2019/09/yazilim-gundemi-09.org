@@ -61,7 +61,7 @@
 	 kalmayacağız. Önceden şöyle uzun bir ifade ile yaptığımız şeyi:
    #+ATTR_LATEX: :options frame=lines, linenos, label=TypeScript, labelposition=topline
 	 #+BEGIN_SRC typescript
-		 let sonuc = veri ? (veri.anahtar1 ? veri.anahtar1.anahtar2 : undefined) : undefined;
+     let sonuc = veri ? (veri.anahtar1 ? veri.anahtar1.anahtar2 : undefined) : undefined;
 	 #+END_SRC
 	 =veri.anahtar1.anahtar2= değerini getirmek için değişkenin tanımlı olmama
 	 ihtimaline karşı böyle bir kullanım yapıyorduk.
@@ -69,7 +69,7 @@
 	 Fakat artık bunu şu şekilde sadeleştirebileceğiz:
    #+ATTR_LATEX: :options frame=lines, linenos, label=TypeScript, labelposition=topline
 	 #+BEGIN_SRC typescript
-		 let sonuc = veri?.anathar1?.anahtar2;
+     let sonuc = veri?.anathar1?.anahtar2;
 	 #+END_SRC
 
   Yeni eklenecek diğer özellikler için [[https://github.com/microsoft/TypeScript/issues/33352][bu sayfaya]] göz atabilirsiniz.
